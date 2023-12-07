@@ -13,14 +13,14 @@ export default function Home() {
       <Button
         className="m-5"
         color="default"
-        onClick={() => router.push("/wedding")}
+        onClick={() => window.open("/wedding.html", "_self")}
       >
         <PiAsteriskSimpleDuotone className="text-3xl" /> Boda
       </Button>
       <Button
         className="m-5"
         color="success"
-        onClick={() => router.push("/fifteen")}
+        onClick={() => window.open("/fifteen.html", "_self")}        
       >
         <PiAsteriskSimpleDuotone className="text-3xl" />
         XV Años
