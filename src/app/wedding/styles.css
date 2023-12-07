@@ -1,0 +1,58 @@
+.custom-shadow {
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.9), 4px 4px 6px rgba(0, 0, 0, 0.5),
+      8px 8px 11px rgba(0, 0, 0, 0.75), 22px 22px 20px rgba(0, 0, 0, 0.4),
+      -2px -2px 5px rgba(0, 0, 0, 0.2), 2px 2px 5px rgba(0, 0, 0, 0.2) !important;
+  }
+  
+  .count-down {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .item {
+    text-align: center;
+    margin: 0 0px;
+  }
+  
+  .number {
+    margin: 0 10px;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .description {
+    margin: 0 10px;
+    text-align: center;
+  }
+  
+  .floral-divider {
+    position: relative;
+    height: 100%;
+  }
+  
+  .floral-divider::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 2px;
+    height: 80%;
+    background-color: #e7e7e7;
+    z-index: 1;
+  }
+  
+  .floral-divider::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    border-radius: 50%;
+    z-index: 2;
+  }
+  
