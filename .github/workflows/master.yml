@@ -17,4 +17,4 @@ jobs:
           server: invitaciones.unaideamas.com
           username: ${{ secrets.ftp_username }}
           password: ${{ secrets.ftp_password }}
-          server-dir: invitaciones.unaideamas.com/
+          server-dir: /invitaciones.unaideamas.com/
