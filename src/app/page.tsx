@@ -23,10 +23,10 @@ export default function Home() {
         onClick={() => window.open("/fifteen.html", "_self")}        
       >
         <PiAsteriskSimpleDuotone className="text-3xl" />
-        XV Años ⭐
+        XV Años 💀
       </Button>
       <Button className="m-5" color="secondary">
-        <PiAsteriskSimpleDuotone className="text-3xl" /> Cumpleaños ⭐
+        <PiAsteriskSimpleDuotone className="text-3xl" /> Cumpleaños 🤖
       </Button>
     </main>
   );
