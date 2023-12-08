@@ -4,8 +4,8 @@ on:
       - master
 name: 🚀 Deploy website on push
 jobs:
-  web-deploy:
-    name: 🎉 Deploy
+  build:
+    name: 🎉 Build
     runs-on: ubuntu-latest
     steps:
       - name: 🚚 Get latest code
@@ -22,10 +22,19 @@ jobs:
         with:
           name: out
           path: out
+  deploy:
+    needs: build
+    name: 🎉 Deploy
+    runs-on: ubuntu-latest
+    steps:
+        - name: 🚚 Get build artifacts
+          uses: actions/download-artifact@v3
+          with:
+            name: out
 
-      - name: 📂 Sync files
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
-        with:
-          server: ftp.unaideamas.com
-          username: ${{ secrets.ftp_username }}
-          password: ${{ secrets.ftp_password }}
+        - name: 📂 Sync files
+          uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+          with:
+            server: ftp.unaideamas.com
+            username: ${{ secrets.ftp_username }}
+            password: ${{ secrets.ftp_password }}
