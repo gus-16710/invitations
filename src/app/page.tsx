@@ -19,7 +19,7 @@ export default function Home() {
       refAnimationInstance.current({
         ...opts,
         origin: { y: 0.7 },
-        particleCount: Math.floor(200 * particleRatio),
+        particleCount: Math.floor(200 * particleRatio),        
       });
   }, []);
 
@@ -54,27 +54,29 @@ export default function Home() {
 
   useEffect(() => {
     fire();
+    const timer = setInterval(() => fire(), 5000);    
+    () => clearInterval(timer);
   }, []);
 
   return (
     <main className="bg-gradient-to-b from-indigo-500 via-purple-500 to-pink-500 h-screen flex items-center justify-center flex-col">
       <Button
-        className="m-5"
+        className="m-5 w-40"
         color="default"
         onClick={() => router.push("/wedding")}
       >
         <PiAsteriskSimpleDuotone className="text-3xl" /> Boda
       </Button>
       <Button
-        className="m-5"
+        className="m-5 w-40"
         color="success"
         onClick={() => router.push("/fifteen")}
       >
         <PiAsteriskSimpleDuotone className="text-3xl" />
         XV Años
       </Button>
-      <Button className="m-5" color="secondary" onClick={fire}>
-        <PiAsteriskSimpleDuotone className="text-3xl" /> Cumpleaños
+      <Button className="m-5 w-40" color="secondary">
+        <PiAsteriskSimpleDuotone className="text-3xl" /> Bautizo
       </Button>
 
       <ReactCanvasConfetti
@@ -85,7 +87,7 @@ export default function Home() {
           width: "100%",
           height: "100%",
           top: 0,
-          left: 0,
+          left: 0,          
         }}
       />
     </main>
