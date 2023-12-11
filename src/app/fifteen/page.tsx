@@ -19,7 +19,7 @@ import {
   ModalHeader,
   useDisclosure,
 } from "@nextui-org/react";
-import { useEffect } from "react";
+import { useEffect, useState, Dispatch, SetStateAction } from 'react';
 import { pinyion, playFair } from "./components/Fonts";
 import { animation01, animation03 } from "./components/Animations";
 import AudioControl from "./components/AudioControl";
@@ -27,9 +27,11 @@ import AudioControl from "./components/AudioControl";
 const ModalFull = ({
   isOpen,
   onOpenChange,
+  setOpen,
 }: {
   isOpen: boolean;
   onOpenChange: () => void;
+  setOpen: Dispatch<SetStateAction<boolean>>;
 }) => {
   return (
     <Modal
@@ -66,7 +68,14 @@ const ModalFull = ({
               </motion.p>
             </ModalBody>
             <ModalFooter className="flex justify-center">
-              <Button color="warning" variant="bordered" onPress={onClose}>
+              <Button
+                color="warning"
+                variant="bordered"
+                onPress={() => {
+                  setOpen(true);
+                  onClose();
+                }}
+              >
                 Ver Invitación
               </Button>
             </ModalFooter>
@@ -78,6 +87,7 @@ const ModalFull = ({
 };
 
 export default function Fifteen() {
+  const [open, setOpen] = useState(false);
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
   useEffect(() => {
@@ -90,7 +100,7 @@ export default function Fifteen() {
         isOpen ? "h-screen" : ""
       }`}
     >
-      {!isOpen && (
+      {open && (
         <>
           <Header />
           <Presentation />
@@ -105,7 +115,11 @@ export default function Fifteen() {
         </>
       )}
 
-      <ModalFull isOpen={isOpen} onOpenChange={onOpenChange} />
+      <ModalFull
+        isOpen={isOpen}
+        onOpenChange={onOpenChange}
+        setOpen={setOpen}
+      />
     </div>
   );
 }
