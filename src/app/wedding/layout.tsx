@@ -8,10 +8,10 @@ export const metadata: Metadata = {
     title: "🥂 Diana & Ernesto 🥂",
     description:
       "Nos casamos y deseamos compartir con ustedes este día tan especial.",
-    images: ["https://gus16710.000webhostapp.com/img/wedding/gallery-04.jpg"],
+    images: ["https://invitaciones.unaideamas.com/img/wedding/gallery-04.jpg"],
   },
   icons: {
-    icon: "https://gus16710.000webhostapp.com/img/favicon.png",
+    icon: "https://invitaciones.unaideamas.com/img/favicon.png",
   },
 };
 

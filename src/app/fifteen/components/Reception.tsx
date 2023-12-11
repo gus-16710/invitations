@@ -45,6 +45,7 @@ const ModalMap = ({
       onOpenChange={onOpenChange}
       size="xs"
       placement="center"
+      backdrop="blur"
     >
       <ModalContent>
         {(onClose) => (
@@ -173,7 +174,7 @@ export default function Reception() {
               <Avatar
                 isBordered
                 color="warning"
-                src="img/fifteen/salon.jpg"
+                src="/img/fifteen/salon.jpg"
                 className="h-40 w-40 my-5"
               />
             </motion.div>

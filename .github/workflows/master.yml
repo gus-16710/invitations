@@ -1,11 +1,11 @@
+name: 🚀 Deploy website on push
 on:
   push:
     branches:
       - master
-name: 🚀 Deploy website on push
 jobs:
   build:
-    name: 🎉 Build
+    name: ⚙️ Build
     runs-on: ubuntu-latest
     steps:
       - name: 🚚 Get latest code

@@ -15,32 +15,32 @@ import { Card, CardBody } from "@nextui-org/react";
 
 const images = [
   {
-    src: "img/fifteen/gallery-01.jpg",
+    src: "/img/fifteen/gallery-01.jpg",
     width: 800,
     height: 600,
   },
   {
-    src: "img/fifteen/gallery-02.jpg",
+    src: "/img/fifteen/gallery-02.jpg",
     width: 1600,
     height: 900,
   },
   {
-    src: "img/fifteen/gallery-03.jpg",
+    src: "/img/fifteen/gallery-03.jpg",
     width: 800,
     height: 600,
   },
   {
-    src: "img/fifteen/gallery-04.jpg",
+    src: "/img/fifteen/gallery-04.jpg",
     width: 800,
     height: 600,
   },
   {
-    src: "img/fifteen/gallery-05.jpg",
+    src: "/img/fifteen/gallery-05.jpg",
     width: 800,
     height: 600,
   },
   {
-    src: "img/fifteen/gallery-06.jpg",
+    src: "/img/fifteen/gallery-06.jpg",
     width: 800,
     height: 600,
   },

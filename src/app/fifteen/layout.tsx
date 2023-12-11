@@ -8,10 +8,10 @@ export const metadata: Metadata = {
     title: "Daniela | Mis XV Años",
     description:
       "Mis 15 primaveras han llegado y lo que más me llena de emoción es pasarlo con risas a tu lado.",
-    images: [`https://gus16710.000webhostapp.com/img/fifteen/gallery-03.jpg`],
+    images: [`https://invitaciones.unaideamas.com/img/fifteen/gallery-03.jpg`],
   },
   icons: {
-    icon: "https://gus16710.000webhostapp.com/img/favicon.png",
+    icon: "https://invitaciones.unaideamas.com/img/favicon.png",
   },
 };
 

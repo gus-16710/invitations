@@ -11,32 +11,32 @@ const greatVibes = Great_Vibes({ subsets: ["latin"], weight: "400" });
 
 const images = [
   {
-    src: "img/wedding/gallery-01.jpg",
+    src: "/img/wedding/gallery-01.jpg",
     width: 800,
     height: 600,
   },
   {
-    src: "img/wedding/gallery-02.jpg",
+    src: "/img/wedding/gallery-02.jpg",
     width: 1600,
     height: 900,
   },
   {
-    src: "img/wedding/gallery-03.jpg",
+    src: "/img/wedding/gallery-03.jpg",
     width: 800,
     height: 600,
   },
   {
-    src: "img/wedding/gallery-04.jpg",
+    src: "/img/wedding/gallery-04.jpg",
     width: 800,
     height: 600,
   },
   {
-    src: "img/wedding/gallery-05.jpg",
+    src: "/img/wedding/gallery-05.jpg",
     width: 800,
     height: 600,
   },
   {
-    src: "img/wedding/gallery-06.jpg",
+    src: "/img/wedding/gallery-06.jpg",
     width: 800,
     height: 600,
   },
