@@ -19,7 +19,7 @@ export default function Home() {
       refAnimationInstance.current({
         ...opts,
         origin: { y: 0.7 },
-        particleCount: Math.floor(200 * particleRatio),        
+        particleCount: Math.floor(200 * particleRatio),
       });
   }, []);
 
@@ -54,7 +54,7 @@ export default function Home() {
 
   useEffect(() => {
     fire();
-    const timer = setInterval(() => fire(), 5000);    
+    const timer = setInterval(() => fire(), 5000);
     () => clearInterval(timer);
   }, []);
 
@@ -75,7 +75,11 @@ export default function Home() {
         <PiAsteriskSimpleDuotone className="text-3xl" />
         XV Años
       </Button>
-      <Button className="m-5 w-40" color="secondary">
+      <Button
+        className="m-5 w-40"
+        color="secondary"
+        onClick={() => router.push("/christening")}
+      >
         <PiAsteriskSimpleDuotone className="text-3xl" /> Bautizo
       </Button>
 
@@ -87,7 +91,7 @@ export default function Home() {
           width: "100%",
           height: "100%",
           top: 0,
-          left: 0,          
+          left: 0,
         }}
       />
     </main>
