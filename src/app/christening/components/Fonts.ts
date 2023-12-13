@@ -6,6 +6,7 @@ import {
   Whisper,
   Dancing_Script,
   Lobster_Two,
+  Anton,
 } from "next/font/google";
 
 export const rivage = Beau_Rivage({
@@ -39,6 +40,11 @@ export const dancing = Dancing_Script({
 });
 
 export const lobster = Lobster_Two({
+  subsets: ["latin"],
+  weight: ["400"],
+});
+
+export const anton = Anton({
   subsets: ["latin"],
   weight: ["400"],
 });

@@ -1,57 +1,11 @@
-import { useEffect, useState } from "react";
-import { anton, playFair, rivage, whisper } from "./Fonts";
+import Image from "next/image";
+import { lora, playFair, rivage } from "./Fonts";
 
-function formatNumber(number: number) {
-  return number < 10 ? `0${number}` : number;
-}
-
-export default function Presentation() {
-  const [count, setCount] = useState({
-    days: 0,
-    hours: 0,
-    minutes: 0,
-    seconds: 0,
-  });
-
-  const countDownClock = () => {
-    const countDownDate: any = new Date("Nov 2, 2024 13:29:00");
-
-    const interval = setInterval(() => {
-      const now = new Date().getTime();
-      const distance = countDownDate - now;
-
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor(
-        (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-      );
-      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-      if (distance < 0) {
-        clearInterval(interval);
-        console.log("EXPIRED");
-      }
-
-      setCount({
-        days,
-        hours,
-        minutes,
-        seconds,
-      });
-    }, 1000);
-  };
-
-  useEffect(() => {
-    countDownClock();
-  }, []);
-
+export default function Reception() {
   return (
-    <section
-      className="h-screen flex justify-center items-center flex-col"
-      style={{ backgroundColor: "#e9d4cf" }}
-    >
+    <section className="h-screen relative flex justify-center items-center flex-col">     
       <h1 className={`${rivage.className} text-5xl text-orange-900`}>
-        Sólo Faltan
+        Recepción
       </h1>
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -64,11 +18,10 @@ export default function Presentation() {
         viewBox="0 0 2641.465 318.75"
         enableBackground="new 0 0 2641.465 318.75"
         xmlSpace="preserve"
-        style={{ fill: "#b8965e"}}        
+        style={{ fill: "#b8965e" }}
       >
         <g>
           <path
-            
             d="M1742.073,193.971c-8.155,0.553-8.818,14.018-1.059,15.756   c7.902,1.975,16.151,0.774,24.195,1.027c268.657-0.016,537.314-0.016,805.971,0c7.68-0.19,15.487,0.758,23.057-0.759   c3.856-0.743,6.542-4.551,6.495-8.344c-0.095-5.547-5.452-8.613-10.541-8.107c-272.876,0.047-545.769,0-818.661,0.031   C1761.732,193.829,1751.855,192.849,1742.073,193.971z"
           />
           <path
@@ -92,114 +45,63 @@ export default function Presentation() {
         </g>
       </svg>
 
-      <div className="flex gap-16 text-zinc-600 mt-10">
-        <div className="flex flex-col">
-          <p className="flex flex-col items-center">
-            <span className={`${anton.className} text-5xl`}>
-              {formatNumber(count.days)}
-            </span>
-            <span className={`${whisper.className} text-3xl`}>Días</span>
-          </p>
-          <p className="flex flex-col items-center mt-5">
-            <span className={`${anton.className} text-5xl`}>
-              {formatNumber(count.minutes)}
-            </span>
-            <span className={`${whisper.className} text-3xl`}>Minutos</span>
-          </p>
-        </div>
-        <div className="flex flex-col">
-          <p className="flex flex-col items-center">
-            <span className={`${anton.className} text-5xl`}>
-              {formatNumber(count.hours)}
-            </span>
-            <span className={`${whisper.className} text-3xl`}>Horas</span>
-          </p>
-          <p className="flex flex-col items-center mt-5">
-            <span className={`${anton.className} text-5xl`}>
-              {formatNumber(count.seconds)}
-            </span>
-            <span className={`${whisper.className} text-3xl`}>Segundos</span>
-          </p>
-        </div>
+      <div
+        style={{
+          WebkitMaskImage: "url('/img/christening/hexagon-mask.png')",
+          WebkitMaskRepeat: "no-repeat",
+          WebkitMaskSize: "contain",
+          WebkitMaskPosition: "center",
+        }}
+        className="w-56 h-56 my-3"
+      >
+        <Image
+          alt="header"
+          width={300}
+          height={300}
+          src={"/img/christening/salon.jpg"}
+          priority
+        />
       </div>
-
+      <div className={`${playFair.className} p-1 text-center text-orange-900`}>
+        <p>SABADO 07 DE JULIO</p>
+        <p>03:00 PM</p>
+      </div>
       <p
-        className={`${playFair.className} text-base px-5 mt-10 text-center text-orange-900`}
+        className={`${playFair.className} mx-10 my-3 text-center text-orange-900`}
       >
-        Mientras pasan los días y creces, más seguros estamos que el día en que
-        Dios te diseño, quiso bendecirnos. Preciosa e inocente pedimos a nuestro
-        señor que acompañe eternamente tus pasitos.
+        Salones Aurora
       </p>
-
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        xmlnsXlink="http://www.w3.org/1999/xlink"
-        height="60px"
-        width="60px"
-        version="1.1"
-        id="Layer_1"
-        viewBox="0 0 512.001 512.001"
-        xmlSpace="preserve"
-        className="mt-5"
+      <p
+        className={`${lora.className} text-center px-1 py-3 text-sm text-zinc-600`}
       >
-        <path          
-          style={{fill: "#E4F1FB"}}
-          d="M505.286,110.93c-0.711-2.002-1.531-4.094-2.506-6.396l-7.293-17.204L256,208.157L16.515,87.331  l-7.293,17.204c-0.976,2.302-1.795,4.395-2.504,6.387c-10.638,29.876-8.542,62.65,5.605,91.033  C-0.635,259.05,31.043,317.586,86.89,337.47l165.261,59.222h7.698l2.847-1.015c12.157-4.331,160.921-57.669,162.385-58.195  c55.88-19.896,87.559-78.432,74.601-135.527C513.826,173.575,515.923,140.804,505.286,110.93z"
-        />
-        <path          
-          style={{fill: "#93C7EF"}}
-          d="M505.286,110.93c-0.711-2.002-1.531-4.094-2.506-6.396l-7.293-17.204L256,208.157v89.733  l243.679-95.935C513.826,173.575,515.923,140.804,505.286,110.93z"
-        />
-        <path          
-          style={{fill: "#AED5F3"}}
-          d="M6.714,110.93c0.711-2.002,1.531-4.094,2.506-6.396l7.293-17.204L256,208.157v89.733L12.322,201.954  C-1.824,173.575-3.923,140.804,6.714,110.93z"
-        />
-        <path          
-          style={{fill: "#C9E3F7"}}
-          d="M314.29,273.488c0-20.524-10.759-38.645-26.908-49.038c19.519-11.004-82.284-11.004-62.765,0  c-16.149,10.393-26.908,28.514-26.908,49.038v41.168c0,39.536-11.427,78.23-32.907,111.423  c20.797,27.686,53.904,45.596,91.197,45.596c37.292,0,70.401-17.91,91.197-45.596c-21.48-33.194-32.907-71.887-32.907-111.423  V273.488z"
-        />
-        <path          
-          style={{fill: "#AED5F3"}}
-          d="M314.29,314.654v-41.168c0-20.524-10.759-38.645-26.908-49.038  c9.759-5.503-10.812-8.254-31.382-8.254v255.48c37.292,0,70.401-17.91,91.197-45.596C325.718,392.884,314.29,354.19,314.29,314.654z  "
-        />
-        <path          
-          style={{fill: "#FFF0B4"}}
-          d="M305.181,55.377C291.593,45.672,274.127,40.327,256,40.327s-35.592,5.345-49.181,15.051  c-16.903,12.073-26.597,29.958-26.597,49.069s9.694,36.994,26.597,49.069c13.587,9.705,31.054,15.051,49.181,15.051  s35.592-5.345,49.181-15.051c16.903-12.073,26.597-29.958,26.597-49.069S322.084,67.45,305.181,55.377z M256,133.591  c-22.535,0-40.803-13.049-40.803-29.145S233.465,75.301,256,75.301s40.803,13.049,40.803,29.145S278.535,133.591,256,133.591z"
-        />
-        <path          
-          style={{fill: "#FFDA44"}}
-          d="M305.181,55.377C291.593,45.672,274.127,40.327,256,40.327v34.974  c22.535,0,40.803,13.049,40.803,29.145S278.535,133.591,256,133.591v34.974c18.127,0,35.592-5.345,49.181-15.051  c16.903-12.073,26.597-29.958,26.597-49.069S322.084,67.45,305.181,55.377z"
-        />
-        <circle style={{fill: "#FFE6C6"}} cx="255.999" cy="168.564" r="64.119" />
-        <path          
-          style={{fill: "#FFD6A0"}}
-          d="M256,104.446c35.412,0,64.119,28.708,64.119,64.119c0,35.412-28.707,64.119-64.119,64.119"
-        />
-      </svg>
-
-      {/* <div
-        className="h-80 w-80 mx-5 rounded-full relative text-slate-100"
-        style={{ backgroundColor: "#d4a373" }}
+        Carlos A. Carrillo 23, Aguacatal, 91133 Xalapa-Enriquez, Ver.
+      </p>
+      <button
+        type="button"
+        className="mt-3 text-white bg-gradient-to-br from-pink-500 to-orange-400 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"
       >
-        <p className={`${whisper.className} text-center mt-20 text-5xl`}>
-          Sábado
-        </p>
-        <div
-          className="flex flex-col justify-start items-center h-56 w-80 bg-slate-400 absolute -bottom-16"
-          style={{ backgroundColor: "#d4a373" }}
+        Ver Ubicación
+      </button>
+
+      <div className="absolute -bottom-1 w-full">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 283.5 27.8"
+          preserveAspectRatio="none"
+          style={{ rotate: "180deg" }}
+          fill="#e9d4cf"
         >
-          <p
-            className={`${anton.className} text-5xl p-5 border-t-1 border-t-slate-100 border-b-1 border-b-slate-100 w-28 text-center`}
-          >
-            07
-          </p>
-          <p className="pt-5 flex flex-col items-center">
-            <span className={`${whisper.className} text-5xl`}>Julio</span>
-            <span className={`${anton.className} text-2xl`}>2024</span>
-          </p>
-        </div>
+          <path d="M283.5,9.7c0,0-7.3,4.3-14,4.6c-6.8,0.3-12.6,0-20.9-1.5c-11.3-2-33.1-10.1-44.7-5.7	s-12.1,4.6-18,7.4c-6.6,3.2-20,9.6-36.6,9.3C131.6,23.5,99.5,7.2,86.3,8c-1.4,0.1-6.6,0.8-10.5,2c-3.8,1.2-9.4,3.8-17,4.7	c-3.2,0.4-8.3,1.1-14.2,0.9c-1.5-0.1-6.3-0.4-12-1.6c-5.7-1.2-11-3.1-15.8-3.7C6.5,9.2,0,10.8,0,10.8V0h283.5V9.7z M260.8,11.3	c-0.7-1-2-0.4-4.3-0.4c-2.3,0-6.1-1.2-5.8-1.1c0.3,0.1,3.1,1.5,6,1.9C259.7,12.2,261.4,12.3,260.8,11.3z M242.4,8.6	c0,0-2.4-0.2-5.6-0.9c-3.2-0.8-10.3-2.8-15.1-3.5c-8.2-1.1-15.8,0-15.1,0.1c0.8,0.1,9.6-0.6,17.6,1.1c3.3,0.7,9.3,2.2,12.4,2.7	C239.9,8.7,242.4,8.6,242.4,8.6z M185.2,8.5c1.7-0.7-13.3,4.7-18.5,6.1c-2.1,0.6-6.2,1.6-10,2c-3.9,0.4-8.9,0.4-8.8,0.5	c0,0.2,5.8,0.8,11.2,0c5.4-0.8,5.2-1.1,7.6-1.6C170.5,14.7,183.5,9.2,185.2,8.5z M199.1,6.9c0.2,0-0.8-0.4-4.8,1.1	c-4,1.5-6.7,3.5-6.9,3.7c-0.2,0.1,3.5-1.8,6.6-3C197,7.5,199,6.9,199.1,6.9z M283,6c-0.1,0.1-1.9,1.1-4.8,2.5s-6.9,2.8-6.7,2.7	c0.2,0,3.5-0.6,7.4-2.5C282.8,6.8,283.1,5.9,283,6z M31.3,11.6c0.1-0.2-1.9-0.2-4.5-1.2s-5.4-1.6-7.8-2C15,7.6,7.3,8.5,7.7,8.6	C8,8.7,15.9,8.3,20.2,9.3c2.2,0.5,2.4,0.5,5.7,1.6S31.2,11.9,31.3,11.6z M73,9.2c0.4-0.1,3.5-1.6,8.4-2.6c4.9-1.1,8.9-0.5,8.9-0.8	c0-0.3-1-0.9-6.2-0.3S72.6,9.3,73,9.2z M71.6,6.7C71.8,6.8,75,5.4,77.3,5c2.3-0.3,1.9-0.5,1.9-0.6c0-0.1-1.1-0.2-2.7,0.2	C74.8,5.1,71.4,6.6,71.6,6.7z M93.6,4.4c0.1,0.2,3.5,0.8,5.6,1.8c2.1,1,1.8,0.6,1.9,0.5c0.1-0.1-0.8-0.8-2.4-1.3	C97.1,4.8,93.5,4.2,93.6,4.4z M65.4,11.1c-0.1,0.3,0.3,0.5,1.9-0.2s2.6-1.3,2.2-1.2s-0.9,0.4-2.5,0.8C65.3,10.9,65.5,10.8,65.4,11.1	z M34.5,12.4c-0.2,0,2.1,0.8,3.3,0.9c1.2,0.1,2,0.1,2-0.2c0-0.3-0.1-0.5-1.6-0.4C36.6,12.8,34.7,12.4,34.5,12.4z M152.2,21.1	c-0.1,0.1-2.4-0.3-7.5-0.3c-5,0-13.6-2.4-17.2-3.5c-3.6-1.1,10,3.9,16.5,4.1C150.5,21.6,152.3,21,152.2,21.1z"></path>{" "}
+          <path d="M269.6,18c-0.1-0.1-4.6,0.3-7.2,0c-7.3-0.7-17-3.2-16.6-2.9c0.4,0.3,13.7,3.1,17,3.3	C267.7,18.8,269.7,18,269.6,18z"></path>{" "}
+          <path d="M227.4,9.8c-0.2-0.1-4.5-1-9.5-1.2c-5-0.2-12.7,0.6-12.3,0.5c0.3-0.1,5.9-1.8,13.3-1.2	S227.6,9.9,227.4,9.8z"></path>{" "}
+          <path d="M204.5,13.4c-0.1-0.1,2-1,3.2-1.1c1.2-0.1,2,0,2,0.3c0,0.3-0.1,0.5-1.6,0.4	C206.4,12.9,204.6,13.5,204.5,13.4z"></path>{" "}
+          <path d="M201,10.6c0-0.1-4.4,1.2-6.3,2.2c-1.9,0.9-6.2,3.1-6.1,3.1c0.1,0.1,4.2-1.6,6.3-2.6	S201,10.7,201,10.6z"></path>{" "}
+          <path d="M154.5,26.7c-0.1-0.1-4.6,0.3-7.2,0c-7.3-0.7-17-3.2-16.6-2.9c0.4,0.3,13.7,3.1,17,3.3	C152.6,27.5,154.6,26.8,154.5,26.7z"></path>{" "}
+          <path d="M41.9,19.3c0,0,1.2-0.3,2.9-0.1c1.7,0.2,5.8,0.9,8.2,0.7c4.2-0.4,7.4-2.7,7-2.6	c-0.4,0-4.3,2.2-8.6,1.9c-1.8-0.1-5.1-0.5-6.7-0.4S41.9,19.3,41.9,19.3z"></path>{" "}
+          <path d="M75.5,12.6c0.2,0.1,2-0.8,4.3-1.1c2.3-0.2,2.1-0.3,2.1-0.5c0-0.1-1.8-0.4-3.4,0	C76.9,11.5,75.3,12.5,75.5,12.6z"></path>{" "}
+          <path d="M15.6,13.2c0-0.1,4.3,0,6.7,0.5c2.4,0.5,5,1.9,5,2c0,0.1-2.7-0.8-5.1-1.4	C19.9,13.7,15.7,13.3,15.6,13.2z"></path>{" "}
+        </svg>
       </div>
-      <p className="mt-20">Text</p> */}
     </section>
   );
 }

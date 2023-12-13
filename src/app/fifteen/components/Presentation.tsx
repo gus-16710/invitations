@@ -87,7 +87,7 @@ export default function Presentation() {
             whileInView="visible"
             custom={1}
           >
-            Solo Faltan
+            Sólo Faltan
           </motion.h1>
           <motion.div
             variants={animation06}
