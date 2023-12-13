@@ -1,6 +1,5 @@
 import type { RenderPhotoProps } from "react-photo-album";
 import { motion } from "framer-motion";
-import { Avatar } from "@nextui-org/react";
 import Image from "next/image";
 
 export default function NextJsImage03({
@@ -14,7 +13,7 @@ export default function NextJsImage03({
       initial={{ y: -100, opacity: 0 }}
       whileInView={{ y: 0, opacity: 1 }}
       viewport={{ once: false }}
-      transition={{ duration: 1, ease: "easeOut" }}
+      transition={{ duration: 1, ease: "easeOut", delay: 1.2 }}
       style={{
         WebkitMaskImage: "url('/img/christening/hexagon-mask.png')",
         WebkitMaskRepeat: "no-repeat",

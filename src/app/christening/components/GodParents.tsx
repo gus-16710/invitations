@@ -1,10 +1,9 @@
 import { Carousel, Flowbite, FlowbiteCarouselTheme } from "flowbite-react";
 import { playFair, rivage } from "./Fonts";
-import { PiChurch } from "react-icons/pi";
-import { BiDrink } from "react-icons/bi";
-import { GiPartyFlags } from "react-icons/gi";
 
 import "./GodParents.css";
+import { motion } from "framer-motion";
+import { godParents } from "./Animations";
 
 const customTheme: FlowbiteCarouselTheme = {
   root: {
@@ -42,10 +41,15 @@ export default function GodParents() {
       className="h-screen flex justify-center items-center flex-col"
       style={{ backgroundColor: "#e9d4cf" }}
     >
-      <h1 className={`${rivage.className} text-5xl text-orange-900`}>
+      <motion.h1
+        className={`${rivage.className} text-5xl text-orange-900`}
+        variants={godParents.animationText01}
+        initial="hidden"
+        whileInView="visible"
+      >
         Padrinos
-      </h1>
-      <svg
+      </motion.h1>
+      <motion.svg
         xmlns="http://www.w3.org/2000/svg"
         xmlnsXlink="http://www.w3.org/1999/xlink"
         version="1.1"
@@ -57,6 +61,9 @@ export default function GodParents() {
         enableBackground="new 0 0 2641.465 318.75"
         xmlSpace="preserve"
         style={{ fill: "#b8965e" }}
+        variants={godParents.animationDivider}
+        initial="hidden"
+        whileInView="visible"
       >
         <g>
           <path d="M1742.073,193.971c-8.155,0.553-8.818,14.018-1.059,15.756   c7.902,1.975,16.151,0.774,24.195,1.027c268.657-0.016,537.314-0.016,805.971,0c7.68-0.19,15.487,0.758,23.057-0.759   c3.856-0.743,6.542-4.551,6.495-8.344c-0.095-5.547-5.452-8.613-10.541-8.107c-272.876,0.047-545.769,0-818.661,0.031   C1761.732,193.829,1751.855,192.849,1742.073,193.971z" />
@@ -67,7 +74,7 @@ export default function GodParents() {
           <path d="M1529.28,230.477c-3.145-7.617-10.588-12.152-17.304-16.277   c-21.745-12.437-48.532-12.011-71.921-4.789c-12.532,4.03-25.175,8.803-35.684,16.957c31.212-0.806,59.263,14.681,89.178,20.892   c9.166,1.691,18.948,1.422,27.624-2.149C1526.752,242.914,1531.682,236.609,1529.28,230.477z M1495.698,238.047   c-26.692-4.804-52.531-15.74-80.044-14.95c17.225-6.543,35.605-10.841,54.095-10.636c18.648,0.727,38.671,6.669,50.792,21.682   C1513.161,238.695,1504.121,239.359,1495.698,238.047z" />
           <path d="M1112.185,230.477c3.145-7.617,10.588-12.152,17.304-16.277   c21.745-12.437,48.532-12.011,71.921-4.789c12.532,4.03,25.175,8.803,35.684,16.957c-31.212-0.806-59.263,14.681-89.178,20.892   c-9.166,1.691-18.948,1.422-27.624-2.149C1114.713,242.914,1109.782,236.609,1112.185,230.477z M1145.767,238.047   c26.692-4.804,52.531-15.74,80.044-14.95c-17.225-6.543-35.605-10.841-54.095-10.636c-18.648,0.727-38.671,6.669-50.792,21.682   C1128.304,238.695,1137.343,239.359,1145.767,238.047z" />
         </g>
-      </svg>
+      </motion.svg>
 
       <Flowbite>
         <Carousel theme={customTheme}>
@@ -356,7 +363,9 @@ export default function GodParents() {
                 />
               </g>
             </svg>
-            <p className={`${rivage.className} text-4xl pb-4 mt-5`}>Decoración</p>
+            <p className={`${rivage.className} text-4xl pb-4 mt-5`}>
+              Decoración
+            </p>
             <p className={`${playFair.className}`}>
               Rocio Hernández García <br />&<br /> Pedro Ruíz Sanchez
             </p>
