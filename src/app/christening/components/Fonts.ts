@@ -7,7 +7,10 @@ import {
   Dancing_Script,
   Lobster_Two,
   Anton,
+  Roboto
 } from "next/font/google";
+
+export const roboto = Roboto({ subsets: ["latin"], weight: ["400"] });
 
 export const rivage = Beau_Rivage({
   subsets: ["latin"],

@@ -1,6 +1,7 @@
 "use client";
 
 import Ceremony from "./components/Ceremony";
+import Confirm from "./components/Confirm";
 import Gallery from "./components/Gallery";
 import GodParents from "./components/GodParents";
 import Header from "./components/Header";
@@ -16,6 +17,7 @@ export default function Christening() {
       <Reception />
       <GodParents />
       <Gallery />
+      <Confirm />
     </div>
   );
 }

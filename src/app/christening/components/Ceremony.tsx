@@ -53,6 +53,9 @@ const ModalMap = ({
 export default function Ceremony() {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
+  const defaultContent =
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
+
   return (
     <>
       <section className="h-screen relative flex justify-center items-center flex-col">
@@ -102,49 +105,53 @@ export default function Ceremony() {
           </g>
         </svg>
 
-        <div
-          style={{
-            WebkitMaskImage: "url('/img/christening/hexagon-mask.png')",
-            WebkitMaskRepeat: "no-repeat",
-            WebkitMaskSize: "contain",
-            WebkitMaskPosition: "center",
-          }}
-          className="w-56 h-56 my-3"
-        >
-          <Image
-            alt="church"
-            width={300}
-            height={300}
-            src={"/img/christening/church.jpg"}
-            priority
-          />
+        <div className="mt-24 pt-32 flex flex-col items-center justify-center mx-5 max-w-sm p-6 pb-3 bg-white border border-gray-200 shadow relative">
+          <div
+            style={{
+              WebkitMaskImage: "url('/img/christening/hexagon-mask.png')",
+              WebkitMaskRepeat: "no-repeat",
+              WebkitMaskSize: "contain",
+              WebkitMaskPosition: "center",
+            }}
+            className="w-56 h-56 absolute -top-24"
+          >
+            <Image
+              alt="church"
+              width={300}
+              height={300}
+              src={"/img/christening/church.jpg"}
+              priority
+            />
+          </div>
+          <div
+            className={`${playFair.className} p-1 text-center text-orange-900`}
+          >
+            <p>SABADO 07 DE JULIO</p>
+            <p>01:00 PM</p>
+          </div>
+          <p
+            className={`${playFair.className} mx-10 my-3 text-center text-orange-900`}
+          >
+            Catedral Metropolitana de la Inmaculada Concepción
+          </p>
+          <p
+            className={`${lora.className} text-center py-3 text-sm text-zinc-600`}
+          >
+            Juan de La Luz Enríquez s/n, Zona Centro, Centro, 91000
+            Xalapa-Enríquez, Ver.
+          </p>
+          <div className="flex items-center justify-center">
+            <button
+              type="button"
+              className="mt-3 text-white bg-gradient-to-br from-pink-500 to-orange-400 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"
+              onClick={() => {
+                onOpen();
+              }}
+            >
+              Ver Ubicación
+            </button>
+          </div>
         </div>
-        <div
-          className={`${playFair.className} p-1 text-center text-orange-900`}
-        >
-          <p>SABADO 07 DE JULIO</p>
-          <p>01:00 PM</p>
-        </div>
-        <p
-          className={`${playFair.className} mx-10 my-3 text-center text-orange-900`}
-        >
-          Catedral Metropolitana de la Inmaculada Concepción
-        </p>
-        <p
-          className={`${lora.className} text-center px-10 py-3 text-sm text-zinc-600`}
-        >
-          Juan de La Luz Enríquez s/n, Zona Centro, Centro, 91000
-          Xalapa-Enríquez, Ver.
-        </p>
-        <button
-          type="button"
-          className="mt-3 text-white bg-gradient-to-br from-pink-500 to-orange-400 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"
-          onClick={() => {
-            onOpen();
-          }}
-        >
-          Ver Ubicación
-        </button>
       </section>
       <ModalMap isOpen={isOpen} onOpenChange={onOpenChange} />
     </>
