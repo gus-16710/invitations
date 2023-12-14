@@ -6,13 +6,13 @@ import { Providers } from "./provider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Invitaciones",
+  title: "Invitaciones Digitales",
   description: "Invitaciones digitales para toda ocasión.",
   openGraph: {
     title: "Invitaciones",
     description:
       "Invitaciones digitales para toda ocasión.",
-    images: ["https://q9h7k7d8.rocketcdn.me/app/uploads/2021/08/digital-wedding-invite-728x546.jpg"],
+    images: ["https://invitaciones.unaideamas.com/img/invitations.jpg"],
   },
   icons: {
     icon: "https://invitaciones.unaideamas.com/img/favicon.png",

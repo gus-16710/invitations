@@ -1,8 +1,7 @@
 "use client";
 
-import { Button } from "@nextui-org/react";
+import { Card, CardBody, CardFooter, CardHeader, Divider, Image, Link, Listbox, ListboxItem } from "@nextui-org/react";
 import { useRouter } from "next/navigation";
-import { PiAsteriskSimpleDuotone } from "react-icons/pi";
 import ReactCanvasConfetti from "react-canvas-confetti";
 import { useCallback, useRef, useEffect } from "react";
 
@@ -59,30 +58,41 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="bg-gradient-to-b from-indigo-500 via-purple-500 to-pink-500 h-screen flex items-center justify-center flex-col">
-      <Button
-        className="m-5 w-40"
-        color="default"
-        onClick={() => router.push("/wedding")}
-      >
-        <PiAsteriskSimpleDuotone className="text-3xl" /> Boda
-      </Button>
-      <Button
-        className="m-5 w-40"
-        color="success"
-        onClick={() => router.push("/fifteen")}
-      >
-        <PiAsteriskSimpleDuotone className="text-3xl" />
-        XV Años
-      </Button>
-      <Button
-        className="m-5 w-40"
-        color="secondary"
-        onClick={() => router.push("/christening")}
-      >
-        <PiAsteriskSimpleDuotone className="text-3xl" /> Bautizo
-      </Button>
-
+    <main className="bg-gradient-to-br from-purple-600 to-blue-500 h-screen flex items-center justify-center flex-col">
+      <Card className="w-80 mx-10">
+        <CardHeader className="flex gap-3">
+          <Image
+            alt="invitations"
+            height={40}
+            radius="sm"
+            src="/img/invitations.jpg"
+            width={40}
+          />
+          <div className="flex flex-col">
+            <p className="text-md">Invitaciones</p>
+            <p className="text-small text-default-500">Bodas, XV Años & Bautizos</p>
+          </div>
+        </CardHeader>
+        <Divider />
+        <CardBody>
+          <Listbox aria-label="Actions">
+            <ListboxItem key="bodas" onClick={() => router.push("/bodas")}>
+              ⭐ Bodas
+            </ListboxItem>
+            <ListboxItem key="quinces" onClick={() => router.push("/quinces")}>
+              ⭐ XV Años
+            </ListboxItem>
+            <ListboxItem key="bautizos" onClick={() => router.push("/bautizos")}>
+              ⭐ Bautizos
+            </ListboxItem>
+          </Listbox>
+        </CardBody>
+        <Divider />
+        <CardFooter>
+          <p className="text-sm">Selecciona un tipo de invitación 👆🏽</p>
+        </CardFooter>
+      </Card>
+      
       <ReactCanvasConfetti
         refConfetti={getInstance}
         style={{
