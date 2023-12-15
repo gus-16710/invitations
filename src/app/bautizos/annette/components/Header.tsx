@@ -31,7 +31,7 @@ export default function Header() {
           width={300}
           height={300}
           src={"/img/bautizos/annette/gallery-05.jpg"}
-          priority
+          priority          
         />
       </motion.div>
       <motion.h1

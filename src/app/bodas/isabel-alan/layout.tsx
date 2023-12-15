@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "🥂 Diana & Ernesto 🥂",
+  title: "💗 Isabel & Alan 💗",
   description:
     "Nos casamos y deseamos compartir con ustedes este día tan especial.",
   openGraph: {
-    title: "🥂 Diana & Ernesto 🥂",
+    title: "💗 Isabel & Alan 💗",
     description:
       "Nos casamos y deseamos compartir con ustedes este día tan especial.",
     images: ["https://invitaciones.unaideamas.com/img/bodas/diana-ernesto/gallery-04.jpg"],

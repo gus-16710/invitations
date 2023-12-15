@@ -30,3 +30,8 @@ export default function AudioControl() {
     </>
   );
 }
+
+/**
+ * 259 > 100
+ * 175 > ? 
+ */
