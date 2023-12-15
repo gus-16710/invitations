@@ -4,7 +4,10 @@ import "./Header.css";
 
 export default function Header() {
   return (
-    <section className="h-screen relative flex items-center justify-center flex-col bg-[url('/img/bodas/isabel-alan/gallery-02.jpg')] bg-cover bg-center">
+    <section
+      className="relative flex items-center justify-center flex-col bg-[url('/img/bodas/isabel-alan/gallery-02.jpg')] bg-cover bg-center"
+      style={{ height: "100svh" }}
+    >
       <h1
         className={`${alex.className} text-zinc-100 text-8xl text-center mx-5 flex flex-col custom-shadow`}
       >
@@ -14,9 +17,9 @@ export default function Header() {
       </h1>
       <p className={`${mate.className} text-zinc-100 text-xl custom-shadow`}>
         Domingo 25 de Febrero del 2024
-      </p>      
+      </p>
 
-      <AudioPlayer/>
+      <AudioPlayer />
       <div className="absolute -bottom-1 w-full">
         <svg
           width="100%"

@@ -38,6 +38,9 @@ export default function Christening() {
             <ListboxItem key="diana-ernesto" onClick={() => router.push("diana-ernesto")}>
               ⭐ Invitación Diana & Ernesto
             </ListboxItem>
+            <ListboxItem key="isabel-alan" onClick={() => router.push("isabel-alan")}>
+              ⭐ Invitación Isabel & Alan
+            </ListboxItem>
           </Listbox>
         </CardBody>
         <Divider />
