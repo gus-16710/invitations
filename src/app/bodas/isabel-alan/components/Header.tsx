@@ -1,15 +1,16 @@
 import AudioPlayer from "./AudioPlayer";
-import { alex, mate, saira } from "./Fonts";
+import { alex, mate } from "./Fonts";
 import "./Header.css";
 
 export default function Header() {
+
   return (
     <section
       className="relative flex items-center justify-center flex-col bg-[url('/img/bodas/isabel-alan/gallery-01.jpg')] bg-cover bg-center"
-      style={{ height: "100svh" }}
+      style={{ height: "100svh" }}      
     >
       <h1
-        className={`${alex.className} text-zinc-100 text-8xl text-center mx-5 flex flex-col custom-shadow`}
+        className={`${alex.className} text-zinc-100 text-8xl text-center mx-5 flex flex-col custom-shadow`}        
       >
         <label>Isabel</label>
         <label>&</label>

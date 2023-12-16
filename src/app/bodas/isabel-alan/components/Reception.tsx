@@ -8,6 +8,8 @@ import {
   useDisclosure,
 } from "@nextui-org/react";
 import { mate, roboto } from "./Fonts";
+import { useRef } from "react";
+import { useScroll, motion } from "framer-motion";
 
 const MapSalon = () => (
   <iframe
@@ -38,7 +40,11 @@ const ModalMap = ({
       <ModalContent>
         {(onClose) => (
           <>
-            <ModalHeader className={`${mate.className} flex flex-col gap-1 items-center`}>Recepción</ModalHeader>
+            <ModalHeader
+              className={`${mate.className} flex flex-col gap-1 items-center`}
+            >
+              Recepción
+            </ModalHeader>
             <ModalBody>
               <MapSalon />
             </ModalBody>
@@ -52,11 +58,21 @@ const ModalMap = ({
 
 export default function Reception() {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
+  const ref = useRef<HTMLDivElement>(null);
+
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["0 1", "1 1"],
+  });
 
   return (
     <>
-      <section className="relative h-screen flex flex-col items-center justify-center">
-        <Divider orientation="vertical" className="h-14 absolute -top-0"/>
+      <motion.section
+        className="relative h-screen flex flex-col items-center justify-center"
+        ref={ref}
+        style={{ scale: scrollYProgress, opacity: scrollYProgress }}
+      >
+        <Divider orientation="vertical" className="h-14 absolute -top-0" />
         <svg
           xmlns="http://www.w3.org/2000/svg"
           id="Capa_1"
@@ -104,7 +120,7 @@ export default function Reception() {
         >
           Ver Ubicación
         </button>
-      </section>
+      </motion.section>
       <ModalMap isOpen={isOpen} onOpenChange={onOpenChange} />
     </>
   );

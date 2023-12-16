@@ -17,7 +17,7 @@ export default function Wedding() {
       <Reception />
       <Photography urlImg={"/img/bodas/isabel-alan/gallery-02.jpg"} />
       <Gifts />
-      <Photography urlImg={"/img/bodas/isabel-alan/gallery-03.jpg"} />
+      <Photography urlImg={"/img/bodas/isabel-alan/gallery-03.jpg"} />      
       <DressCode />
       <Confirm />
       <FloatinButton />

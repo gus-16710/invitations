@@ -9,11 +9,19 @@ import {
   PopoverTrigger,
 } from "@nextui-org/react";
 import { mate, roboto, titillium } from "./Fonts";
-import { useState } from "react";
+import { useRef, useState } from "react";
+import { useScroll, motion } from "framer-motion";
 
 export default function Gifts() {
   const [openCount, setOpenCount] = useState(false);
   const [openCL, setOpenCL] = useState(false);
+
+  const ref = useRef<HTMLDivElement>(null);
+
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["0 1", "1 1"],
+  });
 
   const clipBoard = (text: string) => {
     navigator.clipboard.writeText(text);
@@ -24,14 +32,16 @@ export default function Gifts() {
   };
 
   return (
-    <section className="h-screen flex justify-center items-center flex-col">
+    <motion.section
+      className="h-screen flex justify-center items-center flex-col"
+      ref={ref}
+      style={{ scale: scrollYProgress, opacity: scrollYProgress }}
+    >
       <h1 className={`${mate.className} text-gray-800 text-3xl mt-5`}>
         Mesa de Regalos
       </h1>
 
-      <p
-        className={`${roboto.className} text-gray-800 mt-5 mx-10 text-center`}
-      >
+      <p className={`${roboto.className} text-gray-800 mt-5 mx-10 text-center`}>
         Nuestro mayor regalo será tu presencia, pero si deseas obsequiarnos un
         detalle te dejamos las siguientes opciones:
       </p>
@@ -173,6 +183,6 @@ export default function Gifts() {
           </AccordionItem>
         </Accordion>
       </div>
-    </section>
+    </motion.section>
   );
 }

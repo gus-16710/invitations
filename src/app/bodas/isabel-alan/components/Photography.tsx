@@ -1,8 +1,7 @@
 export default function Photography({ urlImg }: { urlImg: string }) {
-
   return (
     <section
-      className={`relative h-96 bg-center bg-cover bg-fixed`}
+      className={`relative bg-center bg-cover bg-fixed h-96`}
       style={{ backgroundImage: `url(${urlImg})` }}
     >
       <div className="absolute -top-1 w-full">

@@ -8,6 +8,8 @@ import {
   useDisclosure,
 } from "@nextui-org/react";
 import { mate, roboto } from "./Fonts";
+import { useRef } from "react";
+import { useScroll, motion } from "framer-motion";
 
 const MapCeremony = () => (
   <iframe
@@ -38,7 +40,11 @@ const ModalMap = ({
       <ModalContent>
         {(onClose) => (
           <>
-            <ModalHeader className={`${mate.className} flex flex-col gap-1 items-center`}>Ceremonia</ModalHeader>
+            <ModalHeader
+              className={`${mate.className} flex flex-col gap-1 items-center`}
+            >
+              Ceremonia
+            </ModalHeader>
             <ModalBody>
               <MapCeremony />
             </ModalBody>
@@ -52,11 +58,21 @@ const ModalMap = ({
 
 export default function Ceremony() {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
+  const ref = useRef<HTMLDivElement>(null);
+
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["0 1", "1 1"],
+  });
 
   return (
     <>
-      <section className="relative h-screen flex flex-col items-center justify-center">
-        <svg
+      <motion.section
+        className="relative h-screen flex flex-col items-center justify-center"
+        ref={ref}
+        style={{ scale: scrollYProgress, opacity: scrollYProgress }}                
+      >
+        <motion.svg
           xmlns="http://www.w3.org/2000/svg"
           xmlnsXlink="http://www.w3.org/1999/xlink"
           fill="#000000"
@@ -65,6 +81,7 @@ export default function Ceremony() {
           viewBox="0 0 512 512"
           xmlSpace="preserve"
           width="75px"
+          // style={{ scale: scrollYProgress, opacity: scrollYProgress }}                
         >
           <g>
             <g>
@@ -196,7 +213,7 @@ export default function Ceremony() {
               <rect x="56.57" y="486.974" width="16.684" height="15.642" />
             </g>
           </g>
-        </svg>
+        </motion.svg>
         <h1 className={`${mate.className} text-gray-800 text-3xl mt-5`}>
           Ceremonia Religiosa
         </h1>
@@ -223,8 +240,8 @@ export default function Ceremony() {
         >
           Ver Ubicación
         </button>
-        <Divider orientation="vertical" className="h-14 absolute -bottom-0"/>
-      </section>
+        <Divider orientation="vertical" className="h-14 absolute -bottom-0" />
+      </motion.section>
       <ModalMap isOpen={isOpen} onOpenChange={onOpenChange} />
     </>
   );
