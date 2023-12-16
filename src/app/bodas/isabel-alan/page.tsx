@@ -3,6 +3,7 @@
 import Ceremony from "./components/Ceremony";
 import Confirm from "./components/Confirm";
 import DressCode from "./components/DressCode";
+import FloatinButton from "./components/FloatingButton";
 import Gifts from "./components/Gifts";
 import Header from "./components/Header";
 import Photography from "./components/Photography";
@@ -14,11 +15,12 @@ export default function Wedding() {
       <Header />
       <Ceremony />
       <Reception />
-      <Photography urlImg={"/img/bodas/isabel-alan/gallery-01.jpg"} />
+      <Photography urlImg={"/img/bodas/isabel-alan/gallery-02.jpg"} />
       <Gifts />
       <Photography urlImg={"/img/bodas/isabel-alan/gallery-03.jpg"} />
-      <Confirm />
       <DressCode />
+      <Confirm />
+      <FloatinButton />
     </main>
   );
 }

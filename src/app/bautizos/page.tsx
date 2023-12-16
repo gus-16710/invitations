@@ -36,7 +36,7 @@ export default function Christening() {
         <CardBody>
           <Listbox aria-label="Actions">
             <ListboxItem key="annette" onClick={() => router.push("annette")}>
-              ⭐ Invitación Annette
+              ⭐ Annette
             </ListboxItem>
           </Listbox>
         </CardBody>

@@ -1,4 +1,5 @@
 import {
+  Divider,
   Modal,
   ModalBody,
   ModalContent,
@@ -54,7 +55,8 @@ export default function Reception() {
 
   return (
     <>
-      <section className="h-screen flex flex-col items-center justify-center">
+      <section className="relative h-screen flex flex-col items-center justify-center">
+        <Divider orientation="vertical" className="h-14 absolute -top-0"/>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           id="Capa_1"

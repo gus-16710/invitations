@@ -36,10 +36,10 @@ export default function Christening() {
         <CardBody>
           <Listbox aria-label="Actions">
             <ListboxItem key="diana-ernesto" onClick={() => router.push("diana-ernesto")}>
-              ⭐ Invitación Diana & Ernesto
+              ⭐ Diana & Ernesto
             </ListboxItem>
             <ListboxItem key="isabel-alan" onClick={() => router.push("isabel-alan")}>
-              ⭐ Invitación Isabel & Alan
+              ⭐ Isabel & Alan
             </ListboxItem>
           </Listbox>
         </CardBody>

@@ -1,4 +1,5 @@
 import {
+  Divider,
   Modal,
   ModalBody,
   ModalContent,
@@ -54,7 +55,7 @@ export default function Ceremony() {
 
   return (
     <>
-      <section className="h-screen flex flex-col items-center justify-center">
+      <section className="relative h-screen flex flex-col items-center justify-center">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           xmlnsXlink="http://www.w3.org/1999/xlink"
@@ -222,6 +223,7 @@ export default function Ceremony() {
         >
           Ver Ubicación
         </button>
+        <Divider orientation="vertical" className="h-14 absolute -bottom-0"/>
       </section>
       <ModalMap isOpen={isOpen} onOpenChange={onOpenChange} />
     </>

@@ -5,7 +5,7 @@ import "./Header.css";
 export default function Header() {
   return (
     <section
-      className="relative flex items-center justify-center flex-col bg-[url('/img/bodas/isabel-alan/gallery-02.jpg')] bg-cover bg-center"
+      className="relative flex items-center justify-center flex-col bg-[url('/img/bodas/isabel-alan/gallery-01.jpg')] bg-cover bg-center"
       style={{ height: "100svh" }}
     >
       <h1

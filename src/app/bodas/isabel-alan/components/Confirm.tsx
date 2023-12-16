@@ -1,21 +1,20 @@
 import { FaPhoneAlt, FaWhatsapp } from "react-icons/fa";
 import { mate, roboto } from "./Fonts";
-import { motion } from "framer-motion";
 
 export default function Confirm() {
   return (
-    <section className="h-screen flex items-center justify-center flex-col">
-      <h1 className={`${mate.className} text-gray-800 text-3xl mt-5`}>
+    <section className="h-screen flex items-center justify-center flex-col bg-zinc-900 text-gray-100">      
+      <h1 className={`${mate.className} text-3xl mt-5`}>
         Confirma tu asistencia
       </h1>
-      <span className="mt-5 bg-gray-100 text-gray-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">
+      <span className="mt-5 bg-gray-100 text-xs font-medium me-2 px-2.5 py-0.5 rounded text-red-600">
         * NO NIÑOS *
       </span>
-      <p className={`${roboto.className} text-gray-800 mt-5 mx-10 text-center`}>
+      <p className={`${roboto.className} mt-5 mx-10 text-center`}>
         Espero que puedan venir a compartir con nosotros este día inolvidable.
         Por favor confirma tu presencia.
       </p>
-      <p className={`${roboto.className} text-gray-800 mt-5 mx-10 text-center`}>
+      <p className={`${roboto.className} mt-5 mx-10 text-center`}>
         ¡Muchas Gracias!
       </p>
 
