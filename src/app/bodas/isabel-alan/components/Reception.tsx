@@ -62,15 +62,15 @@ export default function Reception() {
 
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["0 1", "1 1"],
+    offset: ["0 1", "0.8 1"],
   });
 
   return (
     <>
       <motion.section
-        className="relative h-screen flex flex-col items-center justify-center"
+        className="relative flex flex-col items-center justify-center"        
         ref={ref}
-        style={{ scale: scrollYProgress, opacity: scrollYProgress }}
+        style={{ scale: scrollYProgress, opacity: scrollYProgress, height: "100svh"}}
       >
         <Divider orientation="vertical" className="h-14 absolute -top-0" />
         <svg

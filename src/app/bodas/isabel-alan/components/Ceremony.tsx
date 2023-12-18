@@ -62,15 +62,19 @@ export default function Ceremony() {
 
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["0 1", "1 1"],
+    offset: ["0 1", "0.8 1"],
   });
 
   return (
     <>
       <motion.section
-        className="relative h-screen flex flex-col items-center justify-center"
+        className="relative flex flex-col items-center justify-center"
         ref={ref}
-        style={{ scale: scrollYProgress, opacity: scrollYProgress }}                
+        style={{
+          scale: scrollYProgress,
+          opacity: scrollYProgress,
+          height: "100svh",
+        }}
       >
         <motion.svg
           xmlns="http://www.w3.org/2000/svg"
@@ -81,7 +85,7 @@ export default function Ceremony() {
           viewBox="0 0 512 512"
           xmlSpace="preserve"
           width="75px"
-          // style={{ scale: scrollYProgress, opacity: scrollYProgress }}                
+          // style={{ scale: scrollYProgress, opacity: scrollYProgress }}
         >
           <g>
             <g>

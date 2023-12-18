@@ -20,7 +20,7 @@ export default function Gifts() {
 
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["0 1", "1 1"],
+    offset: ["0 1", "0.8 1"],
   });
 
   const clipBoard = (text: string) => {
@@ -33,9 +33,9 @@ export default function Gifts() {
 
   return (
     <motion.section
-      className="h-screen flex justify-center items-center flex-col"
+      className="flex justify-center items-center flex-col"
       ref={ref}
-      style={{ scale: scrollYProgress, opacity: scrollYProgress }}
+      style={{ scale: scrollYProgress, opacity: scrollYProgress, height: "100svh" }}
     >
       <h1 className={`${mate.className} text-gray-800 text-3xl mt-5`}>
         Mesa de Regalos

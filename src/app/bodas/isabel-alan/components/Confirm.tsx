@@ -8,15 +8,15 @@ export default function Confirm() {
 
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["0 1", "1 1"],
+    offset: ["0 1", "0.8 1"],
   });
 
   return (
     <div className="bg-zinc-900">
       <motion.section
-        className="h-screen flex items-center justify-center flex-col text-gray-100"
+        className="flex items-center justify-center flex-col text-gray-100"
         ref={ref}
-        style={{ scale: scrollYProgress, opacity: scrollYProgress }}
+        style={{ scale: scrollYProgress, opacity: scrollYProgress, height: "100svh" }}
       >
         <h1 className={`${mate.className} text-3xl mt-5`}>
           Confirma tu asistencia
