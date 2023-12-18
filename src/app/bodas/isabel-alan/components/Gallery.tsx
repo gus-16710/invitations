@@ -41,7 +41,7 @@ export default function Gallery() {
   const [index, setIndex] = useState(-1);
 
   return (
-    <section className="relative pb-36">
+    <section className="relative pb-36 ">
       <div className="w-72 m-auto">
         <PhotoAlbum
           layout="masonry"
