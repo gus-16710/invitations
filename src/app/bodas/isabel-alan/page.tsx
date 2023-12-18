@@ -23,6 +23,7 @@ export default function Wedding() {
       <Gallery />
       <Confirm />
       <FloatinButton />
+      {/* Comentario gustavo.garcia */}
     </main>
   );
 }
