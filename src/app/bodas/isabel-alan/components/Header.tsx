@@ -1,24 +1,63 @@
 import AudioPlayer from "./AudioPlayer";
 import { alex, mate } from "./Fonts";
 import "./Header.css";
+import { motion } from "framer-motion";
+
+const list = {
+  visible: {
+    opacity: 1,
+    transition: {
+      when: "beforeChildren",
+      staggerChildren: 0.3,
+    },
+  },
+  hidden: {
+    opacity: 0,
+    transition: {
+      when: "afterChildren",
+    },
+  },
+};
+
+const item = {
+  visible: { opacity: 1, y: 0 },
+  hidden: { opacity: 0, y: -100 },
+};
 
 export default function Header() {
+  const text01 = "Isabel&Alan";
 
   return (
     <section
       className="relative flex items-center justify-center flex-col bg-[url('/img/bodas/isabel-alan/gallery-01.jpg')] bg-cover bg-center"
-      style={{ height: "100svh" }}      
+      style={{ height: "100svh" }}
     >
-      <h1
-        className={`${alex.className} text-zinc-100 text-8xl text-center mx-5 flex flex-col custom-shadow`}        
+      <motion.h1
+        className={`${alex.className} text-zinc-100 text-8xl text-center mx-5 custom-shadow flex flex-wrap justify-center`}
+        variants={list}
+        initial="hidden"
+        whileInView="visible"
       >
-        <label>Isabel</label>
-        <label>&</label>
-        <label>Alan</label>
-      </h1>
-      <p className={`${mate.className} text-zinc-100 text-xl custom-shadow`}>
+        {text01.split("").map((letter, index) => {
+          return (
+            <motion.span
+              key={index}
+              variants={item}
+              className={`${letter === "&" ? "w-full" : ""}`}
+            >
+              {letter}
+            </motion.span>
+          );
+        })}
+      </motion.h1>
+      <motion.p
+        className={`${mate.className} text-zinc-100 text-xl custom-shadow`}
+        initial={{ y: 100, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ delay: 3, duration: 1 }}
+      >
         Domingo 25 de Febrero del 2024
-      </p>
+      </motion.p>
 
       <AudioPlayer />
       <div className="absolute -bottom-1 w-full">
