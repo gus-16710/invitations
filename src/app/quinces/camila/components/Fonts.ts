@@ -1,6 +1,21 @@
-import { Dancing_Script, Great_Vibes, Lato, Quicksand } from "next/font/google";
+import {
+  Teko,
+  Dancing_Script,
+  Great_Vibes,
+  Lato,
+  Quicksand,
+  Titillium_Web,
+} from "next/font/google";
 
-export const dancing = Dancing_Script({ subsets: ["latin"], weight: ["400", "500"] });
+export const dancing = Dancing_Script({
+  subsets: ["latin"],
+  weight: ["400", "500"],
+});
 export const great = Great_Vibes({ subsets: ["latin"], weight: ["400"] });
-export const quickSand = Quicksand({ subsets: ["latin"], weight: ["400", "500", "600"] });
+export const quickSand = Quicksand({
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+});
 export const lato = Lato({ subsets: ["latin"], weight: ["400"] });
+export const teko = Teko({ subsets: ["latin"], weight: ["400"] });
+export const titillium = Titillium_Web({ subsets: ["latin"], weight: "400" });

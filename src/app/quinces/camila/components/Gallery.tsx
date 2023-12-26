@@ -1,15 +1,63 @@
-import { Divider } from "@nextui-org/react";
-import { dancing, lato, quickSand } from "./Fonts";
+import "yet-another-react-lightbox/styles.css";
+import PhotoAlbum from "react-photo-album";
+import Lightbox from "yet-another-react-lightbox";
+import NextJsImage from "./NextJsImage";
+import { dancing } from "./Fonts";
+import { useState } from "react";
 
-export default function Presentation() {
+const images = [
+  {
+    src: "/img/quinces/camila/gallery-01.jpg",
+    width: 800,
+    height: 600,
+  },
+  {
+    src: "/img/quinces/camila/gallery-02.jpg",
+    width: 1600,
+    height: 900,
+  },
+  {
+    src: "/img/quinces/camila/gallery-03.jpg",
+    width: 800,
+    height: 600,
+  },
+  {
+    src: "/img/quinces/camila/gallery-04.jpg",
+    width: 800,
+    height: 600,
+  },
+  {
+    src: "/img/quinces/camila/gallery-05.jpg",
+    width: 800,
+    height: 600,
+  },
+  {
+    src: "/img/quinces/camila/gallery-06.jpg",
+    width: 800,
+    height: 600,
+  },
+];
+
+export default function Gallery() {
+  const [index, setIndex] = useState(-1);
+
   return (
     <section
-      className="pt-10 pb-36 flex flex-col items-center justify-center relative"
-      style={{
-        backgroundColor: "#f4e1d1",
-        marginTop: "-5px",        
-      }}
+      className="relative flex flex-col items-center justify-center pt-28 pb-20"
+      style={{ backgroundColor: "#f4e1d1" }}
     >
+      <div className="w-full absolute -top-1">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          preserveAspectRatio="none"
+          fill="currentColor"
+          fillRule="evenodd"
+          viewBox="0 0 1000 137"
+          style={{ fill: "#f3c5c5", rotate: "180deg" }}
+        >
+          <path d="M0 136.756v-14.507C116.467-94.71 395.767 172.311 500 0l.306.503C604.791 171.777 883.649-94.493 1000 122.249v14.507H0Z" />
+        </svg>
+      </div>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         id="svg2"
@@ -27,35 +75,23 @@ export default function Presentation() {
           transform="matrix(28.222 0 0 28.222 0 -.034882)"
         />
       </svg>
-      <p className={`${dancing.className} text-pink-900 mt-5 text-3xl`}>Padres</p>
-      <p
-        className={`${quickSand.className} mx-10 mt-5 text-center  text-zinc-800`}
-      >
-        Laurence Bermudez Davila <br /> & <br /> María Cordova Loreto
+      <p className={`${dancing.className} text-pink-900 mt-5 text-3xl`}>
+        Fotos
       </p>
-
-      <Divider orientation="horizontal" className="w-14 my-10 bg-pink-700" />
-
-      <p className={`${dancing.className} text-pink-900 text-3xl`}>
-        Padrinos de Honor
-      </p>
-      <p
-        className={`${quickSand.className} mx-10 mt-5 text-center text-zinc-800`}
-      >
-        Amelia Torres Lara <br /> & <br /> José López Díaz
-      </p>
-
-      <div className="w-full absolute bottom-0">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          preserveAspectRatio="none"
-          fill="currentColor"
-          fillRule="evenodd"
-          viewBox="0 0 1000 137"
-          style={{ fill: "#f3c5c5" }}
-        >
-          <path d="M0 136.756v-14.507C116.467-94.71 395.767 172.311 500 0l.306.503C604.791 171.777 883.649-94.493 1000 122.249v14.507H0Z" />
-        </svg>
+      <div className="z-30 px-2 py-5 w-72 m-auto">
+        <PhotoAlbum
+          layout="masonry"
+          photos={images}
+          onClick={({ index: current }) => setIndex(current)}
+          renderPhoto={NextJsImage}
+          columns={2}
+        />
+        <Lightbox
+          index={index}
+          slides={images}
+          open={index >= 0}
+          close={() => setIndex(-1)}
+        />
       </div>
     </section>
   );

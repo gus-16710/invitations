@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { dancing, great, lato, quickSand } from "./Fonts";
+import { dancing, great, lato, quickSand, teko } from "./Fonts";
 import "./Header.css";
 
 function formatNumber(number: number) {
@@ -70,7 +70,11 @@ export default function Header() {
         8 DE AGOSTO DEL 2024
       </p>
       <div
-        className={`${dancing.className} my-5 flex justify-evenly w-full text-2xl text-pink-800`}
+        className={`${teko.className} my-5 flex justify-evenly w-full text-5xl text-zinc-50`}
+        style={{
+            textShadow:
+              "-1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5)",
+          }}
       >
         <label className="flex flex-col items-center">
           <span>{formatNumber(count.days)}</span>
@@ -92,6 +96,12 @@ export default function Header() {
           <span className="text-2xl">Seg</span>
         </label>
       </div>
+      <p
+        className={`${quickSand.className} text-pink-800 text-lg text-center mx-10`}
+      >
+        Porque eres parte de mi vida y has acompañado mi camino, quiero que seas
+        parte de este momento tan importante para mi.
+      </p>
     </section>
   );
 }
