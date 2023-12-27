@@ -9,6 +9,8 @@ import {
 } from "@nextui-org/react";
 import { dancing, great, quickSand } from "./Fonts";
 import { useState } from "react";
+import { motion } from "framer-motion";
+import { locations } from "./Animations";
 
 const MapSalon = () => (
   <iframe
@@ -52,7 +54,9 @@ const ModalMap = ({
       <ModalContent>
         {(onClose) => (
           <>
-            <ModalHeader className={`${great.className} flex flex-col gap-1 items-center text-3xl text-pink-900`}>
+            <ModalHeader
+              className={`${great.className} flex flex-col gap-1 items-center text-3xl text-pink-900`}
+            >
               {map === "ceremony" ? "Ceremonia Religiosa" : "Recepción"}
             </ModalHeader>
             <ModalBody>
@@ -76,10 +80,10 @@ export default function Locations() {
         className="py-10 flex flex-col justify-center items-center relative bg-[url('/img/quinces/camila/background-locations.jpg')] bg-center bg-cover"
         style={{
           backgroundColor: "#f3c5c5",
-          marginTop: "-1px",          
+          marginTop: "-1px",
         }}
       >
-        <svg
+        <motion.svg
           xmlns="http://www.w3.org/2000/svg"
           xmlnsXlink="http://www.w3.org/1999/xlink"
           width="100px"
@@ -88,6 +92,9 @@ export default function Locations() {
           role="img"
           className="iconify iconify--emojione-monotone"
           preserveAspectRatio="xMidYMid meet"
+          variants={locations.icon}
+          initial="hidden"
+          whileInView="visible"
         >
           <path
             d="M61.063 60.125h-.938v-15.01c.731.035 1.443-.371 1.739-1.074a1.754 1.754 0 0 0-.965-2.297l-15.774-6.443v-6.386l.348.141c.906.367 1.956-.058 2.329-.944c.376-.887-.059-1.914-.963-2.28l-13.276-5.523V9.813h4.688V6.688h-4.688V2h-3.125v4.688H25.75v3.125h4.688v10.495l-13.276 5.523c-.904.366-1.339 1.394-.963 2.28c.373.887 1.423 1.312 2.327.944l.35-.142V35.3L3.099 41.744a1.754 1.754 0 0 0-.963 2.297c.294.703 1.008 1.11 1.739 1.074v15.01h-.937c-.517 0-.938.422-.938.938s.421.937.938.937h58.125c.514 0 .937-.422.937-.937s-.423-.938-.937-.938m-42.188 0H5.75V44.466l13.125-5.361v21.02m12.188-1.562H28.25V55.75h2.813v2.813m0-4.063H28.25v-2.813c0-1.742 1.199-3.198 2.813-3.617v6.43m4.687 4.063h-2.813V55.75h2.813v2.813m0-4.063h-2.813v-6.429c1.612.419 2.813 1.875 2.813 3.616V54.5m7.5 5.625h-5.625v-8.438a5.625 5.625 0 0 0-11.25 0v8.438H20.75V28.153L32 23.59l11.25 4.564v31.971m15 0H45.125V39.104l13.125 5.361v15.66"
@@ -189,44 +196,74 @@ export default function Locations() {
             d="M51.347 51.569l1.827-2.466a.514.514 0 0 0-.174-.782l-.798-.332a.519.519 0 0 0-.676.432l-.452 3.034c-.052.334.073.385.273.114"
             fill="#ffff"
           />
-        </svg>
-        <h2 className={`${dancing.className} text-pink-800 text-3xl mt-5`}>
+        </motion.svg>
+        <motion.h2
+          className={`${dancing.className} text-pink-800 text-3xl mt-5`}
+          variants={locations.text01}
+          initial="hidden"
+          whileInView="visible"
+        >
           Ceremonia Religiosa
-        </h2>
-        <p
+        </motion.h2>
+        <motion.p
           className={`${quickSand.className} my-5 mx-10 font-bold text-center text-zinc-800`}
+          variants={locations.text02}
+          initial="hidden"
+          whileInView="visible"
         >
           Catedral de la Inmaculada Concepción
-        </p>
-        <p className={`${quickSand.className} mx-10 text-center text-zinc-800`}>
+        </motion.p>
+        <motion.p
+          className={`${quickSand.className} mx-10 text-center text-zinc-800`}
+          variants={locations.text03}
+          initial="hidden"
+          whileInView="visible"
+        >
           Juan de La Luz Enríquez s/n, Zona Centro, Centro, 91000
           Xalapa-Enríquez, Ver.
-        </p>
-        <span className="bg-pink-900 text-pink-300 text-xs font-medium me-2 px-2.5 py-0.5 rounded mt-3">
+        </motion.p>
+        <motion.span
+          className="bg-pink-900 text-pink-300 text-xs font-medium me-2 px-2.5 py-0.5 rounded mt-3"
+          variants={locations.time01}
+          initial="hidden"
+          whileInView="visible"
+        >
           12:00 Hrs
-        </span>
-        <button
+        </motion.span>
+        <motion.button
           type="button"
           className="mt-5 text-white bg-gradient-to-r from-pink-400 via-pink-500 to-pink-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 z-20"
           onClick={() => {
             setMap("ceremony");
             onOpen();
           }}
+          variants={locations.button01}
+          initial="hidden"
+          whileInView="visible"
         >
           Ubicación
-        </button>
+        </motion.button>
 
-        <Divider
-          orientation="vertical"
-          className="h-14 mt-4 mb-7 bg-pink-700"
-        />
+        <motion.div
+          variants={locations.divider}
+          initial="hidden"
+          whileInView="visible"
+        >
+          <Divider
+            orientation="vertical"
+            className="h-20 mt-4 mb-7 bg-pink-700"
+          />
+        </motion.div>
 
-        <svg
+        <motion.svg
           xmlns="http://www.w3.org/2000/svg"
           id="Capa_1"
           viewBox="0 0 512 512"
           width="100px"
           fill="rgb(255 255 255)"
+          variants={locations.icon}
+          initial="hidden"
+          whileInView="visible"
         >
           <g>
             <path d="m157.075 214.056v.028c0 4.142 3.357 7.486 7.5 7.486s7.5-3.372 7.5-7.514-3.358-7.5-7.5-7.5c-4.143 0-7.5 3.358-7.5 7.5z"></path>
@@ -241,32 +278,53 @@ export default function Locations() {
             <path d="m231.235 20.956c-2.927-2.931-7.676-2.935-10.607-.009-2.932 2.926-2.936 7.676-.009 10.607l17.095 17.124c1.465 1.467 3.386 2.201 5.308 2.201 1.917 0 3.835-.731 5.299-2.192 2.932-2.926 2.936-7.675.009-10.607z"></path>
             <path d="m293.549 50.879c1.922 0 3.843-.734 5.308-2.201l17.095-17.124c2.927-2.931 2.923-7.68-.009-10.607-2.933-2.928-7.682-2.923-10.607.009l-17.095 17.124c-2.927 2.932-2.923 7.68.009 10.607 1.464 1.462 3.382 2.192 5.299 2.192z"></path>
           </g>
-        </svg>
+        </motion.svg>
 
-        <h2 className={`${dancing.className} text-pink-800 text-3xl mt-5`}>
+        <motion.h2
+          className={`${dancing.className} text-pink-800 text-3xl mt-5`}
+          variants={locations.text01}
+          initial="hidden"
+          whileInView="visible"
+        >
           Recepción
-        </h2>
-        <p
+        </motion.h2>
+        <motion.p
           className={`${quickSand.className} my-5 mx-10 font-bold text-center text-zinc-800`}
+          variants={locations.text02}
+          initial="hidden"
+          whileInView="visible"
         >
           Salones Aurora
-        </p>
-        <p className={`${quickSand.className} mx-10 text-center text-zinc-800`}>
+        </motion.p>
+        <motion.p
+          className={`${quickSand.className} mx-10 text-center text-zinc-800`}
+          variants={locations.text03}
+          initial="hidden"
+          whileInView="visible"
+        >
           Carlos A. Carrillo 23, Aguacatal, 91133 Xalapa-Enríquez, Ver.
-        </p>
-        <span className="bg-pink-900 text-pink-300 text-xs font-medium me-2 px-2.5 py-0.5 rounded mt-3">
+        </motion.p>
+        <motion.span
+          className="bg-pink-900 text-pink-300 text-xs font-medium me-2 px-2.5 py-0.5 rounded mt-3"
+          variants={locations.time01}
+          initial="hidden"
+          whileInView="visible"
+        >
           15:00 Hrs
-        </span>
-        <button
+        </motion.span>
+        <motion.button
           type="button"
           className="mt-5 text-white bg-gradient-to-r from-pink-400 via-pink-500 to-pink-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 z-20"
           onClick={() => {
             setMap("reception");
             onOpen();
           }}
+          variants={locations.button01}
+          initial="hidden"
+          whileInView="visible"
         >
           Ubicación
-        </button>
+        </motion.button>
       </section>
       <ModalMap isOpen={isOpen} onOpenChange={onOpenChange} map={map} />
     </>

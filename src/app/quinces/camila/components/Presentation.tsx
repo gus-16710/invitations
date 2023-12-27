@@ -6,10 +6,11 @@ import { presentation } from "./Animations";
 export default function Presentation() {
   return (
     <section
-      className="pt-10 pb-36 flex flex-col items-center justify-center relative"
+      className="pt-10 pb-32 flex flex-col items-center justify-center relative"
       style={{
         backgroundColor: "#f4e1d1",
         marginTop: "-5px",
+        height: "100svh",
       }}
     >
       <motion.svg
@@ -49,7 +50,13 @@ export default function Presentation() {
         Laurence Bermudez Davila <br /> & <br /> María Cordova Loreto
       </motion.p>
 
-      <Divider orientation="horizontal" className="w-14 my-10 bg-pink-700" />
+      <motion.div
+        variants={presentation.divider}
+        initial="hidden"
+        whileInView="visible"
+      >
+        <Divider orientation="horizontal" className="w-20 my-10 bg-pink-700" />
+      </motion.div>
 
       <motion.p
         className={`${dancing.className} text-pink-900 text-3xl`}

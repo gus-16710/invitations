@@ -16,7 +16,15 @@ import {
   ModalHeader,
   useDisclosure,
 } from "@nextui-org/react";
-import { dancing, dosis, montez, quickSand, sevillana } from "./components/Fonts";
+import {
+  dancing,
+  dosis,
+  montez,
+  quickSand,
+  sevillana,
+} from "./components/Fonts";
+import FloatinButton from "./components/FloatingButton";
+import AudioControl from "./components/AudioControl";
 
 const OpeningModal = ({
   isOpen,
@@ -47,7 +55,9 @@ const OpeningModal = ({
               >
                 Camila
               </h1>
-              <p className={`${montez.className} text-zinc-800 text-center text-xl`}>
+              <p
+                className={`${montez.className} text-zinc-800 text-center text-xl`}
+              >
                 08.AGOSTO.2024
               </p>
             </ModalBody>
@@ -88,6 +98,8 @@ export default function Fifteen() {
           <Gallery />
           <Gifts />
           <Confirm />
+          <FloatinButton />
+          <AudioControl />
         </>
       ) : (
         <section
