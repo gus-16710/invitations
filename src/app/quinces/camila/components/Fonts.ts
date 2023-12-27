@@ -5,6 +5,9 @@ import {
   Lato,
   Quicksand,
   Titillium_Web,
+  Sevillana,
+  Dosis,
+  Montez
 } from "next/font/google";
 
 export const dancing = Dancing_Script({
@@ -19,3 +22,6 @@ export const quickSand = Quicksand({
 export const lato = Lato({ subsets: ["latin"], weight: ["400"] });
 export const teko = Teko({ subsets: ["latin"], weight: ["400"] });
 export const titillium = Titillium_Web({ subsets: ["latin"], weight: "400" });
+export const sevillana = Sevillana({ subsets: ["latin"], weight: "400" });
+export const dosis = Dosis({ subsets: ["latin"], weight: "400" });
+export const montez = Montez({ subsets: ["latin"], weight: "400" });

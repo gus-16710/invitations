@@ -232,7 +232,7 @@ export default function Gifts() {
             </Link>
           </div>
         </div>
-        <div className="w-full absolute bottom-0">
+        <div className="w-full absolute -bottom-1">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             preserveAspectRatio="none"
