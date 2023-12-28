@@ -8,7 +8,6 @@ import Confirm from "./components/Confirm";
 import Gifts from "./components/Gifts";
 import { useEffect, useState, Dispatch, SetStateAction } from "react";
 import {
-  Button,
   Modal,
   ModalBody,
   ModalContent,
@@ -16,13 +15,7 @@ import {
   ModalHeader,
   useDisclosure,
 } from "@nextui-org/react";
-import {
-  dancing,
-  dosis,
-  montez,
-  quickSand,
-  sevillana,
-} from "./components/Fonts";
+import { dancing, montez } from "./components/Fonts";
 import FloatinButton from "./components/FloatingButton";
 import AudioControl from "./components/AudioControl";
 

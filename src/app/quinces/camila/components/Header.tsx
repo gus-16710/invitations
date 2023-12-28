@@ -1,9 +1,8 @@
 import { useEffect, useState } from "react";
 import { dancing, great, lato, quickSand, teko } from "./Fonts";
-import { motion } from "framer-motion";
-import "./Header.css";
-import { Divider } from "@nextui-org/react";
 import { header } from "./Animations";
+import { motion, useAnimate } from "framer-motion";
+import "./Header.css";
 
 const list = {
   visible: {
@@ -31,12 +30,10 @@ function formatNumber(number: number) {
 }
 
 export default function Header() {
-  const [count, setCount] = useState({
-    days: 0,
-    hours: 0,
-    minutes: 0,
-    seconds: 0,
-  });
+  const [seconds, setSeconds] = useState(0);
+  const [minutes, setMinutes] = useState(0);
+  const [hours, setHours] = useState(0);
+  const [days, setDays] = useState(0);
 
   const text01 = "Camila";
 
@@ -59,12 +56,10 @@ export default function Header() {
         console.log("EXPIRED");
       }
 
-      setCount({
-        days,
-        hours,
-        minutes,
-        seconds,
-      });
+      setSeconds(seconds);
+      setMinutes(minutes);
+      setHours(hours);
+      setDays(days);
     }, 1000);
   };
 
@@ -72,12 +67,33 @@ export default function Header() {
     countDownClock();
   }, []);
 
+  const [scopeSeconds, animateSeconds] = useAnimate();
+  const [scopeMinutes, animateMinutes] = useAnimate();
+  const [scopeHours, animateHours] = useAnimate();
+  const [scopeDays, animateDays] = useAnimate();
+
+  useEffect(() => {
+    animateSeconds(scopeSeconds.current, { scale: [0, 1], opacity: [0, 1] });
+  }, [seconds, animateSeconds]);
+
+  useEffect(() => {
+    animateMinutes(scopeMinutes.current, { scale: [0, 1], opacity: [0, 1] });
+  }, [minutes, animateSeconds]);
+
+  useEffect(() => {
+    animateHours(scopeHours.current, { scale: [0, 1], opacity: [0, 1] });
+  }, [hours, animateHours]);
+
+  useEffect(() => {
+    animateDays(scopeDays.current, { scale: [0, 1], opacity: [0, 1] });
+  }, [days, animateDays]);
+
   return (
     <section
       className="flex flex-col justify-center items-center relative bg-[url('/img/quinces/camila/background-header.jpg')] bg-center bg-cover"
       style={{ height: "100svh" }}
     >
-      <p className="text-zinc-50 flex items-center">
+      <p className="text-zinc-50 flex items-center z-20">
         <motion.label
           className={`text-2xl ${quickSand.className}`}
           variants={header.text01}
@@ -128,6 +144,7 @@ export default function Header() {
       >
         8 DE AGOSTO DEL 2024
       </motion.p>
+
       <motion.div
         className={`${teko.className} my-5 flex justify-evenly w-full text-5xl text-zinc-50`}
         style={{
@@ -139,22 +156,22 @@ export default function Header() {
         whileInView="visible"
       >
         <label className="flex flex-col items-center">
-          <span>{formatNumber(count.days)}</span>
+          <span ref={scopeDays}>{formatNumber(days)}</span>
           <span className="text-2xl">Días</span>
         </label>
         <label>:</label>
         <label className="flex flex-col items-center">
-          {formatNumber(count.hours)}
+          <span ref={scopeHours}>{formatNumber(hours)}</span>
           <span className="text-2xl">Horas</span>
         </label>
         <label>:</label>
         <label className="flex flex-col items-center">
-          {formatNumber(count.minutes)}
+          <span ref={scopeMinutes}>{formatNumber(minutes)}</span>
           <span className="text-2xl">Min</span>
         </label>
         <label>:</label>
         <label className="flex flex-col items-center">
-          {formatNumber(count.seconds)}
+          <span ref={scopeSeconds}>{formatNumber(seconds)}</span>
           <span className="text-2xl">Seg</span>
         </label>
       </motion.div>
