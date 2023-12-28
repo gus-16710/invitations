@@ -34,21 +34,52 @@ export const header = {
       transition: { duration: 1, delay: 2.3 },
     },
   },
-  timer: {
-    hidden: { scale: 0, opacity: 0, rotate: 360 },
-    visible: {
-      scale: 1,
-      opacity: 1,
-      rotate: 0,
-      transition: { duration: 1, delay: 2.6 },
-    },
-  },
-  text04: {
+  seconds: {
     hidden: { y: -100, opacity: 0 },
     visible: {
       y: 0,
-      opacity: 1,
+      opacity: 1,      
       transition: { duration: 1, delay: 2.6 },
+    },
+  },
+  minutes: {
+    hidden: { y: 100, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,      
+      transition: { duration: 1, delay: 2.9 },
+    },
+  },
+  hours: {
+    hidden: { y: -100, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,      
+      transition: { duration: 1, delay: 3.2 },
+    },
+  },
+  days: {
+    hidden: { y: 100, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,      
+      transition: { duration: 1, delay: 3.5 },
+    },
+  },
+  timer: {
+    hidden: { scale: 0 },
+    visible: {
+      scale: 1,       
+      transition: { duration: 1, delay: 3.9 },
+    },
+  },
+  text04: {
+    hidden: { scale: 0, y: 100, opacity: 0 },
+    visible: {
+      scale: 1,
+      y: 0,      
+      opacity: 1,
+      transition: { duration: 1, delay: 3.9 },
     },
   },
 };
@@ -144,7 +175,7 @@ export const locations = {
   divider: {
     hidden: { scale: 0 },
     visible: {
-      scale: 1,      
+      scale: 1,
       transition: { duration: 1, delay: 1.5 },
     },
   },

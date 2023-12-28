@@ -145,36 +145,74 @@ export default function Header() {
         8 DE AGOSTO DEL 2024
       </motion.p>
 
-      <motion.div
+      <div
         className={`${teko.className} my-5 flex justify-evenly w-full text-5xl text-zinc-50`}
         style={{
           textShadow:
             "-1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5)",
         }}
-        variants={header.timer}
-        initial="hidden"
-        whileInView="visible"
+        // variants={header.timer}
+        // initial="hidden"
+        // whileInView="visible"
       >
-        <label className="flex flex-col items-center">
+        <motion.label
+          className="flex flex-col items-center"
+          variants={header.days}
+          initial="hidden"
+          whileInView="visible"
+        >
           <span ref={scopeDays}>{formatNumber(days)}</span>
           <span className="text-2xl">Días</span>
-        </label>
-        <label>:</label>
-        <label className="flex flex-col items-center">
+        </motion.label>
+        <motion.label
+          variants={header.timer}
+          initial="hidden"
+          whileInView="visible"
+        >
+          :
+        </motion.label>
+        <motion.label
+          className="flex flex-col items-center"
+          variants={header.hours}
+          initial="hidden"
+          whileInView="visible"
+        >
           <span ref={scopeHours}>{formatNumber(hours)}</span>
           <span className="text-2xl">Horas</span>
-        </label>
-        <label>:</label>
-        <label className="flex flex-col items-center">
+        </motion.label>
+        <motion.label
+          variants={header.timer}
+          initial="hidden"
+          whileInView="visible"
+        >
+          :
+        </motion.label>
+        <motion.label
+          className="flex flex-col items-center"
+          variants={header.minutes}
+          initial="hidden"
+          whileInView="visible"
+        >
           <span ref={scopeMinutes}>{formatNumber(minutes)}</span>
           <span className="text-2xl">Min</span>
-        </label>
-        <label>:</label>
-        <label className="flex flex-col items-center">
+        </motion.label>
+        <motion.label
+          variants={header.timer}
+          initial="hidden"
+          whileInView="visible"
+        >
+          :
+        </motion.label>
+        <motion.label
+          className="flex flex-col items-center"
+          variants={header.seconds}
+          initial="hidden"
+          whileInView="visible"
+        >
           <span ref={scopeSeconds}>{formatNumber(seconds)}</span>
           <span className="text-2xl">Seg</span>
-        </label>
-      </motion.div>
+        </motion.label>
+      </div>
       <motion.p
         className={`${quickSand.className} text-pink-800 text-lg text-center mx-10`}
         variants={header.text04}
