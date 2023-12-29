@@ -21,29 +21,31 @@ export default function Wedding() {
 
   return (
     <main>
-      {open ? (
-        <motion.div
-          className="max-w-3xl m-auto bg-[url('/img/bodas/diana-ernesto/background-main.jpg')] bg-center bg-cover bg-fixed"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 2 }}
-        >
-          <Header />
-          <Presentation />
-          <GodParents />
-          <Location />
-          <DressCode />
-          <Itinerary />
-          <Gallery />
-          <Gifts />
-          <Confirm />
-          <FloatinButton />
-          <AudioControl />
-        </motion.div>
-      ) : (
-        <Opening setOpen={setOpen} />
-      )}
+      <AnimatePresence>
+        {open ? (
+          <motion.div
+            className="max-w-3xl m-auto bg-[url('/img/bodas/diana-ernesto/background-main.jpg')] bg-center bg-cover bg-fixed"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 2 }}
+          >
+            <Header />
+            <Presentation />
+            <GodParents />
+            <Location />
+            <DressCode />
+            <Itinerary />
+            <Gallery />
+            <Gifts />
+            <Confirm />
+            <FloatinButton />
+            <AudioControl />
+          </motion.div>
+        ) : (
+          <Opening setOpen={setOpen} />
+        )}
+      </AnimatePresence>
     </main>
   );
 }

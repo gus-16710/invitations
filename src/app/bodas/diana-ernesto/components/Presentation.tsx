@@ -49,24 +49,21 @@ export default function Presentation() {
           acompañaran a celebrar esta gran fiesta de nuestra boda, llena de
           brindis, carcajadas y bailes hasta el amanecer.
         </motion.p>
-        <motion.div
-          className="flex justify-center mt-5"
-          initial={{ y: 100, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          viewport={{ once: false }}
-          transition={{ duration: 1, ease: "easeInOut" }}
-        >
-          <svg
+        <div className="flex justify-center mt-5">
+          <motion.svg
             xmlns="http://www.w3.org/2000/svg"
             xmlnsXlink="http://www.w3.org/1999/xlink"
             id="Capa_1"
             x="0px"
             y="0px"
             viewBox="0 0 200 200"
-            //style="enable-background:new 0 0 200 200;"
             xmlSpace="preserve"
             width="75px"
             fill="rgb(75 85 99)"
+            initial={{ y: 100, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: false }}
+            transition={{ duration: 1, ease: "easeInOut" }}
           >
             <g>
               {" "}
@@ -82,8 +79,8 @@ export default function Presentation() {
               <path d="M77.9,118.8c-1.6,0-2.8-1.3-2.8-2.9c0-1.6,1.4-3,3-2.9c1.6,0.1,2.9,1.5,2.8,3.1C80.8,117.7,79.5,118.8,77.9,118.8z"></path>{" "}
               <path d="M119.1,115.8c0-1.6,1.3-2.9,2.9-2.9c1.6,0,3,1.4,3,3c0,1.6-1.4,2.9-3.1,2.8C120.3,118.7,119.1,117.4,119.1,115.8z"></path>
             </g>
-          </svg>
-        </motion.div>
+          </motion.svg>
+        </div>
       </motion.div>
     </section>
   );
