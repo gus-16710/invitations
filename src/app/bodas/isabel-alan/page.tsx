@@ -22,8 +22,7 @@ export default function Wedding() {
       <DressCode />
       <Gallery />
       <Confirm />
-      <FloatinButton />
-      {/* Comentario gustavo.garcia */}
+      <FloatinButton />    
     </main>
   );
 }

@@ -74,23 +74,10 @@ export default function Location() {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
   const [map, setMap] = useState("");
 
-  // const text = useRef<HTMLDivElement>(null);
-  // const { scrollYProgress } = useScroll({
-  //   target: text,
-  //   offset: ["start end", "end start"],
-  // });
-  // const x = useTransform(scrollYProgress, [1, 0.3, 0], [0, 0, -500]);
-
   return (
     <>
-      <section
-        //ref={text}
-        className="flex justify-center items-center flex-col pt-20 pb-20"
-        style={{ height: "100svh" }}
-      >
-        <motion.div
-        //style={{ x }}
-        >
+      <section className="h-screen flex justify-center items-center flex-col pt-20 pb-20">
+        <motion.div>
           <motion.h1
             className={`${greatVibes.className} text-5xl p-5 text-center`}
             initial={{ y: -100, opacity: 0 }}
@@ -179,14 +166,8 @@ export default function Location() {
         </motion.div>
       </section>
 
-      <section
-        //ref={text}
-        className="flex justify-center items-center flex-col pt-20 pb-20"
-        style={{ height: "100svh" }}
-      >
-        <motion.div
-        //style={{ x }}
-        >
+      <section className="h-screen flex justify-center items-center flex-col pt-20 pb-20">
+        <motion.div>
           <motion.h1
             className={`${greatVibes.className} text-5xl p-5 text-center`}
             initial={{ y: -100, opacity: 0 }}

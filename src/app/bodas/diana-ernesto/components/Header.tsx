@@ -69,8 +69,7 @@ export default function Header() {
 
   return (
     <section
-      className="pb-10 bg-[url('/img/bodas/diana-ernesto/background-section-one.jpg')] bg-cover bg-center flex justify-end items-center flex-col"
-      style={{ height: "100svh" }}
+      className="h-screen pb-10 bg-[url('/img/bodas/diana-ernesto/background-section-one.jpg')] bg-cover bg-center flex justify-end items-center flex-col"
     >
       <motion.h1
         className={`${bebas.className} p-3 text-5xl text-slate-100 custom-shadow`}
@@ -95,7 +94,7 @@ export default function Header() {
         Nuestra Boda
       </motion.h2>
       <motion.div
-        className={`${greatVibes.className} mb-10 pb-3 text-slate-100 custom-shadow count-down`}
+        className={`${greatVibes.className} mb-3 pb-3 text-slate-100 custom-shadow count-down`}
         initial={{ y: 100, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         viewport={{ once: false }}
@@ -130,6 +129,7 @@ export default function Header() {
         initial={{ y: 0 }}
         whileInView={{ y: [0, 10, 0] }}
         transition={{ duration: 2, repeat: Infinity }}
+        className="mb-10"
       >
         <IoIosArrowDown className="text-zinc-400" />
       </motion.div>
