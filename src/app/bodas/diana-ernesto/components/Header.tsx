@@ -68,8 +68,8 @@ export default function Header() {
 
   return (
     <section
-      className="pb-10 bg-[url('/img/bodas/diana-ernesto/background-section-one.jpg')] bg-cover bg-center flex justify-end items-center flex-col"
-      style={{ height: "100svh" }}
+      className="h-screen pb-10 bg-[url('/img/bodas/diana-ernesto/background-section-one.jpg')] bg-cover bg-center flex justify-end items-center flex-col"
+      //style={{ height: "100svh" }}
     >
       <motion.h1
         className={`${bebas.className} p-3 text-5xl text-slate-100 custom-shadow`}
