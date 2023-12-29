@@ -150,10 +150,7 @@ export default function Header() {
         style={{
           textShadow:
             "-1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5)",
-        }}
-        // variants={header.timer}
-        // initial="hidden"
-        // whileInView="visible"
+        }}     
       >
         <motion.label
           className="flex flex-col items-center"

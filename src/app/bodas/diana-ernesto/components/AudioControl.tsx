@@ -23,7 +23,7 @@ export default function AudioControl() {
         {isPlayed ? <FaVolumeUp /> : <FaVolumeOff />}
       </button>
 
-      <audio controls ref={audioPlayer} hidden>
+      <audio controls ref={audioPlayer} hidden >
         <source src="/media/amarte_mil_anios.mp3" type="audio/mpeg" />
         Your browser does not support the audio element.
       </audio>
