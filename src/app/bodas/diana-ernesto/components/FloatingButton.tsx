@@ -1,17 +1,20 @@
-import { useState, useEffect } from "react";
+import { useAnimate } from "framer-motion";
+import { useEffect } from "react";
 
 export default function FloatinButton() {
-  const [hidden, setHidden] = useState("hidden");
+  const [scope, animate] = useAnimate();
 
   useEffect(() => {
+    animate(scope.current, { opacity: 0, scale: 0 }, { duration: 0 });
+
     window.addEventListener("scroll", () => {
       if (
         document.body.scrollTop > 20 ||
         document.documentElement.scrollTop > 20
       ) {
-        setHidden("");
+        animate(scope.current, { scale: 1, opacity: 1, rotate: 360 });
       } else {
-        setHidden("hidden");
+        animate(scope.current, { scale: 0, opacity: 0, rotate: 0 });
       }
     });
   }, []);
@@ -19,10 +22,11 @@ export default function FloatinButton() {
   return (
     <button
       type="button"
-      className={`${hidden} bg-red-600/75 p-3 rounded text-white fixed bottom-0 right-0 font-medium shadow-md mb-24 mr-5 transition duration-150 ease-in-out hover:bg-red-700/75 hover:shadow-lg focus:bg-red-700/75 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800/75 active:shadow-lg z-10`}
+      className={`bg-red-600/75 p-3 rounded text-white fixed bottom-0 right-0 font-medium shadow-md mb-24 mr-5 transition duration-150 ease-in-out hover:bg-red-700/75 hover:shadow-lg focus:bg-red-700/75 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800/75 active:shadow-lg z-10`}
       onClick={() => {
         window.scrollTo({ top: 0, behavior: "smooth" });        
       }}
+      ref={scope}
     >
       <svg
         aria-hidden="true"

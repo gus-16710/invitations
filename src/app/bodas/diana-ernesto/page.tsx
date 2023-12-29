@@ -20,8 +20,7 @@ export default function Wedding() {
   const [open, setOpen] = useState(false);
 
   return (
-    <main>
-      <AnimatePresence>
+    <main>      
         {open ? (
           <motion.div
             className="max-w-3xl m-auto bg-[url('/img/bodas/diana-ernesto/background-main.jpg')] bg-center bg-cover bg-fixed"
@@ -44,8 +43,7 @@ export default function Wedding() {
           </motion.div>
         ) : (
           <Opening setOpen={setOpen} />
-        )}
-      </AnimatePresence>
+        )}      
     </main>
   );
 }

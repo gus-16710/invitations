@@ -7,7 +7,10 @@ const notoSans = Titillium_Web({ subsets: ["latin"], weight: "400" });
 
 export default function DressCode() {
   return (
-    <section className="h-screen flex justify-center items-center flex-col">
+    <section
+      className="flex justify-center items-center flex-col"
+      style={{ height: "100svh" }}
+    >
       <motion.h1
         className={`${greatVibes.className} text-5xl drop-shadow text-center`}
         initial={{ y: -100, opacity: 0 }}

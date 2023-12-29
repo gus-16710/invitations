@@ -85,7 +85,8 @@ export default function Location() {
     <>
       <section
         //ref={text}
-        className="h-screen flex justify-center items-center flex-col pt-20 pb-20"
+        className="flex justify-center items-center flex-col pt-20 pb-20"
+        style={{ height: "100svh" }}
       >
         <motion.div
         //style={{ x }}
@@ -180,7 +181,8 @@ export default function Location() {
 
       <section
         //ref={text}
-        className="h-screen flex justify-center items-center flex-col pt-20 pb-20"
+        className="flex justify-center items-center flex-col pt-20 pb-20"
+        style={{ height: "100svh" }}
       >
         <motion.div
         //style={{ x }}

@@ -42,7 +42,10 @@ const customTheme: FlowbiteCarouselTheme = {
 
 export default function GodParents() {
   return (
-    <section className="h-screen flex justify-center items-center flex-col">
+    <section
+      className="flex justify-center items-center flex-col"
+      style={{ height: "100svh" }}
+    >
       <motion.h1
         className={`${greatVibes.className} text-5xl drop-shadow text-center`}
         initial={{ y: -100, opacity: 0 }}
@@ -67,7 +70,7 @@ export default function GodParents() {
               <p className={`${playFair.className}`}>
                 Mariela Macias Rincon <br />&<br /> Ignacio López Lozano
               </p>
-            </div>            
+            </div>
             <div className="flex h-full items-center justify-center text-gray-800 flex-col px-5 text-center">
               <IoIosHeartEmpty className="text-7xl pb-5 text-gray-800/50" />
               <p className={`${greatVibes.className} text-4xl pb-4`}>
