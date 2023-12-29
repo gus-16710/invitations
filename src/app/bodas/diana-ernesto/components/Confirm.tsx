@@ -55,7 +55,7 @@ export default function Confirm() {
       >
         <Button
           color="success"
-          onClick={() => window.open("https://wa.link/xam9a5", "_blank")}
+          onClick={() => window.open("https://wa.link/xk0ea6", "_blank")}
           className="w-60"
         >
           <FaWhatsapp className="text-2xl" />
