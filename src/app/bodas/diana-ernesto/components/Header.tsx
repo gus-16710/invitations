@@ -1,6 +1,7 @@
 import { motion, useAnimate } from "framer-motion";
 import { Bebas_Neue, Great_Vibes } from "next/font/google";
 import { useState, useEffect } from "react";
+import { IoIosArrowDown } from "react-icons/io";
 
 const greatVibes = Great_Vibes({ subsets: ["latin"], weight: "400" });
 const bebas = Bebas_Neue({ subsets: ["latin"], weight: "400" });
@@ -9,7 +10,7 @@ function formatNumber(number: number) {
   return number < 10 ? `0${number}` : number;
 }
 
-export default function Header() { 
+export default function Header() {
   const [seconds, setSeconds] = useState(0);
   const [minutes, setMinutes] = useState(0);
   const [hours, setHours] = useState(0);
@@ -32,7 +33,7 @@ export default function Header() {
       if (distance < 0) {
         clearInterval(interval);
         console.log("EXPIRED");
-      }    
+      }
 
       setSeconds(seconds);
       setMinutes(minutes);
@@ -46,9 +47,9 @@ export default function Header() {
   }, []);
 
   const [scopeSeconds, animateSeconds] = useAnimate();
-   const [scopeMinutes, animateMinutes] = useAnimate();
-   const [scopeHours, animateHours] = useAnimate();
-   const [scopeDays, animateDays] = useAnimate();
+  const [scopeMinutes, animateMinutes] = useAnimate();
+  const [scopeHours, animateHours] = useAnimate();
+  const [scopeDays, animateDays] = useAnimate();
 
   useEffect(() => {
     animateSeconds(scopeSeconds.current, { y: [20, 0], opacity: [0, 1] });
@@ -101,21 +102,36 @@ export default function Header() {
         transition={{ duration: 1 }}
       >
         <div className="item">
-          <div className="number text-3xl" ref={scopeDays}>{formatNumber(days)}</div>
+          <div className="number text-3xl" ref={scopeDays}>
+            {formatNumber(days)}
+          </div>
           <div className="description text-1xl">Días</div>
         </div>
         <div className="item">
-          <div className="number text-3xl" ref={scopeHours}>{formatNumber(hours)}</div>
+          <div className="number text-3xl" ref={scopeHours}>
+            {formatNumber(hours)}
+          </div>
           <div className="description text-1xl">Horas</div>
         </div>
         <div className="item">
-          <div className="number text-3xl" ref={scopeMinutes}>{formatNumber(minutes)}</div>
+          <div className="number text-3xl" ref={scopeMinutes}>
+            {formatNumber(minutes)}
+          </div>
           <div className="description text-1xl">Minutos</div>
         </div>
         <div className="item">
-          <div className="number text-3xl" ref={scopeSeconds}>{formatNumber(seconds)}</div>
+          <div className="number text-3xl" ref={scopeSeconds}>
+            {formatNumber(seconds)}
+          </div>
           <div className="description text-1xl">Segundos</div>
         </div>
+      </motion.div>
+      <motion.div
+        initial={{ y: 0 }}
+        whileInView={{ y: [0, 10, 0] }}
+        transition={{ duration: 2, repeat: Infinity }}
+      >
+        <IoIosArrowDown className="text-zinc-400" />
       </motion.div>
     </section>
   );

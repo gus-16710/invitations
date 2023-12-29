@@ -12,9 +12,9 @@ export default function FloatinButton() {
         document.body.scrollTop > 20 ||
         document.documentElement.scrollTop > 20
       ) {
-        animate(scope.current, { scale: 1, opacity: 1, rotate: 360 });
+        animate(scope.current, { scale: 1, opacity: 1 });
       } else {
-        animate(scope.current, { scale: 0, opacity: 0, rotate: 0 });
+        animate(scope.current, { scale: 0, opacity: 0 });
       }
     });
   }, []);
