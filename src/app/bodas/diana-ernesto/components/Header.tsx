@@ -81,69 +81,69 @@ export default function Header() {
       { y: [20, 0], opacity: [0, 1] },
       { ease: "easeInOut", type: "keyframes" }
     );
-  }, [days, animateDays]);
-
-  return (
-    <section className="h-screen pb-10 bg-[url('/img/bodas/diana-ernesto/background-section-one.jpg')] bg-cover bg-center flex justify-end items-center flex-col">
-      <motion.h1
-        className={`${bebas.className} p-3 text-5xl text-slate-100 custom-shadow`}
-        initial={{ y: -100, opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1 }}
-        transition={{ duration: 1.5, delay: 0.4 }}
-        whileTap={{
-          scale: 1.2,
-          transition: { duration: 1 },
-        }}
-      >
-        Diana & Ernesto
-      </motion.h1>
-      <motion.h2
-        className={`${greatVibes.className} p-3 text-6xl text-slate-100 custom-shadow`}
-        initial={{ y: -100, opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1 }}
-        transition={{ duration: 1, delay: 0.8 }}
-      >
-        Nuestra Boda
-      </motion.h2>
-      <motion.div
-        className={`${greatVibes.className} mb-3 pb-3 text-slate-100 custom-shadow count-down`}
-        initial={{ y: 100, opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1 }}
-        transition={{ duration: 1, delay: 1.2 }}
-      >
-        <div className="item">
-          <div className="number text-3xl" ref={scopeDays}>
-            {formatNumber(days)}
+  }, [days, animateDays]); 
+  
+  return (    
+      <section className="snap-center h-screen pb-10 bg-[url('/img/bodas/diana-ernesto/background-section-one.jpg')] bg-cover bg-center flex justify-end items-center flex-col">
+        <motion.h1
+          className={`${bebas.className} p-3 text-5xl text-slate-100 custom-shadow`}
+          initial={{ y: -100, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 1.5, delay: 0.4 }}
+          whileTap={{
+            scale: 1.2,
+            transition: { duration: 1 },
+          }}
+        >
+          Diana & Ernesto
+        </motion.h1>
+        <motion.h2
+          className={`${greatVibes.className} p-3 text-6xl text-slate-100 custom-shadow`}
+          initial={{ y: -100, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 1, delay: 0.8 }}
+        >
+          Nuestra Boda
+        </motion.h2>
+        <motion.div
+          className={`${greatVibes.className} mb-3 pb-3 text-slate-100 custom-shadow count-down`}
+          initial={{ y: 100, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 1, delay: 1.2 }}
+        >
+          <div className="item">
+            <div className="number text-3xl" ref={scopeDays}>
+              {formatNumber(days)}
+            </div>
+            <div className="description text-1xl">Días</div>
           </div>
-          <div className="description text-1xl">Días</div>
-        </div>
-        <div className="item">
-          <div className="number text-3xl" ref={scopeHours}>
-            {formatNumber(hours)}
+          <div className="item">
+            <div className="number text-3xl" ref={scopeHours}>
+              {formatNumber(hours)}
+            </div>
+            <div className="description text-1xl">Horas</div>
           </div>
-          <div className="description text-1xl">Horas</div>
-        </div>
-        <div className="item">
-          <div className="number text-3xl" ref={scopeMinutes}>
-            {formatNumber(minutes)}
+          <div className="item">
+            <div className="number text-3xl" ref={scopeMinutes}>
+              {formatNumber(minutes)}
+            </div>
+            <div className="description text-1xl">Minutos</div>
           </div>
-          <div className="description text-1xl">Minutos</div>
-        </div>
-        <div className="item">
-          <div className="number text-3xl" ref={scopeSeconds}>
-            {formatNumber(seconds)}
+          <div className="item">
+            <div className="number text-3xl" ref={scopeSeconds}>
+              {formatNumber(seconds)}
+            </div>
+            <div className="description text-1xl">Segundos</div>
           </div>
-          <div className="description text-1xl">Segundos</div>
-        </div>
-      </motion.div>
-      <motion.div
-        initial={{ y: 0 }}
-        whileInView={{ y: [0, 10, 0] }}
-        transition={{ duration: 2, repeat: Infinity }}
-        className="mb-12"
-      >
-        <IoIosArrowDown className="text-zinc-400" />
-      </motion.div>
-    </section>
+        </motion.div>
+        <motion.div
+          initial={{ y: 0 }}
+          whileInView={{ y: [0, 10, 0] }}
+          transition={{ duration: 2, repeat: Infinity }}
+          className="mb-12"
+        >
+          <IoIosArrowDown className="text-zinc-400" />
+        </motion.div>
+      </section>    
   );
 }

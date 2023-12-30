@@ -10,8 +10,7 @@ export const metadata: Metadata = {
   description: "Invitaciones digitales para toda ocasión.",
   openGraph: {
     title: "Invitaciones",
-    description:
-      "Invitaciones digitales para toda ocasión.",
+    description: "Invitaciones digitales para toda ocasión.",
     images: ["https://invitaciones.unaideamas.com/img/invitations.jpg"],
   },
   icons: {
@@ -25,7 +24,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" style={{ scrollSnapType: "y mandatory" }}>
       <head>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
