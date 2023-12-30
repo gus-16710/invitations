@@ -6,6 +6,7 @@ import { Great_Vibes, Oswald } from "next/font/google";
 import PhotoAlbum from "react-photo-album";
 import Lightbox from "yet-another-react-lightbox";
 import NextJsImage from "./NextJsImage";
+import { LuZoomIn } from "react-icons/lu";
 
 const greatVibes = Great_Vibes({ subsets: ["latin"], weight: "400" });
 const oswald = Oswald({ subsets: ["latin"], weight: "400" });
@@ -64,20 +65,12 @@ export default function Gallery() {
           initial={{ y: 100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 1, ease: "easeOut", delay: 0.6 }}
-        >
-          <svg
-            className="flex-shrink-0 w-4 h-4 text-white"
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="currentColor"
-            viewBox="0 0 20 20"
-          >
-            <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z" />
-          </svg>
+        >                 
           <span className="sr-only">Info</span>
           <div className={`${oswald.className} ms-3 text-sm text-white`}>
-            Presiona una imagen para ampliar
+            Presiona sobre una imagen para ampliar
           </div>
+          <LuZoomIn className="text-white ml-2"/>
         </motion.div>
       </div>
       <div className="mx-4">

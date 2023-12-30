@@ -11,8 +11,8 @@ export default function NextJsImage({
     <motion.div
       className="h-40 w-40 group cursor-pointer"
       style={{ ...wrapperStyle, position: "relative" }}
-      initial={{ y: 100, opacity: 0 }}
-      whileInView={{ y: 0, opacity: 1 }}            
+      initial={{ scale: 0, opacity: 0 }}
+      whileInView={{ scale: 1, opacity: 1 }}            
       viewport={{ once: false }}
       transition={{ duration: 1, ease: "easeOut" }}
     >

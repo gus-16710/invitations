@@ -14,6 +14,7 @@ import {
   ModalFooter,
   useDisclosure,
 } from "@nextui-org/react";
+import { FaMapMarkerAlt } from "react-icons/fa";
 import { useState } from "react";
 
 const greatVibes = Great_Vibes({ subsets: ["latin"], weight: "400" });
@@ -118,6 +119,7 @@ export default function Location() {
           transition={{ duration: 1, ease: "easeInOut", delay: 0.9 }}
         >
           <p>~ 18:00 HRS ~</p>
+          <p className="text-sm">28/Feb/2025</p>
         </motion.div>
         <motion.p
           className={`${markazi.className} text-center mx-5 mt-5 text-2xl text-zinc-600`}
@@ -155,7 +157,8 @@ export default function Location() {
               onOpen();
             }}
           >
-            VER UBICACIÓN
+            <FaMapMarkerAlt />
+            VER UBICACIÓN            
           </Button>
         </motion.div>
       </section>
@@ -202,6 +205,7 @@ export default function Location() {
           transition={{ duration: 1, ease: "easeInOut" }}
         >
           <p>~ 20:00 HRS ~ </p>
+          <p className="text-sm">28/Feb/2025</p>
         </motion.div>
         <motion.p
           className={`${markazi.className} text-center mx-5 mt-5 text-2xl text-zinc-600`}
@@ -240,6 +244,7 @@ export default function Location() {
               onOpen();
             }}
           >
+            <FaMapMarkerAlt />
             VER UBICACIÓN
           </Button>
         </motion.div>

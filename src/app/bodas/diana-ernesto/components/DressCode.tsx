@@ -18,8 +18,8 @@ export default function DressCode() {
       </motion.h1>
       <div className="flex items-center flex-col justify-center pt-10">
         <motion.div
-          initial={{ scale: 0, opacity: 0 }}
-          whileInView={{ scale: 1, opacity: 1 }}
+          initial={{ y: 100, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 1, ease: "easeOut", delay: 0.6 }}
         >
           <svg
@@ -52,9 +52,8 @@ export default function DressCode() {
 
       <div className="flex items-center flex-col justify-center pt-10">
         <motion.div
-          initial={{ scale: 0, opacity: 0 }}
-          whileInView={{ scale: 1, opacity: 1 }}
-          viewport={{ once: false }}
+          initial={{ y: -100, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}          
           transition={{ duration: 1, ease: "easeOut", delay: 0.6 }}
         >
           <svg
@@ -81,7 +80,7 @@ export default function DressCode() {
 
         <motion.h2
           className={`${greatVibes.className} pt-5 text-3xl`}
-          initial={{ y: 100, opacity: 0 }}
+          initial={{ y: -100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 1, ease: "easeInOut", delay: 0.9 }}
         >
@@ -89,7 +88,7 @@ export default function DressCode() {
         </motion.h2>
         <motion.p
           className={`${notoSans.className}`}
-          initial={{ y: 100, opacity: 0 }}
+          initial={{ y: -100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 1, ease: "easeInOut", delay: 0.9 }}
         >

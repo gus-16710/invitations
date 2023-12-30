@@ -140,7 +140,7 @@ export default function Header() {
         initial={{ y: 0 }}
         whileInView={{ y: [0, 10, 0] }}
         transition={{ duration: 2, repeat: Infinity }}
-        className="mb-10"
+        className="mb-12"
       >
         <IoIosArrowDown className="text-zinc-400" />
       </motion.div>

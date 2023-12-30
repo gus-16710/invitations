@@ -12,8 +12,7 @@ export default function Confirm() {
       <motion.h1
         className={`${greatVibes.className} text-5xl drop-shadow text-center`}
         initial={{ y: -100, opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1 }}
-        viewport={{ once: false }}
+        whileInView={{ y: 0, opacity: 1 }}        
         transition={{ duration: 1 }}
       >
         Confirmar Asistencia
@@ -21,8 +20,7 @@ export default function Confirm() {
       <motion.p
         className={`${notoSans.className} text-center mt-10 pb-2 px-5`}
         initial={{ y: 100, opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1 }}
-        viewport={{ once: false }}
+        whileInView={{ y: 0, opacity: 1 }}        
         transition={{ duration: 1 }}
       >
         Espero que puedas venir a compartir con nosotros este día inolvidable.
@@ -30,8 +28,7 @@ export default function Confirm() {
       <motion.p
         className={`${notoSans.className} text-center p-2`}
         initial={{ y: 100, opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1 }}
-        viewport={{ once: false }}
+        whileInView={{ y: 0, opacity: 1 }}        
         transition={{ duration: 1 }}
       >
         Favor de confirmar tu presencia.
@@ -39,8 +36,7 @@ export default function Confirm() {
       <motion.p
         className={`${notoSans.className} text-center p-2`}
         initial={{ y: 100, opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1 }}
-        viewport={{ once: false }}
+        whileInView={{ y: 0, opacity: 1 }}        
         transition={{ duration: 1 }}
       >
         ¡Muchas Gracias!
@@ -49,8 +45,7 @@ export default function Confirm() {
       <motion.div
         className="pt-5"
         initial={{ y: 100, opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1 }}
-        viewport={{ once: false }}
+        whileInView={{ y: 0, opacity: 1 }}        
         transition={{ duration: 1 }}
       >
         <Button
@@ -66,8 +61,7 @@ export default function Confirm() {
       <motion.div
         className="pt-5"
         initial={{ y: 100, opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1 }}
-        viewport={{ once: false }}
+        whileInView={{ y: 0, opacity: 1 }}        
         transition={{ duration: 1 }}
       >
         <Button
