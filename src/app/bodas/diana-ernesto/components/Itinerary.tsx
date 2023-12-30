@@ -5,12 +5,30 @@ const greatVibes = Great_Vibes({ subsets: ["latin"], weight: "400" });
 const playFair = Playfair_Display({ subsets: ["latin"], weight: "400" });
 
 const itinerary = [
-  { time: "18:00 Hrs", event: "Ceremonia  Religiosa" },
-  { time: "19:00 Hrs", event: "Boda Civil" },
-  { time: "20:00 Hrs", event: "Recepción" },
-  { time: "21:00 Hrs", event: "Cena" },
-  { time: "22:00 Hrs", event: "Baile" },
-  { time: "03:00 Hrs", event: "Termino del Evento" },
+  {
+    time: "18:00 Hrs",
+    event: "Ceremonia  Religiosa",
+  },
+  {
+    time: "19:00 Hrs",
+    event: "Boda Civil",
+  },
+  {
+    time: "20:00 Hrs",
+    event: "Recepción",
+  },
+  {
+    time: "21:00 Hrs",
+    event: "Cena",
+  },
+  {
+    time: "22:00 Hrs",
+    event: "Baile",
+  },
+  {
+    time: "03:00 Hrs",
+    event: "Termino del Evento",
+  },
 ];
 
 const list = {
@@ -19,6 +37,7 @@ const list = {
     transition: {
       when: "beforeChildren",
       staggerChildren: 0.8,
+      duration: 1,
     },
   },
   hidden: {
@@ -43,7 +62,7 @@ export default function Itinerary() {
       <motion.h1
         className={`${greatVibes.className} text-5xl drop-shadow mb-10`}
         initial={{ y: -100, opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1 }}        
+        whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
       >
         Itinerario

@@ -9,8 +9,8 @@ export default function FloatinButton() {
 
     window.addEventListener("scroll", () => {
       if (
-        document.body.scrollTop > 20 ||
-        document.documentElement.scrollTop > 20
+        document.body.scrollTop > 40 ||
+        document.documentElement.scrollTop > 40
       ) {
         animate(scope.current, {
           scale: 1,
