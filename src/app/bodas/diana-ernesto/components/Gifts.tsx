@@ -45,6 +45,7 @@ const ModalCCard = ({
       onOpenChange={onOpenChange}
       size="xs"
       placement="center"
+      backdrop="blur"
     >
       <ModalContent>
         {(onClose) => (

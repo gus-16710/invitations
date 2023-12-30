@@ -59,7 +59,7 @@ export default function Gallery() {
       <div className="flex items-center justify-center">
         <motion.div
           id="alert-5"
-          className="flex items-center justify-center p-3 rounded-lg bg-gray-500/50 w-80 mb-3"
+          className="flex items-center justify-center p-2 rounded-lg bg-gray-500/50 w-80 mb-3"
           role="alert"
           initial={{ y: 100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
@@ -76,7 +76,7 @@ export default function Gallery() {
           </svg>
           <span className="sr-only">Info</span>
           <div className={`${oswald.className} ms-3 text-sm text-white`}>
-            Click sobre la imagen para ampliar
+            Presiona una imagen para ampliar
           </div>
         </motion.div>
       </div>

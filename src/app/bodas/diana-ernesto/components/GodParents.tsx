@@ -73,8 +73,8 @@ export default function GodParents() {
               </motion.div>
               <motion.p
                 className={`${playFair.className}`}
-                initial={{ y: 100, opacity: 0 }}
-                whileInView={{ y: 0, opacity: 1 }}
+                initial={{ scale: 0, opacity: 0 }}
+                whileInView={{ scale: 1, opacity: 1 }}
                 transition={{ duration: 1, ease: "easeOut" }}
               >
                 Mariela Macias Rincon <br />&<br /> Ignacio López Lozano
@@ -94,8 +94,8 @@ export default function GodParents() {
               </motion.div>
               <motion.p
                 className={`${playFair.className}`}
-                initial={{ y: 100, opacity: 0 }}
-                whileInView={{ y: 0, opacity: 1 }}
+                initial={{ scale: 0, opacity: 0 }}
+                whileInView={{ scale: 1, opacity: 1 }}
                 transition={{ duration: 1, ease: "easeOut" }}
               >
                 Leticia Barragan Saldaña <br />&<br /> Juan Pablo Robles
@@ -114,8 +114,8 @@ export default function GodParents() {
               </motion.div>
               <motion.p
                 className={`${playFair.className}`}
-                initial={{ y: 100, opacity: 0 }}
-                whileInView={{ y: 0, opacity: 1 }}
+                initial={{ scale: 0, opacity: 0 }}
+                whileInView={{ scale: 1, opacity: 1 }}
                 transition={{ duration: 1, ease: "easeOut" }}
               >
                 Rocio Hernández García <br />&<br /> Pedro Ruíz Sanchez
