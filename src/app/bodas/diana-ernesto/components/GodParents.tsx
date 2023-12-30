@@ -47,8 +47,7 @@ export default function GodParents() {
         className={`${greatVibes.className} text-5xl drop-shadow text-center`}
         initial={{ y: -100, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
-        viewport={{ once: false }}
-        transition={{ duration: 1, ease: "easeOut" }}
+        transition={{ duration: 1, ease: "easeOut", delay: 0.4 }}
       >
         Padrinos
       </motion.h1>
@@ -56,34 +55,71 @@ export default function GodParents() {
         className="h-96 sm:h-64 xl:h-80 2xl:h-96 w-full text-gray-800"
         initial={{ y: 100, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
-        viewport={{ once: false }}
-        transition={{ duration: 1, ease: "easeOut" }}
+        transition={{ duration: 1, ease: "easeOut", delay: 0.8 }}
       >
         <Flowbite>
           <Carousel theme={customTheme}>
             <div className="flex h-full items-center justify-center text-gray-800 flex-col px-5 text-center">
-              <GiDiamondRing className="text-7xl pb-5 text-gray-800/50" />
-              <p className={`${greatVibes.className} text-4xl pb-4`}>Anillos</p>
-              <p className={`${playFair.className}`}>
+              <motion.div
+                initial={{ scale: 0, opacity: 0 }}
+                whileInView={{ scale: 1, opacity: 1 }}
+                transition={{ duration: 1, ease: "easeOut" }}
+                className="flex items-center flex-col"
+              >
+                <GiDiamondRing className="text-7xl pb-5 text-gray-800/50" />
+                <p className={`${greatVibes.className} text-4xl pb-4`}>
+                  Anillos
+                </p>
+              </motion.div>
+              <motion.p
+                className={`${playFair.className}`}
+                initial={{ y: 100, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                transition={{ duration: 1, ease: "easeOut" }}
+              >
                 Mariela Macias Rincon <br />&<br /> Ignacio López Lozano
-              </p>
+              </motion.p>
             </div>
             <div className="flex h-full items-center justify-center text-gray-800 flex-col px-5 text-center">
-              <IoIosHeartEmpty className="text-7xl pb-5 text-gray-800/50" />
-              <p className={`${greatVibes.className} text-4xl pb-4`}>
-                Velación
-              </p>
-              <p className={`${playFair.className}`}>
+              <motion.div
+                initial={{ scale: 0, opacity: 0 }}
+                whileInView={{ scale: 1, opacity: 1 }}
+                transition={{ duration: 1, ease: "easeOut" }}
+                className="flex items-center flex-col"
+              >
+                <IoIosHeartEmpty className="text-7xl pb-5 text-gray-800/50" />
+                <p className={`${greatVibes.className} text-4xl pb-4`}>
+                  Velación
+                </p>
+              </motion.div>
+              <motion.p
+                className={`${playFair.className}`}
+                initial={{ y: 100, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                transition={{ duration: 1, ease: "easeOut" }}
+              >
                 Leticia Barragan Saldaña <br />&<br /> Juan Pablo Robles
                 Castillo
-              </p>
+              </motion.p>
             </div>
             <div className="flex h-full items-center justify-center text-gray-800 flex-col px-5 text-center">
-              <RiLinksLine className="text-7xl pb-5 text-gray-800/50" />
-              <p className={`${greatVibes.className} text-4xl pb-4`}>Lazo</p>
-              <p className={`${playFair.className}`}>
+              <motion.div
+                initial={{ scale: 0, opacity: 0 }}
+                whileInView={{ scale: 1, opacity: 1 }}
+                transition={{ duration: 1, ease: "easeOut" }}
+                className="flex items-center flex-col"
+              >
+                <RiLinksLine className="text-7xl pb-5 text-gray-800/50" />
+                <p className={`${greatVibes.className} text-4xl pb-4`}>Lazo</p>
+              </motion.div>
+              <motion.p
+                className={`${playFair.className}`}
+                initial={{ y: 100, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                transition={{ duration: 1, ease: "easeOut" }}
+              >
                 Rocio Hernández García <br />&<br /> Pedro Ruíz Sanchez
-              </p>
+              </motion.p>
             </div>
           </Carousel>
         </Flowbite>

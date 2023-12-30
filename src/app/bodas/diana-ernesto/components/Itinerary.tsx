@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { Timeline } from "flowbite-react";
 import { Great_Vibes, Playfair_Display } from "next/font/google";
 
 const greatVibes = Great_Vibes({ subsets: ["latin"], weight: "400" });
@@ -19,7 +18,7 @@ const list = {
     opacity: 1,
     transition: {
       when: "beforeChildren",
-      staggerChildren: 0.5,
+      staggerChildren: 0.8,
     },
   },
   hidden: {
@@ -44,9 +43,8 @@ export default function Itinerary() {
       <motion.h1
         className={`${greatVibes.className} text-5xl drop-shadow mb-10`}
         initial={{ y: -100, opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1 }}
-        viewport={{ once: false }}
-        transition={{ duration: 1, ease: "easeOut" }}
+        whileInView={{ y: 0, opacity: 1 }}        
+        transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
       >
         Itinerario
       </motion.h1>
@@ -58,81 +56,23 @@ export default function Itinerary() {
         variants={list}
       >
         {itinerary.map((item, index) => (
-          <motion.li className="mb-7 ms-4" key={index} variants={element}>
-            <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
-            <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
-              {item.time}
-            </time>
-            <h3 className={`${playFair.className} text-base font-semibold text-gray-900 dark:text-white`}>
-              {item.event}
-            </h3>
-          </motion.li>
+          <div key={index}>
+            <li className="mb-7 ms-4">
+              <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+              <motion.div variants={element}>
+                <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
+                  {item.time}
+                </time>
+                <h3
+                  className={`${playFair.className} text-base font-semibold text-gray-900 dark:text-white`}
+                >
+                  {item.event}
+                </h3>
+              </motion.div>
+            </li>
+          </div>
         ))}
       </motion.ol>
-
-      {/* <motion.div
-        initial={{ y: 100, opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1 }}
-        viewport={{ once: false }}
-        transition={{ duration: 1, ease: "easeOut" }}
-      >
-        <Timeline>
-          <Timeline.Item className="mb-5">
-            <Timeline.Point />
-            <Timeline.Content>
-              <Timeline.Time>18:00 Hrs</Timeline.Time>
-              <Timeline.Title className={`${playFair.className} text-base`}>
-                Ceremonia Religiosa
-              </Timeline.Title>
-            </Timeline.Content>
-          </Timeline.Item>
-          <Timeline.Item className="mb-5">
-            <Timeline.Point />
-            <Timeline.Content>
-              <Timeline.Time>19:00 Hrs</Timeline.Time>
-              <Timeline.Title className={`${playFair.className} text-base`}>
-                Boda Civil
-              </Timeline.Title>
-            </Timeline.Content>
-          </Timeline.Item>
-          <Timeline.Item className="mb-5">
-            <Timeline.Point />
-            <Timeline.Content>
-              <Timeline.Time>20:00 Hrs</Timeline.Time>
-              <Timeline.Title className={`${playFair.className} text-base`}>
-                Recepción
-              </Timeline.Title>
-            </Timeline.Content>
-          </Timeline.Item>
-          <Timeline.Item className="mb-5">
-            <Timeline.Point />
-            <Timeline.Content>
-              <Timeline.Time>21:00 Hrs</Timeline.Time>
-              <Timeline.Title className={`${playFair.className} text-base`}>
-                Cena
-              </Timeline.Title>
-            </Timeline.Content>
-          </Timeline.Item>
-          <Timeline.Item className="mb-5">
-            <Timeline.Point />
-            <Timeline.Content>
-              <Timeline.Time>22:00 Hrs</Timeline.Time>
-              <Timeline.Title className={`${playFair.className} text-base`}>
-                Baile
-              </Timeline.Title>
-            </Timeline.Content>
-          </Timeline.Item>
-          <Timeline.Item className="mb-5">
-            <Timeline.Point />
-            <Timeline.Content>
-              <Timeline.Time>03:00 Hrs</Timeline.Time>
-              <Timeline.Title className={`${playFair.className} text-base`}>
-                Termino del Evento
-              </Timeline.Title>
-            </Timeline.Content>
-          </Timeline.Item>
-        </Timeline>
-      </motion.div> */}
     </section>
   );
 }

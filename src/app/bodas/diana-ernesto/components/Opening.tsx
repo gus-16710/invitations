@@ -45,7 +45,7 @@ export default function Opening({
           className={`${oswald.className} bg-white shadow-lg text-zinc-800`}
         >
           <FaRegHandPointer className="text-xl rotate-45" />
-          ABRIR INVITACIÓN
+          VER INVITACIÓN
         </Button>
       </motion.div>
     </motion.section>

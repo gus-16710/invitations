@@ -13,8 +13,7 @@ export default function Presentation() {
           className={`${greatVibes.className} text-5xl drop-shadow text-center`}
           initial={{ y: -100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
-          viewport={{ once: false }}
-          transition={{ duration: 1, ease: "easeOut" }}
+          transition={{ duration: 1, ease: "easeOut", delay: 0.4 }}
         >
           Nos Casamos
         </motion.h1>
@@ -22,8 +21,7 @@ export default function Presentation() {
           className="flex items-center justify-center flex-col mt-4 mb-2 text-gray-600"
           initial={{ scale: 0, opacity: 0 }}
           whileInView={{ scale: 1, opacity: 1 }}
-          viewport={{ once: false }}
-          transition={{ duration: 1, ease: "easeOut" }}
+          transition={{ duration: 1, ease: "easeOut", delay: 0.8 }}
         >
           <label className={`${playFair.className} pb-1`}>Febrero</label>
           <div className="flex items-center">
@@ -41,8 +39,7 @@ export default function Presentation() {
           className={`${notoSans.className} text-center p-5`}
           initial={{ y: 100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
-          viewport={{ once: false }}
-          transition={{ duration: 1, ease: "easeInOut" }}
+          transition={{ duration: 1, ease: "easeInOut", delay: 1.2 }}
         >
           Despues de muchas aventuras compartidas, daremos el "Si, acepto"
           seguiremos este emocionante viaje juntos y nos encantaría que nos
@@ -63,7 +60,7 @@ export default function Presentation() {
             initial={{ y: 100, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: false }}
-            transition={{ duration: 1, ease: "easeInOut" }}
+            transition={{ duration: 1, ease: "easeInOut", delay: 1.2 }}
           >
             <g>
               {" "}

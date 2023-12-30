@@ -52,31 +52,44 @@ export default function Header() {
   const [scopeDays, animateDays] = useAnimate();
 
   useEffect(() => {
-    animateSeconds(scopeSeconds.current, { y: [20, 0], opacity: [0, 1] });
+    animateSeconds(
+      scopeSeconds.current,
+      { y: [20, 0], opacity: [0, 1] },
+      { ease: "easeInOut", type: "keyframes" }
+    );
   }, [seconds, animateSeconds]);
 
   useEffect(() => {
-    animateMinutes(scopeMinutes.current, { scale: [0, 1], opacity: [0, 1] });
+    animateMinutes(
+      scopeMinutes.current,
+      { y: [20, 0], opacity: [0, 1] },
+      { ease: "easeInOut", type: "keyframes" }
+    );
   }, [minutes, animateSeconds]);
 
   useEffect(() => {
-    animateHours(scopeHours.current, { scale: [0, 1], opacity: [0, 1] });
+    animateHours(
+      scopeHours.current,
+      { y: [20, 0], opacity: [0, 1] },
+      { ease: "easeInOut", type: "keyframes" }
+    );
   }, [hours, animateHours]);
 
   useEffect(() => {
-    animateDays(scopeDays.current, { scale: [0, 1], opacity: [0, 1] });
+    animateDays(
+      scopeDays.current,
+      { y: [20, 0], opacity: [0, 1] },
+      { ease: "easeInOut", type: "keyframes" }
+    );
   }, [days, animateDays]);
 
   return (
-    <section
-      className="h-screen pb-10 bg-[url('/img/bodas/diana-ernesto/background-section-one.jpg')] bg-cover bg-center flex justify-end items-center flex-col"
-    >
+    <section className="h-screen pb-10 bg-[url('/img/bodas/diana-ernesto/background-section-one.jpg')] bg-cover bg-center flex justify-end items-center flex-col">
       <motion.h1
         className={`${bebas.className} p-3 text-5xl text-slate-100 custom-shadow`}
         initial={{ y: -100, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
-        viewport={{ once: false }}
-        transition={{ duration: 1.5 }}
+        transition={{ duration: 1.5, delay: 0.4 }}
         whileTap={{
           scale: 1.2,
           transition: { duration: 1 },
@@ -88,8 +101,7 @@ export default function Header() {
         className={`${greatVibes.className} p-3 text-6xl text-slate-100 custom-shadow`}
         initial={{ y: -100, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
-        viewport={{ once: false }}
-        transition={{ duration: 1 }}
+        transition={{ duration: 1, delay: 0.8 }}
       >
         Nuestra Boda
       </motion.h2>
@@ -97,8 +109,7 @@ export default function Header() {
         className={`${greatVibes.className} mb-3 pb-3 text-slate-100 custom-shadow count-down`}
         initial={{ y: 100, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
-        viewport={{ once: false }}
-        transition={{ duration: 1 }}
+        transition={{ duration: 1, delay: 1.2 }}
       >
         <div className="item">
           <div className="number text-3xl" ref={scopeDays}>

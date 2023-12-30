@@ -12,8 +12,7 @@ export default function DressCode() {
         className={`${greatVibes.className} text-5xl drop-shadow text-center`}
         initial={{ y: -100, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
-        viewport={{ once: false }}
-        transition={{ duration: 1, ease: "easeOut" }}
+        transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
       >
         Codigo de Vestimenta
       </motion.h1>
@@ -21,8 +20,7 @@ export default function DressCode() {
         <motion.div
           initial={{ scale: 0, opacity: 0 }}
           whileInView={{ scale: 1, opacity: 1 }}
-          viewport={{ once: false }}
-          transition={{ duration: 1, ease: "easeOut" }}
+          transition={{ duration: 1, ease: "easeOut", delay: 0.6 }}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -38,8 +36,7 @@ export default function DressCode() {
           className={`${greatVibes.className} pt-5 text-3xl`}
           initial={{ y: 100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
-          viewport={{ once: false }}
-          transition={{ duration: 1, ease: "easeInOut" }}
+          transition={{ duration: 1, ease: "easeInOut", delay: 0.9 }}
         >
           Para Mujeres
         </motion.h2>
@@ -47,8 +44,7 @@ export default function DressCode() {
           className={`${notoSans.className}`}
           initial={{ y: 100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
-          viewport={{ once: false }}
-          transition={{ duration: 1, ease: "easeInOut" }}
+          transition={{ duration: 1, ease: "easeInOut", delay: 0.9 }}
         >
           Formal / Vestido Largo
         </motion.p>
@@ -59,7 +55,7 @@ export default function DressCode() {
           initial={{ scale: 0, opacity: 0 }}
           whileInView={{ scale: 1, opacity: 1 }}
           viewport={{ once: false }}
-          transition={{ duration: 1, ease: "easeOut" }}
+          transition={{ duration: 1, ease: "easeOut", delay: 0.6 }}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -87,8 +83,7 @@ export default function DressCode() {
           className={`${greatVibes.className} pt-5 text-3xl`}
           initial={{ y: 100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
-          viewport={{ once: false }}
-          transition={{ duration: 1, ease: "easeInOut" }}
+          transition={{ duration: 1, ease: "easeInOut", delay: 0.9 }}
         >
           Para Caballeros
         </motion.h2>
@@ -96,8 +91,7 @@ export default function DressCode() {
           className={`${notoSans.className}`}
           initial={{ y: 100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
-          viewport={{ once: false }}
-          transition={{ duration: 1, ease: "easeInOut" }}
+          transition={{ duration: 1, ease: "easeInOut", delay: 0.9 }}
         >
           Formal / Traje
         </motion.p>
