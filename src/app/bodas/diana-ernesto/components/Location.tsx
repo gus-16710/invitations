@@ -87,10 +87,7 @@ export default function Location() {
 
   return (
     <>
-      <section
-        className="snap-center flex justify-center items-center flex-col pt-20 pb-20"
-        style={{ height: "100dvh" }}
-      >
+      <section className="h-screen snap-center flex justify-center items-center flex-col pt-20 pb-20">
         <motion.h1
           className={`${greatVibes.className} text-5xl p-5 text-center`}
           initial={{ y: -100, opacity: 0 }}
@@ -166,10 +163,7 @@ export default function Location() {
         </motion.div>
       </section>
 
-      <section
-        className="snap-center flex justify-center items-center flex-col pt-20 pb-20"
-        style={{ height: "100dvh" }}
-      >
+      <section className="h-screen snap-center flex justify-center items-center flex-col pt-20 pb-20">
         <motion.h1
           className={`${greatVibes.className} text-5xl p-5 text-center`}
           initial={{ y: -100, opacity: 0 }}

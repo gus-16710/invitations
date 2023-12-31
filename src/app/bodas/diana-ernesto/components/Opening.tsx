@@ -13,11 +13,10 @@ export default function Opening({
 }) {
   return (
     <motion.section
-      className="bg-[url('/img/bodas/diana-ernesto/background-main.jpg')] bg-center bg-cover bg-fixed flex items-center justify-center flex-col text-gray-50"
+      className="h-screen bg-[url('/img/bodas/diana-ernesto/background-main.jpg')] bg-center bg-cover bg-fixed flex items-center justify-center flex-col text-gray-50"
       initial={{ scale: 2 }}
       animate={{ scale: 1 }}
-      transition={{ duration: 2 }}
-      style={{ height: "100dvh" }}
+      transition={{ duration: 2 }}      
       exit={{ y: "-100%", transition: { duration: 2 } }}
     >
       <motion.img
