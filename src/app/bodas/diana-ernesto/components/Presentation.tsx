@@ -7,7 +7,10 @@ const playFair = Playfair_Display({ subsets: ["latin"], weight: "400" });
 
 export default function Presentation() {
   return (
-    <section className="snap-center h-screen flex justify-center items-center flex-col">
+    <section
+      className="snap-center flex justify-center items-center flex-col"
+      style={{ height: "100dvh" }}
+    >
       <motion.div>
         <motion.h1
           className={`${greatVibes.className} text-5xl drop-shadow text-center`}

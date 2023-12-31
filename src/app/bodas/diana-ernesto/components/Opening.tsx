@@ -17,7 +17,7 @@ export default function Opening({
       initial={{ scale: 2 }}
       animate={{ scale: 1 }}
       transition={{ duration: 2 }}
-      style={{ height: "100svh" }}
+      style={{ height: "100dvh" }}
       exit={{ y: "-100%", transition: { duration: 2 } }}
     >
       <motion.img

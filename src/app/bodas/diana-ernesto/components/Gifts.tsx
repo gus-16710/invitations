@@ -138,7 +138,10 @@ export default function Gifts() {
 
   return (
     <>
-      <section className="snap-center h-screen bg-[url('/img/bodas/diana-ernesto/background-gifts2.jpg')] bg-center bg-cover bg-fixed flex items-center justify-center flex-col text-zinc-900">
+      <section
+        className="snap-center bg-[url('/img/bodas/diana-ernesto/background-gifts2.jpg')] bg-center bg-cover bg-fixed flex items-center justify-center flex-col text-zinc-900"
+        style={{ height: "100dvh" }}
+      >
         <motion.h1
           className={`${greatVibes.className} text-5xl drop-shadow text-center`}
           initial={{ y: -100, opacity: 0 }}
