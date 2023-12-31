@@ -16,9 +16,9 @@ export default function Opening({
       className="bg-[url('/img/bodas/diana-ernesto/background-main.jpg')] bg-center bg-cover bg-fixed flex items-center justify-center flex-col text-gray-50"
       initial={{ scale: 2 }}
       animate={{ scale: 1 }}
-      exit={{ opacity: 0 }}
       transition={{ duration: 2 }}
       style={{ height: "100svh" }}
+      exit={{ y: "-100%", transition: { duration: 2 } }}
     >
       <motion.img
         width={150}

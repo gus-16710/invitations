@@ -1,7 +1,9 @@
+import { LuZoomIn } from "react-icons/lu";
 import AudioPlayer from "./AudioPlayer";
-import { alex, mate } from "./Fonts";
+import { alex, mate, oswald } from "./Fonts";
 import "./Header.css";
-import { motion } from "framer-motion";
+import { motion, useAnimate } from "framer-motion";
+import { useEffect, useState } from "react";
 
 const list = {
   visible: {
@@ -26,12 +28,9 @@ const item = {
 
 export default function Header() {
   const text01 = "Isabel&Alan";
-
+  
   return (
-    <section
-      className="relative flex items-center justify-center flex-col bg-[url('/img/bodas/isabel-alan/gallery-01.jpg')] bg-cover bg-center"
-      style={{ height: "100svh" }}
-    >
+    <section className="h-screen relative flex items-center justify-center flex-col bg-[url('/img/bodas/isabel-alan/gallery-01.jpg')] bg-cover bg-center">
       <motion.h1
         className={`${alex.className} text-zinc-100 text-8xl text-center mx-5 custom-shadow flex flex-wrap justify-center`}
         variants={list}
@@ -58,8 +57,20 @@ export default function Header() {
       >
         Domingo 25 de Febrero del 2024
       </motion.p>
-
       <AudioPlayer />
+      <motion.div
+        id="alert-5"
+        className="flex items-center justify-center p-1 rounded-lg bg-zinc-100/30 w-60 mb-3 mt-5"
+        role="alert"
+        initial={{ y: 100, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ duration: 1, ease: "easeOut", delay: 3.3 }}
+      >
+        <span className="sr-only">Info</span>
+        <div className={`${oswald.className} ms-3 text-sm text-zinc-100`}>
+          Reproduce y desliza hacia abajo
+        </div>
+      </motion.div>      
       <div className="absolute -bottom-1 w-full">
         <svg
           width="100%"

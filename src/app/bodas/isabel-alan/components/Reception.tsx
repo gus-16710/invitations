@@ -68,9 +68,9 @@ export default function Reception() {
   return (
     <>
       <motion.section
-        className="relative flex flex-col items-center justify-center"        
+        className="relative flex flex-col items-center justify-center h-screen"        
         ref={ref}
-        style={{ scale: scrollYProgress, opacity: scrollYProgress, height: "100svh"}}
+        style={{ scale: scrollYProgress, opacity: scrollYProgress}}
       >
         <Divider orientation="vertical" className="h-14 absolute -top-0" />
         <svg

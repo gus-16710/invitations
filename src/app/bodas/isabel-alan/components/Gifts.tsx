@@ -33,9 +33,9 @@ export default function Gifts() {
 
   return (
     <motion.section
-      className="flex justify-center items-center flex-col"
+      className="h-screen flex justify-center items-center flex-col"
       ref={ref}
-      style={{ scale: scrollYProgress, opacity: scrollYProgress, height: "100svh" }}
+      style={{ scale: scrollYProgress, opacity: scrollYProgress }}
     >
       <h1 className={`${mate.className} text-gray-800 text-3xl mt-5`}>
         Mesa de Regalos

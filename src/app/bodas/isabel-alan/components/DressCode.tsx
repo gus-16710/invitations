@@ -12,9 +12,9 @@ export default function DressCode() {
 
   return (
     <motion.section
-      className="pb-20 flex items-center justify-center flex-col"
+      className="h-screen pb-20 flex items-center justify-center flex-col"
       ref={ref}
-      style={{ scale: scrollYProgress, opacity: scrollYProgress, height: "100svh" }}
+      style={{ scale: scrollYProgress, opacity: scrollYProgress }}
     >
       <h1 className={`${mate.className} text-gray-800 text-3xl mt-5`}>
         Código de Vestimenta

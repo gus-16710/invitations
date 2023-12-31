@@ -14,9 +14,9 @@ export default function Confirm() {
   return (
     <div className="bg-zinc-900">
       <motion.section
-        className="flex items-center justify-center flex-col text-gray-100"
+        className="h-screen flex items-center justify-center flex-col text-gray-100"
         ref={ref}
-        style={{ scale: scrollYProgress, opacity: scrollYProgress, height: "100svh" }}
+        style={{ scale: scrollYProgress, opacity: scrollYProgress }}
       >
         <h1 className={`${mate.className} text-3xl mt-5`}>
           Confirma tu asistencia
