@@ -48,7 +48,7 @@ export default function Gallery() {
   const [index, setIndex] = useState(-1);
 
   return (
-    <section className="snap-center justify-center items-center flex-col text-center py-20">
+    <section className="snap-start justify-center items-center flex-col text-center py-20">
       <motion.h1
         className={`${greatVibes.className} text-5xl drop-shadow mb-10`}
         initial={{ y: -100, opacity: 0 }}

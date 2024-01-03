@@ -3,6 +3,9 @@ import { useState } from "react";
 import PhotoAlbum from "react-photo-album";
 import Lightbox from "yet-another-react-lightbox";
 import NextJsImage from "./NextJsImage";
+import { motion } from 'framer-motion';
+import { oswald } from "./Fonts";
+import { LuZoomIn } from "react-icons/lu";
 
 const images = [
   {
@@ -42,6 +45,22 @@ export default function Gallery() {
 
   return (
     <section className="relative pb-36 ">
+      <div className="flex justify-center">
+      <motion.div
+        id="alert-5"
+        className="flex items-center justify-center p-1 rounded-lg bg-zinc-200 w-72 mb-3 mt-5"
+        role="alert"
+        initial={{ y: 100, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ duration: 1, ease: "easeOut" }}
+      >
+        <span className="sr-only">Info</span>
+        <div className={`${oswald.className} ms-3 text-sm text-zinc-800`}>
+          Presiona sobre una imagen para ampliar
+        </div>
+        <LuZoomIn className="text-zinc-800 ml-2"/>
+      </motion.div>
+      </div>
       <div className="w-72 m-auto">
         <PhotoAlbum
           layout="masonry"
