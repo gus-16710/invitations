@@ -8,8 +8,8 @@ const playFair = Playfair_Display({ subsets: ["latin"], weight: "400" });
 export default function Presentation() {
   return (
     <section
-      className="snap-center flex justify-center items-center flex-col"   
-      style={{ height: "100svh"}}   
+      className="snap-center flex justify-center items-center flex-col"
+      style={{ height: "100svh" }}
     >
       <motion.div>
         <motion.h1

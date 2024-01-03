@@ -48,8 +48,7 @@ export default function Gallery() {
   const [index, setIndex] = useState(-1);
 
   return (
-    <section className="snap-center justify-center items-center flex-col text-center py-20"
-    style={{ height: "100svh"}}>
+    <section className="snap-center justify-center items-center flex-col text-center py-20">
       <motion.h1
         className={`${greatVibes.className} text-5xl drop-shadow mb-10`}
         initial={{ y: -100, opacity: 0 }}
@@ -66,12 +65,12 @@ export default function Gallery() {
           initial={{ y: 100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 1, ease: "easeOut", delay: 0.6 }}
-        >                 
+        >
           <span className="sr-only">Info</span>
           <div className={`${oswald.className} ms-3 text-sm text-white`}>
             Presiona sobre una imagen para ampliar
           </div>
-          <LuZoomIn className="text-white ml-2"/>
+          <LuZoomIn className="text-white ml-2" />
         </motion.div>
       </div>
       <div className="mx-4">
