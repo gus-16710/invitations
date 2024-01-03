@@ -57,8 +57,7 @@ export default function Itinerary() {
   return (
     <section
       id="section-four"
-      className="snap-center flex justify-center items-center flex-col"
-      style={{ height: "100svh" }}
+      className="h-screen snap-center flex justify-center items-center flex-col"
     >
       <motion.h1
         className={`${greatVibes.className} text-5xl drop-shadow mb-10`}

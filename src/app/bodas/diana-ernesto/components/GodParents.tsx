@@ -42,10 +42,7 @@ const customTheme: FlowbiteCarouselTheme = {
 
 export default function GodParents() {
   return (
-    <section
-      className="snap-center flex justify-center items-center flex-col"
-      style={{ height: "100svh" }}
-    >
+    <section className="h-screen snap-center flex justify-center items-center flex-col">
       <motion.h1
         className={`${greatVibes.className} text-5xl drop-shadow text-center`}
         initial={{ y: -100, opacity: 0 }}

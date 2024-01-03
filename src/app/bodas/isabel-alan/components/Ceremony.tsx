@@ -10,6 +10,7 @@ import {
 import { mate, roboto } from "./Fonts";
 import { useRef } from "react";
 import { useScroll, motion } from "framer-motion";
+import { LuMapPin } from "react-icons/lu";
 
 const MapCeremony = () => (
   <iframe
@@ -62,7 +63,7 @@ export default function Ceremony() {
 
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["0 1", "0.8 1"],    
+    offset: ["0 1", "0.8 1"],
   });
 
   return (
@@ -72,7 +73,7 @@ export default function Ceremony() {
         ref={ref}
         style={{
           scale: scrollYProgress,
-          opacity: scrollYProgress,          
+          opacity: scrollYProgress,
         }}
       >
         <motion.svg
@@ -236,12 +237,13 @@ export default function Ceremony() {
         </span>
         <button
           type="button"
-          className="mt-10 text-gray-900 bg-white border border-gray-400 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 rounded-full me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700 font-medium text-sm px-5 py-2.5 text-center"
+          className="mt-10 text-gray-900 bg-white border border-gray-400 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 rounded-full me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700 font-medium text-sm px-5 py-2.5 text-center flex items-center"
           onClick={() => {
             onOpen();
           }}
         >
-          Ver Ubicación
+          <LuMapPin className="mr-1"/>
+          Ver Ubicación          
         </button>
         <Divider orientation="vertical" className="h-14 absolute -bottom-0" />
       </motion.section>
