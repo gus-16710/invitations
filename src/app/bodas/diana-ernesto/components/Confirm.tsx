@@ -9,8 +9,7 @@ const notoSans = Titillium_Web({ subsets: ["latin"], weight: "400" });
 export default function Confirm() {
   return (
     <section
-      className="snap-start bg-zinc-900 flex items-center justify-center flex-col text-gray-50"
-      style={{ height: "100svh" }}
+      className="h-screen snap-start bg-zinc-900 flex items-center justify-center flex-col text-gray-50"      
     >
       <motion.h1
         className={`${greatVibes.className} text-5xl drop-shadow text-center`}
