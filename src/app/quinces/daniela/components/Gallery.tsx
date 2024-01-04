@@ -143,7 +143,7 @@ export default function Gallery() {
           <div className="flex items-center justify-center">
             <motion.div
               id="alert-5"
-              className="flex items-center justify-center p-2 rounded-lg bg-yellow-500/50 w-72 mt-3"
+              className="flex items-center justify-center p-2 rounded-lg bg-yellow-500/50 w-72 mt-6 mb-4"
               role="alert"
               initial={{ y: 100, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
@@ -157,7 +157,7 @@ export default function Gallery() {
             </motion.div>
           </div>
 
-          <div className="z-30 px-2 w-72 m-auto">
+          <div className="z-30 px-2 w-72 mx-auto">
             <PhotoAlbum
               layout="masonry"
               photos={images}
