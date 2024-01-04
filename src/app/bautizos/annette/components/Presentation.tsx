@@ -1,19 +1,17 @@
 import { useEffect, useState } from "react";
 import { anton, playFair, rivage, whisper } from "./Fonts";
 import { presentation } from "./Animations";
-import { motion } from "framer-motion";
+import { motion, useAnimate } from "framer-motion";
 
 function formatNumber(number: number) {
   return number < 10 ? `0${number}` : number;
 }
 
 export default function Presentation() {
-  const [count, setCount] = useState({
-    days: 0,
-    hours: 0,
-    minutes: 0,
-    seconds: 0,
-  });
+  const [seconds, setSeconds] = useState(0);
+  const [minutes, setMinutes] = useState(0);
+  const [hours, setHours] = useState(0);
+  const [days, setDays] = useState(0);
 
   const countDownClock = () => {
     const countDownDate: any = new Date("Nov 2, 2024 13:29:00");
@@ -34,18 +32,53 @@ export default function Presentation() {
         console.log("EXPIRED");
       }
 
-      setCount({
-        days,
-        hours,
-        minutes,
-        seconds,
-      });
+      setSeconds(seconds);
+      setMinutes(minutes);
+      setHours(hours);
+      setDays(days);
     }, 1000);
   };
 
   useEffect(() => {
     countDownClock();
   }, []);
+
+  const [scopeSeconds, animateSeconds] = useAnimate();
+  const [scopeMinutes, animateMinutes] = useAnimate();
+  const [scopeHours, animateHours] = useAnimate();
+  const [scopeDays, animateDays] = useAnimate();
+
+  useEffect(() => {
+    animateSeconds(
+      scopeSeconds.current,
+      { y: [20, 0], opacity: [0, 1] },
+      { ease: "easeInOut", type: "keyframes" }
+    );
+  }, [seconds, animateSeconds]);
+
+  useEffect(() => {
+    animateMinutes(
+      scopeMinutes.current,
+      { y: [20, 0], opacity: [0, 1] },
+      { ease: "easeInOut", type: "keyframes" }
+    );
+  }, [minutes, animateSeconds]);
+
+  useEffect(() => {
+    animateHours(
+      scopeHours.current,
+      { y: [20, 0], opacity: [0, 1] },
+      { ease: "easeInOut", type: "keyframes" }
+    );
+  }, [hours, animateHours]);
+
+  useEffect(() => {
+    animateDays(
+      scopeDays.current,
+      { y: [20, 0], opacity: [0, 1] },
+      { ease: "easeInOut", type: "keyframes" }
+    );
+  }, [days, animateDays]);
 
   return (
     <section
@@ -96,14 +129,14 @@ export default function Presentation() {
           whileInView="visible"
         >
           <p className="flex flex-col items-center">
-            <span className={`${anton.className} text-5xl`}>
-              {formatNumber(count.days)}
+            <span className={`${anton.className} text-5xl`} ref={scopeDays}>
+              {formatNumber(days)}
             </span>
             <span className={`${whisper.className} text-3xl`}>Días</span>
           </p>
           <p className="flex flex-col items-center mt-5">
-            <span className={`${anton.className} text-5xl`}>
-              {formatNumber(count.minutes)}
+            <span className={`${anton.className} text-5xl`} ref={scopeMinutes}>
+              {formatNumber(minutes)}
             </span>
             <span className={`${whisper.className} text-3xl`}>Minutos</span>
           </p>
@@ -115,14 +148,14 @@ export default function Presentation() {
           whileInView="visible"
         >
           <p className="flex flex-col items-center">
-            <span className={`${anton.className} text-5xl`}>
-              {formatNumber(count.hours)}
+            <span className={`${anton.className} text-5xl`} ref={scopeHours}>
+              {formatNumber(hours)}
             </span>
             <span className={`${whisper.className} text-3xl`}>Horas</span>
           </p>
           <p className="flex flex-col items-center mt-5">
-            <span className={`${anton.className} text-5xl`}>
-              {formatNumber(count.seconds)}
+            <span className={`${anton.className} text-5xl`} ref={scopeSeconds}>
+              {formatNumber(seconds)}
             </span>
             <span className={`${whisper.className} text-3xl`}>Segundos</span>
           </p>
