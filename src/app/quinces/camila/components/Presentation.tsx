@@ -6,11 +6,10 @@ import { presentation } from "./Animations";
 export default function Presentation() {
   return (
     <section
-      className="pt-10 pb-32 flex flex-col items-center justify-center relative"
+      className="h-screen pt-10 pb-32 flex flex-col items-center justify-center relative"
       style={{
         backgroundColor: "#f4e1d1",
         marginTop: "-5px",
-        height: "100svh",
       }}
     >
       <motion.svg

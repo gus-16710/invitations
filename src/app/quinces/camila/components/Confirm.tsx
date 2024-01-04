@@ -5,10 +5,7 @@ import { confirm } from "./Animations";
 
 export default function Confirm() {
   return (
-    <section
-      className="flex flex-col items-center justify-center bg-pink-800"
-      style={{ height: "100svh" }}
-    >
+    <section className="h-screen flex flex-col items-center justify-center bg-pink-800">
       <motion.svg
         xmlns="http://www.w3.org/2000/svg"
         id="svg2"
@@ -63,7 +60,7 @@ export default function Confirm() {
         <button
           type="button"
           className="flex justify-center items-center gap-2 w-60 mt-3 text-pink-900 bg-white border border-gray-400 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 rounded-full me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700 font-medium text-sm px-5 py-2.5 text-center z-20"
-          onClick={() => window.open("https://wa.link/mv18ux", "_blank")}
+          onClick={() => window.open("https://wa.link/cuzs6q", "_blank")}
         >
           <FaWhatsapp className="text-2xl" />
           Mensaje de Whatsapp

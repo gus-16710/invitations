@@ -136,12 +136,7 @@ export default function Gifts() {
 
   return (
     <>
-      <section
-        className="flex flex-col items-center justify-center bg-[url('/img/quinces/camila/background-confirm.jpg')] bg-center bg-cover relative"
-        style={{
-          height: "100svh",
-        }}
-      >
+      <section className="h-screen flex flex-col items-center justify-center bg-[url('/img/quinces/camila/background-confirm.jpg')] bg-center bg-cover relative">
         <motion.svg
           xmlns="http://www.w3.org/2000/svg"
           id="svg2"

@@ -95,10 +95,7 @@ export default function Fifteen() {
           <AudioControl />
         </>
       ) : (
-        <section
-          className="bg-[url('/img/quinces/camila/background-header.jpg')] bg-center bg-cover"
-          style={{ height: "100svh" }}
-        />
+        <section className="h-screen bg-[url('/img/quinces/camila/background-header.jpg')] bg-center bg-cover" />
       )}
 
       <OpeningModal

@@ -89,10 +89,7 @@ export default function Header() {
   }, [days, animateDays]);
 
   return (
-    <section
-      className="flex flex-col justify-center items-center relative bg-[url('/img/quinces/camila/background-header.jpg')] bg-center bg-cover"
-      style={{ height: "100svh" }}
-    >
+    <section className="h-screen flex flex-col justify-center items-center relative bg-[url('/img/quinces/camila/background-header.jpg')] bg-center bg-cover">
       <p className="text-zinc-50 flex items-center z-20">
         <motion.label
           className={`text-2xl ${quickSand.className}`}
@@ -150,7 +147,7 @@ export default function Header() {
         style={{
           textShadow:
             "-1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5)",
-        }}     
+        }}
       >
         <motion.label
           className="flex flex-col items-center"
