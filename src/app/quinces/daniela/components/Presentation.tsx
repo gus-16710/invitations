@@ -1,5 +1,5 @@
 import { useEffect, useState, useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useAnimate, useScroll, useTransform } from "framer-motion";
 import { Card, CardBody } from "@nextui-org/react";
 import {
   animation01,
@@ -8,19 +8,17 @@ import {
   animation06,
   animation07,
 } from "./Animations";
-import { pinyion, playFair } from "./Fonts";
+import { clicker, pinyion, playFair } from "./Fonts";
 
 function formatNumber(number: number) {
   return number < 10 ? `0${number}` : number;
 }
 
 export default function Presentation() {
-  const [count, setCount] = useState({
-    days: 0,
-    hours: 0,
-    minutes: 0,
-    seconds: 0,
-  });
+  const [seconds, setSeconds] = useState(0);
+  const [minutes, setMinutes] = useState(0);
+  const [hours, setHours] = useState(0);
+  const [days, setDays] = useState(0);
 
   const ref = useRef<HTMLDivElement>(null);
 
@@ -43,12 +41,10 @@ export default function Presentation() {
         console.log("EXPIRED");
       }
 
-      setCount({
-        days,
-        hours,
-        minutes,
-        seconds,
-      });
+      setSeconds(seconds);
+      setMinutes(minutes);
+      setHours(hours);
+      setDays(days);
     }, 1000);
   };
 
@@ -72,6 +68,43 @@ export default function Presentation() {
   useEffect(() => {
     countDownClock();
   }, []);
+
+  const [scopeSeconds, animateSeconds] = useAnimate();
+  const [scopeMinutes, animateMinutes] = useAnimate();
+  const [scopeHours, animateHours] = useAnimate();
+  const [scopeDays, animateDays] = useAnimate();
+
+  useEffect(() => {
+    animateSeconds(
+      scopeSeconds.current,
+      { scale: [0, 1], opacity: [0, 1] },
+      { ease: "easeInOut", type: "keyframes" }
+    );
+  }, [seconds, animateSeconds]);
+
+  useEffect(() => {
+    animateMinutes(
+      scopeMinutes.current,
+      { scale: [0, 1], opacity: [0, 1] },
+      { ease: "easeInOut", type: "keyframes" }
+    );
+  }, [minutes, animateSeconds]);
+
+  useEffect(() => {
+    animateHours(
+      scopeHours.current,
+      { scale: [0, 1], opacity: [0, 1] },
+      { ease: "easeInOut", type: "keyframes" }
+    );
+  }, [hours, animateHours]);
+
+  useEffect(() => {
+    animateDays(
+      scopeDays.current,
+      { scale: [0, 1], opacity: [0, 1] },
+      { ease: "easeInOut", type: "keyframes" }
+    );
+  }, [days, animateDays]);
 
   return (
     <section
@@ -154,28 +187,28 @@ export default function Presentation() {
           </motion.div>
 
           <motion.div
-            className={`${pinyion.className} my-10 flex justify-evenly w-full text-3xl`}
+            className={`${clicker.className} my-10 flex justify-evenly w-full text-3xl`}
             variants={animation03}
             initial="hidden"
             whileInView="visible"
           >
             <label className="flex flex-col items-center">
-              <span>{formatNumber(count.days)}</span>
+              <span ref={scopeDays}>{formatNumber(days)}</span>
               <span className="text-2xl">Días</span>
             </label>
             <label>:</label>
             <label className="flex flex-col items-center">
-              {formatNumber(count.hours)}
+              <span ref={scopeHours}>{formatNumber(hours)}</span>
               <span className="text-2xl">Horas</span>
             </label>
             <label>:</label>
             <label className="flex flex-col items-center">
-              {formatNumber(count.minutes)}
+              <span ref={scopeMinutes}>{formatNumber(minutes)}</span>
               <span className="text-2xl">Min</span>
             </label>
             <label>:</label>
             <label className="flex flex-col items-center">
-              {formatNumber(count.seconds)}
+              <span ref={scopeSeconds}>{formatNumber(seconds)}</span>
               <span className="text-2xl">Seg</span>
             </label>
           </motion.div>

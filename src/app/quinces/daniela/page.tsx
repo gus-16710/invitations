@@ -41,7 +41,7 @@ const ModalFull = ({
       placement="center"
       backdrop="blur"
       isDismissable={false}
-      hideCloseButton={true}
+      hideCloseButton={true}      
     >
       <ModalContent>
         {(onClose) => (

@@ -49,7 +49,10 @@ export const animation06 = {
   visible: {
     opacity: 1,
     scale: 1,
-    transition: { duration: 1, delay: 0.6 },
+    transition: {
+      duration: 1,
+      delay: 0.6,
+    },
   },
 };
 

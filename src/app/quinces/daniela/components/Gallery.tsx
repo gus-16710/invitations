@@ -3,14 +3,11 @@ import { useScroll, useTransform, motion } from "framer-motion";
 import { useRef, useState } from "react";
 import PhotoAlbum from "react-photo-album";
 import Lightbox from "yet-another-react-lightbox";
-import { pinyion } from "./Fonts";
-import {
-  animation01,
-  animation06,
-  animation07,
-} from "./Animations";
+import { oswald, pinyion } from "./Fonts";
+import { animation01, animation06, animation07 } from "./Animations";
 import { Card, CardBody } from "@nextui-org/react";
 import NextJsImage from "./NextJsImage";
+import { LuZoomIn } from "react-icons/lu";
 
 const images = [
   {
@@ -67,7 +64,7 @@ export default function Gallery() {
   );
 
   return (
-    <section ref={ref} className="overflow-hidden relative px-5 py-10">
+    <section ref={ref} className="h-screen overflow-hidden relative px-5 py-10">
       <Card className="border-none bg-background/60 h-full w-full" shadow="sm">
         <CardBody>
           <motion.h1
@@ -142,13 +139,31 @@ export default function Gallery() {
               </g>
             </svg>
           </motion.div>
-          <div className="z-30 px-2 py-5 w-72 m-auto">
+
+          <div className="flex items-center justify-center">
+            <motion.div
+              id="alert-5"
+              className="flex items-center justify-center p-2 rounded-lg bg-yellow-500/50 w-72 mt-3"
+              role="alert"
+              initial={{ y: 100, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: 1, ease: "easeOut", delay: 0.6 }}
+            >
+              <span className="sr-only">Info</span>
+              <div className={`${oswald.className} ms-3 text-sm text-white`}>
+                Presiona sobre una imagen para ampliar
+              </div>
+              <LuZoomIn className="text-white ml-2" />
+            </motion.div>
+          </div>
+
+          <div className="z-30 px-2 w-72 m-auto">
             <PhotoAlbum
               layout="masonry"
               photos={images}
               onClick={({ index: current }) => setIndex(current)}
-              renderPhoto={NextJsImage}  
-              columns={2}            
+              renderPhoto={NextJsImage}
+              columns={2}
             />
             <Lightbox
               index={index}

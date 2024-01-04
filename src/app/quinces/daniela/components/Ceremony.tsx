@@ -50,7 +50,7 @@ const ModalMap = ({
       <ModalContent>
         {(onClose) => (
           <>
-            <ModalHeader className="flex flex-col gap-1">Ceremonia</ModalHeader>
+            <ModalHeader className={`${pinyion.className} flex flex-col gap-1 items-center text-3xl`}>Ceremonia</ModalHeader>
             <ModalBody>
               <MapCeremony />
             </ModalBody>
@@ -170,7 +170,7 @@ export default function Ceremony() {
             <motion.div
               variants={animation06}
               initial="hidden"
-              whileInView="visible"
+              whileInView="visible"              
             >
               <Avatar
                 isBordered

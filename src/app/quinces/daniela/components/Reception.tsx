@@ -50,7 +50,11 @@ const ModalMap = ({
       <ModalContent>
         {(onClose) => (
           <>
-            <ModalHeader className="flex flex-col gap-1">Recepción</ModalHeader>
+            <ModalHeader
+              className={`${pinyion.className} flex flex-col gap-1 items-center text-3xl`}
+            >
+              Recepción
+            </ModalHeader>
             <ModalBody>
               <MapSalon />
             </ModalBody>
