@@ -1,9 +1,7 @@
-import { LuZoomIn } from "react-icons/lu";
 import AudioPlayer from "./AudioPlayer";
 import { alex, mate, oswald } from "./Fonts";
 import "./Header.css";
-import { motion, useAnimate } from "framer-motion";
-import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 
 const list = {
   visible: {
@@ -28,7 +26,7 @@ const item = {
 
 export default function Header() {
   const text01 = "Isabel&Alan";
-  
+
   return (
     <section className="h-screen relative flex items-center justify-center flex-col bg-[url('/img/bodas/isabel-alan/gallery-01.jpg')] bg-cover bg-center">
       <motion.h1
@@ -70,7 +68,7 @@ export default function Header() {
         <div className={`${oswald.className} ms-3 text-sm text-zinc-100`}>
           Reproduce y desliza hacia abajo
         </div>
-      </motion.div>      
+      </motion.div>
       <div className="absolute -bottom-1 w-full">
         <svg
           width="100%"

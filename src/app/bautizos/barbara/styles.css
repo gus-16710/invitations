@@ -1,0 +1,26 @@
+.window-mask {
+  mask-image: linear-gradient(black, black),
+    url("/img/bautizos/barbara/party.svg");
+  mask-composite: exclude;
+  mask-repeat: no-repeat;
+  mask-size: auto, 200px auto;
+  /* mask-position: center center, center right 3rem; */
+  mask-position: center center, center center;
+}
+
+/* .hero-background {
+  background: linear-gradient(
+      to bottom,
+      theme("colors.blue.950") 100px,
+      transparent 100px,
+      transparent 85%,
+      theme("colors.blue.950") 75%
+    ),
+    linear-gradient(
+      to right,
+      theme("colors.blue.950") 24px,
+      transparent 24px,
+      transparent calc(100% - 24px),
+      theme("colors.blue.950") calc(100% - 24px)
+    );
+} */

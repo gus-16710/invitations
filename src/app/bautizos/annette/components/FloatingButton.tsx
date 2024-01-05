@@ -1,10 +1,10 @@
 import { useAnimate, motion } from 'framer-motion';
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 
 export default function FloatinButton() {
   const [scope, animate] = useAnimate();
 
-  useEffect(() => {
+  useEffect(() => {    
     window.addEventListener("scroll", () => {
       if (
         document.body.scrollTop > 100 ||

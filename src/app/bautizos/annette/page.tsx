@@ -60,7 +60,7 @@ export default function Christening() {
   }, [makeShot]);
 
   useEffect(() => {
-    fire();
+    fire();    
   }, []);
 
   return (
@@ -74,7 +74,7 @@ export default function Christening() {
       <Confirm />
       <FloatinButton />
       <AudioControl />
-      <Confetti fire={fire}/>
+      <Confetti fire={fire} />
 
       <ReactCanvasConfetti
         refConfetti={getInstance}
