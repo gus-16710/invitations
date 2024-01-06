@@ -1,125 +1,119 @@
 "use client";
 
-import {
-  useScroll,
-  useTransform,
-  motion,
-  useMotionTemplate,
-} from "framer-motion";
-import { useRef } from "react";
-
 export default function Christening() {
-  const ref = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start start", "end end"],
-  });
-
-  const scale = useTransform(scrollYProgress, [0, 1], [1, 30]);
-  const imageX = useTransform(scrollYProgress, [0, 1], [50, 0]);
-  const imageXCalc = useMotionTemplate`max(0px, calc(${imageX}% + calc(${imageX}vw)))`;
-
   return (
-    <main className="bg-blue-100">
-      <div className="relative z-10 h-[200vh] overflow-clip" ref={ref}>
-        <motion.div
-          style={{ scale }}
-          className="hero-background h-screen flex items-center justify-center flex-col "
-        >
-          <div className="window-mask flex bg-white p-12 h-screen w-full justify-center bg-[url('/img/bautizos/barbara/background-flowers.jpg')] bg-bottom bg-cover bg-fixed">
-            <p className="text-center">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur
-              modi quae iusto vel. Repudiandae assumenda libero recusandae! Hic
-              asperiores ea voluptates illo consectetur, ab dolor minima eum
-              porro, provident consequuntur?
-            </p>            
-          </div>
-        </motion.div>
-      </div>
-
-      <div className="mt-[-200vh] h-[200vh] pb-20 overflow-clip">
-        <motion.span
-          style={{ x: imageXCalc }}
-          className="sticky top-1/4 mx-auto block rounded-3xl h-96 bg-slate-100 shadow-large"
-        ></motion.span>
-      </div>
-      {/* <div className="h-screen flex items-center justify-center">
+    <main>
+      <section id="one" className="h-screen flex justify-center items-center">
         One
-      </div>
-      <div className="h-screen flex items-center justify-center">
+      </section>
+      <section id="two" className="h-screen flex justify-center items-center">
         Two
-      </div>
-      <div className="h-screen flex items-center justify-center">
+      </section>
+      <section id="three" className="h-screen flex justify-center items-center">
         Three
+      </section>
+      <div className="fixed bottom-0 left-0 z-50 w-full h-16 bg-gradient-to-b from-slate-50 to-slate-100 border-t border-gray-200 dark:bg-gray-700 dark:border-gray-600 shadow-large">
+        <div className="grid h-full max-w-lg grid-cols-5 mx-auto font-medium">
+          <a
+            href="#one"
+            className="inline-flex flex-col items-center justify-center px-5 hover:bg-gray-50 dark:hover:bg-gray-800 group border-r-1 border-gray-600/10"
+          >
+            <svg
+              className="w-4 h-4 mb-2 text-gray-500 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-500"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+            >
+              <path d="m19.707 9.293-2-2-7-7a1 1 0 0 0-1.414 0l-7 7-2 2a1 1 0 0 0 1.414 1.414L2 10.414V18a2 2 0 0 0 2 2h3a1 1 0 0 0 1-1v-4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v4a1 1 0 0 0 1 1h3a2 2 0 0 0 2-2v-7.586l.293.293a1 1 0 0 0 1.414-1.414Z" />
+            </svg>
+            <span className="text-xs text-gray-500 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-500">
+              Home
+            </span>
+          </a>
+          <button
+            type="button"
+            className="inline-flex flex-col items-center justify-center px-5 hover:bg-gray-50 dark:hover:bg-gray-800 group border-r-1 border-gray-600/10"
+          >
+            <svg
+              className="w-4 h-4 mb-2 text-gray-500 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-500"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+            >
+              <path d="M11.074 4 8.442.408A.95.95 0 0 0 7.014.254L2.926 4h8.148ZM9 13v-1a4 4 0 0 1 4-4h6V6a1 1 0 0 0-1-1H1a1 1 0 0 0-1 1v13a1 1 0 0 0 1 1h17a1 1 0 0 0 1-1v-2h-6a4 4 0 0 1-4-4Z" />
+              <path d="M19 10h-6a2 2 0 0 0-2 2v1a2 2 0 0 0 2 2h6a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1Zm-4.5 3.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2ZM12.62 4h2.78L12.539.41a1.086 1.086 0 1 0-1.7 1.352L12.62 4Z" />
+            </svg>
+            <span className="text-xs text-gray-500 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-500">
+              Wallet
+            </span>
+          </button>
+          <button
+            type="button"
+            className="inline-flex flex-col items-center justify-center px-5 hover:bg-gray-50 dark:hover:bg-gray-800 group border-r-1 border-gray-600/10"
+          >
+            <svg
+              className="w-4 h-4 mb-2 text-gray-500 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-500"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 20 20"
+            >
+              <path
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M4 12.25V1m0 11.25a2.25 2.25 0 0 0 0 4.5m0-4.5a2.25 2.25 0 0 1 0 4.5M4 19v-2.25m6-13.5V1m0 2.25a2.25 2.25 0 0 0 0 4.5m0-4.5a2.25 2.25 0 0 1 0 4.5M10 19V7.75m6 4.5V1m0 11.25a2.25 2.25 0 1 0 0 4.5 2.25 2.25 0 0 0 0-4.5ZM16 19v-2"
+              />
+            </svg>
+            <span className="text-xs text-gray-500 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-500">
+              Settings
+            </span>
+          </button>
+          <button
+            type="button"
+            className="inline-flex flex-col items-center justify-center px-5 hover:bg-gray-50 dark:hover:bg-gray-800 group border-r-1 border-gray-600/10"
+          >
+            <svg
+              className="w-4 h-4 mb-2 text-gray-500 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-500"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+            >
+              <path d="M10 0a10 10 0 1 0 10 10A10.011 10.011 0 0 0 10 0Zm0 5a3 3 0 1 1 0 6 3 3 0 0 1 0-6Zm0 13a8.949 8.949 0 0 1-4.951-1.488A3.987 3.987 0 0 1 9 13h2a3.987 3.987 0 0 1 3.951 3.512A8.949 8.949 0 0 1 10 18Z" />
+            </svg>
+            <span className="text-xs text-gray-500 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-500">
+              Profile
+            </span>
+          </button>
+          <button
+            type="button"
+            className="inline-flex flex-col items-center justify-center px-5 hover:bg-gray-50 dark:hover:bg-gray-800 group"
+          >
+            <svg
+              className="w-4 h-4 mb-2 text-gray-500 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-500"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 18 18"
+            >
+              <path
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M9 1v16M1 9h16"
+              />
+            </svg>
+            <span className="text-xs text-gray-500 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-500">
+              New
+            </span>
+          </button>
+        </div>
       </div>
-      <div className="h-screen flex items-center justify-center">
-        Fourt
-      </div> */}
     </main>
   );
 }
-
-// "use client";
-
-// import {
-//   useScroll,
-//   useTransform,
-//   motion,
-//   useMotionTemplate,
-// } from "framer-motion";
-// import { useRef } from "react";
-
-// export default function Christening() {
-//   const ref = useRef(null);
-//   const { scrollYProgress } = useScroll({
-//     target: ref,
-//     offset: ["start start", "end end"],
-//   });
-
-//   const scale = useTransform(scrollYProgress, [0, 1], [1, 12]);
-//   const imageX = useTransform(scrollYProgress, [0, 1], [50, 0]);
-//   const imageXCalc = useMotionTemplate`max(0px, calc(${imageX}% + calc(${imageX}vw - 300px)))`;
-
-//   return (
-//     <main className="bg-blue-950">
-//       <div className="relative z-10 h-[200vh] overflow-clip" ref={ref}>
-//         <motion.div
-//           style={{ scale }}
-//           className="hero-background origin-[90%_40%] grid h-screen gap-2 p-6 pt-20 [grid-template-rows:4fr_1fr]"
-//         >
-//           <div className="window-mask flex rounded-3xl bg-white p-12">
-//             <div className="flex h-full flex-col">
-//               <h1 className="my-auto max-w[12ch] text-3xl font-bold">
-//                 Playing with masks and Framer Motion
-//               </h1>
-//               <p className="text-xl">
-//                 This animation is inspired by the Runway.com homepage. <br />
-//                 Recreated by fronted.fyi.
-//               </p>
-//             </div>
-//             <div className="my-auto aspect-[5/8] w-300 min-w-[300px] rounded-full border-4 border-gray-600/20"></div>
-//           </div>
-//           <div className="grid grid-flow-row grid-cols-3 gap-2">
-//             <div className="col-span-2 rounded-3xl border border-white"></div>
-//             <a className="flex items-center justify-center rounded-3xl bg-orange-400">
-//               Early Access
-//             </a>
-//           </div>
-//         </motion.div>
-//       </div>
-
-//       <div className="mt-[-200vh] h-[200vh] bg-blue-100 pb-20 overflow-clip">
-//         <motion.span
-//           style={{ x: imageXCalc }}
-//           className="sticky top-1/4 mx-auto block aspect-video w-[1600px] max-w-[90%] rounded-3xl h-96 bg-slate-100 shadow-large"
-//         ></motion.span>
-//       </div>
-//       <div className="space-y-[80px] bg-blue-100 text-[300px]">
-//         <p>Some more text</p>
-//         <p>So there´s</p>
-//         <p>Some Room</p>
-//         <p>To Scroll</p>
-//       </div>
-//     </main>
-//   );
-// }
