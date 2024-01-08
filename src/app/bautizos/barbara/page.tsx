@@ -2,6 +2,7 @@
 
 import { Flowbite, FlowbiteCarouselTheme, Carousel } from "flowbite-react";
 import Header from "./components/Header";
+import Presentation from "./components/Presentation";
 
 const customTheme: FlowbiteCarouselTheme = {
   root: {
@@ -41,15 +42,13 @@ export default function Christening() {
     >
       <Flowbite>
         <Carousel theme={customTheme} slideInterval={5000} slide={false}>
-          <div className="flex h-full items-center justify-center text-gray-800 flex-col px-5 text-center">
+          <div className="max-w-3xl">
             <Header />
           </div>
-          <div className="flex h-full items-center justify-center text-gray-800 flex-col px-5 text-center">
-            Two
+          <div className="max-w-3xl">
+            <Presentation />
           </div>
-          <div className="flex h-full items-center justify-center text-gray-800 flex-col px-5 text-center">
-            Three
-          </div>
+          <div className="max-w-3xl">Three</div>
         </Carousel>
       </Flowbite>
     </main>
