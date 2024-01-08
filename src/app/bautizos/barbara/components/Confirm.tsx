@@ -1,88 +1,11 @@
-import { useEffect, useState } from "react";
-import { anton, glass, mea } from "./Fonts";
-import { useAnimate } from "framer-motion";
+import { FaPhoneAlt, FaWhatsapp } from "react-icons/fa";
+import { luxurious, mea } from "./Fonts";
 
-function formatNumber(number: number) {
-  return number < 10 ? `0${number}` : number;
-}
-
-export default function Presentation() {
-  const [seconds, setSeconds] = useState(0);
-  const [minutes, setMinutes] = useState(0);
-  const [hours, setHours] = useState(0);
-  const [days, setDays] = useState(0);
-
-  const countDownClock = () => {
-    const countDownDate: any = new Date("Nov 2, 2024 13:29:00");
-
-    const interval = setInterval(() => {
-      const now = new Date().getTime();
-      const distance = countDownDate - now;
-
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor(
-        (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-      );
-      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-      if (distance < 0) {
-        clearInterval(interval);
-        console.log("EXPIRED");
-      }
-
-      setSeconds(seconds);
-      setMinutes(minutes);
-      setHours(hours);
-      setDays(days);
-    }, 1000);
-  };
-
-  useEffect(() => {
-    countDownClock();
-  }, []);
-
-  const [scopeSeconds, animateSeconds] = useAnimate();
-  const [scopeMinutes, animateMinutes] = useAnimate();
-  const [scopeHours, animateHours] = useAnimate();
-  const [scopeDays, animateDays] = useAnimate();
-
-  useEffect(() => {
-    animateSeconds(
-      scopeSeconds.current,
-      { y: [20, 0], opacity: [0, 1] },
-      { ease: "easeInOut", type: "keyframes" }
-    );
-  }, [seconds, animateSeconds]);
-
-  useEffect(() => {
-    animateMinutes(
-      scopeMinutes.current,
-      { y: [20, 0], opacity: [0, 1] },
-      { ease: "easeInOut", type: "keyframes" }
-    );
-  }, [minutes, animateSeconds]);
-
-  useEffect(() => {
-    animateHours(
-      scopeHours.current,
-      { y: [20, 0], opacity: [0, 1] },
-      { ease: "easeInOut", type: "keyframes" }
-    );
-  }, [hours, animateHours]);
-
-  useEffect(() => {
-    animateDays(
-      scopeDays.current,
-      { y: [20, 0], opacity: [0, 1] },
-      { ease: "easeInOut", type: "keyframes" }
-    );
-  }, [days, animateDays]);
-
+export default function Confirm() {
   return (
     <section className="flex flex-col justify-center items-center">
       <h2 className={`${mea.className} text-5xl text-orange-900`}>
-        Solo Faltan
+        Asistencia
       </h2>
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -98,47 +21,35 @@ export default function Presentation() {
         />
       </svg>
 
-      <div className="flex gap-16 text-zinc-600 mt-10">
-        <div className="flex flex-col">
-          <p className="flex flex-col items-center">
-            <span className={`${anton.className} text-5xl`} ref={scopeDays}>
-              {formatNumber(days)}
-            </span>
-            <span className={`${glass.className} text-3xl`}>Días</span>
-          </p>
-          <p className="flex flex-col items-center mt-5">
-            <span className={`${anton.className} text-5xl`} ref={scopeMinutes}>
-              {formatNumber(minutes)}
-            </span>
-            <span className={`${glass.className} text-3xl`}>Minutos</span>
-          </p>
-        </div>
-        <div className="flex flex-col">
-          <p className="flex flex-col items-center">
-            <span className={`${anton.className} text-5xl`} ref={scopeHours}>
-              {formatNumber(hours)}
-            </span>
-            <span className={`${glass.className} text-3xl`}>Horas</span>
-          </p>
-          <p className="flex flex-col items-center mt-5">
-            <span className={`${anton.className} text-5xl`} ref={scopeSeconds}>
-              {formatNumber(seconds)}
-            </span>
-            <span className={`${glass.className} text-3xl`}>Segundos</span>
-          </p>
-        </div>
-      </div>
+      <p
+        className={`${luxurious.className} mx-10 mt-10 text-center text-orange-900`}
+      >
+        Esperamos que puedan venir a compartir con nosotros este momento
+        inolvidable.
+      </p>
+      <p
+        className={`${luxurious.className} mx-10 mt-5 text-center text-orange-900`}
+      >
+        Porfavor de confirmar tu asistencia.
+        <br />
+        ¡Muchas Gracias!
+      </p>
 
-      <p
-        className={`${glass.className} text-orange-900 mt-10 px-5 text-center text-lg`}
-      >
-        Sus padres agraden tu presencia:
-      </p>
-      <p
-        className={`${glass.className} text-2xl text-center text-orange-900 px-5 mt-3`}
-      >
-        Arlett Pérez Saldaña <br />&<br /> Pedro Robles Morales
-      </p>
+      <div className="flex items-center justify-center flex-col">
+        <button className="mt-5 relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-pink-500 to-orange-400 group-hover:from-pink-500 group-hover:to-orange-400 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800">
+          <span className="w-60 relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0 flex justify-center items-center gap-1">
+            <FaWhatsapp className="text-2xl" />
+            Mensaje de Whatsapp
+          </span>
+        </button>
+
+        <button className="mt-5 relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-pink-500 to-orange-400 group-hover:from-pink-500 group-hover:to-orange-400 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800">
+          <span className="w-60 relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0 flex justify-center items-center gap-1">
+            <FaPhoneAlt className="text-2xl" />
+            Llamada Telefonica
+          </span>
+        </button>
+      </div>
     </section>
   );
 }

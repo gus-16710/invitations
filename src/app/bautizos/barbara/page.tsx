@@ -6,6 +6,7 @@ import Presentation from "./components/Presentation";
 import Ceremony from "./components/Ceremony";
 import Reception from "./components/Reception";
 import GodParents from "./components/GodParents";
+import Confirm from "./components/Confirm";
 
 const customTheme: FlowbiteCarouselTheme = {
   root: {
@@ -59,6 +60,9 @@ export default function Christening() {
           </div>
           <div className="max-w-3xl">
             <GodParents />
+          </div>
+          <div className="max-w-3xl">
+            <Confirm />
           </div>
         </Carousel>
       </Flowbite>
