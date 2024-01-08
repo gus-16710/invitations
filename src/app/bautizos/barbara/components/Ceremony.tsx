@@ -1,95 +1,29 @@
-import { useEffect, useState } from "react";
-import { anton, denk, glass, luxurious, mea } from "./Fonts";
-import { useAnimate } from "framer-motion";
+import { glass, luxurious, mea } from "./Fonts";
+import { Avatar } from "@nextui-org/react";
+import { IoMdTime } from "react-icons/io";
+import { LuMapPin } from "react-icons/lu";
 
-function formatNumber(number: number) {
-  return number < 10 ? `0${number}` : number;
-}
+const MapCeremony = () => (
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2658.940584345849!2d-96.92546855044417!3d19.52830722889927!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85db2dff1a7cdc9b%3A0x7ebb1a4a9284e7ed!2sCatedral%20Metropolitana%20de%20la%20Inmaculada%20Concepci%C3%B3n!5e0!3m2!1ses!2smx!4v1700178969653!5m2!1ses!2smx"
+    height="450"
+    style={{ border: "0" }}
+    allowFullScreen
+    loading="lazy"
+    referrerPolicy="no-referrer-when-downgrade"
+  ></iframe>
+);
 
-export default function Presentation() {
-  const [seconds, setSeconds] = useState(0);
-  const [minutes, setMinutes] = useState(0);
-  const [hours, setHours] = useState(0);
-  const [days, setDays] = useState(0);
-
-  const countDownClock = () => {
-    const countDownDate: any = new Date("Nov 2, 2024 13:29:00");
-
-    const interval = setInterval(() => {
-      const now = new Date().getTime();
-      const distance = countDownDate - now;
-
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor(
-        (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-      );
-      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-      if (distance < 0) {
-        clearInterval(interval);
-        console.log("EXPIRED");
-      }
-
-      setSeconds(seconds);
-      setMinutes(minutes);
-      setHours(hours);
-      setDays(days);
-    }, 1000);
-  };
-
-  useEffect(() => {
-    countDownClock();
-  }, []);
-
-  const [scopeSeconds, animateSeconds] = useAnimate();
-  const [scopeMinutes, animateMinutes] = useAnimate();
-  const [scopeHours, animateHours] = useAnimate();
-  const [scopeDays, animateDays] = useAnimate();
-
-  useEffect(() => {
-    animateSeconds(
-      scopeSeconds.current,
-      { y: [20, 0], opacity: [0, 1] },
-      { ease: "easeInOut", type: "keyframes" }
-    );
-  }, [seconds, animateSeconds]);
-
-  useEffect(() => {
-    animateMinutes(
-      scopeMinutes.current,
-      { y: [20, 0], opacity: [0, 1] },
-      { ease: "easeInOut", type: "keyframes" }
-    );
-  }, [minutes, animateSeconds]);
-
-  useEffect(() => {
-    animateHours(
-      scopeHours.current,
-      { y: [20, 0], opacity: [0, 1] },
-      { ease: "easeInOut", type: "keyframes" }
-    );
-  }, [hours, animateHours]);
-
-  useEffect(() => {
-    animateDays(
-      scopeDays.current,
-      { y: [20, 0], opacity: [0, 1] },
-      { ease: "easeInOut", type: "keyframes" }
-    );
-  }, [days, animateDays]);
-
+export default function Ceremony() {
   return (
     <section className="flex flex-col justify-center items-center">
-      <h2 className={`${mea.className} text-5xl text-orange-900`}>
-        Solo Faltan
-      </h2>
+      <h2 className={`${mea.className} text-5xl text-orange-900`}>Ceremonia</h2>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 1063.9137 68.507454"
         width="250"
         version="1.1"
-        className="rotate-180 mt-4"
+        className="rotate-180 mt-4 mb-4"
         style={{ fill: "rgb(227 160 8)" }}
       >
         <path
@@ -98,47 +32,35 @@ export default function Presentation() {
         />
       </svg>
 
-      <div className="flex gap-16 text-zinc-600 mt-10">
-        <div className="flex flex-col">
-          <p className="flex flex-col items-center">
-            <span className={`${anton.className} text-5xl`} ref={scopeDays}>
-              {formatNumber(days)}
-            </span>
-            <span className={`${glass.className} text-3xl`}>Días</span>
-          </p>
-          <p className="flex flex-col items-center mt-5">
-            <span className={`${anton.className} text-5xl`} ref={scopeMinutes}>
-              {formatNumber(minutes)}
-            </span>
-            <span className={`${glass.className} text-3xl`}>Minutos</span>
-          </p>
-        </div>
-        <div className="flex flex-col">
-          <p className="flex flex-col items-center">
-            <span className={`${anton.className} text-5xl`} ref={scopeHours}>
-              {formatNumber(hours)}
-            </span>
-            <span className={`${glass.className} text-3xl`}>Horas</span>
-          </p>
-          <p className="flex flex-col items-center mt-5">
-            <span className={`${anton.className} text-5xl`} ref={scopeSeconds}>
-              {formatNumber(seconds)}
-            </span>
-            <span className={`${glass.className} text-3xl`}>Segundos</span>
-          </p>
-        </div>
-      </div>
+      <Avatar
+        isBordered
+        color="default"
+        src="/img/bautizos/barbara/church.jpg"
+        className="h-44 w-44 my-5 shadow-lg"
+      />
 
-      <p
-        className={`${glass.className} text-orange-900 mt-10 px-5 text-center text-lg`}
+      <span className="flex items-center justify-center gap-1 bg-pink-100 text-pink-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-pink-400 border border-pink-400">
+        <IoMdTime /> 13:00 HRS
+      </span>
+
+      <h2
+        className={`${glass.className} mx-10 text-orange-900 text-center text-2xl mt-5`}
       >
-        Sus padres agraden tu presencia:
-      </p>
+        Catedral Metropolitana de la Inmaculada Concepción
+      </h2>
       <p
-        className={`${glass.className} text-2xl text-center text-orange-900 px-5 mt-3`}
+        className={`${luxurious.className} text-orange-900 mt-3 text-sm text-center mx-10`}
       >
-        Arlett Pérez Saldaña <br />&<br /> Pedro Robles Morales
+        Juan de La Luz Enríquez s/n, Zona Centro, Centro, 91000 Xalapa-Enríquez,
+        Ver.
       </p>
+
+      <button className="mt-5 relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-pink-500 to-orange-400 group-hover:from-pink-500 group-hover:to-orange-400 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800">
+        <span className="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0 flex justify-center items-center gap-1">
+          <LuMapPin  />
+          Ver Ubicación
+        </span>
+      </button>
     </section>
   );
 }

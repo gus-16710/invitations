@@ -3,6 +3,9 @@
 import { Flowbite, FlowbiteCarouselTheme, Carousel } from "flowbite-react";
 import Header from "./components/Header";
 import Presentation from "./components/Presentation";
+import Ceremony from "./components/Ceremony";
+import Reception from "./components/Reception";
+import GodParents from "./components/GodParents";
 
 const customTheme: FlowbiteCarouselTheme = {
   root: {
@@ -48,7 +51,15 @@ export default function Christening() {
           <div className="max-w-3xl">
             <Presentation />
           </div>
-          <div className="max-w-3xl">Three</div>
+          <div className="max-w-3xl">
+            <Ceremony />
+          </div>
+          <div className="max-w-3xl">
+            <Reception />
+          </div>
+          <div className="max-w-3xl">
+            <GodParents />
+          </div>
         </Carousel>
       </Flowbite>
     </main>

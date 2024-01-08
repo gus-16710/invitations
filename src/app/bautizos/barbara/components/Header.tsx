@@ -4,7 +4,7 @@ import { denk, glass, luxurious, mea, playFair } from "./Fonts";
 export default function Header() {
   return (
     <section className="flex flex-col justify-center items-center">   
-      <Image width={200} alt="Floral Cross" src="/img/bautizos/barbara/floral-cross.png"/>
+      <Image width={200} alt="Floral Cross" src="/img/bautizos/barbara/floral-cross.png" />
       <p className={`${glass.className} text-xl text-orange-800 mt-5`}>
         ACOMPAÑANOS A SER PARTE DEL
       </p>
