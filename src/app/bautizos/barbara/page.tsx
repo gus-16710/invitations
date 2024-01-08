@@ -35,7 +35,10 @@ const customTheme: FlowbiteCarouselTheme = {
 
 export default function Christening() {
   return (
-    <main className="h-screen bg-[url('/img/bautizos/barbara/background-flowers.jpg')] bg-center bg-cover">
+    <main
+      className="bg-[url('/img/bautizos/barbara/background-flowers.jpg')] bg-center bg-cover"
+      style={{ height: "100svh" }}
+    >
       <Flowbite>
         <Carousel theme={customTheme} slideInterval={5000} slide={false}>
           <div className="flex h-full items-center justify-center text-gray-800 flex-col px-5 text-center">

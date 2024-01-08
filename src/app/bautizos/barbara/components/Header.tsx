@@ -1,9 +1,10 @@
-import { denk, glass, luxurious, mea } from "./Fonts";
+import { Image } from "@nextui-org/react";
+import { denk, glass, luxurious, mea, playFair } from "./Fonts";
 
 export default function Header() {
   return (
-    <section className="flex h-screen flex-col justify-center items-center">
-      <svg
+    <section className="flex flex-col justify-center items-center">
+      {/* <svg
         xmlns="http://www.w3.org/2000/svg"
         xmlnsXlink="http://www.w3.org/1999/xlink"
         version="1.1"
@@ -23,7 +24,8 @@ export default function Header() {
           width="69.995"
           height="24.628"
         />
-      </svg>
+      </svg> */}
+      <Image width={200} alt="Floral Cross" src="/img/bautizos/barbara/floral-cross.png"/>
       <p className={`${glass.className} text-xl text-orange-800 mt-5`}>
         ACOMPAÑANOS A SER PARTE DEL
       </p>
@@ -33,11 +35,23 @@ export default function Header() {
       <p className={`${glass.className} text-xl text-orange-800 mt-2`}>
         DE NUESTRA HIJA
       </p>
-      <h1 className={`${mea.className} text-5xl text-orange-800 mt-10`}>
+      <h1 className={`${mea.className} text-6xl text-orange-800 mt-5`}>
         Barbara Robles
       </h1>
 
-      <p className={`${luxurious.className} text-orange-800 mt-14 text-sm`}>
+      <p
+        className={`${playFair.className} z-20 flex items-center mt-5 font-bold text-yellow-400`}
+        style={{ textShadow: "0px 1px 1px rgba(255,255,255, 1)" }}
+      >
+        <span className="border-y-1 border-y-yellow-400 py-2">DOMINGO</span>{" "}
+        <span className="text-4xl px-2 pb-2">30</span>{" "}
+        <span className="border-y-1 border-y-yellow-400 py-2">OCTUBRE</span>
+      </p>
+      <p className={`${playFair.className} z-20 text-2xl text-yellow-400`}>
+        2025
+      </p>
+
+      <p className={`${luxurious.className} text-orange-800 mt-3 text-sm`}>
         Señor, hoy me presentan ante ti para ser bañada con la gracia de tu
         amor, toma mi pequeño corazón en tus benditas manos y jamás te separes
         de mí.
