@@ -10,6 +10,7 @@ import {
 } from "@nextui-org/react";
 import { IoMdTime } from "react-icons/io";
 import { LuMapPin } from "react-icons/lu";
+import { motion } from "framer-motion";
 
 const MapCeremony = () => (
   <iframe
@@ -61,7 +62,12 @@ export default function Ceremony() {
 
   return (
     <>
-      <section className="flex flex-col justify-center items-center">
+      <motion.section
+        className="flex flex-col justify-center items-center"
+        initial={{ scale: 0, opacity: 0 }}
+        whileInView={{ scale: 1, opacity: 1 }}
+        transition={{ duration: 1.5, delay: 0.5 }}
+      >
         <h2 className={`${mea.className} text-5xl text-orange-900`}>
           Ceremonia
         </h2>
@@ -113,7 +119,7 @@ export default function Ceremony() {
             Ver Ubicación
           </span>
         </button>
-      </section>
+      </motion.section>
       <ModalMap isOpen={isOpen} onOpenChange={onOpenChange} />
     </>
   );

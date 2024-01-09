@@ -2,11 +2,11 @@ import type { Metadata } from "next";
 import "./styles.css";
 
 export const metadata: Metadata = {
-  title: "Barbara Robles | Bautizo",
+  title: "⭐ Barbara Robles | Bautizo ⭐",
   description:
     "Tenemos el gusto de invitarte al bautizo de nuestra pequeña hija.",
   openGraph: {
-    title: "Barbara Robles | Bautizo",
+    title: "⭐ Barbara Robles | Bautizo ⭐",
     description:
       "Tenemos el gusto de invitarte al bautizo de nuestra pequeña hija.",
     images: [

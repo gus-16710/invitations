@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { anton, glass, mea } from "./Fonts";
-import { useAnimate } from "framer-motion";
+import { useAnimate, motion } from "framer-motion";
 
 function formatNumber(number: number) {
   return number < 10 ? `0${number}` : number;
@@ -80,7 +80,12 @@ export default function Presentation() {
   }, [days, animateDays]);
 
   return (
-    <section className="flex flex-col justify-center items-center">
+    <motion.section
+      className="flex flex-col justify-center items-center"
+      initial={{ scale: 0, opacity: 0 }}
+      whileInView={{ scale: 1, opacity: 1 }}
+      transition={{ duration: 1.5, delay: 0.5 }}
+    >
       <h2 className={`${mea.className} text-5xl text-orange-900`}>
         Solo Faltan
       </h2>
@@ -130,15 +135,15 @@ export default function Presentation() {
       </div>
 
       <p
-        className={`${glass.className} text-orange-900 mt-10 px-5 text-center text-lg`}
+        className={`${glass.className} text-2xl text-center text-orange-900 px-5 mt-10`}
       >
-        Sus padres agraden tu presencia:
+         Arlett Pérez Saldaña <br />&<br /> Pedro Robles Morales 
       </p>
       <p
-        className={`${glass.className} text-2xl text-center text-orange-900 px-5 mt-3`}
+        className={`${glass.className} text-orange-900 mt-3 px-5 text-center text-lg`}
       >
-        Arlett Pérez Saldaña <br />&<br /> Pedro Robles Morales
+        Sus padres agraden tu presencia 💗
       </p>
-    </section>
+    </motion.section>
   );
 }

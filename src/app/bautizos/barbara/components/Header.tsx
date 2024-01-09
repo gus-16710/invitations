@@ -1,10 +1,20 @@
 import { Image } from "@nextui-org/react";
-import { denk, glass, luxurious, mea, playFair } from "./Fonts";
+import { glass, luxurious, mea, playFair } from "./Fonts";
+import { motion } from "framer-motion";
 
 export default function Header() {
   return (
-    <section className="flex flex-col justify-center items-center">   
-      <Image width={200} alt="Floral Cross" src="/img/bautizos/barbara/floral-cross.png" />
+    <motion.section
+      className="flex flex-col justify-center items-center"
+      initial={{ scale: 0, opacity: 0 }}
+      whileInView={{ scale: 1, opacity: 1 }}
+      transition={{ duration: 1.5, delay: 0.5 }}
+    >
+      <Image
+        width={200}
+        alt="Floral Cross"
+        src="/img/bautizos/barbara/floral-cross.png"
+      />
       <p className={`${glass.className} text-xl text-orange-800 mt-5`}>
         ACOMPAÑANOS A SER PARTE DEL
       </p>
@@ -30,11 +40,13 @@ export default function Header() {
         2025
       </p>
 
-      <p className={`${luxurious.className} text-orange-800 mt-3 text-sm px-5 text-center`}>
+      <p
+        className={`${luxurious.className} text-orange-800 mt-3 text-sm px-5 text-center`}
+      >
         Señor, hoy me presentan ante ti para ser bañada con la gracia de tu
         amor, toma mi pequeño corazón en tus benditas manos y jamás te separes
         de mí.
       </p>
-    </section>
+    </motion.section>
   );
 }

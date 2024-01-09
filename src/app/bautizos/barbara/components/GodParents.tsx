@@ -1,12 +1,15 @@
 import { glass, luxurious, mea } from "./Fonts";
 import { Accordion, AccordionItem, Avatar } from "@nextui-org/react";
+import { motion } from "framer-motion";
 
 export default function GodParents() {
-  const defaultContent =
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
-
   return (
-    <section className="flex flex-col justify-center items-center">
+    <motion.section
+      className="flex flex-col justify-center items-center"
+      initial={{ scale: 0, opacity: 0 }}
+      whileInView={{ scale: 1, opacity: 1 }}
+      transition={{ duration: 1.5, delay: 0.5 }}
+    >
       <h2 className={`${mea.className} text-5xl text-orange-900`}>Padrinos</h2>
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -328,12 +331,14 @@ export default function GodParents() {
             subtitle={"Presiona para expandir"}
             className={`${luxurious.className}`}
           >
-            <p className={`${glass.className} text-center text-xl mt-2 mb-7 text-orange-900`}>
+            <p
+              className={`${glass.className} text-center text-xl mt-2 mb-7 text-orange-900`}
+            >
               Mariela Macias Rincon <br />&<br /> Ignacio López Lozano
             </p>
           </AccordionItem>
         </Accordion>
       </div>
-    </section>
+    </motion.section>
   );
 }

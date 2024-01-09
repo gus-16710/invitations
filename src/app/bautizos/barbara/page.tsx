@@ -41,7 +41,7 @@ const customTheme: FlowbiteCarouselTheme = {
 export default function Christening() {
   return (
     <main
-      className="bg-[url('/img/bautizos/barbara/background-flowers.jpg')] bg-center bg-cover"
+      className="bg-[url('/img/bautizos/barbara/background-flowers-2.jpg')] bg-center bg-cover"
       style={{ height: "100svh" }}
     >
       <Flowbite>

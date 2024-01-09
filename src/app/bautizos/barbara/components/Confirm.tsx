@@ -1,9 +1,15 @@
 import { FaPhoneAlt, FaWhatsapp } from "react-icons/fa";
 import { luxurious, mea } from "./Fonts";
+import { motion } from "framer-motion";
 
 export default function Confirm() {
   return (
-    <section className="flex flex-col justify-center items-center">
+    <motion.section
+      className="flex flex-col justify-center items-center"
+      initial={{ scale: 0, opacity: 0 }}
+      whileInView={{ scale: 1, opacity: 1 }}
+      transition={{ duration: 1.5, delay: 0.5 }}
+    >
       <h2 className={`${mea.className} text-5xl text-orange-900`}>
         Asistencia
       </h2>
@@ -50,6 +56,6 @@ export default function Confirm() {
           </span>
         </button>
       </div>
-    </section>
+    </motion.section>
   );
 }
