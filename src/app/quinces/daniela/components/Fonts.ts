@@ -6,7 +6,9 @@ import {
   Roboto,
   Titillium_Web,
   Oswald,
-  Clicker_Script
+  Clicker_Script,
+  Aref_Ruqaa,
+  Rajdhani
 } from "next/font/google";
 
 export const greatVibes = Great_Vibes({ subsets: ["latin"], weight: "400" });
@@ -24,3 +26,5 @@ export const playFair = Playfair_Display({
 export const notoSans = Titillium_Web({ subsets: ["latin"], weight: "400" });
 export const oswald = Oswald({ subsets: ["latin"], weight: "400" });
 export const clicker = Clicker_Script({ subsets: ["latin"], weight: "400" });
+export const aref = Aref_Ruqaa({ subsets: ["latin"], weight: "400" });
+export const rajdhani = Rajdhani({ subsets: ["latin"], weight: "400" });

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { pinyion, playFair } from "./Fonts";
+import { aref, pinyion } from "./Fonts";
 import {
   animation01,
   animation03,
@@ -87,7 +87,7 @@ export default function Confirm() {
           </motion.div>
 
           <motion.p
-            className={`${playFair.className} text-center mt-10 pb-2 px-5 max-w-md`}
+            className={`${aref.className} text-center mt-10 pb-2 px-5 max-w-md`}
             variants={animation03}
             initial="hidden"
             whileInView="visible"
@@ -96,7 +96,7 @@ export default function Confirm() {
             inolvidable.
           </motion.p>
           <motion.p
-            className={`${playFair.className} text-center p-2`}
+            className={`${aref.className} text-center p-2`}
             variants={animation03}
             initial="hidden"
             whileInView="visible"
@@ -104,7 +104,7 @@ export default function Confirm() {
             Favor de confirmar tu presencia.
           </motion.p>
           <motion.p
-            className={`${playFair.className} text-center p-2`}
+            className={`${aref.className} text-center p-2`}
             variants={animation04}
             initial="hidden"
             whileInView="visible"

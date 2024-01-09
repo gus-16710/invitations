@@ -28,7 +28,7 @@ export default function Header() {
   const text01 = "Isabel&Alan";
 
   return (
-    <section className="h-screen relative flex items-center justify-center flex-col bg-[url('/img/bodas/isabel-alan/gallery-01.jpg')] bg-cover bg-center">
+    <section className="h-screen relative flex items-center justify-center flex-col bg-[url('/img/bodas/isabel-alan/gallery-01.jpg')] bg-cover bg-center sm:pb-24">
       <motion.h1
         className={`${alex.className} text-zinc-100 text-8xl text-center mx-5 custom-shadow flex flex-wrap justify-center`}
         variants={list}

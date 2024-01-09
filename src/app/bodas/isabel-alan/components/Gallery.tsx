@@ -44,7 +44,7 @@ export default function Gallery() {
   const [index, setIndex] = useState(-1);
 
   return (
-    <section className="relative pb-36 ">
+    <section className="h-screen relative">
       <div className="flex justify-center">
       <motion.div
         id="alert-5"

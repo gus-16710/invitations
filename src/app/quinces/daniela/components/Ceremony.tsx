@@ -19,7 +19,9 @@ import {
   animation06,
   animation07,
 } from "./Animations";
-import { pinyion, playFair, roboto } from "./Fonts";
+import { aref, pinyion, playFair, rajdhani } from "./Fonts";
+import { IoMdTime } from "react-icons/io";
+import { LuMapPin } from "react-icons/lu";
 
 const MapCeremony = () => (
   <iframe
@@ -190,16 +192,16 @@ export default function Ceremony() {
               Catedral Metropolitana de la Inmaculada Concepción
             </motion.p>
             <motion.div
-              className={`mt-3 ${playFair.className} p-1 text-center`}
+              className={`mt-3 ${aref.className} p-1 text-center`}
               variants={animation03}
               initial="hidden"
               whileInView="visible"
             >
               <p>DOMINGO 30 DE OCTUBRE</p>
-              <p>18:00 HRS</p>
+              <p className="flex items-center justify-center gap-1"><IoMdTime /> 18:00 HRS</p>
             </motion.div>
             <motion.p
-              className={`${roboto.className} text-center px-1 py-3 text-sm z-20 max-w-md`}
+              className={`${rajdhani.className} text-center px-1 py-3 text-sm z-20 max-w-md`}
               variants={animation04}
               initial="hidden"
               whileInView="visible"
@@ -222,6 +224,7 @@ export default function Ceremony() {
                   onOpen();
                 }}
               >
+                <LuMapPin />
                 VER UBICACIÓN
               </Button>
             </motion.div>

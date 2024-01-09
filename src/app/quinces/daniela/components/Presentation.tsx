@@ -8,7 +8,7 @@ import {
   animation06,
   animation07,
 } from "./Animations";
-import { clicker, pinyion, playFair } from "./Fonts";
+import { aref, clicker, pinyion } from "./Fonts";
 
 function formatNumber(number: number) {
   return number < 10 ? `0${number}` : number;
@@ -214,14 +214,14 @@ export default function Presentation() {
           </motion.div>
 
           <motion.p
-            className={`${playFair.className} text-base px-5 text-center max-w-md`}
+            className={`${aref.className} text-base px-5 text-center max-w-md`}
             variants={animation04}
             initial="hidden"
             whileInView="visible"
           >
-            Hace 15 años Dios me regaló la vida y a una gran familia, y te
-            quiero invitar a celebrar mi gran fecha soñada junto a mi familia
-            querida y mis amigos.
+            Son mis quince años una ilusión sin igual. Fábrica de lindos
+            momentos que nunca voy a olvidar, por eso los quiero celebrar con
+            mis familiares y amigos en esta noche tan especial.
           </motion.p>
 
           <motion.div

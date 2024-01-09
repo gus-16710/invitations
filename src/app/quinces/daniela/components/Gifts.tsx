@@ -6,7 +6,7 @@ import {
   animation06,
   animation07,
 } from "./Animations";
-import { notoSans, pinyion, playFair } from "./Fonts";
+import { aref, notoSans, pinyion, playFair } from "./Fonts";
 import { motion, useScroll, useTransform } from "framer-motion";
 import {
   Button,
@@ -246,7 +246,7 @@ export default function Gifts() {
             </motion.div>
 
             <motion.p
-              className={`${playFair.className} text-base px-5 my-10 text-center max-w-md`}
+              className={`${aref.className} text-base px-5 my-10 text-center max-w-md`}
               variants={animation04}
               initial="hidden"
               whileInView="visible"
