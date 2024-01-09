@@ -5,184 +5,181 @@ import { header } from "./Animations";
 
 export default function Header() {
   return (
-    <section className="relative">
-      <div className="max-w-3xl m-auto h-screen relative flex justify-center items-center flex-col">
-        <motion.p
-          className={`${dancing.className} text-center mx-10 text-xl text-orange-800`}
-          variants={header.animationText01}
-          initial="hidden"
-          whileInView="visible"
-        >
-          Tenemos el gusto de invitarte al bautizo de nuestra pequeña hija
-        </motion.p>
+    <section className="relative h-screen flex justify-center items-center flex-col">
+      <motion.p
+        className={`${dancing.className} text-center mx-10 text-xl text-orange-800`}
+        variants={header.animationText01}
+        initial="hidden"
+        whileInView="visible"
+      >
+        Tenemos el gusto de invitarte al bautizo de nuestra pequeña hija
+      </motion.p>
+      <motion.div
+        style={{
+          WebkitMaskImage: "url('/img/bautizos/annette/mask.png')",
+          WebkitMaskRepeat: "no-repeat",
+          WebkitMaskSize: "contain",
+          WebkitMaskPosition: "center",
+        }}
+        className="w-56 h-56 my-3"
+        variants={header.animationPhoto}
+        initial="hidden"
+        whileInView="visible"
+      >
+        <Image
+          alt="header"
+          width={300}
+          height={300}
+          src={"/img/bautizos/annette/gallery-05.jpg"}
+          priority
+        />
+      </motion.div>
+      <motion.h1
+        className={`${rivage.className} text-center mx-5 text-4xl  text-orange-900`}
+        variants={header.animationText02}
+        initial="hidden"
+        whileInView="visible"
+      >
+        Annette Rivera Palacios
+      </motion.h1>
+
+      <div className={`flex mt-5 ${habibi.className} text-zinc-800`}>
         <motion.div
-          style={{
-            WebkitMaskImage: "url('/img/bautizos/annette/mask.png')",
-            WebkitMaskRepeat: "no-repeat",
-            WebkitMaskSize: "contain",
-            WebkitMaskPosition: "center",
-          }}
-          className="w-56 h-56 my-3"
-          variants={header.animationPhoto}
+          className="w-24 flex flex-col items-center border-r-1 border-zinc-400"
+          variants={header.animationDate01}
           initial="hidden"
           whileInView="visible"
         >
-          <Image
-            alt="header"
-            width={300}
-            height={300}
-            src={"/img/bautizos/annette/gallery-05.jpg"}
-            priority
-          />
+          <span>07</span>
+          <span>Julio</span>
         </motion.div>
-        <motion.h1
-          className={`${rivage.className} text-center mx-5 text-4xl  text-orange-900`}
-          variants={header.animationText02}
-          initial="hidden"
-          whileInView="visible"
-        >
-          Annette Rivera Palacios
-        </motion.h1>
-
-        <div
-          className={`flex mt-5 ${habibi.className} text-zinc-800`}
-        >
-          <motion.div
-            className="w-24 flex flex-col items-center border-r-1 border-zinc-400"
-            variants={header.animationDate01}
-            initial="hidden"
-            whileInView="visible"
-          >
-            <span>07</span>
-            <span>Julio</span>
-          </motion.div>
-          <motion.div
-            className="w-36 flex flex-col items-center text-center mx-2"
-            variants={header.animationDate03}
-            initial="hidden"
-            whileInView="visible"
-          >
-            Parroquia de San Luis Rey
-          </motion.div>
-          <motion.div
-            className="w-24 flex flex-col items-center border-l-1 border-zinc-400"
-            variants={header.animationDate02}
-            initial="hidden"
-            whileInView="visible"
-          >
-            <span>01:00</span>
-            <span>PM</span>
-          </motion.div>
-        </div>
-
-        <motion.p
-          className={`${whisper.className} text-center mx-10 mt-5 text-2xl text-orange-800`}
-          variants={header.animationText03}
-          initial="hidden"
-          whileInView="visible"
-        >
-          Sus padres agradecen tu asistencia
-        </motion.p>
-
-        <motion.p
-          className={`${playFair.className} mb-3 text-orange-800`}
-          variants={header.animationText04}
-          initial="hidden"
-          whileInView="visible"
-        >
-          Luis Hernándex & Karla Montero
-        </motion.p>
-
         <motion.div
-          variants={header.animationIcon}
+          className="w-36 flex flex-col items-center text-center mx-2"
+          variants={header.animationDate03}
           initial="hidden"
           whileInView="visible"
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            xmlnsXlink="http://www.w3.org/1999/xlink"
-            height="60px"
-            width="60px"
-            version="1.1"
-            id="Layer_1"
-            viewBox="0 0 512 512"
-            xmlSpace="preserve"
-          >
-            <polygon
+          Parroquia de San Luis Rey
+        </motion.div>
+        <motion.div
+          className="w-24 flex flex-col items-center border-l-1 border-zinc-400"
+          variants={header.animationDate02}
+          initial="hidden"
+          whileInView="visible"
+        >
+          <span>01:00</span>
+          <span>PM</span>
+        </motion.div>
+      </div>
+
+      <motion.p
+        className={`${whisper.className} text-center mx-10 mt-5 text-2xl text-orange-800`}
+        variants={header.animationText03}
+        initial="hidden"
+        whileInView="visible"
+      >
+        Sus padres agradecen tu asistencia
+      </motion.p>
+
+      <motion.p
+        className={`${playFair.className} mb-3 text-orange-800`}
+        variants={header.animationText04}
+        initial="hidden"
+        whileInView="visible"
+      >
+        Luis Hernándex & Karla Montero
+      </motion.p>
+
+      <motion.div
+        variants={header.animationIcon}
+        initial="hidden"
+        whileInView="visible"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          xmlnsXlink="http://www.w3.org/1999/xlink"
+          height="60px"
+          width="60px"
+          version="1.1"
+          id="Layer_1"
+          viewBox="0 0 512 512"
+          xmlSpace="preserve"
+        >
+          <polygon
+            style={{ fill: "#FCC447" }}
+            points="358.081,242.447 358.081,307.509 288.524,307.509 288.524,484.312 223.473,484.312   223.473,307.509 153.916,307.509 153.916,242.447 223.473,242.447 223.473,174.91 288.524,174.91 288.524,242.447 "
+          />
+          <polygon
+            style={{ fill: "#FFCF83" }}
+            points="358.081,242.447 358.081,307.509 288.524,307.509 288.524,484.312 223.473,484.312   288.524,174.91 288.524,242.447 "
+          />
+          <path
+            style={{ fill: "#F2B844" }}
+            d="M297.234,233.735v-67.536h-82.472v67.536h-69.557v82.484h69.557v176.802h82.472V316.219h69.557  v-82.484H297.234z M349.37,298.798h-69.557V475.6h-47.63V298.798h-69.557v-47.641h69.557V183.62h47.63v67.536h69.557V298.798z"
+          />
+          <g>
+            <path
               style={{ fill: "#FCC447" }}
-              points="358.081,242.447 358.081,307.509 288.524,307.509 288.524,484.312 223.473,484.312   223.473,307.509 153.916,307.509 153.916,242.447 223.473,242.447 223.473,174.91 288.524,174.91 288.524,242.447 "
+              d="M257.224,122.599c-3.848,0-6.969-3.12-6.969-6.968V25.947c0-3.849,3.121-6.968,6.969-6.968   s6.969,3.12,6.969,6.968v89.683C264.192,119.478,261.071,122.599,257.224,122.599z"
             />
-            <polygon
-              style={{ fill: "#FFCF83" }}
-              points="358.081,242.447 358.081,307.509 288.524,307.509 288.524,484.312 223.473,484.312   288.524,174.91 288.524,242.447 "
+            <path
+              style={{ fill: "#FCC447" }}
+              d="M505.031,283.171h-89.683c-3.848,0-6.969-3.12-6.969-6.969c0-3.849,3.121-6.968,6.969-6.968h89.683   c3.848,0,6.969,3.12,6.969,6.968C512,280.051,508.879,283.171,505.031,283.171z"
+            />
+            <path
+              style={{ fill: "#FCC447" }}
+              d="M369.542,170.136c-1.783,0-3.567-0.681-4.927-2.041c-2.722-2.721-2.722-7.133,0-9.855l63.416-63.416   c2.72-2.721,7.135-2.721,9.853,0c2.722,2.721,2.722,7.133,0,9.855l-63.416,63.416C373.108,169.455,371.325,170.136,369.542,170.136   z"
+            />
+            <path
+              style={{ fill: "#FCC447" }}
+              d="M144.189,168.405c-1.784,0-3.567-0.681-4.928-2.041l-63.415-63.416   c-2.721-2.721-2.721-7.133,0-9.855c2.721-2.721,7.133-2.721,9.855,0l63.416,63.416c2.721,2.721,2.721,7.133,0,9.855   C147.755,167.726,145.973,168.405,144.189,168.405z"
+            />
+            <path
+              style={{ fill: "#FCC447" }}
+              d="M96.652,280.724H6.968c-3.848,0-6.968-3.12-6.968-6.969c0-3.849,3.121-6.969,6.968-6.969h89.683   c3.848,0,6.968,3.12,6.968,6.969C103.62,277.604,100.5,280.724,96.652,280.724z"
+            />
+            <path
+              style={{ fill: "#FCC447" }}
+              d="M79.044,457.174c-1.784,0-3.567-0.681-4.928-2.041c-2.721-2.721-2.721-7.133,0-9.855l63.416-63.416   c2.721-2.721,7.133-2.721,9.855,0s2.721,7.133,0,9.855L83.97,455.134C82.61,456.494,80.826,457.174,79.044,457.174z"
+            />
+            <path
+              style={{ fill: "#FCC447" }}
+              d="M431.227,458.904c-1.784,0-3.567-0.681-4.927-2.041l-63.416-63.416   c-2.722-2.721-2.722-7.133,0-9.855c2.721-2.722,7.136-2.721,9.853,0l63.416,63.416c2.722,2.721,2.722,7.133,0,9.855   C434.794,458.223,433.01,458.904,431.227,458.904z"
+            />
+          </g>
+          <g>
+            <path
+              style={{ fill: "#F2B844" }}
+              d="M196.157,134.268c-2.734,0-5.329-1.619-6.44-4.303l-21.168-51.081   c-1.474-3.555,0.215-7.632,3.77-9.105c3.556-1.473,7.632,0.215,9.105,3.77l21.168,51.081c1.474,3.555-0.215,7.632-3.77,9.105   C197.949,134.096,197.046,134.268,196.157,134.268z"
             />
             <path
               style={{ fill: "#F2B844" }}
-              d="M297.234,233.735v-67.536h-82.472v67.536h-69.557v82.484h69.557v176.802h82.472V316.219h69.557  v-82.484H297.234z M349.37,298.798h-69.557V475.6h-47.63V298.798h-69.557v-47.641h69.557V183.62h47.63v67.536h69.557V298.798z"
+              d="M403.692,222.101c-2.734,0-5.329-1.62-6.44-4.304c-1.474-3.556,0.216-7.632,3.771-9.104   l51.08-21.155c3.555-1.472,7.63,0.215,9.104,3.772c1.474,3.556-0.216,7.632-3.771,9.104l-51.08,21.155   C405.484,221.929,404.582,222.101,403.692,222.101z"
             />
-            <g>
-              <path
-                style={{ fill: "#FCC447" }}
-                d="M257.224,122.599c-3.848,0-6.969-3.12-6.969-6.968V25.947c0-3.849,3.121-6.968,6.969-6.968   s6.969,3.12,6.969,6.968v89.683C264.192,119.478,261.071,122.599,257.224,122.599z"
-              />
-              <path
-                style={{ fill: "#FCC447" }}
-                d="M505.031,283.171h-89.683c-3.848,0-6.969-3.12-6.969-6.969c0-3.849,3.121-6.968,6.969-6.968h89.683   c3.848,0,6.969,3.12,6.969,6.968C512,280.051,508.879,283.171,505.031,283.171z"
-              />
-              <path
-                style={{ fill: "#FCC447" }}
-                d="M369.542,170.136c-1.783,0-3.567-0.681-4.927-2.041c-2.722-2.721-2.722-7.133,0-9.855l63.416-63.416   c2.72-2.721,7.135-2.721,9.853,0c2.722,2.721,2.722,7.133,0,9.855l-63.416,63.416C373.108,169.455,371.325,170.136,369.542,170.136   z"
-              />
-              <path
-                style={{ fill: "#FCC447" }}
-                d="M144.189,168.405c-1.784,0-3.567-0.681-4.928-2.041l-63.415-63.416   c-2.721-2.721-2.721-7.133,0-9.855c2.721-2.721,7.133-2.721,9.855,0l63.416,63.416c2.721,2.721,2.721,7.133,0,9.855   C147.755,167.726,145.973,168.405,144.189,168.405z"
-              />
-              <path
-                style={{ fill: "#FCC447" }}
-                d="M96.652,280.724H6.968c-3.848,0-6.968-3.12-6.968-6.969c0-3.849,3.121-6.969,6.968-6.969h89.683   c3.848,0,6.968,3.12,6.968,6.969C103.62,277.604,100.5,280.724,96.652,280.724z"
-              />
-              <path
-                style={{ fill: "#FCC447" }}
-                d="M79.044,457.174c-1.784,0-3.567-0.681-4.928-2.041c-2.721-2.721-2.721-7.133,0-9.855l63.416-63.416   c2.721-2.721,7.133-2.721,9.855,0s2.721,7.133,0,9.855L83.97,455.134C82.61,456.494,80.826,457.174,79.044,457.174z"
-              />
-              <path
-                style={{ fill: "#FCC447" }}
-                d="M431.227,458.904c-1.784,0-3.567-0.681-4.927-2.041l-63.416-63.416   c-2.722-2.721-2.722-7.133,0-9.855c2.721-2.722,7.136-2.721,9.853,0l63.416,63.416c2.722,2.721,2.722,7.133,0,9.855   C434.794,458.223,433.01,458.904,431.227,458.904z"
-              />
-            </g>
-            <g>
-              <path
-                style={{ fill: "#F2B844" }}
-                d="M196.157,134.268c-2.734,0-5.329-1.619-6.44-4.303l-21.168-51.081   c-1.474-3.555,0.215-7.632,3.77-9.105c3.556-1.473,7.632,0.215,9.105,3.77l21.168,51.081c1.474,3.555-0.215,7.632-3.77,9.105   C197.949,134.096,197.046,134.268,196.157,134.268z"
-              />
-              <path
-                style={{ fill: "#F2B844" }}
-                d="M403.692,222.101c-2.734,0-5.329-1.62-6.44-4.304c-1.474-3.556,0.216-7.632,3.771-9.104   l51.08-21.155c3.555-1.472,7.63,0.215,9.104,3.772c1.474,3.556-0.216,7.632-3.771,9.104l-51.08,21.155   C405.484,221.929,404.582,222.101,403.692,222.101z"
-              />
-              <path
-                style={{ fill: "#F2B844" }}
-                d="M318.106,135.203c-0.89,0-1.793-0.171-2.665-0.532c-3.555-1.473-5.244-5.549-3.77-9.106   l21.168-51.093c1.473-3.556,5.553-5.243,9.105-3.771c3.555,1.473,5.244,5.549,3.77,9.106L324.546,130.9   C323.434,133.583,320.839,135.203,318.106,135.203z"
-              />
-              <path
-                style={{ fill: "#F2B844" }}
-                d="M109.242,219.838c-0.888,0-1.791-0.171-2.663-0.532l-51.081-21.156   c-3.556-1.473-5.245-5.549-3.772-9.104c1.473-3.555,5.549-5.243,9.104-3.772l51.081,21.156c3.556,1.473,5.245,5.549,3.772,9.104   C114.571,218.217,111.977,219.838,109.242,219.838z"
-              />
-              <path
-                style={{ fill: "#F2B844" }}
-                d="M57.244,362.958c-2.734,0-5.329-1.62-6.44-4.303c-1.474-3.556,0.215-7.632,3.771-9.105   l51.069-21.155c3.556-1.473,7.632,0.215,9.104,3.771c1.474,3.556-0.215,7.632-3.771,9.105l-51.069,21.155   C59.036,362.787,58.132,362.958,57.244,362.958z"
-              />
-              <path
-                style={{ fill: "#F2B844" }}
-                d="M453.834,365.221c-0.89,0-1.793-0.171-2.665-0.532l-51.08-21.168   c-3.556-1.474-5.244-5.55-3.77-9.105c1.474-3.556,5.552-5.244,9.105-3.77l51.08,21.168c3.556,1.474,5.244,5.55,3.77,9.105   C459.162,363.602,456.567,365.221,453.834,365.221z"
-              />
-            </g>
-            <polygon
-              style={{ fill: "#FFCF83" }}
-              points="279.813,216.36 279.813,183.62 232.183,183.62 232.183,251.156 162.626,251.156   162.626,298.798 232.183,298.798 232.183,442.871 221.638,493.021 214.762,493.021 214.762,316.219 145.205,316.219   145.205,233.735 214.762,233.735 214.762,166.199 290.359,166.199 "
+            <path
+              style={{ fill: "#F2B844" }}
+              d="M318.106,135.203c-0.89,0-1.793-0.171-2.665-0.532c-3.555-1.473-5.244-5.549-3.77-9.106   l21.168-51.093c1.473-3.556,5.553-5.243,9.105-3.771c3.555,1.473,5.244,5.549,3.77,9.106L324.546,130.9   C323.434,133.583,320.839,135.203,318.106,135.203z"
             />
-          </svg>
-        </motion.div>
-      </div>
+            <path
+              style={{ fill: "#F2B844" }}
+              d="M109.242,219.838c-0.888,0-1.791-0.171-2.663-0.532l-51.081-21.156   c-3.556-1.473-5.245-5.549-3.772-9.104c1.473-3.555,5.549-5.243,9.104-3.772l51.081,21.156c3.556,1.473,5.245,5.549,3.772,9.104   C114.571,218.217,111.977,219.838,109.242,219.838z"
+            />
+            <path
+              style={{ fill: "#F2B844" }}
+              d="M57.244,362.958c-2.734,0-5.329-1.62-6.44-4.303c-1.474-3.556,0.215-7.632,3.771-9.105   l51.069-21.155c3.556-1.473,7.632,0.215,9.104,3.771c1.474,3.556-0.215,7.632-3.771,9.105l-51.069,21.155   C59.036,362.787,58.132,362.958,57.244,362.958z"
+            />
+            <path
+              style={{ fill: "#F2B844" }}
+              d="M453.834,365.221c-0.89,0-1.793-0.171-2.665-0.532l-51.08-21.168   c-3.556-1.474-5.244-5.55-3.77-9.105c1.474-3.556,5.552-5.244,9.105-3.77l51.08,21.168c3.556,1.474,5.244,5.55,3.77,9.105   C459.162,363.602,456.567,365.221,453.834,365.221z"
+            />
+          </g>
+          <polygon
+            style={{ fill: "#FFCF83" }}
+            points="279.813,216.36 279.813,183.62 232.183,183.62 232.183,251.156 162.626,251.156   162.626,298.798 232.183,298.798 232.183,442.871 221.638,493.021 214.762,493.021 214.762,316.219 145.205,316.219   145.205,233.735 214.762,233.735 214.762,166.199 290.359,166.199 "
+          />
+        </svg>
+      </motion.div>
+
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 283.5 27.8"

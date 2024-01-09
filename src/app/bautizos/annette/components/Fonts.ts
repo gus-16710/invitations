@@ -1,11 +1,9 @@
 import {
   Playfair_Display,
   Merriweather,
-  Lora,
   Beau_Rivage,
   Whisper,
   Dancing_Script,
-  Lobster_Two,
   Anton,
   Roboto,
   Habibi,
@@ -18,11 +16,6 @@ export const roboto = Roboto({ subsets: ["latin"], weight: ["400"] });
 export const rivage = Beau_Rivage({
   subsets: ["latin"],
   weight: ["400"],
-});
-
-export const lora = Lora({
-  subsets: ["latin"],
-  weight: ["400", "500", "600"],
 });
 
 export const merriweather = Merriweather({
@@ -41,11 +34,6 @@ export const whisper = Whisper({
 });
 
 export const dancing = Dancing_Script({
-  subsets: ["latin"],
-  weight: ["400"],
-});
-
-export const lobster = Lobster_Two({
   subsets: ["latin"],
   weight: ["400"],
 });

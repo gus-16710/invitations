@@ -243,7 +243,7 @@ export const gallery = {
     visible: {
       opacity: 1,
       scale: 1,
-      transition: { duration: 1, type: "spring", stiffness: 70, delay: 0.8 },
+      transition: { duration: 1, delay: 0.8 },
     },
   },
 };

@@ -64,7 +64,7 @@ export default function Christening() {
   }, []);
 
   return (
-    <main className="bg-[url('/img/bautizos/annette/background-floral.jpg')] bg-bottom bg-cover bg-fixed">
+    <main className="max-w-3xl m-auto bg-[url('/img/bautizos/annette/background-floral.jpg')] bg-bottom bg-cover bg-fixed">
       <Header />
       <Presentation />
       <Ceremony />
