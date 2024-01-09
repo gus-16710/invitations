@@ -20,7 +20,7 @@ export default function Confirm() {
         Confirmar Asistencia
       </motion.h1>
       <motion.p
-        className={`${notoSans.className} text-center mt-10 pb-2 px-5`}
+        className={`${notoSans.className} text-center mt-10 pb-2 px-5 max-w-md`}
         initial={{ y: 100, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 1 }}

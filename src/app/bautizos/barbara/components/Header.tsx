@@ -41,7 +41,7 @@ export default function Header() {
       </p>
 
       <p
-        className={`${luxurious.className} text-orange-800 mt-3 text-sm px-5 text-center`}
+        className={`${luxurious.className} text-orange-800 mt-3 text-sm px-5 text-center max-w-md`}
       >
         Señor, hoy me presentan ante ti para ser bañada con la gracia de tu
         amor, toma mi pequeño corazón en tus benditas manos y jamás te separes

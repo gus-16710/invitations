@@ -11,6 +11,7 @@ import { mate, roboto } from "./Fonts";
 import { useRef } from "react";
 import { useScroll, motion } from "framer-motion";
 import { LuMapPin } from "react-icons/lu";
+import { IoMdTime } from "react-icons/io";
 
 const MapSalon = () => (
   <iframe
@@ -69,9 +70,9 @@ export default function Reception() {
   return (
     <>
       <motion.section
-        className="relative flex flex-col items-center justify-center h-screen"        
+        className="relative flex flex-col items-center justify-center h-screen"
         ref={ref}
-        style={{ scale: scrollYProgress, opacity: scrollYProgress}}
+        style={{ scale: scrollYProgress, opacity: scrollYProgress }}
       >
         <Divider orientation="vertical" className="h-14 absolute -top-0" />
         <svg
@@ -109,8 +110,8 @@ export default function Reception() {
         >
           Carlos A. Carrillo 23, Aguacatal, 91133 Xalapa-Enriquez, Ver.
         </p>
-        <span className="mt-3 bg-indigo-100 text-indigo-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-indigo-900 dark:text-indigo-300">
-          15:00 Hrs
+        <span className="mt-3 bg-indigo-100 text-indigo-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-indigo-900 dark:text-indigo-300 flex items-center justify-center gap-1">
+          <IoMdTime /> 15:00 Hrs
         </span>
         <button
           type="button"
@@ -119,7 +120,7 @@ export default function Reception() {
             onOpen();
           }}
         >
-          <LuMapPin className="mr-1"/>
+          <LuMapPin className="mr-1" />
           Ver Ubicación
         </button>
       </motion.section>

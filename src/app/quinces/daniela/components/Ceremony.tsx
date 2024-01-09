@@ -181,7 +181,7 @@ export default function Ceremony() {
             </motion.div>
 
             <motion.p
-              className={`${playFair.className} mx-10 mt-1 text-center text-base z-20 text-zinc-900`}
+              className={`${playFair.className} mx-10 mt-1 text-center text-base z-20 text-zinc-900 max-w-md`}
               style={{ textShadow: "0px 1px 1px rgba(255,255,255, 1)" }}
               variants={animation03}
               initial="hidden"
@@ -199,7 +199,7 @@ export default function Ceremony() {
               <p>18:00 HRS</p>
             </motion.div>
             <motion.p
-              className={`${roboto.className} text-center px-1 py-3 text-sm z-20`}
+              className={`${roboto.className} text-center px-1 py-3 text-sm z-20 max-w-md`}
               variants={animation04}
               initial="hidden"
               whileInView="visible"

@@ -187,7 +187,7 @@ export default function Presentation() {
           </motion.div>
 
           <motion.div
-            className={`${clicker.className} my-10 flex justify-evenly w-full text-3xl`}
+            className={`${clicker.className} my-10 flex justify-evenly w-full text-3xl max-w-md`}
             variants={animation03}
             initial="hidden"
             whileInView="visible"
@@ -214,7 +214,7 @@ export default function Presentation() {
           </motion.div>
 
           <motion.p
-            className={`${playFair.className} text-base px-5 text-center`}
+            className={`${playFair.className} text-base px-5 text-center max-w-md`}
             variants={animation04}
             initial="hidden"
             whileInView="visible"

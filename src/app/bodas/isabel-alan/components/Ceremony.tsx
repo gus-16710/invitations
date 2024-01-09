@@ -11,6 +11,7 @@ import { mate, roboto } from "./Fonts";
 import { useRef } from "react";
 import { useScroll, motion } from "framer-motion";
 import { LuMapPin } from "react-icons/lu";
+import { IoMdTime } from "react-icons/io";
 
 const MapCeremony = () => (
   <iframe
@@ -227,13 +228,13 @@ export default function Ceremony() {
           "Templo María De Jesus Palomar"
         </p>
         <p
-          className={`${roboto.className} text-gray-800 text-sm mt-2 mx-10 text-center`}
+          className={`${roboto.className} text-gray-800 text-sm mt-2 mx-10 text-center max-w-md`}
         >
           Juan de La Luz Enríquez s/n, Zona Centro, Centro, 91000
           Xalapa-Enríquez, Ver.
         </p>
-        <span className="mt-3 bg-indigo-100 text-indigo-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-indigo-900 dark:text-indigo-300">
-          13:00 Hrs
+        <span className="mt-3 bg-indigo-100 text-indigo-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-indigo-900 dark:text-indigo-300 flex items-center justify-center gap-1">
+          <IoMdTime/> 13:00 Hrs
         </span>
         <button
           type="button"

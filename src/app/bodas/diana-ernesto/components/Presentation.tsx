@@ -36,7 +36,7 @@ export default function Presentation() {
           <label className={`${playFair.className}`}>2025</label>
         </motion.div>
         <motion.p
-          className={`${notoSans.className} text-center p-5`}
+          className={`${notoSans.className} text-center p-5 max-w-md`}
           initial={{ y: 100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 1, ease: "easeInOut", delay: 1.2 }}

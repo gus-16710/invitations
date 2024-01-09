@@ -246,7 +246,7 @@ export default function Gifts() {
             </motion.div>
 
             <motion.p
-              className={`${playFair.className} text-base px-5 my-10 text-center`}
+              className={`${playFair.className} text-base px-5 my-10 text-center max-w-md`}
               variants={animation04}
               initial="hidden"
               whileInView="visible"

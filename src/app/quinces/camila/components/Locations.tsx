@@ -11,6 +11,8 @@ import { dancing, great, quickSand } from "./Fonts";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { locations } from "./Animations";
+import { IoMdTime } from "react-icons/io";
+import { LuMapPin } from "react-icons/lu";
 
 const MapSalon = () => (
   <iframe
@@ -214,7 +216,7 @@ export default function Locations() {
           Catedral de la Inmaculada Concepción
         </motion.p>
         <motion.p
-          className={`${quickSand.className} mx-10 text-center text-zinc-800`}
+          className={`${quickSand.className} mx-10 text-center text-zinc-800 max-w-md`}
           variants={locations.text03}
           initial="hidden"
           whileInView="visible"
@@ -223,16 +225,16 @@ export default function Locations() {
           Xalapa-Enríquez, Ver.
         </motion.p>
         <motion.span
-          className="bg-pink-900 text-pink-300 text-xs font-medium me-2 px-2.5 py-0.5 rounded mt-3"
+          className="bg-pink-900 text-pink-300 text-xs font-medium me-2 px-2.5 py-0.5 rounded mt-3 flex items-center justify-center gap-1"
           variants={locations.time01}
           initial="hidden"
           whileInView="visible"
         >
-          12:00 Hrs
+          <IoMdTime /> 12:00 Hrs
         </motion.span>
         <motion.button
           type="button"
-          className="mt-5 text-white bg-gradient-to-r from-pink-400 via-pink-500 to-pink-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 z-20"
+          className="mt-5 text-white bg-gradient-to-r from-pink-400 via-pink-500 to-pink-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 z-20 flex items-center justify-center gap-1"
           onClick={() => {
             setMap("ceremony");
             onOpen();
@@ -241,6 +243,7 @@ export default function Locations() {
           initial="hidden"
           whileInView="visible"
         >
+          <LuMapPin />
           Ubicación
         </motion.button>
 
@@ -297,7 +300,7 @@ export default function Locations() {
           Salones Aurora
         </motion.p>
         <motion.p
-          className={`${quickSand.className} mx-10 text-center text-zinc-800`}
+          className={`${quickSand.className} mx-10 text-center text-zinc-800 max-w-md`}
           variants={locations.text03}
           initial="hidden"
           whileInView="visible"
@@ -305,16 +308,16 @@ export default function Locations() {
           Carlos A. Carrillo 23, Aguacatal, 91133 Xalapa-Enríquez, Ver.
         </motion.p>
         <motion.span
-          className="bg-pink-900 text-pink-300 text-xs font-medium me-2 px-2.5 py-0.5 rounded mt-3"
+          className="bg-pink-900 text-pink-300 text-xs font-medium me-2 px-2.5 py-0.5 rounded mt-3 flex items-center justify-center gap-1"
           variants={locations.time01}
           initial="hidden"
           whileInView="visible"
         >
-          15:00 Hrs
+          <IoMdTime /> 15:00 Hrs
         </motion.span>
         <motion.button
           type="button"
-          className="mt-5 text-white bg-gradient-to-r from-pink-400 via-pink-500 to-pink-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 z-20"
+          className="mt-5 text-white bg-gradient-to-r from-pink-400 via-pink-500 to-pink-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 z-20 flex items-center justify-center gap-1"
           onClick={() => {
             setMap("reception");
             onOpen();
@@ -323,6 +326,7 @@ export default function Locations() {
           initial="hidden"
           whileInView="visible"
         >
+          <LuMapPin />
           Ubicación
         </motion.button>
       </section>

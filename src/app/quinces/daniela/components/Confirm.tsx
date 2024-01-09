@@ -19,7 +19,7 @@ export default function Confirm() {
             initial="hidden"
             whileInView="visible"
           >
-            Confirmar Asistencia
+            Asistencia
           </motion.h1>
 
           <motion.div
@@ -87,7 +87,7 @@ export default function Confirm() {
           </motion.div>
 
           <motion.p
-            className={`${playFair.className} text-center mt-10 pb-2 px-5`}
+            className={`${playFair.className} text-center mt-10 pb-2 px-5 max-w-md`}
             variants={animation03}
             initial="hidden"
             whileInView="visible"

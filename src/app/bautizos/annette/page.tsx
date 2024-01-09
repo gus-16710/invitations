@@ -63,30 +63,39 @@ export default function Christening() {
     fire();
   }, []);
 
-  return (
-    <main className="max-w-3xl m-auto bg-[url('/img/bautizos/annette/background-floral.jpg')] bg-bottom bg-cover bg-fixed">
-      <Header />
-      <Presentation />
-      <Ceremony />
-      <Reception />
-      <GodParents />
-      <Gallery />
-      <Confirm />
-      <FloatinButton />
-      <AudioControl />
-      <Confetti fire={fire} />
 
-      <ReactCanvasConfetti
-        refConfetti={getInstance}
-        style={{
-          position: "fixed",
-          pointerEvents: "none",
-          width: "100%",
-          height: "100%",
-          top: 0,
-          left: 0,
-        }}
-      />
+  return (
+    <main
+      style={{
+        backgroundColor: "#f3f3f3",
+        backgroundImage:
+          "repeating-radial-gradient( circle at 0 0, transparent 0, #f3f3f3 40px ), repeating-linear-gradient( #fafafa55, #fafafa )",        
+      }}
+    >
+      <div className="max-w-3xl m-auto bg-[url('/img/bautizos/annette/background-floral.jpg')] bg-bottom bg-cover bg-fixed shadow-large">
+        <Header />
+        <Presentation />
+        <Ceremony />
+        <Reception />
+        <GodParents />
+        <Gallery />
+        <Confirm />
+        <FloatinButton />
+        <AudioControl />
+        <Confetti fire={fire} />
+
+        <ReactCanvasConfetti
+          refConfetti={getInstance}
+          style={{
+            position: "fixed",
+            pointerEvents: "none",
+            width: "100%",
+            height: "100%",
+            top: 0,
+            left: 0,
+          }}
+        />
+      </div>
     </main>
   );
 }

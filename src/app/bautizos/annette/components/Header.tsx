@@ -7,7 +7,7 @@ export default function Header() {
   return (
     <section className="relative h-screen flex justify-center items-center flex-col">
       <motion.p
-        className={`${dancing.className} text-center mx-10 text-xl text-orange-800`}
+        className={`${dancing.className} text-center mx-10 text-xl text-orange-800 max-w-md`}
         variants={header.animationText01}
         initial="hidden"
         whileInView="visible"

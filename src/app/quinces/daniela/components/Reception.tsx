@@ -202,7 +202,7 @@ export default function Reception() {
               <p>20:00 HRS</p>
             </motion.div>
             <motion.p
-              className={`${roboto.className} text-center px-1 py-3 text-sm z-20`}
+              className={`${roboto.className} text-center px-1 py-3 text-sm z-20 max-w-md`}
               variants={animation04}
               initial="hidden"
               whileInView="visible"

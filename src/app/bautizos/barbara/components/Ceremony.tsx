@@ -97,12 +97,12 @@ export default function Ceremony() {
         </span>
 
         <h2
-          className={`${glass.className} mx-10 text-orange-900 text-center text-2xl mt-5`}
+          className={`${glass.className} mx-10 text-orange-900 text-center text-2xl mt-5 max-w-md`}
         >
           Catedral Metropolitana de la Inmaculada Concepción
         </h2>
         <p
-          className={`${luxurious.className} text-orange-900 mt-3 text-sm text-center mx-10`}
+          className={`${luxurious.className} text-orange-900 mt-3 text-sm text-center mx-10 max-w-md`}
         >
           Juan de La Luz Enríquez s/n, Zona Centro, Centro, 91000
           Xalapa-Enríquez, Ver.

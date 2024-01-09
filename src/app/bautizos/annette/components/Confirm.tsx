@@ -46,7 +46,7 @@ export default function Confirm() {
       </motion.svg>
 
       <motion.p
-        className={`${playFair.className} text-base px-5 mt-10 text-center text-orange-900`}
+        className={`${playFair.className} text-base px-5 mt-10 text-center text-orange-900 max-w-md`}
         variants={confirm.animationText02}
         initial="hidden"
         whileInView="visible"

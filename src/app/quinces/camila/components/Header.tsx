@@ -143,7 +143,7 @@ export default function Header() {
       </motion.p>
 
       <div
-        className={`${teko.className} my-5 flex justify-evenly w-full text-5xl text-zinc-50`}
+        className={`${teko.className} my-5 flex justify-evenly text-5xl text-zinc-50 w-full max-w-md`}
         style={{
           textShadow:
             "-1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5)",
@@ -208,7 +208,7 @@ export default function Header() {
         </motion.label>
       </div>
       <motion.p
-        className={`${quickSand.className} text-pink-800 text-lg text-center mx-10`}
+        className={`${quickSand.className} text-pink-800 text-lg text-center mx-10 max-w-md`}
         variants={header.text04}
         initial="hidden"
         whileInView="visible"

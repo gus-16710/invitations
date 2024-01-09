@@ -20,10 +20,18 @@ export default function Wedding() {
   const [open, setOpen] = useState(false);
 
   return (
-    <main>
+    <main
+      style={{
+        backgroundColor: "#f3f3f3",
+        backgroundImage:
+          "linear-gradient(30deg, #fafafa 12%, transparent 12.5%, transparent 87%, #fafafa 87.5%, #fafafa), linear-gradient(150deg, #fafafa 12%, transparent 12.5%, transparent 87%, #fafafa 87.5%, #fafafa), linear-gradient(30deg, #fafafa 12%, transparent 12.5%, transparent 87%, #fafafa 87.5%, #fafafa), linear-gradient(150deg, #fafafa 12%, transparent 12.5%, transparent 87%, #fafafa 87.5%, #fafafa), linear-gradient(60deg, #fafafa77 25%, transparent 25.5%, transparent 75%, #fafafa77 75%, #fafafa77), linear-gradient(60deg, #fafafa77 25%, transparent 25.5%, transparent 75%, #fafafa77 75%, #fafafa77)",
+        backgroundSize: "80px 140px",
+        backgroundPosition: "0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px",
+      }}
+    >
       {open ? (
         <motion.div
-          className="max-w-3xl m-auto bg-[url('/img/bodas/diana-ernesto/background-main.jpg')] bg-center bg-cover bg-fixed"
+          className="max-w-3xl m-auto bg-[url('/img/bodas/diana-ernesto/background-main.jpg')] bg-center bg-cover bg-fixed shadow-large"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 2 }}

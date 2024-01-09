@@ -41,7 +41,7 @@ export default function Gifts() {
         Mesa de Regalos
       </h1>
 
-      <p className={`${roboto.className} text-gray-800 mt-5 mx-10 text-center`}>
+      <p className={`${roboto.className} text-gray-800 mt-5 mx-10 text-center max-w-md`}>
         Nuestro mayor regalo será tu presencia, pero si deseas obsequiarnos un
         detalle te dejamos las siguientes opciones:
       </p>

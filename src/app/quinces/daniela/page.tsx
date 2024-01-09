@@ -19,7 +19,7 @@ import {
   ModalHeader,
   useDisclosure,
 } from "@nextui-org/react";
-import { useEffect, useState, Dispatch, SetStateAction } from 'react';
+import { useEffect, useState, Dispatch, SetStateAction } from "react";
 import { pinyion, playFair } from "./components/Fonts";
 import { animation01, animation03 } from "./components/Animations";
 import AudioControl from "./components/AudioControl";
@@ -41,7 +41,7 @@ const ModalFull = ({
       placement="center"
       backdrop="blur"
       isDismissable={false}
-      hideCloseButton={true}      
+      hideCloseButton={true}
     >
       <ModalContent>
         {(onClose) => (
@@ -96,12 +96,16 @@ export default function Fifteen() {
 
   return (
     <main
-      className={`max-w-3xl m-auto bg-[url('/img/quinces/daniela/background-paper.jpg')] bg-center bg-cover bg-fixed ${
-        isOpen ? "h-screen" : ""
-      }`}
+      className={`${isOpen ? "h-screen" : ""}`}
+      style={{
+        backgroundColor: "#e3f6ff",
+        backgroundImage:
+          "radial-gradient(circle at center center, #fafafa, #e3f6ff), repeating-radial-gradient(circle at center center, #fafafa, #fafafa, 22px, transparent 44px, transparent 22px)",
+        backgroundBlendMode: "multiply",
+      }}
     >
-      {open && (
-        <>
+      {open ? (
+        <div className="max-w-3xl m-auto bg-[url('/img/quinces/daniela/background-paper.jpg')] bg-center bg-cover bg-fixed shadow-large">
           <Header />
           <Presentation />
           <Ceremony />
@@ -112,8 +116,8 @@ export default function Fifteen() {
           <Confirm />
           <FloatinButton />
           <AudioControl />
-        </>
-      )}
+        </div>
+      ) : <div className="h-screen bg-[url('/img/quinces/daniela/background-paper.jpg')] bg-center bg-cover"/>}
 
       <ModalFull
         isOpen={isOpen}

@@ -166,7 +166,7 @@ export default function Gifts() {
           Mesa de Regalos
         </motion.p>
         <motion.p
-          className={`${quickSand.className} text-pink-800 text-lg text-center mx-10 mt-5`}
+          className={`${quickSand.className} text-pink-800 text-lg text-center mx-10 mt-5 max-w-md`}
           variants={gifts.text02}
           initial="hidden"
           whileInView="visible"

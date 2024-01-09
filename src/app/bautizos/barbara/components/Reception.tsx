@@ -102,7 +102,7 @@ export default function Reception() {
           Salones "Aurora"
         </h2>
         <p
-          className={`${luxurious.className} text-orange-900 mt-3 text-sm text-center mx-10`}
+          className={`${luxurious.className} text-orange-900 mt-3 text-sm text-center mx-10 max-w-md`}
         >
           Carlos A. Carrillo 23, Aguacatal, 91133 Xalapa-Enriquez, Ver.
         </p>

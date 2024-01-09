@@ -40,32 +40,31 @@ const customTheme: FlowbiteCarouselTheme = {
 
 export default function Christening() {
   return (
-    <main
-      className="bg-[url('/img/bautizos/barbara/background-flowers-2.jpg')] bg-center bg-cover"
-      style={{ height: "100svh" }}
-    >
-      <Flowbite>
-        <Carousel theme={customTheme} slideInterval={5000} slide={false}>
-          <div className="max-w-3xl">
-            <Header />
-          </div>
-          <div className="max-w-3xl">
-            <Presentation />
-          </div>
-          <div className="max-w-3xl">
-            <Ceremony />
-          </div>
-          <div className="max-w-3xl">
-            <Reception />
-          </div>
-          <div className="max-w-3xl">
-            <GodParents />
-          </div>
-          <div className="max-w-3xl">
-            <Confirm />
-          </div>
-        </Carousel>
-      </Flowbite>
+    <main className="bg-[url('/img/bautizos/barbara/background-flowers-2.jpg')] bg-center bg-cover">
+      <div className="max-w-3xl m-auto" style={{ height: "100svh" }}>
+        <Flowbite>
+          <Carousel theme={customTheme} slideInterval={5000} slide={false}>
+            <div>
+              <Header />
+            </div>
+            <div>
+              <Presentation />
+            </div>
+            <div>
+              <Ceremony />
+            </div>
+            <div>
+              <Reception />
+            </div>
+            <div>
+              <GodParents />
+            </div>
+            <div>
+              <Confirm />
+            </div>
+          </Carousel>
+        </Flowbite>
+      </div>
     </main>
   );
 }

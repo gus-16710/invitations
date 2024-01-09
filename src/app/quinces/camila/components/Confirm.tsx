@@ -35,7 +35,7 @@ export default function Confirm() {
         Confirma tu asistencia
       </motion.p>
       <motion.p
-        className={`${quickSand.className} text-zinc-50 mt-5 mx-10 text-center`}
+        className={`${quickSand.className} text-zinc-50 mt-5 mx-10 text-center max-w-md`}
         variants={confirm.text02}
         initial="hidden"
         whileInView="visible"

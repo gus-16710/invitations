@@ -24,7 +24,7 @@ export default function Confirm() {
         <span className="mt-5 bg-gray-100 text-xs font-medium me-2 px-2.5 py-0.5 rounded text-red-600">
           * NO NIÑOS *
         </span>
-        <p className={`${roboto.className} mt-5 mx-10 text-center`}>
+        <p className={`${roboto.className} mt-5 mx-10 text-center max-w-md`}>
           Espero que puedan venir a compartir con nosotros este día inolvidable.
           Por favor confirma tu presencia.
         </p>

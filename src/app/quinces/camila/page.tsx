@@ -82,9 +82,16 @@ export default function Fifteen() {
   }, []);
 
   return (
-    <main className="max-w-3xl m-auto">
+    <main
+      className=""
+      style={{
+        backgroundColor: "#fde3ff",
+        backgroundImage:
+          "repeating-radial-gradient( circle at 0 0, transparent 0, #fde3ff 22px ), repeating-linear-gradient( #fafafa55, #fafafa )",
+      }}
+    >
       {open ? (
-        <>
+        <div className="max-w-3xl m-auto shadow-large">
           <Header />
           <Presentation />
           <Locations />
@@ -93,7 +100,7 @@ export default function Fifteen() {
           <Confirm />
           <FloatinButton />
           <AudioControl />
-        </>
+        </div>
       ) : (
         <section className="h-screen bg-[url('/img/quinces/camila/background-header.jpg')] bg-center bg-cover" />
       )}

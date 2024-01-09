@@ -16,6 +16,7 @@ import {
 } from "@nextui-org/react";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { useState } from "react";
+import { IoMdTime } from "react-icons/io";
 
 const greatVibes = Great_Vibes({ subsets: ["latin"], weight: "400" });
 const notoSans = Titillium_Web({ subsets: ["latin"], weight: "400" });
@@ -118,11 +119,13 @@ export default function Location() {
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 1, ease: "easeInOut", delay: 0.9 }}
         >
-          <p>~ 18:00 HRS ~</p>
+          <p className="flex items-center justify-center gap-1">
+            ~ <IoMdTime /> 18:00 HRS ~
+          </p>
           <p className="text-sm">28/Feb/2025</p>
         </motion.div>
         <motion.p
-          className={`${markazi.className} text-center mx-5 mt-5 text-2xl text-zinc-600`}
+          className={`${markazi.className} text-center mx-5 mt-5 text-2xl text-zinc-600 max-w-md`}
           initial={{ y: 100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 1, ease: "easeInOut", delay: 1.2 }}
@@ -130,7 +133,7 @@ export default function Location() {
           Catedral Metropolitana de la Inmaculada Concepción
         </motion.p>
         <motion.p
-          className={`${notoSans.className} text-center mx-5 mt-3 text-sm`}
+          className={`${notoSans.className} text-center mx-5 mt-3 text-sm max-w-md`}
           initial={{ y: 100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: false }}
@@ -204,7 +207,7 @@ export default function Location() {
           viewport={{ once: false }}
           transition={{ duration: 1, ease: "easeInOut" }}
         >
-          <p>~ 20:00 HRS ~ </p>
+          <p className="flex items-center justify-center gap-1">~ <IoMdTime /> 20:00 HRS ~ </p>
           <p className="text-sm">28/Feb/2025</p>
         </motion.div>
         <motion.p

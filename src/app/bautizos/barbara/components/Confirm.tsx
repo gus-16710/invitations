@@ -28,7 +28,7 @@ export default function Confirm() {
       </svg>
 
       <p
-        className={`${luxurious.className} mx-10 mt-10 text-center text-orange-900`}
+        className={`${luxurious.className} mx-10 mt-10 text-center text-orange-900 max-w-md`}
       >
         Esperamos que puedan venir a compartir con nosotros este momento
         inolvidable.
@@ -37,7 +37,10 @@ export default function Confirm() {
         className={`${luxurious.className} mx-10 mt-5 text-center text-orange-900`}
       >
         Porfavor de confirmar tu asistencia.
-        <br />
+      </p>
+      <p
+        className={`${luxurious.className} mx-10 mt-5 text-center text-orange-900`}
+      >
         ¡Muchas Gracias!
       </p>
 

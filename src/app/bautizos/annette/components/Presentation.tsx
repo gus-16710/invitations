@@ -163,7 +163,7 @@ export default function Presentation() {
       </div>
 
       <motion.p
-        className={`${habibi.className} px-5 mt-10 text-center text-orange-900`}
+        className={`${habibi.className} px-5 mt-10 text-center text-orange-900 max-w-md`}
         variants={presentation.animationText02}
         initial="hidden"
         whileInView="visible"

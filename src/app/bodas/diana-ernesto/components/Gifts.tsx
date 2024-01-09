@@ -149,7 +149,7 @@ export default function Gifts() {
           Mesa de Regalos
         </motion.h1>
         <motion.p
-          className={`${notoSans.className} text-center p-5`}
+          className={`${notoSans.className} text-center p-5 max-w-md`}
           initial={{ y: 100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: false }}

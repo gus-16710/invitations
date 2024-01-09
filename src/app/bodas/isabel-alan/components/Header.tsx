@@ -58,7 +58,7 @@ export default function Header() {
       <AudioPlayer />
       <motion.div
         id="alert-5"
-        className="flex items-center justify-center p-1 rounded-lg bg-zinc-100/30 w-60 mb-3 mt-5"
+        className="flex items-center justify-center p-1 rounded-lg bg-zinc-100/30 w-60 mb-3 mt-5 z-20"
         role="alert"
         initial={{ y: 100, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
