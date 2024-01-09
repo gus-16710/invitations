@@ -60,11 +60,11 @@ export default function Christening() {
   }, [makeShot]);
 
   useEffect(() => {
-    fire();    
+    fire();
   }, []);
 
   return (
-    <main className="max-w-3xl m-auto bg-[url('/img/bautizos/annette/background-floral.jpg')] bg-bottom bg-cover bg-fixed">
+    <main className="bg-[url('/img/bautizos/annette/background-floral.jpg')] bg-bottom bg-cover bg-fixed">
       <Header />
       <Presentation />
       <Ceremony />

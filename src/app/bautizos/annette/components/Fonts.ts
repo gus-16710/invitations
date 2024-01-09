@@ -7,7 +7,10 @@ import {
   Dancing_Script,
   Lobster_Two,
   Anton,
-  Roboto
+  Roboto,
+  Habibi,
+  Text_Me_One,
+  Big_Shoulders_Stencil_Text
 } from "next/font/google";
 
 export const roboto = Roboto({ subsets: ["latin"], weight: ["400"] });
@@ -51,3 +54,19 @@ export const anton = Anton({
   subsets: ["latin"],
   weight: ["400"],
 });
+
+export const habibi = Habibi({
+  subsets: ["latin"],
+  weight: ["400"],
+});
+
+export const textme = Text_Me_One({
+  subsets: ["latin"],
+  weight: ["400"],
+});
+
+export const big = Big_Shoulders_Stencil_Text({
+  subsets: ["latin"],
+  weight: ["400"],
+});
+
