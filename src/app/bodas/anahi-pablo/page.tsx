@@ -11,13 +11,13 @@ import { motion } from "framer-motion";
 
 export default function Wedding() {
   return (
-    <main className="max-w-3xl m-auto h-screen">
+    <main className="max-w-3xl m-auto">
       <Splide
         aria-label="My Favorite Images"
         options={{
           rewind: true,
           direction: "ttb",
-          height: "100vh",
+          height: "100svh",
           wheel: true,
           releaseWheel: true,
           type: "loop",
@@ -26,18 +26,24 @@ export default function Wedding() {
         }}
       >
         <SplideSlide>
-          <section className="h-screen bg-[url('/img/bodas/diana-ernesto/gallery-01.jpg')] bg-cover bg-center flex items-center justify-center text-zinc-100">
+          <section
+            className="bg-[url('/img/bodas/diana-ernesto/gallery-01.jpg')] bg-cover bg-center flex items-center justify-center text-zinc-100"
+            style={{ height: "100svh" }}
+          >
             <motion.h1
               className="text-6xl font-bold"
               initial={{ opacity: 0, scale: 0 }}
-              whileInView={{ opacity: 1, scale: 1 }}              
+              whileInView={{ opacity: 1, scale: 1 }}
             >
               ONE
             </motion.h1>
           </section>
         </SplideSlide>
         <SplideSlide>
-          <section className="h-screen bg-[url('/img/bodas/diana-ernesto/gallery-02.jpg')] bg-cover bg-center flex items-center justify-center text-zinc-100">
+          <section
+            className="bg-[url('/img/bodas/diana-ernesto/gallery-02.jpg')] bg-cover bg-center flex items-center justify-center text-zinc-100"
+            style={{ height: "100svh" }}
+          >
             <motion.h1
               className="text-6xl font-bold"
               initial={{ opacity: 0, scale: 0 }}
@@ -48,7 +54,10 @@ export default function Wedding() {
           </section>
         </SplideSlide>
         <SplideSlide>
-          <section className="h-screen bg-[url('/img/bodas/diana-ernesto/gallery-03.jpg')] bg-cover bg-center flex items-center justify-center text-zinc-100">
+          <section
+            className="bg-[url('/img/bodas/diana-ernesto/gallery-03.jpg')] bg-cover bg-center flex items-center justify-center text-zinc-100"
+            style={{ height: "100svh" }}
+          >
             <motion.h1
               className="text-6xl font-bold"
               initial={{ opacity: 0, scale: 0 }}
