@@ -19,6 +19,8 @@ import {
 import { Oswald } from "next/font/google";
 import { motion } from "framer-motion";
 import "@splidejs/react-splide/css";
+import DressCode from "./DressCode";
+import GodParents from "./GodParents";
 
 const oswald = Oswald({ subsets: ["latin"], weight: "400" });
 
@@ -118,6 +120,12 @@ export default function Main() {
         </SplideSlide>
         <SplideSlide>
           <Reception />
+        </SplideSlide>
+        <SplideSlide>
+          <GodParents />
+        </SplideSlide>
+        <SplideSlide>
+          <DressCode />
         </SplideSlide>
         <SplideSlide>
           <Itinerary />

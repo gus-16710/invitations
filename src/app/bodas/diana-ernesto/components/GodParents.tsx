@@ -14,9 +14,9 @@ const customTheme: FlowbiteCarouselTheme = {
   root: {
     base: "relative h-96 w-full",
     leftControl:
-      "absolute top-0 left-0 flex h-full items-center justify-center px-4 focus:outline-none",
+      "absolute top-0 left-4 flex h-full items-center justify-center px-4 focus:outline-none",
     rightControl:
-      "absolute top-0 right-0 flex h-full items-center justify-center px-4 focus:outline-none",
+      "absolute top-0 right-4 flex h-full items-center justify-center px-4 focus:outline-none",
   },
   indicators: {
     active: {
@@ -42,7 +42,10 @@ const customTheme: FlowbiteCarouselTheme = {
 
 export default function GodParents() {
   return (
-    <section className="h-screen snap-center flex justify-center items-center flex-col">
+    <section
+      className="flex justify-center items-center flex-col"
+      style={{ height: "100svh" }}
+    >
       <motion.h1
         className={`${greatVibes.className} text-5xl drop-shadow text-center`}
         initial={{ y: -100, opacity: 0 }}
