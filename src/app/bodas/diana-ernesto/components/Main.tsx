@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 // @ts-ignore
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import Header from "./Header";
@@ -40,6 +40,7 @@ const ModalInstructions = ({
       backdrop="blur"
       className="bg-white/0 shadow-none"
       hideCloseButton={true}
+      isDismissable={false}
     >
       <ModalContent>
         {(onClose) => (
@@ -82,65 +83,76 @@ const ModalInstructions = ({
 
 export default function Main() {
   const { isOpen, onOpen, onOpenChange, onClose } = useDisclosure();
+  const [open, setOpen] = useState(false);
 
   useEffect(() => {
     onOpen();
 
     setTimeout(() => {
       onClose();
-    }, 5000);
+      setOpen(true);
+    }, 4000);
   }, []);
+
 
   return (
     <div className="max-w-3xl m-auto bg-[url('/img/bodas/diana-ernesto/background-main.jpg')] bg-cover bg-center shadow-large">
-      <Splide
-        aria-label="Diana & Ernesto"
-        options={{
-          rewind: true,
-          direction: "ttb",
-          height: "100svh",
-          wheel: true,
-          releaseWheel: true,
-          type: "loop",
-          waitForTransition: true,
-          arrows: false,
-          classes: {
-            page: "splide__pagination__page custom-class-page", // each button
-          },
-        }}
-      >
-        <SplideSlide>
-          <Header />
-        </SplideSlide>
-        <SplideSlide>
-          <Presentation />
-        </SplideSlide>
-        <SplideSlide>
-          <Ceremony />
-        </SplideSlide>
-        <SplideSlide>
-          <Reception />
-        </SplideSlide>
-        <SplideSlide>
-          <GodParents />
-        </SplideSlide>
-        <SplideSlide>
-          <DressCode />
-        </SplideSlide>
-        <SplideSlide>
-          <Itinerary />
-        </SplideSlide>
-        <SplideSlide>
-          <Gallery />
-        </SplideSlide>
-        <SplideSlide>
-          <Gifts />
-        </SplideSlide>
-        <SplideSlide>
-          <Confirm />
-        </SplideSlide>
-      </Splide>
-      <AudioControl />
+      {open && (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+        >
+          <Splide
+            aria-label="Diana & Ernesto"
+            options={{
+              rewind: true,
+              direction: "ttb",
+              height: "100svh",
+              wheel: true,
+              releaseWheel: true,
+              type: "loop",
+              waitForTransition: true,
+              arrows: false,
+              classes: {
+                page: "splide__pagination__page custom-class-page", // each button
+              },
+            }}
+          >
+            <SplideSlide>
+              <Header />
+            </SplideSlide>
+            <SplideSlide>
+              <Presentation />
+            </SplideSlide>
+            <SplideSlide>
+              <Ceremony />
+            </SplideSlide>
+            <SplideSlide>
+              <Reception />
+            </SplideSlide>
+            <SplideSlide>
+              <GodParents />
+            </SplideSlide>
+            <SplideSlide>
+              <DressCode />
+            </SplideSlide>
+            <SplideSlide>
+              <Itinerary />
+            </SplideSlide>
+            <SplideSlide>
+              <Gallery />
+            </SplideSlide>
+            <SplideSlide>
+              <Gifts />
+            </SplideSlide>
+            <SplideSlide>
+              <Confirm />
+            </SplideSlide>
+          </Splide>
+          <AudioControl />
+        </motion.div>
+      )}
       <ModalInstructions isOpen={isOpen} onOpenChange={onOpenChange} />
     </div>
   );
