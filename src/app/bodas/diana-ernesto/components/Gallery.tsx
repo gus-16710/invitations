@@ -48,16 +48,11 @@ export default function Gallery() {
   const [index, setIndex] = useState(-1);
 
   return (
-    <section className="snap-center justify-center items-center flex-col text-center py-20">
-      <motion.h1
-        className={`${greatVibes.className} text-5xl drop-shadow mb-10`}
-        initial={{ y: -100, opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1 }}
-        transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
-      >
-        Nosotros
-      </motion.h1>
-      <div className="flex items-center justify-center">
+    <section
+      className="justify-center items-center flex-col text-center"
+      style={{ height: "100svh" }}
+    >
+      <div className="flex items-center justify-center pt-10">
         <motion.div
           id="alert-5"
           className="flex items-center justify-center p-2 rounded-lg bg-gray-500/50 w-80 mb-3"
@@ -73,12 +68,13 @@ export default function Gallery() {
           <LuZoomIn className="text-white ml-2" />
         </motion.div>
       </div>
-      <div className="mx-4">
+      <div className="w-72 m-auto">
         <PhotoAlbum
-          layout="rows"
+          layout="masonry"
           photos={images}
           onClick={({ index: current }) => setIndex(current)}
           renderPhoto={NextJsImage}
+          columns={2}
         />
       </div>
       <Lightbox

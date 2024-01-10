@@ -26,33 +26,10 @@
     text-align: center;
   }
   
-  .floral-divider {
-    position: relative;
-    height: 100%;
+  .custom-class-page {
+    background: #9e9e9e;
   }
   
-  .floral-divider::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 2px;
-    height: 80%;
-    background-color: #e7e7e7;
-    z-index: 1;
+  .custom-class-page.is-active {
+    background: #000;
   }
-  
-  .floral-divider::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 10px;
-    height: 10px;
-    background-color: #fff;
-    border-radius: 50%;
-    z-index: 2;
-  }
-  

@@ -1,13 +1,11 @@
 "use client";
 
+import { motion } from "framer-motion";
 // @ts-ignore
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 
 // Default theme
 import "@splidejs/react-splide/css";
-// or only core styles
-import "@splidejs/react-splide/css/core";
-import { motion } from "framer-motion";
 
 export default function Wedding() {
   return (
@@ -21,8 +19,7 @@ export default function Wedding() {
           wheel: true,
           releaseWheel: true,
           type: "loop",
-          waitForTransition: true,
-          //arrows: false
+          waitForTransition: true,          
         }}
       >
         <SplideSlide>
