@@ -1,19 +1,13 @@
-import { useScroll, useTransform, motion } from "framer-motion";
-import { useRef } from "react";
+import { motion } from "framer-motion";
 import { Carousel, Flowbite } from "flowbite-react";
-import type { FlowbiteCarouselTheme } from "flowbite-react";
 import { greatVibes, pinyion, playFair } from "./Fonts";
-import {
-  animation01,
-  animation03,
-  animation06,
-  animation07,
-} from "./Animations";
+import { animation01, animation03, animation06 } from "./Animations";
 import { Card, CardBody } from "@nextui-org/react";
+import type { FlowbiteCarouselTheme } from "flowbite-react";
 
 const customTheme: FlowbiteCarouselTheme = {
   root: {
-    base: "relative h-full w-full",
+    base: "relative h-96 w-full",
     leftControl:
       "absolute top-0 left-0 flex h-full items-center justify-center px-4 focus:outline-none",
     rightControl:
@@ -42,32 +36,13 @@ const customTheme: FlowbiteCarouselTheme = {
 };
 
 export default function GodParents() {
-  const ref = useRef<HTMLDivElement>(null);
-
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start end", "end start"],
-  });
-
-  const background01 = useTransform(
-    scrollYProgress,
-    [0, 0.2, 0.4, 0.5, 0.6, 0.7, 1],
-    [300, 100, 0, 0, 0, 100, 300]
-  );
-
-  const background02 = useTransform(
-    scrollYProgress,
-    [0, 0.2, 0.4, 0.5, 0.6, 0.7, 1],
-    [-300, -100, 0, 0, 0, -100, -300]
-  );
-
   return (
     <section
-      ref={ref}
-      className="overflow-hidden relative h-screen flex justify-center items-center flex-col px-5 py-10"
+      className="flex justify-center items-center flex-col px-5 py-10"
+      style={{ height: "100svh" }}
     >
       <Card className="border-none bg-background/60 h-full w-full" shadow="sm">
-        <CardBody className="flex items-center justify-center flex-col">
+        <CardBody className="flex items-center justify-center flex-col overflow-clip">
           <motion.h1
             className={`${pinyion.className} text-5xl text-yellow-400 mt-5 text-center`}
             variants={animation01}
@@ -141,7 +116,7 @@ export default function GodParents() {
           </motion.div>
 
           <motion.div
-            className="h-96 w-full text-gray-800"
+            className="w-full"
             variants={animation03}
             initial="hidden"
             whileInView="visible"
@@ -176,29 +151,6 @@ export default function GodParents() {
           </motion.div>
         </CardBody>
       </Card>
-
-      <motion.img
-        src="/img/quinces/daniela/floral-right02.png"
-        width={250}
-        height={250}
-        alt=""
-        className="absolute z-20 top-0 -right-10"
-        variants={animation07}
-        initial="hidden"
-        whileInView="visible"
-        style={{ x: background01, rotate: "-5deg" }}
-      />
-      <motion.img
-        src="/img/quinces/daniela/floral-left02.png"
-        width={200}
-        height={200}
-        alt=""
-        className="absolute z-10 bottom-0 -left-8"
-        variants={animation07}
-        initial="hidden"
-        whileInView="visible"
-        style={{ x: background02, rotate: "-15deg" }}
-      />
     </section>
   );
 }

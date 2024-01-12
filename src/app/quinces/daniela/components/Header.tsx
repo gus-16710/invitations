@@ -1,37 +1,17 @@
-import { useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 import { notoSerif, pinyion, playFair } from "./Fonts";
 import {
   animation01,
   animation02,
   animation03,
-  animation04,
-  animation05,
+  animation04, 
 } from "./Animations";
 
 export default function Header() {
-  const ref = useRef<HTMLDivElement>(null);
-
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start start", "end start"],
-  });
-
-  const background01 = useTransform(
-    scrollYProgress,
-    [0, 0.5, 1],
-    [0, 500, 1000]
-  );
-  const background02 = useTransform(
-    scrollYProgress,
-    [0, 0.5, 1],
-    [0, -500, -1000]
-  );
-
   return (
     <section
-      ref={ref}
-      className="w-full h-screen overflow-hidden relative flex justify-center items-center flex-col"
+      className="flex justify-center items-center flex-col"
+      style={{ height: "100svh" }}
     >
       <motion.h1
         className={`${playFair.className} text-2xl flex items-center text-zinc-600 z-20`}
@@ -92,22 +72,7 @@ export default function Header() {
         whileInView="visible"
       >
         2023
-      </motion.p>
-
-      <motion.div
-        className="bg-[url('/img/quinces/daniela/header-01.png')] bg-cover bg-bottom absolute inset-0 z-0"
-        variants={animation05}
-        initial="hidden"
-        whileInView="visible"
-        style={{ y: background01 }}
-      />
-      <motion.div
-        className="bg-[url('/img/quinces/daniela/header-02.png')] bg-cover bg-bottom absolute inset-0 z-10"
-        variants={animation05}
-        initial="hidden"
-        whileInView="visible"
-        style={{ y: background02 }}
-      />
+      </motion.p>            
     </section>
   );
 }

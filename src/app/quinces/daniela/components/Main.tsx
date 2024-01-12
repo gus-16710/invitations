@@ -5,25 +5,22 @@ import Header from "./Header";
 import Presentation from "./Presentation";
 import Ceremony from "./Ceremony";
 import Reception from "./Reception";
-import Itinerary from "./Itinerary";
+import GodParents from "./GodParents";
 import Gallery from "./Gallery";
 import Gifts from "./Gifts";
-import DressCode from "./DressCode";
-import GodParents from "./GodParents";
 import Confirm from "./Confirm";
-import AudioControl from "./AudioControl";
 import {
   Modal,
   ModalBody,
   ModalContent,
   useDisclosure,
 } from "@nextui-org/react";
-import { Oswald } from "next/font/google";
 import { motion } from "framer-motion";
+import { oswald } from "./Fonts";
 
 import "@splidejs/react-splide/css";
-
-const oswald = Oswald({ subsets: ["latin"], weight: "400" });
+import { animation05 } from "./Animations";
+import AudioControl from "./AudioControl";
 
 const ModalInstructions = ({
   isOpen,
@@ -95,17 +92,21 @@ export default function Main() {
     }, 4000);
   }, []);
 
+  //   F2F1F8
+  //   CFE8F8
+  //   DEFFE9
 
   return (
-    <div className="max-w-3xl m-auto bg-[url('/img/bodas/diana-ernesto/background-main.jpg')] bg-cover bg-center shadow-large">
+    <div className="max-w-3xl m-auto bg-[url('/img/quinces/daniela/background-main.jpg')] bg-center bg-cover bg-fixed shadow-large">
       {open && (
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
+          className="relative overflow-clip"
         >
           <Splide
-            aria-label="Diana & Ernesto"
+            aria-label="Daniela"
             options={{
               rewind: true,
               direction: "ttb",
@@ -119,6 +120,7 @@ export default function Main() {
                 page: "splide__pagination__page custom-class-page", // each button
               },
             }}
+            className="z-10"
           >
             <SplideSlide>
               <Header />
@@ -136,12 +138,6 @@ export default function Main() {
               <GodParents />
             </SplideSlide>
             <SplideSlide>
-              <DressCode />
-            </SplideSlide>
-            <SplideSlide>
-              <Itinerary />
-            </SplideSlide>
-            <SplideSlide>
               <Gallery />
             </SplideSlide>
             <SplideSlide>
@@ -152,6 +148,18 @@ export default function Main() {
             </SplideSlide>
           </Splide>
           <AudioControl />
+          <motion.div
+            className="bg-[url('/img/quinces/daniela/header-01.png')] bg-cover bg-bottom absolute inset-0 z-0"
+            variants={animation05}
+            initial="hidden"
+            whileInView="visible"
+          />
+          <motion.div
+            className="bg-[url('/img/quinces/daniela/header-02.png')] bg-cover bg-bottom absolute inset-0 z-0"
+            variants={animation05}
+            initial="hidden"
+            whileInView="visible"
+          />
         </motion.div>
       )}
       <ModalInstructions isOpen={isOpen} onOpenChange={onOpenChange} />

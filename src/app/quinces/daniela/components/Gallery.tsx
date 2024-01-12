@@ -1,10 +1,10 @@
 import "yet-another-react-lightbox/styles.css";
-import { useScroll, useTransform, motion } from "framer-motion";
-import { useRef, useState } from "react";
+import { motion } from "framer-motion";
+import { useState } from "react";
 import PhotoAlbum from "react-photo-album";
 import Lightbox from "yet-another-react-lightbox";
 import { oswald, pinyion } from "./Fonts";
-import { animation01, animation06, animation07 } from "./Animations";
+import { animation01, animation06 } from "./Animations";
 import { Card, CardBody } from "@nextui-org/react";
 import NextJsImage from "./NextJsImage";
 import { LuZoomIn } from "react-icons/lu";
@@ -44,29 +44,11 @@ const images = [
 
 export default function Gallery() {
   const [index, setIndex] = useState(-1);
-  const ref = useRef<HTMLDivElement>(null);
-
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start end", "end start"],
-  });
-
-  const background01 = useTransform(
-    scrollYProgress,
-    [0, 0.2, 0.4, 0.5, 0.6, 0.7, 1],
-    [300, 100, 0, 0, 0, 100, 300]
-  );
-
-  const background02 = useTransform(
-    scrollYProgress,
-    [0, 0.2, 0.4, 0.5, 0.6, 0.7, 1],
-    [-300, -100, 0, 0, 0, -100, -300]
-  );
 
   return (
-    <section ref={ref} className="h-screen overflow-hidden relative px-5 py-10">
+    <section className="relative px-5 py-10" style={{ height: "100svh" }}>
       <Card className="border-none bg-background/60 h-full w-full" shadow="sm">
-        <CardBody>
+        <CardBody className="overflow-clip">
           <motion.h1
             className={`${pinyion.className} text-5xl text-yellow-400 mt-5 text-center`}
             variants={animation01}
@@ -174,29 +156,6 @@ export default function Gallery() {
           </div>
         </CardBody>
       </Card>
-
-      <motion.img
-        src="/img/quinces/daniela/floral-right02.png"
-        width={250}
-        height={250}
-        alt=""
-        className="absolute z-20 top-0 -right-10"
-        variants={animation07}
-        initial="hidden"
-        whileInView="visible"
-        style={{ x: background01, rotate: "-5deg" }}
-      />
-      <motion.img
-        src="/img/quinces/daniela/floral-left02.png"
-        width={200}
-        height={200}
-        alt=""
-        className="absolute z-10 bottom-0 -left-8"
-        variants={animation07}
-        initial="hidden"
-        whileInView="visible"
-        style={{ x: background02, rotate: "-15deg" }}
-      />
     </section>
   );
 }

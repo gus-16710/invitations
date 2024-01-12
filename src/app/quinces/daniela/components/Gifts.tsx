@@ -1,16 +1,14 @@
-import { useRef, useState } from "react";
+import { useState } from "react";
 import {
   animation01,
   animation03,
   animation04,
-  animation06,
-  animation07,
+  animation06,  
 } from "./Animations";
-import { aref, notoSans, pinyion, playFair } from "./Fonts";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { aref, notoSans, pinyion } from "./Fonts";
+import { motion } from "framer-motion";
 import {
-  Button,
-  Image,
+  Button,  
   Modal,
   ModalContent,
   ModalHeader,
@@ -141,38 +139,19 @@ const ModalCCard = ({
 
 export default function Gifts() {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
-  const ref = useRef<HTMLDivElement>(null);
-
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start end", "end start"],
-  });
-
-  const background01 = useTransform(
-    scrollYProgress,
-    [0, 0.2, 0.4, 0.5, 0.6, 0.7, 1],
-    [300, 100, 0, 0, 0, 100, 300]
-  );
-
-  const background02 = useTransform(
-    scrollYProgress,
-    [0, 0.2, 0.4, 0.5, 0.6, 0.7, 1],
-    [-300, -100, 0, 0, 0, -100, -300]
-  );
-
   const openLink = (link: string) => window.open(link, "_blank");
 
   return (
     <>
       <section
-        ref={ref}
-        className="overflow-hidden relative h-screen flex justify-center items-center flex-col px-5 py-10"
+        className="flex justify-center items-center flex-col px-5 py-10"
+        style={{ height: "100svh" }}
       >
         <Card
           className="border-none bg-background/60 h-full w-full"
           shadow="sm"
         >
-          <CardBody className="flex items-center justify-center flex-col">
+          <CardBody className="flex items-center justify-center flex-col overflow-clip">
             <motion.h1
               className={`${pinyion.className} text-5xl text-yellow-400 mt-5 text-center`}
               variants={animation01}
@@ -339,30 +318,7 @@ export default function Gifts() {
               </div>
             </motion.div>
           </CardBody>
-        </Card>
-
-        <motion.img
-          src="/img/quinces/daniela/floral-right02.png"
-          width={250}
-          height={250}
-          alt=""
-          className="absolute z-20 top-0 -right-10"
-          variants={animation07}
-          initial="hidden"
-          whileInView="visible"
-          style={{ x: background01, rotate: "-5deg" }}
-        />
-        <motion.img
-          src="/img/quinces/daniela/floral-left02.png"
-          width={200}
-          height={200}
-          alt=""
-          className="absolute z-10 bottom-0 -left-8"
-          variants={animation07}
-          initial="hidden"
-          whileInView="visible"
-          style={{ x: background02, rotate: "-15deg" }}
-        />
+        </Card>      
       </section>
       <ModalCCard isOpen={isOpen} onOpenChange={onOpenChange} />
     </>

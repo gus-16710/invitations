@@ -109,34 +109,34 @@ export default function Header() {
         Nuestra Boda
       </motion.h2>
       <motion.div
-        className={`${greatVibes.className} mb-3 pb-3 text-slate-100 custom-shadow count-down`}
+        className={`${greatVibes.className} mb-3 pb-3 text-slate-100 custom-shadow flex items-center justify-center`}
         initial={{ y: 100, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 1, delay: 1.2 }}
       >
-        <div className="item">
-          <div className="number text-3xl" ref={scopeDays}>
+        <div className="text-center m-0">
+          <div className="my-0 mx-3 p-2 text-3xl" ref={scopeDays}>
             {formatNumber(days)}
           </div>
-          <div className="description text-1xl">Días</div>
+          <div className="my-0 mx-3 text-center text-1xl">Días</div>
         </div>
-        <div className="item">
-          <div className="number text-3xl" ref={scopeHours}>
+        <div className="text-center m-0">
+          <div className="my-0 mx-3 p-2 text-3xl" ref={scopeHours}>
             {formatNumber(hours)}
           </div>
-          <div className="description text-1xl">Horas</div>
+          <div className="my-0 mx-3 text-center text-1xl">Horas</div>
         </div>
-        <div className="item">
-          <div className="number text-3xl" ref={scopeMinutes}>
+        <div className="text-center m-0">
+          <div className="my-0 mx-3 p-2 text-3xl" ref={scopeMinutes}>
             {formatNumber(minutes)}
           </div>
-          <div className="description text-1xl">Minutos</div>
+          <div className="my-0 mx-3 text-center text-1xl">Minutos</div>
         </div>
-        <div className="item">
-          <div className="number text-3xl" ref={scopeSeconds}>
+        <div className="text-center m-0">
+          <div className="my-0 mx-3 p-2 text-3xl" ref={scopeSeconds}>
             {formatNumber(seconds)}
           </div>
-          <div className="description text-1xl">Segundos</div>
+          <div className="my-0 mx-3 text-center text-1xl">Segundos</div>
         </div>
       </motion.div>
       <motion.div

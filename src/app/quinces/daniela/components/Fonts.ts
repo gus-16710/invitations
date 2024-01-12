@@ -8,7 +8,7 @@ import {
   Oswald,
   Clicker_Script,
   Aref_Ruqaa,
-  Rajdhani
+  Rajdhani,
 } from "next/font/google";
 
 export const greatVibes = Great_Vibes({ subsets: ["latin"], weight: "400" });

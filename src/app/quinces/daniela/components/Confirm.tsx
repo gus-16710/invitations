@@ -8,9 +8,13 @@ import {
 } from "./Animations";
 import { Button, Card, CardBody } from "@nextui-org/react";
 import { FaPhoneAlt, FaWhatsapp } from "react-icons/fa";
+
 export default function Confirm() {
   return (
-    <section className="bg-[url('/img/quinces/daniela/floral-frame-full.png')] bg-center bg-cover h-screen flex items-center justify-center flex-col px-5 py-10">
+    <section
+      className="flex items-center justify-center flex-col px-5 py-10"
+      style={{ height: "100svh" }}
+    >
       <Card className="border-none bg-background/60 h-full w-full" shadow="sm">
         <CardBody className="flex items-center justify-center flex-col">
           <motion.h1

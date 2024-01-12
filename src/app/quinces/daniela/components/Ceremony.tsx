@@ -1,5 +1,4 @@
-import { useScroll, useTransform, motion } from "framer-motion";
-import { useRef } from "react";
+import { motion } from "framer-motion";
 import {
   Avatar,
   Button,
@@ -17,7 +16,6 @@ import {
   animation03,
   animation04,
   animation06,
-  animation07,
 } from "./Animations";
 import { aref, pinyion, playFair, rajdhani } from "./Fonts";
 import { IoMdTime } from "react-icons/io";
@@ -52,7 +50,11 @@ const ModalMap = ({
       <ModalContent>
         {(onClose) => (
           <>
-            <ModalHeader className={`${pinyion.className} flex flex-col gap-1 items-center text-3xl`}>Ceremonia</ModalHeader>
+            <ModalHeader
+              className={`${pinyion.className} flex flex-col gap-1 items-center text-3xl`}
+            >
+              Ceremonia
+            </ModalHeader>
             <ModalBody>
               <MapCeremony />
             </ModalBody>
@@ -66,30 +68,12 @@ const ModalMap = ({
 
 export default function Ceremony() {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
-  const ref = useRef<HTMLDivElement>(null);
-
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start end", "end start"],
-  });
-
-  const background01 = useTransform(
-    scrollYProgress,
-    [0, 0.2, 0.4, 0.5, 0.6, 0.7, 1],
-    [300, 100, 0, 0, 0, 100, 300]
-  );
-
-  const background02 = useTransform(
-    scrollYProgress,
-    [0, 0.2, 0.4, 0.5, 0.6, 0.7, 1],
-    [-300, -100, 0, 0, 0, -100, -300]
-  );
 
   return (
     <>
       <section
-        ref={ref}
-        className="overflow-hidden relative h-screen flex justify-center items-center flex-col px-5 py-10"
+        className="flex justify-center items-center flex-col px-5 py-10"
+        style={{ height: "100svh" }}
       >
         <Card
           className="border-none bg-background/60 h-full w-full"
@@ -172,7 +156,7 @@ export default function Ceremony() {
             <motion.div
               variants={animation06}
               initial="hidden"
-              whileInView="visible"              
+              whileInView="visible"
             >
               <Avatar
                 isBordered
@@ -198,7 +182,9 @@ export default function Ceremony() {
               whileInView="visible"
             >
               <p>DOMINGO 30 DE OCTUBRE</p>
-              <p className="flex items-center justify-center gap-1"><IoMdTime /> 18:00 HRS</p>
+              <p className="flex items-center justify-center gap-1">
+                <IoMdTime /> 18:00 HRS
+              </p>
             </motion.div>
             <motion.p
               className={`${rajdhani.className} text-center px-1 py-3 text-sm z-20 max-w-md`}
@@ -230,28 +216,6 @@ export default function Ceremony() {
             </motion.div>
           </CardBody>
         </Card>
-        <motion.img
-          src="/img/quinces/daniela/floral-right02.png"
-          width={250}
-          height={250}
-          alt=""
-          className="absolute z-20 top-0 -right-10"
-          variants={animation07}
-          initial="hidden"
-          whileInView="visible"
-          style={{ x: background01, rotate: "-5deg" }}
-        />
-        <motion.img
-          src="/img/quinces/daniela/floral-left02.png"
-          width={200}
-          height={200}
-          alt=""
-          className="absolute z-10 bottom-0 -left-8"
-          variants={animation07}
-          initial="hidden"
-          whileInView="visible"
-          style={{ x: background02, rotate: "-15deg" }}
-        />
       </section>
       <ModalMap isOpen={isOpen} onOpenChange={onOpenChange} />
     </>

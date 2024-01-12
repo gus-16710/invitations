@@ -1,12 +1,11 @@
-import { useEffect, useState, useRef } from "react";
-import { motion, useAnimate, useScroll, useTransform } from "framer-motion";
+import { useEffect, useState } from "react";
+import { motion, useAnimate } from "framer-motion";
 import { Card, CardBody } from "@nextui-org/react";
 import {
   animation01,
   animation03,
   animation04,
-  animation06,
-  animation07,
+  animation06, 
 } from "./Animations";
 import { aref, clicker, pinyion } from "./Fonts";
 
@@ -19,8 +18,6 @@ export default function Presentation() {
   const [minutes, setMinutes] = useState(0);
   const [hours, setHours] = useState(0);
   const [days, setDays] = useState(0);
-
-  const ref = useRef<HTMLDivElement>(null);
 
   const countDownClock = () => {
     const countDownDate: any = new Date("Nov 2, 2024 13:29:00");
@@ -47,23 +44,6 @@ export default function Presentation() {
       setDays(days);
     }, 1000);
   };
-
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start end", "end start"],
-  });
-
-  const background01 = useTransform(
-    scrollYProgress,
-    [0, 0.2, 0.4, 0.5, 0.6, 0.7, 1],
-    [300, 100, 0, 0, 0, 100, 300]
-  );
-
-  const background02 = useTransform(
-    scrollYProgress,
-    [0, 0.2, 0.4, 0.5, 0.6, 0.7, 1],
-    [-300, -100, 0, 0, 0, -100, -300]
-  );
 
   useEffect(() => {
     countDownClock();
@@ -108,8 +88,8 @@ export default function Presentation() {
 
   return (
     <section
-      ref={ref}
-      className="overflow-hidden relative h-screen flex justify-center items-center flex-col px-5 py-10"
+      className="relative flex justify-center items-center flex-col px-5 py-10"
+      style={{ height: "100svh" }}
     >
       <Card className="border-none bg-background/60 h-full w-full" shadow="sm">
         <CardBody className="flex items-center justify-center flex-col">
@@ -240,30 +220,7 @@ export default function Presentation() {
             </svg>
           </motion.div>
         </CardBody>
-      </Card>
-
-      <motion.img
-        src="/img/quinces/daniela/floral-right02.png"
-        width={250}
-        height={250}
-        alt=""
-        className="absolute z-20 top-0 -right-10"
-        variants={animation07}
-        initial="hidden"
-        whileInView="visible"
-        style={{ x: background01, rotate: "-5deg" }}
-      />
-      <motion.img
-        src="/img/quinces/daniela/floral-left02.png"
-        width={200}
-        height={200}
-        alt=""
-        className="absolute z-10 bottom-0 -left-8"
-        variants={animation07}
-        initial="hidden"
-        whileInView="visible"
-        style={{ x: background02, rotate: "-15deg" }}
-      />
+      </Card>    
     </section>
   );
 }
