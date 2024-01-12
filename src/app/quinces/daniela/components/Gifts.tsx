@@ -144,7 +144,7 @@ export default function Gifts() {
   return (
     <>
       <section
-        className="flex justify-center items-center flex-col px-5 py-10"
+        className="flex justify-center items-center flex-col px-7 py-10"
         style={{ height: "100svh" }}
       >
         <Card

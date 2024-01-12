@@ -46,7 +46,7 @@ export default function Gallery() {
   const [index, setIndex] = useState(-1);
 
   return (
-    <section className="relative px-5 py-10" style={{ height: "100svh" }}>
+    <section className="relative px-7 py-10" style={{ height: "100svh" }}>
       <Card className="border-none bg-background/60 h-full w-full" shadow="sm" radius="none" isBlurred>
         <CardBody className="overflow-clip">
           <motion.h1

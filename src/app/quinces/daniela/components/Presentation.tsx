@@ -88,7 +88,7 @@ export default function Presentation() {
 
   return (
     <section
-      className="relative flex justify-center items-center flex-col px-5 py-10"
+      className="relative flex justify-center items-center flex-col px-7 py-10"
       style={{ height: "100svh" }}
     >
       <Card className="border-none bg-background/60 h-full w-full" shadow="sm" radius="none" isBlurred>

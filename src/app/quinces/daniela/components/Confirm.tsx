@@ -12,7 +12,7 @@ import { FaPhoneAlt, FaWhatsapp } from "react-icons/fa";
 export default function Confirm() {
   return (
     <section
-      className="flex items-center justify-center flex-col px-5 py-10"
+      className="flex items-center justify-center flex-col px-7 py-10"
       style={{ height: "100svh" }}
     >
       <Card className="border-none bg-background/60 h-full w-full" shadow="sm" radius="none" isBlurred>
