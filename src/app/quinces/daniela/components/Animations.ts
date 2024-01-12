@@ -40,7 +40,7 @@ export const animation05 = {
   visible: {
     scale: 1,
     opacity: 1,
-    transition: { duration: 1 },
+    transition: { duration: 2 },
   },
 };
 

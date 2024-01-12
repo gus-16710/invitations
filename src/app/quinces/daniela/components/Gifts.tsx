@@ -149,7 +149,7 @@ export default function Gifts() {
       >
         <Card
           className="border-none bg-background/60 h-full w-full"
-          shadow="sm"
+          shadow="sm" radius="none" isBlurred
         >
           <CardBody className="flex items-center justify-center flex-col overflow-clip">
             <motion.h1

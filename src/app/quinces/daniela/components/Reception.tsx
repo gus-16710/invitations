@@ -77,7 +77,7 @@ export default function Reception() {
       >
         <Card
           className="border-none bg-background/60 h-full w-full"
-          shadow="sm"
+          shadow="sm" radius="none" isBlurred
         >
           <CardBody className="flex items-center justify-center flex-col">
             <motion.h1
