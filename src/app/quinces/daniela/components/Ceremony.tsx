@@ -156,13 +156,13 @@ export default function Ceremony() {
             <motion.div
               variants={animation06}
               initial="hidden"
-              whileInView="visible"
+              whileInView="visible"              
             >
               <Avatar
                 isBordered
                 color="warning"
                 src="/img/quinces/daniela/church.jpg"
-                className="h-40 w-40 my-5"
+                className="h-40 w-40 my-5 shadow-lg"
               />
             </motion.div>
 

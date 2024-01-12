@@ -9,6 +9,7 @@ import {
   Clicker_Script,
   Aref_Ruqaa,
   Rajdhani,
+  Yeseva_One
 } from "next/font/google";
 
 export const greatVibes = Great_Vibes({ subsets: ["latin"], weight: "400" });
@@ -28,3 +29,6 @@ export const oswald = Oswald({ subsets: ["latin"], weight: "400" });
 export const clicker = Clicker_Script({ subsets: ["latin"], weight: "400" });
 export const aref = Aref_Ruqaa({ subsets: ["latin"], weight: "400" });
 export const rajdhani = Rajdhani({ subsets: ["latin"], weight: "400" });
+export const yaseva = Yeseva_One({ subsets: ["latin"], weight: "400" });
+
+//box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;

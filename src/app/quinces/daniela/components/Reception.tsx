@@ -161,7 +161,7 @@ export default function Reception() {
                 isBordered
                 color="warning"
                 src="/img/quinces/daniela/salon.jpg"
-                className="h-40 w-40 my-5"
+                className="h-40 w-40 my-5 shadow-lg"
               />
             </motion.div>
 

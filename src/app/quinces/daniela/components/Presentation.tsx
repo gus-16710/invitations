@@ -5,9 +5,9 @@ import {
   animation01,
   animation03,
   animation04,
-  animation06, 
+  animation06,
 } from "./Animations";
-import { aref, clicker, pinyion } from "./Fonts";
+import { aref, clicker, pinyion, yaseva } from "./Fonts";
 
 function formatNumber(number: number) {
   return number < 10 ? `0${number}` : number;
@@ -91,7 +91,12 @@ export default function Presentation() {
       className="relative flex justify-center items-center flex-col px-7 py-10"
       style={{ height: "100svh" }}
     >
-      <Card className="border-none bg-background/5 h-full w-full" shadow="sm" radius="lg" isBlurred>
+      <Card
+        className="border-none bg-background/5 h-full w-full"
+        shadow="sm"
+        radius="lg"
+        isBlurred
+      >
         <CardBody className="flex items-center justify-center flex-col">
           <motion.h1
             className={`${pinyion.className} text-5xl text-yellow-400 mt-5 text-center`}
@@ -167,28 +172,48 @@ export default function Presentation() {
           </motion.div>
 
           <motion.div
-            className={`${clicker.className} my-10 flex justify-evenly w-full text-3xl max-w-md`}
+            className={`${clicker.className} my-10 flex justify-evenly w-full text-3xl max-w-md text-yellow-400`}
             variants={animation03}
             initial="hidden"
             whileInView="visible"
           >
             <label className="flex flex-col items-center">
-              <span ref={scopeDays}>{formatNumber(days)}</span>
+              <span
+                ref={scopeDays}
+                className={`${yaseva.className}  mb-2`}               
+              >
+                {formatNumber(days)}
+              </span>
               <span className="text-2xl">Días</span>
             </label>
             <label>:</label>
             <label className="flex flex-col items-center">
-              <span ref={scopeHours}>{formatNumber(hours)}</span>
+              <span
+                ref={scopeHours}
+                className={`${yaseva.className} mb-2`}               
+              >
+                {formatNumber(hours)}
+              </span>
               <span className="text-2xl">Horas</span>
             </label>
             <label>:</label>
             <label className="flex flex-col items-center">
-              <span ref={scopeMinutes}>{formatNumber(minutes)}</span>
+              <span
+                ref={scopeMinutes}
+                className={`${yaseva.className} mb-2`}               
+              >
+                {formatNumber(minutes)}
+              </span>
               <span className="text-2xl">Min</span>
             </label>
-            <label>:</label>
+            <label >:</label>
             <label className="flex flex-col items-center">
-              <span ref={scopeSeconds}>{formatNumber(seconds)}</span>
+              <span
+                ref={scopeSeconds}
+                className={`${yaseva.className} mb-2`}               
+              >
+                {formatNumber(seconds)}
+              </span>
               <span className="text-2xl">Seg</span>
             </label>
           </motion.div>
@@ -220,7 +245,7 @@ export default function Presentation() {
             </svg>
           </motion.div>
         </CardBody>
-      </Card>    
+      </Card>
     </section>
   );
 }
