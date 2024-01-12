@@ -15,7 +15,7 @@ export default function Confirm() {
       className="flex items-center justify-center flex-col px-7 py-10"
       style={{ height: "100svh" }}
     >
-      <Card className="border-none bg-background/60 h-full w-full" shadow="sm" radius="none" isBlurred>
+      <Card className="border-none bg-background/5 h-full w-full" shadow="sm" radius="lg" isBlurred>
         <CardBody className="flex items-center justify-center flex-col">
           <motion.h1
             className={`${pinyion.className} text-5xl text-yellow-400 mt-5 text-center`}

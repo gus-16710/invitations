@@ -148,8 +148,8 @@ export default function Gifts() {
         style={{ height: "100svh" }}
       >
         <Card
-          className="border-none bg-background/60 h-full w-full"
-          shadow="sm" radius="none" isBlurred
+          className="border-none bg-background/5 h-full w-full"
+          shadow="sm" radius="lg" isBlurred
         >
           <CardBody className="flex items-center justify-center flex-col overflow-clip">
             <motion.h1
