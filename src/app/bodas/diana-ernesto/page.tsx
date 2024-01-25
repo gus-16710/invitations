@@ -101,6 +101,7 @@ export default function Wedding() {
 
   useEffect(() => {
     onOpen();
+    console.log("Init");
   }, []);
 
   return (
