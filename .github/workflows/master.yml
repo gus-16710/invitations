@@ -34,7 +34,7 @@ jobs:
             path: out
 
         - name: 📂 Sync files
-          uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+          uses: SamKirkland/FTP-Deploy-Action@v4.3.5
           with:
             server: ftp.unaideamas.com
             username: ${{ secrets.ftp_username }}
