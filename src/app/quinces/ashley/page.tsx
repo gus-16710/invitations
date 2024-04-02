@@ -6,6 +6,8 @@ import Header from "./components/Header";
 import Locations from "./components/Locations";
 import Presentation from "./components/Presentation";
 
+import "./styles.css";
+
 export default function Fifteen() {
   return (
     <main
