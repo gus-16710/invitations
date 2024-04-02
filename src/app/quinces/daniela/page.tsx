@@ -1,15 +1,6 @@
 "use client";
 
-import Ceremony from "./components/Ceremony";
-import Header from "./components/Header";
-import Presentation from "./components/Presentation";
 import { motion } from "framer-motion";
-import Reception from "./components/Reception";
-import GodParents from "./components/GodParents";
-import Gallery from "./components/Gallery";
-import Gifts from "./components/Gifts";
-import Confirm from "./components/Confirm";
-import FloatinButton from "./components/FloatingButton";
 import {
   Button,
   Modal,
@@ -22,7 +13,6 @@ import {
 import { useEffect, useState, Dispatch, SetStateAction } from "react";
 import { pinyion, playFair } from "./components/Fonts";
 import { animation01, animation03 } from "./components/Animations";
-import AudioControl from "./components/AudioControl";
 
 import "./styles.css";
 import Main from "./components/Main";

@@ -8,6 +8,7 @@ import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
 
 export default function Wedding() {
+
   return (
     <main className="max-w-3xl m-auto">
       <Splide
@@ -19,7 +20,7 @@ export default function Wedding() {
           wheel: true,
           releaseWheel: true,
           type: "loop",
-          waitForTransition: true,          
+          waitForTransition: true,
         }}
       >
         <SplideSlide>

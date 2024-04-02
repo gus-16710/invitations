@@ -100,8 +100,7 @@ export default function Wedding() {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
   useEffect(() => {
-    onOpen();
-    console.log("Init");
+    onOpen();    
   }, []);
 
   return (
