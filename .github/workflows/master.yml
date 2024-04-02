@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: 🚚 Get latest code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: ➕ Install dependecies
         run: npm ci
@@ -18,7 +18,7 @@ jobs:
         run: npm run build
 
       - name: ⬆️ Upload artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: out
           path: out
