@@ -17,7 +17,7 @@ import { useState } from "react";
 
 const MapSalon = () => (
   <iframe
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15039.966715973163!2d-96.93584853950922!3d19.541970800388352!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85db2e02dd008fb9%3A0x4166db4c76faf835!2sSalones%20Aurora!5e0!3m2!1ses!2smx!4v1700179455841!5m2!1ses!2smx"
+    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15040.421226581282!2d-96.908233!3d19.537092!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85db31f73ac0c917%3A0x896cc9a020f5c63e!2sVips%20Xalapa!5e0!3m2!1ses!2smx!4v1712089037042!5m2!1ses!2smx"
     height="450"
     style={{ border: "0" }}
     allowFullScreen
@@ -92,6 +92,9 @@ export default function Locations() {
           variants={locations.icon}
           initial="hidden"
           whileInView="visible"
+          style={{
+            filter: "drop-shadow(3px 5px 2px rgb(186 96 240 / 0.1))",
+          }}
         >
           <path
             d="M61.063 60.125h-.938v-15.01c.731.035 1.443-.371 1.739-1.074a1.754 1.754 0 0 0-.965-2.297l-15.774-6.443v-6.386l.348.141c.906.367 1.956-.058 2.329-.944c.376-.887-.059-1.914-.963-2.28l-13.276-5.523V9.813h4.688V6.688h-4.688V2h-3.125v4.688H25.75v3.125h4.688v10.495l-13.276 5.523c-.904.366-1.339 1.394-.963 2.28c.373.887 1.423 1.312 2.327.944l.35-.142V35.3L3.099 41.744a1.754 1.754 0 0 0-.963 2.297c.294.703 1.008 1.11 1.739 1.074v15.01h-.937c-.517 0-.938.422-.938.938s.421.937.938.937h58.125c.514 0 .937-.422.937-.937s-.423-.938-.937-.938m-42.188 0H5.75V44.466l13.125-5.361v21.02m12.188-1.562H28.25V55.75h2.813v2.813m0-4.063H28.25v-2.813c0-1.742 1.199-3.198 2.813-3.617v6.43m4.687 4.063h-2.813V55.75h2.813v2.813m0-4.063h-2.813v-6.429c1.612.419 2.813 1.875 2.813 3.616V54.5m7.5 5.625h-5.625v-8.438a5.625 5.625 0 0 0-11.25 0v8.438H20.75V28.153L32 23.59l11.25 4.564v31.971m15 0H45.125V39.104l13.125 5.361v15.66"
@@ -254,7 +257,7 @@ export default function Locations() {
         >
           <Divider
             orientation="vertical"
-            className="h-20 my-10 bg-purple-300"
+            className="h-24 my-10 bg-purple-300"
           />
         </motion.div>
 
@@ -267,7 +270,9 @@ export default function Locations() {
           variants={locations.icon}
           initial="hidden"
           whileInView="visible"
-        
+          style={{
+            filter: "drop-shadow(3px 5px 2px rgb(186 96 240 / 0.1))",
+          }}
         >
           <g>
             <path d="m157.075 214.056v.028c0 4.142 3.357 7.486 7.5 7.486s7.5-3.372 7.5-7.514-3.358-7.5-7.5-7.5c-4.143 0-7.5 3.358-7.5 7.5z"></path>

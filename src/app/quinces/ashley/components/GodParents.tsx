@@ -1,11 +1,26 @@
-import { FaPhoneAlt, FaWhatsapp } from "react-icons/fa";
-import { confirm } from "./Animations";
+import { godParents } from "./Animations";
 import { pinyion, quickSand } from "./Fonts";
 import { motion } from "framer-motion";
 
-export default function Confirm() {
+export default function GodParents() {
   return (
-    <section className="h-screen flex flex-col items-center justify-center overflow-clip">
+    <section className="h-screen flex flex-col items-center justify-center relative">
+      <svg
+        data-name="Layer 1"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 1200 120"
+        preserveAspectRatio="none"
+        className="absolute -top-1 w-full"
+        style={{
+          filter: "drop-shadow(3px 5px 2px rgb(0 0 0 / 0.1))",
+        }}
+      >
+        <path
+          d="M1200 0L0 0 598.97 114.72 1200 0z"
+          fill="rgb(237 235 254)"
+        ></path>
+      </svg>
+
       <motion.svg
         xmlns="http://www.w3.org/2000/svg"
         id="svg2"
@@ -15,7 +30,7 @@ export default function Confirm() {
         clipRule="evenodd"
         viewBox="0 0 36063.31 6639.3385"
         fill="rgb(153 21 75)"
-        variants={confirm.svg}
+        variants={godParents.svg}
         initial="hidden"
         whileInView="visible"
       >
@@ -28,55 +43,32 @@ export default function Confirm() {
       </motion.svg>
       <motion.h1
         className={`${pinyion.className} text-5xl text-yellow-400 mt-5 text-center`}
-        variants={confirm.animationText01}
+        variants={godParents.animationText01}
         initial="hidden"
         whileInView="visible"
         custom={1}
       >
-        Confirma tu asistencia
+        Padrinos
+      </motion.h1>
+
+      <motion.h1
+        className={`${pinyion.className} text-4xl text-slate-700 mt-5 text-center`}
+        variants={godParents.animationText02}
+        initial="hidden"
+        whileInView="visible"
+        custom={1}
+      >
+        Honor
       </motion.h1>
 
       <motion.p
-        className={`${quickSand.className} text-slate-700 mt-5 mx-10 text-center max-w-md`}
-        variants={confirm.text02}
+        className={`${quickSand.className} mx-10 mt-5 text-center text-zinc-800 text-xl`}
+        variants={godParents.animationText03}
         initial="hidden"
         whileInView="visible"
       >
-        Espero que puedan venir a compartir con nosotros este día inolvidable.
-        Por favor confirma tu presencia.
+        Keila Melgarejo Cruz <br /> & <br /> José Luis Ovando Murillo
       </motion.p>
-      <motion.p
-        className={`${quickSand.className} text-slate-700 mt-5 mx-10 text-center`}
-        variants={confirm.text03}
-        initial="hidden"
-        whileInView="visible"
-      >
-        ¡Muchas Gracias!
-      </motion.p>
-      <motion.div
-        className="mt-5 flex items-center justify-center flex-col"
-        variants={confirm.buttons}
-        initial="hidden"
-        whileInView="visible"
-      >
-        <button
-          type="button"
-          className="flex justify-center items-center gap-2 w-60 mt-3 text-pink-900 bg-white border border-gray-400 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 rounded-full me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700 font-medium text-sm px-5 py-2.5 text-center z-20"
-          onClick={() => window.open("https://wa.link/cuzs6q", "_blank")}
-        >
-          <FaWhatsapp className="text-2xl" />
-          Mensaje de Whatsapp
-        </button>
-
-        <button
-          type="button"
-          className="flex justify-center items-center gap-2 w-60 mt-3 text-pink-900 bg-white border border-gray-400 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 rounded-full me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700 font-medium text-sm px-5 py-2.5 text-center z-20"
-          onClick={() => window.open("tel:5511422546", "_blank")}
-        >
-          <FaPhoneAlt className="text-2xl" />
-          Llamada Telefonica
-        </button>
-      </motion.div>
     </section>
   );
 }

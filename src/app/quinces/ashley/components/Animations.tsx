@@ -156,3 +156,103 @@ export const locations = {
     },
   },
 };
+
+/**
+ * God Parents Animations
+ **/
+
+export const godParents = {
+  animationText01: {
+    hidden: { opacity: 0, scale: 0 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: { duration: 1, type: "spring", stiffness: 70, delay: 0.4 },
+    },
+  },
+  svg: {
+    hidden: { scale: 0 },
+    visible: {
+      scale: 1,
+      transition: { duration: 1 },
+    },
+  },
+  animationText02: {
+    hidden: { y: -100, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: { duration: 1, delay: 1 },
+    },
+  },
+  animationText03: {
+    hidden: { y: 100, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: { duration: 1, delay: 1 },
+    },
+  },
+};
+
+/**
+ * Confirm Animations
+ **/
+
+export const confirm = {
+  animationText01: {
+    hidden: { opacity: 0, scale: 0 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: { duration: 1, type: "spring", stiffness: 70, delay: 0.4 },
+    },
+  },
+  svg: {
+    hidden: { scale: 0 },
+    visible: {
+      scale: 1,
+      transition: { duration: 1 },
+    },
+  },
+  animationText02: {
+    hidden: { y: -100, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: { duration: 1, delay: 1 },
+    },
+  },
+  animationText03: {
+    hidden: { y: 100, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: { duration: 1, delay: 1 },
+    },
+  },
+  text02: {
+    hidden: { opacity: 0, y: -100 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 1, delay: 0.9 },
+    },
+  },
+  text03: {
+    hidden: { opacity: 0, y: 100 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 1, delay: 0.9 },
+    },
+  },
+  buttons: {
+    hidden: { opacity: 0, y: 100 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 1, delay: 1.2 },
+    },
+  },
+};
