@@ -36,7 +36,7 @@ export default function Gifts() {
         Mesa de Regalos
       </motion.h1>
       <motion.p
-        className={`${quickSand.className} text-slate-700 mt-5 mx-10 text-center max-w-md`}
+        className={`${quickSand.className} text-slate-700 mt-10 mx-10 text-center max-w-md`}
         variants={gifts.animationText02}
         initial="hidden"
         whileInView="visible"
@@ -45,7 +45,7 @@ export default function Gifts() {
         te dejamos algunas sugerencias de regalos.
       </motion.p>
       <motion.div
-        className="mx-5 mt-2 w-52"
+        className="mx-5 mt-5 w-52"
         variants={gifts.animationAccordion}
         initial="hidden"
         whileInView="visible"

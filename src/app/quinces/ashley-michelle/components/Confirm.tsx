@@ -33,7 +33,7 @@ export default function Confirm() {
         whileInView="visible"
         custom={1}
       >
-        Confirma tu asistencia
+        Confirmar <br /> Asistencia
       </motion.h1>
 
       <motion.p
@@ -52,7 +52,7 @@ export default function Confirm() {
         whileInView="visible"
       >
         ¡Muchas Gracias!
-      </motion.p>     
+      </motion.p>
       <motion.div
         className="mt-5 flex items-center justify-center flex-col"
         variants={confirm.buttons}
@@ -76,7 +76,7 @@ export default function Confirm() {
           <FaPhoneAlt className="text-2xl" />
           Llamada Telefonica
         </button>
-      </motion.div>      
+      </motion.div>
     </section>
   );
 }

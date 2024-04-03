@@ -24,7 +24,7 @@ export const header = {
     visible: {
       x: 0,
       opacity: 1,
-      transition: { duration: 1, delay: 1.5 },
+      transition: { duration: 1, delay: 2.5 },
     },
   },
   animationText04: {
@@ -32,7 +32,7 @@ export const header = {
     visible: {
       x: 0,
       opacity: 1,
-      transition: { duration: 1, delay: 1.5 },
+      transition: { duration: 1, delay: 2.5 },
     },
   },
   animationText05: {
@@ -40,7 +40,7 @@ export const header = {
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 1, delay: 2 },
+      transition: { duration: 1, delay: 3 },
     },
   },
   animationFrame: {
@@ -129,7 +129,7 @@ export const locations = {
     visible: {
       x: 0,
       opacity: 1,
-      transition: { duration: 1, delay: 1 },
+      transition: { duration: 1, delay: 2 },
     },
   },
   animationText03: {
@@ -137,7 +137,7 @@ export const locations = {
     visible: {
       x: 0,
       opacity: 1,
-      transition: { duration: 1, delay: 1 },
+      transition: { duration: 1, delay: 2 },
     },
   },
   time01: {
@@ -145,7 +145,7 @@ export const locations = {
     visible: {
       x: 0,
       opacity: 1,
-      transition: { duration: 1, delay: 1.6 },
+      transition: { duration: 1, delay: 1.5 },
     },
   },
   button01: {
@@ -153,7 +153,7 @@ export const locations = {
     visible: {
       opacity: 1,
       x: 0,
-      transition: { duration: 1, delay: 1.6 },
+      transition: { duration: 1, delay: 1.5 },
     },
   },
   divider: {
@@ -168,7 +168,7 @@ export const locations = {
     visible: {
       y: 0,
       opacity: 1,
-      transition: { duration: 1, delay: 1 },
+      transition: { duration: 1, delay: 1.5 },
     },
   },
 };
