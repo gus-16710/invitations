@@ -1,11 +1,11 @@
-import { FaPhoneAlt, FaWhatsapp } from "react-icons/fa";
-import { confirm } from "./Animations";
+import { gifts } from "./Animations";
 import { pinyion, quickSand } from "./Fonts";
 import { motion } from "framer-motion";
+import { Accordion, AccordionItem, Avatar } from "@nextui-org/react";
 
-export default function Confirm() {
+export default function Gifts() {
   return (
-    <section className="h-screen flex flex-col items-center justify-center overflow-clip relative">
+    <section className="h-screen flex flex-col items-center justify-center overflow-clip">
       <motion.svg
         xmlns="http://www.w3.org/2000/svg"
         id="svg2"
@@ -15,7 +15,7 @@ export default function Confirm() {
         clipRule="evenodd"
         viewBox="0 0 36063.31 6639.3385"
         fill="rgb(153 21 75)"
-        variants={confirm.svg}
+        variants={gifts.svg}
         initial="hidden"
         whileInView="visible"
       >
@@ -28,55 +28,57 @@ export default function Confirm() {
       </motion.svg>
       <motion.h1
         className={`${pinyion.className} text-5xl text-yellow-400 mt-5 text-center`}
-        variants={confirm.animationText01}
+        variants={gifts.animationText01}
         initial="hidden"
         whileInView="visible"
         custom={1}
       >
-        Confirma tu asistencia
+        Mesa de Regalos
       </motion.h1>
-
       <motion.p
         className={`${quickSand.className} text-slate-700 mt-5 mx-10 text-center max-w-md`}
-        variants={confirm.animationText02}
+        variants={gifts.animationText02}
         initial="hidden"
         whileInView="visible"
       >
-        Espero que puedan venir a compartir con nosotros este día inolvidable.
-        Por favor confirma tu presencia.
+        Lo más importante es tu presencia, pero si deseas hacernos un presente,
+        te dejamos algunas sugerencias de regalos.
       </motion.p>
-      <motion.p
-        className={`${quickSand.className} text-slate-700 mt-5 mx-10 text-center`}
-        variants={confirm.animationText03}
-        initial="hidden"
-        whileInView="visible"
-      >
-        ¡Muchas Gracias!
-      </motion.p>     
       <motion.div
-        className="mt-5 flex items-center justify-center flex-col"
-        variants={confirm.buttons}
+        className="mx-5 mt-2 w-52"
+        variants={gifts.animationAccordion}
         initial="hidden"
         whileInView="visible"
       >
-        <button
-          type="button"
-          className="flex justify-center items-center gap-2 w-60 mt-3 text-pink-900 bg-white border border-gray-400 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 rounded-full me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700 font-medium text-sm px-5 py-2.5 text-center z-20"
-          onClick={() => window.open("https://wa.link/xkhs4b", "_blank")}
-        >
-          <FaWhatsapp className="text-2xl" />
-          Mensaje de Whatsapp
-        </button>
-
-        <button
-          type="button"
-          className="flex justify-center items-center gap-2 w-60 mt-3 text-pink-900 bg-white border border-gray-400 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 rounded-full me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700 font-medium text-sm px-5 py-2.5 text-center z-20"
-          onClick={() => window.open("tel:2281246197", "_blank")}
-        >
-          <FaPhoneAlt className="text-2xl" />
-          Llamada Telefonica
-        </button>
-      </motion.div>      
+        <Accordion>
+          <AccordionItem
+            key="1"
+            aria-label="Liverpool"
+            startContent={
+              <Avatar
+                isBordered
+                color="secondary"
+                radius="lg"
+                src="/img/quinces/ashley/liverpool-logo.png"
+              />
+            }
+            subtitle="Ver Detalles"
+            title="Liverpool"
+          >
+            <div className="flex items-center justify-center">
+              <button
+                type="button"
+                className="px-3 py-2 text-sm font-medium text-pink-900 bg-white border border-gray-400 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 rounded-full me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
+                // onClick={() => {
+                //   onOpen();
+                // }}
+              >
+                No. Evento 51380455
+              </button>
+            </div>
+          </AccordionItem>
+        </Accordion>
+      </motion.div>
     </section>
   );
 }

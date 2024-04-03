@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function GodParents() {
   return (
-    <section className="h-screen flex flex-col items-center justify-center relative">
+    <section className="h-screen flex flex-col items-center justify-center relative overflow-clip">
       <svg
         data-name="Layer 1"
         xmlns="http://www.w3.org/2000/svg"

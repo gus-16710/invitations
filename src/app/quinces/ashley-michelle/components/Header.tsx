@@ -1,10 +1,10 @@
 import { header } from "./Animations";
-import { notoSerif, pinyion, playFair, whisper } from "./Fonts";
+import { notoSerif, pinyion, playFair } from "./Fonts";
 import { motion } from "framer-motion";
 
 export default function Header() {
   return (
-    <section className="h-screen flex flex-col items-center justify-center">
+    <section className="h-screen flex flex-col items-center justify-center overflow-clip">
       <motion.h1
         className={`${playFair.className} text-2xl flex items-center text-zinc-600 z-20`}
         variants={header.animationText01}
@@ -66,21 +66,13 @@ export default function Header() {
       </motion.p>
 
       <motion.p
-        className={`${whisper.className} text-center mx-10 text-2xl text-orange-800`}
+        className={`${playFair.className} text-center mx-10 text-orange-800 mt-2 text-sm`}
         variants={header.animationText05}
         initial="hidden"
         whileInView="visible"
       >
-        Su madre agradece tu asistencia
-      </motion.p>
-      <motion.p
-        className={`${playFair.className} mb-3 text-orange-800`}
-        variants={header.animationText05}
-        initial="hidden"
-        whileInView="visible"
-      >
-        Brenda Castro Melgarejo
-      </motion.p>
+        Mi mami, <span className="font-semibold">Brenda Castro Melgarejo</span> agradecerá mucho tu asistencia
+      </motion.p>     
     </section>
   );
 }

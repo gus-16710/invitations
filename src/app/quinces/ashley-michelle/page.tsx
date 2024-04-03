@@ -23,6 +23,7 @@ import { pinyion, playFair } from "./components/Fonts";
 import { header } from "./components/Animations";
 import AudioControl from "./components/AudioControl";
 import { FaRegEye } from "react-icons/fa";
+import Gifts from "./components/Gifts";
 
 const ModalOpening = ({
   isOpen,
@@ -69,7 +70,7 @@ const ModalOpening = ({
                   onPress={() => {
                     setOpen(true);
                     onClose();
-                  }}                  
+                  }}
                 >
                   <FaRegEye /> Ver Invitación
                 </Button>
@@ -98,6 +99,7 @@ export default function Fifteen() {
           <Presentation />
           <Locations />
           <GodParents />
+          <Gifts />
           <Confirm />
           <FloatinButton />
           <AudioControl />

@@ -8,7 +8,7 @@ export const header = {
     visible: {
       opacity: 1,
       scale: 1,
-      transition: { duration: 1, type: "spring", stiffness: 70, delay: 0.4 },
+      transition: { duration: 2, type: "spring", stiffness: 70, delay: 0.4 },
     },
   },
   animationText02: {
@@ -19,35 +19,36 @@ export const header = {
       transition: { duration: 1, type: "spring", stiffness: 70, delay: 0.8 },
     },
   },
-  animationFrame: {
-    hidden: { rotate: 180, opacity: 0 },
-    visible: {
-      rotate: 0,
-      opacity: 0.8,
-      transition: { duration: 1, delay: 1.2 },
-    },
-  },
   animationText03: {
-    hidden: { y: 100, opacity: 0 },
+    hidden: { x: -100, opacity: 0 },
     visible: {
-      y: 0,
+      x: 0,
       opacity: 1,
       transition: { duration: 1, delay: 1.5 },
     },
   },
   animationText04: {
-    hidden: { y: -100, opacity: 0 },
+    hidden: { x: 100, opacity: 0 },
     visible: {
-      y: 0,
+      x: 0,
       opacity: 1,
       transition: { duration: 1, delay: 1.5 },
     },
   },
   animationText05: {
-    hidden: { opacity: 0 },
+    hidden: { opacity: 0, y: -50 },
     visible: {
       opacity: 1,
+      y: 0,
       transition: { duration: 1, delay: 2 },
+    },
+  },
+  animationFrame: {
+    hidden: { rotate: 180, opacity: 0 },
+    visible: {
+      rotate: 0,
+      opacity: 0.8,
+      transition: { duration: 1.5, delay: 1.2 },
     },
   },
   animationButton01: {
@@ -113,47 +114,46 @@ export const presentation = {
 export const locations = {
   icon: {
     hidden: { opacity: 0, scale: 0 },
-    visible: { opacity: 1, scale: 1, transition: { duration: 1, delay: 0.3 } },
+    visible: { opacity: 1, scale: 1, transition: { duration: 1, delay: 0.4 } },
   },
   animationText01: {
-    hidden: { scale: 0, opacity: 0, rotate: 360 },
+    hidden: { opacity: 0, scale: 0 },
     visible: {
-      scale: 1,
       opacity: 1,
-      rotate: 0,
-      transition: { duration: 1, delay: 0.6 },
+      scale: 1,
+      transition: { duration: 2, type: "spring", stiffness: 70, delay: 0.8 },
     },
   },
   animationText02: {
-    hidden: { y: 100, opacity: 0 },
+    hidden: { x: 100, opacity: 0 },
     visible: {
-      y: 0,
+      x: 0,
       opacity: 1,
       transition: { duration: 1, delay: 1 },
     },
   },
   animationText03: {
-    hidden: { y: -100, opacity: 0 },
+    hidden: { x: -100, opacity: 0 },
     visible: {
-      y: 0,
+      x: 0,
       opacity: 1,
       transition: { duration: 1, delay: 1 },
     },
   },
   time01: {
-    hidden: { scale: 0, opacity: 0 },
+    hidden: { opacity: 0, x: -100 },
     visible: {
-      scale: 1,
+      x: 0,
       opacity: 1,
-      transition: { duration: 1, delay: 1.5 },
+      transition: { duration: 1, delay: 1.6 },
     },
   },
   button01: {
-    hidden: { scale: 0, opacity: 0 },
+    hidden: { opacity: 0, x: 100 },
     visible: {
-      scale: 1,
       opacity: 1,
-      transition: { duration: 1, delay: 1.5 },
+      x: 0,
+      transition: { duration: 1, delay: 1.6 },
     },
   },
   divider: {
@@ -161,6 +161,14 @@ export const locations = {
     visible: {
       scale: 1,
       transition: { duration: 1, delay: 1.5 },
+    },
+  },
+  animationAlert: {
+    hidden: { y: 100, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: { duration: 1, delay: 1 },
     },
   },
 };
@@ -186,17 +194,17 @@ export const godParents = {
     },
   },
   animationText02: {
-    hidden: { y: -100, opacity: 0 },
+    hidden: { x: 100, opacity: 0 },
     visible: {
-      y: 0,
+      x: 0,
       opacity: 1,
       transition: { duration: 1, delay: 1 },
     },
   },
   animationText03: {
-    hidden: { y: 100, opacity: 0 },
+    hidden: { x: -100, opacity: 0 },
     visible: {
-      y: 0,
+      x: 0,
       opacity: 1,
       transition: { duration: 1, delay: 1 },
     },
@@ -207,7 +215,14 @@ export const godParents = {
  * Confirm Animations
  **/
 
-export const confirm = {
+export const confirm = {  
+  svg: {
+    hidden: { scale: 0 },
+    visible: {
+      scale: 1,
+      transition: { duration: 1 },
+    },
+  },
   animationText01: {
     hidden: { opacity: 0, scale: 0 },
     visible: {
@@ -216,43 +231,20 @@ export const confirm = {
       transition: { duration: 1, type: "spring", stiffness: 70, delay: 0.4 },
     },
   },
-  svg: {
-    hidden: { scale: 0 },
-    visible: {
-      scale: 1,
-      transition: { duration: 1 },
-    },
-  },
   animationText02: {
-    hidden: { y: -100, opacity: 0 },
+    hidden: { x: 100, opacity: 0 },
     visible: {
-      y: 0,
+      x: 0,
       opacity: 1,
       transition: { duration: 1, delay: 1 },
     },
   },
   animationText03: {
-    hidden: { y: 100, opacity: 0 },
+    hidden: { x: -100, opacity: 0 },
     visible: {
-      y: 0,
+      x: 0,
       opacity: 1,
       transition: { duration: 1, delay: 1 },
-    },
-  },
-  text02: {
-    hidden: { opacity: 0, y: -100 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 1, delay: 0.9 },
-    },
-  },
-  text03: {
-    hidden: { opacity: 0, y: 100 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 1, delay: 0.9 },
     },
   },
   buttons: {
@@ -263,4 +255,42 @@ export const confirm = {
       transition: { duration: 1, delay: 1.2 },
     },
   },
+};
+
+/**
+ * Confirm Animations
+ **/
+
+export const gifts = {
+  svg: {
+    hidden: { scale: 0 },
+    visible: {
+      scale: 1,
+      transition: { duration: 1 },
+    },
+  },
+  animationText01: {
+    hidden: { opacity: 0, scale: 0 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: { duration: 1, type: "spring", stiffness: 70, delay: 0.4 },
+    },
+  },
+  animationText02: {
+    hidden: { x: 100, opacity: 0 },
+    visible: {
+      x: 0,
+      opacity: 1,
+      transition: { duration: 1, delay: 1 },
+    },
+  }, 
+  animationAccordion: {
+    hidden: { x: -100, opacity: 0 },
+    visible: {
+      x: 0,
+      opacity: 1,
+      transition: { duration: 1, delay: 1 },
+    },
+  }, 
 };
