@@ -447,7 +447,7 @@ export default function Locations() {
         </motion.button>
 
         <motion.div
-          className="mt-10 flex p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400 mx-5"
+          className="mt-10 flex p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400 mx-5 shadow-md"
           role="alert"
           variants={locations.animationAlert}
           initial="hidden"
