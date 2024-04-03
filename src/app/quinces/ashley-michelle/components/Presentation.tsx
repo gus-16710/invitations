@@ -1,11 +1,90 @@
-import { FaPhoneAlt, FaWhatsapp } from "react-icons/fa";
-import { confirm } from "./Animations";
-import { pinyion, quickSand } from "./Fonts";
-import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
+import { anton, aref, pinyion, whisper } from "./Fonts";
+import { useAnimate, motion } from "framer-motion";
+import { presentation } from "./Animations";
 
-export default function Confirm() {
+function formatNumber(number: number) {
+  return number < 10 ? `0${number}` : number;
+}
+
+export default function Presentation() {
+  const [seconds, setSeconds] = useState(0);
+  const [minutes, setMinutes] = useState(0);
+  const [hours, setHours] = useState(0);
+  const [days, setDays] = useState(0);
+
+  const countDownClock = () => {
+    const countDownDate: any = new Date("Jun 15, 2024 13:00:00");    
+
+    const interval = setInterval(() => {
+      const now = new Date().getTime();
+      const distance = countDownDate - now;
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor(
+        (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+      );
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      if (distance < 0) {
+        clearInterval(interval);
+        setSeconds(0);
+        setMinutes(0);
+        setHours(0);
+        setDays(0);
+      } else {
+        setSeconds(seconds);
+        setMinutes(minutes);
+        setHours(hours);
+        setDays(days);
+      }
+    }, 1000);
+  };
+
+  useEffect(() => {
+    countDownClock();
+  }, []);
+
+  const [scopeSeconds, animateSeconds] = useAnimate();
+  const [scopeMinutes, animateMinutes] = useAnimate();
+  const [scopeHours, animateHours] = useAnimate();
+  const [scopeDays, animateDays] = useAnimate();
+
+  useEffect(() => {
+    animateSeconds(
+      scopeSeconds.current,
+      { y: [20, 0], opacity: [0, 1] },
+      { ease: "easeInOut", type: "keyframes" }
+    );
+  }, [seconds, animateSeconds]);
+
+  useEffect(() => {
+    animateMinutes(
+      scopeMinutes.current,
+      { y: [20, 0], opacity: [0, 1] },
+      { ease: "easeInOut", type: "keyframes" }
+    );
+  }, [minutes, animateSeconds]);
+
+  useEffect(() => {
+    animateHours(
+      scopeHours.current,
+      { y: [20, 0], opacity: [0, 1] },
+      { ease: "easeInOut", type: "keyframes" }
+    );
+  }, [hours, animateHours]);
+
+  useEffect(() => {
+    animateDays(
+      scopeDays.current,
+      { y: [20, 0], opacity: [0, 1] },
+      { ease: "easeInOut", type: "keyframes" }
+    );
+  }, [days, animateDays]);
+
   return (
-    <section className="h-screen flex flex-col items-center justify-center overflow-clip">
+    <section className="h-screen flex flex-col items-center justify-center relative">
       <motion.svg
         xmlns="http://www.w3.org/2000/svg"
         id="svg2"
@@ -15,7 +94,7 @@ export default function Confirm() {
         clipRule="evenodd"
         viewBox="0 0 36063.31 6639.3385"
         fill="rgb(153 21 75)"
-        variants={confirm.svg}
+        variants={presentation.svg}
         initial="hidden"
         whileInView="visible"
       >
@@ -28,55 +107,82 @@ export default function Confirm() {
       </motion.svg>
       <motion.h1
         className={`${pinyion.className} text-5xl text-yellow-400 mt-5 text-center`}
-        variants={confirm.animationText01}
+        variants={presentation.animationText01}
         initial="hidden"
         whileInView="visible"
         custom={1}
       >
-        Confirma tu asistencia
+        Sólo Faltan
       </motion.h1>
 
-      <motion.p
-        className={`${quickSand.className} text-slate-700 mt-5 mx-10 text-center max-w-md`}
-        variants={confirm.text02}
-        initial="hidden"
-        whileInView="visible"
-      >
-        Espero que puedan venir a compartir con nosotros este día inolvidable.
-        Por favor confirma tu presencia.
-      </motion.p>
-      <motion.p
-        className={`${quickSand.className} text-slate-700 mt-5 mx-10 text-center`}
-        variants={confirm.text03}
-        initial="hidden"
-        whileInView="visible"
-      >
-        ¡Muchas Gracias!
-      </motion.p>
-      <motion.div
-        className="mt-5 flex items-center justify-center flex-col"
-        variants={confirm.buttons}
-        initial="hidden"
-        whileInView="visible"
-      >
-        <button
-          type="button"
-          className="flex justify-center items-center gap-2 w-60 mt-3 text-pink-900 bg-white border border-gray-400 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 rounded-full me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700 font-medium text-sm px-5 py-2.5 text-center z-20"
-          onClick={() => window.open("https://wa.link/cuzs6q", "_blank")}
+      <div className="flex gap-16 text-zinc-600 mt-10">
+        <motion.div
+          className="flex flex-col"
+          variants={presentation.animationTimer01}
+          initial="hidden"
+          whileInView="visible"
         >
-          <FaWhatsapp className="text-2xl" />
-          Mensaje de Whatsapp
-        </button>
+          <p className="flex flex-col items-center">
+            <span className={`${anton.className} text-5xl`} ref={scopeDays}>
+              {formatNumber(days)}
+            </span>
+            <span className={`${whisper.className} text-3xl`}>Días</span>
+          </p>
+          <p className="flex flex-col items-center mt-5">
+            <span className={`${anton.className} text-5xl`} ref={scopeMinutes}>
+              {formatNumber(minutes)}
+            </span>
+            <span className={`${whisper.className} text-3xl`}>Minutos</span>
+          </p>
+        </motion.div>
+        <motion.div
+          className="flex flex-col"
+          variants={presentation.animationTimer02}
+          initial="hidden"
+          whileInView="visible"
+        >
+          <p className="flex flex-col items-center">
+            <span className={`${anton.className} text-5xl`} ref={scopeHours}>
+              {formatNumber(hours)}
+            </span>
+            <span className={`${whisper.className} text-3xl`}>Horas</span>
+          </p>
+          <p className="flex flex-col items-center mt-5">
+            <span className={`${anton.className} text-5xl`} ref={scopeSeconds}>
+              {formatNumber(seconds)}
+            </span>
+            <span className={`${whisper.className} text-3xl`}>Segundos</span>
+          </p>
+        </motion.div>
+      </div>
 
-        <button
-          type="button"
-          className="flex justify-center items-center gap-2 w-60 mt-3 text-pink-900 bg-white border border-gray-400 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 rounded-full me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700 font-medium text-sm px-5 py-2.5 text-center z-20"
-          onClick={() => window.open("tel:5511422546", "_blank")}
-        >
-          <FaPhoneAlt className="text-2xl" />
-          Llamada Telefonica
-        </button>
-      </motion.div>
+      <motion.p
+        className={`${aref.className} text-base px-5 text-center max-w-md mt-5`}
+        variants={presentation.animationText02}
+        initial="hidden"
+        whileInView="visible"
+      >
+        Son mis quince años una ilusión sin igual. Fábrica de lindos momentos
+        que nunca voy a olvidar, por eso los quiero celebrar con mis familiares
+        y amigos en este día tan especial.
+      </motion.p>
+
+      <svg
+        data-name="Layer 1"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 1200 120"
+        preserveAspectRatio="none"
+        className="absolute -bottom-1 w-full"
+        style={{
+          rotate: "180deg",
+          filter: "drop-shadow(3px 5px 2px rgb(0 0 0 / 0.1))",
+        }}
+      >
+        <path
+          d="M1200 0L0 0 598.97 114.72 1200 0z"
+          fill="rgb(237 235 254)"
+        ></path>
+      </svg>
     </section>
   );
 }

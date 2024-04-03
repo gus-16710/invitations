@@ -50,6 +50,14 @@ export const header = {
       transition: { duration: 1, delay: 2 },
     },
   },
+  animationButton01: {
+    hidden: { opacity: 0, y: -100 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 1, delay: 1 },
+    },
+  },
 };
 
 /**
@@ -104,8 +112,8 @@ export const presentation = {
 
 export const locations = {
   icon: {
-    hidden: { scale: 0 },
-    visible: { scale: 1, transition: { duration: 1, delay: 0.3 } },
+    hidden: { opacity: 0, scale: 0 },
+    visible: { opacity: 1, scale: 1, transition: { duration: 1, delay: 0.3 } },
   },
   animationText01: {
     hidden: { scale: 0, opacity: 0, rotate: 360 },

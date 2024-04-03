@@ -22,6 +22,7 @@ import "./styles.css";
 import { pinyion, playFair } from "./components/Fonts";
 import { header } from "./components/Animations";
 import AudioControl from "./components/AudioControl";
+import { FaRegEye } from "react-icons/fa";
 
 const ModalOpening = ({
   isOpen,
@@ -38,28 +39,18 @@ const ModalOpening = ({
       onOpenChange={onOpenChange}
       size="xs"
       placement="center"
-      backdrop="blur"
+      backdrop="opaque"
       isDismissable={false}
       hideCloseButton={true}
     >
-      <ModalContent>
+      <ModalContent style={{ backgroundColor: "#ba60f0" }}>
         {(onClose) => (
           <>
-            <ModalHeader className="flex flex-col gap-1">
-              <motion.h1
-                className={`${playFair.className} text-2xl flex items-center justify-center text-zinc-600 z-20`}
-                variants={header.animationText01}
-                initial="hidden"
-                whileInView="visible"
-              >
-                MIS <span className="text-5xl text-yellow-400">XV</span> AÑOS
-              </motion.h1>
-            </ModalHeader>
+            <ModalHeader className="flex flex-col gap-1"></ModalHeader>
             <ModalBody>
               <motion.p
-                className={`${pinyion.className} flex justify-center text-7xl text-yellow-400 z-20 text-center`}
-                style={{ textShadow: "0px 1px 1px rgba(255,255,255, 1)" }}
-                variants={header.animationText03}
+                className={`${pinyion.className} flex justify-center text-7xl text-slate-50 z-20 text-center`}
+                variants={header.animationText01}
                 initial="hidden"
                 whileInView="visible"
               >
@@ -67,16 +58,22 @@ const ModalOpening = ({
               </motion.p>
             </ModalBody>
             <ModalFooter className="flex justify-center">
-              <Button
-                color="secondary"
-                variant="bordered"
-                onPress={() => {
-                  setOpen(true);
-                  onClose();
-                }}
+              <motion.div
+                variants={header.animationButton01}
+                initial="hidden"
+                whileInView="visible"
               >
-                Ver Invitación
-              </Button>
+                <Button
+                  color="secondary"
+                  variant="solid"
+                  onPress={() => {
+                    setOpen(true);
+                    onClose();
+                  }}                  
+                >
+                  <FaRegEye /> Ver Invitación
+                </Button>
+              </motion.div>
             </ModalFooter>
           </>
         )}
