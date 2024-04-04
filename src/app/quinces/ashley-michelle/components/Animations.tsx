@@ -168,7 +168,7 @@ export const locations = {
     visible: {
       y: 0,
       opacity: 1,
-      transition: { duration: 1, delay: 1.5 },
+      transition: { duration: 1, delay: 1 },
     },
   },
 };
