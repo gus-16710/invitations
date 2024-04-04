@@ -5,7 +5,7 @@ import { Accordion, AccordionItem, Avatar } from "@nextui-org/react";
 
 export default function Gifts() {
   return (
-    <section className="h-screen flex flex-col items-center justify-center overflow-clip">
+    <section className="h-screen flex flex-col items-center justify-center overflow-clip relative">
       <motion.svg
         xmlns="http://www.w3.org/2000/svg"
         id="svg2"
@@ -79,6 +79,22 @@ export default function Gifts() {
           </AccordionItem>
         </Accordion>
       </motion.div>
+      <svg
+        data-name="Layer 1"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 1200 120"
+        preserveAspectRatio="none"
+        className="absolute -bottom-1 w-full"
+        style={{
+          rotate: "180deg",
+          filter: "drop-shadow(3px 5px 2px rgb(0 0 0 / 0.1))",
+        }}
+      >
+        <path
+          d="M1200 0L0 0 598.97 114.72 1200 0z"
+          fill="rgb(237 235 254)"
+        ></path>
+      </svg>
     </section>
   );
 }
