@@ -26,6 +26,7 @@ import {
 } from "@nextui-org/react";
 
 import "./styles.css";
+import Filter from "./components/Filter";
 
 const ModalOpening = ({
   isOpen,
@@ -81,7 +82,9 @@ const ModalOpening = ({
                   <FaRegEye /> Ver Invitación
                 </Button>
               </motion.div>
-              <p className="text-slate-50 text-xs mt-3">- {guest.replaceAll("-", " ")} -</p>
+              <p className="text-slate-50 text-xs mt-3">
+                - {guest.replaceAll("-", " ")} -
+              </p>
               <p className="text-slate-50 text-xs">{companions} Personas</p>
             </ModalFooter>
           </>
@@ -112,7 +115,7 @@ export default function Fifteen() {
           <Locations />
           <GodParents />
           <Gifts />
-          <Confirm />
+          <Confirm />          
           <FloatinButton />
           <AudioControl />
         </div>

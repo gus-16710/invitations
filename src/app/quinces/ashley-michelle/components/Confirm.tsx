@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 export default function Confirm() {
   return (
-    <section className="h-screen flex flex-col items-center justify-center overflow-clip relative bg-purple-100">
+    <section className="h-screen flex flex-col items-center justify-center overflow-clip relative bg-purple-100 bg-[url('/img/quinces/ashley/background-confirm.jpg')] bg-cover bg-center">
       <motion.svg
         xmlns="http://www.w3.org/2000/svg"
         id="svg2"
