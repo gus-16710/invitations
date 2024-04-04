@@ -7,7 +7,15 @@ import Header from "./components/Header";
 import Locations from "./components/Locations";
 import Presentation from "./components/Presentation";
 import { motion } from "framer-motion";
+import { useEffect, useState, Dispatch, SetStateAction } from "react";
+import { pinyion } from "./components/Fonts";
+import { header } from "./components/Animations";
+import AudioControl from "./components/AudioControl";
+import { FaRegEye } from "react-icons/fa";
+import Gifts from "./components/Gifts";
+import { useSearchParams } from "next/navigation";
 import {
+  Badge,
   Button,
   Modal,
   ModalBody,
@@ -16,23 +24,21 @@ import {
   ModalHeader,
   useDisclosure,
 } from "@nextui-org/react";
-import { useEffect, useState, Dispatch, SetStateAction } from "react";
 
 import "./styles.css";
-import { pinyion, playFair } from "./components/Fonts";
-import { header } from "./components/Animations";
-import AudioControl from "./components/AudioControl";
-import { FaRegEye } from "react-icons/fa";
-import Gifts from "./components/Gifts";
 
 const ModalOpening = ({
   isOpen,
   onOpenChange,
   setOpen,
+  guest,
+  companions,
 }: {
   isOpen: boolean;
   onOpenChange: () => void;
   setOpen: Dispatch<SetStateAction<boolean>>;
+  guest: string;
+  companions: string;
 }) => {
   return (
     <Modal
@@ -48,7 +54,7 @@ const ModalOpening = ({
         {(onClose) => (
           <>
             <ModalHeader className="flex flex-col gap-1"></ModalHeader>
-            <ModalBody>
+            <ModalBody className="relative">
               <motion.p
                 className={`${pinyion.className} flex justify-center text-7xl text-slate-50 z-20 text-center`}
                 variants={header.animationText01}
@@ -58,7 +64,7 @@ const ModalOpening = ({
                 Ashley Michelle
               </motion.p>
             </ModalBody>
-            <ModalFooter className="flex justify-center">
+            <ModalFooter className="flex flex-col items-center justify-center">
               <motion.div
                 variants={header.animationButton01}
                 initial="hidden"
@@ -75,6 +81,8 @@ const ModalOpening = ({
                   <FaRegEye /> Ver Invitación
                 </Button>
               </motion.div>
+              <p className="text-slate-50 text-xs mt-3">- {guest} -</p>
+              <p className="text-slate-50 text-xs">{companions} Personas</p>
             </ModalFooter>
           </>
         )}
@@ -86,6 +94,10 @@ const ModalOpening = ({
 export default function Fifteen() {
   const [open, setOpen] = useState(false);
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
+
+  const searchParams = useSearchParams();
+  const guest = searchParams.get("invitado") || "Sin nombre de invitado";
+  const companions = searchParams.get("pases") || "0";
 
   useEffect(() => {
     onOpen();
@@ -109,6 +121,8 @@ export default function Fifteen() {
         isOpen={isOpen}
         onOpenChange={onOpenChange}
         setOpen={setOpen}
+        guest={guest}
+        companions={companions}
       />
     </main>
   );
