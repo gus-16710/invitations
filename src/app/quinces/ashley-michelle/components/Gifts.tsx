@@ -41,7 +41,7 @@ export default function Gifts() {
         initial="hidden"
         whileInView="visible"
       >
-        Lo más importante es tu presencia, pero si deseas hacernos un presente,
+        Lo más importante es tu presencia, pero si deseas hacerme un presente,
         te dejamos algunas sugerencias de regalos.
       </motion.p>
       <motion.div

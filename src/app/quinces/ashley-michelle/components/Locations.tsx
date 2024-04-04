@@ -464,14 +464,9 @@ export default function Locations() {
           <span className="sr-only">Danger</span>
           <div>
             <span className="font-medium">
-              En esta ocasión el evento es sólo para adultos:
+              En esta ocasión, la ceremonia y recepción es unicamente para
+              adultos.
             </span>
-            <ul className="mt-1.5 list-disc list-inside">
-              <li>
-                El lugar tiene decoraciones que resultan peligrosas para niños.
-              </li>
-              <li>Ceremonia y recepción unicamente para adultos.</li>
-            </ul>
           </div>
         </motion.div>
       </section>

@@ -71,8 +71,9 @@ export default function Header() {
         initial="hidden"
         whileInView="visible"
       >
-        Mi mami, <span className="font-semibold">Brenda Castro Melgarejo</span> agradecerá mucho tu asistencia
-      </motion.p>     
+        Mi mami, <span className="font-semibold">Brenda Castro Melgarejo</span>
+        <br /> agradecerá mucho tu asistencia
+      </motion.p>
     </section>
   );
 }

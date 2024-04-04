@@ -51,18 +51,8 @@ export default function GodParents() {
         Padrinos
       </motion.h1>
 
-      <motion.h1
-        className={`${pinyion.className} text-4xl text-slate-700 mt-5 text-center`}
-        variants={godParents.animationText02}
-        initial="hidden"
-        whileInView="visible"
-        custom={1}
-      >
-        Honor
-      </motion.h1>
-
       <motion.p
-        className={`${quickSand.className} mx-10 mt-5 text-center text-zinc-800 text-xl`}
+        className={`${quickSand.className} mx-10 mt-10 text-center text-zinc-800 text-xl`}
         variants={godParents.animationText03}
         initial="hidden"
         whileInView="visible"
