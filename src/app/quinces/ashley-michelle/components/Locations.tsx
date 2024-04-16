@@ -306,7 +306,7 @@ export default function Locations() {
         >
           <Divider
             orientation="vertical"
-            className="h-24 my-10 bg-purple-500"
+            className="h-24 my-10 bg-purple-400"
           />
         </motion.div>
 

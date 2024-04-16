@@ -82,10 +82,15 @@ const ModalOpening = ({
                   <FaRegEye /> Ver Invitación
                 </Button>
               </motion.div>
-              <p className="text-slate-50 text-xs mt-3">
-                - {guest.replaceAll("-", " ")} -
-              </p>
-              <p className="text-slate-50 text-xs">{companions} Personas</p>
+              {guest && (
+                <p className="text-slate-50 text-xs mt-3">
+                  - {guest.replaceAll("-", " ")} -
+                </p>
+              )}
+
+              {companions && (
+                <p className="text-slate-50 text-xs">{companions} Personas</p>
+              )}
             </ModalFooter>
           </>
         )}
@@ -99,8 +104,8 @@ export default function Fifteen() {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
   const searchParams = useSearchParams();
-  const guest = searchParams.get("invitado") || "Sin-nombre-de-invitado";
-  const companions = searchParams.get("pases") || "0";
+  const guest = searchParams.get("invitado") || "";
+  const companions = searchParams.get("pases") || "";
 
   useEffect(() => {
     onOpen();
@@ -115,7 +120,7 @@ export default function Fifteen() {
           <Locations />
           <GodParents />
           <Gifts />
-          <Confirm />          
+          <Confirm />
           <FloatinButton />
           <AudioControl />
         </div>

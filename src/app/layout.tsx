@@ -16,6 +16,7 @@ export const metadata: Metadata = {
   icons: {
     icon: "https://invitaciones.unaideamas.com/img/favicon.png",
   },
+  metadataBase: new URL("https://invitaciones.unaideamas.com"),
 };
 
 export default function RootLayout({
@@ -24,7 +25,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" style={{ scrollSnapType: "y mandatory" }} className="scroll-smooth">
+    <html
+      lang="en"
+      style={{ scrollSnapType: "y mandatory" }}
+      className="scroll-smooth"
+    >
       <head>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
