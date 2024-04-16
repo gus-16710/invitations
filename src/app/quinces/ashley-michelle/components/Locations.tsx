@@ -79,7 +79,7 @@ export default function Locations() {
 
   return (
     <>
-      <section className="py-10 flex flex-col items-center justify-center bg-purple-100 overflow-clip">
+      <section className="py-10 flex flex-col items-center justify-center bg-purple-100 overflow-clip bg-[url('/img/quinces/ashley/background-locations.jpg')] bg-cover bg-center">
         <motion.svg
           xmlns="http://www.w3.org/2000/svg"
           xmlnsXlink="http://www.w3.org/1999/xlink"
@@ -306,7 +306,7 @@ export default function Locations() {
         >
           <Divider
             orientation="vertical"
-            className="h-24 my-10 bg-purple-300"
+            className="h-24 my-10 bg-purple-500"
           />
         </motion.div>
 

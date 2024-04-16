@@ -27,8 +27,8 @@ export default function AudioControl() {
         {isPlayed ? <FaVolumeUp /> : <FaVolumeOff />}
       </motion.button>
 
-      <audio controls ref={audioPlayer} hidden>
-        <source src="/media/mi_princesa_angel_melo.mp3" type="audio/mpeg" />
+      <audio controls ref={audioPlayer} hidden loop>
+        <source src="/media/lover_taylor_swift.mp3" type="audio/mpeg" />
         Your browser does not support the audio element.
       </audio>
     </>
