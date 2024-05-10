@@ -26,6 +26,7 @@ import {
 } from "@nextui-org/react";
 
 import "./styles.css";
+import Filter from "./components/Filter";
 
 const ModalOpening = ({
   isOpen,
@@ -98,7 +99,7 @@ const ModalOpening = ({
   );
 };
 
-const Fifteen = () => {
+export default function Fifteen() {
   const [open, setOpen] = useState(false);
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
@@ -111,34 +112,28 @@ const Fifteen = () => {
   }, []);
 
   return (
-    <main className={`background-class ${open ? "" : "h-screen"}`}>
-      {open && (
-        <div className="max-w-3xl m-auto shadow-large bg-[url('/img/quinces/ashley/background.jpg')] bg-cover bg-center bg-fixed">
-          <Header />
-          <Presentation />
-          <Locations />
-          <GodParents />
-          <Gifts />
-          <Confirm />
-          <FloatinButton />
-          <AudioControl />
-        </div>
-      )}
-      <ModalOpening
-        isOpen={isOpen}
-        onOpenChange={onOpenChange}
-        setOpen={setOpen}
-        guest={guest}
-        companions={companions}
-      />
-    </main>
+    <Suspense>
+      <main className={`background-class ${open ? "" : "h-screen"}`}>
+        {open && (
+          <div className="max-w-3xl m-auto shadow-large bg-[url('/img/quinces/ashley/background.jpg')] bg-cover bg-center bg-fixed">
+            <Header />
+            <Presentation />
+            <Locations />
+            <GodParents />
+            <Gifts />
+            <Confirm />
+            <FloatinButton />
+            <AudioControl />
+          </div>
+        )}
+        <ModalOpening
+          isOpen={isOpen}
+          onOpenChange={onOpenChange}
+          setOpen={setOpen}
+          guest={guest}
+          companions={companions}
+        />
+      </main>
+    </Suspense>
   );
-};
-
-const SuspenseWrapper = () => {
-  <Suspense>
-    <Fifteen />
-  </Suspense>;
-};
-
-export default SuspenseWrapper;
+}
