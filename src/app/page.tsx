@@ -15,10 +15,6 @@ import { useRouter } from "next/navigation";
 import ReactCanvasConfetti from "react-canvas-confetti";
 import { useCallback, useRef, useEffect } from "react";
 
-/**
- * Invitations project 🌻
- */
-
 export default function Home() {
   const router = useRouter();
   const refAnimationInstance = useRef<confetti.CreateTypes | null>(null);
