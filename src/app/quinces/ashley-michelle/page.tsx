@@ -7,7 +7,7 @@ import Header from "./components/Header";
 import Locations from "./components/Locations";
 import Presentation from "./components/Presentation";
 import { motion } from "framer-motion";
-import { useEffect, useState, Dispatch, SetStateAction } from "react";
+import { useEffect, useState, Dispatch, SetStateAction, Suspense } from "react";
 import { pinyion } from "./components/Fonts";
 import { header } from "./components/Animations";
 import AudioControl from "./components/AudioControl";
@@ -26,7 +26,6 @@ import {
 } from "@nextui-org/react";
 
 import "./styles.css";
-import Filter from "./components/Filter";
 
 const ModalOpening = ({
   isOpen,
@@ -99,7 +98,7 @@ const ModalOpening = ({
   );
 };
 
-export default function Fifteen() {
+const Fifteen = () => {
   const [open, setOpen] = useState(false);
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
@@ -134,4 +133,12 @@ export default function Fifteen() {
       />
     </main>
   );
-}
+};
+
+const SuspenseWrapper = () => {
+  <Suspense>
+    <Fifteen />
+  </Suspense>;
+};
+
+export default SuspenseWrapper;
