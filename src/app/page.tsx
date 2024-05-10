@@ -1,9 +1,23 @@
 "use client";
 
-import { Card, CardBody, CardFooter, CardHeader, Divider, Image, Link, Listbox, ListboxItem } from "@nextui-org/react";
+import {
+  Card,
+  CardBody,
+  CardFooter,
+  CardHeader,
+  Divider,
+  Image,
+  Link,
+  Listbox,
+  ListboxItem,
+} from "@nextui-org/react";
 import { useRouter } from "next/navigation";
 import ReactCanvasConfetti from "react-canvas-confetti";
 import { useCallback, useRef, useEffect } from "react";
+
+/**
+ * Invitations project 🌻
+ */
 
 export default function Home() {
   const router = useRouter();
@@ -54,6 +68,7 @@ export default function Home() {
   useEffect(() => {
     fire();
     const timer = setInterval(() => fire(), 5000);
+
     () => clearInterval(timer);
   }, []);
 
@@ -70,7 +85,9 @@ export default function Home() {
           />
           <div className="flex flex-col">
             <p className="text-md">Invitaciones</p>
-            <p className="text-small text-default-500">Bodas, XV Años & Bautizos</p>
+            <p className="text-small text-default-500">
+              Bodas, XV Años & Bautizos
+            </p>
           </div>
         </CardHeader>
         <Divider />
@@ -82,7 +99,10 @@ export default function Home() {
             <ListboxItem key="quinces" onClick={() => router.push("/quinces")}>
               ⭐ XV Años
             </ListboxItem>
-            <ListboxItem key="bautizos" onClick={() => router.push("/bautizos")}>
+            <ListboxItem
+              key="bautizos"
+              onClick={() => router.push("/bautizos")}
+            >
               ⭐ Bautizos
             </ListboxItem>
           </Listbox>
@@ -92,7 +112,7 @@ export default function Home() {
           <p className="text-sm">Selecciona un tipo de invitación 👆🏽</p>
         </CardFooter>
       </Card>
-      
+
       <ReactCanvasConfetti
         refConfetti={getInstance}
         style={{
