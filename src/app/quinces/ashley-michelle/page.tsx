@@ -7,7 +7,7 @@ import Header from "./components/Header";
 import Locations from "./components/Locations";
 import Presentation from "./components/Presentation";
 import { motion } from "framer-motion";
-import { useEffect, useState, Dispatch, SetStateAction, Suspense } from "react";
+import { useEffect, useState, Dispatch, SetStateAction } from "react";
 import { pinyion } from "./components/Fonts";
 import { header } from "./components/Animations";
 import AudioControl from "./components/AudioControl";
@@ -15,7 +15,6 @@ import { FaRegEye } from "react-icons/fa";
 import Gifts from "./components/Gifts";
 import { useSearchParams } from "next/navigation";
 import {
-  Badge,
   Button,
   Modal,
   ModalBody,
@@ -111,8 +110,7 @@ export default function Fifteen() {
     onOpen();
   }, []);
 
-  return (
-    <Suspense>
+  return (    
       <main className={`background-class ${open ? "" : "h-screen"}`}>
         {open && (
           <div className="max-w-3xl m-auto shadow-large bg-[url('/img/quinces/ashley/background.jpg')] bg-cover bg-center bg-fixed">
@@ -133,7 +131,6 @@ export default function Fifteen() {
           guest={guest}
           companions={companions}
         />
-      </main>
-    </Suspense>
+      </main>    
   );
 }
