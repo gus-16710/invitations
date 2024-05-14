@@ -33,7 +33,7 @@
 //   weight: ["400"],
 // });
 
-import { Dancing_Script, Lobster } from "next/font/google";
+import { Dancing_Script, Lobster, Playfair_Display } from "next/font/google";
 
 export const dancing = Dancing_Script({
   subsets: ["latin"],
@@ -43,4 +43,9 @@ export const dancing = Dancing_Script({
 export const lobster = Lobster({
   subsets: ["latin"],
   weight: ["400"],
+});
+
+export const playFair = Playfair_Display({
+  subsets: ["latin"],
+  weight: ["400", "600", "700"],
 });
