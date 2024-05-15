@@ -59,8 +59,33 @@ export default function Ceremony() {
 
   return (
     <>
-      <section className="bg-red-950 h-screen flex flex-col items-center justify-center">
-        <div className="bg-[url('/img/quinces/sayuri/divider-golden.png')] bg-contain bg-no-repeat bg-center w-full h-16 sm:mb-10 mb-5" />
+      <section className="h-screen flex flex-col items-center justify-center">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          xmlnsXlink="http://www.w3.org/1999/xlink"
+          height="100px"
+          width="100px"
+          version="1.1"
+          id="Layer_1"
+          viewBox="0 0 512 512"
+          xmlSpace="preserve"
+          className="mb-5"
+        >
+          <circle style={{ fill: "#935635" }} cx="256" cy="256" r="256" />
+          <path
+            style={{ fill: "#804000" }}
+            d="M323.319,503.036c88.514-24.064,157.961-94.411,180.719-183.456L341.333,156.875l-2.329,2.412  l-59.732-59.732l-36.488,52.436l-72.118,51.429l90.727,90.727l-28.667,118.296L323.319,503.036z"
+          />
+          <polygon
+            style={{ fill: "#FFD15D" }}
+            points="341.333,156.875 279.273,156.875 279.273,99.556 232.727,99.556 232.727,156.875   170.667,156.875 170.667,203.421 232.727,203.421 232.727,412.444 279.273,412.444 279.273,203.421 341.333,203.421 "
+          />
+          <polygon
+            style={{ fill: "#F9B54C" }}
+            points="279.273,156.875 279.273,99.556 256,99.556 256,412.444 279.273,412.444 279.273,203.421   341.333,203.421 341.333,156.875 "
+          />
+        </svg>
+        
         <h1 className={`${dancing.className} text-golden text-5xl`}>
           &nbsp; &nbsp; Ceremonia &nbsp; &nbsp;
         </h1>
