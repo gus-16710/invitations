@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useAnimate, motion } from "framer-motion";
-import { anton, dancing, whisper } from "./Fonts";
+import { anton, dancing, playFair, whisper } from "./Fonts";
 import { presentation } from "./Animations";
 
 function formatNumber(number: number) {
@@ -85,11 +85,13 @@ export default function Presentation() {
 
   return (
     <section className="h-screen flex flex-col items-center justify-center">
-      <h1 className={`${dancing.className} text-golden text-zinc-500 text-5xl`}>
-        Sólo Fantan
+      <div className="bg-[url('/img/quinces/sayuri/divider-golden.png')] bg-contain bg-no-repeat bg-center w-full h-16 sm:mb-10 mb-5" />
+
+      <h1 className={`${dancing.className} text-golden text-5xl`}>
+        &nbsp; Sólo Fantan &nbsp;
       </h1>
 
-      <div className="flex gap-16 text-zinc-500 mt-10">
+      <div className="flex gap-16 text-zinc-400 mt-10">
         <motion.div
           className="flex flex-col"
           variants={presentation.animationTimer01}
@@ -97,13 +99,19 @@ export default function Presentation() {
           whileInView="visible"
         >
           <p className="flex flex-col items-center">
-            <span className={`${anton.className} text-golden text-5xl`} ref={scopeDays}>
+            <span
+              className={`${anton.className} text-golden text-5xl`}
+              ref={scopeDays}
+            >
               {formatNumber(days)}
             </span>
             <span className={`${whisper.className} text-3xl`}>Días</span>
           </p>
           <p className="flex flex-col items-center mt-5">
-            <span className={`${anton.className} text-golden text-5xl`} ref={scopeMinutes}>
+            <span
+              className={`${anton.className} text-golden text-5xl`}
+              ref={scopeMinutes}
+            >
               {formatNumber(minutes)}
             </span>
             <span className={`${whisper.className} text-3xl`}>Minutos</span>
@@ -116,19 +124,33 @@ export default function Presentation() {
           whileInView="visible"
         >
           <p className="flex flex-col items-center">
-            <span className={`${anton.className} text-golden text-5xl`} ref={scopeHours}>
+            <span
+              className={`${anton.className} text-golden text-5xl`}
+              ref={scopeHours}
+            >
               {formatNumber(hours)}
             </span>
             <span className={`${whisper.className} text-3xl`}>Horas</span>
           </p>
           <p className="flex flex-col items-center mt-5">
-            <span className={`${anton.className} text-golden text-5xl`} ref={scopeSeconds}>
+            <span
+              className={`${anton.className} text-golden text-5xl`}
+              ref={scopeSeconds}
+            >
               {formatNumber(seconds)}
             </span>
             <span className={`${whisper.className} text-3xl`}>Segundos</span>
           </p>
         </motion.div>
       </div>
+      <p
+        className={`${playFair.className} text-zinc-400 text-base px-5 text-center mt-5 max-w-md`}
+      >
+        Quince flores nuevas, que te harán feliz, quince primaveras y una vida
+        entera por vivir. El comienzo de una nueva etapa, y por más que las
+        primaveras sigan llegando, ninguna será tan especial como esta. Acompaña
+        a nuestra pequeña a celebrar sus 15 años.
+      </p>
     </section>
   );
 }

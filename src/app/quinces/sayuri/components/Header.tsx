@@ -26,7 +26,7 @@ export default function Header() {
           Sayuri
         </h1>
       </div>
-      <p className={`${playFair.className} text-golden mt-5`}>Te invito a mis</p>
+      <p className={`${playFair.className} text-golden mt-5`}>&nbsp; - Estas invitado a celebrar - &nbsp;</p>
       <h2
         className={`${playFair.className} text-2xl flex items-center text-zinc-400 z-20 mt-2`}
         //variants={header.animationText01}
