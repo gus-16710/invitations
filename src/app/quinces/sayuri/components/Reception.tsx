@@ -11,7 +11,7 @@ import {
 
 const MapSalon = () => (
   <iframe
-    src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d939.3728024077785!2d-96.98619704721892!3d19.64903813508808!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2smx!4v1715801241586!5m2!1ses!2smx"
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d939.3733417530243!2d-96.98606489999997!3d19.648946000000006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85db250066ae1f37%3A0xc60df725fa0180ef!2sSalon%20de%20Eventos%20Tengonapa!5e0!3m2!1ses!2smx!4v1715801363349!5m2!1ses!2smx"
     height="450"
     style={{ border: "0" }}
     allowFullScreen
