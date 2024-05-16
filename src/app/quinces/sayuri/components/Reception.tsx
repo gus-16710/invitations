@@ -1,5 +1,5 @@
 import { IoMdTime } from "react-icons/io";
-import { anton, dancing, julius, playFair, quickSand } from "./Fonts";
+import { dancing, julius, playFair, quickSand, rye } from "./Fonts";
 import {
   Modal,
   ModalBody,
@@ -95,7 +95,7 @@ export default function Reception() {
           />
         </svg>
 
-        <h1 className={`${playFair.className} text-zinc-700 text-5xl`}>
+        <h1 className={`${rye.className} text-zinc-700 text-5xl`}>
           Recepción
         </h1>
 
@@ -105,7 +105,7 @@ export default function Reception() {
           //initial="hidden"
           //whileInView="visible"
         >
-          <IoMdTime /> 15:00 Hrs
+          <IoMdTime /> 14:30 Hrs
         </span>
 
         <p

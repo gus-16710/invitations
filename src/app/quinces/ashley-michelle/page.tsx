@@ -25,7 +25,6 @@ import {
 } from "@nextui-org/react";
 
 import "./styles.css";
-import Filter from "./components/Filter";
 
 const ModalOpening = ({
   isOpen,

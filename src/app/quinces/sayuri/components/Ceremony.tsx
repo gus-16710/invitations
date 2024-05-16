@@ -1,5 +1,5 @@
 import { IoMdTime } from "react-icons/io";
-import { dancing, julius, playFair, quickSand } from "./Fonts";
+import { dancing, julius, playFair, quickSand, rye } from "./Fonts";
 import { ImDiamonds } from "react-icons/im";
 import {
   Modal,
@@ -122,7 +122,7 @@ export default function Ceremony() {
           />
         </svg>
 
-        <h1 className={`${playFair.className} text-zinc-700 text-5xl`}>
+        <h1 className={`${rye.className} text-zinc-700 text-5xl`}>
           Ceremonia
         </h1>
 
@@ -132,7 +132,7 @@ export default function Ceremony() {
           //initial="hidden"
           //whileInView="visible"
         >
-          <IoMdTime /> 13:00 Hrs
+          <IoMdTime /> 12:00 Hrs
         </span>
 
         <p

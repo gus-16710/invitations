@@ -173,7 +173,7 @@ export default function Presentation() {
         entera por vivir. El comienzo de una nueva etapa, y por más que las
         primaveras sigan llegando, ninguna será tan especial como esta. Acompaña
         a nuestra pequeña a celebrar sus 15 años.
-      </p>
+      </p>      
 
       <svg
         data-name="Layer 1"
