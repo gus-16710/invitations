@@ -3,39 +3,24 @@
  **/
 
 export const header = {
-  animationText01: {
-    hidden: { opacity: 0, scale: 0 },
+  roundFrame: {
+    hidden: { scale: 0, rotate: 180, opacity: 0 },
     visible: {
-      opacity: 1,
       scale: 1,
-      transition: { duration: 2, type: "spring", stiffness: 70, delay: 0.4 },
+      rotate: 0,
+      opacity: 0.8,
+      transition: { duration: 1.5, delay: 0.2 },
     },
   },
-  animationText02: {
-    hidden: { opacity: 0, scale: 0 },
+  text01: {
+    hidden: { opacity: 0, y: 50 },
     visible: {
       opacity: 1,
-      scale: 1,
-      transition: { duration: 1, type: "spring", stiffness: 70, delay: 0.8 },
+      y: 0,
+      transition: { duration: 1, delay: 3 },
     },
   },
-  animationText03: {
-    hidden: { x: -100, opacity: 0 },
-    visible: {
-      x: 0,
-      opacity: 1,
-      transition: { duration: 1, delay: 2.5 },
-    },
-  },
-  animationText04: {
-    hidden: { x: 100, opacity: 0 },
-    visible: {
-      x: 0,
-      opacity: 1,
-      transition: { duration: 1, delay: 2.5 },
-    },
-  },
-  animationText05: {
+  text02: {
     hidden: { opacity: 0, y: -50 },
     visible: {
       opacity: 1,
@@ -43,20 +28,12 @@ export const header = {
       transition: { duration: 1, delay: 3 },
     },
   },
-  animationFrame: {
-    hidden: { rotate: 180, opacity: 0 },
-    visible: {
-      rotate: 0,
-      opacity: 0.8,
-      transition: { duration: 1.5, delay: 1.2 },
-    },
-  },
-  animationButton01: {
-    hidden: { opacity: 0, y: -100 },
+  text03: {
+    hidden: { opacity: 0, y: 50 },
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 1, delay: 1 },
+      transition: { duration: 1, delay: 3.5 },
     },
   },
 };
@@ -66,43 +43,36 @@ export const header = {
  **/
 
 export const presentation = {
-  animationText01: {
-    hidden: { opacity: 0, scale: 0 },
+  text01: {
+    hidden: { opacity: 0, y: 50 },
     visible: {
       opacity: 1,
-      scale: 1,
-      transition: { duration: 1, type: "spring", stiffness: 70, delay: 0.4 },
+      y: 0,
+      transition: { duration: 1, delay: 1 },
     },
   },
-  svg: {
-    hidden: { scale: 0 },
+  text02: {
+    hidden: { opacity: 0, y: -50 },
     visible: {
-      scale: 1,
-      transition: { duration: 1 },
+      opacity: 1,
+      y: 0,
+      transition: { duration: 1, delay: 2 },
     },
   },
-  animationTimer01: {
+  timer01: {
     hidden: { x: 100, opacity: 0 },
     visible: {
       x: 0,
       opacity: 1,
-      transition: { duration: 1, delay: 1.2 },
+      transition: { duration: 1, delay: 1.5 },
     },
   },
-  animationTimer02: {
+  timer02: {
     hidden: { x: -100, opacity: 0 },
     visible: {
       x: 0,
       opacity: 1,
-      transition: { duration: 1, delay: 1.2 },
-    },
-  },
-  animationText02: {
-    hidden: { y: -100, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: { duration: 1, delay: 1.6 },
+      transition: { duration: 1, delay: 1.5 },
     },
   },
 };
@@ -174,85 +144,16 @@ export const locations = {
 };
 
 /**
- * God Parents Animations
+ * Gallery Animations
  **/
 
-export const godParents = {
-  animationText01: {
-    hidden: { opacity: 0, scale: 0 },
-    visible: {
-      opacity: 1,
-      scale: 1,
-      transition: { duration: 1, type: "spring", stiffness: 70, delay: 0.4 },
-    },
-  },
-  svg: {
-    hidden: { scale: 0 },
-    visible: {
-      scale: 1,
-      transition: { duration: 1 },
-    },
-  },
-  animationText02: {
-    hidden: { x: 100, opacity: 0 },
-    visible: {
-      x: 0,
-      opacity: 1,
-      transition: { duration: 1, delay: 1 },
-    },
-  },
-  animationText03: {
-    hidden: { x: -100, opacity: 0 },
-    visible: {
-      x: 0,
-      opacity: 1,
-      transition: { duration: 1, delay: 1 },
-    },
-  },
-};
-
-/**
- * Confirm Animations
- **/
-
-export const confirm = {  
-  svg: {
-    hidden: { scale: 0 },
-    visible: {
-      scale: 1,
-      transition: { duration: 1 },
-    },
-  },
-  animationText01: {
-    hidden: { opacity: 0, scale: 0 },
-    visible: {
-      opacity: 1,
-      scale: 1,
-      transition: { duration: 1, type: "spring", stiffness: 70, delay: 0.4 },
-    },
-  },
-  animationText02: {
-    hidden: { x: 100, opacity: 0 },
-    visible: {
-      x: 0,
-      opacity: 1,
-      transition: { duration: 1, delay: 1 },
-    },
-  },
-  animationText03: {
-    hidden: { x: -100, opacity: 0 },
-    visible: {
-      x: 0,
-      opacity: 1,
-      transition: { duration: 1, delay: 1 },
-    },
-  },
-  buttons: {
-    hidden: { opacity: 0, y: 100 },
+export const gallery = {
+  text01: {
+    hidden: { opacity: 0, y: 50 },
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 1, delay: 1.2 },
+      transition: { duration: 1, delay: 1 },
     },
   },
 };
@@ -260,37 +161,45 @@ export const confirm = {
 /**
  * Confirm Animations
  **/
+export const confirm = {
+  text01: {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 1, delay: 1 },
+    },
+  },
+  text02: {
+    hidden: { opacity: 0, y: -50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 1, delay: 1.5 },
+    },
+  },
+  text03: {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 1, delay: 2 },
+    },
+  },
+  button01: {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
 
-export const gifts = {
-  svg: {
-    hidden: { scale: 0 },
-    visible: {
-      scale: 1,
-      transition: { duration: 1 },
+      transition: { duration: 1, delay: 2 },
     },
   },
-  animationText01: {
-    hidden: { opacity: 0, scale: 0 },
+  button02: {
+    hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      scale: 1,
-      transition: { duration: 1, type: "spring", stiffness: 70, delay: 0.4 },
+
+      transition: { duration: 1, delay: 2 },
     },
   },
-  animationText02: {
-    hidden: { x: 100, opacity: 0 },
-    visible: {
-      x: 0,
-      opacity: 1,
-      transition: { duration: 1, delay: 1 },
-    },
-  }, 
-  animationAccordion: {
-    hidden: { x: -100, opacity: 0 },
-    visible: {
-      x: 0,
-      opacity: 1,
-      transition: { duration: 1, delay: 1 },
-    },
-  }, 
 };

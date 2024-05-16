@@ -1,10 +1,11 @@
+import { useState } from "react";
 import PhotoAlbum from "react-photo-album";
 import NextJsImage from "./NextJsImage";
-import { useState } from "react";
 import Lightbox from "yet-another-react-lightbox";
-
-import "yet-another-react-lightbox/styles.css";
+import { motion } from "framer-motion";
 import { dancing } from "./Fonts";
+import "yet-another-react-lightbox/styles.css";
+import { gallery } from "./Animations";
 
 const images = [
   {
@@ -57,9 +58,14 @@ export default function Gallery() {
         ></path>
       </svg>
 
-      <h1 className={`${dancing.className} text-golden text-5xl text-center pt-20`}>
+      <motion.h1
+        className={`${dancing.className} text-golden text-5xl text-center pt-20`}
+        variants={gallery.text01}
+        initial="hidden"
+        whileInView="visible"
+      >
         &nbsp; Galería &nbsp;
-      </h1>
+      </motion.h1>
 
       <div className="z-30 px-2 py-10 w-72 m-auto">
         <PhotoAlbum

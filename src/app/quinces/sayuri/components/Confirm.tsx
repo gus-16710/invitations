@@ -1,38 +1,63 @@
 import { dancing, playFair } from "./Fonts";
 import { FaSquareWhatsapp, FaSquarePhone } from "react-icons/fa6";
+import { motion } from "framer-motion";
+import { confirm } from "./Animations";
 
 export default function Confirm() {
   return (
-    <section className="h-screen flex flex-col items-center justify-center">
-      <h1 className={`${dancing.className} text-golden text-5xl text-center`}>
-      &nbsp;Confirmar&nbsp; <br /> &nbsp;Asistencia&nbsp;
-      </h1>
+    <section className="h-screen flex flex-col items-center justify-center overflow-clip">
+      <motion.h1
+        className={`${dancing.className} text-golden text-5xl text-center`}
+        variants={confirm.text01}
+        initial="hidden"
+        whileInView="visible"
+      >
+        &nbsp;Confirmar&nbsp; <br /> &nbsp;Asistencia&nbsp;
+      </motion.h1>
 
-      <p
+      <motion.p
         className={`${playFair.className} text-zinc-400 text-base px-5 text-center mt-5 max-w-md`}
+        variants={confirm.text02}
+        initial="hidden"
+        whileInView="visible"
       >
         Espero que puedan venir a compartir con nosotros este día inolvidable.
         Por favor confirma tu presencia.
-      </p>
+      </motion.p>
 
-      <p
+      <motion.p
         className={`${playFair.className} text-zinc-400 text-base px-5 text-center mt-5 max-w-md`}
+        variants={confirm.text03}
+        initial="hidden"
+        whileInView="visible"
       >
         ¡Muchas gracias!
-      </p>
+      </motion.p>
 
-      <button role="button" className="golden-button mt-5 w-60">
+      <motion.button
+        role="button"
+        className="golden-button mt-5 w-64"
+        variants={confirm.button01}
+        initial="hidden"
+        whileInView="visible"
+      >
         <span className="golden-text flex justify-around items-center">
           <FaSquareWhatsapp className="text-2xl" /> Mensaje de Whatsapp
         </span>
-      </button>
+      </motion.button>
 
-      <button role="button" className="golden-button mt-5 w-60">
+      <motion.button
+        role="button"
+        className="golden-button mt-5 w-64"
+        variants={confirm.button02}
+        initial="hidden"
+        whileInView="visible"
+      >
         <span className="golden-text flex justify-around items-center ">
           <FaSquarePhone className="text-2xl" />
           Llamada Telefónica
         </span>
-      </button>
+      </motion.button>
     </section>
   );
 }
