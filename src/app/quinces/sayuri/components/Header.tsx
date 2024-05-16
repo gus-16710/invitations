@@ -1,8 +1,10 @@
+
 import { dancing, lobster, playFair } from "./Fonts";
 
 export default function Header() {
   return (
-    <section className="h-screen bg-[url('/img/quinces/sayuri/background-floral.jpg')] bg-cover bg-center flex flex-col justify-center items-center">
+    // <section className="h-screen bg-[url('/img/quinces/sayuri/background-floral.jpg')] bg-cover bg-center flex flex-col justify-center items-center">
+    <section className="h-screen flex flex-col justify-center items-center">
       <div className="relative w-full h-96 flex items-center justify-center overflow-clip mt-16">
         <div
           className="bg-[url('/img/quinces/sayuri/round-frame.png')] bg-contain bg-no-repeat bg-center absolute w-full h-full opacity-80"

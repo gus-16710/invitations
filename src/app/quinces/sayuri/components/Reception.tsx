@@ -1,5 +1,5 @@
 import { IoMdTime } from "react-icons/io";
-import { anton, dancing, quickSand } from "./Fonts";
+import { anton, dancing, julius, playFair, quickSand } from "./Fonts";
 import {
   Modal,
   ModalBody,
@@ -8,6 +8,7 @@ import {
   ModalHeader,
   useDisclosure,
 } from "@nextui-org/react";
+import { ImDiamonds } from "react-icons/im";
 
 const MapSalon = () => (
   <iframe
@@ -94,12 +95,12 @@ export default function Reception() {
           />
         </svg>
 
-        <h1 className={`${dancing.className} text-golden text-5xl`}>
-          &nbsp; &nbsp; Recepción &nbsp; &nbsp;
+        <h1 className={`${playFair.className} text-zinc-700 text-5xl`}>
+          Recepción
         </h1>
 
         <span
-          className={`${anton.className} text-zinc-300 text-xl font-medium me-2 px-2.5 rounded mt-3 flex items-center justify-center gap-1`}
+          className={`${julius.className} text-zinc-700 text-3xl font-medium me-2 px-2.5 rounded my-4 flex items-center justify-center gap-1`}
           //variants={locations.time01}
           //initial="hidden"
           //whileInView="visible"
@@ -108,16 +109,28 @@ export default function Reception() {
         </span>
 
         <p
-          className={`${quickSand.className} text-golden my-5 mx-10 font-bold text-center text-lg`}
+          className={`${playFair.className} my-5 mx-10 font-bold text-center text-lg px-3 py-1 uppercase -rotate-2 flex items-center`}
+          style={{
+            color: "#d9ccaa",
+            backgroundColor: "#50443c",
+            boxShadow:
+              "rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px",
+          }}
           //variants={locations.animationText02}
           //initial="hidden"
           //whileInView="visible"
         >
-          &nbsp; Salón de Eventos Sociales Tengonapa &nbsp;
+          <span className="text-sm mr-3">
+            <ImDiamonds />
+          </span>
+          Salón de Eventos Sociales Tengonapa
+          <span className="text-sm ml-3">
+            <ImDiamonds />
+          </span>
         </p>
 
         <p
-          className={`${quickSand.className} mx-10 text-center text-zinc-300 max-w-md`}
+          className={`${quickSand.className} mx-10 text-center text-zinc-700 max-w-md`}
           //variants={locations.animationText03}
           //initial="hidden"
           //whileInView="visible"

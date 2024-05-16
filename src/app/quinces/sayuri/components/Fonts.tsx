@@ -33,7 +33,16 @@
 //   weight: ["400"],
 // });
 
-import { Anton, Dancing_Script, Lobster, Playfair_Display, Quicksand, Whisper } from "next/font/google";
+import {
+  Anton,
+  Dancing_Script,
+  Lobster,
+  Playfair_Display,
+  Quicksand,
+  Whisper,
+  Julius_Sans_One,
+  Graduate,
+} from "next/font/google";
 
 export const dancing = Dancing_Script({
   subsets: ["latin"],
@@ -63,4 +72,14 @@ export const whisper = Whisper({
 export const quickSand = Quicksand({
   subsets: ["latin"],
   weight: ["400", "500", "600"],
+});
+
+export const julius = Julius_Sans_One({
+  subsets: ["latin"],
+  weight: ["400"],
+});
+
+export const graduate = Graduate({
+  subsets: ["latin"],
+  weight: ["400"],
 });

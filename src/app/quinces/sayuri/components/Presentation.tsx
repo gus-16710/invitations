@@ -85,7 +85,7 @@ export default function Presentation() {
 
   return (
     <section className="h-screen flex flex-col items-center justify-center relative">
-      <svg
+      {/* <svg
         data-name="Layer 1"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 1200 120"
@@ -106,9 +106,9 @@ export default function Presentation() {
           d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"
           className="shape-fill"
         ></path>
-      </svg>
+      </svg> */}
 
-      <div className="bg-[url('/img/quinces/sayuri/divider-golden.png')] bg-contain bg-no-repeat bg-center w-full h-16 sm:mb-10 mb-5" />
+      {/* <div className="bg-[url('/img/quinces/sayuri/divider-golden.png')] bg-contain bg-no-repeat bg-center w-full h-16 sm:mb-10 mb-5" /> */}
 
       <h1 className={`${dancing.className} text-golden text-5xl`}>
         &nbsp; Sólo Fantan &nbsp;
@@ -184,7 +184,7 @@ export default function Presentation() {
       >
         <path
           d="M1200,0H0V120H281.94C572.9,116.24,602.45,3.86,602.45,3.86h0S632,116.24,923,120h277Z"          
-          fill="#550707"
+          fill="#d9ccaa"
         ></path> 
       </svg>
     </section>

@@ -4,6 +4,7 @@ import { useState } from "react";
 import Lightbox from "yet-another-react-lightbox";
 
 import "yet-another-react-lightbox/styles.css";
+import { dancing } from "./Fonts";
 
 const images = [
   {
@@ -52,11 +53,15 @@ export default function Gallery() {
       >
         <path
           d="M1200,0H0V120H281.94C572.9,116.24,602.45,3.86,602.45,3.86h0S632,116.24,923,120h277Z"
-          fill="#510303"
+          fill="#d9ccaa"
         ></path>
       </svg>
 
-      <div className="z-30 px-2 py-20 w-72 m-auto">
+      <h1 className={`${dancing.className} text-golden text-5xl text-center pt-20`}>
+        &nbsp; Galería &nbsp;
+      </h1>
+
+      <div className="z-30 px-2 py-10 w-72 m-auto">
         <PhotoAlbum
           layout="masonry"
           photos={images}
