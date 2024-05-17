@@ -22,6 +22,7 @@ import FloatinButton from "./components/FloatingButton";
 import AudioControl from "./components/AudioControl";
 
 import "./styles.css";
+import GodParents from "./components/GodParents";
 
 const list = {
   visible: {
@@ -198,6 +199,7 @@ export default function Fifteen() {
             <Ceremony />
             <Reception />
           </div>
+          <GodParents />
           <Gallery />
           <Confirm />
           <FloatinButton />

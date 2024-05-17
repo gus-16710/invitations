@@ -3,7 +3,7 @@ import PhotoAlbum from "react-photo-album";
 import NextJsImage from "./NextJsImage";
 import Lightbox from "yet-another-react-lightbox";
 import { motion } from "framer-motion";
-import { dancing } from "./Fonts";
+import { dancing, playFair } from "./Fonts";
 import "yet-another-react-lightbox/styles.css";
 import { gallery } from "./Animations";
 
@@ -44,20 +44,7 @@ export default function Gallery() {
   const [index, setIndex] = useState(-1);
 
   return (
-    <section className="h-screen relative">
-      <svg
-        data-name="Layer 1"
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 1200 120"
-        preserveAspectRatio="none"
-        className="absolute w-full -top-1"
-      >
-        <path
-          d="M1200,0H0V120H281.94C572.9,116.24,602.45,3.86,602.45,3.86h0S632,116.24,923,120h277Z"
-          fill="#d9ccaa"
-        ></path>
-      </svg>
-
+    <section className="h-screen flex flex-col items-center">
       <motion.h1
         className={`${dancing.className} text-golden text-5xl text-center pt-20`}
         variants={gallery.text01}
@@ -67,7 +54,30 @@ export default function Gallery() {
         &nbsp; Galería &nbsp;
       </motion.h1>
 
-      <div className="z-30 px-2 py-10 w-72 m-auto">
+      <motion.div
+        id="alert-5"
+        className="flex items-center justify-center p-3 rounded-lg bg-zinc-900 w-72 mt-5"
+        role="alert"
+        variants={gallery.alert}
+        initial="hidden"
+        whileInView="visible"
+      >
+        <svg
+          className="flex-shrink-0 w-4 h-4 text-zinc-500"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="currentColor"
+          viewBox="0 0 20 20"
+        >
+          <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z" />
+        </svg>
+        <span className="sr-only">Info</span>
+        <div className={`${playFair.className} ms-3 text-xs text-zinc-400 `}>
+          Click sobre la imagen para ampliar
+        </div>
+      </motion.div>
+
+      <div className="z-30 px-2 py-5 w-72 m-auto">
         <PhotoAlbum
           layout="masonry"
           photos={images}

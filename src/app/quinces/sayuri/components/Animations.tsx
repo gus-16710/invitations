@@ -144,16 +144,46 @@ export const locations = {
 };
 
 /**
- * Gallery Animations
+ * GodParents Animations
  **/
 
-export const gallery = {
+export const godParents = {  
   text01: {
     hidden: { opacity: 0, y: 50 },
     visible: {
       opacity: 1,
       y: 0,
       transition: { duration: 1, delay: 1 },
+    },
+  },
+  caousel: {
+    hidden: { opacity: 0, y: -50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 1, delay: 1.5 },
+    },
+  },
+};
+
+/**
+ * Gallery Animations
+ **/
+
+export const gallery = {  
+  text01: {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 1, delay: 1 },
+    },
+  },
+  alert: {
+    hidden: { scale: 0 },
+    visible: {
+      scale: 1,
+      transition: { duration: 1 },
     },
   },
 };
