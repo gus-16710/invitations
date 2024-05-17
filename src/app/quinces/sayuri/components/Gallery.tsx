@@ -77,7 +77,7 @@ export default function Gallery() {
         </div>
       </motion.div>
 
-      <div className="z-30 px-2 py-5 w-72 m-auto">
+      <div className="z-30 px-2 py-5 w-72 mx-auto">
         <PhotoAlbum
           layout="masonry"
           photos={images}
