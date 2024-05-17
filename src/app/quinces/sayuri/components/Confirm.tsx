@@ -40,6 +40,7 @@ export default function Confirm() {
         variants={confirm.button01}
         initial="hidden"
         whileInView="visible"
+        onClick={() => window.open("https://wa.link/up6msa", "_blank")}
       >
         <span className="golden-text flex justify-around items-center">
           <FaSquareWhatsapp className="text-2xl" /> Mensaje de Whatsapp
@@ -52,6 +53,7 @@ export default function Confirm() {
         variants={confirm.button02}
         initial="hidden"
         whileInView="visible"
+        onClick={() => window.open("tel:2283612513", "_blank")}
       >
         <span className="golden-text flex justify-around items-center ">
           <FaSquarePhone className="text-2xl" />

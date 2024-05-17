@@ -7,7 +7,8 @@ import {
   Whisper,
   Julius_Sans_One,
   Graduate,
-  Rye
+  Rye,
+  Great_Vibes,
 } from "next/font/google";
 
 export const dancing = Dancing_Script({
@@ -54,3 +55,5 @@ export const rye = Rye({
   subsets: ["latin"],
   weight: ["400"],
 });
+
+export const great = Great_Vibes({ subsets: ["latin"], weight: ["400"] });

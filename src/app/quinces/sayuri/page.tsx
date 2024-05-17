@@ -7,8 +7,8 @@ import Presentation from "./components/Presentation";
 import Reception from "./components/Reception";
 import Gallery from "./components/Gallery";
 import Confirm from "./components/Confirm";
-import { dancing, playFair } from "./components/Fonts";
-import { FaEye } from "react-icons/fa";
+import { dancing, great, playFair, quickSand } from "./components/Fonts";
+import { motion } from "framer-motion";
 import {
   Modal,
   ModalBody,
@@ -18,9 +18,32 @@ import {
   useDisclosure,
 } from "@nextui-org/react";
 
-import "./styles.css";
 import FloatinButton from "./components/FloatingButton";
 import AudioControl from "./components/AudioControl";
+
+import "./styles.css";
+
+const list = {
+  visible: {
+    opacity: 1,
+    transition: {
+      when: "beforeChildren",
+      staggerChildren: 0.3,
+      delay: 1,
+    },
+  },
+  hidden: {
+    opacity: 0,
+    transition: {
+      when: "afterChildren",
+    },
+  },
+};
+
+const item = {
+  visible: { opacity: 1, y: 0, scale: 1 },
+  hidden: { opacity: 0, y: 100, scale: 0 },
+};
 
 const ModalOpening = ({
   isOpen,
@@ -31,6 +54,8 @@ const ModalOpening = ({
   onOpenChange: () => void;
   setOpen: Dispatch<SetStateAction<boolean>>;
 }) => {
+  const text = "Sayuri";
+
   return (
     <Modal
       isOpen={isOpen}
@@ -46,21 +71,98 @@ const ModalOpening = ({
           <>
             <ModalHeader className="flex flex-col gap-1"></ModalHeader>
             <ModalBody className="flex flex-col items-center justify-center">
-              <h1
-                className={`text-golden text-8xl ${dancing.className} border-b-3 border-yellow-600 pb-4 text-center`}
+              <p className="text-zinc-400 flex items-center z-20">
+                <motion.label
+                  className={`text-2xl ${quickSand.className}`}
+                  variants={{
+                    hidden: { x: 100, opacity: 0 },
+                    visible: {
+                      x: 0,
+                      opacity: 1,
+                      transition: { duration: 1, delay: 3 },
+                    },
+                  }}
+                  initial="hidden"
+                  whileInView="visible"
+                >
+                  MIS
+                </motion.label>
+                <motion.label
+                  className={`text-6xl ${great.className}`}
+                  variants={{
+                    hidden: { x: -100, opacity: 0 },
+                    visible: {
+                      x: 0,
+                      opacity: 1,
+                      transition: { duration: 1, delay: 3 },
+                    },
+                  }}
+                  initial="hidden"
+                  whileInView="visible"
+                >
+                  XV
+                </motion.label>
+              </p>
+              <motion.h1
+                className={`text-8xl ${dancing.className} text-center`}
+                variants={list}
+                initial="hidden"
+                animate="visible"
               >
-                &nbsp;Sayuri&nbsp;
-              </h1>
-              <p
+                {text.split("").map((letter, index) => {
+                  return (
+                    <motion.span
+                      key={index}
+                      variants={item}
+                      className="text-golden"
+                    >
+                      {letter}
+                    </motion.span>
+                  );
+                })}
+              </motion.h1>
+              <motion.div
+                className="w-72 bg-yellow-800 mt-3"
+                style={{ height: "2px" }}
+                variants={{
+                  hidden: { scale: 0 },
+                  visible: {
+                    scale: 1,
+                    transition: { duration: 1, delay: 2 },
+                  },
+                }}
+                initial="hidden"
+                animate="visible"
+              />
+              <motion.p
                 className={`${playFair.className} text-zinc-400 text-center text-xl`}
+                variants={{
+                  hidden: { opacity: 0, y: -25 },
+                  visible: {
+                    opacity: 1,
+                    y: 0,
+                    transition: { duration: 1, delay: 2.5 },
+                  },
+                }}
+                initial="hidden"
+                animate="visible"
               >
                 21 | SEPTIEMBRE | 2024
-              </p>
+              </motion.p>
             </ModalBody>
             <ModalFooter className="flex justify-center">
-              <button
+              <motion.button
                 type="button"
                 className="mt-5 golden-button"
+                variants={{
+                  hidden: { opacity: 0 },
+                  visible: {
+                    opacity: 1,
+                    transition: { duration: 1, delay: 3 },
+                  },
+                }}
+                initial="hidden"
+                animate="visible"
                 onClick={() => {
                   setOpen(true);
                   onClose();
@@ -69,7 +171,7 @@ const ModalOpening = ({
                 <span className="golden-text flex justify-around items-center w-40">
                   - Ver invitación -
                 </span>
-              </button>
+              </motion.button>
             </ModalFooter>
           </>
         )}

@@ -1,5 +1,5 @@
 import { dancing, playFair } from "./Fonts";
-import { delay, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { header } from "./Animations";
 
 const list = {
