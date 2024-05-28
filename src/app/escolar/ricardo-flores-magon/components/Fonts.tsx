@@ -4,6 +4,7 @@ import {
   Urbanist,
   Bebas_Neue,
   Luxurious_Roman,
+  Lora
 } from "next/font/google";
 
 export const mea = Mea_Culpa({ subsets: ["latin"], weight: ["400"] });
@@ -20,6 +21,10 @@ export const bebas = Bebas_Neue({
   weight: ["400"],
 });
 export const luxurious = Luxurious_Roman({
+  subsets: ["latin"],
+  weight: ["400"],
+});
+export const lora = Lora({
   subsets: ["latin"],
   weight: ["400"],
 });

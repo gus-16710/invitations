@@ -70,7 +70,7 @@ export default function School() {
   return (
     <main className="bg-[url('/img/escolar/ricardo-flores-magon/background.jpg')] bg-center bg-cover">
       <Splide
-        aria-label="Diana & Ernesto"
+        aria-label="Ricardo Flores Magón"
         options={{
           rewind: true,
           direction: "ltr",
