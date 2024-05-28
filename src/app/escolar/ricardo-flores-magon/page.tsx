@@ -68,7 +68,7 @@ import "@splidejs/react-splide/css";
 
 export default function School() {
   return (
-    <main className="bg-[url('/img/escolar/ricardo-flores-magon/background-02.jpg')] bg-center bg-cover">
+    <main className="bg-[url('/img/escolar/ricardo-flores-magon/background.jpg')] bg-center bg-cover">
       <Splide
         aria-label="Diana & Ernesto"
         options={{
