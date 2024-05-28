@@ -7,7 +7,7 @@ export const metadata: Metadata = {
     title: "🎓 Ricardo Flores Magón | Fin de Cursos 🎓",
     description: "Ceremonia de “Fin de cursos” de la GENERACIÓN 2021-2024",
     images: [
-      `https://invitaciones.unaideamas.com/escolar/ricardo-flores-magon/rfm.jpg`,
+      `https://invitaciones.unaideamas.com/img/escolar/ricardo-flores-magon/rfm.jpg`,
     ],
   },
   icons: {
