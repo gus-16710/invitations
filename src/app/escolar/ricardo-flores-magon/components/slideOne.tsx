@@ -35,7 +35,7 @@ export default function SlideOne() {
         2021 - 2024
       </p>
       <p className={`${urbanist.className} text-zinc-50 text-xl`}>
-        11-Junio-2024, 10:00 Hrs
+        11-Julio-2024, 10:00 Hrs
       </p>
     </motion.section>
   );
