@@ -14,7 +14,7 @@ export default function SlideThree() {
       <h1 className={`${mea.className} text-zinc-50 text-6xl mb-5`}>
         Invitados
       </h1>
-      <ScrollShadow className="h-[350px] z-50">
+      <ScrollShadow hideScrollBar className="h-[350px] z-50">
         <p className="text-zinc-50 text-center mb-5 mx-5">
           <span className="font-bold">Dra. Renata Roldan Cuevas</span> <br />
           Jefa del Sector 02 de Telesecundarias
