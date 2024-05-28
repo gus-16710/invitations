@@ -1,6 +1,7 @@
 import { mea } from "./Fonts";
 import { ScrollShadow } from "@nextui-org/react";
 import { motion } from "framer-motion";
+import { IoIosArrowDown } from "react-icons/io";
 
 export default function SlideThree() {
   return (
@@ -14,7 +15,7 @@ export default function SlideThree() {
       <h1 className={`${mea.className} text-zinc-50 text-6xl mb-5`}>
         Invitados
       </h1>
-      <ScrollShadow hideScrollBar className="h-[350px] z-50">
+      <ScrollShadow hideScrollBar className="h-[400px] z-50">
         <p className="text-zinc-50 text-center mb-5 mx-5">
           <span className="font-bold">Dra. Renata Roldan Cuevas</span> <br />
           Jefa del Sector 02 de Telesecundarias
@@ -59,6 +60,14 @@ export default function SlideThree() {
           </span>
         </p>
       </ScrollShadow>
+      <motion.div
+        initial={{ y: 0 }}
+        whileInView={{ y: [0, 10, 0] }}
+        transition={{ duration: 2, repeat: Infinity }}
+        className="mt-5"
+      >
+        <IoIosArrowDown className="text-zinc-400" />
+      </motion.div>
     </motion.section>
   );
 }
