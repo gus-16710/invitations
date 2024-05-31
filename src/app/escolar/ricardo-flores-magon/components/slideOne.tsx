@@ -9,7 +9,7 @@ export default function SlideOne() {
       style={{ height: "100svh" }}
       initial={{ scale: 0, opacity: 0 }}
       whileInView={{ scale: 1, opacity: 1 }}
-      transition={{ duration: 1.5, delay: 0.5 }}
+      transition={{ duration: 1.5, delay: 0.5 }}      
     >
       <h2 className={`${urbanist.className} text-zinc-300 text-lg`}>
         Escuela Telesecundaria

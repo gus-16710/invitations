@@ -68,20 +68,19 @@ export default function GodParents() {
             <div className="flex h-full items-center justify-center pb-10 text-zinc-400 flex-col px-5 text-center">
               <p className={`${dancing.className} text-4xl pb-4`}>Honor</p>
               <p className={`${playFair.className}`}>
-                Mariela Macias Rincon <br />&<br /> Ignacio López Lozano
+                Abraham Hernández Sánchez <br />&<br /> Xóchitl Miranda Nolasco
               </p>
             </div>
             <div className="flex h-full items-center justify-center pb-10 text-zinc-400 flex-col px-5 text-center">
-              <p className={`${dancing.className} text-4xl pb-4`}>Coronación</p>
+              <p className={`${dancing.className} text-4xl pb-4`}>Brindis</p>
               <p className={`${playFair.className}`}>
-                Leticia Barragan Saldaña <br />&<br /> Juan Pablo Robles
-                Castillo
+                Hipolito Portilla <br />&<br /> Verónica Martinez
               </p>
             </div>
             <div className="flex h-full items-center justify-center pb-10 text-zinc-400 flex-col px-5 text-center">
               <p className={`${dancing.className} text-4xl pb-4`}>Muñeca</p>
               <p className={`${playFair.className}`}>
-                Rocio Hernández García <br />&<br /> Pedro Ruíz Sanchez
+                Mia Yuritzy Castillo Hernández
               </p>
             </div>
           </Carousel>
