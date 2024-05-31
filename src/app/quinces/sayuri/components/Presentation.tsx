@@ -154,8 +154,9 @@ export default function Presentation() {
       >
         Quince flores nuevas, que te harán feliz, quince primaveras y una vida
         entera por vivir. El comienzo de una nueva etapa, y por más que las
-        primaveras sigan llegando, ninguna será tan especial como esta. Acompaña
-        a nuestra pequeña a celebrar sus 15 años.
+        primaveras sigan llegando, ninguna será tan especial como esta.
+        Acompañanos a celebrar los 15 años de nuestra princesa Sayuri Santiago
+        Hernández.
       </motion.p>
 
       <svg
