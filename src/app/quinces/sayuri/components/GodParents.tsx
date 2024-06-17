@@ -68,7 +68,13 @@ export default function GodParents() {
             <div className="flex h-full items-center justify-center pb-10 text-zinc-400 flex-col px-5 text-center">
               <p className={`${dancing.className} text-4xl pb-4`}>Honor</p>
               <p className={`${playFair.className}`}>
-                Abraham Hernández Sánchez <br />&<br /> Xóchitl Miranda Nolasco
+                Abraham Hernández Sánchez
+              </p>
+            </div>
+            <div className="flex h-full items-center justify-center pb-10 text-zinc-400 flex-col px-5 text-center">
+              <p className={`${dancing.className} text-4xl pb-4`}>Honor</p>
+              <p className={`${playFair.className}`}>
+                Xóchitl Miranda Nolasco
               </p>
             </div>
             <div className="flex h-full items-center justify-center pb-10 text-zinc-400 flex-col px-5 text-center">

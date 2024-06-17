@@ -29,7 +29,7 @@ export default function AudioControl() {
 
       <audio controls ref={audioPlayer} hidden loop>
         <source
-          src="/media/wildest_dreams_taylor_swift.mp3"
+          src="/media/el_condor_pasa.mp3"
           type="audio/mpeg"
         />
         Your browser does not support the audio element.
