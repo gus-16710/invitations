@@ -1,6 +1,8 @@
 "use client";
 
 import { useEffect, useState, Dispatch, SetStateAction } from "react";
+// @ts-ignore
+import { Splide, SplideSlide } from "@splidejs/react-splide";
 import Header from "./components/Header";
 import Ceremony from "./components/Ceremony";
 import Presentation from "./components/Presentation";
@@ -18,11 +20,11 @@ import {
   useDisclosure,
 } from "@nextui-org/react";
 
-import FloatinButton from "./components/FloatingButton";
 import AudioControl from "./components/AudioControl";
+import GodParents from "./components/GodParents";
 
 import "./styles.css";
-import GodParents from "./components/GodParents";
+import "@splidejs/react-splide/css";
 
 const list = {
   visible: {
@@ -193,16 +195,44 @@ export default function Fifteen() {
     <main className={`background-class ${open ? "" : "h-screen"}`}>
       {open && (
         <div className="max-w-3xl m-auto bg-golden bg-[url('/img/quinces/sayuri/background-floral.jpg')] bg-cover bg-center bg-fixed shadow-large">
-          <Header />
-          <Presentation />
-          <div className="bg-[url('/img/quinces/sayuri/background-paper.jpg')] bg-cover bg-center">
-            <Ceremony />
-            <Reception />
-          </div>
-          <GodParents />
-          <Gallery />
-          <Confirm />
-          <FloatinButton />
+          <Splide
+            aria-label="Diana & Ernesto"
+            options={{
+              rewind: true,
+              direction: "ttb",
+              height: "100svh",
+              wheel: true,
+              releaseWheel: true,
+              type: "loop",
+              waitForTransition: true,
+              arrows: false,
+              classes: {
+                page: "splide__pagination__page custom-class-page", // each button
+              },
+            }}
+          >
+            <SplideSlide>
+              <Header />
+            </SplideSlide>
+            <SplideSlide>
+              <Presentation />
+            </SplideSlide>
+            <SplideSlide>
+              <Ceremony />
+            </SplideSlide>
+            <SplideSlide>
+              <Reception />
+            </SplideSlide>
+            <SplideSlide>
+              <GodParents />
+            </SplideSlide>
+            <SplideSlide>
+              <Gallery />
+            </SplideSlide>
+            <SplideSlide>
+              <Confirm />
+            </SplideSlide>                        
+          </Splide>
           <AudioControl />
         </div>
       )}

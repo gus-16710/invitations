@@ -78,67 +78,93 @@ export const presentation = {
 };
 
 /**
- * Locations Animations
- */
+ * Ceremony Animations
+ **/
 
-export const locations = {
-  icon: {
-    hidden: { opacity: 0, scale: 0 },
-    visible: { opacity: 1, scale: 1, transition: { duration: 1, delay: 0.4 } },
-  },
-  animationText01: {
-    hidden: { opacity: 0, scale: 0 },
+export const ceremony = {
+  text01: {
+    hidden: { opacity: 0, y: 50 },
     visible: {
       opacity: 1,
-      scale: 1,
-      transition: { duration: 2, type: "spring", stiffness: 70, delay: 0.8 },
-    },
-  },
-  animationText02: {
-    hidden: { x: 100, opacity: 0 },
-    visible: {
-      x: 0,
-      opacity: 1,
-      transition: { duration: 1, delay: 2 },
-    },
-  },
-  animationText03: {
-    hidden: { x: -100, opacity: 0 },
-    visible: {
-      x: 0,
-      opacity: 1,
-      transition: { duration: 1, delay: 2 },
-    },
-  },
-  time01: {
-    hidden: { opacity: 0, x: -100 },
-    visible: {
-      x: 0,
-      opacity: 1,
-      transition: { duration: 1, delay: 1.5 },
-    },
-  },
-  button01: {
-    hidden: { opacity: 0, x: 100 },
-    visible: {
-      opacity: 1,
-      x: 0,
-      transition: { duration: 1, delay: 1.5 },
-    },
-  },
-  divider: {
-    hidden: { scale: 0 },
-    visible: {
-      scale: 1,
-      transition: { duration: 1, delay: 1.5 },
-    },
-  },
-  animationAlert: {
-    hidden: { y: 100, opacity: 0 },
-    visible: {
       y: 0,
+      transition: { duration: 1, delay: 0.5 },
+    },
+  },
+  text02: {
+    hidden: { opacity: 0, y: -50 },
+    visible: {
       opacity: 1,
+      y: 0,
       transition: { duration: 1, delay: 1 },
+    },
+  },
+  text03: {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 1, delay: 1.5 },
+    },
+  },
+  text04: {
+    hidden: { opacity: 0, y: -50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 1, delay: 2 },
+    },
+  },
+  button: {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,      
+      transition: { duration: 1, delay: 2.5 },
+    },
+  },
+};
+
+/**
+ * Reception Animations
+ **/
+
+export const reception = {
+  text01: {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 1, delay: 0.5 },
+    },
+  },
+  text02: {
+    hidden: { opacity: 0, y: -50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 1, delay: 1 },
+    },
+  },
+  text03: {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 1, delay: 1.5 },
+    },
+  },
+  text04: {
+    hidden: { opacity: 0, y: -50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 1, delay: 2 },
+    },
+  },
+  button: {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,      
+      transition: { duration: 1, delay: 2.5 },
     },
   },
 };
@@ -153,17 +179,9 @@ export const godParents = {
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 1, delay: 1 },
+      transition: { duration: 1, delay: 0.5 },
     },
-  },
-  caousel: {
-    hidden: { opacity: 0, y: -50 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 1, delay: 1.5 },
-    },
-  },
+  },  
 };
 
 /**

@@ -86,7 +86,7 @@ export default function Presentation() {
   return (
     <section className="h-screen flex flex-col items-center justify-center relative">
       <motion.h1
-        className={`${dancing.className} text-golden text-5xl`}
+        className={`${dancing.className} text-golden text-6xl`}
         variants={presentation.text01}
         initial="hidden"
         whileInView="visible"
@@ -159,7 +159,7 @@ export default function Presentation() {
         Hernández.
       </motion.p>
 
-      <svg
+      {/* <svg
         data-name="Layer 1"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 1200 120"
@@ -170,7 +170,7 @@ export default function Presentation() {
           d="M1200,0H0V120H281.94C572.9,116.24,602.45,3.86,602.45,3.86h0S632,116.24,923,120h277Z"
           fill="#d9ccaa"
         ></path>
-      </svg>
+      </svg> */}
     </section>
   );
 }

@@ -46,12 +46,12 @@ export default function Gallery() {
   return (
     <section className="h-screen flex flex-col items-center">
       <motion.h1
-        className={`${dancing.className} text-golden text-5xl text-center pt-20`}
+        className={`${dancing.className} text-golden text-6xl text-center pt-10`}
         variants={gallery.text01}
         initial="hidden"
         whileInView="visible"
       >
-        &nbsp; Galería &nbsp;
+        &nbsp; Fotos &nbsp;
       </motion.h1>
 
       <motion.div

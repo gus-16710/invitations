@@ -7,9 +7,9 @@ const customTheme: FlowbiteCarouselTheme = {
   root: {
     base: "relative h-96 w-full",
     leftControl:
-      "absolute top-0 left-0 flex h-full items-center justify-center px-4 focus:outline-none",
+      "absolute top-0 left-4 flex h-full items-center justify-center px-4 focus:outline-none",
     rightControl:
-      "absolute top-0 right-0 flex h-full items-center justify-center px-4 focus:outline-none",
+      "absolute top-0 right-4 flex h-full items-center justify-center px-4 focus:outline-none",
   },
   indicators: {
     active: {
@@ -36,62 +36,90 @@ const customTheme: FlowbiteCarouselTheme = {
 export default function GodParents() {
   return (
     <section className="h-screen flex flex-col items-center justify-center relative">
-      <svg
-        data-name="Layer 1"
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 1200 120"
-        preserveAspectRatio="none"
-        className="absolute w-full -top-1"
-      >
-        <path
-          d="M1200,0H0V120H281.94C572.9,116.24,602.45,3.86,602.45,3.86h0S632,116.24,923,120h277Z"
-          fill="#d9ccaa"
-        ></path>
-      </svg>
       <motion.h1
-        className={`${dancing.className} text-golden text-5xl text-center`}
+        className={`${dancing.className} text-golden text-6xl text-center`}
         variants={godParents.text01}
         initial="hidden"
         whileInView="visible"
       >
         &nbsp; Padrinos &nbsp;
       </motion.h1>
-
-      <motion.div
-        className="w-full"
-        variants={godParents.caousel}
-        initial="hidden"
-        whileInView="visible"
-      >
-        <Flowbite>
-          <Carousel theme={customTheme}>
-            <div className="flex h-full items-center justify-center pb-10 text-zinc-400 flex-col px-5 text-center">
-              <p className={`${dancing.className} text-4xl pb-4`}>Honor</p>
-              <p className={`${playFair.className}`}>
-                Abraham Hernández Sánchez
-              </p>
-            </div>
-            <div className="flex h-full items-center justify-center pb-10 text-zinc-400 flex-col px-5 text-center">
-              <p className={`${dancing.className} text-4xl pb-4`}>Honor</p>
-              <p className={`${playFair.className}`}>
-                Xóchitl Miranda Nolasco
-              </p>
-            </div>
-            <div className="flex h-full items-center justify-center pb-10 text-zinc-400 flex-col px-5 text-center">
-              <p className={`${dancing.className} text-4xl pb-4`}>Brindis</p>
-              <p className={`${playFair.className}`}>
-                Hipolito Portilla <br />&<br /> Verónica Martinez
-              </p>
-            </div>
-            <div className="flex h-full items-center justify-center pb-10 text-zinc-400 flex-col px-5 text-center">
-              <p className={`${dancing.className} text-4xl pb-4`}>Muñeca</p>
-              <p className={`${playFair.className}`}>
-                Mia Yuritzy Castillo Hernández
-              </p>
-            </div>
-          </Carousel>
-        </Flowbite>
-      </motion.div>
+      <Flowbite>
+        <Carousel theme={customTheme}>
+          <div className="flex h-full items-center justify-center pb-10 text-zinc-400 flex-col px-5 text-center">
+            <motion.p
+              className={`${dancing.className} text-4xl pb-4`}
+              initial={{ scale: 0, opacity: 0 }}
+              whileInView={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 1, ease: "easeOut" }}
+            >
+              Honor
+            </motion.p>
+            <motion.p
+              className={`${playFair.className}`}
+              initial={{ scale: 0, opacity: 0 }}
+              whileInView={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 1, ease: "easeOut" }}
+            >
+              Abraham Hernández Sánchez
+            </motion.p>
+          </div>
+          <div className="flex h-full items-center justify-center pb-10 text-zinc-400 flex-col px-5 text-center">
+            <motion.p
+              className={`${dancing.className} text-4xl pb-4`}
+              initial={{ scale: 0, opacity: 0 }}
+              whileInView={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 1, ease: "easeOut" }}
+            >
+              Honor (2)
+            </motion.p>
+            <motion.p
+              className={`${playFair.className}`}
+              initial={{ scale: 0, opacity: 0 }}
+              whileInView={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 1, ease: "easeOut" }}
+            >
+              Xóchitl Miranda Nolasco
+            </motion.p>
+          </div>
+          <div className="flex h-full items-center justify-center pb-10 text-zinc-400 flex-col px-5 text-center">
+            <motion.p
+              className={`${dancing.className} text-4xl pb-4`}
+              initial={{ scale: 0, opacity: 0 }}
+              whileInView={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 1, ease: "easeOut" }}
+            >
+              Brindis
+            </motion.p>
+            <motion.p
+              className={`${playFair.className}`}
+              initial={{ scale: 0, opacity: 0 }}
+              whileInView={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 1, ease: "easeOut" }}
+            >
+              Hipolito Portilla <br />&<br /> Verónica Martinez
+            </motion.p>
+          </div>
+          <div className="flex h-full items-center justify-center pb-10 text-zinc-400 flex-col px-5 text-center">
+            <motion.p
+              className={`${dancing.className} text-4xl pb-4`}
+              initial={{ scale: 0, opacity: 0 }}
+              whileInView={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 1, ease: "easeOut" }}
+            >
+              Muñeca
+            </motion.p>
+            <motion.p
+              className={`${playFair.className}`}
+              initial={{ scale: 0, opacity: 0 }}
+              whileInView={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 1, ease: "easeOut" }}
+            >
+              Mia Yuritzy Castillo Hernández
+            </motion.p>
+          </div>
+        </Carousel>
+      </Flowbite>
     </section>
   );
 }

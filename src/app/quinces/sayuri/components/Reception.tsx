@@ -1,5 +1,6 @@
 import { IoMdTime } from "react-icons/io";
-import { dancing, julius, playFair, quickSand, rye } from "./Fonts";
+import { dancing, julius, playFair, quickSand } from "./Fonts";
+import { motion } from "framer-motion";
 import {
   Modal,
   ModalBody,
@@ -8,7 +9,7 @@ import {
   ModalHeader,
   useDisclosure,
 } from "@nextui-org/react";
-import { ImDiamonds } from "react-icons/im";
+import { reception } from "./Animations";
 
 const MapSalon = () => (
   <iframe
@@ -61,92 +62,54 @@ export default function Reception() {
   return (
     <>
       <section className="h-screen flex flex-col items-center justify-center">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          xmlnsXlink="http://www.w3.org/1999/xlink"
-          height="100px"
-          width="100px"
-          version="1.1"
-          id="Layer_1"
-          viewBox="0 0 512 512"
-          xmlSpace="preserve"
-          className="mb-5"
+        <motion.h1
+          className={`${dancing.className} text-golden text-6xl`}
+          variants={reception.text01}
+          initial="hidden"
+          whileInView="visible"
         >
-          <circle style={{ fill: "#FFD15D" }} cx="256" cy="256" r="256" />
-          <path
-            style={{ fill: "#F9B54C" }}
-            d="M207.731,430.899l79.232,79.232c111.569-13.453,201.042-98.659,220.906-208.129l-176.08-176.08  l-71.192,69.741l-75.238,82.747l71.359,71.359v70.173L207.731,430.899z"
-          />
-          <path
-            style={{ fill: "#FFFFFF" }}
-            d="M352.539,213.687c0-22.583-7.756-56.344-20.747-87.762H180.208  c-12.991,31.418-20.747,65.179-20.747,87.762c0,49.226,36.854,89.819,84.471,95.761v109.749h-36.202v11.702h96.539v-11.702h-36.202  V309.448C315.685,303.504,352.539,262.913,352.539,213.687z"
-          />
-          <path
-            style={{ fill: "#E6F3FF" }}
-            d="M352.539,213.687c0-22.583-7.756-56.344-20.747-87.762h-76.366v304.974h48.843v-11.702h-36.202  V309.448C315.685,303.504,352.539,262.913,352.539,213.687z"
-          />
-          <path
-            style={{ fill: "#D83E20" }}
-            d="M168.26,212.954c-0.005,0.372-0.024,0.765-0.024,1.131c0,48.469,39.293,87.762,87.762,87.762  s87.762-39.293,87.762-87.762c0-0.365-0.019-0.759-0.024-1.131L168.26,212.954L168.26,212.954z"
-          />
-          <path
-            style={{ fill: "#C1321F" }}
-            d="M343.74,212.954h-88.314v88.878c0.193,0.002,0.381,0.014,0.574,0.014  c48.469,0,87.762-39.293,87.762-87.762C343.762,213.719,343.743,213.326,343.74,212.954z"
-          />
-        </svg>
+          &nbsp;Recepción&nbsp;
+        </motion.h1>
 
-        <h1 className={`${rye.className} text-zinc-700 text-5xl`}>
-          Recepción
-        </h1>
-
-        <span
-          className={`${julius.className} text-zinc-700 text-3xl font-medium me-2 px-2.5 rounded my-4 flex items-center justify-center gap-1`}
-          //variants={locations.time01}
-          //initial="hidden"
-          //whileInView="visible"
+        <motion.span
+          className={`${julius.className} text-zinc-400 text-3xl font-medium rounded my-4 flex items-center justify-center gap-1`}
+          variants={reception.text02}
+          initial="hidden"
+          whileInView="visible"
         >
           <IoMdTime /> 14:30 Hrs
-        </span>
+        </motion.span>
 
-        <p
-          className={`${playFair.className} my-5 mx-10 font-bold text-center text-lg px-3 py-1 uppercase -rotate-2 flex items-center`}
-          style={{
-            color: "#d9ccaa",
-            backgroundColor: "#50443c",
-            boxShadow:
-              "rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px",
-          }}
-          //variants={locations.animationText02}
-          //initial="hidden"
-          //whileInView="visible"
+        <motion.p
+          className={`${playFair.className} text-golden my-5 mx-10 font-bold text-center text-2xl px-2 py-1 uppercase flex items-center`}
+          variants={reception.text03}
+          initial="hidden"
+          whileInView="visible"
         >
-          <span className="text-sm mr-3">
-            <ImDiamonds />
-          </span>
-          Salón de Eventos Sociales Tengonapa
-          <span className="text-sm ml-3">
-            <ImDiamonds />
-          </span>
-        </p>
+          &nbsp;Salón de Eventos Sociales Tengonapa&nbsp;
+        </motion.p>
 
-        <p
-          className={`${quickSand.className} mx-10 text-center text-zinc-700 max-w-md`}
-          //variants={locations.animationText03}
-          //initial="hidden"
-          //whileInView="visible"
+        <motion.p
+          className={`${quickSand.className} text-zinc-400 mx-10 text-center max-w-md`}
+          variants={reception.text04}
+          initial="hidden"
+          whileInView="visible"
         >
           Calle Principal S/N, Tengonapa, Centro, 91353 Tlacolulan, Ver.
-        </p>
+        </motion.p>
 
-        <button
+        <motion.button
           role="button"
           className="golden-button mt-5"
           onClick={() => {
             onOpen();
           }}
+          variants={reception.button}
+          initial="hidden"
+          whileInView="visible"
         >
           <span className="golden-text">Ver Ubicación</span>
-        </button>
+        </motion.button>
       </section>
       <ModalMap isOpen={isOpen} onOpenChange={onOpenChange} />
     </>

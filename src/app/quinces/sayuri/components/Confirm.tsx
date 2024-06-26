@@ -7,7 +7,7 @@ export default function Confirm() {
   return (
     <section className="h-screen flex flex-col items-center justify-center overflow-clip">
       <motion.h1
-        className={`${dancing.className} text-golden text-5xl text-center`}
+        className={`${dancing.className} text-golden text-6xl text-center`}
         variants={confirm.text01}
         initial="hidden"
         whileInView="visible"
@@ -36,7 +36,7 @@ export default function Confirm() {
 
       <motion.button
         role="button"
-        className="golden-button mt-5 w-64"
+        className="golden-button mt-5 w-72"
         variants={confirm.button01}
         initial="hidden"
         whileInView="visible"
@@ -49,7 +49,7 @@ export default function Confirm() {
 
       <motion.button
         role="button"
-        className="golden-button mt-5 w-64"
+        className="golden-button mt-5 w-72"
         variants={confirm.button02}
         initial="hidden"
         whileInView="visible"
