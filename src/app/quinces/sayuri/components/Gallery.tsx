@@ -44,7 +44,7 @@ export default function Gallery() {
   const [index, setIndex] = useState(-1);
 
   return (
-    <section className="h-screen flex flex-col items-center">
+    <section className="flex flex-col items-center" style={{ height: "100svh" }}>
       <motion.h1
         className={`${dancing.className} text-golden text-6xl text-center pt-10`}
         variants={gallery.text01}

@@ -61,7 +61,10 @@ export default function Reception() {
 
   return (
     <>
-      <section className="h-screen flex flex-col items-center justify-center">
+      <section
+        className="flex flex-col items-center justify-center"
+        style={{ height: "100svh" }}
+      >
         <motion.h1
           className={`${dancing.className} text-golden text-6xl`}
           variants={reception.text01}

@@ -5,7 +5,10 @@ import { confirm } from "./Animations";
 
 export default function Confirm() {
   return (
-    <section className="h-screen flex flex-col items-center justify-center overflow-clip">
+    <section
+      className="flex flex-col items-center justify-center overflow-clip"
+      style={{ height: "100svh" }}
+    >
       <motion.h1
         className={`${dancing.className} text-golden text-6xl text-center`}
         variants={confirm.text01}

@@ -28,7 +28,7 @@ export default function Header() {
   const text = "Sayuri";
 
   return (
-    <section className="h-screen flex flex-col justify-center items-center">
+    <section className="flex flex-col justify-center items-center" style={{ height: "100svh" }}>
       <div className="relative w-full h-96 flex items-center justify-center overflow-clip mt-16">
         <motion.div
           className="bg-[url('/img/quinces/sayuri/round-frame.png')] bg-contain bg-no-repeat bg-center absolute w-full h-full opacity-80"

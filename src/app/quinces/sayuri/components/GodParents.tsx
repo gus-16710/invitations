@@ -35,7 +35,10 @@ const customTheme: FlowbiteCarouselTheme = {
 
 export default function GodParents() {
   return (
-    <section className="h-screen flex flex-col items-center justify-center relative">
+    <section
+      className="flex flex-col items-center justify-center relative"
+      style={{ height: "100svh" }}
+    >
       <motion.h1
         className={`${dancing.className} text-golden text-6xl text-center`}
         variants={godParents.text01}

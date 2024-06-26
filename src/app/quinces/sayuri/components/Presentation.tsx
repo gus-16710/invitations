@@ -84,7 +84,10 @@ export default function Presentation() {
   }, [days, animateDays]);
 
   return (
-    <section className="h-screen flex flex-col items-center justify-center relative">
+    <section
+      className="flex flex-col items-center justify-center relative"
+      style={{ height: "100svh" }}
+    >
       <motion.h1
         className={`${dancing.className} text-golden text-6xl`}
         variants={presentation.text01}
