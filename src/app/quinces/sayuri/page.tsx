@@ -20,6 +20,7 @@ import {
   useDisclosure,
 } from "@nextui-org/react";
 
+import FloatinButton from "./components/FloatingButton";
 import AudioControl from "./components/AudioControl";
 import GodParents from "./components/GodParents";
 

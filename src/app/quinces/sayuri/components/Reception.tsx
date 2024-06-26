@@ -75,7 +75,7 @@ export default function Reception() {
         </motion.h1>
 
         <motion.span
-          className={`${julius.className} text-zinc-400 text-3xl font-medium rounded my-4 flex items-center justify-center gap-1`}
+          className={`${julius.className} text-zinc-400 text-3xl font-medium rounded my-10 flex items-center justify-center gap-1`}
           variants={reception.text02}
           initial="hidden"
           whileInView="visible"
@@ -84,7 +84,7 @@ export default function Reception() {
         </motion.span>
 
         <motion.p
-          className={`${playFair.className} text-golden my-5 mx-10 font-bold text-center text-2xl px-2 py-1 uppercase flex items-center`}
+          className={`${playFair.className} text-golden mx-10 font-bold text-center text-2xl px-2 py-1 uppercase flex items-center`}
           variants={reception.text03}
           initial="hidden"
           whileInView="visible"
@@ -103,7 +103,7 @@ export default function Reception() {
 
         <motion.button
           role="button"
-          className="golden-button mt-5"
+          className="golden-button mt-10"
           onClick={() => {
             onOpen();
           }}

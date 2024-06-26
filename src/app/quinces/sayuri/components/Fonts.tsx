@@ -10,6 +10,8 @@ import {
   Rye,
   Great_Vibes,
   Mea_Culpa,
+  Allura,
+  Parisienne
 } from "next/font/google";
 
 export const dancing = Dancing_Script({
@@ -60,3 +62,5 @@ export const rye = Rye({
 export const great = Great_Vibes({ subsets: ["latin"], weight: ["400"] });
 
 export const mea = Mea_Culpa({ subsets: ["latin"], weight: ["400"] });
+
+export const allura = Parisienne({ subsets: ["latin"], weight: ["400"] });

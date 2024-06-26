@@ -9,32 +9,32 @@ import { gallery } from "./Animations";
 
 const images = [
   {
-    src: "/img/quinces/sayuri/gallery-01.jpeg",
+    src: "/img/quinces/sayuri/gallery-07.jpeg",
     width: 800,
     height: 600,
   },
   {
-    src: "/img/quinces/sayuri/gallery-02.jpeg",
+    src: "/img/quinces/sayuri/gallery-08.jpeg",
     width: 1600,
     height: 900,
   },
   {
-    src: "/img/quinces/sayuri/gallery-03.jpeg",
+    src: "/img/quinces/sayuri/gallery-09.jpeg",
     width: 800,
     height: 600,
   },
   {
-    src: "/img/quinces/sayuri/gallery-04.jpeg",
+    src: "/img/quinces/sayuri/gallery-10.jpeg",
     width: 800,
     height: 600,
   },
   {
-    src: "/img/quinces/sayuri/gallery-05.jpeg",
+    src: "/img/quinces/sayuri/gallery-11.jpeg",
     width: 800,
     height: 600,
   },
   {
-    src: "/img/quinces/sayuri/gallery-06.jpeg",
+    src: "/img/quinces/sayuri/gallery-12.jpeg",
     width: 800,
     height: 600,
   },
@@ -56,7 +56,7 @@ export default function Gallery() {
 
       <motion.div
         id="alert-5"
-        className="flex items-center justify-center p-3 rounded-lg bg-zinc-900 w-72 mt-5"
+        className="flex items-center justify-center p-3 rounded-lg bg-zinc-900/70 w-72 mt-5"
         role="alert"
         variants={gallery.alert}
         initial="hidden"

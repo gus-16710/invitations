@@ -25,7 +25,7 @@ export const header = {
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 1, delay: 3 },
+      transition: { duration: 1, delay: 1.5 },
     },
   },
   text03: {
@@ -36,6 +36,47 @@ export const header = {
       transition: { duration: 1, delay: 3.5 },
     },
   },
+  dayNumber: {
+    hidden: { opacity: 0, scale: 0 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: { duration: 1, delay: 2.5 },
+    },
+  },
+  day: {
+    hidden: { opacity: 0, x: 50 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: { duration: 1, delay: 3 },
+    },
+  },
+  time: {
+    hidden: { opacity: 0, x: -50 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: { duration: 1, delay: 3 },
+    },
+  },
+  month: {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 1, delay: 3 },
+    },
+  },
+  year: {
+    hidden: { opacity: 0, y: -50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 1, delay: 3 },
+    },
+  },
+  
 };
 
 /**
