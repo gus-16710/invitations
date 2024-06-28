@@ -108,7 +108,7 @@ export default function Header() {
           initial="hidden"
           whileInView="visible"
         >
-          2023
+          2024
         </motion.p>
       </div>
     </section>
