@@ -98,7 +98,7 @@ export default function Ceremony() {
           initial="hidden"
           whileInView="visible"
         >
-          Calle Principal S/N, Tengonapa, Centro, 91353 Tlacolulan, Ver.
+          Calle Principal S/N, Tengonapa, Centro, 91350 Tlacolulan, Ver.
         </motion.p>
 
         <motion.button

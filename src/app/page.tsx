@@ -28,7 +28,7 @@ export default function Home() {
       refAnimationInstance.current({
         ...opts,
         origin: { y: 0.7 },
-        particleCount: Math.floor(200 * particleRatio),
+        particleCount: Math.floor(200 * particleRatio),        
       });
   }, []);
 

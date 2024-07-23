@@ -1,6 +1,11 @@
 "use client";
 
-import { useEffect, useState, Dispatch, SetStateAction } from "react";
+import {
+  useEffect,
+  useState,
+  Dispatch,
+  SetStateAction,
+} from "react";
 // @ts-ignore
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import Header from "./components/Header";
@@ -20,7 +25,6 @@ import {
   useDisclosure,
 } from "@nextui-org/react";
 
-import FloatinButton from "./components/FloatingButton";
 import AudioControl from "./components/AudioControl";
 import GodParents from "./components/GodParents";
 
@@ -59,6 +63,8 @@ const ModalOpening = ({
   setOpen: Dispatch<SetStateAction<boolean>>;
 }) => {
   const text = "Sayuri";
+
+ 
 
   return (
     <Modal
@@ -176,7 +182,7 @@ const ModalOpening = ({
                   - Ver invitación -
                 </span>
               </motion.button>
-            </ModalFooter>
+            </ModalFooter>            
           </>
         )}
       </ModalContent>
@@ -232,7 +238,7 @@ export default function Fifteen() {
             </SplideSlide>
             <SplideSlide>
               <Confirm />
-            </SplideSlide>                        
+            </SplideSlide>
           </Splide>
           <AudioControl />
         </div>
