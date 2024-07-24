@@ -49,7 +49,7 @@ export default function Header() {
           "FDFFB8",
           "900C3F",
           "F0F0F0",
-        ],
+        ],      
       });
   }, []);
 

@@ -94,7 +94,7 @@ export default function Presentation() {
         initial="hidden"
         whileInView="visible"
       >
-        &nbsp; Sólo Fantan &nbsp;
+        &nbsp; Sólo Faltan &nbsp;
       </motion.h1>
 
       <div className="flex gap-16 text-zinc-400 mt-10">
