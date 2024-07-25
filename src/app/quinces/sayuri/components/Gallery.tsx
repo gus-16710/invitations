@@ -9,7 +9,7 @@ import { gallery } from "./Animations";
 
 const images = [
   {
-    src: "/img/quinces/sayuri/gallery-13.jpeg",
+    src: "/img/quinces/sayuri/gallery-17.jpeg",
     width: 800,
     height: 600,
   },
@@ -34,7 +34,7 @@ const images = [
     height: 600,
   },
   {
-    src: "/img/quinces/sayuri/gallery-16.jpeg",
+    src: "/img/quinces/sayuri/gallery-18.jpeg",
     width: 800,
     height: 600,
   },
