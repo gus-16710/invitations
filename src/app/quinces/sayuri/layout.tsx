@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     title: "💗 Sayuri | Mis XV Años 💗",
     description:
       "Mis 15 primaveras han llegado y lo que más me llena de emoción es pasarlo con risas a tu lado.",
-    images: [`https://invitaciones.unaideamas.com/img/quinces/sayuri/gallery-02.jpeg`],
+    images: [`https://invitaciones.unaideamas.com/img/quinces/sayuri/gallery-08.jpeg`],
   },
   icons: {
     icon: "https://invitaciones.unaideamas.com/img/favicon.png",
