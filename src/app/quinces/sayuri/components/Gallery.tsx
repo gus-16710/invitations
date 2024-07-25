@@ -9,17 +9,17 @@ import { gallery } from "./Animations";
 
 const images = [
   {
-    src: "/img/quinces/sayuri/gallery-07.jpeg",
+    src: "/img/quinces/sayuri/gallery-13.jpeg",
     width: 800,
     height: 600,
   },
   {
-    src: "/img/quinces/sayuri/gallery-08.jpeg",
+    src: "/img/quinces/sayuri/gallery-14.jpeg",
     width: 1600,
     height: 900,
   },
   {
-    src: "/img/quinces/sayuri/gallery-09.jpeg",
+    src: "/img/quinces/sayuri/gallery-15.jpeg",
     width: 800,
     height: 600,
   },
@@ -34,7 +34,7 @@ const images = [
     height: 600,
   },
   {
-    src: "/img/quinces/sayuri/gallery-12.jpeg",
+    src: "/img/quinces/sayuri/gallery-16.jpeg",
     width: 800,
     height: 600,
   },
