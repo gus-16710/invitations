@@ -6,7 +6,7 @@ function Header() {
       <p className={`${glass.className} text-xl text-zinc-300`}>
         ACOMPAÑANOS A SER PARTE DE LOS
       </p>
-      <p className={`${glass.className} text-3xl text-golden mt-2`}>
+      <p className={`${glass.className} text-4xl text-golden mt-2`}>
         ~ XV AÑOS ~
       </p>
       <p className={`${glass.className} text-xl text-zinc-300 mt-2`}>

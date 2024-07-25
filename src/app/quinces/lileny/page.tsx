@@ -15,8 +15,8 @@ export default function Lileny() {
         backgroundSize: "contain",
       }}
     >
-      <div className="max-w-3xl m-auto shadow-large bg-[url('/img/quinces/lileny/background-10.jpg')] bg-center bg-cover bg-fixed">
-        <div className="max-w-3xl m-auto bg-[url('/img/quinces/lileny/golden-frame-02.png')] bg-cover bg-center bg-no-repeat top-0 fixed w-full h-screen" />        
+      <div className="max-w-3xl m-auto shadow-large bg-[url('/img/quinces/lileny/background-11.jpg')] bg-center bg-cover bg-fixed">
+        {/* <div className="max-w-3xl m-auto bg-[url('/img/quinces/lileny/golden-frame-02.png')] bg-cover bg-center bg-no-repeat top-0 fixed w-full h-screen" />         */}
         <Header />
         <Presentation />
       </div>
