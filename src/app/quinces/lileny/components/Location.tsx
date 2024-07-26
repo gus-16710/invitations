@@ -68,7 +68,7 @@ function Location() {
   });
 
   return (
-    <section className=" bg-white">
+    <section className="bg-white">
       <motion.div
         className="flex flex-col items-center justify-center h-screen relative"
         ref={ref}
@@ -86,7 +86,7 @@ function Location() {
           viewBox="0 0 512 512"
           xmlSpace="preserve"
           width="100px"
-          height="100px"
+          height="100px"          
         >
           <g>
             <g>

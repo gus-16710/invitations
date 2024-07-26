@@ -237,7 +237,7 @@ function Presentation() {
           Sólo Faltan
         </h2>
 
-        <div className="flex flex-row justify-evenly w-80 mt-5 text-red-700">
+        <div className="flex flex-row justify-evenly w-80 mt-5 text-red-800">
           <p className="flex flex-col items-center">
             <span className={`${anton.className} text-6xl`} ref={scopeDays}>
               {formatNumber(days)}
