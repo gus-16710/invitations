@@ -3,11 +3,11 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "💗 Lileny Alexandra | Mis XV Años 💗",
   description:
-    "Mis 15 primaveras han llegado y lo que más me llena de emoción es pasarlo con risas a tu lado.",
+    "Hace 15 primaveras, Dios me regaló la vida. Por medio de esta tarjeta te invitó a que celebres conmigo mi gran fecha soñada en una noche llena de baladas.",
   openGraph: {
     title: "💗 Lileny Alexandra | Mis XV Años 💗",
     description:
-      "Mis 15 primaveras han llegado y lo que más me llena de emoción es pasarlo con risas a tu lado.",
+      "Hace 15 primaveras, Dios me regaló la vida. Por medio de esta tarjeta te invitó a que celebres conmigo mi gran fecha soñada en una noche llena de baladas.",
     images: [`https://invitaciones.unaideamas.com/img/quinces/lileny/gallery-01.jpeg`],
   },
   icons: {

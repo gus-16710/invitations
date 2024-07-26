@@ -98,91 +98,21 @@ CB9B51*/
     inset 0 -2px 5px 1px #b17d10, inset 0 -1px 1px 3px rgba(250, 227, 133, 1);
 }
 
-.shape-fill {
-  fill: #020307;
-}
-
-.text-foreground {
-  background-image: linear-gradient(
-    to right,
-    #462523 0%,
-    #cb9b51 0%,
-    #f6e27a 45%,
-    #f6f2c0 50%,
-    #f6e27a 55%,
-    #cb9b51 100%,
-    #462523 100%
-  );
-  color: transparent;
-  -webkit-background-clip: text;
-  background-clip: text;
-}
-
-.fandom_een {
-  fill: #ff786e;
-}
-.fandom_twee {
-  fill: #be5652;
-}
-.fandom_drie {
-  fill: #be9148;
-}
-.fandom_vier {
-  fill: #ffc865;
-}
-.fandom_elf {
-  fill: #4b322a;
-}
-.fandom_twaalf {
-  fill: #644638;
-}
-.fandom_dertien {
-  fill: #aa9991;
-}
-.fandom_veertien {
-  fill: #efeae0;
-}
-.fandom_vijftien {
-  fill: #3a3a3a;
-}
-.fandom_zestien {
-  fill: #4d4d4d;
-}
-.fandom_achttien {
-  fill: #808080;
-}
-.fandom_negentien {
-  fill: #cccccc;
-}
-.fandom_twintig {
-  fill: #fffafa;
-}
-.st0 {
-  fill: #666666;
-}
-.st1 {
-  fill: #6bc4d2;
-}
-.st2 {
-  fill: #508d9b;
-}
-.st3 {
-  fill: #018273;
-}
-.st4 {
-  fill: #8579a3;
-}
-.st5 {
-  fill: #685683;
-}
-.st6 {
-  fill: #00b3aa;
-}
-
-.bg-divider {
-  background-color: #996464;
-}
-
-.text-foreground-500 {
-  color:hsl(0deg 0% 73.39%);
-}
+.st0{display:none;}
+.st1{display:inline;opacity:0.93;}
+.st2{display:inline;fill:none;stroke:#000000;stroke-width:15;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+.st3{display:inline;}
+.st4{fill:none;stroke:#000000;stroke-width:15;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+.st5{display:inline;fill:none;stroke:#1A1D3F;stroke-width:15;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+.st6{fill:#DDEDE7;}
+.st7{fill:#1A1D3F;}
+.st8{fill:#E9B44D;}
+.st9{fill:#ED644E;}
+.st10{fill:#494EDF;}
+.st11{fill:#3DC5A1;}
+.st12{fill:#F6CEC1;}
+.st13{fill:none;}
+.st14{fill:none;stroke:#1A1D3F;stroke-width:15;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+.st15{display:inline;fill:#E9B44D;}
+.st16{fill:#222222;}
+.st17{display:inline;fill:#222222;}
