@@ -102,16 +102,87 @@ CB9B51*/
   fill: #020307;
 }
 
-/* .splide__arrow--prev {
-  background: initial !important;
-  left: .5em !important;
+.text-foreground {
+  background-image: linear-gradient(
+    to right,
+    #462523 0%,
+    #cb9b51 0%,
+    #f6e27a 45%,
+    #f6f2c0 50%,
+    #f6e27a 55%,
+    #cb9b51 100%,
+    #462523 100%
+  );
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
 }
 
-.splide__arrow--next {
-  background: initial !important;
-  right: .5em !important;
+.fandom_een {
+  fill: #ff786e;
+}
+.fandom_twee {
+  fill: #be5652;
+}
+.fandom_drie {
+  fill: #be9148;
+}
+.fandom_vier {
+  fill: #ffc865;
+}
+.fandom_elf {
+  fill: #4b322a;
+}
+.fandom_twaalf {
+  fill: #644638;
+}
+.fandom_dertien {
+  fill: #aa9991;
+}
+.fandom_veertien {
+  fill: #efeae0;
+}
+.fandom_vijftien {
+  fill: #3a3a3a;
+}
+.fandom_zestien {
+  fill: #4d4d4d;
+}
+.fandom_achttien {
+  fill: #808080;
+}
+.fandom_negentien {
+  fill: #cccccc;
+}
+.fandom_twintig {
+  fill: #fffafa;
+}
+.st0 {
+  fill: #666666;
+}
+.st1 {
+  fill: #6bc4d2;
+}
+.st2 {
+  fill: #508d9b;
+}
+.st3 {
+  fill: #018273;
+}
+.st4 {
+  fill: #8579a3;
+}
+.st5 {
+  fill: #685683;
+}
+.st6 {
+  fill: #00b3aa;
 }
 
-.splide__arrow svg {
-  fill: #fff !important; 
-} */
+.bg-divider {
+  background-color: #996464;
+}
+
+.text-foreground-500 {
+  color:hsl(0deg 0% 73.39%);
+}

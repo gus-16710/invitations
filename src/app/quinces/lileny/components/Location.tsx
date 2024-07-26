@@ -88,7 +88,7 @@ function Location() {
       </span>
 
       <h2
-        className={`${glass.className} mx-10 text-zinc-300 text-center text-2xl mt-5 max-w-md`}
+        className={`${glass.className} mx-10 text-golden text-center text-2xl mt-5 max-w-md`}
       >
         Iglesia San Antonio de Padua
       </h2>

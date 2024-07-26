@@ -25,7 +25,7 @@ export default function GodParents() {
         />
       </svg>
 
-      <div className="w-80 mt-10">
+      <div className="mt-10">
         <Accordion>
           <AccordionItem
             key="1"
