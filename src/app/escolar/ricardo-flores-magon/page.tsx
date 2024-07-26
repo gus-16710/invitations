@@ -18,7 +18,7 @@ export default function School() {
           releaseWheel: true,
           type: "loop",
           waitForTransition: true,
-          arrows: false,
+          arrows: true,
           classes: {
             page: "splide__pagination__page custom-class-page", // each button
           },

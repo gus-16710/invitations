@@ -144,9 +144,13 @@ function Presentation() {
           </span>
         </p>
       </div>
-      <p className={`${luxurious.className} mx-10 text-center max-w-md my-5 text-zinc-300`}>
-        Porque eres parte de mi vida y has acompañado mi camino, quiero que seas
-        parte de este momento tan importante para mi.
+      <p
+        className={`${luxurious.className} mx-10 text-center max-w-md my-5 text-zinc-300`}
+      >
+        El simbólico momento de entrada al mundo de los adultos. La niña se
+        convierte en mujer, aún con cosas que aprender y errores que enmendar,
+        es imposible pasar este momento sin celebrar. Te invitamos a los 15 años
+        de nuestro rayito de sol.
       </p>
     </section>
   );
