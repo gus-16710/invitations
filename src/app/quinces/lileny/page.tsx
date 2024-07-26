@@ -5,6 +5,8 @@ import Header from "./components/Header";
 import Presentation from "./components/Presentation";
 import "./styles.css";
 import "@splidejs/react-splide/css";
+import Location from "./components/Location";
+import GodParents from "./components/GodParents";
 
 export default function Lileny() {
   return (
@@ -40,6 +42,12 @@ export default function Lileny() {
           </SplideSlide>
           <SplideSlide>
             <Presentation />
+          </SplideSlide>
+          <SplideSlide>
+            <Location />
+          </SplideSlide>
+          <SplideSlide>
+            <GodParents />
           </SplideSlide>
         </Splide>
       </div>

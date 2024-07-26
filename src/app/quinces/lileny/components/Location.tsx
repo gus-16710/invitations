@@ -1,86 +1,67 @@
-import { useEffect, useState } from "react";
-import { useAnimate } from "framer-motion";
-import { anton, glass, luxurious, mea } from "./Fonts";
+import { LuMapPin } from "react-icons/lu";
+import { glass, luxurious, mea } from "./Fonts";
+import { IoMdTime } from "react-icons/io";
+import {
+  Avatar,
+  Modal,
+  ModalBody,
+  ModalContent,
+  ModalFooter,
+  ModalHeader,
+  useDisclosure,
+} from "@nextui-org/react";
 
-function formatNumber(number: number) {
-  return number < 10 ? `0${number}` : number;
-}
+const MapCeremony = () => (
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3757.7336249207947!2d-96.98584556579588!3d19.63868272800868!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85db251179ed0f45%3A0xd86bfc61bf1f673e!2sCapilla%20san%20Antonio%20de%20Padua!5e0!3m2!1ses!2smx!4v1722014693004!5m2!1ses!2smx"
+    height="450"
+    style={{ border: "0" }}
+    allowFullScreen
+    loading="lazy"
+    referrerPolicy="no-referrer-when-downgrade"
+  ></iframe>
+);
 
-function Presentation() {
-  const [seconds, setSeconds] = useState(0);
-  const [minutes, setMinutes] = useState(0);
-  const [hours, setHours] = useState(0);
-  const [days, setDays] = useState(0);
+const ModalMap = ({
+  isOpen,
+  onOpenChange,
+}: {
+  isOpen: boolean;
+  onOpenChange: () => void;
+}) => {
+  return (
+    <Modal
+      isOpen={isOpen}
+      onOpenChange={onOpenChange}
+      size="xs"
+      placement="center"
+      backdrop="blur"
+    >
+      <ModalContent>
+        {(onClose) => (
+          <>
+            <ModalHeader
+              className={`${mea.className} flex flex-col gap-1 items-center text-3xl text-orange-900`}
+            >
+              Ceremonia
+            </ModalHeader>
+            <ModalBody>
+              <MapCeremony />
+            </ModalBody>
+            <ModalFooter></ModalFooter>
+          </>
+        )}
+      </ModalContent>
+    </Modal>
+  );
+};
 
-  const countDownClock = () => {
-    const countDownDate: any = new Date("Sep 14, 2024 12:00:00");
+function Location() {
+  const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
-    const interval = setInterval(() => {
-      const now = new Date().getTime();
-      const distance = countDownDate - now;
-
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor(
-        (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-      );
-      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-      if (distance < 0) {
-        clearInterval(interval);
-        console.log("EXPIRED");
-      }
-
-      setSeconds(seconds);
-      setMinutes(minutes);
-      setHours(hours);
-      setDays(days);
-    }, 1000);
-  };
-
-  useEffect(() => {
-    countDownClock();
-  }, []);
-
-  const [scopeSeconds, animateSeconds] = useAnimate();
-  const [scopeMinutes, animateMinutes] = useAnimate();
-  const [scopeHours, animateHours] = useAnimate();
-  const [scopeDays, animateDays] = useAnimate();
-
-  useEffect(() => {
-    animateSeconds(
-      scopeSeconds.current,
-      { y: [20, 0], opacity: [0, 1] },
-      { ease: "easeInOut", type: "keyframes" }
-    );
-  }, [seconds, animateSeconds]);
-
-  useEffect(() => {
-    animateMinutes(
-      scopeMinutes.current,
-      { y: [20, 0], opacity: [0, 1] },
-      { ease: "easeInOut", type: "keyframes" }
-    );
-  }, [minutes, animateSeconds]);
-
-  useEffect(() => {
-    animateHours(
-      scopeHours.current,
-      { y: [20, 0], opacity: [0, 1] },
-      { ease: "easeInOut", type: "keyframes" }
-    );
-  }, [hours, animateHours]);
-
-  useEffect(() => {
-    animateDays(
-      scopeDays.current,
-      { y: [20, 0], opacity: [0, 1] },
-      { ease: "easeInOut", type: "keyframes" }
-    );
-  }, [days, animateDays]);
   return (
     <section className="h-screen flex flex-col items-center justify-center">
-      <h2 className={`${mea.className} text-6xl text-zinc-300`}>Sólo Faltan</h2>
+      <h2 className={`${mea.className} text-6xl text-zinc-300`}>Ceremonia</h2>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 1063.9137 68.507454"
@@ -95,65 +76,47 @@ function Presentation() {
         />
       </svg>
 
-      <div className="flex flex-row justify-evenly w-80 mt-10">
-        <p className="flex flex-col items-center">
-          <span
-            className={`${anton.className} text-5xl text-golden`}
-            ref={scopeDays}
-          >
-            {formatNumber(days)}
-          </span>
-          <span className={`${glass.className} text-3xl text-zinc-300`}>
-            Días
-          </span>
-        </p>
-        <p className="text-5xl text-golden">:</p>
-        <p className="flex flex-col items-center">
-          <span
-            className={`${anton.className} text-5xl text-golden`}
-            ref={scopeHours}
-          >
-            {formatNumber(hours)}
-          </span>
-          <span className={`${glass.className} text-3xl text-zinc-300`}>
-            Horas
-          </span>
-        </p>
-        <p className="text-5xl text-golden">:</p>
-        <p className="flex flex-col items-center">
-          <span
-            className={`${anton.className} text-5xl text-golden`}
-            ref={scopeMinutes}
-          >
-            {formatNumber(minutes)}
-          </span>
-          <span className={`${glass.className} text-3xl text-zinc-300`}>
-            Min
-          </span>
-        </p>
-        <p className="text-5xl text-golden">:</p>
-        <p className="flex flex-col items-center">
-          <span
-            className={`${anton.className} text-5xl text-golden`}
-            ref={scopeSeconds}
-          >
-            {formatNumber(seconds)}
-          </span>
-          <span className={`${glass.className} text-3xl text-zinc-300`}>
-            Seg
-          </span>
-        </p>
-      </div>
-      <p
-        className={`${luxurious.className} mx-10 text-center max-w-md my-5 text-zinc-300`}
+      <Avatar
+        isBordered
+        color="default"
+        src="/img/quinces/lileny/church.jpg"
+        className="h-40 w-40 my-5 shadow-lg"
+      />
+
+      <span className="flex items-center justify-center gap-1 bg-pink-100 text-pink-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-pink-400 border border-pink-400">
+        <IoMdTime /> 13:00 HRS
+      </span>
+
+      <h2
+        className={`${glass.className} mx-10 text-zinc-300 text-center text-2xl mt-5 max-w-md`}
       >
-        El simbólico momento de entrada al mundo de los adultos. La niña se
-        convierte en mujer, aún con cosas que aprender y errores que enmendar,
-        es imposible pasar este momento sin celebrar. Te invitamos a los 15 años
-        de nuestro rayito de sol.
+        Iglesia San Antonio de Padua
+      </h2>
+      <p
+        className={`${luxurious.className} text-zinc-300 mt-3 text-sm text-center mx-10 max-w-md`}
+      >
+        91353 El Fresno, Ver.
       </p>
+      <p
+        className={`${luxurious.className} text-zinc-300 text-sm text-center mx-10 max-w-md`}
+      >
+        Después de la misa los esperamos en la casa de cultura
+      </p>
+
+      <button
+        className="mt-5 relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-pink-500 to-orange-400 group-hover:from-pink-500 group-hover:to-orange-400 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800"
+        onClick={() => {
+          onOpen();
+        }}
+      >
+        <span className="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0 flex justify-center items-center gap-1">
+          <LuMapPin />
+          Ver Ubicación
+        </span>
+      </button>
+      <ModalMap isOpen={isOpen} onOpenChange={onOpenChange} />
     </section>
   );
 }
 
-export default Presentation;
+export default Location;
