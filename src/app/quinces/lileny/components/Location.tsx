@@ -70,7 +70,7 @@ function Location() {
   return (
     <section className="bg-white">
       <motion.div
-        className="flex flex-col items-center justify-center h-screen relative"
+        className="flex flex-col items-center justify-center relative h-screen"
         ref={ref}
         style={{
           scale: scrollYProgress,

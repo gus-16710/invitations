@@ -6,7 +6,7 @@ function Header() {
     <section className="relative">
       <motion.div
         className="h-screen flex flex-col items-center justify-center"
-        initial={{ y: 100, opacity: 0 }}
+        initial={{ y: -100, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.5, duration: 1 }}
       >

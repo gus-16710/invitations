@@ -95,7 +95,7 @@ function Presentation() {
           opacity: scrollYProgress,
         }}
       >
-        <h2 className={`${mea.className} text-6xl text-zinc-300`}>
+        <h2 className={`${mea.className} text-6xl text-zinc-300 my-5`}>
           Sólo Faltan
         </h2>
 
@@ -113,7 +113,7 @@ function Presentation() {
           />
         </svg>
 
-        <div className="flex flex-row justify-evenly w-80 mt-10">
+        <div className="flex flex-row justify-evenly w-80 mt-5">
           <p className="flex flex-col items-center">
             <span
               className={`${anton.className} text-6xl text-golden`}
