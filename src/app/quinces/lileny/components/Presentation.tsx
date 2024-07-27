@@ -35,13 +35,16 @@ function Presentation() {
 
       if (distance < 0) {
         clearInterval(interval);
-        console.log("EXPIRED");
+        setSeconds(0);
+        setMinutes(0);
+        setHours(0);
+        setDays(0);
+      } else {
+        setSeconds(seconds);
+        setMinutes(minutes);
+        setHours(hours);
+        setDays(days);
       }
-
-      setSeconds(seconds);
-      setMinutes(minutes);
-      setHours(hours);
-      setDays(days);
     }, 1000);
   };
 

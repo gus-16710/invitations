@@ -134,7 +134,7 @@ function Location() {
             </g>
           </g>
         </svg>
-        <h2 className={`${mea.className} text-6xl text-gray-800 mb-5 mt-5`}>
+        <h2 className={`${mea.className} text-6xl text-zinc-800 mb-5 mt-5`}>
           Ceremonia
         </h2>
         <span
