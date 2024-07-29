@@ -35,8 +35,8 @@ function Header() {
         <p className={`${glass.className} text-zinc-300 text-center`}>
           Sus padres agradecen tu asistencia
         </p>
-        <p className={`${glass.className} text-zinc-300 text-center`}>
-          Neyra Solano Herrera & Abel Hernández Hernández
+        <p className={`${glass.className} text-zinc-300 text-center text-xl`}>
+          Abel Hernández Hernández & Neyra Solano Herrera
         </p>
       </motion.div>
 

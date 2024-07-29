@@ -179,7 +179,7 @@ function GodParents() {
           Padrinos
         </h2>
         <div className="w-72 ">
-          <Accordion>
+          <Accordion defaultExpandedKeys={["1"]}>
             <AccordionItem
               key="1"
               aria-label="Honor"
@@ -248,15 +248,15 @@ function GodParents() {
                   </g>
                 </svg>
               }
-              subtitle={"Presiona para expandir"}
+              subtitle={"Click para expandir/contraer"}
               className={`${luxurious.className} text-zinc-800`}
             >
               <p className={`${glass.className} text-center text-xl mt-2 mb-7`}>
-                Olivia Morales Sánchez
-                <br />&<br /> Daniel Castillo Solano
+                Daniel Castillo Solano
+                <br />&<br /> Olivia Morales Sánchez
               </p>
             </AccordionItem>
-            <AccordionItem
+            {/* <AccordionItem
               key="2"
               aria-label="Brindis"
               title="Brindis"
@@ -804,7 +804,7 @@ function GodParents() {
               >
                 Irlanda Hernández Hernández
               </p>
-            </AccordionItem>
+            </AccordionItem> */}
           </Accordion>
         </div>
       </motion.div>
