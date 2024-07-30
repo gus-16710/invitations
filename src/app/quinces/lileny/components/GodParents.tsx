@@ -1,9 +1,10 @@
 import { useScroll, motion } from "framer-motion";
 import { glass, luxurious, mea } from "./Fonts";
 import { Accordion, AccordionItem } from "@nextui-org/react";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 
 function GodParents() {
+  const [expanded, setExpanded] = useState(true);
   const ref = useRef<HTMLDivElement>(null);
 
   const { scrollYProgress } = useScroll({
@@ -248,8 +249,10 @@ function GodParents() {
                   </g>
                 </svg>
               }
-              subtitle={"Click para expandir/contraer"}
+              subtitle={`Presiona para ${expanded ? "contraer" : "expandir"}`}
               className={`${luxurious.className} text-zinc-800`}
+              onTouchEnd={() => setExpanded(!expanded)}
+              
             >
               <p className={`${glass.className} text-center text-xl mt-2 mb-7`}>
                 Daniel Castillo Solano
