@@ -27,7 +27,7 @@ export default function RootLayout({
 }) {
   return (
     <html
-      lang="en"
+      lang="es"
       style={{ scrollSnapType: "y mandatory" }}
       className="scroll-smooth"
     >
