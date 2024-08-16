@@ -74,7 +74,7 @@ export default function GodParents() {
               whileInView={{ scale: 1, opacity: 1 }}
               transition={{ duration: 1, ease: "easeOut" }}
             >
-              Honor (2)
+              Honor
             </motion.p>
             <motion.p
               className={`${playFair.className}`}
