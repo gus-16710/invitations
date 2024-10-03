@@ -48,7 +48,7 @@ const ModalOpening = ({
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 1, delay: 0.4 }}
               >
-                Diana & Ernesto
+                Ana & Carlos
               </motion.h1>
               <motion.div
                 initial={{ scale: 0 }}
