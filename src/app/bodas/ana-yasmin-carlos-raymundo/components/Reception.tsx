@@ -59,11 +59,11 @@ export default function Reception() {
   return (
     <>
       <section
-        className="flex justify-center items-center flex-col pt-20 pb-20"
+        className="flex justify-center items-center flex-col pt-20 pb-20 bg-[url('/img/bodas/ana-carlos/campestre.jpg')] bg-cover bg-center"
         style={{ height: "100svh" }}
       >
         <motion.h1
-          className={`${greatVibes.className} text-5xl p-5 text-center`}
+          className={`${greatVibes.className} text-5xl p-5 text-center text-zinc-50 custom-shadow`}
           variants={reception.text01}
           initial="hidden"
           whileInView="visible"
@@ -76,7 +76,7 @@ export default function Reception() {
           id="Capa_1"
           viewBox="0 0 512 512"
           width="100px"
-          fill="rgb(75 85 99)"
+          fill="rgb(255 255 255)"
           variants={reception.svg}
           initial="hidden"
           whileInView="visible"
@@ -96,7 +96,7 @@ export default function Reception() {
           </g>
         </motion.svg>
         <motion.div
-          className={`${greatVibes.className} mt-5 text-center text-gray-900 text-6xl`}
+          className={`${greatVibes.className} mt-5 text-center text-zinc-50 text-6xl custom-shadow`}
           variants={reception.date}
           initial="hidden"
           whileInView="visible"
@@ -107,7 +107,7 @@ export default function Reception() {
           <p className="text-base">26/Octubre/2024</p>
         </motion.div>
         <motion.p
-          className={`${markazi.className} text-center mx-5 mt-5 text-2xl text-zinc-600`}
+          className={`${markazi.className} text-center mx-5 mt-5 text-2xl text-zinc-50 custom-shadow`}
           variants={reception.text02}
           initial="hidden"
           whileInView="visible"
@@ -115,7 +115,7 @@ export default function Reception() {
           Salón Campestre "Las Fuentes"
         </motion.p>
         <motion.p
-          className={`${notoSans.className} text-center mx-5 mt-3 text-sm`}
+          className={`${notoSans.className} text-center mx-5 mt-3 text-sm text-zinc-50 custom-shadow`}
           variants={reception.text03}
           initial="hidden"
           whileInView="visible"
@@ -133,7 +133,7 @@ export default function Reception() {
         >
           <button
             type="button"
-            className="mt-10 text-gray-900 bg-white/0 border border-gray-400 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 rounded-full me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700 font-medium text-sm px-5 py-2.5 text-center flex items-center"
+            className="mt-10 text-zinc-50 bg-white/0 border border-gray-400 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 rounded-full me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700 font-medium text-sm px-5 py-2.5 text-center flex items-center"
             onClick={() => {
               onOpen();
             }}
