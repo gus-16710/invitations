@@ -1,8 +1,9 @@
 import { motion, useAnimate } from "framer-motion";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 import { IoIosArrowDown } from "react-icons/io";
-import { abril, bebas, greatVibes } from "./Fonts";
+import { abril, greatVibes } from "./Fonts";
 import { header } from "./Animations";
+import ReactCanvasConfetti from "react-canvas-confetti";
 
 function formatNumber(number: number) {
   return number < 10 ? `0${number}` : number;
@@ -84,6 +85,59 @@ export default function Header() {
     );
   }, [days, animateDays]);
 
+  /** */
+  const refAnimationInstance = useRef<confetti.CreateTypes | null>(null);
+
+  const getInstance = useCallback((instance: any) => {
+    refAnimationInstance.current = instance;
+  }, []);
+
+  const makeShot = useCallback((particleRatio: any, opts: any) => {
+    refAnimationInstance.current &&
+      refAnimationInstance.current({
+        ...opts,
+        origin: { y: 0.7 },
+        particleCount: Math.floor(200 * particleRatio),
+        shapes: ["circle", "square"],
+        colors: ["c9d9d7", "ffffff", "cbebdb", "ffdbcf"],
+      });
+  }, []);
+
+  const fire = useCallback(() => {
+    makeShot(0.25, {
+      spread: 26,
+      startVelocity: 55,
+    });
+
+    makeShot(0.2, {
+      spread: 60,
+    });
+
+    makeShot(0.35, {
+      spread: 100,
+      decay: 0.91,
+      scalar: 0.8,
+    });
+
+    makeShot(0.1, {
+      spread: 120,
+      startVelocity: 25,
+      decay: 0.92,
+      scalar: 1.2,
+    });
+
+    makeShot(0.1, {
+      spread: 120,
+      startVelocity: 45,
+    });
+  }, [makeShot]);
+
+  useEffect(() => {
+    fire();
+    const timer = setInterval(() => fire(), 8000);
+    () => clearInterval(timer);
+  }, []);
+
   return (
     <section
       className="pb-10 bg-[url('/img/bodas/ana-carlos/background-header.jpg')] bg-cover bg-center flex justify-end items-center flex-col"
@@ -147,6 +201,18 @@ export default function Header() {
       >
         <IoIosArrowDown className="text-zinc-400" />
       </motion.div>
+
+      <ReactCanvasConfetti
+        refConfetti={getInstance}
+        style={{
+          position: "absolute",
+          pointerEvents: "none",
+          width: "100%",
+          height: "100%",
+          top: 0,
+          left: 0,
+        }}
+      />
     </section>
   );
 }

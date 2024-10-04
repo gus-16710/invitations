@@ -49,7 +49,7 @@ export default function Header() {
           "FDFFB8",
           "900C3F",
           "F0F0F0",
-        ],      
+        ],
       });
   }, []);
 
@@ -85,7 +85,6 @@ export default function Header() {
   useEffect(() => {
     fire();
     const timer = setInterval(() => fire(), 5000);
-
     () => clearInterval(timer);
   }, []);
 

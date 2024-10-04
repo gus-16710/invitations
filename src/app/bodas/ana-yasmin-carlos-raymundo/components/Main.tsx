@@ -86,7 +86,7 @@ export default function Main() {
     setTimeout(() => {
       onClose();
       setOpen(true);
-    }, 3000);
+    }, 2000);
   }, []);
 
   return (
