@@ -63,7 +63,7 @@ export default function Reception() {
         style={{ height: "100svh" }}
       >
         <motion.h1
-          className={`${greatVibes.className} text-5xl p-5 text-center text-zinc-50 custom-shadow`}
+          className={`${greatVibes.className} text-5xl p-5 text-center text-zinc-50 `}
           variants={reception.text01}
           initial="hidden"
           whileInView="visible"
@@ -96,7 +96,7 @@ export default function Reception() {
           </g>
         </motion.svg>
         <motion.div
-          className={`${greatVibes.className} mt-5 text-center text-zinc-50 text-6xl custom-shadow`}
+          className={`${greatVibes.className} mt-5 text-center text-zinc-50 text-6xl `}
           variants={reception.date}
           initial="hidden"
           whileInView="visible"
@@ -107,7 +107,7 @@ export default function Reception() {
           <p className="text-base">26/Octubre/2024</p>
         </motion.div>
         <motion.p
-          className={`${markazi.className} text-center mx-5 mt-5 text-2xl text-zinc-50 custom-shadow`}
+          className={`${markazi.className} text-center mx-5 mt-5 text-2xl text-zinc-50 `}
           variants={reception.text02}
           initial="hidden"
           whileInView="visible"
@@ -115,7 +115,7 @@ export default function Reception() {
           Salón Campestre "Las Fuentes"
         </motion.p>
         <motion.p
-          className={`${notoSans.className} text-center mx-5 mt-3 text-sm text-zinc-50 custom-shadow`}
+          className={`${notoSans.className} text-center mx-5 mt-3 text-sm text-zinc-50 `}
           variants={reception.text03}
           initial="hidden"
           whileInView="visible"

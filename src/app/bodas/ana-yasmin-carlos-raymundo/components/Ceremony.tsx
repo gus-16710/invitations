@@ -64,7 +64,7 @@ export default function Ceremony() {
         style={{ height: "100svh" }}
       >
         <motion.h1
-          className={`${greatVibes.className} text-5xl p-5 text-center text-zinc-50 custom-shadow`}
+          className={`${greatVibes.className} text-5xl p-5 text-center text-zinc-50 `}
           variants={ceremony.text01}
           initial="hidden"
           whileInView="visible"
@@ -93,13 +93,13 @@ export default function Ceremony() {
           initial="hidden"
           whileInView="visible"
         >
-          <p className="flex items-center justify-center gap-1 custom-shadow">
+          <p className="flex items-center justify-center gap-1 ">
             ~ 13:00 hrs ~
           </p>
-          <p className="text-base custom-shadow" >26/Octubre/2024</p>
+          <p className="text-base " >26/Octubre/2024</p>
         </motion.div>
         <motion.p
-          className={`${markazi.className} text-center mx-5 mt-5 text-2xl text-zinc-50 max-w-md custom-shadow`}
+          className={`${markazi.className} text-center mx-5 mt-5 text-2xl text-zinc-50 max-w-md `}
           variants={ceremony.text02}
           initial="hidden"
           whileInView="visible"
@@ -107,7 +107,7 @@ export default function Ceremony() {
           Templo de la Virgen de Lourdes
         </motion.p>
         <motion.p
-          className={`${notoSans.className} text-center mx-5 mt-3 text-sm max-w-md text-zinc-50 custom-shadow`}
+          className={`${notoSans.className} text-center mx-5 mt-3 text-sm max-w-md text-zinc-50 `}
           variants={ceremony.text03}
           initial="hidden"
           whileInView="visible"

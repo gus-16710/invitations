@@ -140,9 +140,22 @@ export default function Header() {
 
   return (
     <section
-      className="pb-10 bg-[url('/img/bodas/ana-carlos/background-header.jpg')] bg-cover bg-center flex justify-end items-center flex-col"
+      className="pb-10 bg-[url('/img/bodas/ana-carlos/background-header.jpg')] bg-cover bg-center flex justify-end items-center flex-col relative"
       style={{ height: "100svh" }}
     >
+      <video
+        autoPlay
+        loop
+        muted
+        className="absolute top-0 left-0 w-full h-full object-cover z-0"
+      >
+        <source src="/img/bodas/ana-carlos/header.mp4" type="video/mp4" />
+        Tu navegador no soporta videos HTML5.
+      </video>
+
+      <div className="absolute top-0 left-0 w-full h-full z-5 bg-gradient-to-t from-black/50 to-transparent"></div>
+
+    <div className="relative z-10">
       <motion.h1
         className={`${abril.className} p-3 text-6xl text-slate-100 custom-shadow text-center`}
         style={{ lineHeight: "normal" }}
@@ -194,14 +207,14 @@ export default function Header() {
         </div>
       </motion.div>
       <motion.div
-        className="mb-12"
+        className="mb-12 flex justify-center items-center"
         variants={header.arrow}
         initial="hidden"
         whileInView="visible"
       >
         <IoIosArrowDown className="text-zinc-400" />
-      </motion.div>
-
+      </motion.div>      
+      </div>
       <ReactCanvasConfetti
         refConfetti={getInstance}
         style={{
