@@ -96,9 +96,9 @@ export default function Header() {
         initial="hidden"
         whileInView="visible"
       >
-        Ana
+        Yasmin
         <br /> & <br />
-        Carlos
+        Raymundo
       </motion.h1>
       <motion.h2
         className={`${greatVibes.className} p-3 text-6xl text-slate-100 custom-shadow`}

@@ -180,7 +180,7 @@ export default function GodParents() {
               initial="hidden"
               whileInView="visible"
             >
-              Jesús Hernández Hernández
+              Jesús Hernández Hernández <br />&<br /> María Vasquez Lucido
             </motion.p>
           </div>
         </Carousel>

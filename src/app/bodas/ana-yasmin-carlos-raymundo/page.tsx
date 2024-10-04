@@ -42,12 +42,12 @@ const ModalOpening = ({
           <>
             <ModalBody className="flex flex-col items-center">
               <motion.h1
-                className={`${abril.className} text-6xl text-gray-700 tracking-wider text-center`}
+                className={`${abril.className} text-5xl text-gray-700 tracking-wider text-center`}
                 initial={{ scale: 0.8, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 transition={{ duration: 1, delay: 0.3 }}
               >
-                Ana & Carlos
+                Yasmin <br />&<br /> Raymundo
               </motion.h1>
               <motion.div
                 initial={{ opacity: 0 }}
@@ -92,8 +92,6 @@ const ModalOpening = ({
     </Modal>
   );
 };
-
-
 
 export default function Wedding() {
   const [open, setOpen] = useState(false);
