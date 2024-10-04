@@ -140,7 +140,8 @@ export default function Header() {
 
   return (
     <section
-      className="pb-10 bg-[url('/img/bodas/ana-carlos/background-header.jpg')] bg-cover bg-center flex justify-end items-center flex-col relative"
+      // className="pb-10 bg-[url('/img/bodas/ana-carlos/background-header.jpg')] bg-cover bg-center flex justify-end items-center flex-col relative"
+      className="pb-10 flex justify-end items-center flex-col relative"
       style={{ height: "100svh" }}
     >
       <video
