@@ -60,7 +60,7 @@ export default function Ceremony() {
   return (
     <>
       <section
-        className="flex justify-center items-center flex-col pt-20 pb-20 bg-[url('/img/bodas/ana-carlos/church.jpg')] bg-cover bg-center"
+        className="flex justify-center items-center flex-col pt-20 pb-20 bg-[url('/img/bodas/ana-carlos/church.jpg')] bg-cover bg-center custom-shadow"
         style={{ height: "100svh" }}
       >
         <motion.h1

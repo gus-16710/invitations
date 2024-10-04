@@ -59,7 +59,7 @@ export default function Reception() {
   return (
     <>
       <section
-        className="flex justify-center items-center flex-col pt-20 pb-20 bg-[url('/img/bodas/ana-carlos/campestre.jpg')] bg-cover bg-center"
+        className="flex justify-center items-center flex-col pt-20 pb-20 bg-[url('/img/bodas/ana-carlos/campestre.jpg')] bg-cover bg-center custom-shadow"
         style={{ height: "100svh" }}
       >
         <motion.h1
