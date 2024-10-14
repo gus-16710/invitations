@@ -157,7 +157,7 @@ const ModalOpening = ({
                 initial="hidden"
                 animate="visible"
               >
-                21 | SEPTIEMBRE | 2024
+                21 | SEPTIEMBRE | 2025
               </motion.p>
             </ModalBody>
             <ModalFooter className="flex justify-center">

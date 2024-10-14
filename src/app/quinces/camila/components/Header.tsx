@@ -38,7 +38,7 @@ export default function Header() {
   const text01 = "Camila";
 
   const countDownClock = () => {
-    const countDownDate: any = new Date("Nov 2, 2024 13:29:00");
+    const countDownDate: any = new Date("Aug 8, 2025 12:00:00");
 
     const interval = setInterval(() => {
       const now = new Date().getTime();
@@ -139,7 +139,7 @@ export default function Header() {
         initial="hidden"
         whileInView="visible"
       >
-        8 DE AGOSTO DEL 2024
+        8 DE AGOSTO DEL 2025
       </motion.p>
 
       <div

@@ -51,7 +51,7 @@ const OpeningModal = ({
               <p
                 className={`${montez.className} text-zinc-800 text-center text-xl`}
               >
-                08.AGOSTO.2024
+                08.AGOSTO.2025
               </p>
             </ModalBody>
             <ModalFooter className="flex justify-center">

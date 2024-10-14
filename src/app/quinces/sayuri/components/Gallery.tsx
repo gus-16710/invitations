@@ -9,32 +9,32 @@ import { gallery } from "./Animations";
 
 const images = [
   {
-    src: "/img/quinces/sayuri/gallery-17.jpeg",
+    src: "/img/quinces/sayuri/gallery-19.jpg",
     width: 800,
     height: 600,
   },
   {
-    src: "/img/quinces/sayuri/gallery-14.jpeg",
+    src: "/img/quinces/sayuri/gallery-20.jpg",
     width: 1600,
     height: 900,
   },
   {
-    src: "/img/quinces/sayuri/gallery-15.jpeg",
+    src: "/img/quinces/sayuri/gallery-21.jpg",
     width: 800,
     height: 600,
   },
   {
-    src: "/img/quinces/sayuri/gallery-10.jpeg",
+    src: "/img/quinces/sayuri/gallery-22.jpg",
     width: 800,
     height: 600,
   },
   {
-    src: "/img/quinces/sayuri/gallery-11.jpeg",
+    src: "/img/quinces/sayuri/gallery-23.jpg",
     width: 800,
     height: 600,
   },
   {
-    src: "/img/quinces/sayuri/gallery-18.jpeg",
+    src: "/img/quinces/sayuri/gallery-24.jpg",
     width: 800,
     height: 600,
   },

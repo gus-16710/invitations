@@ -156,65 +156,65 @@ export default function Header() {
 
       <div className="absolute top-0 left-0 w-full h-full z-5 bg-gradient-to-t from-black/50 to-transparent"></div>
 
-    <div className="relative z-10">
-      <motion.h1
-        className={`${abril.className} p-3 text-6xl text-slate-100 custom-shadow text-center`}
-        style={{ lineHeight: "normal" }}
-        variants={header.text01}
-        initial="hidden"
-        whileInView="visible"
-      >
-        Yasmin
-        <br /> & <br />
-        Raymundo
-      </motion.h1>
-      <motion.h2
-        className={`${greatVibes.className} p-3 text-6xl text-slate-100 custom-shadow`}
-        variants={header.text02}
-        initial="hidden"
-        whileInView="visible"
-      >
-        Nuestra Boda
-      </motion.h2>
-      <motion.div
-        className={`${greatVibes.className} mb-3 pb-3 text-slate-100 custom-shadow flex items-center justify-center`}
-        variants={header.timer}
-        initial="hidden"
-        whileInView="visible"
-      >
-        <div className="text-center m-0">
-          <div className="my-0 mx-3 p-2 text-3xl" ref={scopeDays}>
-            {formatNumber(days)}
+      <div className="relative z-10">
+        <motion.h1
+          className={`${abril.className} p-3 text-6xl text-slate-100 custom-shadow text-center`}
+          style={{ lineHeight: "normal" }}
+          variants={header.text01}
+          initial="hidden"
+          whileInView="visible"
+        >
+          Yasmin
+          <br /> & <br />
+          Raymundo
+        </motion.h1>
+        <motion.h2
+          className={`${greatVibes.className} p-3 text-6xl text-slate-100 custom-shadow`}
+          variants={header.text02}
+          initial="hidden"
+          whileInView="visible"
+        >
+          Nuestra Boda
+        </motion.h2>
+        <motion.div
+          className={`${greatVibes.className} mb-3 pb-3 text-slate-100 custom-shadow flex items-center justify-center`}
+          variants={header.timer}
+          initial="hidden"
+          whileInView="visible"
+        >
+          <div className="text-center m-0">
+            <div className="my-0 mx-3 p-2 text-3xl" ref={scopeDays}>
+              {formatNumber(days)}
+            </div>
+            <div className="my-0 mx-3 text-center text-1xl">Días</div>
           </div>
-          <div className="my-0 mx-3 text-center text-1xl">Días</div>
-        </div>
-        <div className="text-center m-0">
-          <div className="my-0 mx-3 p-2 text-3xl" ref={scopeHours}>
-            {formatNumber(hours)}
+          <div className="text-center m-0">
+            <div className="my-0 mx-3 p-2 text-3xl" ref={scopeHours}>
+              {formatNumber(hours)}
+            </div>
+            <div className="my-0 mx-3 text-center text-1xl">Horas</div>
           </div>
-          <div className="my-0 mx-3 text-center text-1xl">Horas</div>
-        </div>
-        <div className="text-center m-0">
-          <div className="my-0 mx-3 p-2 text-3xl" ref={scopeMinutes}>
-            {formatNumber(minutes)}
+          <div className="text-center m-0">
+            <div className="my-0 mx-3 p-2 text-3xl" ref={scopeMinutes}>
+              {formatNumber(minutes)}
+            </div>
+            <div className="my-0 mx-3 text-center text-1xl">Minutos</div>
           </div>
-          <div className="my-0 mx-3 text-center text-1xl">Minutos</div>
-        </div>
-        <div className="text-center m-0">
-          <div className="my-0 mx-3 p-2 text-3xl" ref={scopeSeconds}>
-            {formatNumber(seconds)}
+          <div className="text-center m-0">
+            <div className="my-0 mx-3 p-2 text-3xl" ref={scopeSeconds}>
+              {formatNumber(seconds)}
+            </div>
+            <div className="my-0 mx-3 text-center text-1xl">Segundos</div>
           </div>
-          <div className="my-0 mx-3 text-center text-1xl">Segundos</div>
-        </div>
-      </motion.div>
-      <motion.div
-        className="mb-12 flex justify-center items-center"
-        variants={header.arrow}
-        initial="hidden"
-        whileInView="visible"
-      >
-        <IoIosArrowDown className="text-zinc-400" />
-      </motion.div>      
+        </motion.div>
+        <motion.div
+          className="mb-12 flex justify-center items-center"
+          variants={header.arrow}
+          initial="hidden"
+          whileInView="visible"
+        >
+          <IoIosArrowDown className="text-zinc-400" />
+        </motion.div>
       </div>
       <ReactCanvasConfetti
         refConfetti={getInstance}

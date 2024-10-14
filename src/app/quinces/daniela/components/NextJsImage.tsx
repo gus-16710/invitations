@@ -10,8 +10,8 @@ export default function NextJsImage({
   return (
     <motion.div
       className="h-32 w-full cursor-pointer flex items-center justify-center z-20"
-      initial={{ y: -100, opacity: 0 }}
-      whileInView={{ y: 0, opacity: 1 }}
+      initial={{ scale: 0, opacity: 0 }}
+      whileInView={{ scale: 1, opacity: 1 }}
       viewport={{ once: false }}
       transition={{ duration: 1, ease: "easeOut" }}
     >

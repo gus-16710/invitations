@@ -17,7 +17,7 @@ export default function Header() {
   const [days, setDays] = useState(0);
 
   const countDownClock = () => {
-    const countDownDate: any = new Date("Nov 2, 2024 13:29:00");
+    const countDownDate: any = new Date("Feb 28, 2025 12:00:00");
 
     const interval = setInterval(() => {
       const now = new Date().getTime();

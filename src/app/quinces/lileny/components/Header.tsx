@@ -30,7 +30,7 @@ function Header() {
           Alexandra
         </h1>
         <p className={`${glass.className} text-4xl text-golden mb-5`}>
-          14.SEPTIEMBRE.2024
+          14.SEPTIEMBRE.2025
         </p>
         <p className={`${glass.className} text-zinc-300 text-center`}>
           Sus padres agradecen tu asistencia

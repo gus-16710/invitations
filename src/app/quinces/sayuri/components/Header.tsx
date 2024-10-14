@@ -169,7 +169,7 @@ export default function Header() {
           initial="hidden"
           whileInView="visible"
         >
-          2024
+          2025
         </motion.p>
       </div>
       <ReactCanvasConfetti

@@ -35,11 +35,23 @@ export default function Christening() {
         <Divider />
         <CardBody>
           <Listbox aria-label="Actions">
-            <ListboxItem key="diana-ernesto" onClick={() => router.push("diana-ernesto")}>
+            <ListboxItem
+              key="diana-ernesto"
+              onClick={() => router.push("diana-ernesto")}
+            >
               ⭐ Diana & Ernesto
             </ListboxItem>
-            <ListboxItem key="isabel-alan" onClick={() => router.push("isabel-alan")}>
+            <ListboxItem
+              key="isabel-alan"
+              onClick={() => router.push("isabel-alan")}
+            >
               ⭐ Isabel & Alan
+            </ListboxItem>
+            <ListboxItem
+              key="yasmin-reymundo"
+              onClick={() => router.push("ana-yasmin-carlos-raymundo")}
+            >
+              ⭐ Yasmin & Reymundo
             </ListboxItem>
           </Listbox>
         </CardBody>

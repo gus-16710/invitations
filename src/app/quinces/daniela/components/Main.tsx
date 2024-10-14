@@ -89,12 +89,8 @@ export default function Main() {
     setTimeout(() => {
       onClose();
       setOpen(true);
-    }, 4000);
+    }, 2000);
   }, []);
-
-  //   F2F1F8
-  //   CFE8F8
-  //   DEFFE9
 
   return (
     <div className="max-w-3xl m-auto bg-[url('/img/quinces/daniela/background-main.jpg')] bg-center bg-cover bg-fixed shadow-large">

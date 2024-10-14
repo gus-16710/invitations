@@ -20,7 +20,7 @@ function Presentation() {
   const [days, setDays] = useState(0);
 
   const countDownClock = () => {
-    const countDownDate: any = new Date("Sep 14, 2024 12:00:00");
+    const countDownDate: any = new Date("Sep 14, 2025 12:00:00");
 
     const interval = setInterval(() => {
       const now = new Date().getTime();
