@@ -17,11 +17,11 @@ export const headerText02 = {
 };
 
 export const headerText03 = {
-  hidden: { opacity: 0, scale: 0 },
+  hidden: { opacity: 0, y: -100 },
   visible: {
     opacity: 1,
-    scale: 1,
-    transition: { duration: 1, delay: 2 },
+    y: 0,
+    transition: { duration: 1, delay: 2.3 },
   },
 };
 
