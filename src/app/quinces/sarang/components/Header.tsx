@@ -1,10 +1,8 @@
 import { motion } from "framer-motion";
-import { love, notoSerif, oswald, pinyion, playFair, rouge } from "./Fonts";
+import { notoSerif, oswald, playFair, rouge } from "./Fonts";
 import {
   animation01,
   animation02,
-  animation03,
-  animation04,
   headerText01,
   headerText02,
   headerText03,

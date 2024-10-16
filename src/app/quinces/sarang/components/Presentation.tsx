@@ -7,7 +7,7 @@ import {
   animation04,
   animation06,
 } from "./Animations";
-import { aref, clicker, pinyion, rouge, ruge, yaseva } from "./Fonts";
+import { aref, clicker, rouge, ruge } from "./Fonts";
 
 function formatNumber(number: number) {
   return number < 10 ? `0${number}` : number;
