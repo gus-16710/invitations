@@ -22,7 +22,7 @@ export default function Confirm() {
         className="absolute top-0 left-0 w-full h-full object-cover z-0"
       >
         <source
-          src="/img/quinces/sarang/178351-859502575_tiny.mp4"
+          src="/img/quinces/sarang/176198-855206384_tiny.mp4"
           type="video/mp4"
         />
         Tu navegador no soporta videos HTML5.
