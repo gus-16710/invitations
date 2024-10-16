@@ -35,7 +35,10 @@ export default function Presentation() {
 
       if (distance < 0) {
         clearInterval(interval);
-        console.log("EXPIRED");
+        setSeconds(0);
+        setMinutes(0);
+        setHours(0);
+        setDays(0);
       }
 
       setSeconds(seconds);

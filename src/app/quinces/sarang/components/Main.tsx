@@ -141,10 +141,10 @@ export default function Main() {
             </SplideSlide>
             {/* <SplideSlide>
               <Gifts />
-            </SplideSlide>
+            </SplideSlide>*/}
             <SplideSlide>
               <Confirm />
-            </SplideSlide> */}
+            </SplideSlide> 
           </Splide>
           <AudioControl />
           <motion.div
