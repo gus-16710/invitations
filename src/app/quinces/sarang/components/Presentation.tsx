@@ -183,7 +183,7 @@ export default function Presentation() {
           </motion.div>
 
           <motion.p
-            className={`${aref.className} text-base px-5 text-center max-w-md`}
+            className={`${aref.className} text-base px-5 text-center max-w-md custom-text-purple`}
             variants={animation04}
             initial="hidden"
             whileInView="visible"

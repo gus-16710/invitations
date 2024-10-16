@@ -19,7 +19,7 @@ export default function NextJsImage({
         isBordered
         color="secondary"
         src={photo.src}
-        className="h-28 w-28 object-cover transition-transform transform group-hover:scale-110 shadow-lg rounded-lg"
+        className="h-28 w-28 object-cover transition-transform transform group-hover:scale-110 shadow-lg"
         onClick={onClick}
         placeholder={"blurDataURL" in photo ? "blur" : undefined}
       />
