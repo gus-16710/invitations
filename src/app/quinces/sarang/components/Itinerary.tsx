@@ -1,147 +1,60 @@
-import { motion, useMotionValue } from "framer-motion";
-import {
-  Avatar,
-  Button,
-  Card,
-  CardBody,
-  Modal,
-  ModalBody,
-  ModalContent,
-  ModalFooter,
-  ModalHeader,
-  useDisclosure,
-} from "@nextui-org/react";
-import {
-  animation01,
-  animation03,
-  animation04,
-  animation06,
-} from "./Animations";
-import { playFair, rouge } from "./Fonts";
-import { LuMapPin } from "react-icons/lu";
-import { useEffect, useState } from "react";
+import { animation01, animation06 } from "./Animations";
+import { oswald, rouge } from "./Fonts";
+import { motion } from "framer-motion";
+import { Card, CardBody } from "@nextui-org/react";
+import { PiButterflyThin } from "react-icons/pi";
 
-const MapCeremony = () => (
-  <iframe
-    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3583.6877322020628!2d-97.20980696694363!3d26.076459866477084!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x866fae473b8e3689%3A0xb23503267a69f424!2sPort%20Isabel%20Event%20%26%20Cultural%20Center!5e0!3m2!1ses!2smx!4v1729105546129!5m2!1ses!2smx"
-    height="450"
-    style={{ border: "0" }}
-    allowFullScreen
-    loading="lazy"
-    referrerPolicy="no-referrer-when-downgrade"
-  ></iframe>
-);
+const itinerary = [
+  {
+    time: "6:00 - 8:00 PM",
+    event: "Reception and Dinner",
+  },
+  {
+    time: "8:00 PM",
+    event: "Presentation of Gift and Last Doll",
+  },
+  {
+    time: "8:30 PM",
+    event: "Parents Dance and Vals",
+  },
+  {
+    time: "9:00 PM",
+    event: "Brindis and Cut of Cake",
+  },
+  {
+    time: "9:00 - 12:00 AM",
+    event: "Dancing",
+  },
+];
 
-const ModalMap = ({
-  isOpen,
-  onOpenChange,
-}: {
-  isOpen: boolean;
-  onOpenChange: () => void;
-}) => {
-  return (
-    <Modal
-      isOpen={isOpen}
-      onOpenChange={onOpenChange}
-      size="xs"
-      placement="center"
-      backdrop="blur"
-    >
-      <ModalContent>
-        {(onClose) => (
-          <>
-            <ModalHeader
-              className={`${rouge.className} flex flex-col gap-1 items-center text-3xl`}
-            >
-              Location
-            </ModalHeader>
-            <ModalBody>
-              <MapCeremony />
-            </ModalBody>
-            <ModalFooter></ModalFooter>
-          </>
-        )}
-      </ModalContent>
-    </Modal>
-  );
-};
-
-const animationVariants = {
-  hidden: { opacity: 0, scale: 0 },
+const list = {
   visible: {
     opacity: 1,
-    scale: 1,
     transition: {
+      when: "beforeChildren",
+      staggerChildren: 0.5,
       duration: 1,
-      delay: 0.6,
+    },
+  },
+  hidden: {
+    opacity: 0,
+    transition: {
+      when: "afterChildren",
     },
   },
 };
 
-const FlipAvatar: React.FC = () => {
-  const [flipped, setFlipped] = useState(false); // Estado para alternar entre avatares
-  const [rotation, setRotation] = useState(0); // Estado para controlar el valor de rotación
-  const rotateY = useMotionValue(0); // Para controlar la rotación suavemente
-
-  // Función para manejar el click
-  const handleClick = () => {
-    setRotation((prev) => (prev === 0 ? 180 : 0)); // Alterna entre 0 y 180 grados
-  };
-
-  // Temporizador para que el componente gire automáticamente cada 5 segundos
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setRotation((prev) => (prev === 0 ? 180 : 0)); // Alterna la rotación cada 5 segundos
-    }, 5000);
-
-    return () => clearInterval(interval); // Limpia el temporizador al desmontar el componente
-  }, []);
-
-  return (
-    <motion.div
-      style={{ perspective: 1000 }} // Añade perspectiva para un mejor efecto 3D
-      animate={{ rotateY: rotation }} // Controla la rotación según el estado
-      transition={{ duration: 0.8 }}
-      onClick={handleClick} // Ejecuta el giro al hacer click
-      onUpdate={(latest: { rotateY: number }) => {
-        const currentRotateY = latest.rotateY;
-        // Cambia la imagen cuando la rotación alcanza 90 grados
-        if (currentRotateY >= 90 && currentRotateY < 180 && !flipped) {
-          setFlipped(true); // Cambia el estado para mostrar el segundo Avatar
-        } else if (currentRotateY < 90 && flipped) {
-          setFlipped(false); // Regresa al primer Avatar si el giro vuelve a ser menor a 90 grados
-        }
-      }}
-    >
-      <motion.div
-        initial="hidden" // Comienza en estado oculto
-        whileInView="visible" // Aparece al entrar en pantalla
-        variants={animationVariants} // Variantes de animación
-        style={{ display: "flex", justifyContent: "center" }} // Estilo para centrar el contenido
-      >
-        {!flipped ? (
-          <Avatar
-            isBordered
-            color="secondary"
-            src="/img/quinces/sarang/church.jpg"
-            className="h-36 w-36 my-5 shadow-lg"
-          />
-        ) : (
-          <Avatar
-            isBordered
-            color="secondary"
-            src="/img/quinces/sarang/map-por-isabel.jpg"
-            className="h-36 w-36 my-5 shadow-lg"
-          />
-        )}
-      </motion.div>
-    </motion.div>
-  );
+const element = {
+  visible: { opacity: 1, y: 0 },
+  hidden: { opacity: 0, y: -100 },
 };
 
-export default function Location() {
-  const { isOpen, onOpen, onOpenChange } = useDisclosure();
+const iconVariants = {
+  hidden: { opacity: 0, scale: 0, rotate: 20 },
+  visible: { opacity: 1, scale: 1, transition: { duration: 0.5 } },
+};
 
+export default function Itinerary() {
   return (
     <>
       <section
@@ -154,7 +67,7 @@ export default function Location() {
           radius="lg"
           isBlurred
         >
-          <CardBody className="flex items-center justify-center flex-col">
+          <CardBody className="flex items-center justify-center flex-col overflow-clip">
             <motion.div
               variants={animation06}
               initial="hidden"
@@ -195,60 +108,53 @@ export default function Location() {
               </svg>
             </motion.div>
             <motion.h1
-              className={`${rouge.className} text-6xl custom-text-purple mt-5 text-center z-50`}
+              className={`${rouge.className} text-6xl custom-text-purple mt-5 text-center`}
               variants={animation01}
               initial="hidden"
               whileInView="visible"
+              custom={1}
             >
-              Location
+              Itinerary
             </motion.h1>
-           
-            <FlipAvatar />
-            <motion.div
-              variants={animation03}
+            <motion.ol
+              className="relative mt-7 mx-5"
               initial="hidden"
               whileInView="visible"
+              variants={list}
             >
-              <Button
-                className="mb-4 text-tiny"
-                variant="bordered"
-                color="secondary"
-                radius="lg"
-                size="sm"
-                onClick={() => {
-                  onOpen();
-                }}
-              >
-                <LuMapPin />
-                CHECK MAP
-              </Button>
-            </motion.div>
-
-            <motion.p
-              className={`${playFair.className} mx-10 mt-1 text-center text-base z-20 custom-text-purple`}
-              style={{ textShadow: "0px 1px 1px rgba(255,255,255, 1)" }}
-              variants={animation04}
-              initial="hidden"
-              whileInView="visible"
-            >
-              Port Isabel Event & Cultural Center 309 E. Railroad Ave
-            </motion.p>
-            <motion.div
-              className={`mt-5 p-1 text-center custom-text-purple`}
-              style={{
-                fontFamily: "adelia",
-              }}
-              variants={animation04}
-              initial="hidden"
-              whileInView="visible"
-            >
-              <p>Hosted By Gómez Family</p>
-              <p className="mt-5 text-xs">Dinner: 6:00 - 8:00 pm</p>
-            </motion.div>
+              {itinerary.map((item, index) => (
+                <div key={index}>
+                  <li className="mb-5 ms-3 flex items-start">
+                    {" "}
+                    {/* flex para alinear el ícono y el contenido */}
+                    <motion.div
+                      className="mt-1.5 mr-3"
+                      variants={iconVariants} // Anima el ícono
+                    >
+                      <PiButterflyThin className="text-purple-950" size={24} />
+                    </motion.div>
+                    <motion.div variants={element}>
+                      <time
+                        className="mb-1 text-xs font-normal leading-none custom-text-purple custom-shadow"
+                        style={{
+                          fontFamily: "adelia",
+                        }}
+                      >
+                        {item.time}
+                      </time>
+                      <h3
+                        className={`${oswald.className} text-base font-semibold custom-text-purple custom-shadow`}
+                      >
+                        {item.event}
+                      </h3>
+                    </motion.div>
+                  </li>
+                </div>
+              ))}
+            </motion.ol>
           </CardBody>
         </Card>
       </section>
-      <ModalMap isOpen={isOpen} onOpenChange={onOpenChange} />
     </>
   );
 }

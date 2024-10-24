@@ -4,11 +4,8 @@ import { Splide, SplideSlide } from "@splidejs/react-splide";
 import Header from "./Header";
 import Presentation from "./Presentation";
 import Location from "./Location";
-import Reception from "./Reception";
-import GodParents from "./GodParents";
 import Gallery from "./Gallery";
-import Gifts from "./Gifts";
-import Confirm from "./Confirm";
+import ThankYou from "./ThankYou";
 import {
   Modal,
   ModalBody,
@@ -21,6 +18,8 @@ import { oswald } from "./Fonts";
 import "@splidejs/react-splide/css";
 import { animation05 } from "./Animations";
 import AudioControl from "./AudioControl";
+import Itinerary from "./Itinerary";
+import Confirm from "./Confirm";
 
 const ModalInstructions = ({
   isOpen,
@@ -35,7 +34,7 @@ const ModalInstructions = ({
       onOpenChange={onOpenChange}
       size="xs"
       placement="center"
-      backdrop="blur"
+      backdrop="transparent"
       className="bg-white/0 shadow-none"
       hideCloseButton={true}
       isDismissable={false}
@@ -129,22 +128,19 @@ export default function Main() {
             </SplideSlide>
             <SplideSlide>
               <Location />
-            </SplideSlide>
-            {/* <SplideSlide>
-              <Reception />
-            </SplideSlide>
-            <SplideSlide>
-              <GodParents />
-            </SplideSlide> */}
+            </SplideSlide>         
             <SplideSlide>
               <Gallery />
             </SplideSlide>
-            {/* <SplideSlide>
-              <Gifts />
-            </SplideSlide>*/}
+            <SplideSlide>
+              <Itinerary />
+            </SplideSlide>
             <SplideSlide>
               <Confirm />
-            </SplideSlide> 
+            </SplideSlide>          
+            <SplideSlide>
+              <ThankYou />
+            </SplideSlide>
           </Splide>
           <AudioControl />
           <motion.div

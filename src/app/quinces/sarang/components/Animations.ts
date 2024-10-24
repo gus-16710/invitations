@@ -44,6 +44,15 @@ export const animation02 = {
   },
 };
 
+export const animationModal = {
+  hidden: { y: -200, rotate: 360 },
+  visible: {
+    y: 0,
+    rotate: 0,    
+    transition: { duration: 2 },
+  },
+};
+
 export const animation03 = {
   hidden: { y: 100, opacity: 0 },
   visible: {

@@ -13,16 +13,8 @@ import {
   useDisclosure,
 } from "@nextui-org/react";
 import { useEffect, useState, Dispatch, SetStateAction } from "react";
-import { notoSerif, pinyion, playFair } from "./components/Fonts";
-import {
-  animation01,
-  animation03,
-  animationButton01,
-  animationSvg01,
-  animationSvg02,
-  animationSvg03,
-  animationSvg04,
-} from "./components/Animations";
+import { notoSerif, pinyion } from "./components/Fonts";
+import { animationButton01, animationModal } from "./components/Animations";
 
 import "./styles.css";
 import Main from "./components/Main";
@@ -42,7 +34,7 @@ const ModalOpening = ({
       onOpenChange={onOpenChange}
       size="xs"
       placement="center"
-      backdrop="blur"
+      backdrop="transparent"
       isDismissable={false}
       hideCloseButton={true}
       className="rounded-none"
@@ -50,19 +42,31 @@ const ModalOpening = ({
       <ModalContent className="overflow-clip bg-[url('/img/quinces/sarang/silver-background.jpg')] bg-cover bg-center bg-fixed">
         {(onClose) => (
           <>
+            <video
+              autoPlay
+              loop
+              muted
+              className="absolute top-0 left-0 w-full h-full object-cover z-0"
+            >
+              <source
+                src="/img/quinces/sarang/glitter-silver.mp4"
+                type="video/mp4"
+              />
+              Tu navegador no soporta videos HTML5.
+            </video>
             <ModalHeader className="flex flex-col gap-1"></ModalHeader>
             <ModalBody>
               <Card
-                className="border-none bg-background/5 h-full w-full"
+                className="border-none bg-background/5 h-full w-full "
                 shadow="none"
                 radius="none"
                 isBlurred
               >
-                <CardBody className="flex items-center justify-center flex-col">
+                <CardBody className="flex items-center justify-center flex-col overflow-clip">
                   <motion.div
                     className="p-5 my-4 custom-text-purple"
                     style={{ backgroundColor: "#f4f3e1" }}
-                    variants={animation03}
+                    variants={animationModal}
                     initial="hidden"
                     whileInView="visible"
                   >
@@ -102,10 +106,10 @@ const ModalOpening = ({
                   Open
                 </Button>
               </motion.div>
-            </ModalFooter>                                  
-          </>          
-        )}        
-      </ModalContent>      
+            </ModalFooter>
+          </>
+        )}
+      </ModalContent>
     </Modal>
   );
 };
@@ -120,12 +124,12 @@ export default function Fifteen() {
 
   return (
     <main className="background-class">
-      {open && <Main />}      
+      {open && <Main />}
       <ModalOpening
         isOpen={isOpen}
         onOpenChange={onOpenChange}
         setOpen={setOpen}
-      />      
+      />
     </main>
   );
 }
