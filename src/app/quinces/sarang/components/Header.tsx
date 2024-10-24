@@ -37,11 +37,10 @@ export default function Header() {
         whileInView="visible"
       >
         honoring
-      </motion.h2>
-
+      </motion.h2>      
       <div className="relative h-72 w-80 flex items-center justify-center">
         <motion.div
-          className="bg-[url('/img/quinces/sarang/fifteen-girl.jpg')] bg-contain bg-no-repeat bg-center absolute w-60 h-60 rounded-full mb-2"
+          className="bg-[url('/img/quinces/sarang/fifteen-girl.jpg')] bg-contain bg-no-repeat bg-center absolute w-60 h-60 rounded-full mb-2 shine-effect"
           variants={animation01}
           initial="hidden"
           whileInView="visible"

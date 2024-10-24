@@ -123,7 +123,7 @@ const FlipAvatar: React.FC = () => {
           <Avatar
             isBordered
             color="secondary"
-            src="/img/quinces/sarang/church.jpg"
+            src="/img/quinces/sarang/location.jpg"
             className="h-36 w-36 my-5 shadow-lg"
           />
         ) : (
