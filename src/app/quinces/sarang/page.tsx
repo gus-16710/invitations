@@ -15,6 +15,7 @@ import {
 import { useEffect, useState, Dispatch, SetStateAction } from "react";
 import { notoSerif, pinyion } from "./components/Fonts";
 import { animationButton01, animationModal } from "./components/Animations";
+import { Spinner } from "flowbite-react";
 
 import "./styles.css";
 import Main from "./components/Main";
@@ -28,6 +29,8 @@ const ModalOpening = ({
   onOpenChange: () => void;
   setOpen: Dispatch<SetStateAction<boolean>>;
 }) => {
+  const [isVideoLoaded, setIsVideoLoaded] = useState(false); // Estado para manejar la carga del video
+
   return (
     <Modal
       isOpen={isOpen}
@@ -39,14 +42,21 @@ const ModalOpening = ({
       hideCloseButton={true}
       className="rounded-none"
     >
-      <ModalContent className="overflow-clip bg-[url('/img/quinces/sarang/silver-background.jpg')] bg-cover bg-center bg-fixed">
+      <ModalContent className="overflow-clip" style={{backgroundColor: "#f4f3e1"}}>
         {(onClose) => (
           <>
+            {/* Muestra el Spinner mientras el video no ha cargado */}
+            {!isVideoLoaded && (
+              <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center z-10">
+                <Spinner color="purple" size="xl" />
+              </div>
+            )}
             <video
               autoPlay
               loop
               muted
               className="absolute top-0 left-0 w-full h-full object-cover z-0"
+              onLoadedData={() => setIsVideoLoaded(true)} // Cambia el estado cuando el video se carga
             >
               <source
                 src="/img/quinces/sarang/glitter-silver.mp4"
@@ -57,7 +67,7 @@ const ModalOpening = ({
             <ModalHeader className="flex flex-col gap-1"></ModalHeader>
             <ModalBody>
               <Card
-                className="border-none bg-background/5 h-full w-full "
+                className="border-none bg-background/5 h-full w-full"
                 shadow="none"
                 radius="none"
                 isBlurred

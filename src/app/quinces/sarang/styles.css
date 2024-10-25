@@ -39,8 +39,8 @@
   content: '';
   position: absolute;
   top: 0;
-  left: -150%; /* Empieza más afuera para mayor suavidad */
-  width: 150%; /* Aumenta el ancho para cubrir mejor la imagen */
+  left: -150%;
+  width: 150%;
   height: 100%;
   background: linear-gradient(
     115deg,
@@ -48,10 +48,9 @@
     rgba(255, 255, 255, 0.6) 50%,
     rgba(255, 255, 255, 0) 100%
   );
-  transform: skewX(-20deg); /* Ajuste de ángulo para reflejo más estilizado */
-  animation: shine 4s ease-in-out infinite; /* Transición más suave y continua */
+  transform: skewX(-20deg); 
+  animation: shine 4s ease-in-out infinite;
   z-index: 10;
-/* border-radius: inherit; */
 }
 
 @keyframes shine {
@@ -59,9 +58,9 @@
     left: -150%;
   }
   50% {
-    left: 100%; /* Hace el reflejo más prominente en la mitad */
+    left: 100%; 
   }
   100% {
-    left: 150%; /* Termina fuera de la imagen para suavizar el final */
+    left: 150%; 
   }
 }
