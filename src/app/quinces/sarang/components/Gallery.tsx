@@ -3,8 +3,7 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import PhotoAlbum from "react-photo-album";
 import Lightbox from "yet-another-react-lightbox";
-import { rouge } from "./Fonts";
-import { animation01, animation06 } from "./Animations";
+import { animation06 } from "./Animations";
 import { Card, CardBody } from "@nextui-org/react";
 import NextJsImage from "./NextJsImage";
 
