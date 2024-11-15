@@ -121,7 +121,7 @@ export default function Reception() {
           whileInView="visible"
           viewport={{ once: false }}
         >
-          M. Hidalgo 76, Centro, 91300 Banderilla, Ver.
+          M. Hidalgo n° 76, Centro, 91300 Banderilla, Ver.
         </motion.p>
 
         <motion.div

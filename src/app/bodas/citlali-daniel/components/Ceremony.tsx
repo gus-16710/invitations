@@ -113,7 +113,7 @@ export default function Ceremony() {
           whileInView="visible"
           viewport={{ once: false }}
         >
-          Benito Juárez 27, Lomas de Hidalgo, Centro, 91300 Banderilla, Ver.
+          Benito Juárez n° 27, Lomas de Hidalgo, Centro, 91300 Banderilla, Ver.
         </motion.p>
         <motion.div
           variants={ceremony.button}

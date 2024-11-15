@@ -16,7 +16,7 @@ export default function Header() {
   const [days, setDays] = useState(0);
 
   const countDownClock = () => {
-    const countDownDate: any = new Date("Oct 26, 2024 13:00:00");
+    const countDownDate: any = new Date("Dece 14, 2024 13:00:00");
 
     const interval = setInterval(() => {
       const now = new Date().getTime();
@@ -145,7 +145,7 @@ export default function Header() {
         className="absolute top-0 left-0 w-full h-full bg-[url('/img/bodas/citlali-daniel/background-header.jpeg')] bg-cover bg-center z-0"
         style={{ height: "100svh" }}
         animate={{ scale: [1, 1.1, 1] }}
-        transition={{ duration: 30, repeat: Infinity, ease: "easeInOut" }}
+        transition={{ duration: 40, repeat: Infinity, ease: "easeInOut" }}
       />
       
       <div className="absolute top-0 left-0 w-full h-full z-5 bg-gradient-to-t from-black/50 to-transparent"></div>
@@ -163,25 +163,25 @@ export default function Header() {
             <div className="my-0 mx-3 p-2 text-3xl" ref={scopeDays}>
               {formatNumber(days)}
             </div>
-            <div className="my-0 mx-3 text-center text-1xl">Días</div>
+            <div className="my-0 mx-3 text-center text-2xl">Días</div>
           </div>
           <div className="text-center m-0">
             <div className="my-0 mx-3 p-2 text-3xl" ref={scopeHours}>
               {formatNumber(hours)}
             </div>
-            <div className="my-0 mx-3 text-center text-1xl">Horas</div>
+            <div className="my-0 mx-3 text-center text-2xl">Horas</div>
           </div>
           <div className="text-center m-0">
             <div className="my-0 mx-3 p-2 text-3xl" ref={scopeMinutes}>
               {formatNumber(minutes)}
             </div>
-            <div className="my-0 mx-3 text-center text-1xl">Minutos</div>
+            <div className="my-0 mx-3 text-center text-2xl">Min</div>
           </div>
           <div className="text-center m-0">
             <div className="my-0 mx-3 p-2 text-3xl" ref={scopeSeconds}>
               {formatNumber(seconds)}
             </div>
-            <div className="my-0 mx-3 text-center text-1xl">Segundos</div>
+            <div className="my-0 mx-3 text-center text-2xl">Seg</div>
           </div>
         </motion.div>
         <motion.div className="mb-12 flex justify-center items-center" variants={header.arrow} initial="hidden" whileInView="visible">

@@ -265,6 +265,14 @@ export const sacrament = {
       transition: { duration: 1, ease: "easeInOut", delay: 2.3 },
     },
   },
+  animationPhoto: {
+    hidden: { opacity: 0, scale: 0 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: { duration: 1, type: "spring", stiffness: 70, delay: 2 },
+    },
+  },
 };
 
 export const dressCode = {
@@ -324,4 +332,35 @@ export const dressCode = {
       transition: { duration: 1, ease: "easeInOut", delay: 0.9 },
     },
   },
+};
+
+/**
+ * Photo Animations
+ **/
+
+export const photo = {
+  text01: {
+    hidden: { y: -100, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: { duration: 1, delay: 0.3 },
+    },
+  },
+  text02: {
+    hidden: { y: 100, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: { duration: 1, delay: 0.6 },
+    },
+  },
+  photo: {
+    hidden: { scale: 0, opacity: 0 },
+    visible: {
+      scale: 1,
+      opacity: 1,      
+      transition: { duration: 3, ease: "easeOut", delay: 0.9 },
+    },
+  }, 
 };

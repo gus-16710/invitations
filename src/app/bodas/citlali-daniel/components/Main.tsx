@@ -21,6 +21,7 @@ import { useEffect, useState } from "react";
 import Sacrament from "./Sacrament";
 import Confirm from "./Confirm";
 import AudioControl from "./AudioControl";
+import Photo from "./Photo";
 
 const ModalInstructions = ({
   isOpen,
@@ -136,6 +137,9 @@ export default function Main() {
             </SplideSlide>
             <SplideSlide>
               <Confirm />
+            </SplideSlide>
+            <SplideSlide>
+              <Photo />
             </SplideSlide>
           </Splide>
           <AudioControl />
