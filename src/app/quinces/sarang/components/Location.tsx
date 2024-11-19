@@ -81,7 +81,7 @@ const animationVariants = {
 const FlipAvatar: React.FC = () => {
   const [flipped, setFlipped] = useState(false); // Estado para alternar entre avatares
   const [rotation, setRotation] = useState(0); // Estado para controlar el valor de rotación
-  const rotateY = useMotionValue(0); // Para controlar la rotación suavemente
+  //const rotateY = useMotionValue(0); // Para controlar la rotación suavemente
 
   // Función para manejar el click
   const handleClick = () => {
