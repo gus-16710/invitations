@@ -33,7 +33,7 @@ export default function Photo() {
       </motion.h1>
 
       {/* Imagen centrada con bordes redondeados */}
-      <motion.div
+       <motion.div
         className="w-full flex justify-center items-center"
         variants={photo.photo}
         initial="hidden"
@@ -48,8 +48,7 @@ export default function Photo() {
             border: "5px solid white", // Agrega un borde blanco alrededor de la imagen
           }}
         />
-      </motion.div>
-
+      </motion.div>     
       <motion.h1
         className={`${greatVibes.className} text-4xl p-5 text-center text-zinc-900`}
         variants={photo.text02}

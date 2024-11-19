@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     title: "🥂 Citlali & Daniel 🥂",
     description:
       "Nos casamos y deseamos compartir con ustedes este día tan especial.",
-    images: ["https://invitaciones.unaideamas.com/img/bodas/citlali-daniel/background-header.jpeg"],
+    images: ["https://invitaciones.unaideamas.com/img/bodas/citlali-daniel/family.jpeg"],
   },
   icons: {
     icon: "https://invitaciones.unaideamas.com/img/favicon.png",
