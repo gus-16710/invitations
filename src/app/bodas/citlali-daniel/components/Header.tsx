@@ -142,7 +142,7 @@ export default function Header() {
     <section className="pb-10 flex justify-end items-center flex-col relative" style={{ height: "100svh", overflow:"hidden" }}>
       {/* Fondo animado con zoom in/out */}
       <motion.div
-        className="absolute top-0 left-0 w-full h-full bg-[url('/img/bodas/citlali-daniel/background-header.jpeg')] bg-cover bg-center z-0"
+        className="absolute top-0 left-0 w-full h-full bg-[url('/img/bodas/citlali-daniel/background-header.jpg')] bg-cover bg-center z-0"
         style={{ height: "100svh" }}
         animate={{ scale: [1, 1.1, 1] }}
         transition={{ duration: 40, repeat: Infinity, ease: "easeInOut" }}

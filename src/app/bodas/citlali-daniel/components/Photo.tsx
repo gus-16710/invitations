@@ -15,7 +15,7 @@ export default function Photo() {
       <div
         className="absolute top-0 left-0 w-full h-full bg-cover bg-center"
         style={{
-          backgroundImage: "url('/img/bodas/citlali-daniel/family-2.jpg')",
+          backgroundImage: "url('/img/bodas/citlali-daniel/family.jpeg')",
           filter: "blur(15px)", // Efecto de desenfoque
           transform: "scale(1.1)", // Escala para evitar bordes semitransparentes
           zIndex: -1, // Detrás de todo
@@ -23,7 +23,7 @@ export default function Photo() {
       ></div>
 
       <motion.h1
-        className={`${greatVibes.className} text-5xl p-5 text-center text-zinc-50 custom-shadow`}
+        className={`${greatVibes.className} text-4xl p-5 text-center text-zinc-900`}
         variants={photo.text01}
         initial="hidden"
         whileInView="visible"
@@ -40,18 +40,18 @@ export default function Photo() {
         whileInView="visible"
       >
         <img
-          src="/img/bodas/citlali-daniel/family-2.jpg"
+          src="/img/bodas/citlali-daniel/family.jpeg"
           alt="Family"
           className="w-3/4 h-auto rounded-2xl shadow-lg" // Ajusta el ancho y aplica bordes redondeados
           style={{
-            borderRadius: "25px", // Bordes redondeados personalizados
+            borderRadius: "20px", // Bordes redondeados personalizados
             border: "5px solid white", // Agrega un borde blanco alrededor de la imagen
           }}
         />
       </motion.div>
 
       <motion.h1
-        className={`${greatVibes.className} text-5xl p-5 mt-5 text-center text-zinc-50 custom-shadow`}
+        className={`${greatVibes.className} text-4xl p-5 mt-5 text-center text-zinc-900`}
         variants={photo.text02}
         initial="hidden"
         whileInView="visible"
@@ -88,7 +88,7 @@ const FloatingHearts = () => {
             color: "pink", // Color del corazón
           }}
         >
-          💗
+          🤍
         </motion.div>
       ))}
     </div>

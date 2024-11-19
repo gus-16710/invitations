@@ -184,7 +184,7 @@ export default function GodParents() {
               initial="hidden"
               whileInView="visible"
             >
-              Hortencia Beatriz Castillo Salas
+               Hortencia Beatriz Viveros Castillo
             </motion.p>
           </div>
         </Carousel>
