@@ -7,8 +7,7 @@ import {
   ModalFooter,
   useDisclosure,
 } from "@nextui-org/react";
-import { IoMdTime } from "react-icons/io";
-import { greatVibes, love, markazi, notoSans } from "./Fonts";
+import { greatVibes, markazi, notoSans } from "./Fonts";
 import { reception } from "./Animations";
 import { LuMapPin } from "react-icons/lu";
 import { Avatar } from "flowbite-react";

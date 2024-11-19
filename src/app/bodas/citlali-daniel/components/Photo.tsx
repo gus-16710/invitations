@@ -16,7 +16,7 @@ export default function Photo() {
         className="absolute top-0 left-0 w-full h-full bg-cover bg-center"
         style={{
           backgroundImage: "url('/img/bodas/citlali-daniel/family.jpeg')",
-          filter: "blur(15px)", // Efecto de desenfoque
+          filter: "blur(5px)", // Efecto de desenfoque
           transform: "scale(1.1)", // Escala para evitar bordes semitransparentes
           zIndex: -1, // Detrás de todo
         }}
