@@ -23,7 +23,7 @@ export default function Photo() {
       ></div>
 
       <motion.h1
-        className={`${greatVibes.className} text-4xl p-5 text-center text-zinc-900`}
+        className={`${greatVibes.className} text-4xl pb-5 px-5 text-center text-zinc-900`}
         variants={photo.text01}
         initial="hidden"
         whileInView="visible"
@@ -42,7 +42,7 @@ export default function Photo() {
         <img
           src="/img/bodas/citlali-daniel/family.jpeg"
           alt="Family"
-          className="w-3/4 h-auto rounded-2xl shadow-lg" // Ajusta el ancho y aplica bordes redondeados
+          className="w-3/5 h-auto rounded-2xl shadow-lg" // Ajusta el ancho y aplica bordes redondeados
           style={{
             borderRadius: "20px", // Bordes redondeados personalizados
             border: "5px solid white", // Agrega un borde blanco alrededor de la imagen
@@ -51,7 +51,7 @@ export default function Photo() {
       </motion.div>
 
       <motion.h1
-        className={`${greatVibes.className} text-4xl p-5 mt-5 text-center text-zinc-900`}
+        className={`${greatVibes.className} text-4xl p-5 text-center text-zinc-900`}
         variants={photo.text02}
         initial="hidden"
         whileInView="visible"
