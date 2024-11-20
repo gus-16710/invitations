@@ -20,19 +20,19 @@ export default function Presentation() {
         </motion.h1>
 
         <motion.div
-          className="flex items-center justify-center flex-col mt-4 mb-2 text-gray-600"
+          className="flex items-center justify-center flex-col mt-5 mb-2 text-gray-600"
           variants={presentation.date}
           initial="hidden"
           whileInView="visible"
           //viewport={{ once: false }}  // Repite la animación
         >
           {/* Contenido de la fecha */}
-          <label className={`${playFair.className} pb-4 text-lg`}>
+          <label className={`${playFair.className} pb-4 text-2xl`}>
             Diciembre
           </label>
           <div className="flex items-center">
             <label
-              className={`${playFair.className} p-4 w-20 text-center text-lg`}
+              className={`${playFair.className} p-4 w-20 text-center text-2xl`}
             >
               SÁB
             </label>
@@ -42,12 +42,12 @@ export default function Presentation() {
               14
             </label>
             <label
-              className={`${playFair.className} p-4 w-20 text-center text-lg`}
+              className={`${playFair.className} p-4 w-20 text-center text-2xl`}
             >
               13HR
             </label>
           </div>
-          <label className={`${playFair.className} text-lg`}>2024</label>
+          <label className={`${playFair.className} text-2xl`}>2024</label>
         </motion.div>
 
         <motion.p

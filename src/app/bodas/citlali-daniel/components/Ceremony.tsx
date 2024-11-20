@@ -147,7 +147,6 @@ import { ceremony } from "./Animations";
 import { LuMapPin } from "react-icons/lu";
 import { Avatar } from "flowbite-react";
 
-
 const ModalMap = ({
   isOpen,
   onOpenChange,
@@ -164,7 +163,11 @@ const ModalMap = ({
       backdrop="blur"
     >
       <ModalContent>
-        <ModalHeader>Ceremonia Religiosa</ModalHeader>
+        <ModalHeader
+          className={`${greatVibes.className} flex flex-col gap-1 items-center text-3xl`}
+        >
+          Ceremonia Religiosa
+        </ModalHeader>
         <ModalBody>
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3758.897053930144!2d-96.94430685113184!3d19.588910622696012!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85db2fb78a66bb13%3A0x6935f2c47beef73d!2sSantuario%20Parroquial%20De%20San%20Jos%C3%A9!5e0!3m2!1ses!2smx!4v1731536536155!5m2!1ses!2smx"
