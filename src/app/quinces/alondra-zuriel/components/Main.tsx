@@ -9,10 +9,13 @@ import Header from "./Header";
 import Presentation from "./Presentation";
 import AudioControl from "./AudioControl";
 import Gifts from "./Gifts";
+import { useState } from "react";
 
 export default function Main() {
+  const [splide, setSplide] = useState(0);
+
   return (
-    <div className="max-w-3xl m-auto bg-[url('/img/quinces/alondra/glitter-background.jpg')] bg-center bg-cover shadow-large relative overflow-clip">      
+    <div className="max-w-3xl m-auto bg-[url('/img/quinces/alondra/glitter-background.jpg')] bg-center bg-cover shadow-large relative overflow-clip">
       <Splide
         aria-label="Daniela"
         options={{
@@ -29,23 +32,26 @@ export default function Main() {
           },
         }}
         className="z-10"
+        onActive={(splide: any) => {
+          console.log(splide.index);
+          setSplide(splide.index);
+        }}
       >
         <SplideSlide>
-          <Header />
+          <Header splide={splide}/>
         </SplideSlide>
         <SplideSlide>
           <Presentation />
         </SplideSlide>
-
         <SplideSlide>
-          <Ceremony />
+          <Ceremony splide={splide} />
         </SplideSlide>
         <SplideSlide>
-          <Reception />
+          <Reception splide={splide} />
         </SplideSlide>
         <SplideSlide>
           <Gifts />
-        </SplideSlide>        
+        </SplideSlide>
       </Splide>
       <AudioControl />
       <motion.div
