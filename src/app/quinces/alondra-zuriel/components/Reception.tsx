@@ -1,4 +1,4 @@
-import { titillium, vibes } from "./Fonts";
+import { standard, titillium, vibes } from "./Fonts";
 import { IoLocationSharp } from "react-icons/io5";
 import {
   Modal,
@@ -69,19 +69,19 @@ export default function Reception() {
   return (
     <>
       <div
-        className="h-screen flex justify-center items-center flex-col"
-        style={{ color: "#513704" }}
+        className="h-screen flex justify-center items-center flex-col"        
       >
         <motion.h2
           className={`${vibes.className} text-5xl mb-5`}
           variants={header.animation1}
           initial="hidden"
           whileInView="visible"
+          style={{ color: "#513704" }}
         >
           Recepción
         </motion.h2>
         <motion.p
-          className={`${vibes.className} text-7xl mt-5`}
+          className={`${standard.className} text-6xl mt-5`}
           variants={header.animation2}
           initial="hidden"
           whileInView="visible"
@@ -94,12 +94,13 @@ export default function Reception() {
           variants={header.animation3}
           initial="hidden"
           whileInView="visible"
+          style={{ color: "#a57d35" }}
         >
           Salón Las Brisas
         </motion.p>
 
         <motion.p
-          className={`${titillium.className} text-center mx-5 mt-3 text-sm max-w-md  p-2`}
+          className={`${titillium.className} text-center mx-5 mt-10 text-sm max-w-md  p-2`}
           variants={header.animation4}
           initial="hidden"
           whileInView="visible"
@@ -109,7 +110,7 @@ export default function Reception() {
 
         <motion.button
           type="button"
-          className="mt-10 bg-white/0 border border-yellow-700 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 rounded-full me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700 font-medium text-sm px-5 py-2.5 text-center flex items-center"
+          className="mt-5 bg-white/0 border border-yellow-700 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 rounded-full me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700 font-medium text-sm px-5 py-2.5 text-center flex items-center"
           onClick={() => {
             onOpen();
           }}

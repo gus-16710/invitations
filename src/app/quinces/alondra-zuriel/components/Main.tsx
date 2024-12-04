@@ -8,6 +8,7 @@ import Reception from "./Reception";
 import Header from "./Header";
 import Presentation from "./Presentation";
 import AudioControl from "./AudioControl";
+import Gifts from "./Gifts";
 
 export default function Main() {
   return (
@@ -42,10 +43,10 @@ export default function Main() {
         <SplideSlide>
           <Reception />
         </SplideSlide>
-        {/*<SplideSlide>
-          <GodParents />
-        </SplideSlide>
         <SplideSlide>
+          <Gifts />
+        </SplideSlide>
+        {/*<SplideSlide>
           <Gallery />
         </SplideSlide>
         <SplideSlide>

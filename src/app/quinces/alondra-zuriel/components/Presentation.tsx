@@ -16,7 +16,7 @@ export default function Presentation() {
       </motion.h2>
       <motion.p
         className={`${league.className} text-2xl`}
-        style={{ color: "#513704" }}
+        style={{ color: "#a57d35" }}
         variants={header.animation2}
         initial="hidden"
         whileInView="visible"
@@ -46,7 +46,7 @@ export default function Presentation() {
       </motion.h2>
       <motion.p
         className={`${league.className} text-2xl`}
-        style={{ color: "#513704" }}
+        style={{ color: "#a57d35" }}
         variants={header.animation5}
         initial="hidden"
         whileInView="visible"
