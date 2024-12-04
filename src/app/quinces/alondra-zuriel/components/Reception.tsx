@@ -37,7 +37,7 @@ const ModalMap = ({
             <ModalBody>
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3760.054859463592!2d-96.92084692437417!3d19.539258181763138!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85db31fdaa20b821%3A0xacf87f1bb9c6db59!2sLas%20Brisas!5e0!3m2!1ses!2smx!4v1733291686397!5m2!1ses!2smx"
-                height="450"
+                height="100%"
                 style={{ border: "0" }}
                 allowFullScreen
                 loading="lazy"
@@ -48,7 +48,7 @@ const ModalMap = ({
             <ModalFooter className="flex justify-center">
               <button
                 type="button"
-                className="mt-10 text-zinc-0 bg-white/0 border border-gray-400 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 rounded-full me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700 font-medium text-sm px-5 py-2.5 text-center flex items-center"
+                className="text-zinc-0 bg-white/0 border border-gray-400 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 rounded-full me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700 font-medium text-sm px-5 py-2.5 text-center flex items-center"
                 onClick={() => {
                   onClose();
                 }}
