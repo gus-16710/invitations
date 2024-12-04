@@ -6,11 +6,13 @@ import Presentation from "./Presentation";
 
 import "@splidejs/react-splide/css";
 import { animation05, animation06 } from "./Animations";
+import Ceremony from "./Ceremony";
+import Reception from "./Reception";
 
 export default function Main() {
   return (
     <div className="max-w-3xl m-auto bg-[url('/img/quinces/alondra/glitter-background.jpg')] bg-center bg-cover shadow-large">
-     {/* <div className="max-w-3xl m-auto bg-slate-100 shadow-large"> */}
+      {/* <div className="max-w-3xl m-auto bg-slate-100 shadow-large"> */}
       <Splide
         aria-label="Daniela"
         options={{
@@ -21,7 +23,7 @@ export default function Main() {
           releaseWheel: true,
           type: "loop",
           waitForTransition: true,
-          arrows: false,
+          arrows: true,
           classes: {
             page: "splide__pagination__page custom-class-page", // each button
           },
@@ -34,14 +36,14 @@ export default function Main() {
         <SplideSlide>
           <Presentation />
         </SplideSlide>
-        {/*
+
         <SplideSlide>
           <Ceremony />
         </SplideSlide>
         <SplideSlide>
           <Reception />
         </SplideSlide>
-        <SplideSlide>
+        {/*<SplideSlide>
           <GodParents />
         </SplideSlide>
         <SplideSlide>

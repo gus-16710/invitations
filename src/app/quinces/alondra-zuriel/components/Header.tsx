@@ -64,10 +64,10 @@ export default function Header() {
       </p>
 
       <span
-        className={`${standard.className} text-2xl mt-2`}
+        className={`${league.className} text-2xl mt-2`}
         style={{ color: "#a57d35" }}
       >
-        17:00 Hrs
+        17:00 Hrs.
       </span>
     </div>
   );
