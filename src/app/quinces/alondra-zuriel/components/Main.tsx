@@ -12,7 +12,7 @@ import Gifts from "./Gifts";
 
 export default function Main() {
   return (
-    <div className="max-w-3xl m-auto bg-[url('/img/quinces/alondra/glitter-background.jpg')] bg-center bg-cover shadow-large relative">      
+    <div className="max-w-3xl m-auto bg-[url('/img/quinces/alondra/glitter-background.jpg')] bg-center bg-cover shadow-large relative overflow-clip">      
       <Splide
         aria-label="Daniela"
         options={{
@@ -45,16 +45,7 @@ export default function Main() {
         </SplideSlide>
         <SplideSlide>
           <Gifts />
-        </SplideSlide>
-        {/*<SplideSlide>
-          <Gallery />
-        </SplideSlide>
-        <SplideSlide>
-          <Gifts />
-        </SplideSlide>
-        <SplideSlide>
-          <Confirm />
-        </SplideSlide> */}
+        </SplideSlide>        
       </Splide>
       <AudioControl />
       <motion.div
