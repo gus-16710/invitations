@@ -1,3 +1,12 @@
+"use client"
+
+import Main from "./components/Main";
+import "./styles.css";
+
 export default function Fifteen() {
-  return <div>Alondra Zuriel</div>;
+  return (
+    <main className="background-class">
+      <Main />
+    </main>
+  );
 }
