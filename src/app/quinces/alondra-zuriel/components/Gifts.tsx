@@ -27,7 +27,7 @@ export default function Gifts() {
       </motion.h2>
 
       <motion.p
-        className={`${league.className} text-xl z-10 text-center mt-5 text-zinc-100 px-5 max-w-md px-10`}
+        className={`${league.className} text-xl z-10 text-center mt-5 text-zinc-100 max-w-md px-10`}
         variants={header.animation2}
         initial="hidden"
         whileInView="visible"
