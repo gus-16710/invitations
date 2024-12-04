@@ -5,7 +5,7 @@ export const animation05 = {
   visible: {
     scale: 1,
     opacity: 1,
-    transition: { duration: 2 },
+    transition: { duration: 3, delay: 3 },
   },
 };
 
@@ -14,7 +14,7 @@ export const animation06 = {
   visible: {
     scale: 1,
     opacity: 1,
-    transition: { duration: 2 },
+    transition: { duration: 3, delay: 3 },
   },
 };
 

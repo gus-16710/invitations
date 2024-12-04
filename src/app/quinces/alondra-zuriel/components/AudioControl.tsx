@@ -27,6 +27,8 @@ export default function AudioControl() {
         {isPlayed ? <MdOutlineVolumeUp /> : <MdOutlineVolumeOff />}
       </motion.button>
 
+      <p></p>
+
       <audio controls ref={audioPlayer} hidden loop>
         <source
           src="/media/sanctuary.mp3"
