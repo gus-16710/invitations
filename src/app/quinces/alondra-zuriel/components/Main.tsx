@@ -1,18 +1,17 @@
 // @ts-ignore
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import { motion } from "framer-motion";
-import Header from "./Header";
-import Presentation from "./Presentation";
-
 import "@splidejs/react-splide/css";
 import { animation05, animation06 } from "./Animations";
 import Ceremony from "./Ceremony";
 import Reception from "./Reception";
+import Header from "./Header";
+import Presentation from "./Presentation";
+import AudioControl from "./AudioControl";
 
 export default function Main() {
   return (
-    <div className="max-w-3xl m-auto bg-[url('/img/quinces/alondra/glitter-background.jpg')] bg-center bg-cover shadow-large">
-      {/* <div className="max-w-3xl m-auto bg-slate-100 shadow-large"> */}
+    <div className="max-w-3xl m-auto bg-[url('/img/quinces/alondra/glitter-background.jpg')] bg-center bg-cover shadow-large relative">      
       <Splide
         aria-label="Daniela"
         options={{
@@ -56,7 +55,7 @@ export default function Main() {
           <Confirm />
         </SplideSlide> */}
       </Splide>
-
+      <AudioControl />
       <motion.div
         className="bg-[url('/img/quinces/alondra/header-01.png')] bg-cover bg-bottom absolute inset-0 z-0"
         variants={animation05}

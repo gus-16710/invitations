@@ -1,5 +1,6 @@
 import { titillium, vibes } from "./Fonts";
 import { IoLocationSharp } from "react-icons/io5";
+import { motion } from "framer-motion";
 import {
   Modal,
   ModalContent,
@@ -8,6 +9,7 @@ import {
   ModalFooter,
   useDisclosure,
 } from "@nextui-org/react";
+import { header } from "./Animations";
 
 const ModalMap = ({
   isOpen,
@@ -20,11 +22,11 @@ const ModalMap = ({
     <Modal
       isOpen={isOpen}
       onOpenChange={onOpenChange}
-      size="xs"
+      size="full"
       placement="center"
       backdrop="blur"
     >
-      <ModalContent>
+      <ModalContent style={{backgroundColor: "#740403", "color": "#ffff", }}>
         {(onClose) => (
           <>
             <ModalHeader
@@ -43,7 +45,17 @@ const ModalMap = ({
                 className="w-full"
               ></iframe>
             </ModalBody>
-            <ModalFooter></ModalFooter>
+            <ModalFooter className="flex justify-center">
+              <button
+                type="button"
+                className="mt-10 text-zinc-0 bg-white/0 border border-gray-400 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 rounded-full me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700 font-medium text-sm px-5 py-2.5 text-center flex items-center"
+                onClick={() => {
+                  onClose();
+                }}
+              >
+                Cerrar
+              </button>
+            </ModalFooter>
           </>
         )}
       </ModalContent>
@@ -60,32 +72,55 @@ export default function Ceremony() {
         className="h-screen flex justify-center items-center flex-col"
         style={{ color: "#513704" }}
       >
-        <h2 className={`${vibes.className} text-5xl mb-5`}>
+        <motion.h2
+          className={`${vibes.className} text-5xl mb-5`}
+          variants={header.animation1}
+          initial="hidden"
+          whileInView="visible"
+        >
           Ceremonia Religiosa
-        </h2>
-        <p className={`${vibes.className} text-7xl mt-5`}>17:00 hrs</p>
-        <p
+        </motion.h2>
+        <motion.p
+          className={`${vibes.className} text-7xl mt-5`}
+          variants={header.animation2}
+          initial="hidden"
+          whileInView="visible"
+          style={{ color: "#a57d35" }}
+        >
+          17:00 hrs
+        </motion.p>
+        <motion.p
           className={`${vibes.className} text-center mx-5 mt-5 text-4xl max-w-md `}
+          variants={header.animation3}
+          initial="hidden"
+          whileInView="visible"
         >
           Parroquia San Antonio de Padua
-        </p>
+        </motion.p>
 
-        <p
+        <motion.p
           className={`${titillium.className} text-center mx-5 mt-3 text-sm max-w-md  p-2`}
+          variants={header.animation4}
+          initial="hidden"
+          whileInView="visible"
         >
           C. Ignacio de la Llave 45A, Guadalupe Rodriguez, Xalapa, Ver.
-        </p>
+        </motion.p>
 
-        <button
+        <motion.button
           type="button"
-          className="mt-10 text-zinc-700 bg-white/0 border border-gray-400 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 rounded-full me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700 font-medium text-sm px-5 py-2.5 text-center flex items-center"
+          className="mt-10 bg-white/0 border border-yellow-700 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 rounded-full me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700 font-medium text-sm px-5 py-2.5 text-center flex items-center"
+          style={{ color: "#a57d35" }}
           onClick={() => {
             onOpen();
           }}
+          variants={header.animation5}
+          initial="hidden"
+          whileInView="visible"
         >
           <IoLocationSharp className="mr-1 text-xl" />
           Ver Ubicación
-        </button>
+        </motion.button>
       </div>
       <ModalMap isOpen={isOpen} onOpenChange={onOpenChange} />
     </>
