@@ -10,6 +10,7 @@ import Presentation from "./Presentation";
 import AudioControl from "./AudioControl";
 import Gifts from "./Gifts";
 import { useState } from "react";
+import Confirm from "./Confirm";
 
 export default function Main() {
   const [splide, setSplide] = useState(0);
@@ -38,7 +39,7 @@ export default function Main() {
         }}
       >
         <SplideSlide>
-          <Header splide={splide}/>
+          <Header splide={splide} />
         </SplideSlide>
         <SplideSlide>
           <Presentation />
@@ -51,6 +52,9 @@ export default function Main() {
         </SplideSlide>
         <SplideSlide>
           <Gifts />
+        </SplideSlide>
+        <SplideSlide>
+          <Confirm />
         </SplideSlide>
       </Splide>
       <AudioControl />
