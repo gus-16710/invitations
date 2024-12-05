@@ -11,9 +11,9 @@ export default function Confirm() {
         variants={header.animation1}
         initial="hidden"
         whileInView="visible"
-        style={{ color: "#513704" }}
+        style={{ color: "#513704", lineHeight: "60px" }}
       >
-        Confirma tu <br /> Asistencia
+        Confirma Tu <br /> Asistencia
       </motion.h2>
 
       <motion.p
@@ -23,9 +23,8 @@ export default function Confirm() {
         whileInView="visible"
         style={{ color: "#a57d35" }}
       >
-        Te espero este dia que será mágico, único e inolvidable, y sólo estará
-        completa si estás tú. ¿Me vas acompañar?. Por favor confirma tu
-        asistencia.
+        Te espero este día que será mágico, único e inolvidable, y sólo estará
+        completa si estás tú. Por favor confirma tu asistencia.
       </motion.p>
 
       <motion.button
