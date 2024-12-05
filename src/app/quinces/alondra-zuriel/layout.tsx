@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     description:
       "Mis 15 primaveras han llegado y lo que más me llena de emoción es pasarlo con risas a tu lado.",
     images: [
-      `https://invitaciones.unaideamas.com/img/quinces/alondra/alondra.jpg`,
+      `https://invitaciones.unaideamas.com/img/quinces/alondra/alondra-zuriel.jpg`,
     ],
   },
   icons: {

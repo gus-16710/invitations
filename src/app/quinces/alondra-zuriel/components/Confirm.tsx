@@ -24,7 +24,7 @@ export default function Confirm() {
         style={{ color: "#a57d35" }}
       >
         Te espero este día que será mágico, único e inolvidable, y sólo estará
-        completa si estás tú. Por favor confirma tu asistencia.
+        completo si estás tú. Por favor confirma tu asistencia.
       </motion.p>
 
       <motion.button
