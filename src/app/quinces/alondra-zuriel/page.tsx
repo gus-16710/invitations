@@ -14,8 +14,30 @@ import {
 } from "@nextui-org/react";
 
 import "./styles.css";
-import { league, playFair } from "./components/Fonts";
+import { league, playFair, quickSand } from "./components/Fonts";
 import { great } from "../camila/components/Fonts";
+
+const list = {
+  visible: {
+    opacity: 1,
+    transition: {
+      when: "beforeChildren",
+      staggerChildren: 0.3,
+      delay: 1,
+    },
+  },
+  hidden: {
+    opacity: 0,
+    transition: {
+      when: "afterChildren",
+    },
+  },
+};
+
+const item = {
+  visible: { opacity: 1, y: 0, scale: 1 },
+  hidden: { opacity: 0, y: 100, scale: 0 },
+};
 
 const ModalOpening = ({
   isOpen,
@@ -26,6 +48,8 @@ const ModalOpening = ({
   onOpenChange: () => void;
   setOpen: Dispatch<SetStateAction<boolean>>;
 }) => {
+  const text = "Alondra Zuriel";
+
   return (
     <Modal
       isOpen={isOpen}
@@ -36,36 +60,87 @@ const ModalOpening = ({
       isDismissable={false}
       hideCloseButton={true}
     >
-      <ModalContent className="bg-[url('/img/quinces/alondra/modal-background.jpg')] bg-cover bg-center" style={{backgroundColor: "#740403", "color": "#ffff", }}>
+      <ModalContent
+        className="bg-[url('/img/quinces/alondra/modal-background.jpg')] bg-cover bg-center"
+        style={{ backgroundColor: "#740403", color: "#ffff" }}
+      >
         {(onClose) => (
           <>
-            <ModalHeader className="flex flex-col gap-1">
-              <motion.h1
-                className={`${league.className} text-2xl flex items-center justify-center z-20 font-thin`}
-              >
-                MIS <span className={`${great.className} text-5xl px-4`}>XV</span> AÑOS
-              </motion.h1>
-            </ModalHeader>
+            <ModalHeader className="flex flex-col gap-1"></ModalHeader>
             <ModalBody className="flex justify-center items-center">
+              <p className="text-zinc-300 flex items-center z-20">
+                <motion.label
+                  className={`text-2xl ${quickSand.className}`}
+                  variants={{
+                    hidden: { x: 100, opacity: 0 },
+                    visible: {
+                      x: 0,
+                      opacity: 1,
+                      transition: { duration: 1, delay: 1 },
+                    },
+                  }}
+                  initial="hidden"
+                  whileInView="visible"
+                >
+                  MIS
+                </motion.label>
+                <motion.label
+                  className={`text-6xl ${great.className}`}
+                  variants={{
+                    hidden: { x: -100, opacity: 0 },
+                    visible: {
+                      x: 0,
+                      opacity: 1,
+                      transition: { duration: 1, delay: 1 },
+                    },
+                  }}
+                  initial="hidden"
+                  whileInView="visible"
+                >
+                  XV
+                </motion.label>
+              </p>
               <motion.p
-                className={`flex text-center text-8xl z-20 text-golden p-5`}
+                className={`text-center text-8xl z-20 text-golden p-5`}
                 style={{ fontFamily: "candlescript" }}
+                variants={{
+                  hidden: { y: 100, opacity: 0 },
+                  visible: {
+                    y: 0,
+                    opacity: 1,
+                    transition: { duration: 1, delay: 2 },
+                  },
+                }}
+                initial="hidden"
+                animate="visible"
               >
                 Alondra Zuriel
               </motion.p>
             </ModalBody>
             <ModalFooter className="flex justify-center">
-              <Button
-                color="default"
-                variant="faded"
-                onPress={() => {
-                  setOpen(true);
-                  onClose();
+              <motion.div
+                variants={{
+                  hidden: { opacity: 0 },
+                  visible: {
+                    opacity: 1,
+                    transition: { duration: 1, delay: 3 },
+                  },
                 }}
-                style={{ color: "#6f0603"}}
+                initial="hidden"
+                animate="visible"
               >
-                Abrir Invitación
-              </Button>
+                <Button
+                  color="default"
+                  variant="faded"
+                  onPress={() => {
+                    setOpen(true);
+                    onClose();
+                  }}
+                  style={{ color: "#6f0603" }}
+                >
+                  Abrir Invitación
+                </Button>
+              </motion.div>
             </ModalFooter>
           </>
         )}

@@ -64,8 +64,6 @@ const ModalOpening = ({
 }) => {
   const text = "Sayuri";
 
- 
-
   return (
     <Modal
       isOpen={isOpen}

@@ -3,6 +3,7 @@ import {
   League_Spartan,
   Old_Standard_TT,
   Playfair_Display,
+  Quicksand,
   Titillium_Web,
 } from "next/font/google";
 
@@ -24,6 +25,11 @@ export const standard = Old_Standard_TT({
 export const vibes = Great_Vibes({
   subsets: ["latin"],
   weight: ["400"],
+});
+
+export const quickSand = Quicksand({
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
 });
 
 export const titillium = Titillium_Web({ subsets: ["latin"], weight: "400" });
