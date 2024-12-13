@@ -17,6 +17,7 @@ function Header() {
       </video>
 
       <div className="absolute top-0 left-0 w-full h-full z-5 bg-gradient-to-t from-blue-600/40 to-transparent"></div>
+
       <svg
         xmlns="http://www.w3.org/2000/svg"
         id="svg2"
@@ -54,24 +55,38 @@ function Header() {
       </svg>
 
       <p className={`${glass.className} text-xl text-zinc-300 z-10`}>
-        ACOMPAÑANOS A SER PARTE DE LOS
+        ACOMPAÑAME ESTE DÍA TAN ESPECIAL
       </p>
       <p className={`${big.className} text-5xl text-metallic mt-2 z-10`}>
-        ~ XV AÑOS ~
+        ~ MIS XV AÑOS ~
       </p>
-      <p className={`${glass.className} text-xl text-zinc-300 mt-2 z-10`}>
+      {/* <p className={`${glass.className} text-xl text-zinc-300 mt-2 z-10`}>
         DE NUESTRA HIJA
-      </p>
+      </p> */}
 
       <h1
-        className={`${mea.className} text-8xl text-silver font-extrabold text-center pt-10 pb-5 z-10 px-5`}
+        className={`${mea.className} text-8xl text-silver font-extrabold text-center my-10 z-10 px-5`}
       >
         Camila
-      </h1>
+      </h1>     
 
-      <p className={`${big.className} text-5xl mb-10 z-10 mt-5 text-metallic pb-5`}>
-        14.DICIEMBRE.2025
-      </p>
+      <div className="flex items-center justify-center flex-col mb-2 text-zinc-300 z-10">
+        <label className={`${glass.className} pb-4 text-xl`}>DICIEMBRE</label>
+        <div className="flex items-center">
+          <label className={`${glass.className} p-4 w-20 text-center text-2xl`}>
+            SÁB
+          </label>
+          <label
+            className={`${big.className} py-2 px-6 border-l-2 border-r-2 border-zinc-300/60 text-7xl text-metallic`}
+          >
+            26
+          </label>
+          <label className={`${glass.className} p-4 w-20 text-center text-2xl`}>
+            13HRS
+          </label>
+        </div>
+        <label className={`${glass.className} text-xl`}>2024</label>
+      </div>
 
       <div className="absolute -bottom-1 w-full">
         <svg
