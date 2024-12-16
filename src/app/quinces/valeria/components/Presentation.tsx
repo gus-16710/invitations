@@ -3,7 +3,7 @@ import { big, glass, mea, mystery } from "./Fonts";
 
 function Presentation() {
   return (
-    <section className="h-screen flex flex-col items-center justify-center bg-[url('/img/quinces/blank/white-bg2.jpg')] bg-center bg-cover">
+    <section className="h-screen flex flex-col items-center justify-center bg-[url('/img/quinces/blank/white-bg.jpg')] bg-center bg-cover">
       <p className={`${mea.className} text-5xl mb-5 text-sky-800`}>
         Mis Padres
       </p>

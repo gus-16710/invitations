@@ -4,7 +4,7 @@ import { FaPhoneAlt, FaWhatsapp } from "react-icons/fa";
 
 function Confirm() {
   return (
-    <section className="h-screen flex flex-col items-center justify-center bg-[url('/img/quinces/blank/white-bg2.jpg')] bg-center bg-cover">
+    <section className="h-screen flex flex-col items-center justify-center bg-[url('/img/quinces/blank/white-bg.jpg')] bg-center bg-cover">
       <h1 className={`${mea.className} text-5xl text-sky-800 text-center`}>
         Asistencia
       </h1>

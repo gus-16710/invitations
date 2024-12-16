@@ -74,7 +74,7 @@ const ModalMap = ({
 
 function Location() {
   const itemClasses = {
-    title: `${mea.className} text-5xl text-center text-sky-800`,
+    title: `${mea.className} text-5xl text-center text-sky-800`,    
   };
 
   const [selectedKeys, setSelectedKeys] = useState<Set<string>>(new Set(["1"]));
@@ -87,10 +87,9 @@ function Location() {
   const [map, setMap] = useState("");
 
   return (
-    <section className="h-screen flex flex-col items-center justify-center bg-[url('/img/quinces/blank/white-bg2.jpg')] bg-center bg-cover">
-      <div className="w-80 mt-5">
-        <Accordion
-          //defaultExpandedKeys={["1"]}
+    <section className="h-screen flex flex-col items-center justify-center bg-[url('/img/quinces/blank/white-bg.jpg')] bg-center bg-cover">
+      <div className="mt-5 w-80">
+        <Accordion          
           itemClasses={itemClasses}
           variant="splitted"
           selectedKeys={selectedKeys}
