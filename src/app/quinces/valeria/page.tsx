@@ -46,7 +46,7 @@ const OpeningModal = ({
             <ModalHeader className="flex flex-col gap-1"></ModalHeader>
             <ModalBody className="relative overflow-clip">
               <h1
-                className={`${mea.className} text-7xl text-silver font-extrabold text-center mt-5`}
+                className={`${mea.className} text-7xl text-silver font-extrabold text-center pt-5`}
               >
                 Valeria
               </h1>
