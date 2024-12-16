@@ -9,6 +9,7 @@ import {
   Mystery_Quest,
   Macondo_Swash_Caps,
   Loved_by_the_King,
+  Luxurious_Roman,
 } from "next/font/google";
 
 export const mea = Mea_Culpa({ subsets: ["latin"], weight: ["400"] });
@@ -28,6 +29,10 @@ export const macondo = Macondo_Swash_Caps({
   weight: ["400"],
 });
 export const loved = Loved_by_the_King({
+  subsets: ["latin"],
+  weight: ["400"],
+});
+export const luxurious = Luxurious_Roman({
   subsets: ["latin"],
   weight: ["400"],
 });

@@ -60,14 +60,14 @@ function Header() {
       <p className={`${big.className} text-5xl text-metallic mt-2 z-10`}>
         ~ MIS XV AÑOS ~
       </p>
-      {/* <p className={`${glass.className} text-xl text-zinc-300 mt-2 z-10`}>
-        DE NUESTRA HIJA
-      </p> */}
+      <p className={`${glass.className} text-xl text-zinc-300 mt-2 z-10`}>
+        BRINDEMOS Y BAILEMOS JUNTOS
+      </p>
 
       <h1
-        className={`${mea.className} text-8xl text-silver font-extrabold text-center my-10 z-10 px-5`}
+        className={`${mea.className} text-8xl text-silver font-extrabold text-center my-10 z-10 px-5 pt-1`}
       >
-        Camila
+        Valeria
       </h1>     
 
       <div className="flex items-center justify-center flex-col mb-2 text-zinc-300 z-10">
