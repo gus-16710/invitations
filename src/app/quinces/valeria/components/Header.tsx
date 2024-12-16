@@ -71,7 +71,7 @@ function Header() {
       </h1>     
 
       <div className="flex items-center justify-center flex-col mb-2 text-zinc-300 z-10">
-        <label className={`${glass.className} pb-4 text-xl`}>DICIEMBRE</label>
+        <label className={`${glass.className} pb-2 text-xl`}>ENERO</label>
         <div className="flex items-center">
           <label className={`${glass.className} p-4 w-20 text-center text-2xl`}>
             SÁB
@@ -79,13 +79,13 @@ function Header() {
           <label
             className={`${big.className} py-2 px-6 border-l-2 border-r-2 border-zinc-300/60 text-7xl text-metallic`}
           >
-            26
+            25
           </label>
           <label className={`${glass.className} p-4 w-20 text-center text-2xl`}>
-            13HRS
+            17HRS
           </label>
         </div>
-        <label className={`${glass.className} text-xl`}>2024</label>
+        <label className={`${glass.className} text-xl`}>2025</label>
       </div>
 
       <div className="absolute -bottom-1 w-full">

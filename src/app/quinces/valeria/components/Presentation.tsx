@@ -7,7 +7,7 @@ function Presentation() {
       <p className={`${mea.className} text-5xl mb-5 text-sky-800`}>
         Mis Padres
       </p>
-      <p className={`${glass.className} text-2xl text-zinc-700`}>
+      <p className={`${glass.className} text-2xl text-zinc-700 text-center`}>
         Emiliano Barradas Zavaleta <br />
         Teodora Falfan Ceballos
       </p>
@@ -21,7 +21,7 @@ function Presentation() {
       <p className={`${mea.className} text-5xl mb-5 text-sky-800`}>
         Mis Padrinos
       </p>
-      <p className={`${glass.className} text-2xl text-zinc-700`}>
+      <p className={`${glass.className} text-2xl text-zinc-700 text-center`}>
         Ricardo Alba Monfil <br />
         Deylhy Alba Peña
       </p>
