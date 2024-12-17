@@ -13,6 +13,7 @@ import { useState } from "react";
 import { LuMapPin } from "react-icons/lu";
 import { motion } from "framer-motion";
 import { header } from "./Animations";
+import NumberFlow from "@number-flow/react";
 
 const MapReception = () => (
   <iframe
@@ -86,6 +87,9 @@ function Location() {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
   const [map, setMap] = useState("");
 
+  const [ceremony, setCeremony] = useState(0);
+  const [reception, setReception] = useState(0);
+
   return (
     <section className="h-screen flex flex-col items-center justify-center bg-[url('/img/quinces/blank/white-bg.jpg')] bg-center bg-cover overflow-clip">
       <motion.div
@@ -93,6 +97,14 @@ function Location() {
         variants={header.animation1}
         initial="hidden"
         whileInView="visible"
+        onViewportEnter={() => {
+          setCeremony(17);
+          setReception(19);
+        }}
+        onViewportLeave={() => {
+          setCeremony(0);
+          setReception(0);
+        }}
       >
         <Accordion
           itemClasses={itemClasses}
@@ -150,9 +162,16 @@ function Location() {
           >
             <div className="flex justify-center items-center flex-col text-zinc-700">
               <span
-                className={`${gran.className} mb-8 mt-4 text-5xl bg-gray-200/50 font-medium me-2 px-2.5 py-0.5 rounded dark:bg-indigo-900 dark:text-indigo-300 flex items-center justify-center gap-1`}
+                className={`${gran.className} mb-4 mt-2 text-5xl bg-gray-200/50 font-medium me-2 px-2.5 py-0.5 rounded dark:bg-indigo-900 dark:text-indigo-300 flex items-center justify-center gap-1`}
               >
-                17:00 Hrs
+                <NumberFlow
+                  value={ceremony}
+                  transformTiming={{
+                    duration: 3000,
+                  }}
+                  trend={0}
+                />
+                :00 Hrs
               </span>
               <h2 className={`${glass.className} text-center text-2xl`}>
                 Santuario De San José
@@ -187,9 +206,16 @@ function Location() {
           >
             <div className="flex justify-center items-center flex-col text-zinc-700">
               <span
-                className={`${gran.className} mb-8 mt-4 text-5xl bg-gray-200/50 font-medium me-2 px-2.5 py-0.5 rounded dark:bg-indigo-900 dark:text-indigo-300 flex items-center justify-center gap-1`}
+                className={`${gran.className} mb-4 mt-2 text-5xl bg-gray-200/50 font-medium me-2 px-2.5 py-0.5 rounded dark:bg-indigo-900 dark:text-indigo-300 flex items-center justify-center gap-1`}
               >
-                19:00 Hrs
+                <NumberFlow
+                  value={reception}
+                  transformTiming={{
+                    duration: 3000,
+                  }}
+                  trend={0}
+                />
+                :00 Hrs
               </span>
               <h2 className={`${glass.className} text-center text-2xl`}>
                 Salón de Eventos Los Acosta

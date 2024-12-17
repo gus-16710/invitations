@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import { big, glass, mea } from "./Fonts";
 import { Spinner } from "@nextui-org/react";
-import { motion, useAnimate } from "framer-motion";
+import { motion } from "framer-motion";
 import { header } from "./Animations";
+import NumberFlow from "@number-flow/react";
 
 export function formatNumber(number: number) {
   return number < 10 ? `0${number}` : number;
@@ -48,43 +49,6 @@ function Header() {
   useEffect(() => {
     countDownClock();
   }, []);
-
-  const [scopeSeconds, animateSeconds] = useAnimate();
-  const [scopeMinutes, animateMinutes] = useAnimate();
-  const [scopeHours, animateHours] = useAnimate();
-  const [scopeDays, animateDays] = useAnimate();
-
-  useEffect(() => {
-    animateSeconds(
-      scopeSeconds.current,
-      { y: [20, 0], opacity: [0, 1] },
-      { ease: "easeInOut", type: "keyframes" }
-    );
-  }, [seconds, animateSeconds]);
-
-  useEffect(() => {
-    animateMinutes(
-      scopeMinutes.current,
-      { y: [20, 0], opacity: [0, 1] },
-      { ease: "easeInOut", type: "keyframes" }
-    );
-  }, [minutes, animateSeconds]);
-
-  useEffect(() => {
-    animateHours(
-      scopeHours.current,
-      { y: [20, 0], opacity: [0, 1] },
-      { ease: "easeInOut", type: "keyframes" }
-    );
-  }, [hours, animateHours]);
-
-  useEffect(() => {
-    animateDays(
-      scopeDays.current,
-      { y: [20, 0], opacity: [0, 1] },
-      { ease: "easeInOut", type: "keyframes" }
-    );
-  }, [days, animateDays]);
 
   return (
     <section className="h-screen flex flex-col items-center justify-center bg-gradient-to-r from-[#12011c] to-[#0c2768] bg-center bg-cover bg-fixed relative overflow-clip">
@@ -162,30 +126,50 @@ function Header() {
         whileInView="visible"
       >
         <div className="text-center m-0">
-          <div className="my-0 mx-3 p-2 text-3xl" ref={scopeDays}>
-            {formatNumber(days)}
+          <div className="my-0 mx-3 p-2 text-3xl">
+            <NumberFlow
+              trend={-1}
+              value={days}
+              digits={{ 1: { max: 5 } }}
+              format={{ minimumIntegerDigits: 2 }}
+            />            
           </div>
           <div className="my-0 mx-3 text-center text-xl text-metallic">
             Días
           </div>
         </div>
         <div className="text-center m-0">
-          <div className="my-0 mx-3 p-2 text-3xl" ref={scopeHours}>
-            {formatNumber(hours)}
+          <div className="my-0 mx-3 p-2 text-3xl">
+            <NumberFlow
+              trend={-1}
+              value={hours}
+              digits={{ 1: { max: 5 } }}
+              format={{ minimumIntegerDigits: 2 }}
+            />            
           </div>
           <div className="my-0 mx-3 text-center text-xl text-metallic">
             Horas
           </div>
         </div>
         <div className="text-center m-0">
-          <div className="my-0 mx-3 p-2 text-3xl" ref={scopeMinutes}>
-            {formatNumber(minutes)}
+          <div className="my-0 mx-3 p-2 text-3xl">
+            <NumberFlow
+              trend={-1}
+              value={minutes}
+              digits={{ 1: { max: 5 } }}
+              format={{ minimumIntegerDigits: 2 }}
+            />            
           </div>
           <div className="my-0 mx-3 text-center text-xl text-metallic">Min</div>
         </div>
         <div className="text-center m-0">
-          <div className="my-0 mx-3 p-2 text-3xl" ref={scopeSeconds}>
-            {formatNumber(seconds)}
+          <div className="my-0 mx-3 p-2 text-3xl">
+            <NumberFlow
+              trend={-1}
+              value={seconds}
+              digits={{ 1: { max: 5 } }}
+              format={{ minimumIntegerDigits: 2 }}
+            />            
           </div>
           <div className="my-0 mx-3 text-center text-xl text-metallic">Seg</div>
         </div>
