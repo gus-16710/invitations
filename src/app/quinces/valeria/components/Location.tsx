@@ -107,7 +107,7 @@ function Location() {
           >
             <div className="flex justify-center items-center flex-col text-zinc-700">
               <span
-                className={`${gran.className} mb-8 mt-4 text-4xl bg-gray-200/50 font-medium me-2 px-2.5 py-0.5 rounded dark:bg-indigo-900 dark:text-indigo-300 flex items-center justify-center gap-1`}
+                className={`${gran.className} mb-8 mt-4 text-5xl bg-gray-200/50 font-medium me-2 px-2.5 py-0.5 rounded dark:bg-indigo-900 dark:text-indigo-300 flex items-center justify-center gap-1`}
               >
                 17:00 Hrs
               </span>
@@ -143,7 +143,7 @@ function Location() {
           >
             <div className="flex justify-center items-center flex-col text-zinc-700">
               <span
-                className={`${gran.className} mb-8 mt-4 text-4xl bg-gray-200/50 font-medium me-2 px-2.5 py-0.5 rounded dark:bg-indigo-900 dark:text-indigo-300 flex items-center justify-center gap-1`}
+                className={`${gran.className} mb-8 mt-4 text-5xl bg-gray-200/50 font-medium me-2 px-2.5 py-0.5 rounded dark:bg-indigo-900 dark:text-indigo-300 flex items-center justify-center gap-1`}
               >
                 19:00 Hrs
               </span>

@@ -10,6 +10,7 @@ import {
   Macondo_Swash_Caps,
   Loved_by_the_King,
   Luxurious_Roman,
+  Great_Vibes,
 } from "next/font/google";
 
 export const mea = Mea_Culpa({ subsets: ["latin"], weight: ["400"] });
@@ -33,6 +34,10 @@ export const loved = Loved_by_the_King({
   weight: ["400"],
 });
 export const luxurious = Luxurious_Roman({
+  subsets: ["latin"],
+  weight: ["400"],
+});
+export const vibes = Great_Vibes({
   subsets: ["latin"],
   weight: ["400"],
 });

@@ -28,7 +28,7 @@
 
 .text-silver {
   background-image: linear-gradient(
-    to right,
+    to top,
     #4b4b4b 0%,   /* Gris oscuro */
     #b0b0b0 20%,  /* Gris medio */
     #e6e6e6 45%,  /* Gris claro */
