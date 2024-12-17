@@ -149,9 +149,10 @@ function Header() {
             25
           </label>
           <label className={`${glass.className} p-4 w-20 text-center text-2xl`}>
-            2025
+            17HRS
           </label>
         </div>
+        <label className={`${glass.className} text-xl`}>2025</label>
       </motion.div>
 
       <motion.div
