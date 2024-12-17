@@ -1,8 +1,8 @@
-import { useCallback, useEffect, useRef, useState } from "react";
-import { big, glass, loved, macondo, mea, mystery, vibes, zen } from "./Fonts";
+import { useEffect, useState } from "react";
+import { big, glass, mea } from "./Fonts";
 import { Spinner } from "@nextui-org/react";
 import { motion, useAnimate } from "framer-motion";
-import ReactCanvasConfetti from "react-canvas-confetti";
+import { header } from "./Animations";
 
 export function formatNumber(number: number) {
   return number < 10 ? `0${number}` : number;
@@ -105,21 +105,39 @@ function Header() {
       <div className="absolute top-0 left-0 w-full h-full z-5 bg-gradient-to-t from-blue-600/40 to-transparent"></div>
 
       {loading && <Spinner className="absolute" size="lg" />}
-   
-      <p className={`${glass.className} text-xl text-zinc-300 z-10`}>
-        ACOMPAÑAME ESTE DÍA TAN ESPECIAL
-      </p>
-      <p className={`${big.className} text-5xl text-metallic mt-2 z-10`}>
-        ~ MIS XV AÑOS ~
-      </p>     
 
-      <h1
+      <motion.p
+        className={`${glass.className} text-xl text-zinc-300 z-10`}
+        variants={header.animation1}
+        initial="hidden"
+        whileInView="visible"
+      >
+        ACOMPAÑAME ESTE DÍA TAN ESPECIAL
+      </motion.p>
+      <motion.p
+        className={`${big.className} text-5xl text-metallic mt-2 z-10`}
+        variants={header.animation2}
+        initial="hidden"
+        whileInView="visible"
+      >
+        ~ MIS XV AÑOS ~
+      </motion.p>
+
+      <motion.h1
         className={`${mea.className} text-9xl text-silver font-extrabold text-center z-10 pt-12 mb-10`}
+        variants={header.animation3}
+        initial="hidden"
+        whileInView="visible"
       >
         Valeria
-      </h1>
+      </motion.h1>
 
-      <div className="flex items-center justify-center flex-col mb-2 text-zinc-300 z-10">
+      <motion.div
+        className="flex items-center justify-center flex-col mb-2 text-zinc-300 z-10"
+        variants={header.animation4}
+        initial="hidden"
+        whileInView="visible"
+      >
         <label className={`${glass.className} pb-2 text-xl`}>ENERO</label>
         <div className="flex items-center">
           <label className={`${glass.className} p-4 w-20 text-center text-2xl`}>
@@ -133,23 +151,30 @@ function Header() {
           <label className={`${glass.className} p-4 w-20 text-center text-2xl`}>
             2025
           </label>
-        </div>        
-      </div>
+        </div>
+      </motion.div>
 
-      <div
+      <motion.div
         className={`${glass.className} mb-3 pb-3 text-zinc-300 custom-shadow flex items-center justify-center mt-3 z-10`}
+        variants={header.animation5}
+        initial="hidden"
+        whileInView="visible"
       >
         <div className="text-center m-0">
           <div className="my-0 mx-3 p-2 text-3xl" ref={scopeDays}>
             {formatNumber(days)}
           </div>
-          <div className="my-0 mx-3 text-center text-xl text-metallic">Días</div>
+          <div className="my-0 mx-3 text-center text-xl text-metallic">
+            Días
+          </div>
         </div>
         <div className="text-center m-0">
           <div className="my-0 mx-3 p-2 text-3xl" ref={scopeHours}>
             {formatNumber(hours)}
           </div>
-          <div className="my-0 mx-3 text-center text-xl text-metallic">Horas</div>
+          <div className="my-0 mx-3 text-center text-xl text-metallic">
+            Horas
+          </div>
         </div>
         <div className="text-center m-0">
           <div className="my-0 mx-3 p-2 text-3xl" ref={scopeMinutes}>
@@ -163,7 +188,7 @@ function Header() {
           </div>
           <div className="my-0 mx-3 text-center text-xl text-metallic">Seg</div>
         </div>
-      </div>
+      </motion.div>
 
       <div className="absolute -bottom-1 w-full">
         <svg
@@ -185,8 +210,6 @@ function Header() {
           <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"></path>
         </svg>
       </div>
-
-      
     </section>
   );
 }
