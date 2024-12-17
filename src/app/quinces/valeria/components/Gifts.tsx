@@ -1,8 +1,10 @@
 import React from "react";
 import { luxurious, mea } from "./Fonts";
-import { Chip } from "@nextui-org/react";
+import { Avatar, Chip } from "@nextui-org/react";
 
 function Gifts() {
+  const openLink = (link: string) => window.open(link, "_blank");
+
   return (
     <section className="h-screen flex flex-col items-center justify-center bg-[url('/img/quinces/blank/white-bg.jpg')] bg-center bg-cover">
       <h1 className={`${mea.className} text-5xl text-sky-800`}>
@@ -17,7 +19,15 @@ function Gifts() {
         regalos de Liverpool:
       </p>
 
-      <Chip color="danger">N° del Evento 51578705</Chip>
+      <Avatar
+        src="/img/quinces/blank/liverpool-logo.png"
+        isBordered        
+        className="my-5"
+        size="lg"
+        onClick={() => openLink("https://mesaderegalos.liverpool.com.mx/milistaderegalos/51578705")}
+      />
+
+      <Chip color="danger" className="mt-5">N° del Evento 51578705</Chip>
     </section>
   );
 }
