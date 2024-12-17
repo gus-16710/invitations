@@ -87,7 +87,7 @@ function Location() {
   const [map, setMap] = useState("");
 
   return (
-    <section className="h-screen flex flex-col items-center justify-center bg-[url('/img/quinces/blank/white-bg.jpg')] bg-center bg-cover">
+    <section className="h-screen flex flex-col items-center justify-center bg-[url('/img/quinces/blank/white-bg.jpg')] bg-center bg-cover overflow-clip">
       <motion.div
         className="mt-5 w-80"
         variants={header.animation1}

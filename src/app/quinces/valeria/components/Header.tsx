@@ -87,7 +87,7 @@ function Header() {
   }, [days, animateDays]);
 
   return (
-    <section className="h-screen flex flex-col items-center justify-center bg-gradient-to-r from-[#12011c] to-[#0c2768] bg-center bg-cover bg-fixed relative">
+    <section className="h-screen flex flex-col items-center justify-center bg-gradient-to-r from-[#12011c] to-[#0c2768] bg-center bg-cover bg-fixed relative overflow-clip">
       <video
         autoPlay
         loop

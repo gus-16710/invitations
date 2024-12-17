@@ -2,16 +2,16 @@ import React from "react";
 import { luxurious, mea } from "./Fonts";
 import { Avatar, Chip } from "@nextui-org/react";
 import { motion } from "framer-motion";
-import { header } from "./Animations";
+import { header2 } from "./Animations";
 
 function Gifts() {
   const openLink = (link: string) => window.open(link, "_blank");
 
   return (
-    <section className="h-screen flex flex-col items-center justify-center bg-[url('/img/quinces/blank/white-bg.jpg')] bg-center bg-cover">
+    <section className="h-screen flex flex-col items-center justify-center bg-[url('/img/quinces/blank/white-bg.jpg')] bg-center bg-cover overflow-clip">
       <motion.h1
         className={`${mea.className} text-5xl text-sky-800`}
-        variants={header.animation1}
+        variants={header2.animation1}
         initial="hidden"
         whileInView="visible"
       >
@@ -20,7 +20,7 @@ function Gifts() {
 
       <motion.p
         className={`${luxurious.className} text-lg z-10 text-center mt-10 mb-5 text-zinc-700 max-w-md px-10`}
-        variants={header.animation2}
+        variants={header2.animation2}
         initial="hidden"
         whileInView="visible"
       >
@@ -30,7 +30,7 @@ function Gifts() {
       </motion.p>
 
       <motion.div
-        variants={header.animation3}
+        variants={header2.animation3}
         initial="hidden"
         whileInView="visible"
       >
@@ -48,7 +48,7 @@ function Gifts() {
       </motion.div>
 
       <motion.div
-        variants={header.animation4}
+        variants={header2.animation4}
         initial="hidden"
         whileInView="visible"
       >
