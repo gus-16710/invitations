@@ -24,7 +24,7 @@ function Confirm() {
       <button
         type="button"
         className="w-60 mt-10 text-gray-700 bg-white border border-gray-400 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 rounded-full me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700 font-medium text-sm px-5 py-2.5 text-center flex items-center justify-center"
-        onClick={() => {}}
+        onClick={() => window.open("https://wa.link/z97mc6", "_blank")}        
       >
         <FaWhatsapp className="mr-3 text-2xl" />
         Mensaje de Whatsapp
@@ -32,7 +32,7 @@ function Confirm() {
       <button
         type="button"
         className="w-60 mt-5 text-gray-700 bg-white border border-gray-400 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 rounded-full me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700 font-medium text-sm px-5 py-2.5 text-center flex items-center justify-center"
-        onClick={() => {}}
+        onClick={() => window.open("tel:2281320003", "_blank")}
       >
         <FaPhoneAlt className="mr-3 text-2xl" />
         Llamada Telefonica

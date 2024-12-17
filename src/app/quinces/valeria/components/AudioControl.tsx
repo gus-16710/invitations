@@ -29,7 +29,7 @@ export default function AudioControl() {
       </motion.button>
 
       <audio controls ref={audioPlayer} hidden loop>
-        <source src="/media/sanctuary.mp3" type="audio/mpeg" />
+        <source src="/media/mi_princesa_angel_melo.mp3" type="audio/mpeg" />
         Your browser does not support the audio element.
       </audio>
     </>
