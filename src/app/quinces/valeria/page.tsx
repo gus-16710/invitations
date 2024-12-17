@@ -38,7 +38,7 @@ const OpeningModal = ({
       backdrop="blur"
       isDismissable={false}
       hideCloseButton={true}
-      //className="rotate-6"
+      className="-rotate-6"
     >
       <ModalContent className="overflow-clip bg-gradient-to-b from-[#12011c] to-[#0c2768]">
         {(onClose) => (
