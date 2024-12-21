@@ -45,10 +45,10 @@ export default function Photography({ white = true }: { white?: boolean }) {
         }}
       >
         <SplideSlide>
-          <div className="flex h-full flex-col bg-[url('/img/quinces/blank/image-1.jpg')] bg-cover bg-center"></div>
+          <div className="flex h-full flex-col bg-[url('/img/quinces/blank/valeria01.jpg')] bg-cover bg-center"></div>
         </SplideSlide>
         <SplideSlide>
-          <div className="flex h-full flex-col bg-[url('/img/quinces/blank/image-2.jpg')] bg-cover bg-center"></div>
+          <div className="flex h-full flex-col bg-[url('/img/quinces/blank/valeria01.jpg')] bg-cover bg-center"></div>
         </SplideSlide>
         <></>
       </Splide>     

@@ -94,8 +94,9 @@ function Header() {
         whileInView="visible"
       >
         Valeria
+        
       </motion.h1>
-
+   
       <motion.div
         className="flex items-center justify-center flex-col mb-2 text-zinc-300 z-10"
         variants={header.animation4}
@@ -132,7 +133,7 @@ function Header() {
               value={days}
               digits={{ 1: { max: 5 } }}
               format={{ minimumIntegerDigits: 2 }}
-            />            
+            />
           </div>
           <div className="my-0 mx-3 text-center text-xl text-metallic">
             Días
@@ -145,7 +146,7 @@ function Header() {
               value={hours}
               digits={{ 1: { max: 5 } }}
               format={{ minimumIntegerDigits: 2 }}
-            />            
+            />
           </div>
           <div className="my-0 mx-3 text-center text-xl text-metallic">
             Horas
@@ -158,7 +159,7 @@ function Header() {
               value={minutes}
               digits={{ 1: { max: 5 } }}
               format={{ minimumIntegerDigits: 2 }}
-            />            
+            />
           </div>
           <div className="my-0 mx-3 text-center text-xl text-metallic">Min</div>
         </div>
@@ -169,7 +170,7 @@ function Header() {
               value={seconds}
               digits={{ 1: { max: 5 } }}
               format={{ minimumIntegerDigits: 2 }}
-            />            
+            />
           </div>
           <div className="my-0 mx-3 text-center text-xl text-metallic">Seg</div>
         </div>
