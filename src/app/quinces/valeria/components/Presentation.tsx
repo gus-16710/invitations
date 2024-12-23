@@ -5,8 +5,8 @@ import { header, header2 } from "./Animations";
 
 function Presentation() {
   return (
-    <div className="bg-[url('/img/quinces/blank/white-bg.jpg')] bg-center bg-fixed">
-      <section className="h-screen flex flex-col items-center justify-center overflow-clip">
+    <>
+      <section className="h-screen flex flex-col items-center justify-center overflow-clip bg-[url('/img/quinces/valeria/white-bg.jpg')] bg-center bg-cover">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           id="svg2"
@@ -77,10 +77,10 @@ function Presentation() {
           Deleitate en el señor, y él concederá los deseos de tu corazón 💗.
         </motion.p>
       </section>
-      <section className="h-screen flex flex-col items-center justify-center overflow-clip">
+      <section className="h-screen flex flex-col items-center justify-center overflow-clip bg-[url('/img/quinces/valeria/white-bg.jpg')] bg-center bg-cover">
         <motion.p
           className={`${mea.className} text-5xl mb-5 text-sky-800`}
-          variants={header2.animation1}
+          variants={header.animation1}
           initial="hidden"
           whileInView="visible"
         >
@@ -88,7 +88,7 @@ function Presentation() {
         </motion.p>
         <motion.p
           className={`${glass.className} text-2xl text-zinc-700 text-center`}
-          variants={header2.animation2}
+          variants={header.animation2}
           initial="hidden"
           whileInView="visible"
         >
@@ -98,7 +98,7 @@ function Presentation() {
 
         <motion.p
           className={`${mystery.className} text-4xl bg-sky-800 rounded-full w-12 h-12 m-10 text-zinc-100 flex justify-center items-center`}
-          variants={header2.animation3}
+          variants={header.animation3}
           initial="hidden"
           whileInView="visible"
         >
@@ -107,7 +107,7 @@ function Presentation() {
 
         <motion.p
           className={`${mea.className} text-5xl mb-5 text-sky-800`}
-          variants={header2.animation4}
+          variants={header.animation4}
           initial="hidden"
           whileInView="visible"
         >
@@ -115,7 +115,7 @@ function Presentation() {
         </motion.p>
         <motion.p
           className={`${glass.className} text-2xl text-zinc-700 text-center`}
-          variants={header2.animation5}
+          variants={header.animation5}
           initial="hidden"
           whileInView="visible"
         >
@@ -123,7 +123,7 @@ function Presentation() {
           Deylhy Alba Peña
         </motion.p>
       </section>
-    </div>
+    </>
   );
 }
 

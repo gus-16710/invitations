@@ -1,20 +1,18 @@
-import { delay } from "framer-motion";
-
 export const animation05 = {
   hidden: { scale: 2, opacity: 0 },
   visible: {
     scale: 1,
     opacity: 1,
-    transition: { duration: 3, delay: 3 },
+    transition: { duration: 3, delay: 2.5 },
   },
 };
 
 export const animation06 = {
-  hidden: { scale: 2, opacity: 0 },
+  hidden: { scale: 0, opacity: 0 },
   visible: {
     scale: 1,
     opacity: 1,
-    transition: { duration: 3, delay: 3 },
+    transition: { duration: 3, delay: 2.5 },
   },
 };
 
@@ -51,7 +49,7 @@ export const header = {
       transition: { delay: 1.5, duration: 2 },
     },
   },
-  animation5: {    
+  animation5: {
     hidden: { x: -100, opacity: 0 },
     visible: {
       opacity: 1,
@@ -94,7 +92,7 @@ export const header2 = {
       transition: { delay: 1.5, duration: 2 },
     },
   },
-  animation5: {    
+  animation5: {
     hidden: { x: 100, opacity: 0 },
     visible: {
       opacity: 1,

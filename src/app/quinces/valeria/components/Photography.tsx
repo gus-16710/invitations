@@ -1,11 +1,16 @@
-// @ts-ignore
-import { Splide, SplideSlide } from "@splidejs/react-splide";
-import "@splidejs/react-splide/css";
-
-export default function Photography({ white = true }: { white?: boolean }) {  
+export default function Photography({
+  urlImg,
+  white = true,
+}: {
+  urlImg: string;
+  white?: boolean;
+}) {
   return (
-    <section className={`relative`}>      
-      <div className="absolute -top-1 w-full z-10">
+    <section
+      className={`relative bg-center bg-cover bg-fixed h-96 sm:h-screen`}
+      style={{ backgroundImage: `url(${urlImg})` }}
+    >
+      <div className="absolute -top-1 w-full">
         <svg
           data-name="Layer 1"
           xmlns="http://www.w3.org/2000/svg"
@@ -26,33 +31,9 @@ export default function Photography({ white = true }: { white?: boolean }) {
           ></path>
           <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"></path>
         </svg>
-      </div>      
-      <Splide
-        aria-label="Diana & Ernesto"
-        options={{
-          autoplay: true,
-          rewind: true,
-          direction: "ltr",
-          height: "450px",
-          wheel: false,
-          releaseWheel: true,
-          type: "loop",
-          waitForTransition: true,
-          arrows: false,          
-          classes: {
-            page: "splide__pagination__page custom-class-page", // each button
-          },
-        }}
-      >
-        <SplideSlide>
-          <div className="flex h-full flex-col bg-[url('/img/quinces/blank/valeria01.jpg')] bg-cover bg-center"></div>
-        </SplideSlide>
-        <SplideSlide>
-          <div className="flex h-full flex-col bg-[url('/img/quinces/blank/valeria01.jpg')] bg-cover bg-center"></div>
-        </SplideSlide>
-        <></>
-      </Splide>     
-      <div className="absolute -bottom-1 w-full z-10">
+      </div>
+
+      <div className="absolute -bottom-1 w-full">
         <svg
           data-name="Layer 1"
           xmlns="http://www.w3.org/2000/svg"
@@ -74,7 +55,7 @@ export default function Photography({ white = true }: { white?: boolean }) {
           ></path>
           <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"></path>
         </svg>
-      </div>      
+      </div>
     </section>
   );
 }

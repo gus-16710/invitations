@@ -8,7 +8,7 @@ function Gifts() {
   const openLink = (link: string) => window.open(link, "_blank");
 
   return (
-    <section className="h-screen flex flex-col items-center justify-center bg-[url('/img/quinces/blank/white-bg.jpg')] bg-center bg-cover overflow-clip">
+    <section className="h-screen flex flex-col items-center justify-center bg-[url('/img/quinces/valeria/white-bg.jpg')] bg-center bg-cover overflow-clip">
       <motion.h1
         className={`${mea.className} text-5xl text-sky-800`}
         variants={header2.animation1}
@@ -35,7 +35,7 @@ function Gifts() {
         whileInView="visible"
       >
         <Avatar
-          src="/img/quinces/blank/liverpool-logo.png"
+          src="/img/quinces/valeria/liverpool-logo.png"
           isBordered
           className="my-5"
           size="lg"

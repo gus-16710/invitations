@@ -60,7 +60,7 @@ function Header() {
         onLoadedData={() => setLoading(false)}
       >
         <source
-          src="/img/quinces/blank/205775-927765405_small.mp4"
+          src="/img/quinces/valeria/205775-927765405_small.mp4"
           type="video/mp4"
         />
         Tu navegador no soporta videos HTML5.
