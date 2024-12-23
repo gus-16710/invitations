@@ -7,7 +7,7 @@ export default function Photography({
 }) {
   return (
     <section
-      className={`relative bg-center bg-cover bg-fixed h-96 sm:h-screen`}
+      className={`relative bg-center bg-cover bg-fixed h-screen`}
       style={{ backgroundImage: `url(${urlImg})` }}
     >
       <div className="absolute -top-1 w-full">
