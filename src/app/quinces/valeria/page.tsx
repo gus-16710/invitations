@@ -142,13 +142,16 @@ export default function Fifteen() {
       {open && (
         <div className="max-w-3xl m-auto shadow-large bg-white text-zinc-900">
           <Header />
-          <Photography urlImg={"/img/quinces/valeria/valeria01.jpg"} />          
-          <Presentation />          
+          <Photography urlImg={"/img/quinces/valeria/valeria01.jpg"} />  
+          <div className="relative">
+          <Presentation />                            
           <Location />
           <Gifts />
           <Confirm />
           <AudioControl />
           <FloatinButton />
+          <div className="bg-[url('/img/quinces/valeria/blue-stars.png')] bg-contain bg-center h-full top-0 absolute w-full z-10 opacity-50" />
+          </div>         
         </div>
       )}
       <OpeningModal

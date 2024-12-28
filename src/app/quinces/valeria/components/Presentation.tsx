@@ -6,7 +6,7 @@ import { header, header2 } from "./Animations";
 function Presentation() {
   return (
     <>
-      <section className="h-screen flex flex-col items-center justify-center overflow-clip bg-gradient-to-t from-blue-950 via-blue-900 to-blue-950">        
+      <section className="h-screen flex flex-col items-center justify-center overflow-clip bg-gradient-to-t from-blue-950 via-blue-900 to-blue-950 relative">        
         <svg
           xmlns="http://www.w3.org/2000/svg"
           id="svg2"
@@ -16,7 +16,7 @@ function Presentation() {
           clipRule="evenodd"
           viewBox="0 0 36063.31 6639.3385"
           fill="#b0b0b0"
-          className="mb-5"
+          className="mb-5 z-20"
         >
           <defs>
             <linearGradient
@@ -43,7 +43,7 @@ function Presentation() {
           />
         </svg>
         <motion.p
-          className={`${luxurious.className} text-lg text-center my-2 text-zinc-300 max-w-md px-10`}
+          className={`${luxurious.className} text-lg text-center my-2 text-zinc-300 max-w-md px-10 z-20`}
           variants={header2.animation1}
           initial="hidden"
           whileInView="visible"
@@ -51,7 +51,7 @@ function Presentation() {
           Hoy hace quince años mis padres daban gracias a Dios por mi.
         </motion.p>
         <motion.p
-          className={`${luxurious.className} text-lg text-center my-2 text-zinc-300 max-w-md px-10`}
+          className={`${luxurious.className} text-lg text-center my-2 text-zinc-300 max-w-md px-10 z-20`}
           variants={header2.animation2}
           initial="hidden"
           whileInView="visible"
@@ -60,7 +60,7 @@ function Presentation() {
           aconsejarme.
         </motion.p>
         <motion.p
-          className={`${luxurious.className} text-lg text-center my-2 text-zinc-300 max-w-md px-10`}
+          className={`${luxurious.className} text-lg text-center my-2 text-zinc-300 max-w-md px-10 z-20`}
           variants={header2.animation3}
           initial="hidden"
           whileInView="visible"
@@ -69,7 +69,7 @@ function Presentation() {
           A todos mis amigos por enseñarme el valor de una verdadera amistad.
         </motion.p>
         <motion.p
-          className={`${luxurious.className} text-lg text-center my-2 text-zinc-300 max-w-md px-10`}
+          className={`${luxurious.className} text-lg text-center my-2 text-zinc-300 max-w-md px-10 z-20`}
           variants={header2.animation4}
           initial="hidden"
           whileInView="visible"
@@ -77,9 +77,9 @@ function Presentation() {
           Deleitate en el señor, y él concederá los deseos de tu corazón 💗.
         </motion.p>
       </section>
-      <section className="h-screen flex flex-col items-center justify-center overflow-clip bg-gradient-to-t from-blue-950 via-blue-900 to-blue-950">     
+      <section className="h-screen flex flex-col items-center justify-center overflow-clip bg-gradient-to-t from-blue-950 via-blue-900 to-blue-950 relative">     
         <motion.p
-          className={`${mea.className} text-6xl text-metallic py-7`}
+          className={`${mea.className} text-6xl text-metallic py-7 z-20`}
           variants={header.animation1}
           initial="hidden"
           whileInView="visible"
@@ -87,7 +87,7 @@ function Presentation() {
           Mis Padres
         </motion.p>
         <motion.p
-          className={`${glass.className} text-2xl text-zinc-300 text-center mb-5`}
+          className={`${glass.className} text-2xl text-zinc-300 text-center mb-5 z-20`}
           variants={header.animation2}
           initial="hidden"
           whileInView="visible"
@@ -97,7 +97,7 @@ function Presentation() {
         </motion.p>
 
         <motion.p
-          className={`${mystery.className} text-4xl bg-white rounded-full w-12 h-12 my-5 text-sky-800 flex justify-center items-center`}
+          className={`${mystery.className} text-4xl bg-white rounded-full w-12 h-12 my-5 text-sky-600 flex justify-center items-center z-20`}
           variants={header.animation3}
           initial="hidden"
           whileInView="visible"
@@ -106,7 +106,7 @@ function Presentation() {
         </motion.p>
 
         <motion.p
-          className={`${mea.className} text-6xl py-7 text-metallic`}
+          className={`${mea.className} text-6xl py-7 text-metallic z-20`}
           variants={header.animation4}
           initial="hidden"
           whileInView="visible"
@@ -114,7 +114,7 @@ function Presentation() {
           Mis Padrinos
         </motion.p>
         <motion.p
-          className={`${glass.className} text-2xl text-zinc-300 text-center`}
+          className={`${glass.className} text-2xl text-zinc-300 text-center z-20`}
           variants={header.animation5}
           initial="hidden"
           whileInView="visible"

@@ -80,9 +80,9 @@ function Location() {
 
   return (
     <>
-      <section className="h-screen text-zinc-700 flex flex-col items-center justify-center overflow-clip bg-gradient-to-t from-blue-950 via-blue-900 to-blue-950">
+      <section className="h-screen text-zinc-700 flex flex-col items-center justify-center overflow-clip bg-gradient-to-t from-blue-950 via-blue-900 to-blue-950 relative">
         <motion.p
-          className={`${mea.className} text-6xl py-7 text-metallic`}
+          className={`${mea.className} text-6xl py-7 text-metallic z-20`}
           variants={header2.animation1}
           initial="hidden"
           whileInView="visible"
@@ -90,7 +90,7 @@ function Location() {
           Ceremonia
         </motion.p>
         <motion.span
-          className={`${gran.className} mb-10 text-5xl bg-zinc-100 text-sky-800 font-medium me-2 px-2.5 py-0.5 rounded  flex items-center justify-center gap-1`}
+          className={`${gran.className} mb-10 text-5xl bg-zinc-100 text-sky-800 font-medium me-2 px-2.5 py-0.5 rounded  flex items-center justify-center gap-1 z-20`}
           variants={header2.animation2}
           initial="hidden"
           whileInView="visible"
@@ -111,7 +111,7 @@ function Location() {
           :00 Hrs
         </motion.span>
         <motion.h2
-          className={`${glass.className} text-center text-3xl z-10 text-zinc-300`}
+          className={`${glass.className} text-center text-3xl text-zinc-300 z-20`}
           variants={header2.animation3}
           initial="hidden"
           whileInView="visible"
@@ -119,7 +119,7 @@ function Location() {
           Santuario De San José
         </motion.h2>
         <motion.p
-          className={`${luxurious.className}  mt-3 text-sm text-center text-zinc-300 mx-10`}
+          className={`${luxurious.className}  mt-3 text-sm text-center text-zinc-300 mx-10 z-20`}
           variants={header2.animation4}
           initial="hidden"
           whileInView="visible"
@@ -129,7 +129,7 @@ function Location() {
 
         <motion.button
           type="button"
-          className="mt-10 text-gray-900 bg-white border border-gray-400 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 rounded-full me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700 font-medium text-xs px-5 py-2.5 text-center flex items-center"
+          className="mt-10 text-gray-900 bg-white border border-gray-400 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 rounded-full me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700 font-medium text-xs px-5 py-2.5 text-center flex items-center z-20"
           variants={header2.animation5}
           initial="hidden"
           whileInView="visible"
@@ -143,9 +143,9 @@ function Location() {
         </motion.button>
       </section>
 
-      <section className="h-screen text-zinc-700 flex flex-col items-center justify-center overflow-clip bg-gradient-to-t from-blue-950 via-blue-900 to-blue-950">
+      <section className="h-screen text-zinc-700 flex flex-col items-center justify-center overflow-clip bg-gradient-to-t from-blue-950 via-blue-900 to-blue-950 relative">
         <motion.p
-          className={`${mea.className} text-6xl py-7 text-metallic`}
+          className={`${mea.className} text-6xl py-7 text-metallic z-20`}
           variants={header.animation1}
           initial="hidden"
           whileInView="visible"
@@ -153,7 +153,7 @@ function Location() {
           Recepción
         </motion.p>
         <motion.span
-          className={`${gran.className} mb-10 text-5xl bg-zinc-100 text-sky-800 font-medium me-2 px-2.5 py-0.5 rounded flex items-center justify-center gap-1`}
+          className={`${gran.className} mb-10 text-5xl bg-zinc-100 text-sky-800 font-medium me-2 px-2.5 py-0.5 rounded flex items-center justify-center gap-1 z-20`}
           variants={header.animation2}
           initial="hidden"
           whileInView="visible"
@@ -174,7 +174,7 @@ function Location() {
           :00 Hrs
         </motion.span>
         <motion.h2
-          className={`${glass.className} text-center text-3xl text-zinc-300`}
+          className={`${glass.className} text-center text-3xl text-zinc-300 z-20`}
           variants={header.animation3}
           initial="hidden"
           whileInView="visible"
@@ -182,7 +182,7 @@ function Location() {
           Salón de Eventos Los Acosta
         </motion.h2>
         <motion.p
-          className={`${luxurious.className} mt-3 text-sm text-center text-zinc-300 mx-10`}
+          className={`${luxurious.className} mt-3 text-sm text-center text-zinc-300 mx-10 z-20`}
           variants={header.animation4}
           initial="hidden"
           whileInView="visible"
@@ -191,7 +191,7 @@ function Location() {
         </motion.p>
         <motion.button
           type="button"
-          className="mt-10 text-gray-900 bg-white border border-gray-400 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 rounded-full me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700 font-medium text-xs px-5 py-2.5 text-center flex items-center z-10"
+          className="mt-10 text-gray-900 bg-white border border-gray-400 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 rounded-full me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700 font-medium text-xs px-5 py-2.5 text-center flex items-center z-20"
           variants={header.animation5}
           initial="hidden"
           whileInView="visible"

@@ -8,9 +8,9 @@ function Gifts() {
   const openLink = (link: string) => window.open(link, "_blank");
 
   return (
-    <section className="h-screen flex flex-col items-center justify-center overflow-clip bg-gradient-to-t from-blue-950 via-blue-900 to-blue-950">
+    <section className="h-screen flex flex-col items-center justify-center overflow-clip bg-gradient-to-t from-blue-950 via-blue-900 to-blue-950 relative">
       <motion.h1
-        className={`${mea.className} text-6xl text-metallic py-7`}
+        className={`${mea.className} text-6xl text-metallic py-7 z-20`}
         variants={header2.animation1}
         initial="hidden"
         whileInView="visible"
@@ -19,7 +19,7 @@ function Gifts() {
       </motion.h1>
 
       <motion.p
-        className={`${luxurious.className} text-lg z-10 text-center my-5 text-zinc-300 max-w-md px-10`}
+        className={`${luxurious.className} text-lg text-center my-5 text-zinc-300 max-w-md px-10 z-20`}
         variants={header2.animation2}
         initial="hidden"
         whileInView="visible"
@@ -37,7 +37,7 @@ function Gifts() {
         <Avatar
           src="/img/quinces/valeria/liverpool-logo.png"
           isBordered
-          className="my-5"
+          className="my-5 z-20"
           size="lg"
           onClick={() =>
             openLink(
@@ -52,7 +52,7 @@ function Gifts() {
         initial="hidden"
         whileInView="visible"
       >
-        <Chip color="danger" className="mt-5">
+        <Chip color="danger" className="mt-5 z-20">
           N° del Evento 51578705
         </Chip>
       </motion.div>
