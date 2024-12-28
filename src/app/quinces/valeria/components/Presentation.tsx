@@ -79,7 +79,7 @@ function Presentation() {
       </section>
       <section className="h-screen flex flex-col items-center justify-center overflow-clip bg-[url('/img/quinces/valeria/blue-background.jpg')] bg-center bg-cover">       
         <motion.p
-          className={`${mea.className} text-5xl text-metallic py-7`}
+          className={`${mea.className} text-6xl text-metallic py-7`}
           variants={header.animation1}
           initial="hidden"
           whileInView="visible"
@@ -106,7 +106,7 @@ function Presentation() {
         </motion.p>
 
         <motion.p
-          className={`${mea.className} text-5xl py-7 text-metallic`}
+          className={`${mea.className} text-6xl py-7 text-metallic`}
           variants={header.animation4}
           initial="hidden"
           whileInView="visible"

@@ -10,7 +10,7 @@ function Gifts() {
   return (
     <section className="h-screen flex flex-col items-center justify-center bg-[url('/img/quinces/valeria/blue-background.jpg')] bg-center bg-cover overflow-clip">
       <motion.h1
-        className={`${mea.className} text-5xl text-metallic py-7`}
+        className={`${mea.className} text-6xl text-metallic py-7`}
         variants={header2.animation1}
         initial="hidden"
         whileInView="visible"

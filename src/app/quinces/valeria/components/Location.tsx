@@ -82,7 +82,7 @@ function Location() {
     <>
       <section className="h-screen text-zinc-700 flex flex-col items-center justify-center bg-[url('/img/quinces/valeria/blue-background.jpg')] bg-center bg-cover overflow-clip">
         <motion.p
-          className={`${mea.className} text-5xl py-7 text-metallic`}
+          className={`${mea.className} text-6xl py-7 text-metallic`}
           variants={header2.animation1}
           initial="hidden"
           whileInView="visible"
@@ -111,7 +111,7 @@ function Location() {
           :00 Hrs
         </motion.span>
         <motion.h2
-          className={`${glass.className} text-center text-2xl z-10 text-zinc-300`}
+          className={`${glass.className} text-center text-3xl z-10 text-zinc-300`}
           variants={header2.animation3}
           initial="hidden"
           whileInView="visible"
@@ -119,12 +119,12 @@ function Location() {
           Santuario De San José
         </motion.h2>
         <motion.p
-          className={`${luxurious.className}  mt-3 text-sm text-center text-zinc-300`}
+          className={`${luxurious.className}  mt-3 text-sm text-center text-zinc-300 mx-10`}
           variants={header2.animation4}
           initial="hidden"
           whileInView="visible"
         >
-          Benito Juárez 27, 91300 Banderilla, Ver.
+          Benito Juárez 27, Lomas de Hidalgo, Centro, 91300 Banderilla, Ver.
         </motion.p>
 
         <motion.button
@@ -145,7 +145,7 @@ function Location() {
 
       <section className="h-screen text-zinc-700 flex flex-col items-center justify-center bg-[url('/img/quinces/valeria/blue-background.jpg')] bg-center bg-cover overflow-clip">
         <motion.p
-          className={`${mea.className} text-5xl py-7 text-metallic`}
+          className={`${mea.className} text-6xl py-7 text-metallic`}
           variants={header.animation1}
           initial="hidden"
           whileInView="visible"
@@ -174,7 +174,7 @@ function Location() {
           :00 Hrs
         </motion.span>
         <motion.h2
-          className={`${glass.className} text-center text-2xl text-zinc-300`}
+          className={`${glass.className} text-center text-3xl text-zinc-300`}
           variants={header.animation3}
           initial="hidden"
           whileInView="visible"
@@ -182,12 +182,12 @@ function Location() {
           Salón de Eventos Los Acosta
         </motion.h2>
         <motion.p
-          className={`${luxurious.className} mt-3 text-sm text-center text-zinc-300`}
+          className={`${luxurious.className} mt-3 text-sm text-center text-zinc-300 mx-10`}
           variants={header.animation4}
           initial="hidden"
           whileInView="visible"
         >
-          Av. Libertad, 91300 Banderilla, Ver.
+          Av. Libertad, Salvador Díaz Mirón, 91300 Banderilla, Ver.
         </motion.p>
         <motion.button
           type="button"
