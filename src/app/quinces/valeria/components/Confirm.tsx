@@ -6,9 +6,9 @@ import { header } from "./Animations";
 
 function Confirm() {
   return (
-    <section className="h-screen flex flex-col items-center justify-center bg-[url('/img/quinces/valeria/white-bg.jpg')] bg-center bg-cover overflow-clip">
+    <section className="h-screen flex flex-col items-center justify-center bg-[url('/img/quinces/valeria/blue-background.jpg')] bg-center bg-cover overflow-clip">
       <motion.h1
-        className={`${mea.className} text-5xl text-sky-800 text-center`}
+        className={`${mea.className} text-5xl text-metallic text-center py-7`}
         variants={header.animation1}
         initial="hidden"
         whileInView="visible"
@@ -16,7 +16,7 @@ function Confirm() {
         Asistencia
       </motion.h1>
       <motion.p
-        className={`${luxurious.className} text-lg z-10 text-center mt-10 text-zinc-700 max-w-md px-10`}
+        className={`${luxurious.className} text-lg z-10 text-center mt-3 text-zinc-300 max-w-md px-10`}
         variants={header.animation2}
         initial="hidden"
         whileInView="visible"
@@ -26,7 +26,7 @@ function Confirm() {
       </motion.p>
 
       <motion.p
-        className={`${luxurious.className} text-lg z-10 text-center mt-5 text-zinc-700 max-w-md px-10`}
+        className={`${luxurious.className} text-lg z-10 text-center mt-5 text-zinc-300 max-w-md px-10`}
         variants={header.animation3}
         initial="hidden"
         whileInView="visible"

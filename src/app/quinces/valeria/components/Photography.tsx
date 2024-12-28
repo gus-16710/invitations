@@ -10,14 +10,14 @@ export default function Photography({
       className={`relative bg-center bg-cover bg-fixed h-screen`}
       style={{ backgroundImage: `url(${urlImg})` }}
     >
-      <div className="absolute -top-1 w-full">
+      <div className="absolute top-0 w-full">
         <svg
           data-name="Layer 1"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 1200 120"
           preserveAspectRatio="none"
           style={{
-            fill: "#ffff",
+            fill: "#0c2a6f",
             filter: "drop-shadow(3px 5px 2px rgb(0 0 0 / 0.2))",
           }}
         >
@@ -40,7 +40,7 @@ export default function Photography({
           viewBox="0 0 1200 120"
           preserveAspectRatio="none"
           style={{
-            fill: white ? "#ffff" : "#740e26",
+            fill: "#002671",
             filter: "drop-shadow(3px 5px 2px rgb(0 0 0 / 0.2))",
           }}
           className="rotate-180"
