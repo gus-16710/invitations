@@ -40,7 +40,7 @@ export default function Photography({
           viewBox="0 0 1200 120"
           preserveAspectRatio="none"
           style={{
-            fill: "#002671",
+            fill: "#172554",
             filter: "drop-shadow(3px 5px 2px rgb(0 0 0 / 0.2))",
           }}
           className="rotate-180"

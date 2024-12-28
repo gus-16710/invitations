@@ -6,7 +6,7 @@ import { header } from "./Animations";
 
 function Confirm() {
   return (
-    <section className="h-screen flex flex-col items-center justify-center bg-[url('/img/quinces/valeria/blue-background.jpg')] bg-center bg-cover overflow-clip">
+    <section className="h-screen flex flex-col items-center justify-center overflow-clip bg-gradient-to-t from-blue-950 via-blue-900 to-blue-950">
       <motion.h1
         className={`${mea.className} text-6xl text-metallic text-center py-7`}
         variants={header.animation1}

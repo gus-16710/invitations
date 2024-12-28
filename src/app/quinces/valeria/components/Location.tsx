@@ -80,7 +80,7 @@ function Location() {
 
   return (
     <>
-      <section className="h-screen text-zinc-700 flex flex-col items-center justify-center bg-[url('/img/quinces/valeria/blue-background.jpg')] bg-center bg-cover overflow-clip">
+      <section className="h-screen text-zinc-700 flex flex-col items-center justify-center overflow-clip bg-gradient-to-t from-blue-950 via-blue-900 to-blue-950">
         <motion.p
           className={`${mea.className} text-6xl py-7 text-metallic`}
           variants={header2.animation1}
@@ -143,7 +143,7 @@ function Location() {
         </motion.button>
       </section>
 
-      <section className="h-screen text-zinc-700 flex flex-col items-center justify-center bg-[url('/img/quinces/valeria/blue-background.jpg')] bg-center bg-cover overflow-clip">
+      <section className="h-screen text-zinc-700 flex flex-col items-center justify-center overflow-clip bg-gradient-to-t from-blue-950 via-blue-900 to-blue-950">
         <motion.p
           className={`${mea.className} text-6xl py-7 text-metallic`}
           variants={header.animation1}
@@ -153,7 +153,7 @@ function Location() {
           Recepción
         </motion.p>
         <motion.span
-          className={`${gran.className} mb-10 text-5xl bg-zinc-100 text-sky-800 font-medium me-2 px-2.5 py-0.5 rounded flex items-center justify-center gap-1` }
+          className={`${gran.className} mb-10 text-5xl bg-zinc-100 text-sky-800 font-medium me-2 px-2.5 py-0.5 rounded flex items-center justify-center gap-1`}
           variants={header.animation2}
           initial="hidden"
           whileInView="visible"

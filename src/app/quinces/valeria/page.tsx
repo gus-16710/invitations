@@ -142,9 +142,9 @@ export default function Fifteen() {
       {open && (
         <div className="max-w-3xl m-auto shadow-large bg-white text-zinc-900">
           <Header />
-          <Photography urlImg={"/img/quinces/valeria/valeria01.jpg"} />
-          <Presentation />
-          <Location />          
+          <Photography urlImg={"/img/quinces/valeria/valeria01.jpg"} />          
+          <Presentation />          
+          <Location />
           <Gifts />
           <Confirm />
           <AudioControl />
