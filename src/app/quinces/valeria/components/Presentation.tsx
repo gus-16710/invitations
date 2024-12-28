@@ -6,7 +6,7 @@ import { header, header2 } from "./Animations";
 function Presentation() {
   return (
     <>
-      <section className="h-screen flex flex-col items-center justify-center overflow-clip bg-[url('/img/quinces/valeria/blue-background.jpg')] bg-center bg-cover">      
+      <section className="h-screen flex flex-col items-center justify-center overflow-clip bg-[url('/img/quinces/valeria/blue-background.jpg')] bg-center bg-cover">       
         <svg
           xmlns="http://www.w3.org/2000/svg"
           id="svg2"
@@ -77,7 +77,7 @@ function Presentation() {
           Deleitate en el señor, y él concederá los deseos de tu corazón 💗.
         </motion.p>
       </section>
-      <section className="h-screen flex flex-col items-center justify-center overflow-clip bg-[url('/img/quinces/valeria/blue-background.jpg')] bg-center bg-cover">      
+      <section className="h-screen flex flex-col items-center justify-center overflow-clip bg-[url('/img/quinces/valeria/blue-background.jpg')] bg-center bg-cover">       
         <motion.p
           className={`${mea.className} text-5xl text-metallic py-7`}
           variants={header.animation1}
