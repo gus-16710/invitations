@@ -97,7 +97,7 @@ function Presentation() {
         </motion.p>
 
         <motion.p
-          className={`${mystery.className} text-4xl bg-white rounded-full w-12 h-12 my-5 text-sky-600 flex justify-center items-center z-20`}
+          className={`${mystery.className} text-4xl bg-zinc-300 rounded-full w-12 h-12 my-5 text-sky-900 flex justify-center items-center z-20`}
           variants={header.animation3}
           initial="hidden"
           whileInView="visible"

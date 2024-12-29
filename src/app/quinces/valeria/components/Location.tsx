@@ -1,4 +1,14 @@
-import { glass, gran, luxurious, mea } from "./Fonts";
+import {
+  big,
+  glass,
+  gran,
+  loved,
+  luxurious,
+  macondo,
+  mea,
+  mystery,
+  zen,
+} from "./Fonts";
 import {
   Modal,
   ModalBody,
@@ -82,15 +92,15 @@ function Location() {
     <>
       <section className="h-screen text-zinc-700 flex flex-col items-center justify-center overflow-clip bg-gradient-to-t from-blue-950 via-blue-900 to-blue-950 relative">
         <motion.p
-          className={`${mea.className} text-6xl py-7 text-metallic z-20`}
+          className={`${mea.className} text-6xl py-5 text-metallic z-20`}
           variants={header2.animation1}
           initial="hidden"
           whileInView="visible"
         >
           Ceremonia
         </motion.p>
-        <motion.span
-          className={`${gran.className} mb-10 text-5xl bg-zinc-100 text-sky-800 font-medium me-2 px-2.5 py-0.5 rounded  flex items-center justify-center gap-1 z-20`}
+        <motion.div
+          className="w-full h-32 relative flex items-center justify-center z-20 my-5"
           variants={header2.animation2}
           initial="hidden"
           whileInView="visible"
@@ -101,15 +111,23 @@ function Location() {
             setCeremony(0);
           }}
         >
-          <NumberFlow
-            value={ceremony}
-            transformTiming={{
-              duration: 3000,
-            }}
-            trend={0}
-          />
-          :00 Hrs
-        </motion.span>
+          <div className="bg-[url('/img/quinces/valeria/ribbon.png')] bg-contain bg-no-repeat bg-center absolute w-full h-full" />
+          <motion.span
+            className={`${luxurious.className} mb-11 text-4xl text-sky-900 font-medium flex items-center justify-center z-20`}
+            variants={header2.animation2}
+            initial="hidden"
+            whileInView="visible"            
+          >
+            <NumberFlow
+              value={ceremony}
+              transformTiming={{
+                duration: 3000,
+              }}
+              trend={0}
+            />
+            :00 Hrs
+          </motion.span>
+        </motion.div>       
         <motion.h2
           className={`${glass.className} text-center text-3xl text-zinc-300 z-20`}
           variants={header2.animation3}
@@ -145,15 +163,15 @@ function Location() {
 
       <section className="h-screen text-zinc-700 flex flex-col items-center justify-center overflow-clip bg-gradient-to-t from-blue-950 via-blue-900 to-blue-950 relative">
         <motion.p
-          className={`${mea.className} text-6xl py-7 text-metallic z-20`}
+          className={`${mea.className} text-6xl py-5 text-metallic z-20`}
           variants={header.animation1}
           initial="hidden"
           whileInView="visible"
         >
           Recepción
         </motion.p>
-        <motion.span
-          className={`${gran.className} mb-10 text-5xl bg-zinc-100 text-sky-800 font-medium me-2 px-2.5 py-0.5 rounded flex items-center justify-center gap-1 z-20`}
+        <motion.div
+          className="w-full h-32 relative flex items-center justify-center z-20 my-5"
           variants={header.animation2}
           initial="hidden"
           whileInView="visible"
@@ -164,15 +182,23 @@ function Location() {
             setReception(0);
           }}
         >
-          <NumberFlow
-            value={reception}
-            transformTiming={{
-              duration: 3000,
-            }}
-            trend={0}
-          />
-          :00 Hrs
-        </motion.span>
+          <div className="bg-[url('/img/quinces/valeria/ribbon.png')] bg-contain bg-no-repeat bg-center absolute w-full h-full" />
+          <motion.span
+            className={`${luxurious.className} mb-11 text-4xl text-sky-900 font-medium flex items-center justify-center z-20`}
+            variants={header.animation2}
+            initial="hidden"
+            whileInView="visible"            
+          >
+            <NumberFlow
+              value={reception}
+              transformTiming={{
+                duration: 3000,
+              }}
+              trend={0}
+            />
+            :00 Hrs
+          </motion.span>
+        </motion.div>        
         <motion.h2
           className={`${glass.className} text-center text-3xl text-zinc-300 z-20`}
           variants={header.animation3}

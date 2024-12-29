@@ -7,8 +7,8 @@ export default function Photography({
 }) {
   return (
     <section
-      className={`relative bg-center bg-cover bg-fixed h-screen`}
-      style={{ backgroundImage: `url(${urlImg})` }}
+      className={`relative bg-center bg-cover bg-fixed`}
+      style={{ backgroundImage: `url(${urlImg})`, height: "520px" }}
     >
       <div className="absolute top-0 w-full">
         <svg
