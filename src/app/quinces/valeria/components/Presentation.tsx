@@ -120,7 +120,7 @@ function Presentation() {
           whileInView="visible"
         >
           Ricardo Alba Monfil <br />
-          Deylhy Alba Peña
+          Deylhy Peña Reyes
         </motion.p>
       </section>
     </>
