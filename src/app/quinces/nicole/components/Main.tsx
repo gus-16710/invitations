@@ -90,7 +90,7 @@ export default function Main() {
   }, []);
 
   return (
-    <div className="max-w-3xl m-auto bg-[url('/img/quinces/nicole/background-main-4.jpg')] bg-center bg-cover bg-fixed shadow-large">
+    <div className="max-w-3xl m-auto bg-[url('/img/quinces/nicole/background-main-7.jpg')] bg-center bg-cover bg-fixed shadow-large">
       {open && (
         <motion.div
           initial={{ opacity: 0 }}
