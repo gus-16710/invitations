@@ -7,7 +7,7 @@ import type { FlowbiteCarouselTheme } from "flowbite-react";
 
 const customTheme: FlowbiteCarouselTheme = {
   root: {
-    base: "relative h-96 w-full",
+    base: "relative h-72 w-full",
     leftControl:
       "absolute top-0 left-0 flex h-full items-center justify-center px-4 focus:outline-none",
     rightControl:
