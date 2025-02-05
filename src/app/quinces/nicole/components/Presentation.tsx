@@ -172,51 +172,44 @@ export default function Presentation() {
           </motion.div>
 
           <motion.div
-            className={`${clicker.className} my-10 flex justify-evenly w-full text-3xl max-w-md text-yellow-400`}
+            className={`${clicker.className} mt-10 flex justify-evenly w-full text-6xl max-w-md text-yellow-400 flex-wrap`}
             variants={animation03}
             initial="hidden"
             whileInView="visible"
           >
             <label className="flex flex-col items-center">
-              <span
-                ref={scopeDays}
-                className={`${yaseva.className}  mb-2`}               
-              >
+              <span ref={scopeDays} className={`${yaseva.className}  mb-2`}>
                 {formatNumber(days)}
               </span>
               <span className="text-2xl">Días</span>
-            </label>
-            <label>:</label>
+            </label>            
             <label className="flex flex-col items-center">
-              <span
-                ref={scopeHours}
-                className={`${yaseva.className} mb-2`}               
-              >
+              <span ref={scopeHours} className={`${yaseva.className} mb-2`}>
                 {formatNumber(hours)}
               </span>
               <span className="text-2xl">Horas</span>
             </label>
-            <label>:</label>
+          </motion.div>
+
+          <motion.div
+            className={`${clicker.className} mt-5 flex justify-evenly w-full text-5xl max-w-md text-yellow-400 flex-wrap`}
+            variants={animation03}
+            initial="hidden"
+            whileInView="visible"
+          >
             <label className="flex flex-col items-center">
-              <span
-                ref={scopeMinutes}
-                className={`${yaseva.className} mb-2`}               
-              >
+              <span ref={scopeMinutes} className={`${yaseva.className} mb-2`}>
                 {formatNumber(minutes)}
               </span>
               <span className="text-2xl">Min</span>
-            </label>
-            <label >:</label>
+            </label>            
             <label className="flex flex-col items-center">
-              <span
-                ref={scopeSeconds}
-                className={`${yaseva.className} mb-2`}               
-              >
+              <span ref={scopeSeconds} className={`${yaseva.className} mb-2`}>
                 {formatNumber(seconds)}
               </span>
               <span className="text-2xl">Seg</span>
             </label>
-          </motion.div>         
+          </motion.div>
 
           <motion.div
             className="flex justify-center mt-5"

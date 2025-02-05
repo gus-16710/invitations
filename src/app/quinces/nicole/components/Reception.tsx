@@ -180,7 +180,7 @@ export default function Reception() {
               initial="hidden"
               whileInView="visible"
             >
-              <p>SÁBADO 1 DE MARZO</p>
+              <p>SÁBADO 01 DE MARZO</p>
               <p className="flex items-center justify-center gap-1">
                 <IoMdTime /> 14:00 HRS
               </p>
