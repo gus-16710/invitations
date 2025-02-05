@@ -172,7 +172,7 @@ export default function Presentation() {
           </motion.div>
 
           <motion.div
-            className={`${clicker.className} mt-10 flex justify-evenly w-full text-6xl max-w-md text-yellow-400 flex-wrap`}
+            className={`${clicker.className} mt-10 flex justify-evenly w-full text-4xl max-w-md text-yellow-400 flex-wrap`}
             variants={animation03}
             initial="hidden"
             whileInView="visible"
@@ -192,7 +192,7 @@ export default function Presentation() {
           </motion.div>
 
           <motion.div
-            className={`${clicker.className} mt-5 flex justify-evenly w-full text-5xl max-w-md text-yellow-400 flex-wrap`}
+            className={`${clicker.className} mt-5 flex justify-evenly w-full text-4xl max-w-md text-yellow-400 flex-wrap`}
             variants={animation03}
             initial="hidden"
             whileInView="visible"
