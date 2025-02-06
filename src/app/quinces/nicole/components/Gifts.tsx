@@ -228,7 +228,7 @@ export default function Gifts() {
             </motion.div>
 
             <motion.p
-              className={`${aref.className} text-base px-5 my-10 text-center max-w-md`}
+              className={`${aref.className} text-base px-5 my-10 text-center max-w-md text-zinc-700`}
               variants={animation04}
               initial="hidden"
               whileInView="visible"
@@ -249,6 +249,7 @@ export default function Gifts() {
                   onClick={() =>
                     openLink("https://mesaderegalos.liverpool.com.mx/milistaderegalos/51590258")
                   }
+                  color="warning"
                 />
                 <Link
                   color="warning"
@@ -260,7 +261,7 @@ export default function Gifts() {
                   Liverpool
                 </Link>
 
-                <Chip color="secondary" className="mt-5 z-20">
+                <Chip color="warning" className="mt-10 z-20 text-white">
                   N° del Evento 51590258
                 </Chip>
               </div>

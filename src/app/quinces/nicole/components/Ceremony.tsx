@@ -169,7 +169,7 @@ export default function Ceremony() {
             </motion.div>
 
             <motion.p
-              className={`${playFair.className} mx-10 mt-1 text-center text-base z-20 text-zinc-900 max-w-md`}
+              className={`${playFair.className} mx-10 mt-1 text-center text-base z-20 text-zinc-700 max-w-md`}
               style={{ textShadow: "0px 1px 1px rgba(255,255,255, 1)" }}
               variants={animation03}
               initial="hidden"
@@ -178,7 +178,7 @@ export default function Ceremony() {
               Iglesia de San Martín de Porres
             </motion.p>
             <motion.div
-              className={`mt-3 ${aref.className} p-1 text-center`}
+              className={`mt-3 ${aref.className} p-1 text-center text-zinc-700`}
               variants={animation03}
               initial="hidden"
               whileInView="visible"
@@ -194,8 +194,7 @@ export default function Ceremony() {
               initial="hidden"
               whileInView="visible"
             >
-              91037 vereda, C. Coyoacán 15, Los Laureles, 91037 Xalapa-Enríquez,
-              Ver.
+              C. Coyoacán 15, Los Laureles, 91037 Xalapa-Enríquez, Ver.
             </motion.p>
             <motion.div
               variants={animation04}

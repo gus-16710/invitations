@@ -23,7 +23,7 @@ import { LuMapPin } from "react-icons/lu";
 
 const MapSalon = () => (
   <iframe
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15039.966715973163!2d-96.93584853950922!3d19.541970800388352!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85db2e02dd008fb9%3A0x4166db4c76faf835!2sSalones%20Aurora!5e0!3m2!1ses!2smx!4v1700179455841!5m2!1ses!2smx"
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3759.1827333675974!2d-96.9242744421434!3d19.57667051684763!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85db2e2b018bc0e1%3A0x7b3be4a9e3befc71!2zU2Fsw7NuICJMYSBDcmlvbGxhIg!5e0!3m2!1ses!2smx!4v1738805886200!5m2!1ses!2smx"
     height="450"
     style={{ border: "0" }}
     allowFullScreen
@@ -51,7 +51,7 @@ const ModalMap = ({
         {(onClose) => (
           <>
             <ModalHeader
-              className={`${pinyion.className} flex flex-col gap-1 items-center text-3xl`}
+              className={`${pinyion.className} flex flex-col gap-1 items-center text-3xl h-9`}
             >
               Recepción
             </ModalHeader>
@@ -77,7 +77,9 @@ export default function Reception() {
       >
         <Card
           className="border-none bg-background/5 h-full w-full"
-          shadow="sm" radius="lg" isBlurred
+          shadow="sm"
+          radius="lg"
+          isBlurred
         >
           <CardBody className="flex items-center justify-center flex-col">
             <motion.h1
@@ -160,22 +162,22 @@ export default function Reception() {
               <Avatar
                 isBordered
                 color="warning"
-                src="/img/quinces/daniela/salon.jpg"
+                src="/img/quinces/nicole/salon.jpg"
                 className="h-40 w-40 my-5 shadow-lg"
               />
             </motion.div>
 
             <motion.p
-              className={`${playFair.className} mx-10 mt-1 text-center text-base z-20 text-zinc-900`}
+              className={`${playFair.className} mx-10 mt-1 text-center text-base z-20 text-zinc-700`}
               style={{ textShadow: "0px 1px 1px rgba(255,255,255, 1)" }}
               variants={animation03}
               initial="hidden"
               whileInView="visible"
             >
-              Salones "Aurora"
+              Salones "La Criolla"
             </motion.p>
             <motion.div
-              className={`mt-3 ${aref.className} p-1 text-center`}
+              className={`mt-3 ${aref.className} p-1 text-center text-zinc-700`}
               variants={animation03}
               initial="hidden"
               whileInView="visible"
@@ -191,7 +193,8 @@ export default function Reception() {
               initial="hidden"
               whileInView="visible"
             >
-              Carlos A. Carrillo 23, Aguacatal, 91133 Xalapa-Enriquez, Ver.
+              San Luis de la Paz S/N, Fracc, Lucas Martin, 91103
+              Xalapa-Enríquez, Ver.
             </motion.p>
             <motion.div
               variants={animation04}

@@ -1,9 +1,8 @@
 import { motion } from "framer-motion";
-import { notoSerif, pinyion, playFair } from "./Fonts";
+import { greatVibes, notoSerif, pinyion, playFair, quickSand } from "./Fonts";
 import {
   animation00,
-  animation01,
-  animation02,
+  animation01,  
   animation03,
   animation04, 
 } from "./Animations";
@@ -15,15 +14,15 @@ export default function Header() {
       style={{ height: "100svh" }}
     >
       <motion.h1
-        className={`${playFair.className} text-2xl flex items-center text-zinc-600 z-20`}
+        className={`${quickSand.className} text-2xl flex items-center text-zinc-700 z-20`}
         variants={animation01}
         initial="hidden"
         whileInView="visible"
       >
-        MIS <span className="text-5xl text-yellow-400">XV</span> AÑOS
+        MIS <span className={`${greatVibes.className} text-5xl text-yellow-400`}>XV</span> AÑOS
       </motion.h1>
 
-      <div className="relative h-72 w-72 flex items-center justify-center mt-5">
+      <div className="relative h-72 w-72 flex items-center justify-center">
         <motion.div
           className="bg-[url('/img/quinces/nicole/header-girl.png')] bg-contain bg-no-repeat bg-center absolute w-36 h-36 mt-5"
           variants={animation00}
@@ -47,8 +46,7 @@ export default function Header() {
         Nicole
       </motion.p>
       <motion.p
-        className={`${notoSerif.className} mx-10 mt-1 text-center text-xs z-20 font-bolder tracking-widest text-zinc-900`}
-        style={{ textShadow: "0px 1px 1px rgba(255,255,255, 1)" }}
+        className={`${notoSerif.className} mx-10 mt-1 text-center text-xs z-20 font-bolder tracking-widest text-zinc-700`}        
         variants={animation03}
         initial="hidden"
         whileInView="visible"

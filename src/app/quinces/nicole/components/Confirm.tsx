@@ -18,12 +18,12 @@ export default function Confirm() {
       <Card className="border-none bg-background/5 h-full w-full" shadow="sm" radius="lg" isBlurred>
         <CardBody className="flex items-center justify-center flex-col">
           <motion.h1
-            className={`${pinyion.className} text-5xl text-yellow-400 mt-5 text-center`}
+            className={`${pinyion.className} text-5xl text-yellow-400 text-center`}
             variants={animation01}
             initial="hidden"
             whileInView="visible"
           >
-            Asistencia
+            Confirma tu asistencia
           </motion.h1>
 
           <motion.div
@@ -91,7 +91,7 @@ export default function Confirm() {
           </motion.div>
 
           <motion.p
-            className={`${aref.className} text-center mt-10 pb-2 px-5 max-w-md`}
+            className={`${aref.className} text-center mt-5 pb-2 px-5 max-w-md text-zinc-700`}
             variants={animation03}
             initial="hidden"
             whileInView="visible"
@@ -100,7 +100,7 @@ export default function Confirm() {
             inolvidable.
           </motion.p>
           <motion.p
-            className={`${aref.className} text-center p-2`}
+            className={`${aref.className} text-center p-2 text-zinc-700`}
             variants={animation03}
             initial="hidden"
             whileInView="visible"
@@ -108,7 +108,7 @@ export default function Confirm() {
             Favor de confirmar tu presencia.
           </motion.p>
           <motion.p
-            className={`${aref.className} text-center p-2`}
+            className={`${aref.className} text-center p-2 text-zinc-700`}
             variants={animation04}
             initial="hidden"
             whileInView="visible"
@@ -117,7 +117,7 @@ export default function Confirm() {
           </motion.p>
 
           <motion.div
-            className="pt-5"
+            className="mt-5"
             variants={animation04}
             initial="hidden"
             whileInView="visible"
