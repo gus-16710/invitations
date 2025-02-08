@@ -1,9 +1,9 @@
 import { FaVolumeUp, FaVolumeOff } from "react-icons/fa";
 import { useState, useEffect, useRef } from "react";
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 
 export default function AudioControl() {
-  const [isPlayed, setIsPlayed] = useState(false);
+  const [isPlayed, setIsPlayed] = useState(true);
   const audioPlayer = useRef<HTMLAudioElement>(null);
 
   useEffect(() => {
@@ -22,13 +22,13 @@ export default function AudioControl() {
         onClick={() => setIsPlayed(!isPlayed)}
         initial={{ opacity: 0, scale: 0, y: -100 }}
         animate={{ opacity: 1, scale: 1, y: 0 }}
-        transition={{ duration: 1, delay: 1, ease: "anticipate" }} 
+        transition={{ duration: 1, delay: 1, ease: "anticipate" }}
       >
         {isPlayed ? <FaVolumeUp /> : <FaVolumeOff />}
       </motion.button>
 
-      <audio controls ref={audioPlayer} hidden>
-        <source src="/media/mi_princesa_angel_melo.mp3" type="audio/mpeg" />
+      <audio controls ref={audioPlayer} hidden loop>
+        <source src="/media/photograph_ed_sheeran.mp3" type="audio/mpeg" />
         Your browser does not support the audio element.
       </audio>
     </>

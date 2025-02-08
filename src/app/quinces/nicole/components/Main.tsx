@@ -18,6 +18,7 @@ import { motion } from "framer-motion";
 import { oswald } from "./Fonts";
 
 import "@splidejs/react-splide/css";
+import AudioControl from "./AudioControl";
 
 const ModalInstructions = ({
   isOpen,
@@ -136,7 +137,8 @@ export default function Main() {
             <SplideSlide>
               <Confirm />
             </SplideSlide>
-          </Splide>          
+          </Splide>  
+          <AudioControl />        
         </motion.div> 
       )}
       <ModalInstructions isOpen={isOpen} onOpenChange={onOpenChange} />

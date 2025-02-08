@@ -234,7 +234,7 @@ export default function Gifts() {
               whileInView="visible"
             >
               Nuestro mayor regalo será tu presencia, pero si deseas
-              obsequiarnos un detalle te dejamos las siguientes opciones:
+              obsequiarnos un detalle te dejamos la siguiente opción:
             </motion.p>
             <motion.div
               className="flex gap-5"
