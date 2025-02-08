@@ -211,7 +211,7 @@ export default function GodParents() {
                     whileInView="visible"
                   >
                     Adriana Hernández Olmedo <br />&<br /> Mariano N. Velasco
-                    López Castillo
+                    López
                   </motion.p>
                 </div>
               </Carousel>
