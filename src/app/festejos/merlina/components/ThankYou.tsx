@@ -1,99 +1,31 @@
-import { useEffect, useState } from "react";
-import { motion, useAnimate } from "framer-motion";
-import { Card, CardBody } from "@nextui-org/react";
+import { motion } from "framer-motion";
+import { aref, pinyion, rouge } from "./Fonts";
 import {
   animation01,
   animation03,
   animation04,
   animation06,
 } from "./Animations";
-import { aref, clicker, rouge, ruge } from "./Fonts";
+import { Card, CardBody } from "@nextui-org/react";
 
-function formatNumber(number: number) {
-  return number < 10 ? `0${number}` : number;
-}
-
-export default function Presentation() {
-  const [seconds, setSeconds] = useState(0);
-  const [minutes, setMinutes] = useState(0);
-  const [hours, setHours] = useState(0);
-  const [days, setDays] = useState(0);
-
-  const countDownClock = () => {
-    const countDownDate: any = new Date("Dec 08, 2024 18:00:00");
-
-    const interval = setInterval(() => {
-      const now = new Date().getTime();
-      const distance = countDownDate - now;
-
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor(
-        (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-      );
-      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-      if (distance < 0) {
-        clearInterval(interval);
-        setSeconds(0);
-        setMinutes(0);
-        setHours(0);
-        setDays(0);
-      } else {
-        setSeconds(seconds);
-        setMinutes(minutes);
-        setHours(hours);
-        setDays(days);
-      }
-    }, 1000);
-  };
-
-  useEffect(() => {
-    countDownClock();
-  }, []);
-
-  const [scopeSeconds, animateSeconds] = useAnimate();
-  const [scopeMinutes, animateMinutes] = useAnimate();
-  const [scopeHours, animateHours] = useAnimate();
-  const [scopeDays, animateDays] = useAnimate();
-
-  useEffect(() => {
-    animateSeconds(
-      scopeSeconds.current,
-      { scale: [0, 1], opacity: [0, 1] },
-      { ease: "easeInOut", type: "keyframes" }
-    );
-  }, [seconds, animateSeconds]);
-
-  useEffect(() => {
-    animateMinutes(
-      scopeMinutes.current,
-      { scale: [0, 1], opacity: [0, 1] },
-      { ease: "easeInOut", type: "keyframes" }
-    );
-  }, [minutes, animateSeconds]);
-
-  useEffect(() => {
-    animateHours(
-      scopeHours.current,
-      { scale: [0, 1], opacity: [0, 1] },
-      { ease: "easeInOut", type: "keyframes" }
-    );
-  }, [hours, animateHours]);
-
-  useEffect(() => {
-    animateDays(
-      scopeDays.current,
-      { scale: [0, 1], opacity: [0, 1] },
-      { ease: "easeInOut", type: "keyframes" }
-    );
-  }, [days, animateDays]);
-
+export default function ThankYou() {
   return (
     <section
-      className="relative flex justify-center items-center flex-col px-7 py-10"
+      className="flex items-center justify-center flex-col px-7 py-10"
       style={{ height: "100svh" }}
     >
+      <video
+        autoPlay
+        loop
+        muted
+        className="absolute top-0 left-0 w-full h-full object-cover z-0"
+      >
+        <source
+          src="/img/quinces/sarang/176198-855206384_tiny.mp4"
+          type="video/mp4"
+        />
+        Tu navegador no soporta videos HTML5.
+      </video>
       <Card
         className="border-none bg-background/5 h-full w-full"
         shadow="sm"
@@ -117,7 +49,7 @@ export default function Presentation() {
               enableBackground="new 0 0 2588.233 499.412"
               xmlSpace="preserve"
               width="220"
-              fill="rgb(99, 17, 125)"
+              fill="rgb(255, 255, 255)"
             >
               <g>
                 <path d="M2159.697,423.532c-28.752,26.217-57.105,30.613-74.174,33.505c-0.275,2.366-0.508,4.732-0.718,7.098   c60.061-3.57,104.258-41.387,113.786-84.779c-4.626-0.043-9.189-0.083-13.775-0.126   C2180.168,395.667,2172.248,411.659,2159.697,423.532z" />
@@ -141,60 +73,33 @@ export default function Presentation() {
             </svg>
           </motion.div>
           <motion.h1
-            className={`${rouge.className} text-6xl custom-text-purple mt-5 text-center`}
+            className={`${rouge.className} text-6xl text-zinc-50 mt-5 text-center`}
             variants={animation01}
             initial="hidden"
             whileInView="visible"
             custom={1}
           >
-            Countdown
+            Thank You
           </motion.h1>
 
-          <motion.div
-            className={`${clicker.className} my-10 flex justify-evenly w-full text-4xl max-w-md custom-text-purple`}
+          <motion.p
+            className={`${aref.className} text-center mt-10 pb-2 px-5 max-w-md text-zinc-50`}
             variants={animation03}
             initial="hidden"
             whileInView="visible"
           >
-            <label className="flex flex-col items-center">
-              <span ref={scopeDays} className={`${ruge.className}  mb-2`}>
-                {formatNumber(days)}
-              </span>
-              <span className="text-2xl">Days</span>
-            </label>
-            <label>:</label>
-            <label className="flex flex-col items-center">
-              <span ref={scopeHours} className={`${ruge.className} mb-2`}>
-                {formatNumber(hours)}
-              </span>
-              <span className="text-2xl">Hours</span>
-            </label>
-            <label>:</label>
-            <label className="flex flex-col items-center">
-              <span ref={scopeMinutes} className={`${ruge.className} mb-2`}>
-                {formatNumber(minutes)}
-              </span>
-              <span className="text-2xl">Min</span>
-            </label>
-            <label>:</label>
-            <label className="flex flex-col items-center">
-              <span ref={scopeSeconds} className={`${ruge.className} mb-2`}>
-                {formatNumber(seconds)}
-              </span>
-              <span className="text-2xl">Sec</span>
-            </label>
-          </motion.div>
-
+            With the grace of God, pretty little princess, your magical and
+            unforgettable night has arrived.
+          </motion.p>
           <motion.p
-            className={`${aref.className} text-base px-5 text-center max-w-md custom-text-purple`}
+            className={`${aref.className} text-center p-2 max-w-md text-zinc-50`}
             variants={animation04}
             initial="hidden"
             whileInView="visible"
           >
-            The XV Party is a unique moment and nothing would make me happier
-            than your company. I'm waiting for you so we can spend an
-            unforgettable night!
-          </motion.p>    
+            Today our hearts overflow with infinite joy as for the first time 15
+            years ago, when we happily received you in our arms.
+          </motion.p>
         </CardBody>
       </Card>
     </section>

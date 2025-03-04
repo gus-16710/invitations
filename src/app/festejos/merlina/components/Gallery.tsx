@@ -1,106 +1,57 @@
-import { useEffect, useState } from "react";
-import { motion, useAnimate } from "framer-motion";
+import "yet-another-react-lightbox/styles.css";
+import { motion } from "framer-motion";
+import { useState } from "react";
+import PhotoAlbum from "react-photo-album";
+import Lightbox from "yet-another-react-lightbox";
+import { animation06 } from "./Animations";
 import { Card, CardBody } from "@nextui-org/react";
-import {
-  animation01,
-  animation03,
-  animation04,
-  animation06,
-} from "./Animations";
-import { aref, clicker, rouge, ruge } from "./Fonts";
+import NextJsImage from "./NextJsImage";
 
-function formatNumber(number: number) {
-  return number < 10 ? `0${number}` : number;
-}
+const images = [
+  {
+    src: "/img/quinces/sarang/gallery-07.jpg",
+    width: 800,
+    height: 600,
+  },
+  {
+    src: "/img/quinces/sarang/gallery-08.jpg",
+    width: 1600,
+    height: 900,
+  },
+  {
+    src: "/img/quinces/sarang/gallery-09.jpg",
+    width: 800,
+    height: 600,
+  },
+  {
+    src: "/img/quinces/sarang/gallery-10.jpg",
+    width: 800,
+    height: 600,
+  },
+  {
+    src: "/img/quinces/sarang/gallery-11.jpg",
+    width: 800,
+    height: 600,
+  },
+  {
+    src: "/img/quinces/sarang/gallery-12.jpg",
+    width: 800,
+    height: 600,
+  },
+];
 
-export default function Presentation() {
-  const [seconds, setSeconds] = useState(0);
-  const [minutes, setMinutes] = useState(0);
-  const [hours, setHours] = useState(0);
-  const [days, setDays] = useState(0);
-
-  const countDownClock = () => {
-    const countDownDate: any = new Date("Dec 08, 2024 18:00:00");
-
-    const interval = setInterval(() => {
-      const now = new Date().getTime();
-      const distance = countDownDate - now;
-
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor(
-        (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-      );
-      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-      if (distance < 0) {
-        clearInterval(interval);
-        setSeconds(0);
-        setMinutes(0);
-        setHours(0);
-        setDays(0);
-      } else {
-        setSeconds(seconds);
-        setMinutes(minutes);
-        setHours(hours);
-        setDays(days);
-      }
-    }, 1000);
-  };
-
-  useEffect(() => {
-    countDownClock();
-  }, []);
-
-  const [scopeSeconds, animateSeconds] = useAnimate();
-  const [scopeMinutes, animateMinutes] = useAnimate();
-  const [scopeHours, animateHours] = useAnimate();
-  const [scopeDays, animateDays] = useAnimate();
-
-  useEffect(() => {
-    animateSeconds(
-      scopeSeconds.current,
-      { scale: [0, 1], opacity: [0, 1] },
-      { ease: "easeInOut", type: "keyframes" }
-    );
-  }, [seconds, animateSeconds]);
-
-  useEffect(() => {
-    animateMinutes(
-      scopeMinutes.current,
-      { scale: [0, 1], opacity: [0, 1] },
-      { ease: "easeInOut", type: "keyframes" }
-    );
-  }, [minutes, animateSeconds]);
-
-  useEffect(() => {
-    animateHours(
-      scopeHours.current,
-      { scale: [0, 1], opacity: [0, 1] },
-      { ease: "easeInOut", type: "keyframes" }
-    );
-  }, [hours, animateHours]);
-
-  useEffect(() => {
-    animateDays(
-      scopeDays.current,
-      { scale: [0, 1], opacity: [0, 1] },
-      { ease: "easeInOut", type: "keyframes" }
-    );
-  }, [days, animateDays]);
+export default function Gallery() {
+  const [index, setIndex] = useState(-1);
 
   return (
-    <section
-      className="relative flex justify-center items-center flex-col px-7 py-10"
-      style={{ height: "100svh" }}
-    >
+    <section className="relative mx-7 py-10" style={{ height: "100svh" }}>
       <Card
         className="border-none bg-background/5 h-full w-full"
         shadow="sm"
         radius="lg"
         isBlurred
       >
-        <CardBody className="flex items-center justify-center flex-col">
+        <CardBody className="flex items-center justify-center">
           <motion.div
             variants={animation06}
             initial="hidden"
@@ -139,62 +90,22 @@ export default function Presentation() {
                 <path d="M1454.613,370.315c0.02-3.888,0.02-7.796,0.106-11.682c-33.032-0.233-146.775,0.02-152.637,0.02   c-0.443-43.414-0.443-86.912,0.149-130.349c20.451,0.951,37.858,23.788,65.048-20.428c15.845-27.211,24.169-67.096,48.336-86.406   c2.24-2.197,5.514-4.057,5.703-7.543c-13.14-4.563-27.527-6.613-41.323-4.5c-17.852,3.825-29.069,19.245-40.477,32.092   c-12.233-69.336-7.119-82.541-45.401-128.046c-38.282,45.505-33.169,58.71-45.401,128.046   c-11.408-12.846-22.625-28.267-40.477-32.092c-13.797-2.113-28.183-0.063-41.323,4.5c0.19,3.486,3.464,5.346,5.703,7.543   c24.167,19.311,32.491,59.196,48.336,86.406c27.19,44.216,44.597,21.379,65.048,20.428c0.591,43.437,0.591,86.935,0.149,130.349   c-5.862,0-119.605-0.253-152.637-0.02c0.086,3.886,0.086,7.794,0.106,11.682C1176.612,370.092,1406.85,370.067,1454.613,370.315z" />
               </g>
             </svg>
-          </motion.div>
-          <motion.h1
-            className={`${rouge.className} text-6xl custom-text-purple mt-5 text-center`}
-            variants={animation01}
-            initial="hidden"
-            whileInView="visible"
-            custom={1}
-          >
-            Countdown
-          </motion.h1>
-
-          <motion.div
-            className={`${clicker.className} my-10 flex justify-evenly w-full text-4xl max-w-md custom-text-purple`}
-            variants={animation03}
-            initial="hidden"
-            whileInView="visible"
-          >
-            <label className="flex flex-col items-center">
-              <span ref={scopeDays} className={`${ruge.className}  mb-2`}>
-                {formatNumber(days)}
-              </span>
-              <span className="text-2xl">Days</span>
-            </label>
-            <label>:</label>
-            <label className="flex flex-col items-center">
-              <span ref={scopeHours} className={`${ruge.className} mb-2`}>
-                {formatNumber(hours)}
-              </span>
-              <span className="text-2xl">Hours</span>
-            </label>
-            <label>:</label>
-            <label className="flex flex-col items-center">
-              <span ref={scopeMinutes} className={`${ruge.className} mb-2`}>
-                {formatNumber(minutes)}
-              </span>
-              <span className="text-2xl">Min</span>
-            </label>
-            <label>:</label>
-            <label className="flex flex-col items-center">
-              <span ref={scopeSeconds} className={`${ruge.className} mb-2`}>
-                {formatNumber(seconds)}
-              </span>
-              <span className="text-2xl">Sec</span>
-            </label>
-          </motion.div>
-
-          <motion.p
-            className={`${aref.className} text-base px-5 text-center max-w-md custom-text-purple`}
-            variants={animation04}
-            initial="hidden"
-            whileInView="visible"
-          >
-            The XV Party is a unique moment and nothing would make me happier
-            than your company. I'm waiting for you so we can spend an
-            unforgettable night!
-          </motion.p>    
+          </motion.div>              
+          <div className="z-30 px-2 w-72 mx-auto mt-10">
+            <PhotoAlbum
+              layout="masonry"
+              photos={images}
+              onClick={({ index: current }) => setIndex(current)}
+              renderPhoto={NextJsImage}
+              columns={2}
+            />
+            <Lightbox
+              index={index}
+              slides={images}
+              open={index >= 0}
+              close={() => setIndex(-1)}
+            />
+          </div>
         </CardBody>
       </Card>
     </section>
