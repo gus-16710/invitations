@@ -48,7 +48,7 @@ export default function Header() {
       </div>
 
       <p
-        className={`mt-5 text-4xl text-zinc-100`}
+        className={`mt-10 text-4xl text-zinc-100`}
         style={{
           fontFamily: "rumble",
         }}
@@ -66,15 +66,15 @@ export default function Header() {
       </p>
 
       <p
-        className="flex justify-center mt-5 items-stretch text-orange-500"
+        className="flex justify-center mt-5 text-orange-500 items-center"
         style={{
           fontFamily: "rumble",
         }}
       >
-        <span className="text-center border-r-3 border-purple-600/50 w-28 text-5xl">
+        <span className="text-center border-r-3 border-purple-600/50 w-28 text-5xl h-16">
           12
         </span>
-        <span className="text-center border-r-3 border-purple-600/50 w-28 text-4xl pt-2">
+        <span className="text-center border-r-3 border-purple-600/50 w-28 text-4xl h-16">
           Marzo
         </span>
         <span className="text-center w-28 text-5xl">
