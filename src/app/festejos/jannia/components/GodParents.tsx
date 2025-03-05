@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
-import { Carousel, Flowbite } from "flowbite-react";
-import { aref, greatVibes, notoSans, pinyion, playFair } from "./Fonts";
+import { aref } from "./Fonts";
 import { animation01, animation03, animation06 } from "./Animations";
 import { Card, CardBody } from "@nextui-org/react";
 
@@ -40,7 +39,7 @@ export default function GodParents() {
             style={{ backgroundColor: "#f5a524" }}
           >
             <p
-              className={`text-5xl text-zinc-200 pb-4 pl-1`}
+              className={`text-5xl text-zinc-200 pl-1`}
               style={{
                 fontFamily: "rumble",
               }}

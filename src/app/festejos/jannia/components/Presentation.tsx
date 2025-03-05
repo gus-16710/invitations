@@ -121,7 +121,7 @@ export default function Presentation() {
           >
             <label className="flex flex-col items-center">
               <span
-                className={`mb-2 rounded-md w-14 text-center pb-4`}
+                className={`mb-2 rounded-md w-14 text-center`}
                 style={{ fontFamily: "rumble", backgroundColor: "#f5a524" }}
               >
                 <NumberFlow
@@ -137,7 +137,7 @@ export default function Presentation() {
             <label className="mt-3">:</label>
             <label className="flex flex-col items-center">
               <span
-                className={`mb-2 rounded-md w-14 text-center pb-4`}
+                className={`mb-2 rounded-md w-14 text-center`}
                 style={{ fontFamily: "rumble", backgroundColor: "#f5a524" }}
               >
                 <NumberFlow
@@ -153,7 +153,7 @@ export default function Presentation() {
             <label className="mt-3">:</label>
             <label className="flex flex-col items-center">
               <span
-                className={`mb-2 rounded-md w-14 text-center pb-4`}
+                className={`mb-2 rounded-md w-14 text-center`}
                 style={{ fontFamily: "rumble", backgroundColor: "#f5a524" }}
               >
                 <NumberFlow
@@ -169,7 +169,7 @@ export default function Presentation() {
             <label className="mt-3">:</label>
             <label className="flex flex-col items-center">
               <span
-                className={`mb-2 rounded-md w-14 text-center pb-4`}
+                className={`mb-2 rounded-md w-14 text-center`}
                 style={{ fontFamily: "rumble", backgroundColor: "#f5a524" }}
               >
                 <NumberFlow
