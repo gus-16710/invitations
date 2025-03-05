@@ -37,13 +37,13 @@ export default function Header() {
         />
         <div className="bg-[url('/img/festejos/merlina/ribbon-purple.png')] bg-contain bg-no-repeat bg-center absolute w-80 h-36 -bottom-16" />
         <p
-          className={`text-zinc-50 text-6xl mb-5 z-10 absolute -bottom-7`}
+          className={`text-zinc-50 text-4xl mb-5 z-10 absolute -bottom-10 text-center`}
           style={{
             textShadow: "0px 2px 1px rgb(0,0,0)",
             fontFamily: "verve",
           }}
         >
-          Merlina
+          Jannia Monserrath        
         </p>
       </div>
 
@@ -62,37 +62,20 @@ export default function Header() {
           fontFamily: "rumble",
         }}
       >
-        VEN A CELEBRAR CONMIGO
+        VEN Y FESTEJA CONMIGO
       </p>
-
-      {/* <div
-        className="flex justify-center mt-5 text-orange-500 items-center"
-        style={{
-          fontFamily: "rumble",
-        }}
-      >
-        <span className="text-center  w-28 text-5xl h-20 self-center">
-          12
-        </span>
-        <span className="text-center border-x-3 border-purple-600/50 w-28 text-4xl h-20 self-center">
-          Marzo
-        </span>
-        <span className="text-center  w-28 text-5xl h-20 self-center">
-          18 <label className="text-base block">Hrs</label>
-        </span>
-      </div> */}
       <div
         className="flex justify- items-center mt-5 text-orange-500 gap-x-4"
         style={{ fontFamily: "rumble" }}
       >
         <span className="text-center text-5xl h-20 flex items-center justify-center">
-          12
+          29
         </span>
         <span className="px-3 text-center border-x-4 border-purple-600/40 text-4xl h-20 flex items-center justify-center">
           Marzo
         </span>
         <span className="text-center text-5xl h-20 flex items-center justify-center">
-          18
+          13
           <label className="text-base">Hrs</label>
         </span>
       </div>

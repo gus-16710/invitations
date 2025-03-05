@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { motion, useAnimate } from "framer-motion";
+import { motion } from "framer-motion";
 import { Card, CardBody } from "@nextui-org/react";
 import {
   animation01,
@@ -7,11 +7,8 @@ import {
   animation04,
   animation06,
 } from "./Animations";
-import { aref, clicker, rouge, ruge } from "./Fonts";
-
-function formatNumber(number: number) {
-  return number < 10 ? `0${number}` : number;
-}
+import { aref, clicker, ruge } from "./Fonts";
+import NumberFlow from "@number-flow/react";
 
 export default function Presentation() {
   const [seconds, setSeconds] = useState(0);
@@ -20,7 +17,7 @@ export default function Presentation() {
   const [days, setDays] = useState(0);
 
   const countDownClock = () => {
-    const countDownDate: any = new Date("Dec 08, 2025 18:00:00");
+    const countDownDate: any = new Date("Mar 29, 2025 13:00:00");
 
     const interval = setInterval(() => {
       const now = new Date().getTime();
@@ -52,43 +49,6 @@ export default function Presentation() {
     countDownClock();
   }, []);
 
-  const [scopeSeconds, animateSeconds] = useAnimate();
-  const [scopeMinutes, animateMinutes] = useAnimate();
-  const [scopeHours, animateHours] = useAnimate();
-  const [scopeDays, animateDays] = useAnimate();
-
-  useEffect(() => {
-    animateSeconds(
-      scopeSeconds.current,
-      { scale: [0, 1], opacity: [0, 1] },
-      { ease: "easeInOut", type: "keyframes" }
-    );
-  }, [seconds, animateSeconds]);
-
-  useEffect(() => {
-    animateMinutes(
-      scopeMinutes.current,
-      { scale: [0, 1], opacity: [0, 1] },
-      { ease: "easeInOut", type: "keyframes" }
-    );
-  }, [minutes, animateSeconds]);
-
-  useEffect(() => {
-    animateHours(
-      scopeHours.current,
-      { scale: [0, 1], opacity: [0, 1] },
-      { ease: "easeInOut", type: "keyframes" }
-    );
-  }, [hours, animateHours]);
-
-  useEffect(() => {
-    animateDays(
-      scopeDays.current,
-      { scale: [0, 1], opacity: [0, 1] },
-      { ease: "easeInOut", type: "keyframes" }
-    );
-  }, [days, animateDays]);
-
   return (
     <section
       className="relative flex justify-center items-center flex-col px-7 py-10"
@@ -100,10 +60,7 @@ export default function Presentation() {
         radius="lg"
         isBlurred
       >
-        <CardBody
-          className="flex items-center justify-center flex-col"
-          style={{ textShadow: "0px 1px 1px rgb(0,0,0)" }}
-        >
+        <CardBody className="flex items-center justify-center flex-col">
           <motion.div
             variants={animation06}
             initial="hidden"
@@ -120,7 +77,7 @@ export default function Presentation() {
               enableBackground="new 0 0 2588.233 499.412"
               xmlSpace="preserve"
               width="220"
-              fill="rgb(255, 255, 255)"
+              fill="rgb(59, 7, 100)"
             >
               <g>
                 <path d="M2159.697,423.532c-28.752,26.217-57.105,30.613-74.174,33.505c-0.275,2.366-0.508,4.732-0.718,7.098   c60.061-3.57,104.258-41.387,113.786-84.779c-4.626-0.043-9.189-0.083-13.775-0.126   C2180.168,395.667,2172.248,411.659,2159.697,423.532z" />
@@ -144,52 +101,92 @@ export default function Presentation() {
             </svg>
           </motion.div>
           <motion.h1
-            className={`${rouge.className} text-6xl mt-5 text-center text-zinc-200`}
+            className={`text-6xl mt-5 text-center text-purple-950`}
+            style={{
+              fontFamily: "rumble",
+            }}
             variants={animation01}
             initial="hidden"
             whileInView="visible"
             custom={1}
           >
-            Solo Faltan
+            Sólo Faltan
           </motion.h1>
 
           <motion.div
-            className={`${clicker.className} my-10 flex justify-evenly w-full text-4xl max-w-md text-zinc-200`}
+            className={`${clicker.className} mt-10 mb-5 flex justify-evenly w-full text-4xl max-w-md text-zinc-100`}
             variants={animation03}
             initial="hidden"
             whileInView="visible"
           >
             <label className="flex flex-col items-center">
-              <span ref={scopeDays} className={`${ruge.className} mb-2`}>
-                {formatNumber(days)}
+              <span
+                className={`${ruge.className} mb-2 bg-orange-500 p-2 rounded-md w-14 text-center`}
+              >
+                <NumberFlow
+                  value={days}
+                  transformTiming={{
+                    duration: 500,
+                  }}
+                  trend={0}
+                  format={{ minimumIntegerDigits: 2 }}
+                />
               </span>
-              <span className="text-2xl">Dias</span>
+              <span className="text-2xl -rotate-12">Dias</span>
             </label>
-            <label>:</label>
+            <label className="mt-3">:</label>
             <label className="flex flex-col items-center">
-              <span ref={scopeHours} className={`${ruge.className} mb-2`}>
-                {formatNumber(hours)}
+              <span
+                className={`${ruge.className} mb-2 bg-orange-500 p-2 rounded-md w-14 text-center`}
+              >
+                <NumberFlow
+                  value={hours}
+                  transformTiming={{
+                    duration: 500,
+                  }}
+                  trend={0}
+                  format={{ minimumIntegerDigits: 2 }}
+                />
               </span>
-              <span className="text-2xl">Horas</span>
+              <span className="text-2xl rotate-12">Horas</span>
             </label>
-            <label>:</label>
+            <label className="mt-3">:</label>
             <label className="flex flex-col items-center">
-              <span ref={scopeMinutes} className={`${ruge.className} mb-2`}>
-                {formatNumber(minutes)}
+              <span
+                className={`${ruge.className} mb-2 bg-orange-500 p-2 rounded-md w-14 text-center`}
+              >
+                <NumberFlow
+                  value={minutes}
+                  transformTiming={{
+                    duration: 500,
+                  }}
+                  trend={0}
+                  format={{ minimumIntegerDigits: 2 }}
+                />
               </span>
-              <span className="text-2xl">Min</span>
+              <span className="text-2xl -rotate-12">Min</span>
             </label>
-            <label>:</label>
+            <label className="mt-3">:</label>
             <label className="flex flex-col items-center">
-              <span ref={scopeSeconds} className={`${ruge.className} mb-2`}>
-                {formatNumber(seconds)}
+              <span
+                className={`${ruge.className} mb-2 bg-orange-500 p-2 rounded-md w-14 text-center`}
+              >
+                <NumberFlow
+                  value={seconds}
+                  transformTiming={{
+                    duration: 500,
+                  }}
+                  trend={0}
+                  format={{ minimumIntegerDigits: 2 }}
+                />
               </span>
-              <span className="text-2xl">Seg</span>
+              <span className="text-2xl rotate-12">Seg</span>
             </label>
           </motion.div>
 
           <motion.p
             className={`${aref.className} text-base px-5 text-center max-w-md text-zinc-200`}
+            style={{ textShadow: "0px 1px 1px rgb(0,0,0)" }}
             variants={animation04}
             initial="hidden"
             whileInView="visible"

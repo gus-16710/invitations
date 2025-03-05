@@ -53,21 +53,21 @@ const ModalOpening = ({
               >
                 <CardBody className="flex items-center justify-center flex-col overflow-clip">
                   <motion.div
-                    className="p-5 my-4 custom-text-purple"
+                    className="my-4 custom-text-purple"
                     variants={animationModal}
                     initial="hidden"
                     whileInView="visible"
                   >
                     <p
-                      className={`text-6xl mb-5`}
+                      className={`text-4xl mb-5 text-center`}
                       style={{
                         fontFamily: "verve",
                       }}
                     >
-                      Merlina
+                      Jannia Monserrath
                     </p>
                     <p className={`${notoSerif.className} text-center text-lg`}>
-                      23 de Marzo 2025
+                      Sábado 29 de Marzo 2025
                     </p>
                   </motion.div>
                 </CardBody>
