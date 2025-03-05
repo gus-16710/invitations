@@ -40,7 +40,7 @@ export default function Header() {
           className={`text-zinc-50 text-6xl mb-5 z-10 absolute -bottom-7`}
           style={{
             textShadow: "0px 2px 1px rgb(0,0,0)",
-            fontFamily: "verve",            
+            fontFamily: "verve",
           }}
         >
           Merlina
@@ -65,20 +65,35 @@ export default function Header() {
         VEN A CELEBRAR CONMIGO
       </p>
 
-      <div
+      {/* <div
         className="flex justify-center mt-5 text-orange-500 items-center"
         style={{
           fontFamily: "rumble",
         }}
       >
-        <span className="text-center border-r-3 border-purple-600/50 w-28 text-5xl h-20 self-center">
+        <span className="text-center  w-28 text-5xl h-20 self-center">
           12
         </span>
-        <span className="text-center  w-28 text-4xl h-16 self-center">
+        <span className="text-center border-x-3 border-purple-600/50 w-28 text-4xl h-20 self-center">
           Marzo
         </span>
-        <span className="text-center border-l-3 border-purple-600/50 w-28 text-5xl h-20 self-center">
+        <span className="text-center  w-28 text-5xl h-20 self-center">
           18 <label className="text-base block">Hrs</label>
+        </span>
+      </div> */}
+      <div
+        className="flex justify- items-center mt-5 text-orange-500 gap-x-4"
+        style={{ fontFamily: "rumble" }}
+      >
+        <span className="text-center text-5xl h-20 flex items-center justify-center">
+          12
+        </span>
+        <span className="px-3 text-center border-x-4 border-purple-600/40 text-4xl h-20 flex items-center justify-center">
+          Marzo
+        </span>
+        <span className="text-center text-5xl h-20 flex items-center justify-center">
+          18
+          <label className="text-base">Hrs</label>
         </span>
       </div>
     </section>
