@@ -1,13 +1,13 @@
 import { motion } from "framer-motion";
 import { notoSans } from "./Fonts";
-import {
-  animation01,
-  animation02,
-  headerText01,
-  headerText02,
-  headerText03,
-} from "./Animations";
 import Image from "next/image";
+import {
+  animate03,
+  animate04,
+  animate05,
+  animate06,
+  animate07,
+} from "./Animations";
 
 export default function Header() {
   return (
@@ -15,7 +15,12 @@ export default function Header() {
       className="flex justify-center items-center flex-col"
       style={{ height: "100svh" }}
     >
-      <div className="relative flex justify-center mt-5">
+      <motion.div
+        className="relative flex justify-center mt-5"
+        variants={animate03}
+        initial="hidden"
+        whileInView="visible"
+      >
         <Image
           width={280}
           height={280}
@@ -33,28 +38,37 @@ export default function Header() {
         >
           Jannia Monserrath
         </p>
-      </div>
+      </motion.div>
 
-      <p
+      <motion.p
         className={`mt-10 text-4xl text-zinc-100 `}
         style={{
           fontFamily: "rumble",
         }}
+        variants={animate04}
+        initial="hidden"
+        whileInView="visible"
       >
         - MIS 3 AÑOS -
-      </p>
+      </motion.p>
 
-      <p
+      <motion.p
         className={`mt-2 text-2xl text-zinc-100`}
         style={{
           fontFamily: "rumble",
         }}
+        variants={animate05}
+        initial="hidden"
+        whileInView="visible"
       >
         VEN Y FESTEJA CONMIGO
-      </p>
-      <div
+      </motion.p>
+      <motion.div
         className="flex justify- items-center mt-5 gap-x-4"
         style={{ fontFamily: "rumble", color: "#f5a524" }}
+        variants={animate06}
+        initial="hidden"
+        whileInView="visible"
       >
         <span className="text-center text-5xl h-20 flex items-center justify-center">
           29
@@ -66,10 +80,15 @@ export default function Header() {
           13
           <label className="text-base">Hrs</label>
         </span>
-      </div>
-      <p className={`${notoSans.className} text-zinc-100 mt-5`}>
+      </motion.div>
+      <motion.p
+        className={`${notoSans.className} text-zinc-100 mt-5`}
+        variants={animate07}
+        initial="hidden"
+        whileInView="visible"
+      >
         Iglesia San Salvador, Acajete.
-      </p>
+      </motion.p>
     </section>
   );
 }

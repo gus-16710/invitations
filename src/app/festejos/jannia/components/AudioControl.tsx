@@ -18,11 +18,11 @@ export default function AudioControl() {
     <>
       <motion.button
         type="button"
-        className="bg-purple-800/80 p-3 rounded-full text-zinc-50 fixed bottom-0 right-0 font-medium shadow-md mb-5 mr-5 transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg z-10"
+        className="bg-purple-100/10 p-3 rounded-full text-zinc-50 fixed bottom-0 right-0 font-medium shadow-md mb-5 mr-5 transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg z-10"
         onClick={() => setIsPlayed(!isPlayed)}
         initial={{ opacity: 0, scale: 0, y: -100 }}
         animate={{ opacity: 1, scale: 1, y: 0 }}
-        transition={{ duration: 1, delay: 1, ease: "anticipate" }} 
+        transition={{ duration: 1, delay: 5, ease: "anticipate" }} 
       >
         {isPlayed ? <FaVolumeUp /> : <FaVolumeOff />}
       </motion.button>
