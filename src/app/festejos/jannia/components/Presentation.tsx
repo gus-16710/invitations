@@ -2,6 +2,11 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Card, CardBody } from "@nextui-org/react";
 import {
+  animate02,
+  animate03,
+  animate04,
+  animate05,
+  animate06,
   animation01,
   animation03,
   animation04,
@@ -62,7 +67,7 @@ export default function Presentation() {
       >
         <CardBody className="flex items-center justify-center flex-col overflow-clip">
           <motion.div
-            variants={animation06}
+            variants={animate03}
             initial="hidden"
             whileInView="visible"
           >
@@ -105,7 +110,7 @@ export default function Presentation() {
             style={{
               fontFamily: "rumble",
             }}
-            variants={animation01}
+            variants={animate04}
             initial="hidden"
             whileInView="visible"
             custom={1}
@@ -115,7 +120,7 @@ export default function Presentation() {
 
           <motion.div
             className={`${clicker.className} mt-10 mb-5 flex justify-evenly w-full text-4xl max-w-md text-zinc-100`}
-            variants={animation03}
+            variants={animate05}
             initial="hidden"
             whileInView="visible"
           >
@@ -167,7 +172,7 @@ export default function Presentation() {
               <span className="text-2xl -rotate-12">Min</span>
             </label>
             <label className="mt-3">:</label>
-            <label className="flex flex-col items-center">
+            <label className="flex flex-col items-center">              
               <span
                 className={`mb-2 rounded-md w-14 text-center`}
                 style={{ fontFamily: "rumble", backgroundColor: "#f5a524" }}
@@ -187,7 +192,7 @@ export default function Presentation() {
           <motion.p
             className={`${aref.className} text-base px-5 text-center max-w-md text-zinc-100`}
             style={{ textShadow: "0px 1px 1px rgb(0,0,0)" }}
-            variants={animation04}
+            variants={animate06}
             initial="hidden"
             whileInView="visible"
           >

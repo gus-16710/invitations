@@ -1,17 +1,5 @@
 import { motion } from "framer-motion";
-import {
-  aref,
-  clicker,
-  love,
-  notoSans,
-  notoSerif,
-  oswald,
-  playFair,
-  rajdhani,
-  rouge,
-  ruge,
-  yaseva,
-} from "./Fonts";
+import { notoSans } from "./Fonts";
 import {
   animation01,
   animation02,
@@ -43,7 +31,7 @@ export default function Header() {
             fontFamily: "verve",
           }}
         >
-          Jannia Monserrath        
+          Jannia Monserrath
         </p>
       </div>
 
@@ -79,7 +67,9 @@ export default function Header() {
           <label className="text-base">Hrs</label>
         </span>
       </div>
-      <p className={`${notoSans.className} text-zinc-100 mt-5`}>Iglesia San Salvador, Acajete.</p>
+      <p className={`${notoSans.className} text-zinc-100 mt-5`}>
+        Iglesia San Salvador, Acajete.
+      </p>
     </section>
   );
 }

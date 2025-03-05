@@ -11,6 +11,12 @@ import {
   ModalFooter,
 } from "@nextui-org/react";
 import {
+  animate03,
+  animate04,
+  animate05,
+  animate06,
+  animate07,
+  animate08,
   animation01,
   animation03,
   animation04,
@@ -34,14 +40,14 @@ const ModalMap = ({
       placement="center"
       backdrop="blur"
       classNames={{
-        closeButton: "text-zinc-100"
+        closeButton: "text-zinc-100",
       }}
     >
       <ModalContent className="bg-zinc-100/0 text-zinc-100">
         {(onClose) => (
           <>
             <ModalHeader
-              className={`${notoSans.className} flex flex-col gap-1 items-center text-3xl`}              
+              className={`${notoSans.className} flex flex-col gap-1 items-center text-3xl`}
             >
               Ceremonia Religiosa
             </ModalHeader>
@@ -90,7 +96,7 @@ export default function Ceremony() {
       >
         <CardBody className="flex items-center justify-center flex-col overflow-clip">
           <motion.div
-            variants={animation06}
+            variants={animate03}
             initial="hidden"
             whileInView="visible"
           >
@@ -133,7 +139,7 @@ export default function Ceremony() {
             style={{
               fontFamily: "rumble",
             }}
-            variants={animation01}
+            variants={animate04}
             initial="hidden"
             whileInView="visible"
             custom={1}
@@ -141,39 +147,54 @@ export default function Ceremony() {
             Ceremonia
           </motion.h1>
 
-          <p
+          <motion.p
             className={`text-6xl mt-8 text-zinc-100`}
             style={{
               fontFamily: "rumble",
               textShadow: "0px 1px 1px rgb(0,0,0)",
             }}
+            variants={animate05}
+            initial="hidden"
+            whileInView="visible"
           >
             13:00 Hrs
-          </p>
+          </motion.p>
 
-          <p
+          <motion.p
             className={`${aref.className} text-2xl mt-2 text-zinc-100 text-center`}
             style={{ textShadow: "0px 1px 1px rgb(0,0,0)" }}
+            variants={animate06}
+            initial="hidden"
+            whileInView="visible"
           >
             Parroquia San Salvador
-          </p>
+          </motion.p>
 
-          <p
+          <motion.p
             className={`${notoSans.className} text-center mx-5 mt-8 text-sm max-w-md p-2 text-zinc-100`}
+            variants={animate07}
+            initial="hidden"
+            whileInView="visible"
           >
             C. Ayuntamiento 5, 91320 Acajete, Ver.
-          </p>
+          </motion.p>
 
-          <Button
-            color="warning"
-            variant="shadow"
-            className="mt-5 z-10"
-            onPress={() => {
-              onOpen();
-            }}
+          <motion.div
+            variants={animate08}
+            initial="hidden"
+            whileInView="visible"
           >
-            <FaLocationDot /> Ver ubicación
-          </Button>
+            <Button
+              color="warning"
+              variant="shadow"
+              className="mt-5 z-10"
+              onPress={() => {
+                onOpen();
+              }}
+            >
+              <FaLocationDot /> Ver ubicación
+            </Button>
+          </motion.div>
 
           <svg
             xmlns="http://www.w3.org/2000/svg"

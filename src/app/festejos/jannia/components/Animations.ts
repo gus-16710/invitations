@@ -1,3 +1,76 @@
+export const animate01 = {
+  hidden: { opacity: 0, y: 100 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 1, delay: 0.5 },
+  },
+};
+
+export const animate02 = {
+  hidden: { opacity: 0, y: -100 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 1, delay: 0.5 },
+  },
+};
+
+export const animate03 = {
+  hidden: { opacity: 0, scale: 0 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: { duration: 1, type: "spring", stiffness: 70, delay: 0.5 },
+  },
+};
+
+export const animate04 = {
+  hidden: { opacity: 0, scale: 0 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: { duration: 1, type: "spring", stiffness: 70, delay: 1.5 },
+  },
+};
+
+export const animate05 = {
+  hidden: { opacity: 0, scale: 0 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: { duration: 1, type: "spring", stiffness: 70, delay: 2.5 },
+  },
+};
+
+export const animate06 = {
+  hidden: { opacity: 0, scale: 0 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: { duration: 1, type: "spring", stiffness: 70, delay: 3.5 },
+  },
+};
+
+export const animate07 = {
+  hidden: { opacity: 0, scale: 0 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: { duration: 1, type: "spring", stiffness: 70, delay: 4.5 },
+  },
+};
+
+export const animate08 = {
+  hidden: { opacity: 0, scale: 0 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: { duration: 1, type: "spring", stiffness: 70, delay: 5.5 },
+  },
+};
+/** */
+
 export const headerText01 = {
   hidden: { opacity: 0, y: 100 },
   visible: {
@@ -48,7 +121,7 @@ export const animationModal = {
   hidden: { y: -150, rotate: 360 },
   visible: {
     y: 0,
-    rotate: 0,    
+    rotate: 0,
     transition: { duration: 2 },
   },
 };
@@ -108,7 +181,7 @@ export const animation07 = {
 };
 
 export const animationSvg01 = {
-  hidden: {    
+  hidden: {
     // y: 0,
     rotate: 0,
     // x: 100,
@@ -119,7 +192,7 @@ export const animationSvg01 = {
     //y: [0, 10, 20, 10, 0],
     //scale: [1, 1.5, 1],
     // opacity: [0, 0.5, 1, 0.5, 0],
-    // x: 100,    
+    // x: 100,
     rotate: [310, 315, 310],
     transition: { duration: 3, repeat: Infinity },
     //transition: { duration: 1, type: "spring", stiffness: 70, delay: 0.4 },
@@ -127,7 +200,7 @@ export const animationSvg01 = {
 };
 
 export const animationSvg02 = {
-  hidden: {    
+  hidden: {
     // y: 0,
     //rotate: 0,
     // x: 100,
@@ -138,7 +211,7 @@ export const animationSvg02 = {
     //y: [0, 10, 20, 10, 0],
     scale: [0.9, 1, 0.9],
     // opacity: [0, 0.5, 1, 0.5, 0],
-    // x: 100,    
+    // x: 100,
     //rotate: [310],
     transition: { duration: 3, repeat: Infinity },
     //transition: { duration: 1, type: "spring", stiffness: 70, delay: 0.4 },
@@ -146,8 +219,8 @@ export const animationSvg02 = {
 };
 
 export const animationSvg03 = {
-  hidden: {        
-    rotate: 280,    
+  hidden: {
+    rotate: 280,
     scale: 1,
     // opacity: 0, rotate: 0
   },
@@ -155,7 +228,7 @@ export const animationSvg03 = {
     //y: [0, 10, 20, 10, 0],
     scale: [0.9, 1, 0.9],
     // opacity: [0, 0.5, 1, 0.5, 0],
-    // x: 100,    
+    // x: 100,
     //rotate: [310],
     transition: { duration: 3, repeat: Infinity },
     //transition: { duration: 1, type: "spring", stiffness: 70, delay: 0.4 },
@@ -163,7 +236,7 @@ export const animationSvg03 = {
 };
 
 export const animationSvg04 = {
-  hidden: {            
+  hidden: {
     //scale: 1,
     // opacity: 0, rotate: 0
     opacity: 0,
@@ -173,7 +246,7 @@ export const animationSvg04 = {
     y: [100, 0, -200, -400, -200, 0, 100],
     //scale: [0.9, 1, 0.9],
     opacity: [0, 1, 0],
-    // x: 100,    
+    // x: 100,
     //rotate: [310],
     transition: { duration: 30, repeat: Infinity },
     //transition: { duration: 1, type: "spring", stiffness: 70, delay: 0.4 },
