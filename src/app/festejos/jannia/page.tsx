@@ -117,7 +117,7 @@ export default function Jannia() {
   }, []);
 
   return (
-    <main className="bg-[url('/img/festejos/merlina/background.jpg')] bg-center bg-cover bg-fixed h-screen">
+    <main className="bg-[url('/img/festejos/jannia/background.jpg')] bg-center bg-cover bg-fixed h-screen">
       {open && <Main />}      
       <ModalOpening
         isOpen={isOpen}

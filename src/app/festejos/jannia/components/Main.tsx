@@ -92,7 +92,7 @@ export default function Main() {
 
   return (
     <div
-      className="max-w-3xl m-auto shadow-large bg-[url('/img/festejos/merlina/background.jpg')] bg-center bg-cover bg-fixed"
+      className="max-w-3xl m-auto shadow-large bg-[url('/img/festejos/jannia/background.jpg')] bg-center bg-cover bg-fixed"
       style={{ backgroundColor: "#f4f3e1" }}
     >
       {open && (
@@ -137,7 +137,7 @@ export default function Main() {
           </Splide>
           <AudioControl />
           <motion.div
-            className="bg-[url('/img/festejos/merlina/bats-background.png')] bg-cover bg-bottom absolute inset-0 z-0"
+            className="bg-[url('/img/festejos/jannia/bats-background.png')] bg-cover bg-bottom absolute inset-0 z-0"
             variants={animation05}
             initial="hidden"
             whileInView="visible"            

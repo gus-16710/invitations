@@ -25,10 +25,10 @@ export default function Header() {
           width={280}
           height={280}
           alt="Merlina Cartoon"
-          src="/img/festejos/merlina/merlina.png"
+          src="/img/festejos/jannia/merlina.png"
           className="mb-5"
         />
-        <div className="bg-[url('/img/festejos/merlina/ribbon-purple.png')] bg-contain bg-no-repeat bg-center absolute w-80 h-36 -bottom-16" />
+        <div className="bg-[url('/img/festejos/jannia/ribbon-purple.png')] bg-contain bg-no-repeat bg-center absolute w-80 h-36 -bottom-16" />
         <p
           className={`text-zinc-50 text-4xl mb-5 z-10 absolute -bottom-10 text-center`}
           style={{
