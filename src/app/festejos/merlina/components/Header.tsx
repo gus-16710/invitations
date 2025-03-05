@@ -65,22 +65,22 @@ export default function Header() {
         VEN A CELEBRAR CONMIGO
       </p>
 
-      <p
-        className="flex justify-center mt-5 text-orange-500 items-baseline"
+      <div
+        className="flex justify-center mt-5 text-orange-500 items-center"
         style={{
           fontFamily: "rumble",
         }}
       >
-        <span className="text-center border-r-3 border-purple-600/50 w-28 text-5xl h-20">
+        <span className="text-center border-r-3 border-purple-600/50 w-28 text-5xl h-20 self-center">
           12
         </span>
-        <span className="text-center  w-28 text-4xl h-16">
+        <span className="text-center  w-28 text-4xl h-16 self-center">
           Marzo
         </span>
-        <span className="text-center border-l-3 border-purple-600/50 w-28 text-5xl h-20">
+        <span className="text-center border-l-3 border-purple-600/50 w-28 text-5xl h-20 self-center">
           18 <label className="text-base block">Hrs</label>
         </span>
-      </p>
+      </div>
     </section>
   );
 }

@@ -59,7 +59,7 @@ const ModalOpening = ({
                     whileInView="visible"
                   >
                     <p
-                      className={`text-7xl mb-5`}
+                      className={`text-6xl mb-5`}
                       style={{
                         fontFamily: "verve",
                       }}
