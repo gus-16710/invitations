@@ -29,18 +29,18 @@ export default function Header() {
     >
       <div className="relative flex justify-center mt-5">
         <Image
-          width={180}
-          height={180}
+          width={280}
+          height={280}
           alt="Merlina Cartoon"
-          src="/img/festejos/merlina/merlina-cartoon.png"
+          src="/img/festejos/merlina/merlina.png"
           className="mb-5"
         />
         <div className="bg-[url('/img/festejos/merlina/ribbon-purple.png')] bg-contain bg-no-repeat bg-center absolute w-80 h-36 -bottom-16" />
         <p
-          className={`text-zinc-50 text-5xl mb-5 z-10 absolute -bottom-7`}
+          className={`text-zinc-50 text-6xl mb-5 z-10 absolute -bottom-7`}
           style={{
             textShadow: "0px 2px 1px rgb(0,0,0)",
-            fontFamily: "verve",
+            fontFamily: "verve",            
           }}
         >
           Merlina
@@ -48,7 +48,7 @@ export default function Header() {
       </div>
 
       <p
-        className={`mt-10 text-4xl text-zinc-100`}
+        className={`mt-10 text-4xl text-zinc-100 `}
         style={{
           fontFamily: "rumble",
         }}
@@ -66,18 +66,18 @@ export default function Header() {
       </p>
 
       <p
-        className="flex justify-center mt-5 text-orange-500 items-center"
+        className="flex justify-center mt-5 text-orange-500 items-baseline"
         style={{
           fontFamily: "rumble",
         }}
       >
-        <span className="text-center border-r-3 border-purple-600/50 w-28 text-5xl h-16">
+        <span className="text-center border-r-3 border-purple-600/50 w-28 text-5xl h-20">
           12
         </span>
-        <span className="text-center border-r-3 border-purple-600/50 w-28 text-4xl h-16">
+        <span className="text-center  w-28 text-4xl h-16">
           Marzo
         </span>
-        <span className="text-center w-28 text-5xl">
+        <span className="text-center border-l-3 border-purple-600/50 w-28 text-5xl h-20">
           18 <label className="text-base block">Hrs</label>
         </span>
       </p>
