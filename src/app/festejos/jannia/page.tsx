@@ -80,7 +80,7 @@ const ModalOpening = ({
                 whileInView="visible"
               >
                 <Button
-                  color="secondary"
+                  color="warning"
                   variant="solid"
                   onPress={() => {
                     setOpen(true);
@@ -110,7 +110,7 @@ const ModalOpening = ({
   );
 };
 
-export default function Fifteen() {
+export default function Jannia() {
   const [open, setOpen] = useState(false);
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
 

@@ -3,8 +3,6 @@ import { useEffect, useState } from "react";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import Header from "./Header";
 import Presentation from "./Presentation";
-import Location from "./Location";
-import Gallery from "./Gallery";
 import ThankYou from "./ThankYou";
 import {
   Modal,
@@ -18,8 +16,10 @@ import { oswald } from "./Fonts";
 import "@splidejs/react-splide/css";
 import { animation05 } from "./Animations";
 import AudioControl from "./AudioControl";
-import Itinerary from "./Itinerary";
 import Confirm from "./Confirm";
+import GodParents from "./GodParents";
+import Ceremony from "./Ceremony";
+import Reception from "./Reception";
 
 const ModalInstructions = ({
   isOpen,
@@ -125,6 +125,15 @@ export default function Main() {
             </SplideSlide>
             <SplideSlide>
               <Presentation />
+            </SplideSlide>
+            <SplideSlide>
+              <GodParents />
+            </SplideSlide>
+            <SplideSlide>
+              <Ceremony />
+            </SplideSlide>
+            <SplideSlide>
+              <Reception />
             </SplideSlide>
             {/* <SplideSlide>
               <Location />

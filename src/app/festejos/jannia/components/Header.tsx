@@ -65,8 +65,8 @@ export default function Header() {
         VEN Y FESTEJA CONMIGO
       </p>
       <div
-        className="flex justify- items-center mt-5 text-orange-500 gap-x-4"
-        style={{ fontFamily: "rumble" }}
+        className="flex justify- items-center mt-5 gap-x-4"
+        style={{ fontFamily: "rumble", color: "#f5a524" }}
       >
         <span className="text-center text-5xl h-20 flex items-center justify-center">
           29
@@ -79,6 +79,7 @@ export default function Header() {
           <label className="text-base">Hrs</label>
         </span>
       </div>
+      <p className={`${notoSans.className} text-zinc-100 mt-5`}>Iglesia San Salvador, Acajete.</p>
     </section>
   );
 }
