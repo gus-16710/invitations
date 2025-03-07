@@ -153,7 +153,7 @@ export default function Presentation() {
               </span>
               <span className="text-2xl -rotate-12">Dias</span>
             </label>
-            <label className="mt-3">:</label>
+            <label className="mt-1">:</label>
             <label className="flex flex-col items-center">
               <span
                 className={`mb-2 rounded-md w-14 text-center relative overflow-clip`}
@@ -183,7 +183,7 @@ export default function Presentation() {
               </span>
               <span className="text-2xl rotate-12">Horas</span>
             </label>
-            <label className="mt-3">:</label>
+            <label className="mt-1">:</label>
             <label className="flex flex-col items-center">
               <span
                 className={`mb-2 rounded-md w-14 text-center relative overflow-clip`}
@@ -213,7 +213,7 @@ export default function Presentation() {
               </span>
               <span className="text-2xl -rotate-12">Min</span>
             </label>
-            <label className="mt-3">:</label>
+            <label className="mt-1">:</label>
             <label className="flex flex-col items-center">
               <span
                 className={`mb-2 rounded-md w-14 text-center relative overflow-clip`}

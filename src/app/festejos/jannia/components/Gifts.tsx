@@ -18,19 +18,7 @@ export default function Gifts() {
     <section
       className="flex items-center justify-center flex-col px-7 py-10"
       style={{ height: "100svh" }}
-    >
-      {/* <video
-        autoPlay
-        loop
-        muted
-        className="absolute top-0 left-0 w-full h-full object-cover z-0"
-      >
-        <source
-          src="/img/quinces/sarang/176198-855206384_tiny.mp4"
-          type="video/mp4"
-        />
-        Tu navegador no soporta videos HTML5.
-      </video> */}
+    >     
       <Card
         className="border-none bg-background/5 h-full w-full"
         shadow="sm"
@@ -110,7 +98,7 @@ export default function Gifts() {
               width="75px"
               version="1.1"
               viewBox="0 0 443.903 443.903"
-              enable-background="new 0 0 443.903 443.903"
+              enableBackground="new 0 0 443.903 443.903"
               className="mt-5"
               variants={animate06}
               initial="hidden"
