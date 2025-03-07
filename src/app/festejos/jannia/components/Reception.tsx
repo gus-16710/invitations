@@ -9,6 +9,7 @@ import {
   ModalHeader,
   ModalBody,
   ModalFooter,
+  Spinner,
 } from "@nextui-org/react";
 import {
   animate03,
@@ -51,7 +52,7 @@ const ModalMap = ({
             >
               Recepción
             </ModalHeader>
-            <ModalBody>
+            <ModalBody className="relative flex justify-center items-center">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3758.9314405435452!2d-97.01360192959004!3d19.587437696773524!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85db294ac4d55acd%3A0x1e677c488428793a!2sEscuela%20Primaria%20Jos%C3%A9%20Mar%C3%ADa%20Morelos%20y%20Pav%C3%B3n!5e0!3m2!1ses!2smx!4v1741208292619!5m2!1ses!2smx"
                 height="100%"
@@ -59,8 +60,9 @@ const ModalMap = ({
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                className="w-full rounded-large"
+                className="rounded-large z-20"
               ></iframe>
+              <Spinner className="absolute z-10" color="warning"/>
             </ModalBody>
             <ModalFooter className="flex justify-center">
               <button

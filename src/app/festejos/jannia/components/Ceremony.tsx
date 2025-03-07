@@ -9,6 +9,7 @@ import {
   ModalHeader,
   ModalBody,
   ModalFooter,
+  Spinner,
 } from "@nextui-org/react";
 import {
   animate03,
@@ -17,10 +18,6 @@ import {
   animate06,
   animate07,
   animate08,
-  animation01,
-  animation03,
-  animation04,
-  animation06,
 } from "./Animations";
 import { aref, notoSans } from "./Fonts";
 import { FaLocationDot } from "react-icons/fa6";
@@ -51,7 +48,7 @@ const ModalMap = ({
             >
               Ceremonia Religiosa
             </ModalHeader>
-            <ModalBody>
+            <ModalBody className="relative flex justify-center items-center">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6321.776220891816!2d-97.01349126801564!3d19.586615655214686!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85db28d2641f25a5%3A0xa75e88d195689d89!2sParroquia%20San%20Salvador!5e0!3m2!1ses!2smx!4v1741206809085!5m2!1ses!2smx"
                 height="100%"
@@ -59,8 +56,9 @@ const ModalMap = ({
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                className="w-full rounded-large"
+                className="rounded-large z-20"
               ></iframe>
+              <Spinner className="absolute z-10" color="warning"/>
             </ModalBody>
             <ModalFooter className="flex justify-center">
               <button
