@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { notoSans } from "./Fonts";
-import Image from "next/image";
+//import Image from "next/image";
 import {
   animate03,
   animate04,
@@ -8,6 +8,7 @@ import {
   animate06,
   animate07,
 } from "./Animations";
+import { Image } from "@nextui-org/react";
 
 export default function Header() {
   return (
@@ -21,12 +22,19 @@ export default function Header() {
         initial="hidden"
         whileInView="visible"
       >
-        <Image
+        {/* <Image
           width={280}
           height={280}
           alt="Merlina Cartoon"
           src="/img/festejos/jannia/merlina.png"
           className="mb-5"
+        /> */}
+        <Image          
+          width={280}
+          height={280}
+          alt="Merlina Cartoon"
+          src="/img/festejos/jannia/merlina.png"
+          className="mb-5 z-0"
         />
         <div className="bg-[url('/img/festejos/jannia/ribbon-purple.png')] bg-contain bg-no-repeat bg-center absolute w-80 h-36 -bottom-16" />
         <p
