@@ -159,7 +159,7 @@ export default function Reception() {
             initial="hidden"
             whileInView="visible"
           >
-            15:00 Hrs
+            13:30 Hrs
           </motion.p>
 
           <motion.p

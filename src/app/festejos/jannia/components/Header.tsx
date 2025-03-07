@@ -9,8 +9,25 @@ import {
   animate07,
 } from "./Animations";
 import { Image } from "@nextui-org/react";
+import { useEffect, useState } from "react";
+import NumberFlow from "@number-flow/react";
 
-export default function Header() {
+export default function Header({ splide }: { splide: number }) {
+  const [day, setDay] = useState(0);
+  const [hour, setHour] = useState(0);
+
+  useEffect(() => {
+    if (splide === 0) {
+      setTimeout(() => {
+        setDay(29);
+        setHour(13);
+      }, 500);
+    } else {
+      setDay(0);
+      setHour(0);
+    }
+  }, [splide]);
+
   return (
     <section
       className="flex justify-center items-center flex-col"
@@ -22,14 +39,7 @@ export default function Header() {
         initial="hidden"
         whileInView="visible"
       >
-        {/* <Image
-          width={280}
-          height={280}
-          alt="Merlina Cartoon"
-          src="/img/festejos/jannia/merlina.png"
-          className="mb-5"
-        /> */}
-        <Image          
+        <Image
           width={280}
           height={280}
           alt="Merlina Cartoon"
@@ -78,14 +88,30 @@ export default function Header() {
         initial="hidden"
         whileInView="visible"
       >
-        <span className="text-center text-5xl h-20 flex items-center justify-center">
-          29
+        <span className="text-center text-5xl h-20 flex items-center justify-center">          
+          <NumberFlow
+            value={day}
+            transformTiming={{
+              delay: 2000,
+              duration: 3500,
+            }}
+            trend={0}
+            format={{ minimumIntegerDigits: 2 }}
+          />
         </span>
         <span className="px-3 text-center border-x-4 border-purple-600/40 text-4xl h-20 flex items-center justify-center">
           Marzo
         </span>
         <span className="text-center text-5xl h-20 flex items-center justify-center">
-          13
+          <NumberFlow
+            value={hour}
+            transformTiming={{
+              delay: 2000,
+              duration: 3500,
+            }}
+            trend={0}
+            format={{ minimumIntegerDigits: 2 }}
+          />
           <label className="text-base">Hrs</label>
         </span>
       </motion.div>

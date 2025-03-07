@@ -80,6 +80,7 @@ const ModalInstructions = ({
 export default function Main() {
   const { isOpen, onOpen, onOpenChange, onClose } = useDisclosure();
   const [open, setOpen] = useState(false);
+  const [splide, setSplide] = useState(0);
 
   useEffect(() => {
     onOpen();
@@ -118,9 +119,12 @@ export default function Main() {
               },
             }}
             className="z-10"
+            onActive={(splide: any) => {              
+              setSplide(splide.index);
+            }}
           >
             <SplideSlide>
-              <Header />
+              <Header splide={splide}/>
             </SplideSlide>
             <SplideSlide>
               <Presentation />
