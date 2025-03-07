@@ -92,7 +92,7 @@ export default function Header({ splide }: { splide: number }) {
           <NumberFlow
             value={day}
             transformTiming={{
-              delay: 2000,
+              delay: 2500,
               duration: 3500,
             }}
             trend={0}
@@ -106,7 +106,7 @@ export default function Header({ splide }: { splide: number }) {
           <NumberFlow
             value={hour}
             transformTiming={{
-              delay: 2000,
+              delay: 2500,
               duration: 3500,
             }}
             trend={0}
