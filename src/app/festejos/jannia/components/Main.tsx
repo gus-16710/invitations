@@ -19,6 +19,8 @@ import GodParents from "./GodParents";
 import Ceremony from "./Ceremony";
 import Reception from "./Reception";
 import Image from "next/image";
+import ThankYou from "./Gifts";
+import Gifts from "./Gifts";
 
 const ModalInstructions = ({
   isOpen,
@@ -72,7 +74,7 @@ const ModalInstructions = ({
             </ModalBody>
           </>
         )}
-      </ModalContent>      
+      </ModalContent>
     </Modal>
   );
 };
@@ -119,12 +121,12 @@ export default function Main() {
               },
             }}
             className="z-10"
-            onActive={(splide: any) => {              
+            onActive={(splide: any) => {
               setSplide(splide.index);
             }}
           >
             <SplideSlide>
-              <Header splide={splide}/>
+              <Header splide={splide} />
             </SplideSlide>
             <SplideSlide>
               <Presentation />
@@ -137,14 +139,17 @@ export default function Main() {
             </SplideSlide>
             <SplideSlide>
               <Reception />
-            </SplideSlide>            
+            </SplideSlide>
+            <SplideSlide>
+              <Gifts />
+            </SplideSlide>
           </Splide>
           <AudioControl />
           <motion.div
             className="bg-[url('/img/festejos/jannia/bats-background.png')] bg-cover bg-bottom absolute inset-0 z-0"
             variants={animation05}
             initial="hidden"
-            whileInView="visible"            
+            whileInView="visible"
           />
         </motion.div>
       )}
