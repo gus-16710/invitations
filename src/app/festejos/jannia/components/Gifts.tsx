@@ -1,17 +1,13 @@
 import { motion } from "framer-motion";
-import { aref, pinyion, rouge } from "./Fonts";
-import {
-  animate03,
-  animate04,
-  animate05,
-  animate06,
-  animate07,
-} from "./Animations";
-import { Card, CardBody, Chip } from "@nextui-org/react";
+import { aref } from "./Fonts";
+import { animate03, animate04 } from "./Animations";
 
 export default function Gifts() {
   return (
-    <section className="flex items-center justify-center flex-col relative h-screen overflow-hidden">
+    <section
+      className="flex items-center justify-center flex-col relative overflow-clip"
+      style={{ height: "100svh" }}
+    >
       <video
         autoPlay
         loop
