@@ -11,7 +11,7 @@ export default function Gifts() {
         muted
         className="absolute top-0 left-0 w-full h-full object-cover z-0"
       >
-        <source src="/img/quinces/alondra/gifts.mp4" type="video/mp4" />
+        <source src="/img/festejos/jannia/video-gifts.mp4" type="video/mp4" />
         Tu navegador no soporta videos HTML5.
       </video>
 
