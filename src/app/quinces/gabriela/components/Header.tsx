@@ -39,12 +39,15 @@ export default function Header() {
         />
       </div>
       <motion.p
-        className={`${mea.className} text-7xl z-20 text-golden pb-4 mb-4 mt-2 pl-2`}
+        className={`${mea.className} text-5xl z-20 text-golden pb-4 my-2 p-2 text-center`}
         variants={animation03}
         initial="hidden"
         whileInView="visible"
+        style={{
+          fontFamily: "candlescript",
+        }}
       >
-        Gabriela
+        Gabriela Yeyetzi
       </motion.p>
       <motion.p
         className={`${notoSerif.className} mx-10 text-center text-xs z-20 font-bolder tracking-widest text-zinc-900`}
@@ -72,7 +75,10 @@ export default function Header() {
         >
           Sábado
         </span>
-        <span className={`${standard.className} text-5xl mx-3 text-golden`}>
+        <span
+          className={`${standard.className} text-5xl mx-3 text-golden`}
+          style={{ color: "#a57d35" }}
+        >
           26
         </span>
         <span

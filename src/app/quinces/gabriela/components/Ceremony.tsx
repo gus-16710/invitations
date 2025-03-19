@@ -18,9 +18,10 @@ import {
   animation04,
   animation06,
 } from "./Animations";
-import { aref, mea, pinyion, playFair, rajdhani } from "./Fonts";
-import { IoMdTime } from "react-icons/io";
+import { aref, greatVibes, mea, pinyion, playFair, rajdhani } from "./Fonts";
 import { LuMapPin } from "react-icons/lu";
+import { useEffect, useState } from "react";
+import NumberFlow from "@number-flow/react";
 
 const MapCeremony = () => (
   <iframe
@@ -69,8 +70,19 @@ const ModalMap = ({
   );
 };
 
-export default function Ceremony() {
+export default function Ceremony({ splide }: { splide: number }) {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
+  const [hour, setHour] = useState(0);
+
+  useEffect(() => {
+    if (splide === 2) {
+      setTimeout(() => {
+        setHour(14);
+      }, 500);
+    } else {
+      setHour(0);
+    }
+  }, [splide]);
 
   return (
     <>
@@ -86,7 +98,7 @@ export default function Ceremony() {
         >
           <CardBody className="flex items-center justify-center flex-col overflow-clip">
             <motion.h1
-              className={`${mea.className} text-5xl text-center z-50 text-golden-2 p-5`}
+              className={`${greatVibes.className} text-5xl text-center z-50 text-golden-2 p-2 mb-2`}
               variants={animation01}
               initial="hidden"
               whileInView="visible"
@@ -171,19 +183,24 @@ export default function Ceremony() {
               />
             </motion.div>
 
-            <motion.div
-              className={`my-3 ${aref.className} p-1 text-center`}
+            <motion.p
+              className={`${aref.className} text-center text-5xl`}
               variants={animation03}
               initial="hidden"
               whileInView="visible"
               style={{ color: "#513704" }}
-            >              
-              <p className="text-5xl">
-               14:00 HRS
-              </p>
-            </motion.div>
+            >
+              <NumberFlow
+                value={hour}
+                transformTiming={{
+                  duration: 3000,
+                }}
+                trend={0}
+              />
+              :00 hrs
+            </motion.p>
             <motion.p
-              className={`${playFair.className} mx-10 mt-1 mb-5 text-center text-base z-20 text-zinc-900 max-w-md`}              
+              className={`${playFair.className} mx-10 text-center text-base z-20 text-zinc-900 max-w-md`}
               variants={animation03}
               initial="hidden"
               whileInView="visible"

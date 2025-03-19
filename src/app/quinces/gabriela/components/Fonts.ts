@@ -13,6 +13,12 @@ import {
   Mea_Culpa,
   League_Spartan,
   Old_Standard_TT,
+  Pacifico,
+  Lobster,
+  Ole,
+  Nabla,
+  Trochut,
+  Updock,
 } from "next/font/google";
 
 export const greatVibes = Great_Vibes({ subsets: ["latin"], weight: "400" });
@@ -42,5 +48,6 @@ export const standard = Old_Standard_TT({
   subsets: ["latin"],
   weight: ["400"],
 });
+export const pacifico = Updock({ subsets: ["latin"], weight: ["400"] });
 
 //box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;

@@ -11,7 +11,7 @@ import {
   useDisclosure,
 } from "@nextui-org/react";
 import { useEffect, useState, Dispatch, SetStateAction } from "react";
-import { mea, playFair } from "./components/Fonts";
+import { greatVibes, mea, pacifico, playFair } from "./components/Fonts";
 import { animation01, animation03 } from "./components/Animations";
 
 import "./styles.css";
@@ -47,17 +47,20 @@ const ModalOpening = ({
                 initial="hidden"
                 whileInView="visible"
               >
-                MIS <span className="text-5xl text-golden">XV</span> AÑOS
+                MIS <span className="text-4xl text-golden">XV</span> AÑOS
               </motion.h1>
             </ModalHeader>
             <ModalBody>
               <motion.p
-                className={`${mea.className} flex justify-center text-7xl text-golden z-20 text-center p-5`}              
+                className={`${mea.className} flex justify-center text-6xl text-golden z-20 text-center py-5`}              
                 variants={animation03}
                 initial="hidden"
-                whileInView="visible"
+                whileInView="visible"  
+                style={{
+                  fontFamily: "black",
+                }}              
               >
-                Gabriela
+                Gabriela Yeyetzi
               </motion.p>
             </ModalBody>
             <ModalFooter className="flex justify-center">

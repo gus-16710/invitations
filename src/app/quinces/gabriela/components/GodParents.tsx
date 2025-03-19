@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Carousel, Flowbite } from "flowbite-react";
-import { greatVibes, league, pinyion, playFair } from "./Fonts";
+import { greatVibes, league, pinyion } from "./Fonts";
 import { animation01, animation03, animation06 } from "./Animations";
 import { Card, CardBody } from "@nextui-org/react";
 import type { FlowbiteCarouselTheme } from "flowbite-react";
@@ -58,7 +58,7 @@ export default function GodParents() {
               <Carousel theme={customTheme}>
                 <div className="flex h-full items-center justify-center pb-10 text-gray-800 flex-col px-5 text-center">
                   <motion.h1
-                    className={`${pinyion.className} text-5xl text-golden-2 mb-5 text-center`}
+                    className={`${greatVibes.className} text-5xl text-golden-2 mb-2 text-center p-2`}
                     variants={animation01}
                     initial="hidden"
                     whileInView="visible"
@@ -143,7 +143,7 @@ export default function GodParents() {
 
                 <div className="flex h-full items-center justify-center pb-10 text-gray-800 flex-col px-5 text-center">
                   <motion.h1
-                    className={`${pinyion.className} text-5xl mb-5 text-center text-golden-2`}
+                    className={`${greatVibes.className} text-5xl mb-2 text-center text-golden-2 p-2`}
                     variants={animation01}
                     initial="hidden"
                     whileInView="visible"

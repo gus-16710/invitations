@@ -12,15 +12,16 @@ import {
   Spinner,
   useDisclosure,
 } from "@nextui-org/react";
-import { aref, mea, pinyion, playFair, rajdhani } from "./Fonts";
+import { aref, greatVibes, mea, pinyion, playFair, rajdhani } from "./Fonts";
 import {
   animation01,
   animation03,
   animation04,
   animation06,
 } from "./Animations";
-import { IoMdTime } from "react-icons/io";
 import { LuMapPin } from "react-icons/lu";
+import { useEffect, useState } from "react";
+import NumberFlow from "@number-flow/react";
 
 const MapSalon = () => (
   <iframe
@@ -69,8 +70,23 @@ const ModalMap = ({
   );
 };
 
-export default function Reception() {
+export default function Reception({ splide }: { splide: number }) {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
+
+  const [hour, setHour] = useState(0);
+  const [minutes, setMinutes] = useState(0);
+
+  useEffect(() => {
+    if (splide === 3) {
+      setTimeout(() => {
+        setHour(15);
+        setMinutes(30);
+      }, 500);
+    } else {
+      setHour(0);
+      setMinutes(0);
+    }
+  }, [splide]);
 
   return (
     <>
@@ -86,7 +102,7 @@ export default function Reception() {
         >
           <CardBody className="flex items-center justify-center flex-col">
             <motion.h1
-              className={`${mea.className} text-5xl  text-center z-50 text-golden-2 p-5`}
+              className={`${greatVibes.className} text-5xl  text-center z-50 text-golden-2 p-2 mb-2`}
               variants={animation01}
               initial="hidden"
               whileInView="visible"
@@ -169,19 +185,32 @@ export default function Reception() {
                 className="h-36 w-36 mt-5 shadow-lg"
               />
             </motion.div>
-            <motion.div
-              className={`my-3 ${aref.className} text-center`}
+            <motion.p
+              className={`${aref.className} text-center text-5xl`}
               variants={animation03}
               initial="hidden"
               whileInView="visible"
               style={{ color: "#513704" }}
             >
-              <p className="flex items-center justify-center gap-1 text-5xl">
-                15:30 HRS
-              </p>
-            </motion.div>
+              <NumberFlow
+                value={hour}
+                transformTiming={{
+                  duration: 3000,
+                }}
+                trend={0}
+              />
+              :
+              <NumberFlow
+                value={minutes}
+                transformTiming={{
+                  duration: 3000,
+                }}
+                trend={0}
+              />{" "}
+              hrs
+            </motion.p>
             <motion.p
-              className={`${playFair.className} mx-10 mt-1 mb-5 text-center text-base z-20 text-zinc-900`}
+              className={`${playFair.className} mx-10 text-center text-base z-20 text-zinc-900`}
               variants={animation03}
               initial="hidden"
               whileInView="visible"

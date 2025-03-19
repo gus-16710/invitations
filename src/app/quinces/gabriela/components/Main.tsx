@@ -21,6 +21,7 @@ import { oswald } from "./Fonts";
 import "@splidejs/react-splide/css";
 import { animation05 } from "./Animations";
 import AudioControl from "./AudioControl";
+import DressCode from "./DressCode";
 
 const ModalInstructions = ({
   isOpen,
@@ -82,6 +83,7 @@ const ModalInstructions = ({
 export default function Main() {
   const { isOpen, onOpen, onOpenChange, onClose } = useDisclosure();
   const [open, setOpen] = useState(false);
+  const [splide, setSplide] = useState(0);
 
   useEffect(() => {
     onOpen();
@@ -117,6 +119,10 @@ export default function Main() {
               },
             }}
             className="z-10"
+            onActive={(splide: any) => {
+              console.log(splide.index);
+              setSplide(splide.index);
+            }}
           >
             <SplideSlide>
               <Header />
@@ -125,18 +131,18 @@ export default function Main() {
               <Presentation />
             </SplideSlide>
             <SplideSlide>
-              <Ceremony />
+              <Ceremony splide={splide}/>
             </SplideSlide>
             <SplideSlide>
-              <Reception />
+              <Reception splide={splide}/>
             </SplideSlide>
             <SplideSlide>
               <GodParents />
             </SplideSlide>
-            {/* <SplideSlide>
-              <Gallery />
-            </SplideSlide>
             <SplideSlide>
+              <DressCode />
+            </SplideSlide>
+            {/* <SplideSlide>
               <Gifts />
             </SplideSlide>
             <SplideSlide>
