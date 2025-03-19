@@ -1,10 +1,5 @@
-import { useState } from "react";
-import {
-  animation01,
-  animation04,
-  animation06,
-} from "./Animations";
-import { aref, greatVibes, notoSans } from "./Fonts";
+import { animation01, animation03, animation04, animation06 } from "./Animations";
+import { aref, greatVibes } from "./Fonts";
 import { motion } from "framer-motion";
 import {
   Button,
@@ -13,10 +8,6 @@ import {
   ModalHeader,
   ModalBody,
   ModalFooter,
-  Code,
-  Popover,
-  PopoverTrigger,
-  PopoverContent,
   useDisclosure,
   Card,
   CardBody,
@@ -29,17 +20,6 @@ const ModalCCard = ({
   isOpen: boolean;
   onOpenChange: () => void;
 }) => {
-  const [openCount, setOpenCount] = useState(false);
-  const [openCL, setOpenCL] = useState(false);
-
-  const clipBoard = (text: string) => {
-    navigator.clipboard.writeText(text);
-    setTimeout(() => {
-      setOpenCount(false);
-      setOpenCL(false);
-    }, 1000);
-  };
-
   return (
     <Modal
       isOpen={isOpen}
@@ -52,74 +32,36 @@ const ModalCCard = ({
         {(onClose) => (
           <>
             <ModalHeader className="flex flex-col gap-1">
-              Datos Bancarios
+              ¿Que es una lluvia de sobres?
             </ModalHeader>
             <ModalBody>
               <div className="flex flex-col ">
-                <label className={`${notoSans.className} ml-1`}>
-                  Beneficiario:
-                </label>
-                <Code>Rocio Díaz Romero</Code>{" "}
-                <label className={`${notoSans.className} ml-1 mt-2`}>
-                  Banco:
-                </label>
-                <Code>BBVA Bancomer</Code>{" "}
-                <label className={`${notoSans.className} ml-1 mt-2`}>
-                  Cuenta:
-                </label>
-                <div className="flex justify-between items-center">
-                  <Code className="w-full">655030651102</Code>
-                  <Popover
-                    placement="top"
-                    color="foreground"
-                    isOpen={openCount}
-                    onOpenChange={(open) => setOpenCount(open)}
-                  >
-                    <PopoverTrigger>
-                      <Button
-                        size="sm"
-                        className="ml-1"
-                        variant="faded"
-                        onClick={() => clipBoard("655030651102")}
-                      >
-                        Copiar
-                      </Button>
-                    </PopoverTrigger>
-                    <PopoverContent>
-                      <div className="px-1 py-2">
-                        <div className="text-tiny">Cuenta copiada</div>
-                      </div>
-                    </PopoverContent>
-                  </Popover>
-                </div>
-                <label className={`${notoSans.className} ml-1 mt-2`}>
-                  CLABE:
-                </label>
-                <div className="flex justify-between items-center">
-                  <Code className="w-full">0145806550365110265</Code>
-                  <Popover
-                    placement="top"
-                    color="foreground"
-                    isOpen={openCL}
-                    onOpenChange={(open) => setOpenCL(open)}
-                  >
-                    <PopoverTrigger>
-                      <Button
-                        size="sm"
-                        className="ml-1"
-                        variant="faded"
-                        onClick={() => clipBoard("0145806550365110265")}
-                      >
-                        Copiar
-                      </Button>
-                    </PopoverTrigger>
-                    <PopoverContent>
-                      <div className="px-1 py-2">
-                        <div className="text-tiny">CLABE copiada</div>
-                      </div>
-                    </PopoverContent>
-                  </Popover>
-                </div>
+                <motion.p
+                  className={`${aref.className} text-base text-justify`}
+                  variants={animation03}
+                  initial="hidden"
+                  whileInView="visible"
+                  style={{ color: "#513704" }}
+                >
+                  En una fiesta de XV años, la lluvia de sobres es una tradición
+                  en la que los invitados entregan sobres con dinero en efectivo
+                  💵 como regalo para la quinceañera. En lugar de obsequios
+                  físicos, los invitados aportan un sobre con una cantidad
+                  simbólica de dinero como muestra de apoyo y buenos deseos para
+                  la festejada.
+                </motion.p>
+
+                <motion.p
+                  className={`${aref.className} text-base text-justify`}
+                  variants={animation03}
+                  initial="hidden"
+                  whileInView="visible"
+                  style={{ color: "#513704" }}
+                >
+                  Es una forma práctica y significativa de ayudar a la festejada
+                  a ahorrar para un viaje, estudios o cualquier otro plan que
+                  tenga en esta nueva etapa de su vida. 🎉✨
+                </motion.p>
               </div>
             </ModalBody>
             <ModalFooter>
@@ -136,7 +78,6 @@ const ModalCCard = ({
 
 export default function Gifts() {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
-  const openLink = (link: string) => window.open(link, "_blank");
 
   return (
     <>
@@ -240,10 +181,10 @@ export default function Gifts() {
               viewBox="0 0 1024 1024"
               fill="rgb(165, 125, 53)"
               version="1.1"
-              className="z-10 mt-5"
+              className="z-10"
               variants={animation06}
               initial="hidden"
-              whileInView="visible"              
+              whileInView="visible"
             >
               <path
                 d="M424.482 312.012c-4.414 0-8.078-3.578-8.078-8s3.5-8 7.922-8h0.156c4.422 0 8 3.578 8 8s-3.578 8-8 8zM424.482 280.014c-4.414 0-8.078-3.578-8.078-8s3.5-8 7.922-8h0.156c4.422 0 8 3.578 8 8s-3.578 8-8 8zM424.482 248.016c-4.414 0-8.078-3.578-8.078-8s3.5-8 7.922-8h0.156c4.422 0 8 3.578 8 8s-3.578 8-8 8zM424.482 216.018c-4.414 0-8.078-3.578-8.078-8s3.5-8 7.922-8h0.156c4.422 0 8 3.578 8 8s-3.578 8-8 8zM424.482 184.02c-4.414 0-8.078-3.578-8.078-8s3.5-8 7.922-8h0.156c4.422 0 8 3.578 8 8s-3.578 8-8 8zM424.482 152.022c-4.414 0-8.078-3.578-8.078-8s3.5-8 7.922-8h0.156c4.422 0 8 3.578 8 8s-3.578 8-8 8z"
@@ -354,6 +295,18 @@ export default function Gifts() {
                 fill=""
               />
             </motion.svg>
+
+            <Button
+              color="warning"
+              variant="flat"
+              onPress={() => {
+                onOpen();
+              }}
+              className="z-10 mt-10"
+            >
+              {/* <IoOpenOutline /> */}
+              ¿Que es una lluvia de sobres?
+            </Button>
           </CardBody>
         </Card>
       </section>
