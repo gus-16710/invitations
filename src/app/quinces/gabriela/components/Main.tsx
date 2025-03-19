@@ -6,9 +6,7 @@ import Presentation from "./Presentation";
 import Ceremony from "./Ceremony";
 import Reception from "./Reception";
 import GodParents from "./GodParents";
-import Gallery from "./Gallery";
 import Gifts from "./Gifts";
-import Confirm from "./Confirm";
 import {
   Modal,
   ModalBody,
@@ -95,7 +93,7 @@ export default function Main() {
   }, []);
 
   return (
-    <div className="max-w-3xl m-auto bg-[url('/img/quinces/gabriela/background.jpg')] bg-center bg-cover bg-fixed shadow-large">
+    <div className="max-w-3xl m-auto bg-[url('/img/quinces/gabriela/background-02.jpg')] bg-center bg-cover bg-fixed shadow-large">
       {open && (
         <motion.div
           initial={{ opacity: 0 }}
@@ -119,8 +117,7 @@ export default function Main() {
               },
             }}
             className="z-10"
-            onActive={(splide: any) => {
-              console.log(splide.index);
+            onActive={(splide: any) => {              
               setSplide(splide.index);
             }}
           >
@@ -142,10 +139,10 @@ export default function Main() {
             <SplideSlide>
               <DressCode />
             </SplideSlide>
-            {/* <SplideSlide>
+             <SplideSlide>
               <Gifts />
             </SplideSlide>
-            <SplideSlide>
+            {/* <SplideSlide>
               <Confirm />
             </SplideSlide> */}
           </Splide>

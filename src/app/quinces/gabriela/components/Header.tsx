@@ -1,12 +1,11 @@
 import { motion } from "framer-motion";
-import { league, mea, notoSerif, playFair, standard } from "./Fonts";
+import { league, notoSerif, playFair, standard } from "./Fonts";
 import {
   animation01,
   animation02,
   animation03,
   animation04,
 } from "./Animations";
-import NumberFlow from "@number-flow/react";
 
 export default function Header() {
   return (
@@ -39,12 +38,12 @@ export default function Header() {
         />
       </div>
       <motion.p
-        className={`${mea.className} text-5xl z-20 text-golden pb-4 my-2 p-2 text-center`}
+        className={`text-5xl z-20 text-golden pb-4 my-2 p-2 text-center`}
         variants={animation03}
         initial="hidden"
-        whileInView="visible"
+        whileInView="visible"        
         style={{
-          fontFamily: "candlescript",
+          fontFamily: "black",
         }}
       >
         Gabriela Yeyetzi

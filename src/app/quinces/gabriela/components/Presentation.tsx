@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { motion, useAnimate } from "framer-motion";
+import { motion } from "framer-motion";
 import { Card, CardBody } from "@nextui-org/react";
 import {
   animation01,
@@ -7,7 +7,7 @@ import {
   animation04,
   animation06,
 } from "./Animations";
-import { aref, clicker, greatVibes, mea, pinyion, yaseva } from "./Fonts";
+import { aref, clicker, greatVibes,  yaseva } from "./Fonts";
 import NumberFlow from "@number-flow/react";
 
 function formatNumber(number: number) {

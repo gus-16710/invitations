@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Carousel, Flowbite } from "flowbite-react";
-import { greatVibes, league, pinyion } from "./Fonts";
+import { greatVibes, league } from "./Fonts";
 import { animation01, animation03, animation06 } from "./Animations";
 import { Card, CardBody } from "@nextui-org/react";
 import type { FlowbiteCarouselTheme } from "flowbite-react";
