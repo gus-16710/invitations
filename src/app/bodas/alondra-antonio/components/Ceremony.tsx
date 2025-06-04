@@ -50,7 +50,7 @@ const ModalMap = ({
             </ModalHeader>
             <ModalBody className="relative flex justify-center items-center">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2658.940584345849!2d-96.92546855044417!3d19.52830722889927!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85db2dff1a7cdc9b%3A0x7ebb1a4a9284e7ed!2sCatedral%20Metropolitana%20de%20la%20Inmaculada%20Concepci%C3%B3n!5e0!3m2!1ses!2smx!4v1700178969653!5m2!1ses!2smx"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3760.4418679540026!2d-96.88788532437461!3d19.522634281776043!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85db322e47c1d50b%3A0x34209a04c0890e21!2sParroquia%20de%20Nuestra%20Se%C3%B1ora%20de%20la%20Paz!5e0!3m2!1ses!2smx!4v1749079675519!5m2!1ses!2smx"
                 height="100%"
                 style={{ border: "0" }}
                 allowFullScreen
@@ -58,7 +58,7 @@ const ModalMap = ({
                 referrerPolicy="no-referrer-when-downgrade"
                 className="absolute rounded-large z-20"
               ></iframe>
-              <Spinner className="absolute z-10" color="pink"/>
+              <Spinner className="absolute z-10" color="pink" />
             </ModalBody>
             <ModalFooter>
               <button
@@ -98,19 +98,20 @@ export default function Ceremony() {
 
         {/*  */}
         <motion.div
-          className={`${greatVibes.className} relative mt-5 text-center text-zinc-300 bg-gradient-to-l from-pink-600 from-10% via-pink-600 via-30% to-pink-500 to-80% w-full py-6 overflow-clip`}
+          className={`${greatVibes.className} relative mt-5 text-center text-zinc-300 bg-gradient-to-l from-red-700 from-10% via-red-600 via-30% to-red-600 to-80% w-full py-2 overflow-clip`}
           initial={{ x: 100, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ duration: 1, ease: "easeInOut", delay: 0.9 }}
           style={{ textShadow: "1px 1px 4px rgba(0,0,0,0.6)" }}
         >
-          <p className="flex items-center justify-center gap-1 text-7xl">
+          <div className="border-t-2 border-yellow-400 w-full border-dashed"></div>
+          <p className="flex items-center justify-center gap-1 text-7xl py-6">
             12:00 hrs
           </p>
           <motion.svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 512 512"
-            width="200px"
+            width="250px"
             //fill="rgb(75 85 99)"
             initial={{ y: 100, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
@@ -123,6 +124,7 @@ export default function Ceremony() {
               <path d="M376,240a24,24,0,1,0,24,24A24.028,24.028,0,0,0,376,240Zm0,32a8,8,0,1,1,8-8A8.009,8.009,0,0,1,376,272Z"></path>
             </g>
           </motion.svg>
+          <div className="border-t-2 border-yellow-400 w-full border-dashed"></div>
         </motion.div>
         <motion.p
           className={`${markazi.className} text-center mx-5 mt-5 text-2xl text-zinc-300 max-w-md`}
@@ -137,7 +139,7 @@ export default function Ceremony() {
           initial={{ y: 100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: false }}
-          transition={{ duration: 1, ease: "easeInOut", delay: 1.5 }}
+          transition={{ duration: 1, ease: "easeInOut", delay: 1.2 }}
         >
           P.º de las Palmas 1, Jardines de las Animas, 91196 Xalapa-Enríquez,
           Ver.
@@ -146,7 +148,7 @@ export default function Ceremony() {
           initial={{ y: 100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: false }}
-          transition={{ duration: 1, ease: "easeInOut", delay: 1.6 }}
+          transition={{ duration: 1, ease: "easeInOut", delay: 1.2 }}
           className="mt-5"
         >
           <Button

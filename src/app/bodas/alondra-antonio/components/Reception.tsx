@@ -48,7 +48,8 @@ const ModalMap = ({
             </ModalHeader>
             <ModalBody className="relative flex justify-center items-center">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15039.966715973163!2d-96.93584853950922!3d19.541970800388352!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85db2e02dd008fb9%3A0x4166db4c76faf835!2sSalones%20Aurora!5e0!3m2!1ses!2smx!4v1700179455841!5m2!1ses!2smx"
+                //<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3758.8920960368346!2d-96.97808282437306!3d19.58912298172396!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85db2f4f34afbb95%3A0xb6bce389f3a02738!2sQuinta%20Los%20Helechos!5e0!3m2!1ses!2smx!4v1749079732650!5m2!1ses!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3758.8920960368346!2d-96.97808282437306!3d19.58912298172396!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85db2f4f34afbb95%3A0xb6bce389f3a02738!2sQuinta%20Los%20Helechos!5e0!3m2!1ses!2smx!4v1749079732650!5m2!1ses!2smx"
                 height="100%"
                 style={{ border: "0" }}
                 allowFullScreen
@@ -96,21 +97,22 @@ export default function Reception() {
 
         {/*  */}
         <motion.div
-          className={`${greatVibes.className} relative mt-5 text-center text-zinc-300 bg-gradient-to-r from-pink-600 from-10% via-pink-600 via-30% to-pink-500 to-80% w-full py-6 overflow-clip`}
+          className={`${greatVibes.className} relative mt-5 text-center text-zinc-300 bg-gradient-to-r from-red-700 from-10% via-red-600 via-30% to-red-600 to-80% w-full py-2 overflow-clip`}
           initial={{ x: -100, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           viewport={{ once: false }}
           transition={{ duration: 1, ease: "easeInOut", delay: 0.9 }}
           style={{ textShadow: "1px 1px 4px rgba(0,0,0,0.6)" }}
         >
-          <p className="flex items-center justify-center gap-1 text-7xl">
+          <div className="border-t-2 border-yellow-400 w-full border-dashed"></div>
+          <p className="flex items-center justify-center gap-1 text-7xl py-6">
             15:00 hrs
           </p>
           <motion.svg
             xmlns="http://www.w3.org/2000/svg"
             id="Capa_1"
             viewBox="0 0 512 512"
-            width="200px"
+            width="250px"
             initial={{ y: 100, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 1, ease: "easeOut", delay: 1.2 }}
@@ -130,6 +132,7 @@ export default function Reception() {
               <path d="m293.549 50.879c1.922 0 3.843-.734 5.308-2.201l17.095-17.124c2.927-2.931 2.923-7.68-.009-10.607-2.933-2.928-7.682-2.923-10.607.009l-17.095 17.124c-2.927 2.932-2.923 7.68.009 10.607 1.464 1.462 3.382 2.192 5.299 2.192z"></path>
             </g>
           </motion.svg>
+          <div className="border-t-2 border-yellow-400 w-full border-dashed"></div>
         </motion.div>
         <motion.p
           className={`${markazi.className} text-center mx-5 mt-5 text-2xl text-zinc-300`}
@@ -138,23 +141,23 @@ export default function Reception() {
           viewport={{ once: false }}
           transition={{ duration: 1, ease: "easeInOut", delay: 1.2 }}
         >
-          Salones Aurora
+          Salón Quinta los Helechos
         </motion.p>
         <motion.p
           className={`${notoSans.className} text-center mx-5 mt-3 text-sm text-zinc-300`}
           initial={{ y: 100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: false }}
-          transition={{ duration: 1, ease: "easeInOut", delay: 1.5 }}
+          transition={{ duration: 1, ease: "easeInOut", delay: 1.2 }}
         >
-          Carlos A. Carrillo 23, Aguacatal, 91133 Xalapa-Enriquez, Ver.
+          Sabino 24, 91315 Piletas, Ver.
         </motion.p>
 
         <motion.div
           initial={{ y: 100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: false }}
-          transition={{ duration: 1, ease: "easeInOut", delay: 1.6 }}
+          transition={{ duration: 1, ease: "easeInOut", delay: 1.2 }}
           className="mt-5"
         >
           <Button

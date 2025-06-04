@@ -21,12 +21,13 @@ export default function Presentation() {
           Nos Casamos
         </motion.h1>
         <motion.div
-          className="relative flex items-center justify-center flex-col mt-4 mb-2 text-zinc-300 bg-gradient-to-r from-pink-600 from-10% via-pink-600 via-30% to-pink-500 to-80% py-2 overflow-clip"
+          className="relative flex items-center justify-center flex-col mt-4 mb-2 text-zinc-300 bg-gradient-to-r from-red-700 from-10% via-red-600 via-30% to-red-600 to-80% py-2 overflow-clip"
           initial={{ x: -100, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ duration: 1, ease: "easeOut", delay: 0.8 }}   
           style={{ textShadow: "1px 1px 4px rgba(0,0,0,0.6)"}}       
         >
+          <div className="border-t-2 border-yellow-400 w-full border-dashed"></div>
           <label className={`${playFair.className} pb-1 text-lg`}>
             Febrero
           </label>
@@ -70,6 +71,7 @@ export default function Presentation() {
               <path d="M119.1,115.8c0-1.6,1.3-2.9,2.9-2.9c1.6,0,3,1.4,3,3c0,1.6-1.4,2.9-3.1,2.8C120.3,118.7,119.1,117.4,119.1,115.8z"></path>
             </g>
           </motion.svg>
+          <div className="border-t-2 border-yellow-400 w-full border-dashed"></div>
         </motion.div>
         <motion.p
           className={`${notoSans.className} text-center p-5 max-w-md text-zinc-300`}
