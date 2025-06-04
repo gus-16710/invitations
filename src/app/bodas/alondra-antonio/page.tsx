@@ -10,15 +10,10 @@ import {
   useDisclosure,
 } from "@nextui-org/react";
 import { motion } from "framer-motion";
-import {
-  Bebas_Neue,
-  Dancing_Script,
-  Great_Vibes,
-  Roboto,
+import {  
+  Roboto_Condensed,
   Playfair_Display,
-  Abril_Fatface,
-  League_Spartan,
-  Old_Standard_TT,
+  Abril_Fatface, 
 } from "next/font/google";
 import { RxEyeOpen } from "react-icons/rx";
 
@@ -26,30 +21,12 @@ import Main from "./components/Main";
 
 import "./styles.css";
 
-const bebas = Bebas_Neue({ subsets: ["latin"], weight: "400" });
-export const roboto = Roboto({ subsets: ["latin"], weight: ["400"] });
-export const great = Great_Vibes({ subsets: ["latin"], weight: ["400"] });
-export const dancing = Dancing_Script({
-  subsets: ["latin"],
-  weight: ["400"],
-});
-
-export const playFair = Playfair_Display({
+const roboto = Roboto_Condensed({ subsets: ["latin"], weight: ["400"] });
+const playFair = Playfair_Display({
   subsets: ["latin"],
   weight: ["400", "800"],
 });
-
-export const abril = Abril_Fatface({
-  subsets: ["latin"],
-  weight: ["400"],
-});
-
-export const league = League_Spartan({
-  subsets: ["latin"],
-  weight: ["400", "600", "700"],
-});
-
-export const standard = Old_Standard_TT({
+const abril = Abril_Fatface({
   subsets: ["latin"],
   weight: ["400"],
 });
