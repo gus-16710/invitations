@@ -7,13 +7,13 @@ const playFair = Playfair_Display({ subsets: ["latin"], weight: "400" });
 
 export default function Presentation() {
   return (
-    <section      
+    <section
       className="flex justify-center items-center flex-col"
       style={{ height: "100svh" }}
     >
       <motion.div>
         <motion.h1
-          className={`${greatVibes.className} text-5xl drop-shadow text-center`}
+          className={`${greatVibes.className} text-5xl drop-shadow text-center text-zinc-300`}
           initial={{ y: -100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 1, ease: "easeOut", delay: 0.4 }}
@@ -21,35 +21,25 @@ export default function Presentation() {
           Nos Casamos
         </motion.h1>
         <motion.div
-          className="flex items-center justify-center flex-col mt-4 mb-2 text-gray-600"
-          initial={{ scale: 0, opacity: 0 }}
-          whileInView={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 1, ease: "easeOut", delay: 0.8 }}
+          className="relative flex items-center justify-center flex-col mt-4 mb-2 text-zinc-300 bg-gradient-to-r from-pink-600 from-10% via-pink-600 via-30% to-pink-500 to-80% py-2 overflow-clip"
+          initial={{ x: -100, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ duration: 1, ease: "easeOut", delay: 0.8 }}   
+          style={{ textShadow: "1px 1px 4px rgba(0,0,0,0.6)"}}       
         >
-          <label className={`${playFair.className} pb-1`}>Febrero</label>
+          <label className={`${playFair.className} pb-1 text-lg`}>
+            Febrero
+          </label>
           <div className="flex items-center">
-            <label className={`${playFair.className} p-4`}>SAB</label>
+            <label className={`${playFair.className} p-4 text-2xl`}>SAB</label>
             <label
-              className={`${greatVibes.className} py-2 px-4 border-l-2 border-r-2 border-gray-300 text-5xl`}
+              className={`${greatVibes.className} py-2 px-4 border-l-1 border-r-1 border-pink-500 text-6xl`}
             >
               28
             </label>
-            <label className={`${playFair.className} p-4`}>6PM</label>
+            <label className={`${playFair.className} p-4 text-2xl`}>6PM</label>
           </div>
-          <label className={`${playFair.className}`}>2025</label>
-        </motion.div>
-        <motion.p
-          className={`${notoSans.className} text-center p-5 max-w-md`}
-          initial={{ y: 100, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          transition={{ duration: 1, ease: "easeInOut", delay: 1.2 }}
-        >
-          Despues de muchas aventuras compartidas, daremos el "Si, acepto"
-          seguiremos este emocionante viaje juntos y nos encantaría que nos
-          acompañaran a celebrar esta gran fiesta de nuestra boda, llena de
-          brindis, carcajadas y bailes hasta el amanecer.
-        </motion.p>
-        <div className="flex justify-center mt-5">
+          <label className={`${playFair.className} text-xl`}>2025</label>
           <motion.svg
             xmlns="http://www.w3.org/2000/svg"
             xmlnsXlink="http://www.w3.org/1999/xlink"
@@ -58,12 +48,12 @@ export default function Presentation() {
             y="0px"
             viewBox="0 0 200 200"
             xmlSpace="preserve"
-            width="75px"
-            fill="rgb(75 85 99)"
+            width="250px"            
             initial={{ y: 100, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: false }}
             transition={{ duration: 1, ease: "easeInOut", delay: 1.2 }}
+            className="absolute -top-10 -left-24 fill-slate-100/20"
           >
             <g>
               {" "}
@@ -80,7 +70,20 @@ export default function Presentation() {
               <path d="M119.1,115.8c0-1.6,1.3-2.9,2.9-2.9c1.6,0,3,1.4,3,3c0,1.6-1.4,2.9-3.1,2.8C120.3,118.7,119.1,117.4,119.1,115.8z"></path>
             </g>
           </motion.svg>
-        </div>
+        </motion.div>
+        <motion.p
+          className={`${notoSans.className} text-center p-5 max-w-md text-zinc-300`}
+          initial={{ y: 100, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 1, ease: "easeInOut", delay: 1.2 }}
+        >
+          Despues de muchas aventuras compartidas, daremos el "Si, acepto"
+          seguiremos este emocionante viaje juntos y nos encantaría que nos
+          acompañaran a celebrar esta gran fiesta de nuestra boda, llena de
+          brindis, carcajadas y bailes hasta el amanecer.
+        </motion.p>
+        {/* <div className="flex justify-center mt-5">          
+        </div> */}
       </motion.div>
     </section>
   );
