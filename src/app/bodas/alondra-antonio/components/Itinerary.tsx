@@ -23,7 +23,7 @@ const itinerary = [
   },
   {
     time: "16:30 Hrs",
-    event: "Brindis",
+    event: "Comida",
   },
 ];
 
