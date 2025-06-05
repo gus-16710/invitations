@@ -19,28 +19,7 @@ export default function Presentation() {
           transition={{ duration: 1, ease: "easeOut", delay: 0.4 }}
         >
           Nos Casamos
-        </motion.h1>
-        {/* <motion.div
-          className="relative flex items-center justify-center flex-col mt-4 mb-2 text-zinc-300"
-          initial={{ x: -100, opacity: 0 }}
-          whileInView={{ x: 0, opacity: 1 }}
-          transition={{ duration: 1, ease: "easeOut", delay: 0.8 }}   
-          style={{ textShadow: "1px 1px 4px rgba(0,0,0,0.6)"}}       
-        >          
-          <label className={`${playFair.className} pb-1 text-lg`}>
-            Febrero
-          </label>
-          <div className="flex items-center">
-            <label className={`${playFair.className} p-4 text-2xl`}>SAB</label>
-            <label
-              className={`${greatVibes.className} py-2 px-4 border-l-1 border-r-1 border-zinc-500 text-6xl`}
-            >
-              28
-            </label>
-            <label className={`${playFair.className} p-4 text-2xl`}>6PM</label>
-          </div>
-          <label className={`${playFair.className} text-xl`}>2025</label>          
-        </motion.div> */}
+        </motion.h1>       
         <motion.div
           className="relative flex items-center justify-center flex-col mt-4 mb-2 text-zinc-300"
           initial={{ opacity: 0 }}
@@ -59,7 +38,7 @@ export default function Presentation() {
               delay: 0.3,
             }}
           >
-            Febrero
+            Septiembre
           </motion.label>
 
           {/* Contenedor de fecha - Animación escalonada */}
@@ -137,9 +116,7 @@ export default function Presentation() {
           seguiremos este emocionante viaje juntos y nos encantaría que nos
           acompañaran a celebrar esta gran fiesta de nuestra boda, llena de
           brindis, carcajadas y bailes hasta el amanecer.
-        </motion.p>
-        {/* <div className="flex justify-center mt-5">          
-        </div> */}
+        </motion.p>        
       </motion.div>
     </section>
   );

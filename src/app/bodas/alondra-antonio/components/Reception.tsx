@@ -17,6 +17,8 @@ import {
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { IoMdTime } from "react-icons/io";
 import { Spinner } from "flowbite-react";
+import { useEffect, useState } from "react";
+import NumberFlow from "@number-flow/react";
 
 const greatVibes = Great_Vibes({ subsets: ["latin"], weight: "400" });
 const notoSans = Titillium_Web({ subsets: ["latin"], weight: "400" });
@@ -77,8 +79,18 @@ const ModalMap = ({
   );
 };
 
-export default function Reception() {
+export default function Reception({ splide }: { splide: number }) {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
+
+  const [hour, setHour] = useState(0);
+
+  useEffect(() => {
+    if (splide === 3) {
+      setTimeout(() => setHour(13), 500);
+    } else {
+      setHour(0);
+    }
+  }, [splide]);
 
   return (
     <>
@@ -105,9 +117,23 @@ export default function Reception() {
           style={{ textShadow: "1px 1px 4px rgba(0,0,0,0.6)" }}
         >
           <div className="border-t-2 border-yellow-400 w-full border-dashed"></div>
-          <p className="flex items-center justify-center gap-1 text-7xl py-6">
-            15:00 hrs
-          </p>
+          <motion.p
+            className="flex items-center justify-center gap-1 text-7xl py-6"
+            initial={{ x: 100, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ duration: 2, ease: "easeInOut", delay: 1.2 }}
+          >
+            <NumberFlow
+              trend={-1}
+              value={hour}
+              digits={{ 1: { max: 5 } }}
+              format={{ minimumIntegerDigits: 2 }}
+              transformTiming={{
+                duration: 2900,
+              }}
+            />
+            :00 hrs
+          </motion.p>
           <motion.svg
             xmlns="http://www.w3.org/2000/svg"
             id="Capa_1"
@@ -115,7 +141,7 @@ export default function Reception() {
             width="250px"
             initial={{ y: 100, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 1, ease: "easeOut", delay: 1.2 }}
+            transition={{ duration: 1, ease: "easeOut", delay: 2.5 }}
             className="absolute top-0 -left-5 fill-stone-100/20"
           >
             <g>

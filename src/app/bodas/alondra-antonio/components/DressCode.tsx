@@ -17,7 +17,7 @@ export default function DressCode() {
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
       >
-        Código de Vestimenta
+        Vestimenta
       </motion.h1>
       <div className="flex items-center flex-col justify-center pt-8">
         <motion.div
