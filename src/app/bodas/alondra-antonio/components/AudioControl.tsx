@@ -3,7 +3,7 @@ import { useState, useEffect, useRef } from "react";
 import { motion } from 'framer-motion';
 
 export default function AudioControl() {
-  const [isPlayed, setIsPlayed] = useState(false);
+  const [isPlayed, setIsPlayed] = useState(true);
   const audioPlayer = useRef<HTMLAudioElement>(null);
 
   useEffect(() => {
