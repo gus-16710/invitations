@@ -95,9 +95,9 @@ export default function Ceremony({ splide }: { splide: number }) {
   return (
     <>
       <section
-        className="flex justify-center items-center flex-col pt-20 pb-20"
+        className="flex justify-center items-center flex-col relative"
         style={{ height: "100svh" }}
-      >
+      >        
         <motion.h1
           className={`${greatVibes.className} text-5xl p-5 text-center text-zinc-300`}
           initial={{ y: -100, opacity: 0 }}
@@ -114,7 +114,7 @@ export default function Ceremony({ splide }: { splide: number }) {
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ duration: 1, ease: "easeInOut", delay: 0.9 }}
           style={{ textShadow: "1px 1px 4px rgba(0,0,0,0.6)" }}
-        >
+        >          
           <div className="border-t-2 border-yellow-400 w-full border-dashed"></div>
           <motion.p
             className="flex items-center justify-center gap-1 text-7xl py-6"
@@ -149,7 +149,7 @@ export default function Ceremony({ splide }: { splide: number }) {
               <path d="M376,240a24,24,0,1,0,24,24A24.028,24.028,0,0,0,376,240Zm0,32a8,8,0,1,1,8-8A8.009,8.009,0,0,1,376,272Z"></path>
             </g>
           </motion.svg>
-          <div className="border-t-2 border-yellow-400 w-full border-dashed"></div>
+          <div className="border-t-2 border-yellow-400 w-full border-dashed z-10"></div>
         </motion.div>
         <motion.p
           className={`${markazi.className} text-center mx-5 mt-5 text-2xl text-zinc-300 max-w-md`}

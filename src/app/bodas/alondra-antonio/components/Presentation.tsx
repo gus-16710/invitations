@@ -10,7 +10,7 @@ export default function Presentation() {
     <section
       className="flex justify-center items-center flex-col"
       style={{ height: "100svh" }}
-    >
+    >      
       <motion.div>
         <motion.h1
           className={`${greatVibes.className} text-5xl drop-shadow text-center text-zinc-300`}
@@ -121,3 +121,4 @@ export default function Presentation() {
     </section>
   );
 }
+

@@ -88,9 +88,51 @@ export default function Header() {
 
   return (
     <section
-      className="pb-10 bg-[url('/img/bodas/diana-ernesto/background-section-one.jpg')] bg-cover bg-center flex justify-end items-center flex-col"
-      style={{ height: "100svh" }}
+      className="bg-cover bg-center flex justify-end items-center flex-col relative"
+      style={{
+        height: "100svh",
+        backgroundImage:
+          "linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent), url('/img/bodas/alondra-antonio/header.jpg')",
+      }}
     >
+      <div className="absolute bottom-0 w-full">
+        <svg
+          width="100%"
+          height="50%"
+          id="svg"
+          viewBox="0 0 1440 260"
+          xmlns="http://www.w3.org/2000/svg"
+          className="transition duration-300 ease-in-out delay-150"
+        >
+          <path
+            d="M 0,600 L 0,225 C 119.46666666666664,173.53333333333333 238.93333333333328,122.06666666666668 395,119 C 551.0666666666667,115.93333333333332 743.7333333333333,161.26666666666665 924,187 C 1104.2666666666667,212.73333333333335 1272.1333333333332,218.86666666666667 1440,225 L 1440,600 L 0,600 Z"
+            stroke="none"
+            stroke-width="0"
+            fill-opacity="1"
+            className="transition-all duration-300 ease-in-out delay-150 path-0 fill-red-700"
+          ></path>
+        </svg>
+      </div>
+
+      <div className="absolute top-0 w-full rotate-180">
+        <svg
+          width="100%"
+          height="50%"
+          id="svg"
+          viewBox="0 0 1440 260"
+          xmlns="http://www.w3.org/2000/svg"
+          className="transition duration-300 ease-in-out delay-150"
+        >
+          <path
+            d="M 0,600 L 0,225 C 119.46666666666664,173.53333333333333 238.93333333333328,122.06666666666668 395,119 C 551.0666666666667,115.93333333333332 743.7333333333333,161.26666666666665 924,187 C 1104.2666666666667,212.73333333333335 1272.1333333333332,218.86666666666667 1440,225 L 1440,600 L 0,600 Z"
+            stroke="none"
+            stroke-width="0"
+            fill-opacity="1"
+            className="transition-all duration-300 ease-in-out delay-150 path-0 fill-green-600"
+          ></path>
+        </svg>
+      </div>
+
       <motion.h1
         className={`${bebas.className} p-3 text-5xl text-slate-100 custom-shadow`}
         initial={{ y: -100, opacity: 0 }}
@@ -101,7 +143,7 @@ export default function Header() {
           transition: { duration: 1 },
         }}
       >
-        Diana & Ernesto
+        Alondra & Antonio
       </motion.h1>
       <motion.h2
         className={`${greatVibes.className} p-3 text-6xl text-slate-100 custom-shadow`}

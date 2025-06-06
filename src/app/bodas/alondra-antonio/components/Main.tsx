@@ -146,12 +146,12 @@ export default function Main() {
             <SplideSlide>
               <Itinerary />
             </SplideSlide>
-            <SplideSlide>
+            {/* <SplideSlide>
               <Gallery />
             </SplideSlide>
             <SplideSlide>
               <Gifts />
-            </SplideSlide>
+            </SplideSlide> */}
             <SplideSlide>
               <Confirm />
             </SplideSlide>
