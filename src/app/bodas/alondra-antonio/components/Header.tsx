@@ -1,6 +1,7 @@
 import { motion, useAnimate } from "framer-motion";
 import { Bebas_Neue, Great_Vibes } from "next/font/google";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
+import ReactCanvasConfetti from "react-canvas-confetti";
 import { IoIosArrowDown } from "react-icons/io";
 
 const greatVibes = Great_Vibes({ subsets: ["latin"], weight: "400" });
@@ -17,7 +18,7 @@ export default function Header() {
   const [days, setDays] = useState(0);
 
   const countDownClock = () => {
-    const countDownDate: any = new Date("Feb 28, 2025 12:00:00");
+    const countDownDate: any = new Date("Sep 28, 2025 12:00:00");
 
     const interval = setInterval(() => {
       const now = new Date().getTime();
@@ -86,6 +87,67 @@ export default function Header() {
     );
   }, [days, animateDays]);
 
+  const refAnimationInstance = useRef<confetti.CreateTypes | null>(null);
+
+  const getInstance = useCallback((instance: any) => {
+    refAnimationInstance.current = instance;
+  }, []);
+
+  const makeShot = useCallback((particleRatio: any, opts: any) => {
+    refAnimationInstance.current &&
+      refAnimationInstance.current({
+        ...opts,
+        origin: { y: 0.7 },
+        particleCount: Math.floor(200 * particleRatio),
+        colors: [
+          "F6E17A",
+          "FFBD00",
+          "E89400",
+          "FFCA6C",
+          "FDFFB8",
+          "900C3F",
+          "F0F0F0",
+          "057A55",
+          "C81E1E"
+        ],
+      });
+  }, []);
+
+  const fire = useCallback(() => {
+    makeShot(0.25, {
+      spread: 50,
+      startVelocity: 55,
+    });
+
+    makeShot(0.2, {
+      spread: 60,
+    });
+
+    makeShot(0.35, {
+      spread: 100,
+      decay: 0.91,
+      scalar: 0.8,
+    });
+
+    makeShot(0.1, {
+      spread: 120,
+      startVelocity: 25,
+      decay: 0.92,
+      scalar: 1.2,
+    });
+
+    makeShot(0.1, {
+      spread: 120,
+      startVelocity: 45,
+    });
+  }, [makeShot]);
+
+  useEffect(() => {
+    fire();
+    const timer = setInterval(() => fire(), 5000);
+    () => clearInterval(timer);
+  }, []);
+
   return (
     <section
       className="bg-cover bg-center flex justify-end items-center flex-col relative"
@@ -107,8 +169,8 @@ export default function Header() {
           <path
             d="M 0,600 L 0,225 C 119.46666666666664,173.53333333333333 238.93333333333328,122.06666666666668 395,119 C 551.0666666666667,115.93333333333332 743.7333333333333,161.26666666666665 924,187 C 1104.2666666666667,212.73333333333335 1272.1333333333332,218.86666666666667 1440,225 L 1440,600 L 0,600 Z"
             stroke="none"
-            stroke-width="0"
-            fill-opacity="1"
+            strokeWidth="0"
+            fillOpacity="1"
             className="transition-all duration-300 ease-in-out delay-150 path-0 fill-red-700"
           ></path>
         </svg>
@@ -126,8 +188,8 @@ export default function Header() {
           <path
             d="M 0,600 L 0,225 C 119.46666666666664,173.53333333333333 238.93333333333328,122.06666666666668 395,119 C 551.0666666666667,115.93333333333332 743.7333333333333,161.26666666666665 924,187 C 1104.2666666666667,212.73333333333335 1272.1333333333332,218.86666666666667 1440,225 L 1440,600 L 0,600 Z"
             stroke="none"
-            stroke-width="0"
-            fill-opacity="1"
+            strokeWidth="0"
+            fillOpacity="1"
             className="transition-all duration-300 ease-in-out delay-150 path-0 fill-green-600"
           ></path>
         </svg>
@@ -192,6 +254,18 @@ export default function Header() {
       >
         <IoIosArrowDown className="text-zinc-400" />
       </motion.div>
+
+      <ReactCanvasConfetti
+        refConfetti={getInstance}
+        style={{
+          position: "absolute",
+          pointerEvents: "none",
+          width: "100%",
+          height: "100%",
+          top: 0,
+          left: 0,
+        }}
+      />
     </section>
   );
 }
