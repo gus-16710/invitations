@@ -222,28 +222,28 @@ export default function Header() {
         transition={{ duration: 1, delay: 1.2 }}
       >
         <div className="text-center m-0">
-          <div className="my-0 mx-3 p-2 text-3xl" ref={scopeDays}>
+          <div className="my-0 mx-3 p-2 text-4xl" ref={scopeDays}>
             {formatNumber(days)}
           </div>
-          <div className="my-0 mx-3 text-center text-1xl">Días</div>
+          <div className="my-0 mx-3 text-center text-2xl">Días</div>
         </div>
         <div className="text-center m-0">
-          <div className="my-0 mx-3 p-2 text-3xl" ref={scopeHours}>
+          <div className="my-0 mx-3 p-2 text-4xl" ref={scopeHours}>
             {formatNumber(hours)}
           </div>
-          <div className="my-0 mx-3 text-center text-1xl">Horas</div>
+          <div className="my-0 mx-3 text-center text-2xl">Horas</div>
         </div>
         <div className="text-center m-0">
-          <div className="my-0 mx-3 p-2 text-3xl" ref={scopeMinutes}>
+          <div className="my-0 mx-3 p-2 text-4xl" ref={scopeMinutes}>
             {formatNumber(minutes)}
           </div>
-          <div className="my-0 mx-3 text-center text-1xl">Minutos</div>
+          <div className="my-0 mx-3 text-center text-2xl">Min</div>
         </div>
         <div className="text-center m-0">
-          <div className="my-0 mx-3 p-2 text-3xl" ref={scopeSeconds}>
+          <div className="my-0 mx-3 p-2 text-4xl" ref={scopeSeconds}>
             {formatNumber(seconds)}
           </div>
-          <div className="my-0 mx-3 text-center text-1xl">Segundos</div>
+          <div className="my-0 mx-3 text-center text-2xl">Seg</div>
         </div>
       </motion.div>
       <motion.div
