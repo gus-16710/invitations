@@ -35,10 +35,10 @@ export default function Header() {
   const [hours, setHours] = useState(0);
   const [days, setDays] = useState(0);
 
-  const text01 = "Camila";
+  const text01 = "Martha_Itzel";
 
   const countDownClock = () => {
-    const countDownDate: any = new Date("Aug 8, 2025 12:00:00");
+    const countDownDate: any = new Date("Jun 28, 2025 16:00:00");
 
     const interval = setInterval(() => {
       const now = new Date().getTime();
@@ -54,12 +54,16 @@ export default function Header() {
       if (distance < 0) {
         clearInterval(interval);
         console.log("EXPIRED");
+        setSeconds(0);
+        setMinutes(0);
+        setHours(0);
+        setDays(0);
+      } else {
+        setSeconds(seconds);
+        setMinutes(minutes);
+        setHours(hours);
+        setDays(days);
       }
-
-      setSeconds(seconds);
-      setMinutes(minutes);
-      setHours(hours);
-      setDays(days);
     }, 1000);
   };
 
@@ -89,8 +93,14 @@ export default function Header() {
   }, [days, animateDays]);
 
   return (
-    <section className="h-screen flex flex-col justify-center items-center relative bg-[url('/img/quinces/no-name/background-header-4.jpg')] bg-center bg-cover">
-      <p className="text-zinc-50 flex items-center z-20">
+    <section className="h-screen flex flex-col justify-center items-center relative bg-[url('/img/quinces/martha/background-header-4.jpg')] bg-center bg-cover">
+      <p
+        className="text-zinc-50 flex items-center z-20"
+        style={{
+          textShadow:
+            "-1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5)",
+        }}
+      >
         <motion.label
           className={`text-2xl ${quickSand.className}`}
           variants={header.text01}
@@ -109,21 +119,25 @@ export default function Header() {
         </motion.label>
       </p>
       <motion.h1
-        className={`text-pink-800 text-8xl ${dancing.className} flex`}
+        className={`text-zinc-100 text-6xl ${dancing.className} flex mt-5`}
         variants={list}
         initial="hidden"
         whileInView="visible"
+        style={{
+          textShadow:
+            "-1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5)",
+        }}
       >
         {text01.split("").map((letter, index) => {
           return (
             <motion.span key={index} variants={item}>
-              {letter}
+              {letter === "_" ? <>&nbsp;</> : letter}
             </motion.span>
           );
         })}
       </motion.h1>
       <motion.div
-        className="w-72 bg-pink-800 mt-5"
+        className="w-72 bg-zinc-100 mt-5 shadow"
         style={{ height: "3px" }}
         variants={header.borderBottom}
         initial="hidden"
@@ -139,7 +153,7 @@ export default function Header() {
         initial="hidden"
         whileInView="visible"
       >
-        8 DE AGOSTO DEL 2025
+        28 DE JUNIO DEL 2025
       </motion.p>
 
       <div

@@ -1,17 +1,11 @@
-import { Divider } from "@nextui-org/react";
-import { dancing, lato, quickSand } from "./Fonts";
+import { FaPhoneAlt, FaWhatsapp } from "react-icons/fa";
+import { dancing, quickSand } from "./Fonts";
 import { motion } from "framer-motion";
-import { presentation } from "./Animations";
+import { confirm } from "./Animations";
 
-export default function Presentation() {
+export default function Confirm() {
   return (
-    <section
-      className="h-screen pt-10 pb-32 flex flex-col items-center justify-center relative"
-      style={{
-        backgroundColor: "#fce2d3",
-        marginTop: "-5px",
-      }}
-    >
+    <section className="h-screen flex flex-col items-center justify-center bg-pink-800">    
       <motion.svg
         xmlns="http://www.w3.org/2000/svg"
         id="svg2"
@@ -20,8 +14,8 @@ export default function Presentation() {
         version="1.1"
         clipRule="evenodd"
         viewBox="0 0 36063.31 6639.3385"
-        fill="rgb(153 21 75)"
-        variants={presentation.svg}
+        fill="rgb(255 255 255)"
+        variants={confirm.svg}
         initial="hidden"
         whileInView="visible"
       >
@@ -33,59 +27,54 @@ export default function Presentation() {
         />
       </motion.svg>
       <motion.p
-        className={`${dancing.className} text-pink-900 mt-5 text-3xl`}
-        variants={presentation.text01}
+        className={`${dancing.className} text-zinc-50 mt-5 text-3xl`}
+        variants={confirm.text01}
         initial="hidden"
         whileInView="visible"
       >
-        Padres
+        Confirma tu asistencia
       </motion.p>
       <motion.p
-        className={`${quickSand.className} mx-10 mt-5 text-center  text-zinc-800`}
-        variants={presentation.text02}
+        className={`${quickSand.className} text-zinc-50 mt-5 mx-10 text-center max-w-md`}
+        variants={confirm.text02}
         initial="hidden"
         whileInView="visible"
       >
-        Laurence Bermudez Davila <br /> & <br /> María Cordova Loreto
+        Espero que puedan venir a compartir con nosotros este día inolvidable.
+        Por favor confirma tu presencia.
       </motion.p>
-
+      <motion.p
+        className={`${quickSand.className} text-zinc-50 mt-5 mx-10 text-center`}
+        variants={confirm.text03}
+        initial="hidden"
+        whileInView="visible"
+      >
+        ¡Muchas Gracias!
+      </motion.p>
       <motion.div
-        variants={presentation.divider}
+        className="mt-5 flex items-center justify-center flex-col"
+        variants={confirm.buttons}
         initial="hidden"
         whileInView="visible"
       >
-        <Divider orientation="horizontal" className="w-20 my-10 bg-pink-700" />
-      </motion.div>
-
-      <motion.p
-        className={`${dancing.className} text-pink-900 text-3xl`}
-        variants={presentation.text01}
-        initial="hidden"
-        whileInView="visible"
-      >
-        Padrinos de Honor
-      </motion.p>
-      <motion.p
-        className={`${quickSand.className} mx-10 mt-5 text-center text-zinc-800`}
-        variants={presentation.text02}
-        initial="hidden"
-        whileInView="visible"
-      >
-        Amelia Torres Lara <br /> & <br /> José López Díaz
-      </motion.p>
-
-      <div className="w-full absolute bottom-0">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          preserveAspectRatio="none"
-          fill="currentColor"
-          fillRule="evenodd"
-          viewBox="0 0 1000 137"
-          style={{ fill: "#ffc6c5" }}
+        <button
+          type="button"
+          className="flex justify-center items-center gap-2 w-60 mt-3 text-pink-900 bg-white border border-gray-400 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 rounded-full me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700 font-medium text-sm px-5 py-2.5 text-center z-20"
+          onClick={() => window.open("https://wa.link/4c49lb", "_blank")}
         >
-          <path d="M0 136.756v-14.507C116.467-94.71 395.767 172.311 500 0l.306.503C604.791 171.777 883.649-94.493 1000 122.249v14.507H0Z" />
-        </svg>
-      </div>
+          <FaWhatsapp className="text-2xl" />
+          Mensaje de Whatsapp
+        </button>
+
+        <button
+          type="button"
+          className="flex justify-center items-center gap-2 w-60 mt-3 text-pink-900 bg-white border border-gray-400 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 rounded-full me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700 font-medium text-sm px-5 py-2.5 text-center z-20"
+          onClick={() => window.open("tel:2285640144", "_blank")}
+        >
+          <FaPhoneAlt className="text-2xl" />
+          Llamada Telefonica
+        </button>
+      </motion.div>
     </section>
   );
 }

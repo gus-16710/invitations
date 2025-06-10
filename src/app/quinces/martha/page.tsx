@@ -44,14 +44,14 @@ const OpeningModal = ({
             <ModalHeader className="flex flex-col gap-1"></ModalHeader>
             <ModalBody>
               <h1
-                className={`text-pink-800 text-8xl ${dancing.className} border-b-3 border-pink-800 pb-4 text-center`}
+                className={`text-pink-800 text-5xl ${dancing.className} border-b-3 border-pink-800 pb-4 text-center`}
               >
-                Camila
+                Martha Itzel
               </h1>
               <p
-                className={`${montez.className} text-zinc-800 text-center text-xl`}
+                className={`${montez.className} text-zinc-800 text-center text-2xl`}
               >
-                08.AGOSTO.2025
+                28/JUNIO/2025
               </p>
             </ModalBody>
             <ModalFooter className="flex justify-center">
@@ -78,7 +78,7 @@ export default function Fifteen() {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
   useEffect(() => {
-    setTimeout(() => onOpen(), 2000)    
+    onOpen();
   }, []);
 
   return (
@@ -94,15 +94,15 @@ export default function Fifteen() {
         <div className="max-w-3xl m-auto shadow-large">
           <Header />
           <Presentation />
-          <Locations />
+           <Locations />
           <Gallery />
-          <Gifts />
+          {/* <Gifts /> */}
           <Confirm />
           <FloatinButton />
           <AudioControl />
         </div>
       ) : (
-        <div className="h-screen bg-[url('/img/quinces/no-name/background-header-4.jpg')] bg-center bg-cover" />
+        <div className="h-screen bg-[url('/img/quinces/martha/background-header-4.jpg')] bg-center bg-cover" />
       )}
 
       <OpeningModal

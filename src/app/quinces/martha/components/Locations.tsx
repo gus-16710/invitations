@@ -16,7 +16,7 @@ import { LuMapPin } from "react-icons/lu";
 
 const MapSalon = () => (
   <iframe
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15039.966715973163!2d-96.93584853950922!3d19.541970800388352!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85db2e02dd008fb9%3A0x4166db4c76faf835!2sSalones%20Aurora!5e0!3m2!1ses!2smx!4v1700179455841!5m2!1ses!2smx"
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3760.378998669686!2d-96.93362697958939!3d19.525335749087976!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85db2dfca0795555%3A0xddafd01451b06a51!2sSuterm%20Perez%20Rios!5e0!3m2!1ses!2smx!4v1749584429188!5m2!1ses!2smx"
     height="450"
     style={{ border: "0" }}
     allowFullScreen
@@ -27,7 +27,7 @@ const MapSalon = () => (
 
 const MapCeremony = () => (
   <iframe
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2658.940584345849!2d-96.92546855044417!3d19.52830722889927!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85db2dff1a7cdc9b%3A0x7ebb1a4a9284e7ed!2sCatedral%20Metropolitana%20de%20la%20Inmaculada%20Concepci%C3%B3n!5e0!3m2!1ses!2smx!4v1700178969653!5m2!1ses!2smx"
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3760.3120659384563!2d-96.92562519875138!3d19.528211426341834!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85db2dff1a7cdc9b%3A0x7ebb1a4a9284e7ed!2sCatedral%20Metropolitana%20de%20la%20Inmaculada%20Concepci%C3%B3n!5e0!3m2!1ses!2smx!4v1749583783121!5m2!1ses!2smx"
     height="450"
     style={{ border: "0" }}
     allowFullScreen
@@ -79,7 +79,7 @@ export default function Locations() {
   return (
     <>
       <section
-        className="py-10 flex flex-col justify-center items-center relative bg-[url('/img/quinces/no-name/background-locations.jpg')] bg-center bg-cover"
+        className="py-10 flex flex-col justify-center items-center relative bg-[url('/img/quinces/martha/background-locations.jpg')] bg-center bg-cover"
         style={{
           backgroundColor: "#f3c5c5",
           marginTop: "-1px",
@@ -207,13 +207,23 @@ export default function Locations() {
         >
           Ceremonia Religiosa
         </motion.h2>
+
+        <motion.span
+          className="bg-pink-500 text-pink-200 text-3xl font-medium me-2 px-2.5 py-0.5 mt-3 flex items-center justify-center gap-1 rounded-full"
+          variants={locations.time01}
+          initial="hidden"
+          whileInView="visible"
+        >
+          <IoMdTime /> 16:00 Hrs
+        </motion.span>
+
         <motion.p
           className={`${quickSand.className} my-5 mx-10 font-bold text-center text-zinc-800`}
           variants={locations.text02}
           initial="hidden"
           whileInView="visible"
         >
-          Catedral de la Inmaculada Concepción
+          Catedral Metropolitana de la Inmaculada Concepción
         </motion.p>
         <motion.p
           className={`${quickSand.className} mx-10 text-center text-zinc-800 max-w-md`}
@@ -223,15 +233,7 @@ export default function Locations() {
         >
           Juan de La Luz Enríquez s/n, Zona Centro, Centro, 91000
           Xalapa-Enríquez, Ver.
-        </motion.p>
-        <motion.span
-          className="bg-pink-900 text-pink-300 text-xs font-medium me-2 px-2.5 py-0.5 rounded mt-3 flex items-center justify-center gap-1"
-          variants={locations.time01}
-          initial="hidden"
-          whileInView="visible"
-        >
-          <IoMdTime /> 12:00 Hrs
-        </motion.span>
+        </motion.p>        
         <motion.button
           type="button"
           className="mt-5 text-white bg-gradient-to-r from-pink-400 via-pink-500 to-pink-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 z-20 flex items-center justify-center gap-1"
@@ -291,13 +293,21 @@ export default function Locations() {
         >
           Recepción
         </motion.h2>
+        <motion.span
+          className="bg-pink-500 text-pink-200 text-3xl font-medium me-2 px-2.5 py-0.5 mt-3 flex items-center justify-center gap-1 rounded-full"
+          variants={locations.time01}
+          initial="hidden"
+          whileInView="visible"
+        >
+          <IoMdTime /> 17:30 Hrs
+        </motion.span>
         <motion.p
           className={`${quickSand.className} my-5 mx-10 font-bold text-center text-zinc-800`}
           variants={locations.text02}
           initial="hidden"
           whileInView="visible"
         >
-          Salones Aurora
+          Salón Suterm
         </motion.p>
         <motion.p
           className={`${quickSand.className} mx-10 text-center text-zinc-800 max-w-md`}
@@ -305,16 +315,8 @@ export default function Locations() {
           initial="hidden"
           whileInView="visible"
         >
-          Carlos A. Carrillo 23, Aguacatal, 91133 Xalapa-Enríquez, Ver.
-        </motion.p>
-        <motion.span
-          className="bg-pink-900 text-pink-300 text-xs font-medium me-2 px-2.5 py-0.5 rounded mt-3 flex items-center justify-center gap-1"
-          variants={locations.time01}
-          initial="hidden"
-          whileInView="visible"
-        >
-          <IoMdTime /> 15:00 Hrs
-        </motion.span>
+          Ignacio Allende No. 142, Zona Centro, Los Sauces, 91000 Xalapa-Enríquez, Ver.
+        </motion.p>        
         <motion.button
           type="button"
           className="mt-5 text-white bg-gradient-to-r from-pink-400 via-pink-500 to-pink-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 z-20 flex items-center justify-center gap-1"
