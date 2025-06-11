@@ -15,7 +15,7 @@ import {
   ModalHeader,
   useDisclosure,
 } from "@nextui-org/react";
-import { dancing, montez } from "./components/Fonts";
+import { dancing, great, montez, quickSand } from "./components/Fonts";
 import FloatinButton from "./components/FloatingButton";
 import AudioControl from "./components/AudioControl";
 
@@ -38,18 +38,26 @@ const OpeningModal = ({
       isDismissable={false}
       hideCloseButton={true}
     >
-      <ModalContent style={{ backgroundColor: "rgba(244, 225, 209, 0.5)" }}>
+      <ModalContent style={{ backgroundColor: "rgba(244, 225, 209, 0.6)" }}>
         {(onClose) => (
           <>
             <ModalHeader className="flex flex-col gap-1"></ModalHeader>
             <ModalBody>
+              <p
+                className="text-pink-800 flex items-center z-20 text-center justify-center mb-5"                
+              >
+                <label className={`text-xl ${quickSand.className}`}>MIS</label>
+                <label className={`text-5xl ${great.className}`}>XV</label>
+                <label className={`text-xl ${quickSand.className}`}>AÑOS</label>
+              </p>
               <h1
                 className={`text-pink-800 text-5xl ${dancing.className} border-b-3 border-pink-800 pb-4 text-center`}
               >
                 Martha Itzel
               </h1>
               <p
-                className={`${montez.className} text-zinc-800 text-center text-2xl`}
+                className={`${montez.className} text-pink-800 text-center text-2xl`}
+                style={{letterSpacing: "5px"}}
               >
                 28/JUNIO/2025
               </p>
@@ -57,7 +65,7 @@ const OpeningModal = ({
             <ModalFooter className="flex justify-center">
               <button
                 type="button"
-                className="mt-5 text-white bg-gradient-to-r from-pink-400 via-pink-500 to-pink-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 z-20"
+                className="mt-10 text-white bg-gradient-to-r from-pink-400 via-pink-500 to-pink-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 z-20"
                 onClick={() => {
                   setOpen(true);
                   onClose();
@@ -94,7 +102,7 @@ export default function Fifteen() {
         <div className="max-w-3xl m-auto shadow-large">
           <Header />
           <Presentation />
-           <Locations />
+          <Locations />
           <Gallery />
           {/* <Gifts /> */}
           <Confirm />

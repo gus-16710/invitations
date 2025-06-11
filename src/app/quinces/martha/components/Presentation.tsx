@@ -1,9 +1,37 @@
-import { Divider } from "@nextui-org/react";
-import { dancing, lato, quickSand } from "./Fonts";
+import { dancing, quickSand } from "./Fonts";
 import { motion } from "framer-motion";
 import { presentation } from "./Animations";
+import Image from "next/image";
 
 export default function Presentation() {
+  const containerVariants = {
+    hidden: { opacity: 0, scale: 0.8 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut",
+        when: "beforeChildren", // Animación padre antes que los hijos
+      },
+    },
+    hover: {
+      scale: 1.05,
+      transition: { duration: 0.8 },
+    },
+  };
+
+  // Animación para la imagen (hijo)
+  const imageVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 1, delay: 0.2 }, // Retraso para efecto escalonado
+    },
+  };
+
+
   return (
     <section
       className="h-screen pt-10 pb-32 flex flex-col items-center justify-center relative"
@@ -38,7 +66,7 @@ export default function Presentation() {
         initial="hidden"
         whileInView="visible"
       >
-        Padres
+        Mis Padres
       </motion.p>
       <motion.p
         className={`${quickSand.className} mx-10 mt-5 text-center  text-zinc-800`}
@@ -47,15 +75,33 @@ export default function Presentation() {
         whileInView="visible"
       >
         Miguel Ángel Peralta Jiménez <br /> & <br /> Modesta Muñoz Gonzalez
-      </motion.p>
+      </motion.p> 
 
       <motion.div
-        variants={presentation.divider}
-        initial="hidden"
-        whileInView="visible"
-      >
-        <Divider orientation="horizontal" className="w-20 my-10 bg-pink-700" />
+      style={{
+        WebkitMaskImage: "url('/img/quinces/martha/mask.png')",
+        WebkitMaskRepeat: "no-repeat",
+        WebkitMaskSize: "contain",
+        WebkitMaskPosition: "center",
+      }}
+      className="w-44 h-44 my-3 cursor-pointer"
+      variants={containerVariants}
+      initial="hidden"
+      whileInView="visible"
+      whileHover="hover" // Efecto al pasar el mouse
+      //viewport={{ once: true }} // Solo anima una vez
+    >
+      <motion.div variants={imageVariants}>
+        <Image
+          alt="Foto de Martha"
+          width={300}
+          height={300}
+          src="/img/quinces/martha/child2.jpg"
+          priority
+          className="object-cover rounded-lg"
+        />
       </motion.div>
+    </motion.div>
 
       <motion.p
         className={`${dancing.className} text-pink-900 text-3xl`}
@@ -63,7 +109,7 @@ export default function Presentation() {
         initial="hidden"
         whileInView="visible"
       >
-        Padrinos
+        Mis Padrinos
       </motion.p>
       <motion.p
         className={`${quickSand.className} mx-10 mt-5 text-center text-zinc-800`}

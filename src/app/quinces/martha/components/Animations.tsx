@@ -120,6 +120,14 @@ export const presentation = {
       transition: { duration: 1, delay: 1 },
     },
   },
+    animationPhoto: {
+    hidden: { opacity: 0, scale: 0 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: { duration: 1, type: "spring", stiffness: 70, delay: 0.5 },
+    },
+  },
 };
 
 /**

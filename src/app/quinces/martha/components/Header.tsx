@@ -9,20 +9,27 @@ const list = {
     opacity: 1,
     transition: {
       when: "beforeChildren",
-      staggerChildren: 0.3,
+      staggerChildren: 0.1,
     },
   },
   hidden: {
     opacity: 0,
-    transition: {
-      when: "afterChildren",
-    },
+    // transition: {
+    //   when: "afterChildren",
+    // },
   },
 };
 
 const item = {
-  visible: { opacity: 1, y: 0, scale: 1 },
-  hidden: { opacity: 0, y: 100, scale: 0 },
+  // visible: { opacity: 1, y: 0, scale: 1 },
+  // hidden: { opacity: 0, y: 100, scale: 0 },
+  hidden: { opacity: 0, y: 50, rotate: -10 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    rotate: 0,
+    transition: { type: "spring", damping: 12, stiffness: 200 },
+  },
 };
 
 function formatNumber(number: number) {
@@ -77,7 +84,7 @@ export default function Header() {
   const [scopeDays, animateDays] = useAnimate();
 
   useEffect(() => {
-    animateSeconds(scopeSeconds.current, { scale: [0, 1], opacity: [0, 1] });
+    animateSeconds(scopeSeconds.current, { scale: [0, 1],  opacity: [0, 1] });
   }, [seconds, animateSeconds]);
 
   useEffect(() => {
@@ -93,7 +100,7 @@ export default function Header() {
   }, [days, animateDays]);
 
   return (
-    <section className="h-screen flex flex-col justify-center items-center relative bg-[url('/img/quinces/martha/background-header-4.jpg')] bg-center bg-cover">
+    <section className="h-screen flex flex-col justify-center items-center relative bg-[url('/img/quinces/martha/background-header-4.jpg')] bg-center bg-cover overflow-clip">
       <p
         className="text-zinc-50 flex items-center z-20"
         style={{
@@ -116,6 +123,14 @@ export default function Header() {
           whileInView="visible"
         >
           XV
+        </motion.label>
+        <motion.label
+          className={`text-2xl ${quickSand.className}`}
+          variants={header.text01}
+          initial="hidden"
+          whileInView="visible"
+        >
+          AÑOS
         </motion.label>
       </p>
       <motion.h1

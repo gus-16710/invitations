@@ -131,7 +131,7 @@ export default function Gallery() {
                   stroke="none"
                   strokeWidth="0"
                   fill="#99154b"
-                  fill-opacity="0.53"
+                  fillOpacity="0.53"
                   className="transition-all duration-300 ease-in-out delay-150 path-1"
                 ></path>
                 <path
@@ -139,7 +139,7 @@ export default function Gallery() {
                   stroke="none"
                   strokeWidth="0"
                   fill="#99154b"
-                  fill-opacity="1"
+                  fillOpacity="1"
                   className="transition-all duration-300 ease-in-out delay-150 path-2"
                 ></path>
               </svg>
