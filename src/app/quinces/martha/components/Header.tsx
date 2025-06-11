@@ -102,19 +102,19 @@ export default function Header() {
   return (
     <section className="h-screen flex flex-col justify-center items-center relative bg-[url('/img/quinces/martha/background-header-4.jpg')] bg-center bg-cover overflow-clip">
       <p
-        className="text-zinc-50 flex items-center z-20"
+        className="text-zinc-50 flex items-center z-20 gap-1"
         style={{
           textShadow:
             "-1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5)",
         }}
       >
         <motion.label
-          className={`text-2xl ${quickSand.className}`}
+          className={`text-2xl ${dancing.className}`}
           variants={header.text01}
           initial="hidden"
           whileInView="visible"
         >
-          MIS
+          Mis
         </motion.label>
         <motion.label
           className={`text-6xl ${great.className}`}
@@ -125,12 +125,12 @@ export default function Header() {
           XV
         </motion.label>
         <motion.label
-          className={`text-2xl ${quickSand.className}`}
+          className={`text-2xl ${dancing.className}`}
           variants={header.text01}
           initial="hidden"
           whileInView="visible"
         >
-          AÑOS
+          Años
         </motion.label>
       </p>
       <motion.h1

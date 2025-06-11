@@ -44,11 +44,15 @@ const OpeningModal = ({
             <ModalHeader className="flex flex-col gap-1"></ModalHeader>
             <ModalBody>
               <p
-                className="text-pink-800 flex items-center z-20 text-center justify-center mb-5"                
+                className="text-pink-800 flex items-center z-20 text-center justify-center mb-5 gap-1"   
+                style={{
+          textShadow:
+            "-1px -1px 1px rgba(153, 21, 75, .1), 0px 0px 0px rgba(153, 21, 75, .5)",
+        }}             
               >
-                <label className={`text-xl ${quickSand.className}`}>MIS</label>
-                <label className={`text-5xl ${great.className}`}>XV</label>
-                <label className={`text-xl ${quickSand.className}`}>AÑOS</label>
+                <label className={`text-3xl ${dancing.className}`}>Mis</label>
+                <label className={`text-6xl ${great.className}`}>XV</label>
+                <label className={`text-3xl ${dancing.className}`}>Años</label>
               </p>
               <h1
                 className={`text-pink-800 text-5xl ${dancing.className} border-b-3 border-pink-800 pb-4 text-center`}
