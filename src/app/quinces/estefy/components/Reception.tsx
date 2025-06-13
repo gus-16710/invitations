@@ -37,7 +37,7 @@ const ModalMap = ({
               Recepción
             </ModalHeader>
             <ModalBody>
-              <iframe                
+              <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3757.6171951453553!2d-97.00185271419195!3d19.64365698668889!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85db25e6340580dd%3A0xb9c109abc982ee20!2sCentro%2C%2091353%20El%20Fresno%2C%20Ver.!5e0!3m2!1ses!2smx!4v1749838568236!5m2!1ses!2smx"
                 height="100%"
                 style={{ border: "0" }}
@@ -75,7 +75,7 @@ export default function Reception({ splide }: { splide: number }) {
     if (splide === 3) {
       setTimeout(() => {
         setHour(14);
-        setMinutes(30)
+        setMinutes(30);
       }, 500);
     } else {
       setHour(0);
@@ -94,37 +94,42 @@ export default function Reception({ splide }: { splide: number }) {
           style={{ color: "#513704" }}
         >
           Recepción
-        </motion.h2>
-        <motion.p
-          className={`${standard.className} text-6xl mt-5`}
+        </motion.h2>    
+        <motion.div
+          className="relative flex justify-center items-center"
           variants={header.animation2}
           initial="hidden"
           whileInView="visible"
-          style={{ color: "#a57d35" }}
         >
-          <NumberFlow
-            value={hour}
-            transformTiming={{
-              duration: 3000,
-              // easing:
-              //   "linear(0, 0.002, 0.0077, 0.0169, 0.0292 2.45%, 0.0647 3.77%, 0.117 5.26%, 0.2307 7.89%, 0.4955 13.32%, 0.6129 15.86%, 0.7219 18.49%, 0.8123, 0.8871 23.58%, 0.9177 24.8%, 0.9465, 0.9715, 0.9928, 1.0108 30.06%, 1.0264 31.46%, 1.0433 33.48%, 1.0551 35.67%, 1.0617 38.04%, 1.0632 40.67%, 1.0608 42.95%, 1.0551 45.66%, 1.0261 55.39%, 1.015 59.69%, 1.0072 63.63%, 1.0016 67.75%, 0.9976 72.83%, 0.9961 78.62%, 0.9991 99.92%)",
-            }}
-            trend={0}
-          />
-          :
-          <NumberFlow
-            value={minutes}
-            transformTiming={{
-              duration: 3000,
-              // easing:
-              //   "linear(0, 0.002, 0.0077, 0.0169, 0.0292 2.45%, 0.0647 3.77%, 0.117 5.26%, 0.2307 7.89%, 0.4955 13.32%, 0.6129 15.86%, 0.7219 18.49%, 0.8123, 0.8871 23.58%, 0.9177 24.8%, 0.9465, 0.9715, 0.9928, 1.0108 30.06%, 1.0264 31.46%, 1.0433 33.48%, 1.0551 35.67%, 1.0617 38.04%, 1.0632 40.67%, 1.0608 42.95%, 1.0551 45.66%, 1.0261 55.39%, 1.015 59.69%, 1.0072 63.63%, 1.0016 67.75%, 0.9976 72.83%, 0.9961 78.62%, 0.9991 99.92%)",
-            }}
-            trend={0}
-          />{" "}
-          hrs
-        </motion.p>
+          <div className="bg-[url('/img/quinces/estefy/paper.png')] bg-contain bg-no-repeat bg-center absolute w-96 h-40" />
+          <p
+            className={`${standard.className} text-5xl z-50 mb-2`}
+            style={{ color: "#a57d35" }}
+          >
+            <NumberFlow
+              value={hour}
+              transformTiming={{
+                duration: 3000,
+                // easing:
+                //   "linear(0, 0.002, 0.0077, 0.0169, 0.0292 2.45%, 0.0647 3.77%, 0.117 5.26%, 0.2307 7.89%, 0.4955 13.32%, 0.6129 15.86%, 0.7219 18.49%, 0.8123, 0.8871 23.58%, 0.9177 24.8%, 0.9465, 0.9715, 0.9928, 1.0108 30.06%, 1.0264 31.46%, 1.0433 33.48%, 1.0551 35.67%, 1.0617 38.04%, 1.0632 40.67%, 1.0608 42.95%, 1.0551 45.66%, 1.0261 55.39%, 1.015 59.69%, 1.0072 63.63%, 1.0016 67.75%, 0.9976 72.83%, 0.9961 78.62%, 0.9991 99.92%)",
+              }}
+              trend={0}
+            />
+            :
+            <NumberFlow
+              value={minutes}
+              transformTiming={{
+                duration: 3000,
+                // easing:
+                //   "linear(0, 0.002, 0.0077, 0.0169, 0.0292 2.45%, 0.0647 3.77%, 0.117 5.26%, 0.2307 7.89%, 0.4955 13.32%, 0.6129 15.86%, 0.7219 18.49%, 0.8123, 0.8871 23.58%, 0.9177 24.8%, 0.9465, 0.9715, 0.9928, 1.0108 30.06%, 1.0264 31.46%, 1.0433 33.48%, 1.0551 35.67%, 1.0617 38.04%, 1.0632 40.67%, 1.0608 42.95%, 1.0551 45.66%, 1.0261 55.39%, 1.015 59.69%, 1.0072 63.63%, 1.0016 67.75%, 0.9976 72.83%, 0.9961 78.62%, 0.9991 99.92%)",
+              }}
+              trend={0}
+            />{" "}
+            hrs
+          </p>
+        </motion.div>
         <motion.p
-          className={`${vibes.className} text-center mx-5 text-4xl max-w-md `}
+          className={`${vibes.className} text-center mx-16 mt-10 text-4xl max-w-md `}
           variants={header.animation3}
           initial="hidden"
           whileInView="visible"
@@ -134,7 +139,7 @@ export default function Reception({ splide }: { splide: number }) {
         </motion.p>
 
         <motion.p
-          className={`${titillium.className} text-center mx-5 mt-10 text-sm max-w-md  p-2`}
+          className={`${titillium.className} text-center mx-5 mt-5 text-sm max-w-md  p-2`}
           variants={header.animation4}
           initial="hidden"
           whileInView="visible"

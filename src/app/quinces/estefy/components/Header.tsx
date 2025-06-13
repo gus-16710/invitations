@@ -182,28 +182,28 @@ export default function Header({ splide }: { splide: number }) {
         whileInView="visible"
       >
         <div className="text-center m-0">
-          <div className="my-0 mx-3 p-2 text-3xl" ref={scopeDays}>
+          <div className="my-0 mx-3 p-2 text-4xl" ref={scopeDays}>
             {formatNumber(days)}
           </div>
-          <div className="my-0 mx-3 text-center text-xl">Días</div>
+          <div className="my-0 mx-3 text-center text-2xl">Días</div>
         </div>
         <div className="text-center m-0">
-          <div className="my-0 mx-3 p-2 text-3xl" ref={scopeHours}>
+          <div className="my-0 mx-3 p-2 text-4xl" ref={scopeHours}>
             {formatNumber(hours)}
           </div>
-          <div className="my-0 mx-3 text-center text-xl">Horas</div>
+          <div className="my-0 mx-3 text-center text-2xl">Horas</div>
         </div>
         <div className="text-center m-0">
-          <div className="my-0 mx-3 p-2 text-3xl" ref={scopeMinutes}>
+          <div className="my-0 mx-3 p-2 text-4xl" ref={scopeMinutes}>
             {formatNumber(minutes)}
           </div>
-          <div className="my-0 mx-3 text-center text-xl">Min</div>
+          <div className="my-0 mx-3 text-center text-2xl">Min</div>
         </div>
         <div className="text-center m-0">
-          <div className="my-0 mx-3 p-2 text-3xl" ref={scopeSeconds}>
+          <div className="my-0 mx-3 p-2 text-4xl" ref={scopeSeconds}>
             {formatNumber(seconds)}
           </div>
-          <div className="my-0 mx-3 text-center text-xl">Seg</div>
+          <div className="my-0 mx-3 text-center text-2xl">Seg</div>
         </div>
       </motion.div>
     </div>

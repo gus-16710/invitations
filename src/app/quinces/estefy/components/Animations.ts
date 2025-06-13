@@ -1,4 +1,4 @@
-import { delay } from "framer-motion";
+import { delay, Variants } from "framer-motion";
 
 export const animation05 = {
   hidden: { scale: 2, opacity: 0 },

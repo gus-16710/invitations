@@ -14,30 +14,8 @@ import {
 } from "@nextui-org/react";
 
 import "./styles.css";
-import { league, medieval, playFair, quickSand } from "./components/Fonts";
+import { quickSand } from "./components/Fonts";
 import { great } from "../camila/components/Fonts";
-
-const list = {
-  visible: {
-    opacity: 1,
-    transition: {
-      when: "beforeChildren",
-      staggerChildren: 0.3,
-      delay: 1,
-    },
-  },
-  hidden: {
-    opacity: 0,
-    transition: {
-      when: "afterChildren",
-    },
-  },
-};
-
-const item = {
-  visible: { opacity: 1, y: 0, scale: 1 },
-  hidden: { opacity: 0, y: 100, scale: 0 },
-};
 
 const ModalOpening = ({
   isOpen,
@@ -129,8 +107,7 @@ const ModalOpening = ({
                 initial="hidden"
                 animate="visible"
               >
-                Estefy
-                Hernandez
+                Estefy Hernandez
               </motion.p>
             </ModalBody>
             <ModalFooter className="flex justify-center">
@@ -151,12 +128,12 @@ const ModalOpening = ({
                   onPress={() => {
                     setOpen(true);
                     onClose();
-                  }}                  
+                  }}
                 >
                   Abrir Invitación
                 </Button>
               </motion.div>
-            </ModalFooter>
+            </ModalFooter>            
           </>
         )}
       </ModalContent>
