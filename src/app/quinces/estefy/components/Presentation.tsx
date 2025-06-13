@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { header } from "./Animations";
 import { league, vibes } from "./Fonts";
 import { motion } from "framer-motion";
@@ -26,14 +27,27 @@ export default function Presentation() {
         Rosalia Alonso Hernández
       </motion.p>
 
-      <motion.p
+      {/* <motion.p
         className={`${vibes.className} text-4xl bg-green-800 rounded-full w-12 h-12 m-10 pr-1 text-zinc-100 flex justify-center items-center`}
         variants={header.animation3}
         initial="hidden"
         whileInView="visible"
       >
         &
-      </motion.p>
+      </motion.p> */}
+      <motion.div
+        className={`w-16 h-16 m-10 pr-1 text-zinc-100 flex justify-center items-center`}
+        variants={header.animation3}
+        initial="hidden"
+        whileInView="visible"
+      >
+        <Image
+                src={"/img/quinces/estefy/hat.png"}
+                alt=""
+                width={100}
+                height={100}
+              />
+      </motion.div>      
 
       <motion.h2
         className={`${vibes.className} text-5xl mb-5`}

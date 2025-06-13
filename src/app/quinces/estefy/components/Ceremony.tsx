@@ -94,23 +94,7 @@ export default function Ceremony({ splide }: { splide: number }) {
           style={{ color: "#513704" }}
         >
           Ceremonia Religiosa
-        </motion.h2>
-        {/* <motion.p
-          className={`${standard.className} text-6xl mt-5`}
-          variants={header.animation2}
-          initial="hidden"
-          whileInView="visible"
-          style={{ color: "#a57d35" }}
-        >
-          <NumberFlow
-            value={hour}
-            transformTiming={{
-              duration: 3000,
-            }}
-            trend={0}
-          />
-          :00 hrs
-        </motion.p> */}
+        </motion.h2>        
         <motion.div
           className="relative flex justify-center items-center"
           variants={header.animation2}
