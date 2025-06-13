@@ -116,7 +116,7 @@ const ModalOpening = ({
                 </motion.label>
               </p>
               <motion.p
-                className={`text-center text-9xl z-20 text-golden p-5 relative`}
+                className={`text-center text-7xl z-20 text-golden p-5 relative`}
                 style={{ fontFamily: "harryp", lineHeight: "100px" }}
                 variants={{
                   hidden: { y: 100, opacity: 0 },
