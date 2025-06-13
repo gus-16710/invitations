@@ -3,7 +3,7 @@ import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 
 export default function AudioControl() {
-  const [isPlayed, setIsPlayed] = useState(false);
+  const [isPlayed, setIsPlayed] = useState(true);
   const audioPlayer = useRef<HTMLAudioElement>(null);
 
   useEffect(() => {
@@ -31,7 +31,7 @@ export default function AudioControl() {
 
       <audio controls ref={audioPlayer} hidden loop>
         <source
-          src="/media/sanctuary.mp3"
+          src="/media/harry_potter.mp3"
           type="audio/mpeg"
         />
         Your browser does not support the audio element.
