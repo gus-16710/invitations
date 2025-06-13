@@ -145,7 +145,7 @@ export default function Header({ splide }: { splide: number }) {
           </span>{" "}
           <span
             className={`${standard.className} text-6xl mx-3`}
-            style={{ color: "#a57d35", fontFamily: "harryp" }}            
+            style={{ color: "#a57d35" }}            
           >
             <NumberFlow
               value={day}
