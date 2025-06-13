@@ -25,16 +25,7 @@ export default function Presentation() {
         Eliazer Hernández Sánchez
         <br />
         Rosalia Alonso Hernández
-      </motion.p>
-
-      {/* <motion.p
-        className={`${vibes.className} text-4xl bg-green-800 rounded-full w-12 h-12 m-10 pr-1 text-zinc-100 flex justify-center items-center`}
-        variants={header.animation3}
-        initial="hidden"
-        whileInView="visible"
-      >
-        &
-      </motion.p> */}
+      </motion.p>     
       <motion.div
         className={`w-16 h-16 m-10 pr-1 text-zinc-100 flex justify-center items-center`}
         variants={header.animation3}

@@ -7,7 +7,7 @@ import NextJsImage from "./NextJsImage";
 
 const images = [
   {
-    src: "/img/quinces/estefy/gallery-01.jpg",
+    src: "/img/quinces/estefy/gallery-07.jpg",
     width: 800,
     height: 600,
   },
