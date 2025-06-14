@@ -72,13 +72,16 @@ export default function Ceremony({ splide }: { splide: number }) {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
   const [hour, setHour] = useState(0);
+  const [minutes, setMinutes] = useState(0);
 
   useEffect(() => {
     if (splide === 2) {
       setTimeout(() => {
         setHour(13);
+        setMinutes(30);
       }, 500);
     } else {
+      setHour(0);
       setHour(0);
     }
   }, [splide]);
@@ -113,7 +116,17 @@ export default function Ceremony({ splide }: { splide: number }) {
               }}
               trend={0}
             />
-            :00 hrs
+            :
+            <NumberFlow
+              value={minutes}
+              transformTiming={{
+                duration: 3000,
+                // easing:
+                //   "linear(0, 0.002, 0.0077, 0.0169, 0.0292 2.45%, 0.0647 3.77%, 0.117 5.26%, 0.2307 7.89%, 0.4955 13.32%, 0.6129 15.86%, 0.7219 18.49%, 0.8123, 0.8871 23.58%, 0.9177 24.8%, 0.9465, 0.9715, 0.9928, 1.0108 30.06%, 1.0264 31.46%, 1.0433 33.48%, 1.0551 35.67%, 1.0617 38.04%, 1.0632 40.67%, 1.0608 42.95%, 1.0551 45.66%, 1.0261 55.39%, 1.015 59.69%, 1.0072 63.63%, 1.0016 67.75%, 0.9976 72.83%, 0.9961 78.62%, 0.9991 99.92%)",
+              }}
+              trend={0}
+            />{" "}
+            hrs
           </p>
         </motion.div>
         <motion.p
