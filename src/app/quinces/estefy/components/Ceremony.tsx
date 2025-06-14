@@ -82,7 +82,7 @@ export default function Ceremony({ splide }: { splide: number }) {
       }, 500);
     } else {
       setHour(0);
-      setHour(0);
+      setMinutes(0);
     }
   }, [splide]);
 
