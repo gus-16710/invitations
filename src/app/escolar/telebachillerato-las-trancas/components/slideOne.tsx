@@ -29,8 +29,11 @@ export default function SlideOne() {
       />
 
       <h2 className={`${mea.className} text-zinc-50 text-6xl`}>Ceremonia</h2>
-      <h2 className={`${urbanist.className} text-zinc-50 mb-4`}>
+      <h2 className={`${urbanist.className} text-zinc-50 mb-3`}>
         DE GRADUACIÓN
+      </h2>
+      <h2 className={`${urbanist.className} text-zinc-50 mb-4 mx-5 text-center`}>
+        Coord. plantel: Jesús W. Durán Zaleta
       </h2>
       <div className="w-full h-20 relative flex items-center justify-center">
         <div className="bg-[url('/img/escolar/telebachillerato-las-trancas/ribbon.png')] bg-contain bg-no-repeat bg-center absolute w-full h-full" />
