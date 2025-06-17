@@ -23,8 +23,7 @@ export default function SlideOne() {
         width={160}
         alt="NextUI hero Image"
         src="/img/escolar/telebachillerato-las-trancas/tebaev-logo.jpg"
-        className="mb-5"
-        isZoomed
+        className="mb-5"        
         radius="full"
       />
 
