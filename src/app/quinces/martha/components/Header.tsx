@@ -13,16 +13,11 @@ const list = {
     },
   },
   hidden: {
-    opacity: 0,
-    // transition: {
-    //   when: "afterChildren",
-    // },
+    opacity: 0, 
   },
 };
 
-const item = {
-  // visible: { opacity: 1, y: 0, scale: 1 },
-  // hidden: { opacity: 0, y: 100, scale: 0 },
+const item = { 
   hidden: { opacity: 0, y: 50, rotate: -10 },
   visible: {
     opacity: 1,

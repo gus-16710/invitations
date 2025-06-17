@@ -5,12 +5,14 @@ import SlideOne from "./components/slideOne";
 import SlideTwo from "./components/slideTwo";
 import SlideThree from "./components/slideThree";
 import "@splidejs/react-splide/css";
+import SlideFour from "./components/slideFour";
+import SlideFive from "./components/slideFive";
 
 export default function School() { 
   return (
-    <main className="bg-[url('/img/escolar/ricardo-flores-magon/background.jpg')] bg-center bg-cover">
+    <main className="bg-[url('/img/escolar/telebachillerato-las-trancas/background.jpg')] bg-center bg-cover">
       <Splide
-        aria-label="Ricardo Flores Magón"
+        aria-label="Telebachillerato Las Trancas"
         options={{
           rewind: true,
           direction: "ltr",
@@ -32,7 +34,13 @@ export default function School() {
         </SplideSlide>
         <SplideSlide>
           <SlideThree />
-        </SplideSlide>        
+        </SplideSlide>
+        <SplideSlide>
+          <SlideFour />
+        </SplideSlide>
+        <SplideSlide>
+          <SlideFive />
+        </SplideSlide>
       </Splide>
     </main>
   );
