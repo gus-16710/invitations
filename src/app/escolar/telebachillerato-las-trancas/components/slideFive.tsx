@@ -33,12 +33,9 @@ export default function SlideFive() {
   const text = `“Tu esfuerzo valió, vale y valdrá la pena. Nunca pares, nunca te conformes hasta que lo bueno sea lo mejor y lo mejor sea lo excelente”.`;
 
   return (
-    <motion.section
+    <section
       className="flex flex-col justify-center items-center"
-      style={{ height: "100svh" }}
-      initial={{ scale: 0, opacity: 0 }}
-      whileInView={{ scale: 1, opacity: 1 }}
-      transition={{ duration: 1.5, delay: 0.5 }}
+      style={{ height: "100svh" }}      
     >
       <motion.p
         className={`${cormorant.className} text-zinc-50 text-4xl mx-10 text-center`}
@@ -54,6 +51,6 @@ export default function SlideFive() {
           );
         })}
       </motion.p>
-    </motion.section>
+    </section>
   );
 }
