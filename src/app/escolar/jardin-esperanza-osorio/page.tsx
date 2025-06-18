@@ -164,7 +164,7 @@ export default function School() {
   }, []);
 
   return (
-    <main className="bg-[url('/img/escolar/jardin-esperanza-osorio/background04.jpg')] bg-center bg-fixed bg-no-repeat bg-cover min-h-screen">
+    <main className="bg-[url('/img/escolar/jardin-esperanza-osorio/background05.jpg')] bg-center bg-fixed bg-no-repeat bg-cover min-h-screen">
       {open && (
         <>
           <SlideOne />
