@@ -1,73 +1,76 @@
 import { mea } from "./Fonts";
-import { ScrollShadow } from "@nextui-org/react";
+import { Chip, ScrollShadow } from "@nextui-org/react";
 import { motion } from "framer-motion";
-import { IoIosArrowDown } from "react-icons/io";
+import { FaPencilAlt } from "react-icons/fa";
 
 export default function SlideThree() {
   return (
-    <motion.section
-      className="flex flex-col justify-center items-center"
+    <section 
+      className="flex flex-col justify-center items-center" 
       style={{ height: "100svh" }}
-      initial={{ scale: 0, opacity: 0 }}
-      whileInView={{ scale: 1, opacity: 1 }}
-      transition={{ duration: 1.5, delay: 0.5 }}
     >
-      <h1 className={`${mea.className} text-zinc-50 text-6xl mb-5`}>
-        Invitados
-      </h1>
-      <ScrollShadow hideScrollBar className="h-[400px] z-50">
-        <p className="text-zinc-50 text-center mb-5 mx-5">
-          <span className="font-bold">Dra. Renata Roldan Cuevas</span> <br />
-          Jefa del Sector 02 de Telesecundarias
-        </p>
-
-        <p className="text-zinc-50 text-center mb-5 mx-5">
-          <span className="font-bold">
-            Dra. Nohelia Martina Montalvo Aguilar
-          </span>
-          <br /> Supervisora Escolar de la Zona 05 de Telesecundarias
-        </p>
-
-        <p className="text-zinc-50 text-center mb-5 mx-5">
-          <span className="font-bold">Prof. Felder Jiménez Tadeo</span> <br />
-          Secretario General de la Delegación D-II-040
-        </p>
-
-        <p className="text-zinc-50 text-center mb-5 mx-5">
-          <span className="font-bold">C. Raúl Velasco Hernández</span> <br />
-          Presidente Municipal de Tlacolulan
-        </p>
-
-        <p className="text-zinc-50 text-center mb-5 mx-5">
-          <span className="font-bold">C. Abel Hernández Pérez</span> <br />
-          Regidor Único
-        </p>
-
-        <p className="text-zinc-50 text-center mb-5 mx-5">
-          <span className="font-bold">C. María Guadalupe Carmona Díaz</span>
-          <br /> Presidenta del DIF
-        </p>
-
-        <p className="text-zinc-50 text-center mb-5 mx-5">
-          <span className="font-bold">Luis Rufino Hernández Alarcón</span>
-          <br />
-          Presidente de la Asociación de Padres de Familia
-        </p>
-
-        <p className="text-zinc-50 text-center mb-10 mx-5">
-          <span className="font-bold">
-            Directores de los Diferentes Niveles Educatios de Tlacolulan, Ver.
-          </span>
-        </p>
-      </ScrollShadow>
-      <motion.div
-        initial={{ y: 0 }}
-        whileInView={{ y: [0, 10, 0] }}
-        transition={{ duration: 2, repeat: Infinity }}
-        className="mt-5"
+      {/* Título "Maestros" */}
+      <motion.h1
+        className={`${mea.className} text-zinc-800 text-6xl mb-5`}
+        initial={{ y: -50, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.7 }}
       >
-        <IoIosArrowDown className="text-zinc-400" />
-      </motion.div>
-    </motion.section>
+        Maestros
+      </motion.h1>
+
+        {/* Primer maestro */}
+        <motion.div
+          className="text-zinc-800 text-center mb-5 mx-5"
+          initial={{ x: -30, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+        >
+          <span className="flex gap-2 items-center justify-center">
+            <FaPencilAlt /> Mtra Mayra Lizbeth Elizalde Vázquez
+          </span>
+          <Chip color="warning">6° A</Chip>
+        </motion.div>
+
+        {/* Segundo maestro */}
+        <motion.div
+          className="text-zinc-800 text-center mb-5 mx-5"
+          initial={{ x: 30, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ duration: 0.6, delay: 0.5 }}
+        >
+          <span className="flex gap-2 items-center justify-center">
+            <FaPencilAlt /> Mtro Omar Jesús Juárez Montero
+          </span>
+          <Chip color="warning">6° B</Chip>
+        </motion.div>
+
+        {/* Tercer maestro */}
+        <motion.div
+          className="text-zinc-800 text-center mb-5 mx-5"
+          initial={{ x: -30, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ duration: 0.6, delay: 0.7 }}
+        >
+          <span className="flex gap-2 items-center justify-center">
+            <FaPencilAlt /> Mtra Virginia Mata Miranda
+          </span>
+          <Chip color="warning">6° C</Chip>
+        </motion.div>
+
+        {/* Cuarto maestro */}
+        <motion.div
+          className="text-zinc-800 text-center mb-5 mx-5"
+          initial={{ x: 30, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ duration: 0.6, delay: 0.9 }}
+        >
+          <span className="flex gap-2 items-center justify-center">
+            <FaPencilAlt /> Mtrp Mary Celsa Lendechy Gonzáles
+          </span>
+          <Chip color="warning">6° D</Chip>
+        </motion.div>
+      
+    </section>
   );
 }
