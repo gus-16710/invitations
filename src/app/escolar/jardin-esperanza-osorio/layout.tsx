@@ -7,7 +7,7 @@ export const metadata: Metadata = {
     title: "🎓 Jardín de Niños Esperanza Osorio | Clausura 🎓",
     description: "Ceremonia de Clausura ",
     images: [
-      `https://invitaciones.unaideamas.com/img/escolar/jardin-esperanza-osorio/preview.jpg`,
+      `https://invitaciones.unaideamas.com/img/escolar/jardin-esperanza-osorio/preview_page.jpg`,
     ],
   },
   icons: {
