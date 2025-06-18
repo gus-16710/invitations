@@ -18,7 +18,7 @@ export default function AudioControl() {
     <>
       <motion.button
         type="button"
-        className="bg-fuchsia-600 p-3 rounded-full text-white fixed bottom-0 right-0 font-medium shadow-md mb-10 mr-5 transition duration-150 ease-in-out focus:shadow-lg z-30"
+        className="bg-fuchsia-400 p-3 rounded-full text-white fixed bottom-0 right-0 font-medium shadow-md mb-10 mr-5 transition duration-150 ease-in-out focus:shadow-lg z-30"
         onClick={() => setIsPlayed(!isPlayed)}
         initial={{ opacity: 0, scale: 0, y: 100 }}
         animate={{ opacity: 1, scale: 1, y: 0 }}
