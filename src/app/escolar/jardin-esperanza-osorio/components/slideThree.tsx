@@ -1,73 +1,68 @@
-import { mea } from "./Fonts";
-import { ScrollShadow } from "@nextui-org/react";
+
+import { sevillana, urbanist } from "./Fonts";
 import { motion } from "framer-motion";
-import { IoIosArrowDown } from "react-icons/io";
+
 
 export default function SlideThree() {
   return (
-    <motion.section
-      className="flex flex-col justify-center items-center"
+    <section 
+      className="flex flex-col justify-center items-center" 
       style={{ height: "100svh" }}
-      initial={{ scale: 0, opacity: 0 }}
-      whileInView={{ scale: 1, opacity: 1 }}
-      transition={{ duration: 1.5, delay: 0.5 }}
     >
-      <h1 className={`${mea.className} text-zinc-50 text-6xl mb-5`}>
-        Invitados
-      </h1>
-      <ScrollShadow hideScrollBar className="h-[400px] z-50">
-        <p className="text-zinc-50 text-center mb-5 mx-5">
-          <span className="font-bold">Dra. Renata Roldan Cuevas</span> <br />
-          Jefa del Sector 02 de Telesecundarias
-        </p>
-
-        <p className="text-zinc-50 text-center mb-5 mx-5">
-          <span className="font-bold">
-            Dra. Nohelia Martina Montalvo Aguilar
-          </span>
-          <br /> Supervisora Escolar de la Zona 05 de Telesecundarias
-        </p>
-
-        <p className="text-zinc-50 text-center mb-5 mx-5">
-          <span className="font-bold">Prof. Felder Jiménez Tadeo</span> <br />
-          Secretario General de la Delegación D-II-040
-        </p>
-
-        <p className="text-zinc-50 text-center mb-5 mx-5">
-          <span className="font-bold">C. Raúl Velasco Hernández</span> <br />
-          Presidente Municipal de Tlacolulan
-        </p>
-
-        <p className="text-zinc-50 text-center mb-5 mx-5">
-          <span className="font-bold">C. Abel Hernández Pérez</span> <br />
-          Regidor Único
-        </p>
-
-        <p className="text-zinc-50 text-center mb-5 mx-5">
-          <span className="font-bold">C. María Guadalupe Carmona Díaz</span>
-          <br /> Presidenta del DIF
-        </p>
-
-        <p className="text-zinc-50 text-center mb-5 mx-5">
-          <span className="font-bold">Luis Rufino Hernández Alarcón</span>
-          <br />
-          Presidente de la Asociación de Padres de Familia
-        </p>
-
-        <p className="text-zinc-50 text-center mb-10 mx-5">
-          <span className="font-bold">
-            Directores de los Diferentes Niveles Educatios de Tlacolulan, Ver.
-          </span>
-        </p>
-      </ScrollShadow>
       <motion.div
-        initial={{ y: 0 }}
-        whileInView={{ y: [0, 10, 0] }}
-        transition={{ duration: 2, repeat: Infinity }}
-        className="mt-5"
+        initial={{ y: -50, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.8 }}
       >
-        <IoIosArrowDown className="text-zinc-400" />
+        <h1 className={`${sevillana.className} text-zinc-800 text-6xl mb-5`}>
+          Profesores
+        </h1>
       </motion.div>
-    </motion.section>
+
+      <motion.div
+        initial={{ x: -50, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        transition={{ duration: 0.6, delay: 0.2 }}
+      >
+        <p className="text-zinc-800 text-center mb-5 mx-5 font-medium">
+          <span className={`${urbanist.className}`}>Blanca Patricia Martínez Segura</span>{" "}
+          <br />
+          Profesora 3o "A"
+        </p>
+      </motion.div>
+
+      <motion.div
+        initial={{ x: 50, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        transition={{ duration: 0.6, delay: 0.4 }}
+      >
+        <p className="text-zinc-800 text-center mb-5 mx-5 font-medium">
+          <span className={`${urbanist.className}`}>Miriam Martínez Rosete</span> <br />
+          Profesora 3o "B"
+        </p>
+      </motion.div>
+
+      <motion.div
+        initial={{ x: -50, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        transition={{ duration: 0.6, delay: 0.6 }}
+      >
+        <p className="text-zinc-800 text-center mb-5 mx-5 font-medium">
+          <span className={`${urbanist.className}`}>Yadira Ortega Alonso</span> <br />
+          Profesora 3o "C"
+        </p>
+      </motion.div>
+
+      <motion.div
+        initial={{ x: 50, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        transition={{ duration: 0.6, delay: 0.8 }}
+      >
+        <p className="text-zinc-800 text-center mb-5 mx-5 font-medium">
+          <span className={`${urbanist.className}`}>Verónica Moreno Martínez</span> <br />
+          Profesora 3o "D"
+        </p>
+      </motion.div>     
+    </section>
   );
 }

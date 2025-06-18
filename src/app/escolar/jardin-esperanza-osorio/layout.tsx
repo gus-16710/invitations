@@ -7,7 +7,7 @@ export const metadata: Metadata = {
     title: "🎓 Jardín de niños Esperanza Osorio | Fin de Cursos 🎓",
     description: "Ceremonia de “Fin de cursos” ",
     images: [
-      `https://invitaciones.unaideamas.com/img/escolar/jardin-esperanza-osorio/rfm.jpg`,
+      `https://invitaciones.unaideamas.com/img/escolar/jardin-esperanza-osorio/preview.jpg`,
     ],
   },
   icons: {

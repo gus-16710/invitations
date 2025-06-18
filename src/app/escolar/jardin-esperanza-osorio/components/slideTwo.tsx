@@ -1,7 +1,5 @@
-import { Avatar } from "@nextui-org/react";
-import { luxurious, mea, urbanist } from "./Fonts";
+import { luxurious, mea, open, sevillana, urbanist } from "./Fonts";
 import { motion } from "framer-motion";
-import { IoMdTime } from "react-icons/io";
 import {
   Modal,
   ModalBody,
@@ -9,16 +7,20 @@ import {
   ModalFooter,
   ModalHeader,
   useDisclosure,
+  Spinner,
 } from "@nextui-org/react";
+
+import { GiAlarmClock } from "react-icons/gi";
 
 const MapCeremony = () => (
   <iframe
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d443.2735982615796!2d-97.00215246648155!3d19.66760884989288!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85db25d47df08107%3A0x907a36900d7363ca!2sTelesecundaria%20Ricardo%20Flores%20Mag%C3%B3n!5e0!3m2!1ses!2smx!4v1716868733117!5m2!1ses!2smx"
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1117.9641172073452!2d-96.9193900922164!3d19.52580513381746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85db3200cc1cc915%3A0x145b98bb69e5bca!2sJard%C3%ADn%20de%20Ni%C3%B1os%20Esperanza%20Osorio!5e0!3m2!1ses!2smx!4v1750269832603!5m2!1ses!2smx"
     height="450"
     style={{ border: "0" }}
     allowFullScreen
     loading="lazy"
     referrerPolicy="no-referrer-when-downgrade"
+    className="z-20"
   ></iframe>
 );
 
@@ -41,12 +43,15 @@ const ModalMap = ({
         {(onClose) => (
           <>
             <ModalHeader
-              className={`${mea.className} flex flex-col gap-1 items-center text-3xl`}
+              className={`${sevillana.className} flex flex-col gap-1 items-center text-3xl`}
             >
               Ubicación
             </ModalHeader>
-            <ModalBody>
-              <MapCeremony />
+            <ModalBody className="relative flex justify-center items-center">
+              <>
+                <MapCeremony />
+                <Spinner className="absolute z-10" color="success"/>
+              </>
             </ModalBody>
             <ModalFooter></ModalFooter>
           </>
@@ -61,46 +66,65 @@ export default function SlideTwo() {
 
   return (
     <>
-      <motion.section
-        className="flex flex-col justify-center items-center"
+      <section 
+        className="flex flex-col justify-center items-center" 
         style={{ height: "100svh" }}
-        initial={{ scale: 0, opacity: 0 }}
-        whileInView={{ scale: 1, opacity: 1 }}
-        transition={{ duration: 1.5, delay: 0.5 }}
       >
-        <h1 className={`${mea.className} text-zinc-800 text-6xl`}>Ubicación</h1>
-        <Avatar
-          isBordered
-          color="warning"
-          src="/img/escolar/ricardo-flores-magon/telesecundaria-rfm-1.jpg"
-          className="h-40 w-40 my-5 shadow-lg rounded-none"
-        />
-
-        <span className="flex items-center justify-center gap-1 bg-pink-100 text-pink-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-pink-400 border border-pink-400 mb-5">
-          <IoMdTime /> 10:00 HRS
-        </span>
-
-        <p
-          className={`${urbanist.className} text-zinc-800 text-xl px-5 text-center mx-10`}
+        <motion.div
+          initial={{ y: 50, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
         >
-          Escuela Telesecundaria "Ricardo Flores Magón"
-        </p>
-        <p
-          className={`${luxurious.className} text-zinc-800 mt-3 text-sm text-center mx-10 max-w-md`}
-        >
-          Calle Libertad N° 24, Colonia Centro, 91350 Tlacolulan, Veracruz.
-        </p>
+          <h1 className={`${sevillana.className} text-zinc-800 text-6xl`}>
+            Ubicación
+          </h1>
+        </motion.div>
 
-        <button
-          type="button"
-          className="text-gray-800 hover:text-white border border-gray-800 hover:bg-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2 text-center me-2 my-4"
-          onClick={() => {
-            onOpen();
-          }}
+        <motion.div
+          initial={{ y: 50, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
         >
-          Ubicación
-        </button>
-      </motion.section>
+          <h1 className="flex items-center justify-center gap-1 text-zinc-800 text-4xl font-medium me-2 rounded my-5">
+            <GiAlarmClock /> 09:30 a.m.
+          </h1>
+        </motion.div>
+
+        <motion.div
+          initial={{ y: 50, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+        >
+          <p className={`${urbanist.className} text-zinc-800 text-xl px-5 text-center mx-10`}>
+            Jardín de Niños "Esperanza Osorio"
+          </p>
+        </motion.div>
+
+        <motion.div
+          initial={{ y: 50, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.8, delay: 0.8 }}
+        >
+          <p className={`${urbanist.className} text-zinc-800 mt-3 text-sm text-center mx-10 max-w-md`}>
+            C. José María Mata, Zona Centro, Centro, 91000 Xalapa-Enríquez, Ver.
+          </p>
+        </motion.div>
+
+        <motion.div
+          initial={{ scale: 0.8, opacity: 0 }}
+          whileInView={{ scale: 1, opacity: 1 }}
+          transition={{ duration: 0.8, delay: 1.0, type: "spring" }}
+        >
+          <button
+            type="button"
+            className="text-gray-800 hover:text-white border border-gray-800 hover:bg-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2 text-center me-2 my-4"
+            onClick={onOpen}
+          >
+            Ver ubicación
+          </button>
+        </motion.div>
+      </section>
+      
       <ModalMap isOpen={isOpen} onOpenChange={onOpenChange} />
     </>
   );

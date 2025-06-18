@@ -7,14 +7,19 @@ import {
   Lora,
 
   Poppins,
-  Playfair_Display,  
-  Teko
+  Sevillana,  
+  Teko,
+  Open_Sans,
+  Dancing_Script,
+  Englebert  
 } from "next/font/google";
 
 export const poppins = Poppins({ subsets: ["latin"], weight: ["400"] });
-export const playfair = Playfair_Display({ subsets: ["latin"], weight: ["400"] });
+export const sevillana = Sevillana({ subsets: ["latin"], weight: ["400"] });
 export const teko = Teko({ subsets: ["latin"], weight: ["400"] });
-
+export const open = Open_Sans({ subsets: ["latin"], weight: ["400"] });
+export const dancing = Dancing_Script({ subsets: ["latin"], weight: ["400"] });
+export const englebert = Englebert({ subsets: ["latin"], weight: ["400"] });
 
 export const mea = Mea_Culpa({ subsets: ["latin"], weight: ["400"] });
 export const cormorant = Cormorant_Garamond({
