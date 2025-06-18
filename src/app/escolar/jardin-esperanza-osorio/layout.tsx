@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "🎓 Jardín de niños Esperanza Osorio | Fin de Cursos 🎓",
-  description: "Ceremonia de “Fin de cursos” ",
+  title: "🎓 Jardín de Niños Esperanza Osorio | Clausura 🎓",
+  description: "Ceremonia de Clausura",
   openGraph: {
-    title: "🎓 Jardín de niños Esperanza Osorio | Fin de Cursos 🎓",
-    description: "Ceremonia de “Fin de cursos” ",
+    title: "🎓 Jardín de Niños Esperanza Osorio | Clausura 🎓",
+    description: "Ceremonia de Clausura ",
     images: [
       `https://invitaciones.unaideamas.com/img/escolar/jardin-esperanza-osorio/preview.jpg`,
     ],

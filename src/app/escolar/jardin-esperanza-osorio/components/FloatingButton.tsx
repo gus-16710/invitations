@@ -22,7 +22,7 @@ export default function FloatinButton() {
   return (
     <button
       type="button"
-      className={`bg-yellow-300 p-3 rounded-full text-white fixed bottom-0 right-0 font-medium shadow-md mb-24 mr-5 transition duration-150 ease-in-out hover:bg-fuchsia-700/75 hover:shadow-lg focus:bg-fuchsia-700/75 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-fuchsia-700/75 active:shadow-lg z-30`}
+      className={`bg-yellow-300 p-3 rounded-full text-white fixed bottom-0 right-0 font-medium shadow-md mb-24 mr-5 transition duration-150 ease-in-out hover:bg-yellow-700/75 hover:shadow-lg focus:bg-yellow-700/75 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-yellow-700/75 active:shadow-lg z-30`}
       onClick={() => {
         window.scrollTo({ top: 0, behavior: "smooth" });
       }}

@@ -8,7 +8,7 @@ export default function SlideOne() {
   return (
     <section 
       className="flex flex-col justify-center items-center" 
-      style={{ height: "100svh" }}
+      style={{height: "100dvh"}}
     >
       <motion.div
         initial={{ y: 50, opacity: 0 }}

@@ -5,7 +5,7 @@ export default function SlideFour() {
   return (
     <section
       className="flex flex-col justify-center items-center px-5 overflow-clip"
-      style={{ height: "100svh" }}
+      style={{height: "100dvh"}}
     >
       {/* Título principal */}
       <motion.div
