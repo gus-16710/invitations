@@ -17,9 +17,59 @@ export default function SlideSix() {
       </h1>
       <ScrollShadow hideScrollBar className="h-[400px] text-zinc-100">
         <div className="mb-10 flex flex-col justify-center items-center">
-          <h2 className="mb-4">
-            Área Humanidades y Ciencias Sociales – 1
-          </h2>
+          <h2 className="mb-4">Área Químico – Biológico</h2>
+          <ol className="list-decimal list-inside space-y-1">
+            <li>Báez Benítez José Jafet</li>
+            <li>Castillo Canche Roandy Alexander</li>
+            <li>Corrales Ortiz Eduardo</li>
+            <li>Delgado Domínguez Cesar Jahir</li>
+            <li>Estrella Ramírez Luz Guadalupe</li>
+            <li>Gómez Mota Enzo Vicente</li>
+            <li>Hernández Hernández Pamela</li>
+            <li>Hernández Mora Megan Danae</li>
+            <li>Hernández Ventura Vanesa Mayte</li>
+            <li>López Hernández Rubén Daniel</li>
+            <li>Merino Rodríguez Leydi Ivette</li>
+            <li>Montes Arguello Natalia</li>
+            <li>Murillo Murillo Mariela</li>
+            <li>Pérez Marín Jesús Eduardo</li>
+            <li>Pérez Mavil María Fernanda</li>
+            <li>Reyes Jaen Brenda</li>
+            <li>Rodríguez Trujillo Karla Pamela</li>
+            <li>Saldaña Méndez Laura Yazmin</li>
+            <li>Solano Hernández Luz Estrella</li>
+            <li>Topal Álvarez Dulce Sugey</li>
+            <li>Valencia Reyes Daira Guadalupe</li>
+            <li>Valencia Rico Nahomi Estrella</li>
+            <li>Vega Rosas Diego Alexander</li>
+            <li>Villa Escobedo Osvaldo</li>
+          </ol>
+        </div>
+
+        <div className="mb-10 flex flex-col justify-center items-center">
+          <h2 className="mb-4">Área Económico – Administrativo</h2>
+          <ol className="list-decimal list-inside space-y-1">
+            <li>Chávez Rosas Omar Humberto</li>
+            <li>Del Carmen Bautista Lesli Anahí</li>
+            <li>García Eliosa David</li>
+            <li>García Hernández Luz Estrella</li>
+            <li>García Martínez Carlos Daniel</li>
+            <li>García Rizo Erick</li>
+            <li>Guerrero Domínguez Arizbeth</li>
+            <li>Hernández De Jesús Alessandra</li>
+            <li>Hernández Galindo Guadalupe</li>
+            <li>Jacome Zubizarreta Rafael</li>
+            <li>López Saldaña Yesica Guadalupe</li>
+            <li>Martínez Cervantes Brian</li>
+            <li>Ortega Contreras Paola</li>
+            <li>Vázquez Romero Diego Danahel</li>
+            <li>Vázquez Trujillo Juan Sebastián</li>
+            <li>Velázquez Chávez Ivanna Elizabeth</li>
+          </ol>
+        </div>
+
+        <div className="mb-10 flex flex-col justify-center items-center">
+          <h2 className="mb-4">Área Humanidades y Ciencias Sociales – 1</h2>
           <ol className="list-decimal list-inside space-y-1">
             <li>Aguilar Martínez Jennifer</li>
             <li>Callejas Colorado Carlos Yair</li>
@@ -40,9 +90,7 @@ export default function SlideSix() {
         </div>
 
         <div className="mb-10 flex flex-col justify-center items-center">
-          <h2 className="mb-4">
-            Área Humanidades y Ciencias Sociales – 2
-          </h2>
+          <h2 className="mb-4">Área Humanidades y Ciencias Sociales – 2</h2>
           <ol className="list-decimal list-inside space-y-1">
             <li>Anastasio García Alexis Mandian</li>
             <li>Arroyo Villanueva Alonso</li>
@@ -75,65 +123,7 @@ export default function SlideSix() {
         </div>
 
         <div className="mb-10 flex flex-col justify-center items-center">
-          <h2 className="mb-4">
-            Área Químico – Biológico
-          </h2>
-          <ol className="list-decimal list-inside space-y-1">
-            <li>Báez Benítez José Jafet</li>
-            <li>Castillo Canche Roandy Alexander</li>
-            <li>Corrales Ortiz Eduardo</li>
-            <li>Delgado Domínguez Cesar Jahir</li>
-            <li>Estrella Ramírez Luz Guadalupe</li>
-            <li>Gómez Mota Enzo Vicente</li>
-            <li>Hernández Hernández Pamela</li>
-            <li>Hernández Mora Megan Danae</li>
-            <li>Hernández Ventura Vanesa Mayte</li>
-            <li>López Hernández Rubén Daniel</li>
-            <li>Merino Rodríguez Leydi Ivette</li>
-            <li>Montes Arguello Natalia</li>
-            <li>Murillo Murillo Mariela</li>
-            <li>Pérez Marín Jesús Eduardo</li>
-            <li>Pérez Mavil María Fernanda</li>
-            <li>Reyes Jaen Brenda</li>
-            <li>Rodríguez Trujillo Karla Pamela</li>
-            <li>Saldaña Méndez Laura Yazmin</li>
-            <li>Solano Hernández Luz Estrella</li>
-            <li>Topal Álvarez Dulce Sugey</li>
-            <li>Valencia Reyes Daira Guadalupe</li>
-            <li>Valencia Rico Nahomi Estrella</li>
-            <li>Vega Rosas Diego Alexander</li>
-            <li>Villa Escobedo Osvaldo</li>
-          </ol>
-        </div>
-
-        <div className="mb-10 flex flex-col justify-center items-center">
-          <h2 className="mb-4">
-            Área Económico – Administrativo
-          </h2>
-          <ol className="list-decimal list-inside space-y-1">
-            <li>Chávez Rosas Omar Humberto</li>
-            <li>Del Carmen Bautista Lesli Anahí</li>
-            <li>García Eliosa David</li>
-            <li>García Hernández Luz Estrella</li>
-            <li>García Martínez Carlos Daniel</li>
-            <li>García Rizo Erick</li>
-            <li>Guerrero Domínguez Arizbeth</li>
-            <li>Hernández De Jesús Alessandra</li>
-            <li>Hernández Galindo Guadalupe</li>
-            <li>Jacome Zubizarreta Rafael</li>
-            <li>López Saldaña Yesica Guadalupe</li>
-            <li>Martínez Cervantes Brian</li>
-            <li>Ortega Contreras Paola</li>
-            <li>Vázquez Romero Diego Danahel</li>
-            <li>Vázquez Trujillo Juan Sebastián</li>
-            <li>Velázquez Chávez Ivanna Elizabeth</li>
-          </ol>
-        </div>
-
-        <div className="mb-10 flex flex-col justify-center items-center">
-          <h2 className="mb-4">
-            Área Físico – Matemático
-          </h2>
+          <h2 className="mb-4">Área Físico – Matemático</h2>
           <ol className="list-decimal list-inside space-y-1">
             <li>Aburto López Yesenia Saray</li>
             <li>Báez Guzmán Marjoree del Carmen</li>

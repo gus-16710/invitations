@@ -1,5 +1,19 @@
+import "yet-another-react-lightbox/styles.css";
+
 import { motion } from "framer-motion";
 import { cormorant } from "./Fonts";
+import PhotoAlbum from "react-photo-album";
+import { useState } from "react";
+import NextJsImage from "./NextJsImage";
+import Lightbox from "yet-another-react-lightbox";
+
+const images = [
+  {
+    src: "/img/escolar/primaria-francisco-madero/generacion.jpg",
+    width: 800,
+    height: 600,
+  },
+];
 
 const list = {
   visible: {
@@ -11,15 +25,10 @@ const list = {
   },
   hidden: {
     opacity: 0,
-    // transition: {
-    //   when: "afterChildren",
-    // },
   },
 };
 
 const item = {
-  // visible: { opacity: 1, y: 0, scale: 1 },
-  // hidden: { opacity: 0, y: 100, scale: 0 },
   hidden: { opacity: 0, y: 50, rotate: -10 },
   visible: {
     opacity: 1,
@@ -30,6 +39,8 @@ const item = {
 };
 
 export default function SlideFour() {
+  const [index, setIndex] = useState(-1);
+
   const text = `Hoy no decimos adiós, sino hasta pronto. Llévense en el corazón los recuerdos, las risas y todo lo aprendido en estos años. La Escuela Primaria Francisco I. Madero siempre será su casa. ¡Vuelen alto y sigan soñando en grande!`;
 
   return (
@@ -37,7 +48,7 @@ export default function SlideFour() {
       className="flex flex-col justify-center items-center relative"
       style={{ height: "100svh" }}
     >
-        <video
+      <video
         autoPlay
         loop
         muted
@@ -53,7 +64,7 @@ export default function SlideFour() {
       <div className="absolute top-0 left-0 w-full h-full z-5 bg-gradient-to-t from-black/80 to-transparent"></div>
 
       <motion.p
-        className={`${cormorant.className} text-zinc-50 text-3xl mx-10 text-center z-10 max-w-xl custom-shadow`}
+        className={`${cormorant.className} text-zinc-50 text-2xl mx-10 text-center z-10 max-w-xl custom-shadow`}
         variants={list}
         initial="hidden"
         whileInView="visible"
@@ -64,8 +75,24 @@ export default function SlideFour() {
               {letter === "_" ? <>&nbsp;</> : letter}
             </motion.span>
           );
-        })}        
+        })}
       </motion.p>
+      
+      <div className="h-32 w-72 mt-5">
+        <PhotoAlbum
+          layout="masonry"
+          photos={images}
+          onClick={({ index: current }) => setIndex(current)}
+          renderPhoto={NextJsImage}
+          columns={1}
+        />
+        <Lightbox
+          index={index}
+          slides={images}
+          open={index >= 0}
+          close={() => setIndex(-1)}
+        />
+      </div>    
     </section>
   );
 }

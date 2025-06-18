@@ -64,6 +64,10 @@ const OpeningModal = ({
               <h2 className={`${urbanist.className} text-zinc-50 text-center text-xl`}>
                 CEREMONIA DE GRADUACIÓN
               </h2>
+
+              <h2 className={`${urbanist.className} text-zinc-50 text-center`}>
+                Generación Mtra María Teresa Martínez Pedraza
+              </h2>
             </ModalBody>
             <ModalFooter className="flex justify-center">
               <button

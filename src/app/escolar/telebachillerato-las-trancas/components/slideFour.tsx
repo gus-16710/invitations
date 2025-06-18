@@ -62,12 +62,7 @@ const images = [
     src: "/img/escolar/telebachillerato-las-trancas/gallery-11.jpg",
     width: 800,
     height: 600,
-  },
-  {
-    src: "/img/escolar/telebachillerato-las-trancas/gallery-12.jpg",
-    width: 800,
-    height: 600,
-  },
+  }, 
 ];
 
 export default function SlideFour() {

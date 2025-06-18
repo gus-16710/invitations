@@ -51,7 +51,7 @@ export default function SlideOne() {
         </span>
       </p>
       <p className={`${urbanist.className} z-20 text-zinc-300 mt-2`}>
-        09:00 Hrs - Auditorio IMAC
+        09:00 Hrs
       </p>
     </motion.section>
   );
