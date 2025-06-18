@@ -99,7 +99,7 @@ export default function SlideTwo() {
         <p
           className={`${nobile.className} text-zinc-50 mt-3 text-sm text-center mx-10 max-w-md`}
         >
-          México 140 5319, Xalitic, 91635 El Castillo, Ver.
+          Carretera Federal Xalapa-Veracruz Km. 24 SN
         </p>
 
         <button
