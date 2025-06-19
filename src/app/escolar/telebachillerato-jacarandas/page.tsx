@@ -18,8 +18,9 @@ import {
 } from "@nextui-org/react";
 
 import "./styles.css";
-import { nobile, ovo } from "./components/Fonts";
+import { nobile, oleo, ovo } from "./components/Fonts";
 import AudioControl from "./components/AudioControl";
+import { GrFormViewHide } from "react-icons/gr";
 
 const OpeningModal = ({
   isOpen,
@@ -34,31 +35,37 @@ const OpeningModal = ({
     <Modal
       isOpen={isOpen}
       onOpenChange={onOpenChange}
-      size="xs"
+      size="full"
       placement="center"
       backdrop="blur"
       isDismissable={false}
       hideCloseButton={true}
     >
-      <ModalContent>
+      <ModalContent className="overflow-clip bg-slate-50/0">
         {(onClose) => (
           <>
             <ModalHeader className="flex flex-col gap-1"></ModalHeader>
-            <ModalBody>
+            <ModalBody className="flex justify-center items-center">
               <h2
-                className={`${nobile.className} text-blue-950 text-lg text-center`}
+                className={`${nobile.className} text-zinc-100 text-lg text-center`}
               >
-                Escuela Primaria
+                Telebachillerato
               </h2>
               <h1
-                className={`${ovo.className} text-blue-950 text-4xl text-center`}
+                className={`${ovo.className} text-zinc-100 text-4xl text-center`}
               >
-                "Francisco I. Madero"
+                "Jacarandas"
               </h1>
-              <h2 className={`${nobile.className} text-blue-850 text-center`}>30EPR0877X</h2>          
+              <h2 className={`${nobile.className} text-zinc-100 text-center`}>30EPR0877X</h2>          
 
-              <h2 className={`${nobile.className} text-blue-950 text-center`}>
-                CEREMONIA DE FIN DE CURSOS
+              <h2 className={`${oleo.className} text-zinc-100 text-center text-5xl my-10`}>
+                Ceremonia de fin de cursos
+              </h2>
+
+              <h2
+                className={`${nobile.className} text-zinc-100 text-center`}
+              >
+                Coordinador: Mtro Williams Lagunes Amaya
               </h2>
             </ModalBody>
             <ModalFooter className="flex justify-center">
@@ -70,7 +77,7 @@ const OpeningModal = ({
                   onClose();
                 }}
               >
-                Ver Invitación
+                <GrFormViewHide className="text-xl" /> Ver Invitación
               </button>
             </ModalFooter>
             <svg
@@ -97,15 +104,15 @@ const OpeningModal = ({
 };
 
 export default function School() {
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
-  // useEffect(() => {
-  //   onOpen();
-  // }, []);
+  useEffect(() => {
+    onOpen();
+  }, []);
 
   return (
-    <main className="bg-[url('/img/escolar/primaria-francisco-madero/background05.jpg')] bg-center bg-cover h-screen">
+    <main className="bg-[url('/img/escolar/telebachillerato-jacarandas/background2.avif')] bg-center bg-cover h-screen">
       {open && (
         <div className="relative">
           <Splide

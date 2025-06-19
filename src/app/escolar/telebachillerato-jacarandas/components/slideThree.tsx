@@ -47,21 +47,31 @@ export default function SlideThree() {
             <p
               className={`${oleo.className} text-zinc-50 text-4xl mb-10 custom-shadow`}
             >
-              Padrinos de Generación
+              Padrinos de<br/> Generación
             </p>
             <p
               className={`${ovo.className} text-zinc-50 text-lg custom-shadow`}
             >
-              Mariela Macias Rincon <br /> 
-              Ignacio López Lozano <br />
+              Mtra. Leonor Herrera García <br /> 
+              Mtra. Ma. Magdalena Gómez Austria <br />
+              Mtro. Jesús Isaac García Arviso
             </p>
           </div>
-          {/* <div className="flex h-full items-center justify-center pb-10 text-gray-800 flex-col px-5 text-center">
-            <p className={` text-4xl pb-4`}>Coronación</p>
-            <p className={``}>
-              Leticia Barragan Saldaña <br />&<br /> Juan Pablo Robles Castillo
+          <div className="flex h-full items-center justify-center pb-10 text-gray-800 flex-col px-5 text-center">
+            <p
+              className={`${oleo.className} text-zinc-50 text-4xl mb-10 custom-shadow`}
+            >
+              Profesores
             </p>
-          </div> */}
+            <p
+              className={`${ovo.className} text-zinc-50 text-lg custom-shadow`}
+            >
+              Jorge de Jesús Amaya Aguilar <br /> 
+              Diana Vianey Rosas Reyna <br />
+              Kenia de Jesús Cuervo Lara <br/>
+              Migdalia Orduña López
+            </p>
+          </div>
         </Carousel>
       </Flowbite>
       {/* <h1 className={`${oleo.className} text-zinc-50 text-4xl mb-2 custom-shadow`}>

@@ -1,14 +1,13 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "🎓 Francisco I. Madero | Fin de Cursos 🎓",
-  description: "Francisto I. Madero “Fin de cursos” de la GENERACIÓN 2019-2025",
+  title: "🎓 Telebachillerato Jacarandas | Fin de Cursos 🎓",
+  description: "Ceremonia de “Fin de cursos” de la GENERACIÓN 2022-2025",
   openGraph: {
-    title: "🎓 Francisco I. Madero | Fin de Cursos 🎓",
-    description:
-      "Francisto I. Madero “Fin de cursos” de la GENERACIÓN 2019-2025",
+    title: "🎓 Telebachillerato Jacarandas | Fin de Cursos 🎓",
+    description: "Ceremonia de “Fin de cursos” de la GENERACIÓN 2022-2025",
     images: [
-      `https://invitaciones.unaideamas.com/img/escolar/primaria-francisco-madero/preview.jpg`,
+      `https://invitaciones.unaideamas.com/img/escolar/primaria-francisco-madero/gallery-01.jpg`,
     ],
   },
   icons: {
