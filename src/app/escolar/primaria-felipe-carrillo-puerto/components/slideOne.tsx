@@ -18,8 +18,8 @@ const images = [
 export default function SlideOne() {
   const [index, setIndex] = useState(-1);
   return (
-    <section 
-      className="flex flex-col justify-center items-center" 
+    <section
+      className="flex flex-col justify-center items-center"
       style={{ height: "100svh" }}
     >
       {/* Primera línea - Tipo de escuela */}
@@ -66,11 +66,11 @@ export default function SlideOne() {
           open={index >= 0}
           close={() => setIndex(-1)}
         />
-      </div>  
+      </div>
 
       {/* Título "Ceremonia" */}
       <motion.h2
-        className={`${mea.className} text-zinc-800 text-7xl`}
+        className={`${mea.className} text-zinc-800 text-6xl`}
         initial={{ y: -30, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6, delay: 0.9 }}
@@ -80,7 +80,7 @@ export default function SlideOne() {
 
       {/* Subtítulo "DE FIN DE CURSOS" */}
       <motion.h2
-        className={`${urbanist.className} text-zinc-800 mb-4`}
+        className={`${urbanist.className} text-zinc-800 mb-3`}
         initial={{ y: 30, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6, delay: 1.1 }}
@@ -95,7 +95,8 @@ export default function SlideOne() {
         whileInView={{ x: 0, opacity: 1 }}
         transition={{ duration: 0.6, delay: 1.3 }}
       >
-        Generación Mtro Aldo Azuara Moreno 2019-2025
+        Generación
+        <br /> 2019-2025 <br /> "Mtro. Aldo Azuara Moreno"
       </motion.h2>
 
       {/* Fecha */}
@@ -106,9 +107,11 @@ export default function SlideOne() {
         whileInView={{ scale: 1, opacity: 1 }}
         transition={{ duration: 0.7, delay: 1.5 }}
       >
-        <span className="border-y-1 border-y-zinc-800 py-2 tracking-widest">&nbsp;JULIO&nbsp;</span>
+        <span className="border-y-1 border-y-zinc-800 py-2 tracking-widest">
+          &nbsp;JULIO&nbsp;
+        </span>
         <span className="text-4xl px-2 tracking-widest">10</span>
-        <span className="border-y-1 border-y-zinc-800 py-2 tracking-widest">          
+        <span className="border-y-1 border-y-zinc-800 py-2 tracking-widest">
           &nbsp;&nbsp;2025&nbsp;&nbsp;
         </span>
       </motion.p>
