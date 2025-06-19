@@ -66,7 +66,7 @@ export default function SlideThree() {
           transition={{ duration: 0.6, delay: 0.9 }}
         >
           <span className="flex gap-2 items-center justify-center">
-            <FaPencilAlt /> Mtra Mary Celsa Lendechy Gonzáles
+            <FaPencilAlt /> Mtra Mary Celsa Lendechy González
           </span>
           <Chip color="warning">6° D</Chip>
         </motion.div>
