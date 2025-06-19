@@ -32,7 +32,7 @@ export default function SlideThree() {
 
         <p className="text-zinc-50 text-center mb-5 mx-5">
           <span className="font-bold">Lic. Elías Calixto Armas</span> <br />
-          Subsecretario de educación media superior
+          Subsecretario de Educación Media Superior y Superior
         </p>
 
         <p className="text-zinc-50 text-center mb-5 mx-5">
@@ -42,18 +42,18 @@ export default function SlideThree() {
 
         <p className="text-zinc-50 text-center mb-5 mx-5">
           <span className="font-bold">Arq. Luis Ignacio Vázquez Ramos</span> <br />
-          Supervisor escolar de la zona Xalapa “D”
+          Supervisor Escolar de la Zona Xalapa “D”
         </p>
 
         <p className="text-zinc-50 text-center mb-5 mx-5">
           <span className="font-bold">Lic. Alberto Islas Reyes.</span>
-          <br /> Presidente municipal de Xalapa D
+          <br /> Presidente Municipal Xalapa
         </p>
 
         <p className="text-zinc-50 text-center mb-5 mx-5">
           <span className="font-bold">Arq. Erick Ruiz Hernandez</span>
           <br />
-          Presidente municipal de “Emiliano Zapata”
+          Presidente Municipal Emiliano Zapata
         </p>
 
         <p className="text-zinc-50 text-center mb-5 mx-5">
