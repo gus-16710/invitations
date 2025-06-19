@@ -7,7 +7,7 @@ export const metadata: Metadata = {
     title: '🎓 Telebachillerato "Las Trancas" | Graduación 🎓',
     description: "Ceremonia de “Graduación” de la GENERACIÓN 2022-2025",
     images: [
-      `https://invitaciones.unaideamas.com/img/escolar/telebachillerato-las-trancas/preview.jpg`,
+      `https://invitaciones.unaideamas.com/img/escolar/telebachillerato-las-trancas/gallery-01.jpg`,
     ],
   },
   icons: {

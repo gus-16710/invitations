@@ -10,7 +10,7 @@ export default function NextJsImage({
 }: RenderPhotoProps) {
   return (
     <motion.div
-      className="h-40 w-full group cursor-pointer flex items-center justify-center" // Añadido justify-center aquí
+      className="h-32 w-full group cursor-pointer flex items-center justify-center" // Añadido justify-center aquí
       style={{ 
         //...wrapperStyle, // Mantenemos los estilos del wrapper
         position: "relative",

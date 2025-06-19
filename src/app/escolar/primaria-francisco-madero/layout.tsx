@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     description:
       "Francisto I. Madero “Fin de cursos” de la GENERACIÓN 2019-2025",
     images: [
-      `https://invitaciones.unaideamas.com/img/escolar/primaria-francisco-madero/preview.jpg`,
+      `https://invitaciones.unaideamas.com/img/escolar/primaria-francisco-madero/generacion_preview.jpg`,
     ],
   },
   icons: {
