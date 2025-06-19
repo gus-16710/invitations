@@ -36,8 +36,8 @@ export default function SlideThree() {
         </p>
 
         <p className="text-zinc-50 text-center mb-5 mx-5">
-          <span className="font-bold">Lic. Irving Illhuicamina Mendoza Ruiz</span> <br />
-          Director General del TELEBACHILLERATO
+          <span className="font-bold">Lic. Irving Llhuicamina  Mendoza Ruiz</span> <br />
+          Director General del Telebachillerato
         </p>
 
         <p className="text-zinc-50 text-center mb-5 mx-5">
