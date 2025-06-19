@@ -38,7 +38,7 @@ export default function SlideFive() {
       style={{ height: "100svh" }}      
     >
       <motion.p
-        className={`${cormorant.className} text-zinc-50 text-4xl mx-10 text-center`}
+        className={`${cormorant.className} text-zinc-50 text-4xl mx-10 text-center max-w-3xl`}
         variants={list}
         initial="hidden"
         whileInView="visible"

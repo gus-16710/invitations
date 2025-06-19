@@ -18,6 +18,13 @@ export default function SlideThree() {
       <ScrollShadow hideScrollBar className="h-[400px] z-50">        
         <p className="text-zinc-50 text-center mb-5 mx-5">
           <span className="font-bold">
+            Ing. Norma Rocío Nahle García
+          </span>
+          <br /> Gobernadora del Gobierno de Veracruz
+        </p>
+        
+        <p className="text-zinc-50 text-center mb-5 mx-5">
+          <span className="font-bold">
             Lic. Ricardo Ahued Bardahuil
           </span>
           <br /> Secretario de Gobierno de Veracruz.

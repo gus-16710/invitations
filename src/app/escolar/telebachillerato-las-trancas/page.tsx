@@ -17,7 +17,7 @@ import {
   ModalHeader,
   useDisclosure,
 } from "@nextui-org/react";
-import { cormorant, urbanist } from "./components/Fonts";
+import { cormorant, mea, urbanist } from "./components/Fonts";
 import AudioControl from "./components/AudioControl";
 
 import { GrFormViewHide } from "react-icons/gr";
@@ -61,12 +61,12 @@ const OpeningModal = ({
                 30ETH0517R
               </h2>
 
-              <h2 className={`${urbanist.className} text-zinc-50 text-center text-xl`}>
-                CEREMONIA DE GRADUACIÓN
+              <h2 className={`${mea.className} text-zinc-50 text-center text-6xl italic my-10`}>
+                Ceremonia de Graduación
               </h2>
 
               <h2 className={`${urbanist.className} text-zinc-50 text-center`}>
-                Generación Mtra María Teresa Martínez Pedraza
+                Coordinador: Jesús Wronsky Durán Zaleta
               </h2>
             </ModalBody>
             <ModalFooter className="flex justify-center">

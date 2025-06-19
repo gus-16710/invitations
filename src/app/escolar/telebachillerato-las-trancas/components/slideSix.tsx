@@ -18,7 +18,7 @@ export default function SlideSix() {
       <ScrollShadow hideScrollBar className="h-[400px] text-zinc-100">
         <div className="mb-10 flex flex-col justify-center items-center">
           <h2 className="mb-4">Área Químico – Biológico</h2>
-          <ol className="list-decimal list-inside space-y-1">
+          <ol className="list-disc list-inside space-y-1">
             <li>Báez Benítez José Jafet</li>
             <li>Castillo Canche Roandy Alexander</li>
             <li>Corrales Ortiz Eduardo</li>
@@ -48,7 +48,7 @@ export default function SlideSix() {
 
         <div className="mb-10 flex flex-col justify-center items-center">
           <h2 className="mb-4">Área Económico – Administrativo</h2>
-          <ol className="list-decimal list-inside space-y-1">
+          <ol className="list-disc list-inside space-y-1">
             <li>Chávez Rosas Omar Humberto</li>
             <li>Del Carmen Bautista Lesli Anahí</li>
             <li>García Eliosa David</li>
@@ -70,7 +70,7 @@ export default function SlideSix() {
 
         <div className="mb-10 flex flex-col justify-center items-center">
           <h2 className="mb-4">Área Humanidades y Ciencias Sociales – 1</h2>
-          <ol className="list-decimal list-inside space-y-1">
+          <ol className="list-disc list-inside space-y-1">
             <li>Aguilar Martínez Jennifer</li>
             <li>Callejas Colorado Carlos Yair</li>
             <li>Carmona García Lessly Nicole</li>
@@ -91,7 +91,7 @@ export default function SlideSix() {
 
         <div className="mb-10 flex flex-col justify-center items-center">
           <h2 className="mb-4">Área Humanidades y Ciencias Sociales – 2</h2>
-          <ol className="list-decimal list-inside space-y-1">
+          <ol className="list-disc list-inside space-y-1">
             <li>Anastasio García Alexis Mandian</li>
             <li>Arroyo Villanueva Alonso</li>
             <li>Becerra Antemate Gabriel</li>
@@ -124,7 +124,7 @@ export default function SlideSix() {
 
         <div className="mb-10 flex flex-col justify-center items-center">
           <h2 className="mb-4">Área Físico – Matemático</h2>
-          <ol className="list-decimal list-inside space-y-1">
+          <ol className="list-disc list-inside space-y-1">
             <li>Aburto López Yesenia Saray</li>
             <li>Báez Guzmán Marjoree del Carmen</li>
             <li>Castillo Luria Montserrat</li>
