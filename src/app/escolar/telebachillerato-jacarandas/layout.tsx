@@ -7,7 +7,7 @@ export const metadata: Metadata = {
     title: "🎓 Telebachillerato Jacarandas | Fin de Cursos 🎓",
     description: "Ceremonia de “Fin de cursos” de la GENERACIÓN 2022-2025",
     images: [
-      `https://invitaciones.unaideamas.com/img/escolar/primaria-francisco-madero/gallery-01.jpg`,
+      `https://invitaciones.unaideamas.com/img/escolar/telebachillerato-jacarandas/gallery-01.jpg`,
     ],
   },
   icons: {
