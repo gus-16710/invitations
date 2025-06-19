@@ -66,7 +66,7 @@ export default function SlideFour() {
 
       <div className="absolute top-0 left-0 w-full h-full z-5 bg-gradient-to-t from-black/80 to-transparent"></div>
 
-      <div className="h-32 w-32 mb-5">
+      <div className="h-40 w-40 mb-5">
         <PhotoAlbum
           layout="masonry"
           photos={images}
@@ -83,7 +83,7 @@ export default function SlideFour() {
       </div>
 
       <motion.p
-        className={`${cormorant.className} text-zinc-50 text-2xl mx-10 text-center z-10 max-w-xl custom-shadow`}
+        className={`${cormorant.className} text-zinc-50 text-xl mx-10 text-center z-10 max-w-xl custom-shadow`}
         variants={list}
         initial="hidden"
         whileInView="visible"

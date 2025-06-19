@@ -10,7 +10,7 @@ export default function NextJsImage({
 }: RenderPhotoProps) {
   return (
     <motion.div
-      className="h-32 w-full group cursor-pointer flex items-center justify-center" // Añadido justify-center aquí
+      className="h-40 w-full group cursor-pointer flex items-center justify-center" // Añadido justify-center aquí
       style={{ 
         //...wrapperStyle, // Mantenemos los estilos del wrapper
         position: "relative",
@@ -24,7 +24,7 @@ export default function NextJsImage({
         isBordered
         color="primary"
         src={photo.src}
-        className="h-28 w-28 object-cover transition-transform transform group-hover:scale-110 shadow-lg"
+        className="h-40 w-40 object-cover transition-transform transform group-hover:scale-110 shadow-lg"
         onClick={onClick}
         placeholder={"blurDataURL" in photo ? "blur" : undefined}
       />
