@@ -35,8 +35,7 @@ export default function SlideThree() {
           Subsecretario de Educación Media Superior y Superior
         </p>
 
-        <p className="text-zinc-50 text-center mb-5 mx-5">
-          Lic. Irving Ilhuicamina Mendoza Ruiz
+        <p className="text-zinc-50 text-center mb-5 mx-5">          
           <span className="font-bold">Lic. Irving Ilhuicamina Mendoza Ruiz</span> <br />
           Director General del Telebachillerato
         </p>
