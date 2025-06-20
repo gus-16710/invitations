@@ -36,7 +36,8 @@ export default function SlideThree() {
         </p>
 
         <p className="text-zinc-50 text-center mb-5 mx-5">
-          <span className="font-bold">Lic. Irving Llhuicamina  Mendoza Ruiz</span> <br />
+          Lic. Irving Ilhuicamina Mendoza Ruiz
+          <span className="font-bold">Lic. Irving Ilhuicamina Mendoza Ruiz</span> <br />
           Director General del Telebachillerato
         </p>
 
@@ -69,7 +70,7 @@ export default function SlideThree() {
             Ana Lilia Gómez Rodríguez
           </span>
           <br/>
-          Presidenta del patronato escolar
+          Presidenta del Patronato Escolar
         </p>
       </ScrollShadow>
       <motion.div
