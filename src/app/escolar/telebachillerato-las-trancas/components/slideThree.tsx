@@ -27,7 +27,7 @@ export default function SlideThree() {
           <span className="font-bold">
             Lic. Ricardo Ahued Bardahuil
           </span>
-          <br /> Secretario de Gobierno de Veracruz.
+          <br /> Secretario de Gobierno de Veracruz
         </p>
 
         <p className="text-zinc-50 text-center mb-5 mx-5">
@@ -47,7 +47,7 @@ export default function SlideThree() {
         </p>
 
         <p className="text-zinc-50 text-center mb-5 mx-5">
-          <span className="font-bold">Lic. Alberto Islas Reyes.</span>
+          <span className="font-bold">Lic. Alberto Islas Reyes</span>
           <br /> Presidente Municipal Xalapa
         </p>
 
@@ -59,7 +59,7 @@ export default function SlideThree() {
 
         <p className="text-zinc-50 text-center mb-5 mx-5">
           <span className="font-bold">
-            T.S.U. Maribel López Hernández.
+            T.S.U. Maribel López Hernández
           </span>
           <br/>
           Directora de CECATI No.151
