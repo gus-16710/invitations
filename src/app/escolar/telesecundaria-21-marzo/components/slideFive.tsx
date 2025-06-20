@@ -6,7 +6,7 @@ import { IoIosArrowDown } from "react-icons/io";
 const itinerary = [
   {
     time: "18:00 Hrs",
-    event: "Honores a la bandera",
+    event: "Protocolo de cambio de escolta y honores a la bandera",
   },
   {
     time: "18:10 Hrs",
