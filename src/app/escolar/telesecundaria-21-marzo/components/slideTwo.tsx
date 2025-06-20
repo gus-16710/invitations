@@ -20,7 +20,7 @@ const MapCeremony = () => (
     allowFullScreen
     loading="lazy"
     referrerPolicy="no-referrer-when-downgrade"
-    className="z-10"
+    className="z-20"
   ></iframe>
 );
 
