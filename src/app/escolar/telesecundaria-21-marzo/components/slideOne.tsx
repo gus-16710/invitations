@@ -96,8 +96,8 @@ export default function SlideOne() {
           DE GRADUACIÓN
         </h2>
         <div className="w-full h-20 relative flex items-center justify-center">
-          <div className="bg-[url('/img/escolar/ricardo-flores-magon/ribbon.png')] bg-contain bg-no-repeat bg-center absolute w-full h-full" />
-          <p className={`${bebas.className} text-zinc-50 text-3xl mb-5 z-10`}>
+        <div className="bg-[url('/img/escolar/ricardo-flores-magon/ribbon.png')] bg-contain bg-no-repeat bg-center absolute w-full h-full" />
+          <p className={`${bebas.className} text-zinc-50 text-3xl mb-5 z-10`} style={{letterSpacing: "2px"}}>
             2022 - 2025
           </p>
         </div>

@@ -1,4 +1,4 @@
-import { Avatar } from "@nextui-org/react";
+import { Avatar, Spinner } from "@nextui-org/react";
 import { luxurious, mea, urbanist } from "./Fonts";
 import { motion } from "framer-motion";
 import { IoMdTime } from "react-icons/io";
@@ -20,6 +20,7 @@ const MapCeremony = () => (
     allowFullScreen
     loading="lazy"
     referrerPolicy="no-referrer-when-downgrade"
+    className="z-10"
   ></iframe>
 );
 
@@ -46,8 +47,11 @@ const ModalMap = ({
             >
               Ubicación
             </ModalHeader>
-            <ModalBody>
-              <MapCeremony />
+            <ModalBody className="relative flex justify-center items-center">
+              <>
+                <MapCeremony />
+                <Spinner className="absolute z-10" color="warning" />
+              </>
             </ModalBody>
             <ModalFooter></ModalFooter>
           </>
