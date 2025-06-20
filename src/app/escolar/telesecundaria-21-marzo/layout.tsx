@@ -7,7 +7,7 @@ export const metadata: Metadata = {
     title: "🎓 Telesecundaria 21 de Marzo | Ceremonia de Graduación 🎓",
     description: "Ceremonia de Graduación - GENERACIÓN 2022-2025",
     images: [
-      `https://invitaciones.unaideamas.com/img/escolar/telesecundaria-21-marzo/gallery-01.jpg`,
+      `https://invitaciones.unaideamas.com/img/escolar/telesecundaria-21-marzo/gallery-02.jpg`,
     ],
   },
   icons: {
