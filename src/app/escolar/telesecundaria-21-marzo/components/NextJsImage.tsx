@@ -10,7 +10,7 @@ export default function NextJsImage({
 }: RenderPhotoProps) {
   return (
     <motion.div
-      className="h-28 w-full mb-5 cursor-pointer flex items-center justify-center z-20"
+      className="h-48 w-full mb-10 cursor-pointer flex items-center justify-center z-20"
       initial={{ y: 100, opacity: 0 }}
       whileInView={{ y: 0, opacity: 1 }}
       viewport={{ once: false }}
@@ -20,9 +20,9 @@ export default function NextJsImage({
       
       <Avatar
         isBordered
-        color="danger"
+        color="warning"
         src={photo.src}
-        className="h-28 w-28 object-cover transition-transform transform group-hover:scale-110 shadow-lg"
+        className="h-48 w-48 object-cover transition-transform transform group-hover:scale-110 shadow-lg"
         onClick={onClick}
         placeholder={"blurDataURL" in photo ? "blur" : undefined}
       />

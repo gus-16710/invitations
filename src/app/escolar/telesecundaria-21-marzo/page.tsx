@@ -152,7 +152,7 @@ export default function School() {
   }, []);
 
   return (
-    <main className="bg-[url('/img/escolar/telesecundaria-21-marzo/background.avif')] bg-center bg-cover h-screen">
+    <main className="bg-[url('/img/escolar/telesecundaria-21-marzo/background6.avif')] bg-center bg-cover h-screen">
       {open && (
         <div className="relative">
           <Splide

@@ -34,11 +34,6 @@ const images = [
     width: 800,
     height: 600,
   },
-   {
-    src: "/img/escolar/telesecundaria-21-marzo/gallery-06.jpg",
-    width: 800,
-    height: 600,
-  },  
 ];
 
 export default function SlideFour() {
@@ -51,22 +46,32 @@ export default function SlideFour() {
       initial={{ scale: 0, opacity: 0 }}
       whileInView={{ scale: 1, opacity: 1 }}
       transition={{ duration: 1.5, delay: 0.5 }}
-    >      
-      <div className="mx-auto w-72 p-2">        
-        <PhotoAlbum
-          layout="masonry"
-          photos={images}
-          onClick={({ index: current }) => setIndex(current)}
-          renderPhoto={NextJsImage}
-          columns={2}
-        />
-        <Lightbox
-          index={index}
-          slides={images}
-          open={index >= 0}
-          close={() => setIndex(-1)}
-        />
-      </div>           
+    >
+      <div className="mx-auto w-72 p-2">
+        <ScrollShadow hideScrollBar className="h-[450px] z-50 pt-5">
+          <PhotoAlbum
+            layout="masonry"
+            photos={images}
+            onClick={({ index: current }) => setIndex(current)}
+            renderPhoto={NextJsImage}
+            columns={1}
+          />
+          <Lightbox
+            index={index}
+            slides={images}
+            open={index >= 0}
+            close={() => setIndex(-1)}
+          />
+        </ScrollShadow>       
+      </div>
+       <motion.div
+          initial={{ y: 0 }}
+          whileInView={{ y: [0, 10, 0] }}
+          transition={{ duration: 2, repeat: Infinity }}
+          className="mt-5"
+        >
+          <IoIosArrowDown className="text-zinc-100" />
+        </motion.div>
     </motion.section>
   );
 }

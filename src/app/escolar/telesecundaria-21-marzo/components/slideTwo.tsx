@@ -76,7 +76,7 @@ export default function SlideTwo() {
         <h1 className={`${mea.className} text-zinc-50 text-6xl`}>Ubicación</h1>
         <Avatar
           isBordered
-          color="danger"
+          color="warning"
           src="/img/escolar/telesecundaria-21-marzo/calera.jpg"
           className="h-40 w-40 my-5 shadow-lg"
           radius="full"

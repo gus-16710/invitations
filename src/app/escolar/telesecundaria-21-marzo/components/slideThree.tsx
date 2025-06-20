@@ -45,7 +45,7 @@ export default function SlideThree() {
 
         <p className="text-zinc-50 text-center mb-5 mx-5">
           <span className="font-bold">Ed. D. José Porfirio Solano García</span>
-          <br /> tor de la escuela Telesecundaria “21 de Marzo”
+          <br /> Director de la escuela Telesecundaria “21 de Marzo”
         </p>
 
         <p className="text-zinc-50 text-center mb-5 mx-5">
