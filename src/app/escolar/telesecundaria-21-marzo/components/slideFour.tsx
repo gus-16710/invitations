@@ -15,14 +15,9 @@ const images = [
     height: 600,
   },
   {
-    src: "/img/escolar/telesecundaria-21-marzo/gallery-01.jpg",
+    src: "/img/escolar/telesecundaria-21-marzo/gallery-03.jpg",
     width: 1600,
     height: 900,
-  },
-  {
-    src: "/img/escolar/telesecundaria-21-marzo/gallery-03.jpg",
-    width: 800,
-    height: 600,
   },
   {
     src: "/img/escolar/telesecundaria-21-marzo/gallery-04.jpg",
@@ -31,6 +26,11 @@ const images = [
   },
   {
     src: "/img/escolar/telesecundaria-21-marzo/gallery-05.jpg",
+    width: 800,
+    height: 600,
+  },
+  {
+    src: "/img/escolar/telesecundaria-21-marzo/gallery-01.jpg",
     width: 800,
     height: 600,
   },
