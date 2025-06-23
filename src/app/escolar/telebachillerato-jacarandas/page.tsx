@@ -56,7 +56,7 @@ const OpeningModal = ({
               >
                 "Jacarandas"
               </h1>
-              <h2 className={`${nobile.className} text-zinc-100 text-center`}>30EPR0877X</h2>          
+              <h2 className={`${nobile.className} text-zinc-100 text-center`}>30ETH1098D</h2>          
 
               <h2 className={`${oleo.className} text-zinc-100 text-center text-5xl my-10`}>
                 Ceremonia de fin de cursos
