@@ -54,7 +54,7 @@ const OpeningModal = ({
               <h1
                 className={`${ovo.className} text-zinc-800 text-4xl text-center`}
               >
-                "Netzahualcoyótl"
+                "Netzahualcoyotl"
               </h1>
               <h2 className={`${nobile.className} text-zinc-800 text-center`}>30EPR3551M</h2>          
 
