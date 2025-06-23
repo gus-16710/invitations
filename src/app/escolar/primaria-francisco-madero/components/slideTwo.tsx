@@ -52,7 +52,17 @@ const ModalMap = ({
                 <Spinner className="absolute z-10" />
               </>
             </ModalBody>
-            <ModalFooter></ModalFooter>
+            <ModalFooter className="flex justify-center">
+              <button
+                type="button"
+                className="text-gray-900 bg-white/0 border border-gray-400 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 rounded-full me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700 font-medium text-sm px-5 py-2.5 text-center flex items-center"
+                onClick={() => {
+                  onClose();
+                }}
+              >
+                Cerrar
+              </button>
+            </ModalFooter>
           </>
         )}
       </ModalContent>
@@ -109,7 +119,7 @@ export default function SlideTwo() {
             onOpen();
           }}
         >
-          <FaMapLocationDot/>
+          <FaMapLocationDot />
           Ver ubicación
         </button>
       </motion.section>

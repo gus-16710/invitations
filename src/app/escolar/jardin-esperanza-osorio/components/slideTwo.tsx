@@ -50,10 +50,20 @@ const ModalMap = ({
             <ModalBody className="relative flex justify-center items-center">
               <>
                 <MapCeremony />
-                <Spinner className="absolute z-10" color="success"/>
+                <Spinner className="absolute z-10" color="success" />
               </>
             </ModalBody>
-            <ModalFooter></ModalFooter>
+            <ModalFooter className="flex justify-center">
+              <button
+                type="button"
+                className="text-gray-900 bg-white/0 border border-gray-400 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 rounded-full me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700 font-medium text-sm px-5 py-2.5 text-center flex items-center"
+                onClick={() => {
+                  onClose();
+                }}
+              >
+                Cerrar
+              </button>
+            </ModalFooter>
           </>
         )}
       </ModalContent>
@@ -66,9 +76,9 @@ export default function SlideTwo() {
 
   return (
     <>
-      <section 
-        className="flex flex-col justify-center items-center" 
-        style={{height: "100dvh"}}
+      <section
+        className="flex flex-col justify-center items-center"
+        style={{ height: "100dvh" }}
       >
         <motion.div
           initial={{ y: 50, opacity: 0 }}
@@ -95,7 +105,9 @@ export default function SlideTwo() {
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.6 }}
         >
-          <p className={`${urbanist.className} text-zinc-800 text-xl px-5 text-center mx-10`}>
+          <p
+            className={`${urbanist.className} text-zinc-800 text-xl px-5 text-center mx-10`}
+          >
             Jardín de Niños "Esperanza Osorio"
           </p>
         </motion.div>
@@ -105,7 +117,9 @@ export default function SlideTwo() {
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.8 }}
         >
-          <p className={`${urbanist.className} text-zinc-800 mt-3 text-sm text-center mx-10 max-w-md`}>
+          <p
+            className={`${urbanist.className} text-zinc-800 mt-3 text-sm text-center mx-10 max-w-md`}
+          >
             C. José María Mata, Zona Centro, Centro, 91000 Xalapa-Enríquez, Ver.
           </p>
         </motion.div>
@@ -124,7 +138,7 @@ export default function SlideTwo() {
           </button>
         </motion.div>
       </section>
-      
+
       <ModalMap isOpen={isOpen} onOpenChange={onOpenChange} />
     </>
   );
