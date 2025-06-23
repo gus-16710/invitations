@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "🎓 Primaria Netzahualcoyótl | Fin de Cursos 🎓",
+  title: "🎓 Primaria Netzahualcoyotl | Fin de Cursos 🎓",
   description:
-    "Primaria Netzahualcoyótl “Fin de cursos” de la GENERACIÓN 2019-2025",
+    "Primaria Netzahualcoyotl “Fin de cursos” de la GENERACIÓN 2019-2025",
   openGraph: {
-    title: "🎓 Primaria Netzahualcoyótl | Fin de Cursos 🎓",
+    title: "🎓 Primaria Netzahualcoyotl | Fin de Cursos 🎓",
     description:
-      "Primaria Netzahualcoyótl “Fin de cursos” de la GENERACIÓN 2019-2025",
+      "Primaria Netzahualcoyotl “Fin de cursos” de la GENERACIÓN 2019-2025",
     images: [
       `https://invitaciones.unaideamas.com/img/escolar/primaria-netzahualcoyotl/generacion.jpeg`,
     ],

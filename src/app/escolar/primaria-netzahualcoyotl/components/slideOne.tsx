@@ -29,7 +29,7 @@ export default function SlideOne() {
         Escuela Primaria Vespertina
       </h2>
       <h1 className={`${ovo.className} text-zinc-800 text-4xl`}>
-        "Netzahualcoyótl"
+        "Netzahualcoyotl"
       </h1>
       <h2 className={`${nobile.className} text-zinc-800`}>30EPR3551M</h2>
 

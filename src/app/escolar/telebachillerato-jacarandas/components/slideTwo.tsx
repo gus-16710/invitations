@@ -90,7 +90,7 @@ export default function SlideTwo() {
             <label className={`p-4 text-lg`}>09:00 am</label>
           </div>
           <label className={`text-xl`}>2025</label>
-        </div>
+        </div>        
 
         <p
           className={`${nobile.className} text-zinc-50 px-5 text-center mx-10`}

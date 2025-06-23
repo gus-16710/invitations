@@ -21,6 +21,9 @@ import "./styles.css";
 import { nobile, oleo, ovo } from "./components/Fonts";
 import AudioControl from "./components/AudioControl";
 import { GrFormViewHide } from "react-icons/gr";
+import SlideSix from "./components/slideSix";
+import SlideFive from "./components/sideFive";
+import SlideSeven from "./components/slideSeven";
 
 const OpeningModal = ({
   isOpen,
@@ -56,15 +59,17 @@ const OpeningModal = ({
               >
                 "Jacarandas"
               </h1>
-              <h2 className={`${nobile.className} text-zinc-100 text-center`}>30ETH1098D</h2>          
-
-              <h2 className={`${oleo.className} text-zinc-100 text-center text-5xl my-10`}>
-                Ceremonia de fin de cursos
+              <h2 className={`${nobile.className} text-zinc-100 text-center`}>
+                CLAVE: 30ETH1098D
               </h2>
 
               <h2
-                className={`${nobile.className} text-zinc-100 text-center`}
+                className={`${oleo.className} text-zinc-100 text-center text-5xl my-10`}
               >
+                Ceremonia de fin de cursos
+              </h2>
+
+              <h2 className={`${nobile.className} text-zinc-100 text-center`}>
                 Coordinador: Mtro Williams Lagunes Amaya
               </h2>
             </ModalBody>
@@ -119,13 +124,13 @@ export default function School() {
             aria-label="Francisco I. Madero"
             options={{
               rewind: true,
-              direction: "ttb",
+              direction: "ltr",
               height: "100svh",
-              wheel: true,
+              wheel: false,
               releaseWheel: true,
               type: "loop",
               waitForTransition: true,
-              arrows: false,
+              arrows: true,
               classes: {
                 page: "splide__pagination__page custom-class-page", // each button
               },
@@ -138,8 +143,17 @@ export default function School() {
               <SlideTwo />
             </SplideSlide>
             <SplideSlide>
+              <SlideSix />
+            </SplideSlide>
+            <SplideSlide>
+              <SlideSeven />
+            </SplideSlide>
+            <SplideSlide>
               <SlideThree />
             </SplideSlide>
+            <SplideSlide>
+              <SlideFive />
+            </SplideSlide>            
             <SplideSlide>
               <SlideFour />
             </SplideSlide>
