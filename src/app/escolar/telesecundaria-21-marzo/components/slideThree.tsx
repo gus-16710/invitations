@@ -51,7 +51,7 @@ export default function SlideThree() {
         <p className="text-zinc-50 text-center mb-5 mx-5">
           <span className="font-bold">Lic. Ian Yoval Molina</span>
           <br />
-          Responsable regional del programa "La escuela es nuestra"
+          Responsable regional del programa "La Escuela es Nuestra"
         </p>
 
         <p className="text-zinc-50 text-center mb-5 mx-5">
