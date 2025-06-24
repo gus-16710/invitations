@@ -68,6 +68,7 @@ export default function SlideThree() {
               base: "text-zinc-100",
               title: "text-zinc-100",
               subtitle: "text-zinc-100",
+              indicator: "text-zinc-100"            
             }}
             defaultExpandedKeys={["1"]}
           >
