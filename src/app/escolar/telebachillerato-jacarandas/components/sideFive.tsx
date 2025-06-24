@@ -14,7 +14,7 @@ export default function SlideFive() {
 
       <p className={`${ovo.className} text-zinc-50 text-lg custom-shadow text-center`}>
         Ana Bertha Gonzáles Marín <br/>
-        Anable Cortina Salazar <br/>
+        Anabel Cortina Salazar <br/>
         Areli J. Pérez Solorza        
       </p>
     </motion.section>

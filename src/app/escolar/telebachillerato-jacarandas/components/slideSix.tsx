@@ -161,7 +161,7 @@ export default function SlideSix() {
               </label>
             </li>
             <li>
-              Téllez Macías Pamela Vanessa
+              Tejeda Macías Pamela Vanessa
               <br />
               <label className="ml-4">Prof. Roger Bartolo Martínez</label>
             </li>

@@ -1,0 +1,30 @@
+.custom-shadow {
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5), 1px 1px 1px rgba(255, 255, 255, 0.2);
+  will-change: transform, opacity;
+}
+
+.custom-class-page.is-active {
+  background: #fff !important;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+
+.custom-class-page {
+  background: #9e9e9e !important;
+}
+
+
+.text-golden {
+  background-image: linear-gradient(
+    to right,
+    #462523 0%,
+    #cb9b51 0%,
+    #f6e27a 45%,
+    #f6f2c0 50%,
+    #f6e27a 55%,
+    #cb9b51 100%,
+    #462523 100%
+  );
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}

@@ -110,7 +110,7 @@ export default function SlideTwo() {
         <p
           className={`${nobile.className} text-zinc-50 mt-3 text-sm text-center mx-10 max-w-md`}
         >
-          Emiliano Zapata, 91637 Xalapa-Enríquez, Ver.
+          Emiliano Zapata, 91637, Ver.
         </p>
 
         <button
