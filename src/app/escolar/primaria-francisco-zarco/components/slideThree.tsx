@@ -170,61 +170,6 @@ export default function SlideThree() {
             <motion.h2 variants={item} className="mb-4 text-xl font-bold">
               Sexto grado grupo "A"
             </motion.h2>
-
-            <motion.ol
-              variants={container}
-              className="list-disc list-inside space-y-1 w-full px-5"
-            >
-              {[
-                "Ávila Victoria Maricela",
-                "Barreda Morales Roberto",
-                "Carvajal Meza Alizé Yarely",
-                "Cervantes Hernández Giselle",
-                "Chávez García Cristian",
-                "Estudillo Barrales Dania Joseline",
-                "Fernández González José Antonio",
-                "Flores Murrieta María Fernanda",
-                "Hernández Cantú Joed Saúl",
-                "Hernández Guzmán Elizabeth",
-                "Hernández Laíz César",
-                "Hernández Ramírez Julissa",
-                "Huerta Martínez Aidee",
-                "León Macín María Inés",
-                "López Díaz Ximena Samai",
-                "Lozano Trujillo Kelly Dennis",
-                "Márquez Tepetla Ian Daniel",
-                "Monroy Maruri Camila",
-                "Morales Aldana Renata",
-                "Navarro Hernández María José",
-                "Salazar Martínez Ingrid Dailin",
-                "Sánchez Barradas Renata",
-                "Tejeda Landa María Fernanda",
-                "Zamora Barradas Maximiliano",
-                "Zurita Miranda Mía Fernanda",
-              ].map((student, index) => (
-                <motion.li
-                  key={index}
-                  variants={item}
-                  className="text-sm md:text-base"
-                >
-                  {student}
-                </motion.li>
-              ))}
-            </motion.ol>
-            <motion.p variants={fadeIn} className="mt-2 font-medium">
-              Mtro. Hernández Maldonado Maldonado.
-            </motion.p>
-          </motion.div>
-
-          {/* Grupo B */}
-          <motion.div
-            variants={container}
-            className="mb-10 flex flex-col justify-center items-center"
-          >
-            <motion.h2 variants={item} className="mb-4 text-xl font-bold">
-              Sexto grado grupo "B"
-            </motion.h2>
-
             <motion.ol
               variants={container}
               className="list-disc list-inside space-y-1 w-full px-5"
@@ -268,6 +213,62 @@ export default function SlideThree() {
                 </motion.li>
               ))}
             </motion.ol>
+
+            <motion.p variants={fadeIn} className="mt-2 font-medium">
+              Mtro. Erick Fernando Hernández Maldonado
+            </motion.p>
+          </motion.div>
+
+          {/* Grupo B */}
+          <motion.div
+            variants={container}
+            className="mb-10 flex flex-col justify-center items-center"
+          >
+            <motion.h2 variants={item} className="mb-4 text-xl font-bold">
+              Sexto grado grupo "B"
+            </motion.h2>
+
+            <motion.ol
+              variants={container}
+              className="list-disc list-inside space-y-1 w-full px-5"
+            >
+              {[
+                "Ávila Victoria Maricela",
+                "Barreda Morales Roberto",
+                "Carvajal Meza Alizé Yarely",
+                "Cervantes Hernández Giselle",
+                "Chávez García Cristian",
+                "Estudillo Barrales Dania Joseline",
+                "Fernández González José Antonio",
+                "Flores Murrieta María Fernanda",
+                "Hernández Cantú Joed Saúl",
+                "Hernández Guzmán Elizabeth",
+                "Hernández Laíz César",
+                "Hernández Ramírez Julissa",
+                "Huerta Martínez Aidee",
+                "León Macín María Inés",
+                "López Díaz Ximena Samai",
+                "Lozano Trujillo Kelly Dennis",
+                "Márquez Tepetla Ian Daniel",
+                "Monroy Maruri Camila",
+                "Morales Aldana Renata",
+                "Navarro Hernández María José",
+                "Salazar Martínez Ingrid Dailin",
+                "Sánchez Barradas Renata",
+                "Tejeda Landa María Fernanda",
+                "Zamora Barradas Maximiliano",
+                "Zurita Miranda Mía Fernanda",
+              ].map((student, index) => (
+                <motion.li
+                  key={index}
+                  variants={item}
+                  className="text-sm md:text-base"
+                >
+                  {student}
+                </motion.li>
+              ))}
+            </motion.ol>
+
             <motion.p variants={fadeIn} className="mt-2 font-medium">
               Mtra. María del Carmen Hernández González
             </motion.p>
