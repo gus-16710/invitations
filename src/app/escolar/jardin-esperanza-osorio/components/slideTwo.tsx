@@ -98,7 +98,7 @@ export default function SlideTwo() {
           transition={{ duration: 0.8, delay: 0.4 }}
         >
           <h1 className="flex items-center justify-center gap-1 text-zinc-800 text-4xl font-medium me-2 rounded my-5">
-            <GiAlarmClock /> 09:30 a.m.
+            <GiAlarmClock /> 10:30 a.m.
           </h1>
         </motion.div>
 
