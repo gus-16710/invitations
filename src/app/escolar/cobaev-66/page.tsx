@@ -42,7 +42,7 @@ const OpeningModal = ({
       isDismissable={false}
       hideCloseButton={true}
     >
-      <ModalContent className="overflow-clip bg-slate-50/0">
+      <ModalContent className="overflow-clip bg-slate-50/0 max-w-3xl">
         {(onClose) => (
           <>
             <ModalHeader className="flex flex-col gap-1"></ModalHeader>
