@@ -175,7 +175,7 @@ export default function SlideOne() {
           transition={{ delay: 0.5 }}
           className={`${nobile.className} text-lg mt-5 mx-10 text-center`}
         >
-          Director: Jesús Reynaldo León Hernández
+          Director: Jesús Reynaldo Del Ángel Rocha
         </motion.h2>
 
         {/* Elemento decorativo (opcional) */}

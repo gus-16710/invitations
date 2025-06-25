@@ -12,9 +12,11 @@ import {
 
 import { GiAlarmClock } from "react-icons/gi";
 
+//<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3760.501388395478!2d-96.92674002437465!3d19.52007638177813!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85db2df9d12800b9%3A0x7061dc9f3df2a7e9!2sMar%C3%ADa%20Enriqueta!5e0!3m2!1ses!2smx!4v1750861270133!5m2!1ses!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
 const MapCeremony = () => (
   <iframe
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1117.9641172073452!2d-96.9193900922164!3d19.52580513381746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85db3200cc1cc915%3A0x145b98bb69e5bca!2sJard%C3%ADn%20de%20Ni%C3%B1os%20Esperanza%20Osorio!5e0!3m2!1ses!2smx!4v1750269832603!5m2!1ses!2smx"
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3760.501388395478!2d-96.92674002437465!3d19.52007638177813!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85db2df9d12800b9%3A0x7061dc9f3df2a7e9!2sMar%C3%ADa%20Enriqueta!5e0!3m2!1ses!2smx!4v1750861270133!5m2!1ses!2smx"
     height="450"
     style={{ border: "0" }}
     allowFullScreen
@@ -108,7 +110,7 @@ export default function SlideTwo() {
           <p
             className={`${urbanist.className} text-zinc-800 text-xl px-5 text-center mx-10`}
           >
-            Jardín de Niños "Esperanza Osorio"
+            Auditorio del Jardín de Niños María Enriqueta
           </p>
         </motion.div>
 
@@ -120,7 +122,7 @@ export default function SlideTwo() {
           <p
             className={`${urbanist.className} text-zinc-800 mt-3 text-sm text-center mx-10 max-w-md`}
           >
-            C. José María Mata, Zona Centro, Centro, 91000 Xalapa-Enríquez, Ver.
+            C. Unión 3, Felipe Carrillo Puerto, 91080 Xalapa-Enríquez, Ver. 2.2 km
           </p>
         </motion.div>
 
