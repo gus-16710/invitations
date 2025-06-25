@@ -48,7 +48,7 @@ const OpeningModal = ({
                 Escuela Primaria
               </h2>
               <h1 className={`${cormorant.className} text-zinc-50 text-4xl text-center`}>
-                Gral. Heriberto Hara Corona
+                Gral. Heriberto Jara Corona
               </h1>
               <h2 className={`${urbanist.className} text-zinc-100 text-lg`}>
                 CLAVE: 30EPR0589E
