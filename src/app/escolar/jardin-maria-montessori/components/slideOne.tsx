@@ -1,6 +1,8 @@
 import { Card, CardBody, Image } from "@nextui-org/react";
 import { cormorant, galada, lora, mea, urbanist } from "./Fonts";
 import { motion } from "framer-motion";
+import { useCallback, useEffect, useRef } from "react";
+import ReactCanvasConfetti from "react-canvas-confetti";
 
 export default function SlideOne() {
   // Configuración de animaciones
@@ -53,6 +55,8 @@ export default function SlideOne() {
       },
     },
   };
+
+ 
 
   return (
     <section
@@ -165,6 +169,8 @@ export default function SlideOne() {
           </motion.div>
         </CardBody>
       </Card>
+
+      
     </section>
   );
 }
