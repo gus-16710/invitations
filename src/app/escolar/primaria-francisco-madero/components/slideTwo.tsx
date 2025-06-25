@@ -109,7 +109,7 @@ export default function SlideTwo() {
         <p
           className={`${nobile.className} text-zinc-50 mt-3 text-sm text-center mx-10 max-w-md`}
         >
-          Carretera Federal Xalapa-Veracruz Km. 24 SN
+          Cerro Gordo, Carretera Federal Xalapa-Veracruz Km. 24 SN. 
         </p>
 
         <button
