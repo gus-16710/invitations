@@ -5,13 +5,10 @@ import {
   Bebas_Neue,
   Luxurious_Roman,
   Lora,
-  Dancing_Script,
-  Imperial_Script,
+  Tangerine
 } from "next/font/google";
 
-export const imperial = Imperial_Script({ subsets: ["latin"], weight: ["400"] });
-export const dancing = Dancing_Script({ subsets: ["latin"], weight: ["400"] });
-
+export const tangerine = Tangerine({ subsets: ["latin"], weight: ["400"] });
 export const mea = Mea_Culpa({ subsets: ["latin"], weight: ["400"] });
 export const cormorant = Cormorant_Garamond({
   subsets: ["latin"],

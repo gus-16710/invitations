@@ -96,7 +96,6 @@
 //   );
 // }
 
-
 import { imperial } from "./Fonts";
 import { ScrollShadow } from "@nextui-org/react";
 import { motion } from "framer-motion";
@@ -110,9 +109,9 @@ export default function SlideThree() {
       opacity: 1,
       transition: {
         staggerChildren: 0.1,
-        delayChildren: 0.3
-      }
-    }
+        delayChildren: 0.3,
+      },
+    },
   };
 
   const item = {
@@ -123,9 +122,9 @@ export default function SlideThree() {
       transition: {
         type: "spring",
         damping: 12,
-        stiffness: 100
-      }
-    }
+        stiffness: 100,
+      },
+    },
   };
 
   const fadeIn = {
@@ -134,24 +133,24 @@ export default function SlideThree() {
       opacity: 1,
       transition: {
         duration: 0.8,
-        ease: "easeOut"
-      }
-    }
+        ease: "easeOut",
+      },
+    },
   };
 
   return (
-    <section 
+    <section
       className="flex flex-col justify-center items-center"
       style={{ height: "100svh" }}
     >
       <motion.div
         variants={container}
         initial="hidden"
-        whileInView="show"        
+        whileInView="show"
         className="w-full max-w-md flex justify-center items-center flex-col"
       >
         {/* Título */}
-        <motion.h1 
+        <motion.h1
           variants={fadeIn}
           className={`${imperial.className} text-zinc-800 text-6xl mb-5 text-center`}
         >
@@ -159,72 +158,23 @@ export default function SlideThree() {
         </motion.h1>
 
         {/* Lista de alumnos */}
-        <ScrollShadow hideScrollBar className="h-[400px] z-50 text-zinc-800 w-72">
-          {/* Grupo B */}
-          <motion.div 
+        <ScrollShadow
+          hideScrollBar
+          className="h-[400px] z-50 text-zinc-800 w-72"
+        >
+          {/* Grupo A */}
+          <motion.div
             variants={container}
             className="mb-10 flex flex-col justify-center items-center"
           >
             <motion.h2 variants={item} className="mb-4 text-xl font-bold">
               Sexto grado grupo "A"
             </motion.h2>
-            
-            <motion.ol variants={container} className="list-disc list-inside space-y-1 w-full px-5">
-              {[
-                "Aguilar Hernández Diego",
-                "Alarcón Martínez Santiago",
-                "Alducin Zamora Santiago",
-                "Carreón Grijalva Estefany",
-                "Ceballos Guzmán Sofía Kristel",
-                "Conde García Juan Renato",
-                "Cortés Sayago Jesús Israel",
-                "Cuevas Ramón Yéshua Miguel",
-                "Fuentes Ramos Ángel Rafael",
-                "Gregorio Nava Ximena",
-                "Hernández Domínguez Giselle",
-                "Landa Aguilar Iker Leonardo",
-                "Landa Márquez Estrella Zareth",
-                "Landa Montiel Ángel Josué",
-                "López González Novalfe Itzamara",
-                "Martínez Viveros Derek Alexander",
-                "Meza González Andrea",
-                "Pérez Zágada Diego",
-                "Portilla Hernández Iker Aldair",
-                "Romero Saldaña Aylen Sofía",
-                "Sánchez Durán José Alfredo",
-                "Sánchez Ponce de León Mariana Adali",
-                "Sánchez Sánchez Kelly Naomy",
-                "Sánchez Soto Alondra Angélica",
-                "Tapia Rodríguez Axel Yael",
-                "Trasancos Pérez Nathaly Monserrat",
-                "Ventura Mateo María José",
-                "Villa Nava Iván David"
-              ].map((student, index) => (
-                <motion.li 
-                  key={index}
-                  variants={item}
-                  className="text-sm md:text-base"
-                >
-                  {student}
-                </motion.li>
-              ))}
-            </motion.ol>
 
-            <motion.p variants={fadeIn} className="mt-2 font-medium">
-              Mtro. Erick Fernando Hernández M.
-            </motion.p>
-          </motion.div>
-
-          {/* Grupo A */}
-          <motion.div 
-            variants={container}
-            className="mb-10 flex flex-col justify-center items-center"
-          >
-            <motion.h2 variants={item} className="mb-4 text-xl font-bold">
-              Sexto grado grupo "B"
-            </motion.h2>
-            
-            <motion.ol variants={container} className="list-disc list-inside space-y-1 w-full px-5">
+            <motion.ol
+              variants={container}
+              className="list-disc list-inside space-y-1 w-full px-5"
+            >
               {[
                 "Ávila Victoria Maricela",
                 "Barreda Morales Roberto",
@@ -250,9 +200,9 @@ export default function SlideThree() {
                 "Sánchez Barradas Renata",
                 "Tejeda Landa María Fernanda",
                 "Zamora Barradas Maximiliano",
-                "Zurita Miranda Mía Fernanda"
+                "Zurita Miranda Mía Fernanda",
               ].map((student, index) => (
-                <motion.li 
+                <motion.li
                   key={index}
                   variants={item}
                   className="text-sm md:text-base"
@@ -261,23 +211,77 @@ export default function SlideThree() {
                 </motion.li>
               ))}
             </motion.ol>
-
             <motion.p variants={fadeIn} className="mt-2 font-medium">
-              Mtra. María del Carmen Hernández Gonzalez
+              Mtro. Hernández Maldonado Maldonado.
             </motion.p>
           </motion.div>
 
-          
+          {/* Grupo B */}
+          <motion.div
+            variants={container}
+            className="mb-10 flex flex-col justify-center items-center"
+          >
+            <motion.h2 variants={item} className="mb-4 text-xl font-bold">
+              Sexto grado grupo "B"
+            </motion.h2>
+
+            <motion.ol
+              variants={container}
+              className="list-disc list-inside space-y-1 w-full px-5"
+            >
+              {[
+                "Aguilar Hernández Diego",
+                "Alarcón Martínez Santiago",
+                "Alducin Zamora Santiago",
+                "Carreón Grijalva Estefany",
+                "Ceballos Guzmán Sofía Kristel",
+                "Conde García Juan Renato",
+                "Cortés Sayago Jesús Israel",
+                "Cuevas Ramón Yéshua Miguel",
+                "Fuentes Ramos Ángel Rafael",
+                "Gregorio Nava Ximena",
+                "Hernández Domínguez Giselle",
+                "Landa Aguilar Iker Leonardo",
+                "Landa Márquez Estrella Zareth",
+                "Landa Montiel Ángel Josué",
+                "López González Novalle Itzamara",
+                "Martínez Viveros Derek Alexander",
+                "Meza González Andrea",
+                "Pérez Zágada Diego",
+                "Portilla Hernández Iker Aldair",
+                "Romero Saldaña Aylen Sofía",
+                "Sánchez Durán José Alfredo",
+                "Sánchez Ponce de León Mariana Adalid",
+                "Sánchez Sánchez Kelly Naomy",
+                "Sánchez Soto Alondra Angélica",
+                "Tapia Rodríguez Axel Yael",
+                "Trasancos Pérez Nathaly Monserrat",
+                "Ventura Mateo María José",
+                "Villa Nava Iván David",
+              ].map((student, index) => (
+                <motion.li
+                  key={index}
+                  variants={item}
+                  className="text-sm md:text-base"
+                >
+                  {student}
+                </motion.li>
+              ))}
+            </motion.ol>
+            <motion.p variants={fadeIn} className="mt-2 font-medium">
+              Mtra. María del Carmen Hernández González
+            </motion.p>
+          </motion.div>
         </ScrollShadow>
 
         {/* Flecha indicadora */}
         <motion.div
           initial={{ y: 0 }}
           whileInView={{ y: [0, 10, 0] }}
-          transition={{ 
-            duration: 2, 
+          transition={{
+            duration: 2,
             repeat: Infinity,
-            ease: "easeInOut"
+            ease: "easeInOut",
           }}
           className="mt-5 flex justify-center"
         >

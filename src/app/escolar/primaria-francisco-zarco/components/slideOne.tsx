@@ -1,8 +1,21 @@
-import { Image } from "@nextui-org/react";
+import "yet-another-react-lightbox/styles.css";
 import { dancing, imperial, urbanist } from "./Fonts";
 import { motion } from "framer-motion";
+import PhotoAlbum from "react-photo-album";
+import { useState } from "react";
+import NextJsImage from "./NextJsImage";
+import Lightbox from "yet-another-react-lightbox";
+
+const images = [
+  {
+    src: "/img/escolar/primaria-francisco-zarco/gallery-01.jpeg",
+    width: 800,
+    height: 600,
+  },
+];
 
 export default function SlideOne() {
+  const [index, setIndex] = useState(-1);
   // Configuración de animaciones con tiempos más lentos
   const container = {
     hidden: { opacity: 0 },
@@ -90,15 +103,21 @@ export default function SlideOne() {
           La escuela primaria Francisco Zarco le invita a la
         </motion.h2>
 
-        {/* Imagen */}
-        <motion.div variants={scaleIn}>
-          <Image
-            width={140}
-            alt="NextUI hero Image"
-            src="/img/escolar/primaria-francisco-zarco/graduation-svgrepo-com.svg"
-            className="my-5"      
-          />
-        </motion.div>
+        <div className="w-72 my-5">
+        <PhotoAlbum
+          layout="masonry"
+          photos={images}
+          onClick={({ index: current }) => setIndex(current)}
+          renderPhoto={NextJsImage}
+          columns={1}
+        />
+        <Lightbox
+          index={index}
+          slides={images}
+          open={index >= 0}
+          close={() => setIndex(-1)}
+        />
+      </div>
 
         {/* Título principal */}
         <motion.h2 

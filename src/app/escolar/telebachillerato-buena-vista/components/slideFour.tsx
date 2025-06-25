@@ -97,18 +97,6 @@ export default function SlideFour() {
     tap: { scale: 0.9 },
   };
 
-  const photoAnimation = {
-    hover: { scale: 1.03, transition: { type: "spring", stiffness: 300 } },
-    tap: { scale: 0.98 },
-  };
-
-  const scrollHintAnimation = {
-    bounce: {
-      y: [0, 10, 0],
-      transition: { repeat: Infinity, duration: 2, ease: "easeInOut" },
-    },
-  };
-
   return (
     <motion.section
       className="flex flex-col justify-center items-center"
