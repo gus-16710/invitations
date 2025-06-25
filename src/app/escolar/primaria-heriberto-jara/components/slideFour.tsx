@@ -42,7 +42,7 @@ export default function SlideFour() {
           transition={{ type: "spring", stiffness: 200 }}
         >
           <div className="ms-3 text-sm text-white">
-            Presiona sobre una imagen para ampliar
+            Presiona sobre la imagen para ampliar
           </div>
           <div className="text-white ml-2">
             <LuZoomIn />
