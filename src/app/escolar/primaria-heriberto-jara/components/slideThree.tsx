@@ -131,12 +131,12 @@ export default function SlideThree() {
             {/* Madrina */}
             <AccordionItem
               key="3"
-              aria-label="Madrina"
+              aria-label="Padrinos"
               subtitle="Presiona para expandir/contraer"
               title={
                 <motion.div variants={item} className="flex items-center gap-3">
                   <FaHandHoldingHeart className="text-xl" />
-                  <span>Madrina de Generación</span>
+                  <span>Padrinos de Generación</span>
                 </motion.div>
               }
             >
