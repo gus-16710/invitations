@@ -91,7 +91,7 @@ export default function SlideThree() {
                 {[
                   "Juan José Vázquez Martínez",
                   "Margarita Cruz Salazar",
-                  "Nestor Pérez Juarado",
+                  "Néstor Pérez Jurado",
                   "Ariana Gallardo Delfín",
                   "Sandy Monserrat Domínguez Martínez",
                 ].map((teacher, index) => (
