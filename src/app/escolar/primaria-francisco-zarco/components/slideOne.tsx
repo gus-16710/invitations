@@ -6,6 +6,8 @@ import { useState } from "react";
 import NextJsImage from "./NextJsImage";
 import Lightbox from "yet-another-react-lightbox";
 
+import { GiClick } from "react-icons/gi";
+
 const images = [
   {
     src: "/img/escolar/primaria-francisco-zarco/gallery-01.jpeg",
@@ -23,39 +25,39 @@ export default function SlideOne() {
       opacity: 1,
       transition: {
         staggerChildren: 0.3, // Aumentado el tiempo entre elementos
-        delayChildren: 0.5 // Mayor delay inicial
-      }
-    }
+        delayChildren: 0.5, // Mayor delay inicial
+      },
+    },
   };
 
   const itemUp = {
     hidden: { y: 50, opacity: 0 },
-    show: { 
-      y: 0, 
+    show: {
+      y: 0,
       opacity: 1,
       transition: {
         type: "spring",
         damping: 10, // Más suave
         stiffness: 80, // Menos rígido
         mass: 0.8, // Añadido masa para más fluidez
-        duration: 1.2 // Más largo
-      }
-    }
+        duration: 1.2, // Más largo
+      },
+    },
   };
 
   const itemDown = {
     hidden: { y: -50, opacity: 0 },
-    show: { 
-      y: 0, 
+    show: {
+      y: 0,
       opacity: 1,
       transition: {
         type: "spring",
         damping: 10,
         stiffness: 80,
         mass: 0.8,
-        duration: 1.2
-      }
-    }
+        duration: 1.2,
+      },
+    },
   };
 
   const scaleIn = {
@@ -68,9 +70,9 @@ export default function SlideOne() {
         stiffness: 80,
         damping: 10,
         mass: 0.8,
-        duration: 1.5 // Animación más prolongada
-      }
-    }
+        duration: 1.5, // Animación más prolongada
+      },
+    },
   };
 
   const fadeIn = {
@@ -79,20 +81,20 @@ export default function SlideOne() {
       opacity: 1,
       transition: {
         duration: 1.5, // Más lento
-        ease: [0.16, 0.77, 0.47, 0.97] // Curva de easing más suave
-      }
-    }
+        ease: [0.16, 0.77, 0.47, 0.97], // Curva de easing más suave
+      },
+    },
   };
 
   return (
-    <section 
+    <section
       className="flex flex-col justify-center items-center"
       style={{ height: "100svh" }}
     >
       <motion.div
         variants={container}
         initial="hidden"
-        whileInView="show"       
+        whileInView="show"
         className="flex flex-col items-center"
       >
         {/* Primer texto */}
@@ -103,25 +105,43 @@ export default function SlideOne() {
           La escuela primaria Francisco Zarco le invita a la
         </motion.h2>
 
-        <div className="w-72 my-5">
-        <PhotoAlbum
-          layout="masonry"
-          photos={images}
-          onClick={({ index: current }) => setIndex(current)}
-          renderPhoto={NextJsImage}
-          columns={1}
-        />
-        <Lightbox
-          index={index}
-          slides={images}
-          open={index >= 0}
-          close={() => setIndex(-1)}
-        />
-      </div>
+        <div className="w-72 my-5 relative">
+          <PhotoAlbum
+            layout="masonry"
+            photos={images}
+            onClick={({ index: current }) => setIndex(current)}
+            renderPhoto={NextJsImage}
+            columns={1}
+          />
+          <Lightbox
+            index={index}
+            slides={images}
+            open={index >= 0}
+            close={() => setIndex(-1)}
+          />
+          <motion.div
+            className="absolute text-5xl text-yellow-300 right-5 top-32"
+            initial={{ scale: 1, x: 0, y: 0 }}
+            animate={{
+              scale: [1, 1.2, 1], // Escala: crece y vuelve a tamaño normal
+              x: [-5, 0, -5], // Movimiento horizontal leve
+              y: [-5, 0, -5], // Movimiento vertical leve
+            }}
+            transition={{
+              repeat: Infinity, // Repetir indefinidamente
+              repeatType: "loop", // Tipo de repetición
+              duration: 1.5, // Duración de cada ciclo
+              ease: "easeInOut", // Suavizado de movimiento
+            }}
+            whileHover={{ scale: 1.3 }} // Efecto al pasar el mouse
+          >
+            <GiClick />
+          </motion.div>
+        </div>
 
         {/* Título principal */}
-        <motion.h2 
-          variants={itemDown} 
+        <motion.h2
+          variants={itemDown}
           className={`${imperial.className} text-zinc-800 text-7xl`}
           transition={{ delay: 0.2 }} // Pequeño delay adicional
         >
@@ -129,8 +149,8 @@ export default function SlideOne() {
         </motion.h2>
 
         {/* Años */}
-        <motion.h2 
-          variants={itemUp} 
+        <motion.h2
+          variants={itemUp}
           className={`${imperial.className} text-zinc-800 mb-4 text-5xl`}
           transition={{ delay: 0.25 }}
         >
@@ -158,9 +178,9 @@ export default function SlideOne() {
                 stiffness: 70,
                 damping: 8,
                 mass: 0.7,
-                delay: 0.6 // Delay más largo
-              }
-            }
+                delay: 0.6, // Delay más largo
+              },
+            },
           }}
           className={`${dancing.className} text-zinc-800 text-3xl mx-10 mt-10 text-center`}
         >

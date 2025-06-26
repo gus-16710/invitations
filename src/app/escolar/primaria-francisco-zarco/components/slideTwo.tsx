@@ -10,6 +10,8 @@ import {
   ModalHeader,
   useDisclosure,
 } from "@nextui-org/react";
+import { useState } from "react";
+import NumberFlow from "@number-flow/react";
 
 const MapCeremony = () => (
   <motion.div
@@ -138,6 +140,9 @@ export default function SlideTwo() {
     }
   };
 
+  const [hour, setHour] = useState(0);
+  const [minutes, setMinutes] = useState(0);
+
   return (
     <>
       <section 
@@ -150,6 +155,14 @@ export default function SlideTwo() {
           whileInView="show"
           //viewport={{ once: true, margin: "-100px" }}
           className="flex flex-col items-center"
+          onViewportEnter={() => {
+            setHour(10);
+            setMinutes(30);
+          }}
+          onViewportLeave={() => {
+            setHour(0);
+            setMinutes(0);
+          }}
         >
           {/* Título */}
           <motion.h1 
@@ -177,7 +190,21 @@ export default function SlideTwo() {
             variants={itemUp}
             className="flex items-center justify-center gap-1 bg-zinc-100/0 text-zinc-800 text-2xl font-medium me-2 px-2.5 py-0.5 rounded-full border border-zinc-800 mb-5"
           >
-            <IoMdTime /> 10:30 HRS
+            <IoMdTime /> <NumberFlow
+              value={hour}
+              transformTiming={{
+                duration: 3000,
+              }}
+              trend={-1}
+
+            />:<NumberFlow
+              value={minutes}
+              transformTiming={{
+                duration: 3000,
+              }}
+              trend={-1}
+
+            /> HRS
           </motion.span>
 
           {/* Lugar */}
