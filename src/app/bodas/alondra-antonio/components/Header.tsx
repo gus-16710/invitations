@@ -154,7 +154,7 @@ export default function Header() {
       style={{
         height: "100svh",
         backgroundImage:
-          "linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent), url('/img/bodas/alondra-antonio/header.jpg')",
+          "linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent), url('/img/bodas/alondra-antonio/gallery-01.jpg')",
       }}
     >
       <div className="absolute bottom-0 w-full">

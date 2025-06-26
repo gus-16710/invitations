@@ -72,56 +72,6 @@ const ModalMap = ({
   );
 };
 
-// export default function SlideTwo() {
-//   const { isOpen, onOpen, onOpenChange } = useDisclosure();
-
-//   return (
-//     <>
-//       <motion.section
-//         className="flex flex-col justify-center items-center"
-//         style={{ height: "100svh" }}
-//         initial={{ scale: 0, opacity: 0 }}
-//         whileInView={{ scale: 1, opacity: 1 }}
-//         transition={{ duration: 1.5, delay: 0.5 }}
-//       >
-//         <h1 className={`${mea.className} text-zinc-800 text-6xl`}>Ubicación</h1>
-//         <Avatar
-//           color="warning"
-//           src="/img/escolar/primaria-felipe-carrillo-puerto/primaria.jpg"
-//           className="h-40 w-40 my-5 shadow-lg"
-//           radius="full"
-//         />
-
-//         <span className="flex items-center justify-center gap-1 text-zinc-800 text-2xl font-medium me-2 mb-5">
-//           <IoMdTime /> 09:00 hrs
-//         </span>
-
-//         <p
-//           className={`${urbanist.className} text-zinc-800 text-xl px-5 text-center mx-10`}
-//         >
-//           Escuela Prim. Urb. Estatal "Felipe Carrillo Puerto"
-//         </p>
-//         <p
-//           className={`${luxurious.className} text-zinc-800 mt-3 text-sm text-center mx-10 max-w-md`}
-//         >
-//           Úrsulo Galván, Centro, 91630 Villa Emiliano Zapata, Ver.
-//         </p>
-
-//         <button
-//           type="button"
-//           className="text-gray-800 hover:text-white border border-gray-800 hover:bg-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2 text-center me-2 my-4"
-//           onClick={() => {
-//             onOpen();
-//           }}
-//         >
-//           Ubicación
-//         </button>
-//       </motion.section>
-//       <ModalMap isOpen={isOpen} onOpenChange={onOpenChange} />
-//     </>
-//   );
-// }
-
 export default function SlideTwo() {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
 

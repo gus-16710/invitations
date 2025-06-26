@@ -22,6 +22,8 @@ import { Oswald } from "next/font/google";
 import { motion } from "framer-motion";
 
 import "@splidejs/react-splide/css";
+import LoveMessage from "./LoveMessage";
+import Congratulations from "./Congratulations";
 
 const oswald = Oswald({ subsets: ["latin"], weight: "400" });
 
@@ -137,23 +139,23 @@ export default function Main() {
             <SplideSlide>
               <Reception splide={splide}/>
             </SplideSlide>
-            <SplideSlide>
+            {/* <SplideSlide>
               <GodParents />
-            </SplideSlide>
+            </SplideSlide> */}
             <SplideSlide>
               <DressCode />
             </SplideSlide>
             <SplideSlide>
               <Itinerary />
             </SplideSlide>
-            {/* <SplideSlide>
-              <Gallery />
-            </SplideSlide>
             <SplideSlide>
-              <Gifts />
-            </SplideSlide> */}
+              <Congratulations />
+            </SplideSlide>            
             <SplideSlide>
               <Confirm />
+            </SplideSlide>
+            <SplideSlide>
+              <LoveMessage />
             </SplideSlide>
           </Splide>
           <AudioControl />

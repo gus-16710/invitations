@@ -61,7 +61,7 @@ const ModalMap = ({
               ></iframe>
               <Spinner className="absolute z-10" color="pink" />
             </ModalBody>
-            <ModalFooter>
+            <ModalFooter className="flex justify-center items-center">
               <button
                 type="button"
                 className="text-zinc-0 bg-white/0 border text-zinc-100 border-gray-400 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 rounded-full me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700 font-medium text-sm px-5 py-2.5 text-center flex items-center"
@@ -86,7 +86,7 @@ export default function Reception({ splide }: { splide: number }) {
 
   useEffect(() => {
     if (splide === 3) {
-      setTimeout(() => setHour(13), 500);
+      setTimeout(() => setHour(15), 500);
     } else {
       setHour(0);
     }
@@ -129,7 +129,7 @@ export default function Reception({ splide }: { splide: number }) {
               digits={{ 1: { max: 5 } }}
               format={{ minimumIntegerDigits: 2 }}
               transformTiming={{
-                duration: 2900,
+                duration: 3000,
               }}
             />
             :00 hrs
