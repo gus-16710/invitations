@@ -53,7 +53,7 @@ export default function Confirm() {
       >
         <Button
           color="success"
-          //onClick={() => window.open("https://wa.link/xk0ea6", "_blank")}
+          onClick={() => window.open("https://wa.link/hrq292", "_blank")}
           className="w-60"
         >
           <FaWhatsapp className="text-2xl" />
@@ -69,7 +69,7 @@ export default function Confirm() {
       >
         <Button
           color="success"
-          //onClick={() => window.open("tel:5511422546", "_blank")}
+          onClick={() => window.open("tel:2282150386", "_blank")}
           className="w-60"
         >
           <FaPhoneAlt className="text-2xl" />

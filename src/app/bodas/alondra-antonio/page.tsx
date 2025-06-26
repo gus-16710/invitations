@@ -93,7 +93,7 @@ const ModalOpening = ({
                   }}
                   style={{ color: "#129c59" }}
                 >
-                  LA BODA DE
+                  NUESTRA BODA
                 </motion.p>
               </div>
 
