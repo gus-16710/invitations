@@ -1,4 +1,4 @@
-import { Card, CardBody, Image } from "@nextui-org/react";
+import { Avatar, Card, CardBody, Image } from "@nextui-org/react";
 import { cormorant, galada, lora, mea, urbanist } from "./Fonts";
 import { motion } from "framer-motion";
 import { useCallback, useEffect, useRef } from "react";
@@ -56,8 +56,6 @@ export default function SlideOne() {
     },
   };
 
- 
-
   return (
     <section
       className="flex flex-col justify-center items-center px-5 py-7"
@@ -106,14 +104,15 @@ export default function SlideOne() {
             <motion.div
               variants={scaleIn}
               transition={{ delay: 0.3 }}
-              className="my-5"
+              className="my-3"
             >
-              <Image
-                width={140}
-                alt="Logo"
-                src="/img/escolar/jardin-maria-montessori/graduation-svgrepo-com.svg"
+              <Avatar
+                isBordered
+                color="default"
+                src="/img/escolar/jardin-maria-montessori/logo.jpg"
+                className="h-40 w-40 shadow-lg"
                 radius="full"
-                className="shadow-lg"
+                style={{ filter: "drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.5))" }}
               />
             </motion.div>
 
@@ -169,8 +168,6 @@ export default function SlideOne() {
           </motion.div>
         </CardBody>
       </Card>
-
-      
     </section>
   );
 }

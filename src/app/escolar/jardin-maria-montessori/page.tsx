@@ -23,6 +23,7 @@ import AudioControl from "./components/AudioControl";
 
 import { GrFormViewHide } from "react-icons/gr";
 import ReactCanvasConfetti from "react-canvas-confetti";
+import SlideSix from "./components/slideSix";
 
 const OpeningModal = ({
   isOpen,
@@ -286,9 +287,9 @@ export default function School() {
              <SplideSlide>
               <SlideThree />
             </SplideSlide> 
-            {/* <SplideSlide>
-              <SlideFour />
-            </SplideSlide> */}
+            <SplideSlide>
+              <SlideSix />
+            </SplideSlide>                         
             <SplideSlide>
               <SlideFive />
             </SplideSlide>

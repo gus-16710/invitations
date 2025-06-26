@@ -141,35 +141,20 @@ export default function SlideTwo() {
               {/* Título */}
               <motion.h1
                 variants={item}
-                className={`${galada.className} text-zinc-800 text-6xl mb-8`}
+                className={`${galada.className} text-zinc-800 text-6xl mb-10`}
               >
                 Ubicación
-              </motion.h1>
-
-              {/* Hora */}
-              <motion.div
-                variants={item}
-                transition={{ delay: 0.2 }}
-                className="flex items-center justify-center gap-2 bg-pink-100/20 backdrop-blur-sm text-zinc-800 text-2xl font-medium px-6 py-3 rounded-full border border-pink-200/30 mb-10"
-              >
-                <IoMdTime className="text-xl" />
-                <span>09:00 hrs</span>
-              </motion.div>
+              </motion.h1>             
 
               {/* Lugar */}
               <motion.div
                 variants={fadeIn}
                 transition={{ delay: 0.3 }}
-                className="text-center mb-6"
+                className="text-center mb-3"
               >
                 <p className={`${urbanist.className} text-zinc-800 text-2xl`}>
-                  Jardín de Niños
-                </p>
-                <p
-                  className={`${urbanist.className} text-zinc-800 text-2xl font-bold`}
-                >
-                  "María Montessori"
-                </p>
+                  Jardín de Niños "María Montessori"
+                </p>                
               </motion.div>
 
               {/* Dirección */}
