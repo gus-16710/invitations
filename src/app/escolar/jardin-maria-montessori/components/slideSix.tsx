@@ -102,7 +102,7 @@ export default function SlideSix() {
                     "Emily Gisel Gutiérrez Aguilar",
                     "Quetzalli Hernández Gallardo",
                     "Ximena Arisbeth Luna Ordoñez",
-                    "Dailany Luna Pérez",
+                    "Daileny Luna Pérez",
                     "André Méndez Yobal",
                     "Mateo Moreno Flores",
                     "Bruno Miguel Osorio Espinoza",
