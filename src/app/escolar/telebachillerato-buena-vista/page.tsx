@@ -8,7 +8,7 @@ import "@splidejs/react-splide/css";
 import SlideFour from "./components/slideFour";
 import SlideFive from "./components/slideFive";
 import { useEffect, useState, Dispatch, SetStateAction } from "react";
-import {motion} from "framer-motion";
+import { motion } from "framer-motion";
 
 import {
   Modal,
@@ -22,6 +22,7 @@ import { cormorant, mea, urbanist } from "./components/Fonts";
 import AudioControl from "./components/AudioControl";
 
 import { GrFormViewHide } from "react-icons/gr";
+import SlideSix from "./components/slideSix";
 
 const OpeningModal = ({
   isOpen,
@@ -39,23 +40,23 @@ const OpeningModal = ({
       opacity: 1,
       transition: {
         staggerChildren: 0.3,
-        delayChildren: 0.6
-      }
-    }
+        delayChildren: 0.6,
+      },
+    },
   };
 
   const itemUp = {
     hidden: { y: 30, opacity: 0 },
-    show: { 
-      y: 0, 
+    show: {
+      y: 0,
       opacity: 1,
       transition: {
         type: "spring",
         damping: 10,
         stiffness: 80,
-        mass: 0.6
-      }
-    }
+        mass: 0.6,
+      },
+    },
   };
 
   const fadeIn = {
@@ -64,9 +65,9 @@ const OpeningModal = ({
       opacity: 1,
       transition: {
         duration: 2,
-        ease: "easeOut"
-      }
-    }
+        ease: "easeOut",
+      },
+    },
   };
 
   const scaleIn = {
@@ -78,9 +79,9 @@ const OpeningModal = ({
         type: "spring",
         stiffness: 100,
         damping: 8,
-        mass: 0.5
-      }
-    }
+        mass: 0.5,
+      },
+    },
   };
 
   return (
@@ -91,7 +92,7 @@ const OpeningModal = ({
       placement="center"
       backdrop="transparent"
       isDismissable={false}
-      hideCloseButton={true}      
+      hideCloseButton={true}
     >
       <ModalContent className="overflow-clip bg-slate-50/0">
         {(onClose) => (
@@ -122,7 +123,7 @@ const OpeningModal = ({
                 </motion.h1>
 
                 {/* Clave */}
-                <motion.h2 
+                <motion.h2
                   variants={fadeIn}
                   transition={{ delay: 0.3 }}
                   className={`${urbanist.className} text-zinc-50 text-center text-lg mt-1`}
@@ -163,10 +164,10 @@ const OpeningModal = ({
                 <motion.button
                   variants={fadeIn}
                   transition={{ delay: 0.8 }}
-                  whileHover={{ 
+                  whileHover={{
                     scale: 1.05,
                     backgroundColor: "rgba(255, 255, 255, 0.1)",
-                    borderColor: "rgba(255, 255, 255, 0.8)"
+                    borderColor: "rgba(255, 255, 255, 0.8)",
                   }}
                   whileTap={{ scale: 0.95 }}
                   type="button"
@@ -176,7 +177,7 @@ const OpeningModal = ({
                     onClose();
                   }}
                 >
-                  <GrFormViewHide className="text-xl" /> 
+                  <GrFormViewHide className="text-xl" />
                   <span>Ver Invitación</span>
                 </motion.button>
               </ModalFooter>
@@ -225,8 +226,11 @@ export default function School() {
               <SlideThree />
             </SplideSlide>
             <SplideSlide>
+              <SlideSix />
+            </SplideSlide>
+            <SplideSlide>
               <SlideFour />
-            </SplideSlide>           
+            </SplideSlide>
             <SplideSlide>
               <SlideFive />
             </SplideSlide>
