@@ -15,8 +15,91 @@ export default function SlideThree() {
       <h1 className={`${dancing.className} text-zinc-50 text-6xl mb-10`}>
         Egresados
       </h1>
-      <ScrollShadow hideScrollBar className="h-[400px] z-50">
-        <p className="text-zinc-50 text-center mb-5 mx-5">
+      <ScrollShadow hideScrollBar className="h-[400px] z-50 text-zinc-100">
+        <div className="mb-10 flex flex-col justify-center items-center">
+          <h2 className="mb-4 text-xl font-bold">TSQ II 603</h2>
+          <ol className="list-disc list-inside space-y-1">
+            <li>Alvarado Jiménez Damían</li>
+            <li>Alvarado Mendoza Deniss Jacqueline</li>
+            <li>Arrieta Cruz José Mariano</li>
+            <li>Ávila Ortíz Yeimi Victoria</li>
+            <li>Callejas Navarro Felipe de Jesús</li>
+            <li>Candelario Hernández Erick Alexander</li>
+            <li>Castañeda López Israel</li>
+            <li>Castillo Hernández Zuleima Angelyn</li>
+            <li>Cerón Pérez Génesis Valeria</li>
+            <li>Domínguez Domínguez Azucena</li>
+            <li>Domínguez Guerrero Uriel</li>
+            <li>Escobar Viveros Carlos</li>
+            <li>García Huerta Carlos de Jesús</li>
+            <li>García Reyes Heriberto Isaac</li>
+            <li>Hernández Carmona Angel Armando</li>
+            <li>Juárez Sarabia Estrella</li>
+            <li>Marcial Cerón Oscar Norberto</li>
+            <li>Martínez Ocotl José Alvaro</li>
+            <li>Moreno Luna Dayra Jimena</li>
+            <li>Paulino Salazar Luis Manuel</li>
+            <li>Rincón Callejas Axel Rodrigo</li>
+            <li>Roa Espinoza Juan Carlos</li>
+            <li>Rodríguez Salas Ángel Yahir</li>
+            <li>Torres López Miguel Ángel</li>
+          </ol>
+        </div>
+
+        <div className="mb-10 flex flex-col justify-center items-center">
+          <h2 className="mb-4 text-xl font-bold">Geografía 501</h2>
+          <ol className="list-disc list-inside space-y-1">
+            <li>Acuña Villalobos Silvia Paola</li>
+            <li>Aguilar Rodríguez Berenice</li>
+            <li>Arriola Rosas Nely Vanessa</li>
+            <li>Bárcenas López Saúl</li>
+            <li>Bravo Martínez Diego Gilberto</li>
+            <li>Ceballos Rivera Miriam</li>
+            <li>Chávez García Sofía Nicole</li>
+            <li>Cortez Leal Alondra</li>
+            <li>Domínguez Baizabal Kristyell Monserrat</li>
+            <li>García López Axel Ivane</li>
+            <li>García Sánchez Luz Angélica</li>
+            <li>García Zendejas Leilani Yeraldine</li>
+            <li>Gómez Herrera Ángel de Jesús</li>
+            <li>Gutiérrez Meza Lesly Johana</li>
+            <li>Hernández Cruz Vanessa</li>
+            <li>Hernández Lara Aranza</li>
+            <li>Hernández Molina Laura Marbella</li>
+            <li>Hernández Villegas Fanny Ailin</li>
+            <li>Jiménez Domínguez Miguel Ángel</li>
+            <li>Juárez Viveros Arlet Ivonne</li>
+            <li>Julián Ramírez Abigail</li>
+            <li>Lagunes Vera Silvia</li>
+            <li>Landa Gómez Luis Alejandro</li>
+            <li>Landa Trujillo Sandra Yasmín</li>
+            <li>Landa Zárate Damaris Vanessa</li>
+            <li>López González Jaxiri Jamiled</li>
+            <li>Martínez Domínguez Ángel Jesús</li>
+            <li>Martínez Flores Azul Guadalupe</li>
+            <li>Martínez Flores Mayana Evelyn</li>
+            <li>Martínez Huerta Óscar de Jesús</li>
+            <li>Martínez Téllez Valeria Anahí</li>
+            <li>Méndez Gómez Dara Dominique</li>
+            <li>Méndez Trujillo Vannelli Danniel</li>
+            <li>Mendoza Gándara Brenda Anahí</li>
+            <li>Morales Vásquez Diego Alexis</li>
+            <li>Munguía Ochoa Leonardo Gabriel</li>
+            <li>Quiroz Delgado Ángel Cristobal</li>
+            <li>Reyes Gallegos Milena Mahareth</li>
+            <li>Rincón Callejas Kevin Yahir</li>
+            <li>Rivera Hernández Michell</li>
+            <li>Rodríguez Sosa Alexa Michel</li>
+            <li>Romero Avilés Eva Cristina</li>
+            <li>Salas Viveros Héctor Antonio</li>
+            <li>Saldaña Rosales Leslie Carelly</li>
+            <li>Sayago Conde Brayan Daniel</li>
+            <li>Vega Ortega Luis Alberto</li>
+            <li>Velásquez Fernández Viniza Daniela</li>
+          </ol>
+        </div>
+
+        {/* <p className="text-zinc-50 text-center mb-5 mx-5">
           Aguilar Segovia Adriana
         </p>
         <p className="text-zinc-50 text-center mb-5 mx-5">
@@ -156,7 +239,7 @@ export default function SlideThree() {
         </p>
         <p className="text-zinc-50 text-center mb-5 mx-5">
           Villa Pérez Darin Quimey
-        </p>
+        </p> */}
       </ScrollShadow>
       <motion.div
         initial={{ y: 0 }}
