@@ -97,9 +97,22 @@ export default function SlideThree() {
             <li>Vega Ortega Luis Alberto</li>
             <li>Velásquez Fernández Viniza Daniela</li>
           </ol>
-        </div>
+        </div>       
+      </ScrollShadow>
+      <motion.div
+        initial={{ y: 0 }}
+        whileInView={{ y: [0, 10, 0] }}
+        transition={{ duration: 2, repeat: Infinity }}
+        className="mt-5"
+      >
+        <IoIosArrowDown className="text-zinc-100 text-xl" />
+      </motion.div>
+    </motion.section>
+  );
+}
 
-        {/* <p className="text-zinc-50 text-center mb-5 mx-5">
+
+ {/* <p className="text-zinc-50 text-center mb-5 mx-5">
           Aguilar Segovia Adriana
         </p>
         <p className="text-zinc-50 text-center mb-5 mx-5">
@@ -240,15 +253,3 @@ export default function SlideThree() {
         <p className="text-zinc-50 text-center mb-5 mx-5">
           Villa Pérez Darin Quimey
         </p> */}
-      </ScrollShadow>
-      <motion.div
-        initial={{ y: 0 }}
-        whileInView={{ y: [0, 10, 0] }}
-        transition={{ duration: 2, repeat: Infinity }}
-        className="mt-5"
-      >
-        <IoIosArrowDown className="text-zinc-100 text-xl" />
-      </motion.div>
-    </motion.section>
-  );
-}

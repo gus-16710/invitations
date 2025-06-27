@@ -181,7 +181,7 @@ export default function SlideFive() {
                 </div>
               ))}
             </div>
-            <p className="mt-6 text-center text-sm text-zinc-800">
+            <p className="mt-6 text-center text-sm text-zinc-800 uppercase">
               Profesora: Adriana Iveth Matla Valdez
             </p>
           </div>
@@ -205,7 +205,7 @@ export default function SlideFive() {
                 </div>
               ))}
             </div>
-            <p className="mt-6 text-center text-sm text-zinc-800">
+            <p className="mt-6 text-center text-sm text-zinc-800 uppercase">
               Profesora: María del Rosario Amaya Acosta
             </p>
           </div>
@@ -229,7 +229,7 @@ export default function SlideFive() {
                 </div>
               ))}
             </div>
-            <p className="mt-6 text-center text-sm text-zinc-800 mb-10">
+            <p className="mt-6 text-center text-sm text-zinc-800 mb-10 uppercase">
               Profesor: Epigmenio Hernández Romero
             </p>
           </div>

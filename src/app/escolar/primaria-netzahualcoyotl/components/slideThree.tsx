@@ -23,7 +23,7 @@ const itinerary = [
   {
     time: "18:40 Hrs",
     event:
-      "Palabras por parte del padrino de generación Sr. Aldo Iván Ortigoza Medina.",
+      "Palabras por parte del padrino de generación Dr. Aldo Iván Ortigoza Medina.",
   },
   {
     time: "18:50 Hrs",
