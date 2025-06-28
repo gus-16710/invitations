@@ -90,7 +90,7 @@ export default function SlideFour() {
               >
                 {[
                   "6to A Roger Bartolo Martínez",
-                  "6to B Ana Luisa Cabrera",                  
+                  "6to B Ana Luisa Cabrera Martínez",                  
                 ].map((teacher, index) => (
                   <motion.li
                     key={index}

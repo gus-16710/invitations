@@ -122,7 +122,7 @@ export default function SlideOne() {
           className={`${imperial.className} text-zinc-800 text-7xl`}
           transition={{ delay: 0.2 }} // Pequeño delay adicional
         >
-          Graduación
+          Generación
         </motion.h2>
 
         {/* Años */}

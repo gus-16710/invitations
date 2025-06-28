@@ -104,7 +104,7 @@ const OpeningModal = ({
                     La Primaria Profr. Rosendo Leyva Lara
                   </p>
                   <p className={`${urbanist.className} text-zinc-600 text-xl`}>
-                    les hace el honor de invitar a la ceremonia de
+                    tiene el honor de invitarlos a la ceremonia de
                   </p>
                 </motion.div>
 
