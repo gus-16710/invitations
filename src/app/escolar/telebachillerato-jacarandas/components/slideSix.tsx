@@ -232,7 +232,7 @@ export default function SlideSix() {
               </label>
             </li>
             <li>
-              Sánchez López Enia Yanel
+              Sánchez López Enia Yannel
               <br />
               <label className="ml-4">Prof. Alfonso Figueroa Fernández</label>
             </li>
