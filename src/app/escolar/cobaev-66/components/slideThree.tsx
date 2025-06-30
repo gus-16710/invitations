@@ -17,7 +17,7 @@ export default function SlideThree() {
       </h1>
       <ScrollShadow hideScrollBar className="h-[400px] z-50 text-zinc-100">
         <div className="mb-10 flex flex-col justify-center items-center">
-          <h2 className="mb-4 text-xl font-bold">TSQ II 602</h2>
+          <h2 className="mb-4 text-xl font-bold">602</h2>
           <ol className="list-disc list-inside space-y-1">
             <li>Alvarado Jiménez Damían</li>
             <li>Alvarado Mendoza Deniss Jacqueline</li>
@@ -47,7 +47,7 @@ export default function SlideThree() {
         </div>
 
         <div className="mb-10 flex flex-col justify-center items-center">
-          <h2 className="mb-4 text-xl font-bold">Geografía 601</h2>
+          <h2 className="mb-4 text-xl font-bold">601</h2>
           <ol className="list-disc list-inside space-y-1">
             <li>Acuña Villalobos Silvia Paola</li>
             <li>Aguilar Rodríguez Berenice</li>

@@ -76,7 +76,7 @@ export default function SlideSix() {
               </label>
             </li>
             <li>
-              Velasco Rivera Omar Abdias
+              Velasco Rivera Omar Adías
               <br />
               <label className="ml-4">Lic. Juan Moreno Linares</label>
             </li>
@@ -92,7 +92,7 @@ export default function SlideSix() {
             <li>
               Arroyo Medrano Angélica
               <br />
-              <label className="ml-4">Prof. Rui Anthuani Sosa Vásquez</label>
+              <label className="ml-4">Prof. Rui Anthuan Sosa Vásquez</label>
             </li>
             <li>
               Campos Báez Dominique

@@ -10,7 +10,7 @@ export default function SlideSeven() {
       whileInView={{ y: 0, opacity: 1 }}
       transition={{ duration: 1.5, delay: 0.5 }}
     >
-      <h1 className={`${oleo.className} text-zinc-50 text-5xl mb-10 text-center`}>Padrimos de Generación</h1>
+      <h1 className={`${oleo.className} text-zinc-50 text-5xl mb-10 text-center`}>Padrinos de Generación</h1>
 
       <p className={`${ovo.className} text-zinc-50 text-lg custom-shadow text-center`}>
         Mtra. Leonor Herrera García <br/>
