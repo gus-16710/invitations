@@ -17,7 +17,7 @@ export default function SlideThree() {
       </h1>
       <ScrollShadow hideScrollBar className="h-[400px] z-50 text-zinc-100">
         <div className="mb-10 flex flex-col justify-center items-center">
-          <h2 className="mb-4 text-xl font-bold">602</h2>
+          <h2 className="mb-4 text-xl font-bold">603</h2>
           <ol className="list-disc list-inside space-y-1">
             <li>Alvarado Jiménez Damían</li>
             <li>Alvarado Mendoza Deniss Jacqueline</li>
@@ -43,6 +43,62 @@ export default function SlideThree() {
             <li>Roa Espinoza Juan Carlos</li>
             <li>Rodríguez Salas Ángel Yahir</li>
             <li>Torres López Miguel Ángel</li>
+          </ol>
+        </div>
+
+        
+        <div className="mb-10 flex flex-col justify-center items-center">
+          <h2 className="mb-4 text-xl font-bold">602</h2>
+          <ol className="list-disc list-inside space-y-1">
+            <li>Aguilar Segovia Adriana</li>
+            <li>Argüello Clemente Melanie Aime</li>
+            <li>Barrientos Burgos Lizeth Esperanza</li>
+            <li>Bautista Vega Arisbeth</li>
+            <li>Bello Suárez Rodrigo</li>
+            <li>Bravo Grimaldo Luis Noé</li>
+            <li>Campusano Guzmán Daniela Janai</li>
+            <li>Carreón Cornejo Karla Lizeth</li>
+            <li>Conde Montero Marely</li>
+            <li>Contreras Navarro Natalia Guadalupe</li>
+            <li>Díaz Gálvez Donají</li>
+            <li>Fernández Ojeda Karol Itzel</li>
+            <li>Filobello Rivera Dulce Victoria</li>
+            <li>García Cervantes Héctor Zabdiel</li>
+            <li>Gómez Santamaría Omar Antuán</li>
+            <li>Guzmán Lárruz Pedro Joaquín</li>
+            <li>Hernández Alarcón Iván</li>
+            <li>Hernández Lozano Carolina Itzel</li>
+            <li>Jiménez Martín Eliel</li>
+            <li>Landa Hernández Karen Lizeth</li>
+            <li>Landa Murrieta Javier</li>
+            <li>Lozada Contreras Paola</li>
+            <li>Marín Díaz Sayuri</li>
+            <li>Martínez Libreros Alan</li>
+            <li>Melo Martínez Alexis</li>
+            <li>Méndez Carballo Ximena</li>
+            <li>Monfil Caballero Omar</li>
+            <li>Montero Ramírez Luis Alberto</li>
+            <li>Morales Espinoza Jorge Luis</li>
+            <li>Morales López Elidia Analit</li>
+            <li>Morales Martínez Natividad Mario</li>
+            <li>Ochoa Rosendo Yeudiel</li>
+            <li>Palestina Viveros Josselyn</li>
+            <li>Palestina Viveros Oralis</li>
+            <li>Pantoja Castillo Viridiana</li>
+            <li>Pérez Loeza Sergio</li>
+            <li>Prieto Castillo Paola Isidora</li>
+            <li>Rivera Viveros Cristopher</li>
+            <li>Rivero Prieto Melany</li>
+            <li>Rodríguez Aguilar Julio Alberto</li>
+            <li>Romero Romero Karol Mariana</li>
+            <li>Salazar Badillo Arlette Marisol</li>
+            <li>Saldaña Rosales Grisel Alexandra</li>
+            <li>Sánchez Hernández Juan De Jesús</li>
+            <li>Santamaría Timoteo Berenice</li>
+            <li>Utrera García Dionne</li>
+            <li>Vázquez Aguilar Paola Fernanda</li>
+            <li>Velasco Monroy Oriana</li>
+            <li>Villa Pérez Darin Quimey</li>
           </ol>
         </div>
 
@@ -97,7 +153,7 @@ export default function SlideThree() {
             <li>Vega Ortega Luis Alberto</li>
             <li>Velásquez Fernández Viniza Daniela</li>
           </ol>
-        </div>       
+        </div>
       </ScrollShadow>
       <motion.div
         initial={{ y: 0 }}
@@ -111,8 +167,8 @@ export default function SlideThree() {
   );
 }
 
-
- {/* <p className="text-zinc-50 text-center mb-5 mx-5">
+{
+  /* <p className="text-zinc-50 text-center mb-5 mx-5">
           Aguilar Segovia Adriana
         </p>
         <p className="text-zinc-50 text-center mb-5 mx-5">
@@ -252,4 +308,5 @@ export default function SlideThree() {
         </p>
         <p className="text-zinc-50 text-center mb-5 mx-5">
           Villa Pérez Darin Quimey
-        </p> */}
+        </p> */
+}
