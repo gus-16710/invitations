@@ -92,7 +92,7 @@ export default function SlideSix() {
             <li>
               Arroyo Medrano Angélica
               <br />
-              <label className="ml-4">Prof. Rui Anthuan Sosa Vásquez</label>
+              <label className="ml-4">Profr. Rui Anthuan Sosa Vásquez</label>
             </li>
             <li>
               Campos Báez Dominique
@@ -232,7 +232,7 @@ export default function SlideSix() {
               </label>
             </li>
             <li>
-              Sánchez López Enja Yanel
+              Sánchez López Enia Yanel
               <br />
               <label className="ml-4">Prof. Alfonso Figueroa Fernández</label>
             </li>
