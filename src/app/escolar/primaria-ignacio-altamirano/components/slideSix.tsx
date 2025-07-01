@@ -50,6 +50,10 @@ const guests02 = [
   {
     name: "Ing. Juan Carlos Mejía Pérez",
     role: "H. Junta de mejoras",
+  },
+  {
+    name: "Gerardo Amaya Acosta",
+    role: "Presidente del Comité de Agua Potable",
   }
 ];
 

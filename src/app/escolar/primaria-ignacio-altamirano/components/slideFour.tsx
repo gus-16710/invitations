@@ -17,10 +17,6 @@ const itinerary = [
     event: "Presentación del programa artístico.",
   },
   {
-    time: "18:30 Hrs",
-    event: "Entrega de diplomas de aprovechamiento a los alumnos de 1° a 6°.",
-  },
-  {
     time: "18:40 Hrs",
     event: "Palabras de despedida por alumnas de 5° y 6°.",
   },
@@ -93,15 +89,7 @@ export default function SlideFour() {
                 </div>
               ))}
             </motion.ol>
-          </ScrollShadow>
-          <motion.div
-            initial={{ y: 0 }}
-            whileInView={{ y: [0, 10, 0] }}
-            transition={{ duration: 2, repeat: Infinity }}
-            className="mt-5"
-          >
-            <IoIosArrowDown className="text-zinc-100 text-xl" />
-          </motion.div>
+          </ScrollShadow>          
         </CardBody>
       </Card>
     </section>

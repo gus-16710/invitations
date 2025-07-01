@@ -67,14 +67,14 @@ export default function SlideThree() {
       >
         <CardBody className="flex items-center justify-center flex-col">
           <motion.div
-            className="flex flex-col justify-center items-center text-zinc-100"
+            className="flex flex-col justify-center items-center text-zinc-100 gap-9"
             initial="hidden"
             whileInView="show"
             variants={container}
           >
             {/* Docente 6° A */}
-            <motion.div variants={itemUp} className="text-center mb-4">
-              <h1 className={`${galada.className} text-5xl mb-2 custom-shadow`}>
+            <motion.div variants={itemUp} className="text-center">
+              <h1 className={`${galada.className} text-4xl mb-2 custom-shadow`}>
                 Director
               </h1>
               <motion.p
@@ -83,33 +83,15 @@ export default function SlideThree() {
               >
                 Ma. Del Rosario Amaya Acosta
               </motion.p>
-            </motion.div>
-
-            {/* Símbolo & */}
-            <motion.div
-              variants={scaleIn}
-              transition={{ delay: 0.2 }}
-              className="relative my-6"
-            >
-              <motion.p
-                className={`${lora.className} text-4xl bg-zinc-100 rounded-full w-12 h-12 text-blue-800 flex justify-center items-center shadow-2xl`}
-                whileHover={{
-                  scale: 1.1,
-                  rotate: [0, 10, -10, 0],
-                  transition: { duration: 0.6 },
-                }}
-              >
-                &
-              </motion.p>
-            </motion.div>
+            </motion.div>            
 
             {/* Docente 6° B */}
             <motion.div
               variants={itemUp}
               transition={{ delay: 0.3 }}
-              className="text-center mt-4"
+              className="text-center"
             >
-              <h1 className={`${galada.className} text-5xl mb-2 custom-shadow`}>
+              <h1 className={`${galada.className} text-4xl mb-2 custom-shadow`}>
                 Maestra
               </h1>
               <motion.p
@@ -120,11 +102,32 @@ export default function SlideThree() {
               </motion.p>
             </motion.div>
 
+            <motion.div
+              variants={itemUp}
+              transition={{ delay: 0.3 }}
+              className="text-center"
+            >
+              <h1 className={`${galada.className} text-4xl mb-2 custom-shadow`}>
+                Padrino de Generación
+              </h1>
+              <motion.p
+                className={`${urbanist.className} text-xl custom-shadow`}
+                whileHover={{ scale: 1.03 }}
+              >
+                <span>C. Ana Laura Vázquez Sánchez</span>
+                <br />
+                <span className="text-sm">
+                  Regidora Primera del H. Ayuntamiento de Emiliano Zapata,
+                  Veracruz.
+                </span>
+              </motion.p>
+            </motion.div>
+
             {/* Elemento decorativo (opcional) */}
             <motion.div
               variants={fadeIn}
               transition={{ delay: 0.5 }}
-              className="w-20 h-1 bg-zinc-800/30 rounded-full mt-10"
+              className="w-20 h-1 bg-zinc-800/30 rounded-full mt-5"
             ></motion.div>
           </motion.div>
         </CardBody>
