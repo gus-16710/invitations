@@ -7,7 +7,7 @@ export const metadata: Metadata = {
     title: '🎓 Primaria "Ignacio Manuel Altamirano" | Graduación 🎓',
   description: "Ceremonia de “Fin de Cursos” de la GENERACIÓN 2019-2025",
     images: [
-      `https://invitaciones.unaideamas.com/img/escolar/primaria-ignacio-altamirano/gallery.jpeg`,
+      `https://invitaciones.unaideamas.com/img/escolar/primaria-ignacio-altamirano/gallery-01.jpeg`,
     ],
   },
   icons: {
