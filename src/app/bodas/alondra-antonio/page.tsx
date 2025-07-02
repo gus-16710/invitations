@@ -51,7 +51,7 @@ const ModalOpening = ({
       hideCloseButton={true}
       className="bg-pink-500/0"
     >
-      <ModalContent className="bg-[url('/img/bodas/alondra-antonio/background44.jpg')] bg-cover bg-center relative overflow-hidden">
+      <ModalContent className="bg-[url('/img/bodas/alondra-antonio/background49.jpg')] bg-cover bg-center relative overflow-hidden">
         {(onClose) => (
           <>
             {/* Elementos decorativos flotantes */}
@@ -111,7 +111,7 @@ const ModalOpening = ({
                 />
 
                 <motion.h1
-                  className={`${abril.className} text-7xl text-zinc-800 text-center z-10 relative`}
+                  className={`${abril.className} text-7xl text-zinc-700 text-center z-10 relative`}
                   initial={{ y: -80, opacity: 0, scale: 0.95 }}
                   animate={{
                     y: 0,
@@ -125,7 +125,7 @@ const ModalOpening = ({
                     delay: 0.8,
                     duration: 1.5,
                   }}
-                  style={{ lineHeight: 1, color: "#129c59" }}
+                  //style={{ lineHeight: 1, color: "#129c59" }}
                 >
                   <motion.span
                     className="inline-block"

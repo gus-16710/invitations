@@ -260,13 +260,13 @@ export default function Congratulations() {
   return (
     <section
       id="section-four"
-      className="flex justify-center items-center flex-col p-4 bg-[url('/img/bodas/alondra-antonio/background46.jpg')] bg-cover bg-center"
+      className="flex justify-center items-center flex-col p-4 "
       style={{ height: "100svh" }}
     >
-      <div className="absolute top-0 left-0 w-full h-full z-5 bg-gradient-to-t from-black/100 to-transparent"></div>
+      
 
       <motion.h1
-        className={`${greatVibes.className} text-5xl drop-shadow mb-10 text-zinc-100 z-10`}
+        className={`${greatVibes.className} text-5xl drop-shadow mb-10 text-zinc-800 z-10`}
         initial={{ y: -100, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 1, ease: "easeOut", delay: 0.5 }}
@@ -282,7 +282,7 @@ export default function Congratulations() {
         transition={{ delay: 1 }}
       >
         <div className="mb-4">
-          <label htmlFor="name" className={`block text-zinc-100 mb-2 text-sm`}>
+          <label htmlFor="name" className={`block text-zinc-800 mb-2 text-sm`}>
             Nombre:
           </label>
           <input
@@ -291,7 +291,7 @@ export default function Congratulations() {
             type="text"
             value={formData.name}
             onChange={handleChange}
-            className="w-full px-3 py-2 bg-zinc-100 border border-zinc-600 rounded text-zinc-800 focus:outline-none focus:ring-1 focus:ring-zinc-400"
+            className="w-full px-3 py-2 bg-zinc-100 border border-zinc-600/50 rounded text-zinc-800 focus:outline-none focus:ring-1 focus:ring-zinc-400"
             placeholder="Escribe tu nombre aquí"
           />
           {errors.name && (
@@ -300,7 +300,7 @@ export default function Congratulations() {
         </div>
 
         <div className="mb-4">
-          <label htmlFor="phone" className={`block text-zinc-100 mb-2 text-sm`}>
+          <label htmlFor="phone" className={`block text-zinc-800 mb-2 text-sm`}>
             Teléfono:
           </label>
           <input
@@ -309,7 +309,7 @@ export default function Congratulations() {
             type="tel"
             value={formData.phone}
             onChange={handleChange}
-            className="w-full px-3 py-2 bg-zinc-100 border border-zinc-600 rounded text-zinc-800 focus:outline-none focus:ring-1 focus:ring-zinc-400"
+            className="w-full px-3 py-2 bg-zinc-100 border border-zinc-600/50 rounded text-zinc-800 focus:outline-none focus:ring-1 focus:ring-zinc-400"
             placeholder="Escribe tu teléfono aquí"
           />
           {errors.phone && (
@@ -320,7 +320,7 @@ export default function Congratulations() {
         <div className="mb-6">
           <label
             htmlFor="message"
-            className={`block text-zinc-100 mb-2 text-sm`}
+            className={`block text-zinc-800 mb-2 text-sm`}
           >
             Mensaje para los novios:
           </label>
@@ -330,7 +330,7 @@ export default function Congratulations() {
             rows={3}
             value={formData.message}
             onChange={handleChange}
-            className="w-full px-3 py-2 bg-zinc-100 border border-zinc-600 rounded text-zinc-800 focus:outline-none focus:ring-1 focus:ring-zinc-400"
+            className="w-full px-3 py-2 bg-zinc-100 border border-zinc-600/50 rounded text-zinc-800 focus:outline-none focus:ring-1 focus:ring-zinc-400"
             placeholder="Escribe tu mensaje aquí"
           />
           {errors.message && (
