@@ -1,5 +1,5 @@
 import { mea, urbanist } from "./Fonts";
-import { Card, CardBody, ScrollShadow } from "@nextui-org/react";
+import { Card, CardBody, Image, ScrollShadow } from "@nextui-org/react";
 import { motion } from "framer-motion";
 import { IoIosArrowDown } from "react-icons/io";
 
@@ -16,14 +16,16 @@ export default function SlideSix() {
         Egresados
       </h1>
       <ScrollShadow hideScrollBar className="h-[400px] text-zinc-800 w-72 z-10">
-        <div className={`${urbanist.className} mb-10 flex flex-col justify-center items-center`}>
+        <div
+          className={`${urbanist.className} mb-10 flex flex-col justify-center items-center`}
+        >
           <h2 className="mb-4">Alumnos y Padrinos</h2>
 
-          <Card className="shadow-none mb-3 w-full" >
+          <Card className="shadow-none mb-3 w-full border-r-2 border-pink-100">
             <CardBody>
               <p>Niña: Leah Sharik Tejeda Pérez </p>
               <p>Padrinos: Alma Delfina Jasso Soto y Enrique Reyes Pacheco </p>
-            </CardBody>
+            </CardBody>            
           </Card>
 
           <Card className="shadow-none mb-3 w-full">
@@ -115,8 +117,6 @@ export default function SlideSix() {
       >
         <IoIosArrowDown className="text-zinc-800 text-xl" />
       </motion.div>
-
-     
     </motion.section>
   );
 }

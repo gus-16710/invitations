@@ -40,7 +40,7 @@ export default function SlideOne() {
         CLAVE 30DJN0190I
       </h2>
 
-      <div className="w-72 relative">
+      <div className="w-72 relative my-5">
         <PhotoAlbum
           layout="masonry"
           photos={images}
