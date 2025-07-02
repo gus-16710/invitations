@@ -15,7 +15,7 @@ export default function SlideSix() {
       <h1 className={`${mea.className} text-zinc-800 text-6xl mb-5`}>
         Egresados
       </h1>
-      <ScrollShadow hideScrollBar className="h-[400px] text-zinc-800 w-72">
+      <ScrollShadow hideScrollBar className="h-[400px] text-zinc-800 w-72 z-10">
         <div className={`${urbanist.className} mb-10 flex flex-col justify-center items-center`}>
           <h2 className="mb-4">Alumnos y Padrinos</h2>
 
