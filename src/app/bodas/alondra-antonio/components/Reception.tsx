@@ -95,7 +95,7 @@ export default function Reception({ splide }: { splide: number }) {
   return (
     <>
       <section
-        className="flex justify-center items-center flex-col pt-20 pb-20 bg-[url('/img/bodas/alondra-antonio/background35.jpg')] bg-cover bg-center"
+        className="flex justify-center items-center flex-col pt-20 pb-20 "
         style={{ height: "100svh" }}
       >
         <motion.h1

@@ -100,7 +100,7 @@ export default function Main() {
   }, []);
 
   return (
-    <div className="max-w-3xl m-auto shadow-large">
+    <div className="max-w-3xl m-auto bg-[url('/img/bodas/alondra-antonio/background44.jpg')] bg-cover bg-center shadow-large">
       {open && (
         <motion.div
           initial={{ opacity: 0}}
@@ -138,7 +138,7 @@ export default function Main() {
             </SplideSlide>
             <SplideSlide>
               <Reception splide={splide}/>
-            </SplideSlide>            
+            </SplideSlide>
             {/* <SplideSlide>
               <GodParents />
             </SplideSlide> */}

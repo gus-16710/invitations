@@ -57,7 +57,7 @@ export default function Itinerary() {
       style={{ height: "100svh" }}
     >
       <motion.h1
-        className={`${greatVibes.className} text-5xl drop-shadow mb-10 text-zinc-300`}
+        className={`${greatVibes.className} text-5xl drop-shadow mb-10 text-zinc-800`}
         initial={{ y: -100, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
@@ -76,11 +76,11 @@ export default function Itinerary() {
             <li className="mb-7 ms-4">
               <div className="absolute w-3 h-3 bg-pink-600 rounded-full mt-1.5 -start-1.5 border border-pink-700"></div>
               <motion.div variants={element}>
-                <time className="mb-1 text-sm font-normal leading-none text-gray-400 ">
+                <time className="mb-1 text-sm font-normal leading-none text-gray-600 ">
                   {item.time}
                 </time>
                 <h3
-                  className={`${playFair.className} text-base font-semibold text-zinc-300`}
+                  className={`${playFair.className} text-base font-semibold text-zinc-800`}
                 >
                   {item.event}
                 </h3>

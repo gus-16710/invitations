@@ -264,7 +264,7 @@ export default function Congratulations() {
       style={{ height: "100svh" }}
     >
       <motion.h1
-        className={`${greatVibes.className} text-5xl drop-shadow mb-10 text-zinc-300`}
+        className={`${greatVibes.className} text-5xl drop-shadow mb-10 text-zinc-800`}
         initial={{ y: -100, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
@@ -280,7 +280,7 @@ export default function Congratulations() {
         transition={{ delay: 0.5 }}
       >
         <div className="mb-4">
-          <label htmlFor="name" className={`block text-zinc-300 mb-2 text-sm`}>
+          <label htmlFor="name" className={`block text-zinc-800 mb-2 text-sm`}>
             Nombre:
           </label>
           <input
@@ -298,7 +298,7 @@ export default function Congratulations() {
         </div>
 
         <div className="mb-4">
-          <label htmlFor="phone" className={`block text-zinc-300 mb-2 text-sm`}>
+          <label htmlFor="phone" className={`block text-zinc-800 mb-2 text-sm`}>
             Teléfono:
           </label>
           <input
@@ -318,7 +318,7 @@ export default function Congratulations() {
         <div className="mb-6">
           <label
             htmlFor="message"
-            className={`block text-zinc-300 mb-2 text-sm`}
+            className={`block text-zinc-800 mb-2 text-sm`}
           >
             Mensaje para los novios:
           </label>

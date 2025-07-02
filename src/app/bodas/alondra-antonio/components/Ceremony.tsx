@@ -95,7 +95,7 @@ export default function Ceremony({ splide }: { splide: number }) {
   return (
     <>
       <section
-        className="flex justify-center items-center flex-col relative bg-[url('/img/bodas/alondra-antonio/background35.jpg')] bg-cover bg-center"
+        className="flex justify-center items-center flex-col relative "
         style={{ height: "100svh" }}
       >        
         <motion.h1
