@@ -165,7 +165,7 @@ export default function Header() {
         }}
       />
 
-      <div className="absolute bottom-0 w-full rotate-180">        
+      {/* <div className="absolute bottom-0 w-full rotate-180">        
         <svg
           data-name="Layer 1"
           xmlns="http://www.w3.org/2000/svg"
@@ -214,7 +214,7 @@ export default function Header() {
             fill="#057A55"
           ></path>
         </svg>
-      </div>
+      </div> */}
 
       <div className="relative z-10 text-white p-6 text-center flex flex-col items-center justify-center">
         <motion.h1
