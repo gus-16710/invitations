@@ -44,7 +44,7 @@ const ModalMap = ({
         {(onClose) => (
           <>
             <ModalHeader
-              className={`${greatVibes.className} flex flex-col gap-1 items-center text-3xl text-zinc-300`}
+              className={`${greatVibes.className} flex flex-col gap-1 items-center text-3xl text-zinc-800`}
             >
               Recepción
             </ModalHeader>
@@ -64,7 +64,7 @@ const ModalMap = ({
             <ModalFooter className="flex justify-center items-center">
               <button
                 type="button"
-                className="text-zinc-0 bg-white/0 border text-zinc-100 border-gray-400 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 rounded-full me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700 font-medium text-sm px-5 py-2.5 text-center flex items-center"
+                className="text-zinc-0 bg-white/0 border text-zinc-100 border-gray-100 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 rounded-full me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700 font-medium text-sm px-5 py-2.5 text-center flex items-center"
                 onClick={() => {
                   onClose();
                 }}

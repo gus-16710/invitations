@@ -351,7 +351,7 @@ export default function Congratulations() {
         </motion.div>
 
         <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
-          <Button color="default" className="w-full" onClick={onOpen}>
+          <Button color="warning" className="w-full" onClick={onOpen}>
             Ver mensajes
           </Button>
         </motion.div>
