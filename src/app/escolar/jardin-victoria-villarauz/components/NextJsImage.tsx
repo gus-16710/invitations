@@ -22,7 +22,7 @@ export default function NextJsImage({
     >      
       <Avatar
         isBordered
-        color="warning"
+        color="default"
         src={photo.src}
         className="h-40 w-40 object-cover transition-transform transform group-hover:scale-110 shadow-lg"
         onClick={onClick}
