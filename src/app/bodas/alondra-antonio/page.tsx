@@ -51,7 +51,7 @@ const ModalOpening = ({
       hideCloseButton={true}
       className="bg-pink-500/0"
     >
-      <ModalContent className="bg-[url('/img/bodas/alondra-antonio/background49.jpg')] bg-cover bg-center relative overflow-hidden">
+      <ModalContent className="bg-[url('/img/bodas/alondra-antonio/background50.jpg')] bg-cover bg-center relative overflow-hidden">
         {(onClose) => (
           <>
             {/* Elementos decorativos flotantes */}
@@ -177,7 +177,7 @@ const ModalOpening = ({
               >
                 <div className="bg-[url('/img/bodas/alondra-antonio/ribbon.png')] bg-contain bg-no-repeat bg-center absolute w-80 h-36 -bottom-16 flex items-center justify-center">
                   <motion.p
-                    className="text-center text-white font-semibold text-lg"
+                    className="text-center text-white font-semibold text-xl"
                     initial={{ scale: 0.9, opacity: 0 }}
                     animate={{ scale: 1, opacity: 1 }}
                     transition={{ delay: 2.0 }}

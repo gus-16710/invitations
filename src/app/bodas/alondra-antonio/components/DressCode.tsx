@@ -119,7 +119,7 @@ const FlipAvatar: React.FC = () => {
 export default function DressCode() {
   return (
     <section
-      className="flex justify-center items-center flex-col bg-[url('/img/bodas/alondra-antonio/background49.jpg')] bg-cover bg-center"
+      className="flex justify-center items-center flex-col bg-[url('/img/bodas/alondra-antonio/background51.jpg')] bg-cover bg-center"
       style={{ height: "100svh" }}
     >
       <motion.h1
