@@ -109,7 +109,7 @@ export default function Ceremony({ splide }: { splide: number }) {
 
         {/*  */}
         <motion.div
-          className={`${greatVibes.className} relative mt-5 text-center text-zinc-300 bg-gradient-to-l from-red-700 from-10% via-red-600 via-30% to-red-600 to-80% w-full py-2 overflow-clip`}
+          className={`${greatVibes.className} relative mt-5 text-center text-zinc-100 bg-gradient-to-l from-red-700 from-10% via-red-600 via-30% to-red-600 to-80% w-full py-2 overflow-clip`}
           initial={{ x: 100, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ duration: 1, ease: "easeInOut", delay: 0.9 }}

@@ -109,7 +109,7 @@ export default function Reception({ splide }: { splide: number }) {
 
         {/*  */}
         <motion.div
-          className={`${greatVibes.className} relative mt-5 text-center text-zinc-300 bg-gradient-to-r from-green-700 from-10% via-green-600 via-30% to-green-600 to-80% w-full py-2 overflow-clip`}
+          className={`${greatVibes.className} relative mt-5 text-center text-zinc-100 bg-gradient-to-r from-green-700 from-10% via-green-600 via-30% to-green-600 to-80% w-full py-2 overflow-clip`}
           initial={{ x: -100, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           viewport={{ once: false }}

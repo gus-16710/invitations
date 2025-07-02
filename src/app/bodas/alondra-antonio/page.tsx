@@ -163,7 +163,7 @@ const ModalOpening = ({
               <motion.div
                 className="relative flex justify-center mt-16 z-10"
                 initial={{ rotate: 15, y: 50, opacity: 0 }}
-                animate={{ rotate: 6, y: 0, opacity: 1 }}
+                animate={{ rotate: 0, y: 0, opacity: 1 }}
                 transition={{
                   type: "spring",
                   damping: 15,
@@ -242,12 +242,11 @@ const ModalOpening = ({
 
             {/* Elementos decorativos */}
             <motion.svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="#fff"
+              xmlns="http://www.w3.org/2000/svg"              
               width="400px"
               height="400px"
               viewBox="0 0 182.818 182.818"
-              className="absolute bottom-12 -left-10"
+              className="absolute bottom-12 -left-10 fill-pink-500/50"
               initial={{ rotate: -30, opacity: 0 }}
               animate={{
                 rotate: 0,

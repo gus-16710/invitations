@@ -8,7 +8,7 @@ const playFair = Playfair_Display({ subsets: ["latin"], weight: "400" });
 export default function Presentation() {
   return (
     <section
-      className="flex justify-center items-center flex-col"
+      className="flex justify-center items-center flex-col bg-[url('/img/bodas/alondra-antonio/background45.jpg')] bg-cover bg-center"
       style={{ height: "100svh" }}
     >
       <motion.div>
@@ -106,7 +106,7 @@ export default function Presentation() {
           </motion.label>
         </motion.div>
         <motion.p
-          className={`${notoSans.className} text-center p-5 max-w-md text-zinc-800`}
+          className={`${notoSans.className} text-center p-5 max-w-md text-zinc-800 mx-5`}
           initial={{ y: 100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 1, ease: "easeInOut", delay: 1.2 }}
