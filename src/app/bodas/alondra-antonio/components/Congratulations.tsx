@@ -269,7 +269,7 @@ export default function Congratulations() {
         className={`${greatVibes.className} text-5xl drop-shadow mb-10 text-zinc-100 z-10`}
         initial={{ y: -100, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
-        transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
+        transition={{ duration: 1, ease: "easeOut", delay: 0.5 }}
       >
         Felicitaciones
       </motion.h1>
@@ -279,7 +279,7 @@ export default function Congratulations() {
         className="max-w-md w-72 z-10"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        transition={{ delay: 0.5 }}
+        transition={{ delay: 1 }}
       >
         <div className="mb-4">
           <label htmlFor="name" className={`block text-zinc-100 mb-2 text-sm`}>

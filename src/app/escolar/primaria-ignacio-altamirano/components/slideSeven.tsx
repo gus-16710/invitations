@@ -42,8 +42,8 @@ const alumnosYPadrinos = [
   },
   {
     alumno: "Orihuela Hernández Jade Valeria",
-    // padrinos: ["Evelyn María Jarvio García", "Delia García Delgado"],
-    padrinos: ["Rosa Aydé García Amaya"],
+    padrinos: ["Evelyn María Jarvio García", "Delia García Delgado"],
+    //padrinos: ["Rosa Aydé García Amaya"],
   },
   {
     alumno: "Palafox Villa Alexander",
