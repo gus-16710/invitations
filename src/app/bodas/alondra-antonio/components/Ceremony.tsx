@@ -95,11 +95,11 @@ export default function Ceremony({ splide }: { splide: number }) {
   return (
     <>
       <section
-        className="flex justify-center items-center flex-col relative"
+        className="flex justify-center items-center flex-col relative bg-[url('/img/bodas/alondra-antonio/background35.jpg')] bg-cover bg-center"
         style={{ height: "100svh" }}
       >        
         <motion.h1
-          className={`${greatVibes.className} text-5xl p-5 text-center text-zinc-300`}
+          className={`${greatVibes.className} text-5xl p-5 text-center text-zinc-800`}
           initial={{ y: -100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 1, delay: 0.3 }}
@@ -152,7 +152,7 @@ export default function Ceremony({ splide }: { splide: number }) {
           <div className="border-t-2 border-yellow-400 w-full border-dashed z-10"></div>
         </motion.div>
         <motion.p
-          className={`${markazi.className} text-center mx-5 mt-5 text-2xl text-zinc-300 max-w-md`}
+          className={`${markazi.className} text-center mx-5 mt-5 text-2xl text-zinc-800 max-w-md`}
           initial={{ y: 100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 1, ease: "easeInOut", delay: 1.2 }}
@@ -160,7 +160,7 @@ export default function Ceremony({ splide }: { splide: number }) {
           Parroquia de Nuestra Señora de la Paz
         </motion.p>
         <motion.p
-          className={`${notoSans.className} text-center mx-5 mt-3 text-sm max-w-md text-zinc-300`}
+          className={`${notoSans.className} text-center mx-5 mt-3 text-sm max-w-md text-zinc-800`}
           initial={{ y: 100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: false }}

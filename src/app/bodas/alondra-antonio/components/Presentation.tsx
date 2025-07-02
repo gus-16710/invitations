@@ -8,12 +8,12 @@ const playFair = Playfair_Display({ subsets: ["latin"], weight: "400" });
 export default function Presentation() {
   return (
     <section
-      className="flex justify-center items-center flex-col"
+      className="flex justify-center items-center flex-col bg-[url('/img/bodas/alondra-antonio/background34.jpg')] bg-cover bg-center"
       style={{ height: "100svh" }}
     >
       <motion.div>
         <motion.h1
-          className={`${greatVibes.className} text-5xl drop-shadow text-center text-zinc-300`}
+          className={`${greatVibes.className} text-5xl drop-shadow text-center text-zinc-800`}
           initial={{ y: -100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 1, ease: "easeOut", delay: 0.4 }}
@@ -21,11 +21,10 @@ export default function Presentation() {
           Nos Casamos
         </motion.h1>
         <motion.div
-          className="relative flex items-center justify-center flex-col mt-4 mb-2 text-zinc-300"
+          className="relative flex items-center justify-center flex-col mt-4 mb-2 text-zinc-800"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.5 }}
-          style={{ textShadow: "1px 1px 4px rgba(0,0,0,0.6)" }}
+          transition={{ duration: 0.5 }}          
         >
           {/* Mes - Aparece con deslizamiento suave desde arriba */}
           <motion.label
@@ -107,7 +106,7 @@ export default function Presentation() {
           </motion.label>
         </motion.div>
         <motion.p
-          className={`${notoSans.className} text-center p-5 max-w-md text-zinc-300`}
+          className={`${notoSans.className} text-center p-5 max-w-md text-zinc-800`}
           initial={{ y: 100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 1, ease: "easeInOut", delay: 1.2 }}

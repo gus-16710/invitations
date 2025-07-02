@@ -95,11 +95,11 @@ export default function Reception({ splide }: { splide: number }) {
   return (
     <>
       <section
-        className="flex justify-center items-center flex-col pt-20 pb-20"
+        className="flex justify-center items-center flex-col pt-20 pb-20 bg-[url('/img/bodas/alondra-antonio/background35.jpg')] bg-cover bg-center"
         style={{ height: "100svh" }}
       >
         <motion.h1
-          className={`${greatVibes.className} text-5xl p-5 text-center text-zinc-300`}
+          className={`${greatVibes.className} text-5xl p-5 text-center text-zinc-800`}
           initial={{ y: -100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 1, delay: 0.3 }}
@@ -161,7 +161,7 @@ export default function Reception({ splide }: { splide: number }) {
           <div className="border-t-2 border-yellow-400 w-full border-dashed"></div>
         </motion.div>
         <motion.p
-          className={`${markazi.className} text-center mx-5 mt-5 text-2xl text-zinc-300`}
+          className={`${markazi.className} text-center mx-5 mt-5 text-2xl text-zinc-800`}
           initial={{ y: 100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: false }}
@@ -170,7 +170,7 @@ export default function Reception({ splide }: { splide: number }) {
           Salón Quinta los Helechos
         </motion.p>
         <motion.p
-          className={`${notoSans.className} text-center mx-5 mt-3 text-sm text-zinc-300`}
+          className={`${notoSans.className} text-center mx-5 mt-3 text-sm text-zinc-800`}
           initial={{ y: 100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: false }}
