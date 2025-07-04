@@ -182,7 +182,7 @@ const ModalOpening = ({
                     animate={{ scale: 1, opacity: 1 }}
                     transition={{ delay: 2.0 }}
                   >
-                    26 ● Septiembre ● 2025
+                    20 ● Septiembre ● 2025
                   </motion.p>
                 </div>
               </motion.div>

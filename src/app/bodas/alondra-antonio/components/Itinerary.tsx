@@ -15,15 +15,15 @@ const itinerary = [
   },  
   {
     time: "15:30 Hrs",
-    event: "Entrada de Novios",
+    event: "Entrada (Música)",
   },
   {
-    time: "16:00 Hrs",
-    event: "Brindis",
+    time: "15:40 Hrs",
+    event: "Brindis (Palabras)",
   },
   {
-    time: "16:30 Hrs",
-    event: "Comida",
+    time: "15:50 Hrs",
+    event: "Comida (Música DJ)",
   },
 ];
 

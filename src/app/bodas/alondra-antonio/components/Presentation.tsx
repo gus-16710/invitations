@@ -75,7 +75,7 @@ export default function Presentation() {
               }}
               whileHover={{ scale: 1.05 }}
             >
-              28
+              20
             </motion.label>
 
             {/* Hora - Entrada desde derecha */}
