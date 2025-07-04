@@ -108,7 +108,7 @@ export default function SlideThree() {
               className="text-center"
             >
               <h1 className={`${galada.className} text-4xl mb-2 custom-shadow`}>
-                Padrino de Generación
+                Madrina de Generación
               </h1>
               <motion.p
                 className={`${urbanist.className} text-xl custom-shadow`}
