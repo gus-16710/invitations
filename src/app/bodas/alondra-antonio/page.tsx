@@ -7,6 +7,7 @@ import {
   ModalBody,
   ModalContent,
   ModalFooter,
+  ModalHeader,
   useDisclosure,
 } from "@nextui-org/react";
 import { motion } from "framer-motion";
@@ -20,6 +21,7 @@ import { RxEyeOpen } from "react-icons/rx";
 import Main from "./components/Main";
 
 import "./styles.css";
+import { useSearchParams } from "next/navigation";
 
 const roboto = Roboto_Condensed({ subsets: ["latin"], weight: ["400"] });
 const playFair = Playfair_Display({
@@ -35,10 +37,12 @@ const ModalOpening = ({
   isOpen,
   onOpenChange,
   setOpen,
+  guests,
 }: {
   isOpen: boolean;
   onOpenChange: () => void;
   setOpen: Dispatch<SetStateAction<boolean>>;
+  guests: string;
 }) => {
   return (
     <Modal
@@ -54,43 +58,26 @@ const ModalOpening = ({
       <ModalContent className="bg-[url('/img/bodas/alondra-antonio/background50.jpg')] bg-cover bg-center relative overflow-hidden">
         {(onClose) => (
           <>
-            {/* Elementos decorativos flotantes */}
-            <motion.div
-              className="absolute top-20 left-20 w-16 h-16 bg-white/10 rounded-full"
-              initial={{ scale: 0, opacity: 0 }}
-              animate={{ scale: 1, opacity: 0.1 }}
-              transition={{
-                delay: 0.5,
-                duration: 1.5,
-                type: "spring",
-                damping: 10,
-              }}
-            />
-
-            <motion.div
-              className="absolute bottom-1/3 right-1/4 w-10 h-10 bg-white/10 rounded-full"
-              initial={{ scale: 0, opacity: 0 }}
-              animate={{ scale: 1, opacity: 0.1 }}
-              transition={{
-                delay: 0.8,
-                duration: 1.5,
-                type: "spring",
-                damping: 10,
-              }}
-            />
-
-            <ModalBody className="flex mt-5 justify-center items-center flex-col">
+            {guests && (
+              <ModalHeader
+                className="bg-green-500/90 text-zinc-50 flex justify-center items-center gap-2 w-40 m-auto rounded-full mt-1 p-3"
+                style={{ textShadow: "1px 1px 1px rgb(0, 0, 0)" }}
+              >
+                Invitados {guests}
+              </ModalHeader>
+            )}
+            <ModalBody className="flex justify-center items-center flex-col">
               {/* Texto "LA BODA DE" - Animación con efecto de letras cayendo */}
               <div className="overflow-hidden">
                 <motion.p
-                  className={`${playFair.className} font-bold text-2xl mt-10 text-pink-600`}
+                  className={`${playFair.className} font-bold text-2xl text-pink-600`}
                   initial={{ opacity: 0, y: -40 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{
                     duration: 1.2,
                     ease: [0.16, 1, 0.3, 1],
                     delay: 0.3,
-                  }}                  
+                  }}
                 >
                   NUESTRA BODA
                 </motion.p>
@@ -161,7 +148,7 @@ const ModalOpening = ({
 
               {/* Cinta con fecha - Animación con efecto de deslizamiento y rotación */}
               <motion.div
-                className="relative flex justify-center mt-16 z-10"
+                className="relative flex justify-center z-10 mt-16"
                 initial={{ rotate: 15, y: 50, opacity: 0 }}
                 animate={{ rotate: 0, y: 0, opacity: 1 }}
                 transition={{
@@ -242,7 +229,7 @@ const ModalOpening = ({
 
             {/* Elementos decorativos */}
             <motion.svg
-              xmlns="http://www.w3.org/2000/svg"              
+              xmlns="http://www.w3.org/2000/svg"
               width="400px"
               height="400px"
               viewBox="0 0 182.818 182.818"
@@ -264,7 +251,6 @@ const ModalOpening = ({
                 <path d="M57.574,60.389c0,0,26.915-15.962,25.021-36.552C81.122,7.839,65.228,8.082,57.574,15.804    c-7.657-7.716-23.552-7.958-25.023,8.033C30.656,44.426,57.574,60.389,57.574,60.389z" />
               </g>
             </motion.svg>
-           
           </>
         )}
       </ModalContent>
@@ -272,14 +258,18 @@ const ModalOpening = ({
   );
 };
 
-
 export default function Wedding() {
   const [open, setOpen] = useState(false);
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
+  const searchParams = useSearchParams();
+
+  const guests = searchParams.get("invitados") || "";
 
   useEffect(() => {
     onOpen();
   }, []);
+
+  console.log({ guests });
 
   return (
     <main className="background-class">
@@ -288,6 +278,7 @@ export default function Wedding() {
         isOpen={isOpen}
         onOpenChange={onOpenChange}
         setOpen={setOpen}
+        guests={guests}
       />
     </main>
   );
