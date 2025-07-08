@@ -11,11 +11,11 @@ const itinerary = [
   },
   {
     time: "15:00 Hrs",
-    event: "Recepción",
+    event: "Recepción (Invitados)",
   },  
   {
     time: "15:30 Hrs",
-    event: "Entrada (Música)",
+    event: "Entrada (Novios)",
   },
   {
     time: "15:40 Hrs",
