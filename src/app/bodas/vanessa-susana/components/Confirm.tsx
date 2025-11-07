@@ -10,7 +10,7 @@ import {
 } from "./Fonts";
 import { FaHeart } from "react-icons/fa";
 
-export default function Confirm() {
+export default function Confirm({ guests }: { guests: string }) {
   return (
     <>
       <div className="w-full border-1 border-black mt-5" />
@@ -83,6 +83,16 @@ export default function Confirm() {
         aún más inolvidable y lleno de felicidad. Por favor confirma tu
         asistencia antes del 30 de noviembre.
       </p>
+
+      {guests !== "" && (
+        <p className="mt-10 p-5 bg-gradient-to-tl from-black via-gray-900 to-gray-600 text-white rounded-lg text-center">
+          Hemos reservado{" "}
+          <span className="inline-flex items-center justify-center w-10 h-10 rounded-full border-2 border-white text-lg font-semibold">
+            {guests}
+          </span>{" "}
+          lugares en tu honor
+        </p>
+      )}
 
       <div className="flex justify-center mt-10">
         <button

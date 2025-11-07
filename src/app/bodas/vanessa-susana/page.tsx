@@ -12,8 +12,15 @@ import Gifts from "./components/Gifts";
 import Counter from "./components/Counter";
 import Confirm from "./components/Confirm";
 import FloatinButton from "./components/FloatingButton";
+import { useSearchParams } from "next/navigation";
 
 export default function Wedding() {
+  const searchParams = useSearchParams();
+
+  const guests = searchParams.get("invitados") || "";
+
+  console.log({guests})
+
   return (
     <main className="max-w-3xl m-auto p-4 shadow-2xl overflow-clip bg-white">
       <AudioControl />
@@ -24,7 +31,7 @@ export default function Wedding() {
       <DressCode />
       <Gifts />
       <Counter />
-      <Confirm />
+      <Confirm guests={guests}/>
       <FloatinButton />
     </main>
   );
