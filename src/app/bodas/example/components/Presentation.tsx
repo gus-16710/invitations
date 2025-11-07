@@ -42,7 +42,7 @@ export default function Presentation() {
       <p
         className={`${crimson.className} text-center mt-5 text-lg bg-gradient-to-tl from-black via-gray-900 to-gray-600 text-white rounded-sm`}
       >
-        CON LA BENDCIÓN DE NUESTROS PADRES
+        CON LA BENDICIÓN DE NUESTROS PADRES
       </p>
 
       <div
