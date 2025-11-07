@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     title: "💗 Vanessa & Susana 💗",
     description:
       "Nos casamos y deseamos compartir con ustedes este día tan especial.",
-    images: ["https://invitaciones.unaideamas.com/img/bodas/isabel-alan/gallery-03.jpg"],
+    images: ["https://invitaciones.unaideamas.com/img/bodas/vanessa-susana/image05.jpeg"],
   },
   icons: {
     icon: "https://invitaciones.unaideamas.com/img/favicon.png",
