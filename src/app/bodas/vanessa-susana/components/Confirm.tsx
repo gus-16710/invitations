@@ -87,6 +87,7 @@ export default function Confirm() {
       <div className="flex justify-center mt-10">
         <button
           className={`${crimson.className} border-1 border-black p-4 rounded-lg bg-gray-300 text-lg`}
+          onClick={() => window.open("https://wa.link/ixn1xv")}
         >
           CONFIRMAR ASISTENCIA
         </button>
