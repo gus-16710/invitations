@@ -134,7 +134,7 @@ export default function Itinerary() {
         />
       </div>
 
-      <div className="flex mt-5 gap-3 flex-row-reverse items-center">
+      <div className="flex mt-5 gap-3 flex-row-reverse items-center max-w-xl m-auto">
         <div className="flex flex-col gap-5 flex-1">
           <div className="bg-gray-300 p-3 border-1 border-black rounded-sm">
             <p

@@ -15,7 +15,7 @@ import FloatinButton from "./components/FloatingButton";
 
 export default function Wedding() {
   return (
-    <main className="max-w-3xl m-auto p-4 shadow-2xl overflow-clip">
+    <main className="max-w-3xl m-auto p-4 shadow-2xl overflow-clip bg-white">
       <AudioControl />
       <Header />
       <Presentation />

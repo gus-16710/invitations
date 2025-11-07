@@ -20,5 +20,5 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return <>{children}</>;
+  return <div className="bg-[url('/img/bodas/vanessa-susana/background_main.jpg')] bg-center bg-cover bg-fixed">{children}</div>;
 }
