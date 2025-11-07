@@ -1,5 +1,17 @@
 import { motion } from "framer-motion";
 import { crimson, italianno, playfair } from "./Fonts";
+import {
+  Button,
+  Card,
+  CardBody,
+  useDisclosure,
+  Modal,
+  ModalContent,
+  ModalHeader,
+  ModalBody,
+  ModalFooter,
+  Spinner,
+} from "@nextui-org/react";
 
 const itinerary = [
   {
@@ -50,7 +62,65 @@ const element = {
   hidden: { opacity: 0, y: -100 },
 };
 
+const ModalMap = ({
+  isOpen,
+  onOpenChange,
+}: {
+  isOpen: boolean;
+  onOpenChange: () => void;
+}) => {
+  return (
+    <Modal
+      isOpen={isOpen}
+      onOpenChange={onOpenChange}
+      size="full"
+      placement="center"
+      backdrop="blur"
+      classNames={{
+        closeButton: "text-zinc-100",
+      }}
+    >
+      <ModalContent className="bg-zinc-100/0 text-zinc-100">
+        {(onClose) => (
+          <>
+            <ModalHeader
+              className={`${crimson.className} flex flex-col gap-1 items-center text-3xl`}
+            >
+              Recepción
+            </ModalHeader>
+            <ModalBody className="relative flex justify-center items-center">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3758.9314405435452!2d-97.01360192959004!3d19.587437696773524!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85db294ac4d55acd%3A0x1e677c488428793a!2sEscuela%20Primaria%20Jos%C3%A9%20Mar%C3%ADa%20Morelos%20y%20Pav%C3%B3n!5e0!3m2!1ses!2smx!4v1741208292619!5m2!1ses!2smx"
+                height="100%"
+                style={{ border: "0" }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="rounded-large z-20"
+              ></iframe>
+              <Spinner className="absolute z-10" color="white" />
+            </ModalBody>
+            <ModalFooter className="flex justify-center">
+              <button
+                type="button"
+                className="text-zinc-0 bg-white/0 border border-gray-400 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 rounded-full me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700 font-medium text-sm px-5 py-2.5 text-center flex items-center"
+                onClick={() => {
+                  onClose();
+                }}
+              >
+                Cerrar
+              </button>
+            </ModalFooter>
+          </>
+        )}
+      </ModalContent>
+    </Modal>
+  );
+};
+
 export default function Itinerary() {
+  const { isOpen, onOpen, onOpenChange } = useDisclosure();
+
   return (
     <>
       <div className="flex items-center mt-10">
@@ -87,7 +157,12 @@ export default function Itinerary() {
               Ciudad de Mexico
             </p>
 
-            <button className="bg-gray-900 py-2 w-full text-zinc-200 mt-4 rounded-sm">
+            <button
+              className="bg-gray-900 py-2 w-full text-zinc-200 mt-4 rounded-sm"
+              onClick={() => {
+                onOpen();
+              }}
+            >
               Ver mapa
             </button>
           </div>
@@ -106,7 +181,12 @@ export default function Itinerary() {
               Ciudad de Mexico
             </p>
 
-            <button className="bg-gray-900 py-2 w-full text-zinc-200 mt-4 rounded-sm">
+            <button
+              className="bg-gray-900 py-2 w-full text-zinc-200 mt-4 rounded-sm"
+              onClick={() => {
+                onOpen();
+              }}
+            >
               Ver mapa
             </button>
           </div>
@@ -138,6 +218,8 @@ export default function Itinerary() {
           </motion.ol>
         </div>
       </div>
+
+      <ModalMap isOpen={isOpen} onOpenChange={onOpenChange} />
     </>
   );
 }
