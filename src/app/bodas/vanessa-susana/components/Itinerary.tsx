@@ -28,7 +28,7 @@ const itinerary = [
     event: "Baile",
   },
   {
-    time: "03:00 Hrs",
+    time: "Hasta que el cuerpo aguante",
     event: "Termino del Evento",
   },
 ];

@@ -3,17 +3,7 @@ import { crimson, italianno, mate } from "./Fonts";
 
 export default function DressCode() {
   return (
-    <>
-      <motion.p
-        className={`${crimson.className} bg-gray-900 text-zinc-100 p-5 mt-5 text-center text-lg`}
-        initial={{ y: -100, opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1 }}
-        transition={{ duration: 1 }}
-      >
-        Amamos a los niños, pero creemos que esta noche se merecen disfrutar
-        solo como pareja, por eso en esta ocasión será solo para adultos.
-      </motion.p>
-
+    <>     
       <motion.div
         className="bg-gray-300 p-5 mt-5 border-1 border-gray-800 rounded-sm"
         initial={{ y: -100, opacity: 0 }}
@@ -27,7 +17,7 @@ export default function DressCode() {
           </p>
           <div className="flex-1 border-b-1 border-gray-800" />
         </div>
-        <p className={`${mate.className} text-center`}>Elengate - Formal</p>
+        <p className={`${mate.className} text-center`}>Formal</p>
         <motion.div className="flex justify-center m-5" 
           animate={{
             scale: [1, 1.1, 1],
@@ -69,12 +59,7 @@ export default function DressCode() {
               <path d="M94.9,158.77c-1.96,1.58-3.15,3.24-4.11,3.12c-1.24-0.16-2.85-1.57-3.23-2.78c-0.22-0.73,1.55-2.9,2.52-2.96   C91.32,156.07,92.66,157.46,94.9,158.77z"></path>
             </g>
           </svg>
-        </motion.div>
-        <p className={`${mate.className} text-center`}>Ellas: Vestido largo</p>
-        <p className={`${mate.className} text-center`}>
-          Ellos: Traje y corbata
-        </p>
-
+        </motion.div>        
         <p className={`${crimson.className} text-center mt-5`}>
           (Se reserva el color blanco para las Novias)
         </p>
