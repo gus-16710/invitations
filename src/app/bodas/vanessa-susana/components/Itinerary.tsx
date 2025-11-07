@@ -1,9 +1,6 @@
 import { motion } from "framer-motion";
 import { crimson, italianno, playfair } from "./Fonts";
-import {
-  Button,
-  Card,
-  CardBody,
+import {  
   useDisclosure,
   Modal,
   ModalContent,
@@ -15,23 +12,19 @@ import {
 
 const itinerary = [
   {
-    time: "18:00 Hrs",
-    event: "Ceremonia  Religiosa",
-  },
+    time: "15:00 Hrs",
+    event: "Ceremonia Civil",
+  },  
   {
-    time: "19:00 Hrs",
-    event: "Boda Civil",
-  },
-  {
-    time: "20:00 Hrs",
+    time: "16:00 Hrs",
     event: "Recepción",
   },
   {
-    time: "21:00 Hrs",
-    event: "Cena",
+    time: "16:30 Hrs",
+    event: "Comida",
   },
   {
-    time: "22:00 Hrs",
+    time: "18:00 Hrs",
     event: "Baile",
   },
   {
@@ -86,11 +79,11 @@ const ModalMap = ({
             <ModalHeader
               className={`${crimson.className} flex flex-col gap-1 items-center text-3xl`}
             >
-              Recepción
+              Ceremonia Civil
             </ModalHeader>
             <ModalBody className="relative flex justify-center items-center">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3758.9314405435452!2d-97.01360192959004!3d19.587437696773524!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85db294ac4d55acd%3A0x1e677c488428793a!2sEscuela%20Primaria%20Jos%C3%A9%20Mar%C3%ADa%20Morelos%20y%20Pav%C3%B3n!5e0!3m2!1ses!2smx!4v1741208292619!5m2!1ses!2smx"
+              <iframe              
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3758.840423818375!2d-96.94240308255617!3d19.59133610104044!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85db2fc7cf2e5b9f%3A0x3674f5d4cdef3a2d!2sSal%C3%B3n%20%22Quinta%20La%20Piedra%22!5e0!3m2!1ses!2smx!4v1762494057989!5m2!1ses!2smx"
                 height="100%"
                 style={{ border: "0" }}
                 allowFullScreen
@@ -141,20 +134,20 @@ export default function Itinerary() {
         />
       </div>
 
-      <div className="flex mt-5 gap-3 flex-row-reverse">
+      <div className="flex mt-5 gap-3 flex-row-reverse items-center">
         <div className="flex flex-col gap-5 flex-1">
           <div className="bg-gray-300 p-3 border-1 border-black rounded-sm">
             <p
               className={`${crimson.className} text-lg border-b-1 border-black mb-4 text-center`}
               style={{ fontWeight: "bolder" }}
             >
-              Ceremonia Religiosa
+              Ceremonia Civil
             </p>
 
             <p className={`${crimson.className} text-center`}>
-              Hora 06:00 pm <br />
-              "Templo de San Francisco" <br />
-              Ciudad de Mexico
+              Hora 15:00 hrs <br />
+              "Salón la Piedra" <br />
+              Privada 5 de Febrero #2, Banderilla, Ver.
             </p>
 
             <button
@@ -166,30 +159,7 @@ export default function Itinerary() {
               Ver mapa
             </button>
           </div>
-
-          <div className="bg-gray-300 p-3 border-1 border-black rounded-sm">
-            <p
-              className={`${crimson.className} text-lg border-b-1 border-black mb-4 text-center`}
-              style={{ fontWeight: "bolder" }}
-            >
-              Recepción
-            </p>
-
-            <p className={`${crimson.className} text-center`}>
-              Hora 06:00 pm <br />
-              "Templo de San Francisco" <br />
-              Ciudad de Mexico
-            </p>
-
-            <button
-              className="bg-gray-900 py-2 w-full text-zinc-200 mt-4 rounded-sm"
-              onClick={() => {
-                onOpen();
-              }}
-            >
-              Ver mapa
-            </button>
-          </div>
+          
         </div>
         <div className="flex-1">
           <motion.ol
