@@ -3,9 +3,7 @@ import {
   Alex_Brush,
   Saira_Condensed,
   Raleway,
-  Titillium_Web,
-  Oswald,
-  Antonio,
+  Titillium_Web, 
   Playfair_Display,
   Crimson_Text,
   Italianno

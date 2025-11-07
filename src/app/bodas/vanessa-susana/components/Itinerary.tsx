@@ -83,7 +83,7 @@ export default function Itinerary() {
 
             <p className={`${crimson.className} text-center`}>
               Hora 06:00 pm <br />
-              "Tempo de San Francisco" <br />
+              "Templo de San Francisco" <br />
               Ciudad de Mexico
             </p>
 
@@ -102,7 +102,7 @@ export default function Itinerary() {
 
             <p className={`${crimson.className} text-center`}>
               Hora 06:00 pm <br />
-              "Tempo de San Francisco" <br />
+              "Templo de San Francisco" <br />
               Ciudad de Mexico
             </p>
 

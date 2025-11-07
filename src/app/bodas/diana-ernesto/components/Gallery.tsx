@@ -82,6 +82,10 @@ export default function Gallery() {
         slides={images}
         open={index >= 0}
         close={() => setIndex(-1)}
+        controller={{
+          closeOnBackdropClick: true,
+          closeOnPullDown: true,               
+        }}
       />
     </section>
   );

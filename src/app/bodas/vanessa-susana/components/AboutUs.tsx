@@ -1,11 +1,19 @@
+import "yet-another-react-lightbox/styles.css";
+
 import PhotoAlbum from "react-photo-album";
 import NextJsImage from "./NextJsImage";
 import { italianno, playfair } from "./Fonts";
 import { Image } from "@nextui-org/react";
 import { motion } from "framer-motion";
+import Lightbox from "yet-another-react-lightbox";
 import { useState } from "react";
 
 const images = [
+  {
+    src: "/img/bodas/vanessa-susana/image01.jpeg",
+    width: 800,
+    height: 600,
+  },
   {
     src: "/img/bodas/vanessa-susana/image06.jpeg",
     width: 800,
@@ -20,7 +28,7 @@ const images = [
     src: "/img/bodas/vanessa-susana/image02.jpeg",
     width: 800,
     height: 600,
-  },
+  }, 
 ];
 
 const list = {
@@ -46,6 +54,8 @@ const item = {
 
 export default function AboutUs() {
   const text = "¡LLEGA LA BODA MÁS ESPERADA!";
+
+  const [index, setIndex] = useState(-1);
 
   return (
     <>
@@ -109,8 +119,8 @@ export default function AboutUs() {
         />
       </div>
 
-      <div className="flex mt-5">
-        <div>
+      <div className="flex flex-col mt-5">
+        <div className="flex-1">
           <p className={`${playfair.className} text-justify`}>
             Nos conocimos en el trabajo, sin imaginar que, entre tareas, y
             convivencias encontraríamos algo mucho más importante: la una a la
@@ -128,17 +138,23 @@ export default function AboutUs() {
             Es por eso que estas cordialmente invitado/a a celebrar con nosotras
             este día tan especial.
           </p>
-
-          <div className="mt-5">
-            <PhotoAlbum
-              layout="masonry"
-              photos={images}
-              //onClick={({ index: current }) => setIndex(current)}
-              renderPhoto={NextJsImage}
-              columns={1}
-            />
-          </div>
         </div>
+        <div className="flex-1 mt-5">
+          <PhotoAlbum
+            layout="columns"
+            photos={images}
+            onClick={({ index: current }) => setIndex(current)}
+            renderPhoto={NextJsImage}
+            columns={2}
+          />
+        </div>
+
+        <Lightbox
+          index={index}
+          slides={images}
+          open={index >= 0}
+          close={() => setIndex(-1)}
+        />
       </div>
     </>
   );
