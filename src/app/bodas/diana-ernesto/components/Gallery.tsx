@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { Great_Vibes, Oswald } from "next/font/google";
 import PhotoAlbum from "react-photo-album";
 import Lightbox from "yet-another-react-lightbox";
-import NextJsImage from "./NextJsImage";
+import NextJsImage from "../../vanessa-susana/components/NextJsImage";
 import { LuZoomIn } from "react-icons/lu";
 
 const greatVibes = Great_Vibes({ subsets: ["latin"], weight: "400" });

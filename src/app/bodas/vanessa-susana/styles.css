@@ -1,0 +1,13 @@
+@font-face {
+  font-family: "highrise";
+  src: url("/fonts/HighriseFont.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "london";
+  src: url("/fonts/Olondona.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
