@@ -2,11 +2,12 @@ import "yet-another-react-lightbox/styles.css";
 
 import PhotoAlbum from "react-photo-album";
 import NextJsImage from "./NextJsImage";
-import { italianno, playfair } from "./Fonts";
+import { crimson, italianno, playfair } from "./Fonts";
 import { Image } from "@nextui-org/react";
 import { motion } from "framer-motion";
 import Lightbox from "yet-another-react-lightbox";
 import { useState } from "react";
+import { GiClick } from "react-icons/gi";
 
 const images = [
   {
@@ -28,7 +29,7 @@ const images = [
     src: "/img/bodas/vanessa-susana/image02.jpeg",
     width: 800,
     height: 600,
-  }, 
+  },
 ];
 
 const list = {
@@ -148,6 +149,10 @@ export default function AboutUs() {
             columns={2}
           />
         </div>
+
+        <p className={`${crimson.className} flex justify-center mt-6`}>
+          * Amplia la foto con un click. <GiClick />
+        </p>
 
         <Lightbox
           index={index}
