@@ -11,6 +11,7 @@ import DressCode from "./components/DressCode";
 import Gifts from "./components/Gifts";
 import Counter from "./components/Counter";
 import Confirm from "./components/Confirm";
+import FloatinButton from "./components/FloatingButton";
 
 export default function Wedding() {
   return (
@@ -21,9 +22,10 @@ export default function Wedding() {
       <AboutUs />
       <Itinerary />
       <DressCode />
-      <Gifts/>
-      <Counter/>
-      <Confirm/>
+      <Gifts />
+      <Counter />
+      <Confirm />
+      <FloatinButton />
     </main>
   );
 }
