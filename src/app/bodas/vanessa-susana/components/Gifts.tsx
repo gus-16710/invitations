@@ -41,8 +41,7 @@ export default function Gifts() {
       <p className={`${crimson.className} text-center mt-5 text-lg`}>
         ¡Que nos acompañes es lo más importante!
         <br />
-        Si deseas bendecirnos, hemos deicidido realizar <br />
-        una <span className="font-bold">lluvia de sobres</span>.
+        Si deseas bendecirnos, hemos decidido realizar una <span className="font-bold">lluvia de sobres</span>.
       </p>
     </motion.div>
   );
