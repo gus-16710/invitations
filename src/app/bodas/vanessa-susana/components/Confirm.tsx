@@ -85,7 +85,7 @@ export default function Confirm({ guests }: { guests: string }) {
       </p>
 
       {guests !== "" && (
-        <p className="mt-10 p-5 bg-gradient-to-tl from-black via-gray-900 to-gray-600 text-white rounded-lg text-center">
+        <p className="mt-10 p-5 bg-gradient-to-tl from-black via-gray-900 to-gray-600 text-white rounded-lg text-center text-sm">
           Hemos reservado{" "}
           <span className="inline-flex items-center justify-center w-10 h-10 rounded-full border-2 border-white text-lg font-semibold">
             {guests}
