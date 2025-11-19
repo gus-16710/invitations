@@ -6,7 +6,7 @@ import {
   Playfair_Display,
   Titillium_Web,
   Abril_Fatface,
-  Oswald
+  Oswald,
 } from "next/font/google";
 
 export const greatVibes = Great_Vibes({ subsets: ["latin"], weight: "400" });
