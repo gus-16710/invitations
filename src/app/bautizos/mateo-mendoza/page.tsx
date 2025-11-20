@@ -9,7 +9,14 @@ import Reception from "./components/Reception";
 import GodParents from "./components/GodParents";
 import Confirm from "./components/Confirm";
 
-import { Dispatch, SetStateAction, useEffect, useState } from "react";
+import {
+  Dispatch,
+  SetStateAction,
+  useCallback,
+  useEffect,
+  useRef,
+  useState,
+} from "react";
 import {
   Button,
   Divider,
@@ -22,6 +29,11 @@ import {
 import { FaEye } from "react-icons/fa";
 import { glass } from "./components/Fonts";
 import AudioControl from "./components/AudioControl";
+
+// @ts-ignore
+import { Splide, SplideSlide } from "@splidejs/react-splide";
+import "@splidejs/react-splide/css";
+import ReactCanvasConfetti from "react-canvas-confetti";
 
 const customTheme: FlowbiteCarouselTheme = {
   root: {
@@ -165,148 +177,235 @@ export default function Christening() {
   const [open, setOpen] = useState(false);
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
+  const refAnimationInstance = useRef<confetti.CreateTypes | null>(null);
+
+  const getInstance = useCallback((instance: any) => {
+    refAnimationInstance.current = instance;
+  }, []);
+
+  const makeShot = useCallback((particleRatio: any, opts: any) => {
+    refAnimationInstance.current &&
+      refAnimationInstance.current({
+        ...opts,
+        origin: { y: 0.7 },
+        particleCount: Math.floor(200 * particleRatio),
+        colors: [
+          "FFFFFF", // Blanco
+          "87CEEB", // Azul cielo
+          "FFB877", // Naranja claro
+          "F7EED6", // Crema 1
+          "F5E7C5", // Crema 2
+        ],
+        shapes: ["star", "circle"],
+      });
+  }, []);
+
+  const fire = useCallback(() => {
+    makeShot(0.25, {
+      spread: 26,
+      startVelocity: 100,
+    });
+
+    makeShot(0.2, {
+      spread: 100,
+    });
+
+    makeShot(0.35, {
+      spread: 100,
+      decay: 0.91,
+      scalar: 0.8,
+    });
+
+    makeShot(0.1, {
+      spread: 120,
+      startVelocity: 100,
+      decay: 0.92,
+      scalar: 0.5,
+    });
+
+    makeShot(0.1, {
+      spread: 200,
+      startVelocity: 100,
+    });
+  }, [makeShot]);
+
+  useEffect(() => {
+    fire();
+    const timer = setInterval(() => fire(), 10000);
+    () => clearInterval(timer);
+  }, []);
+
   useEffect(() => {
     onOpen();
   }, []);
 
   return (
-    <main
-      className={`bg-[url('/img/bautizos/mateo-mendoza/background2.jpg')] bg-center bg-cover ${
-        isOpen && "h-screen"
-      } relative overflow-hidden`}
-    >
-      {open && (
-        <div
-          className="relative max-w-3xl m-auto z-10"
-          style={{ height: "100svh" }}
-        >
-          <Flowbite>
-            <Carousel theme={customTheme} slideInterval={10000} slide={false}>
-              <div>
+    <div>
+      <main
+        className={`bg-[url('/img/bautizos/mateo-mendoza/background2.jpg')] bg-center bg-cover ${
+          isOpen && "h-screen"
+        } relative overflow-hidden`}
+      >
+        {open && (
+          <div
+            className="relative max-w-3xl m-auto z-10"
+            style={{ height: "100svh" }}
+          >
+            <Splide
+              aria-label="Citlali & Daniel"
+              options={{
+                autoplay: true,
+                interval: 10000,
+                rewind: true,
+                direction: "ltr",
+                height: "100svh",
+                wheel: true,
+                releaseWheel: true,
+                type: "loop",
+                waitForTransition: true,
+                arrows: true,
+                classes: {
+                  page: "splide__pagination__page custom-class-page", // each button
+                  arrow: "splide__arrow custom-arrows",
+                },
+              }}
+            >
+              <SplideSlide>
                 <Header />
-              </div>
-              <div>
+              </SplideSlide>
+              <SplideSlide>
                 <Presentation />
-              </div>
-              <div>
+              </SplideSlide>
+              <SplideSlide>
                 <GodParents />
-              </div>
-              <div>
+              </SplideSlide>
+              <SplideSlide>
                 <Ceremony />
-              </div>
-              <div>
+              </SplideSlide>
+              <SplideSlide>
                 <Reception />
-              </div>              
-              <div>
+              </SplideSlide>
+              <SplideSlide>
                 <Confirm />
-              </div>
-            </Carousel>
-          </Flowbite>
-          <AudioControl />
-        </div>
-      )}
+              </SplideSlide>
+            </Splide>
+            <AudioControl />
+          </div>
+        )}
 
-      <ModalOpening
-        isOpen={isOpen}
-        onOpenChange={onOpenChange}
-        setOpen={setOpen}
+        <ModalOpening
+          isOpen={isOpen}
+          onOpenChange={onOpenChange}
+          setOpen={setOpen}
+        />
+
+        {/* Nube animada de izquierda a derecha - SOLO PIXELS */}
+        <motion.svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="150px"
+          height="150px"
+          viewBox="0 0 24 24"
+          fill="none"
+          className="absolute top-10 z-0"
+          animate={{
+            x: ["-50vw", "110vw"],
+          }}
+          transition={{
+            x: {
+              repeat: Infinity,
+              repeatType: "loop",
+              duration: 30,
+              ease: "linear",
+            },
+          }}
+        >
+          <path
+            opacity="0.5"
+            d="M16.2857 18C19.4416 18 22 15.4717 22 12.3529C22 9.88113 20.393 7.78024 18.1551 7.01498C17.8371 4.19371 15.4159 2 12.4762 2C9.32028 2 6.7619 4.52827 6.7619 7.64706C6.7619 8.33687 6.88706 8.9978 7.11616 9.60887C6.8475 9.55673 6.56983 9.52941 6.28571 9.52941C3.91878 9.52941 2 11.4256 2 13.7647C2 16.1038 3.91878 18 6.28571 18H16.2857Z"
+            className="fill-white/50"
+          />
+          <path
+            d="M18.2857 22C20.3371 22 22 20.4198 22 18.4706C22 16.9257 20.9554 15.6126 19.5008 15.1344C19.2941 13.3711 17.7203 12 15.8095 12C13.7582 12 12.0952 13.5802 12.0952 15.5294C12.0952 15.9605 12.1766 16.3736 12.3255 16.7555C12.1509 16.723 11.9704 16.7059 11.7857 16.7059C10.2472 16.7059 9 17.891 9 19.3529C9 20.8149 10.2472 22 11.7857 22H18.2857Z"
+            className="fill-white/40"
+          />
+        </motion.svg>
+
+        {/* Segunda nube animada de derecha a izquierda - SOLO PIXELS */}
+        <motion.svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="120px"
+          height="120px"
+          viewBox="0 0 24 24"
+          fill="none"
+          className="absolute top-64 z-0"
+          animate={{
+            x: ["110vw", "-50vw"],
+          }}
+          transition={{
+            x: {
+              repeat: Infinity,
+              repeatType: "loop",
+              duration: 25,
+              ease: "linear",
+            },
+          }}
+        >
+          <path
+            opacity="0.5"
+            d="M16.2857 18C19.4416 18 22 15.4717 22 12.3529C22 9.88113 20.393 7.78024 18.1551 7.01498C17.8371 4.19371 15.4159 2 12.4762 2C9.32028 2 6.7619 4.52827 6.7619 7.64706C6.7619 8.33687 6.88706 8.9978 7.11616 9.60887C6.8475 9.55673 6.56983 9.52941 6.28571 9.52941C3.91878 9.52941 2 11.4256 2 13.7647C2 16.1038 3.91878 18 6.28571 18H16.2857Z"
+            className="fill-white/40"
+          />
+          <path
+            d="M18.2857 22C20.3371 22 22 20.4198 22 18.4706C22 16.9257 20.9554 15.6126 19.5008 15.1344C19.2941 13.3711 17.7203 12 15.8095 12C13.7582 12 12.0952 13.5802 12.0952 15.5294C12.0952 15.9605 12.1766 16.3736 12.3255 16.7555C12.1509 16.723 11.9704 16.7059 11.7857 16.7059C10.2472 16.7059 9 17.891 9 19.3529C9 20.8149 10.2472 22 11.7857 22H18.2857Z"
+            className="fill-white/30"
+          />
+        </motion.svg>
+
+        <motion.svg
+          xmlns="http://www.w3.org/2000/svg"
+          xmlnsXlink="http://www.w3.org/1999/xlink"
+          height="100px"
+          width="100px"
+          version="1.1"
+          id="Layer_1"
+          viewBox="0 0 512 512"
+          xmlSpace="preserve"
+          className="absolute bottom-0 left-3/4 fill-white/30"
+          animate={{
+            y: ["25vh", "-100vh"],
+          }}
+          transition={{
+            y: {
+              repeat: Infinity,
+              repeatType: "loop",
+              duration: 50,
+              ease: "linear",
+            },
+          }}
+        >
+          <g>
+            <g>
+              <path d="M256,0C159.826,0,81.582,78.244,81.582,174.418c0,60.686,17.555,117.932,49.432,161.193    c26.864,36.459,61.254,59.587,98.766,66.943c3.94,13.917,13.21,22.427,20.44,29.053c8.113,7.437,11.406,10.763,11.406,18.503    s-3.293,11.065-11.406,18.503c-9.433,8.647-22.352,20.489-22.352,43.387h33.758c0-7.739,3.293-11.065,11.406-18.503    c9.433-8.648,22.352-20.489,22.352-43.387c0-22.898-12.919-34.741-22.352-43.387c-0.93-0.852-1.788-1.644-2.594-2.401    c42.07-4.476,80.895-28.467,110.547-68.71c31.877-43.261,49.432-100.507,49.432-161.193C430.418,78.244,352.174,0,256,0z     M353.808,315.586c-26.492,35.955-61.229,55.755-97.808,55.755s-71.315-19.8-97.808-55.755    c-27.633-37.502-42.852-87.636-42.852-141.168c0-77.56,63.1-140.659,140.659-140.659s140.659,63.1,140.659,140.659    C396.659,227.949,381.441,278.084,353.808,315.586z" />
+            </g>
+          </g>
+          <g>
+            <g>
+              <path d="M149.099,174.418h33.758c0-40.331,32.812-73.143,73.143-73.143V67.516C197.055,67.516,149.099,115.472,149.099,174.418z" />
+            </g>
+          </g>
+        </motion.svg>
+      </main>
+      <ReactCanvasConfetti
+        refConfetti={getInstance}
+        style={{
+          position: "absolute",
+          pointerEvents: "none",
+          width: "100%",
+          height: "100%",
+          top: 0,
+          left: 0,
+        }}
       />
-
-      {/* Nube animada de izquierda a derecha - SOLO PIXELS */}
-      <motion.svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="150px"
-        height="150px"
-        viewBox="0 0 24 24"
-        fill="none"
-        className="absolute top-10 z-0"
-        animate={{
-          x: ["-50vw", "110vw"],
-        }}
-        transition={{
-          x: {
-            repeat: Infinity,
-            repeatType: "loop",
-            duration: 30,
-            ease: "linear",
-          },
-        }}
-      >
-        <path
-          opacity="0.5"
-          d="M16.2857 18C19.4416 18 22 15.4717 22 12.3529C22 9.88113 20.393 7.78024 18.1551 7.01498C17.8371 4.19371 15.4159 2 12.4762 2C9.32028 2 6.7619 4.52827 6.7619 7.64706C6.7619 8.33687 6.88706 8.9978 7.11616 9.60887C6.8475 9.55673 6.56983 9.52941 6.28571 9.52941C3.91878 9.52941 2 11.4256 2 13.7647C2 16.1038 3.91878 18 6.28571 18H16.2857Z"
-          className="fill-white/50"
-        />
-        <path
-          d="M18.2857 22C20.3371 22 22 20.4198 22 18.4706C22 16.9257 20.9554 15.6126 19.5008 15.1344C19.2941 13.3711 17.7203 12 15.8095 12C13.7582 12 12.0952 13.5802 12.0952 15.5294C12.0952 15.9605 12.1766 16.3736 12.3255 16.7555C12.1509 16.723 11.9704 16.7059 11.7857 16.7059C10.2472 16.7059 9 17.891 9 19.3529C9 20.8149 10.2472 22 11.7857 22H18.2857Z"
-          className="fill-white/40"
-        />
-      </motion.svg>
-
-      {/* Segunda nube animada de derecha a izquierda - SOLO PIXELS */}
-      <motion.svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="120px"
-        height="120px"
-        viewBox="0 0 24 24"
-        fill="none"
-        className="absolute top-64 z-0"
-        animate={{
-          x: ["110vw", "-50vw"],
-        }}
-        transition={{
-          x: {
-            repeat: Infinity,
-            repeatType: "loop",
-            duration: 25,
-            ease: "linear",
-          },
-        }}
-      >
-        <path
-          opacity="0.5"
-          d="M16.2857 18C19.4416 18 22 15.4717 22 12.3529C22 9.88113 20.393 7.78024 18.1551 7.01498C17.8371 4.19371 15.4159 2 12.4762 2C9.32028 2 6.7619 4.52827 6.7619 7.64706C6.7619 8.33687 6.88706 8.9978 7.11616 9.60887C6.8475 9.55673 6.56983 9.52941 6.28571 9.52941C3.91878 9.52941 2 11.4256 2 13.7647C2 16.1038 3.91878 18 6.28571 18H16.2857Z"
-          className="fill-white/40"
-        />
-        <path
-          d="M18.2857 22C20.3371 22 22 20.4198 22 18.4706C22 16.9257 20.9554 15.6126 19.5008 15.1344C19.2941 13.3711 17.7203 12 15.8095 12C13.7582 12 12.0952 13.5802 12.0952 15.5294C12.0952 15.9605 12.1766 16.3736 12.3255 16.7555C12.1509 16.723 11.9704 16.7059 11.7857 16.7059C10.2472 16.7059 9 17.891 9 19.3529C9 20.8149 10.2472 22 11.7857 22H18.2857Z"
-          className="fill-white/30"
-        />
-      </motion.svg>
-
-      <motion.svg
-        xmlns="http://www.w3.org/2000/svg"
-        xmlnsXlink="http://www.w3.org/1999/xlink"
-        height="100px"
-        width="100px"
-        version="1.1"
-        id="Layer_1"
-        viewBox="0 0 512 512"
-        xmlSpace="preserve"
-        className="absolute bottom-0 left-3/4 fill-white/30"
-        animate={{
-          y: ["25vh", "-100vh"],
-        }}
-        transition={{
-          y: {
-            repeat: Infinity,
-            repeatType: "loop",
-            duration: 50,
-            ease: "linear",
-          },
-        }}
-      >
-        <g>
-          <g>
-            <path d="M256,0C159.826,0,81.582,78.244,81.582,174.418c0,60.686,17.555,117.932,49.432,161.193    c26.864,36.459,61.254,59.587,98.766,66.943c3.94,13.917,13.21,22.427,20.44,29.053c8.113,7.437,11.406,10.763,11.406,18.503    s-3.293,11.065-11.406,18.503c-9.433,8.647-22.352,20.489-22.352,43.387h33.758c0-7.739,3.293-11.065,11.406-18.503    c9.433-8.648,22.352-20.489,22.352-43.387c0-22.898-12.919-34.741-22.352-43.387c-0.93-0.852-1.788-1.644-2.594-2.401    c42.07-4.476,80.895-28.467,110.547-68.71c31.877-43.261,49.432-100.507,49.432-161.193C430.418,78.244,352.174,0,256,0z     M353.808,315.586c-26.492,35.955-61.229,55.755-97.808,55.755s-71.315-19.8-97.808-55.755    c-27.633-37.502-42.852-87.636-42.852-141.168c0-77.56,63.1-140.659,140.659-140.659s140.659,63.1,140.659,140.659    C396.659,227.949,381.441,278.084,353.808,315.586z" />
-          </g>
-        </g>
-        <g>
-          <g>
-            <path d="M149.099,174.418h33.758c0-40.331,32.812-73.143,73.143-73.143V67.516C197.055,67.516,149.099,115.472,149.099,174.418z" />
-          </g>
-        </g>
-      </motion.svg>
-    </main>
+    </div>
   );
 }

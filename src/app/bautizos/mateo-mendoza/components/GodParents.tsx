@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 export default function GodParents() {
   return (
     <motion.section
-      className="flex flex-col justify-center items-center"
+      className="h-screen flex flex-col justify-center items-center"
       initial={{ scale: 0, opacity: 0 }}
       whileInView={{ scale: 1, opacity: 1 }}
       transition={{ duration: 1.5, delay: 0.5 }}
