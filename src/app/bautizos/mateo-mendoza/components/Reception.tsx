@@ -6,6 +6,7 @@ import {
   ModalContent,
   ModalFooter,
   ModalHeader,
+  Spinner,
   useDisclosure,
 } from "@nextui-org/react";
 import { IoMdTime } from "react-icons/io";
@@ -20,6 +21,7 @@ const MapSalon = () => (
     allowFullScreen
     loading="lazy"
     referrerPolicy="no-referrer-when-downgrade"
+    className="z-20"
   ></iframe>
 );
 
@@ -46,8 +48,9 @@ const ModalMap = ({
             >
               Recepción
             </ModalHeader>
-            <ModalBody>
-              <MapSalon />
+            <ModalBody className="relative justify-center items-center">
+              <MapSalon/>
+              <Spinner className="absolute z-10" color="warning" />
             </ModalBody>
             <ModalFooter></ModalFooter>
           </>
