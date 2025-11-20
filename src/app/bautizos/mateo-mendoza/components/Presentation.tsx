@@ -38,7 +38,6 @@ export default function Presentation() {
         setHours(hours);
         setDays(days);
       }
-
     }, 1000);
   };
 
@@ -139,14 +138,15 @@ export default function Presentation() {
       </div>
 
       <p
-        className={`${glass.className} text-2xl text-center text-orange-900 px-10 mt-10`}
+        className={`${glass.className} text-orange-900 mt-10 px-5 text-center text-lg`}
       >
-         Sra. Diana Zepahua Montalvo<br />&<br /> Sr. José Andrés Mendoza Valdivia 
+        Sus padres agradecen tu presencia:
       </p>
       <p
-        className={`${glass.className} text-orange-900 mt-5 px-5 text-center text-lg`}
+        className={`${glass.className} text-2xl text-center text-orange-900 px-10 mt-2`}
       >
-        Sus padres agradecen tu presencia 💗
+        Sra. Diana Zepahua Montalvo
+        <br />&<br /> Sr. José Andrés Mendoza Valdivia
       </p>
     </motion.section>
   );

@@ -11,7 +11,7 @@ export default function Confirm() {
       transition={{ duration: 1.5, delay: 0.5 }}
     >
       <h2 className={`${mea.className} text-5xl text-orange-900`}>
-        Asistencia
+        Gracias por <br/> acompañarnos
       </h2>
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -30,29 +30,15 @@ export default function Confirm() {
       <p
         className={`${luxurious.className} mx-10 mt-10 text-center text-orange-900 max-w-md`}
       >
-        Esperamos que puedan venir a compartir con nosotros este momento
-        inolvidable.
+        Nos llena de alegría que puedan celebrar con nosotros un día tan
+        especial y lleno de bendiciones.
       </p>
       <p
         className={`${luxurious.className} mx-10 my-5 text-center text-orange-900`}
       >
-        Los esperamos. ¡Muchas Gracias!
-      </p>      
-      <div className="flex items-center justify-center flex-col">
-        <button className="mt-5 relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-pink-500 to-orange-400 group-hover:from-pink-500 group-hover:to-orange-400 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800">
-          <span className="w-60 relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0 flex justify-center items-center gap-1">
-            <FaWhatsapp className="text-2xl" />
-            Mensaje de Whatsapp
-          </span>
-        </button>
-
-        <button className="mt-5 relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-pink-500 to-orange-400 group-hover:from-pink-500 group-hover:to-orange-400 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800">
-          <span className="w-60 relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0 flex justify-center items-center gap-1">
-            <FaPhoneAlt className="text-2xl" />
-            Llamada Telefonica
-          </span>
-        </button>
-      </div>
+        Su presencia hará este momento aún más memorable. ¡Gracias por ser
+        parte de esta celebración!
+      </p>            
     </motion.section>
   );
 }

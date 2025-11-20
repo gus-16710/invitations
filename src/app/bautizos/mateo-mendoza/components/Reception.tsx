@@ -88,12 +88,28 @@ export default function Reception() {
           />
         </svg>
 
-        <Avatar
+        {/* <Avatar
           isBordered
           color="default"
           src="/img/bautizos/mateo-mendoza/tequila.webp"
           className="h-44 w-44 my-5 shadow-lg"
-        />
+        /> */}
+
+        <div className="h-44 w-44 my-5 shadow-lg rounded-full overflow-hidden border-2 border-default-200">
+          <motion.img
+            src="/img/bautizos/mateo-mendoza/tequila.webp"
+            alt="Iglesia"
+            className="w-full h-full object-cover"
+            animate={{
+              scale: [1, 1.1, 1],
+            }}
+            transition={{
+              duration: 10,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+          />
+        </div>
 
         <span className="flex items-center justify-center gap-1 bg-pink-100 text-pink-800 text-xl font-medium me-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-pink-400 border border-pink-400">
           <IoMdTime /> 14:00 HRS

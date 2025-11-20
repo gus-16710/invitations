@@ -181,7 +181,7 @@ export default function Christening() {
           style={{ height: "100svh" }}
         >
           <Flowbite>
-            <Carousel theme={customTheme} slideInterval={10000} slide={true}>
+            <Carousel theme={customTheme} slideInterval={10000} slide={false}>
               <div>
                 <Header />
               </div>
@@ -189,14 +189,14 @@ export default function Christening() {
                 <Presentation />
               </div>
               <div>
+                <GodParents />
+              </div>
+              <div>
                 <Ceremony />
               </div>
               <div>
                 <Reception />
-              </div>
-              <div>
-                <GodParents />
-              </div>
+              </div>              
               <div>
                 <Confirm />
               </div>
