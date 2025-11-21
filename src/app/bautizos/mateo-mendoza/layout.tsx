@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     description:
       "Tenemos el gusto de invitarte al bautizo de nuestro pequeño hijo.",
     images: [
-      `https://invitaciones.unaideamas.com/img/bautizos/mateo-mendoza/preview.jpg`,
+      `https://invitaciones.unaideamas.com/img/bautizos/mateo-mendoza/preview-mateo.jpg`,
     ],
   },
   icons: {
