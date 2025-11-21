@@ -102,14 +102,15 @@ const ModalOpening = ({
       <ModalContent>
         {(onClose) => (
           <>
-            <ModalBody className="flex flex-row mt-5 justify-center items-center">
+            <ModalBody className="flex flex-row mt-5 justify-around items-center">
               <motion.h1
-                className={`${glass.className} text-4xl text-zinc-700 text-right`}
+                className={`${glass.className} text-4xl text-zinc-700 text-right flex-1`}
                 initial={{ y: -100, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 1, delay: 0.4 }}
+                //style={{letterSpacing: "5px"}}
               >
-                Mateo Mendoza
+                Mateo
               </motion.h1>
               <motion.div
                 initial={{ scale: 0 }}
@@ -123,7 +124,7 @@ const ModalOpening = ({
                 />
               </motion.div>
               <motion.div
-                className="relative"
+                className="relative flex-1"
                 initial={{ y: 100, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 1, delay: 0.4 }}

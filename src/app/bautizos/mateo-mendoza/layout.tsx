@@ -2,11 +2,11 @@ import type { Metadata } from "next";
 import "./styles.css";
 
 export const metadata: Metadata = {
-  title: "⭐ Mateo Mendoza | Mi Bautizo ⭐",
+  title: "⭐ Mateo | Mi Bautizo ⭐",
   description:
     "Tenemos el gusto de invitarte al bautizo de nuestro pequeño hijo.",
   openGraph: {
-    title: "⭐ Mateo Mendoza | Mi Bautizo ⭐",
+    title: "⭐ Mateo | Mi Bautizo ⭐",
     description:
       "Tenemos el gusto de invitarte al bautizo de nuestro pequeño hijo.",
     images: [
