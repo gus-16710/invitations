@@ -21,10 +21,10 @@ export default function Header() {
         }}
       >
         <Image
-          width={125}
+          width={100}
           alt="Floral Cross"
           src="/img/bautizos/mateo-mendoza/angel.png"
-          style={{ filter: "drop-shadow(4px 4px 6px rgba(39, 170, 245, 0.8))" }} 
+          style={{ filter: "drop-shadow(5px 10px 10px rgba(39, 170, 245, 0.8))" }} 
         />
       </motion.div>
       
