@@ -124,8 +124,8 @@ export default function AboutUs() {
         <div className="flex-1">
           <p className={`${playfair.className} text-justify`}>
             Nos conocimos en el trabajo, sin imaginar que, entre tareas, y
-            convivencias encontraríamos algo mucho más importante: la una a la
-            otra… Desde aquel 28 de diciembre hemos reído, madurado, llorado un
+            convivencias encontraríamos algo mucho más importante: uno al otro…
+            Desde aquel 28 de diciembre hemos reído, madurado, llorado un
             poquito pero siempre juntas y aprendimos que el amor verdadero se
             construye día a día.
           </p>

@@ -37,7 +37,7 @@ export default function Header() {
         <span className="border-y-1 border-y-yellow-400 py-2">OCTUBRE</span>
       </p>
       <p className={`${playFair.className} z-20 text-2xl text-yellow-400`}>
-        2025
+        2026
       </p>
 
       <p

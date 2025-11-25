@@ -38,7 +38,7 @@ export default function Header() {
   const text01 = "Camila";
 
   const countDownClock = () => {
-    const countDownDate: any = new Date("Aug 8, 2025 12:00:00");
+    const countDownDate: any = new Date("Aug 8, 2026 12:00:00");
 
     const interval = setInterval(() => {
       const now = new Date().getTime();
@@ -53,13 +53,16 @@ export default function Header() {
 
       if (distance < 0) {
         clearInterval(interval);
-        console.log("EXPIRED");
+        setSeconds(0);
+        setMinutes(0);
+        setHours(0);
+        setDays(0);
+      } else {
+        setSeconds(seconds);
+        setMinutes(minutes);
+        setHours(hours);
+        setDays(days);
       }
-
-      setSeconds(seconds);
-      setMinutes(minutes);
-      setHours(hours);
-      setDays(days);
     }, 1000);
   };
 
@@ -139,7 +142,7 @@ export default function Header() {
         initial="hidden"
         whileInView="visible"
       >
-        8 DE AGOSTO DEL 2025
+        8 DE AGOSTO DEL 2026
       </motion.p>
 
       <div

@@ -20,7 +20,7 @@ export default function Presentation() {
   const [days, setDays] = useState(0);
 
   const countDownClock = () => {
-    const countDownDate: any = new Date("Oct 30, 2025 18:00:00");
+    const countDownDate: any = new Date("Oct 30, 2026 18:00:00");
 
     const interval = setInterval(() => {
       const now = new Date().getTime();
@@ -33,15 +33,18 @@ export default function Presentation() {
       const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
       const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-      if (distance < 0) {
+    if (distance < 0) {
         clearInterval(interval);
-        console.log("EXPIRED");
+        setSeconds(0);
+        setMinutes(0);
+        setHours(0);
+        setDays(0);
+      } else {
+        setSeconds(seconds);
+        setMinutes(minutes);
+        setHours(hours);
+        setDays(days);
       }
-
-      setSeconds(seconds);
-      setMinutes(minutes);
-      setHours(hours);
-      setDays(days);
     }, 1000);
   };
 

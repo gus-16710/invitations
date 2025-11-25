@@ -70,7 +70,7 @@ export default function Header() {
         >
           <FaHeart />
         </motion.div>
-        SÁBADO, 14 DE FEBRERO 2025
+        SÁBADO, 14 DE FEBRERO 2026
         <motion.div
           animate={{
             scale: [1, 1.1, 1],
