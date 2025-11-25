@@ -49,26 +49,33 @@ export default function Gallery() {
 
   return (
     <section
-      className="justify-center items-center flex-col text-center"
+      className="flex items-center justify-center flex-col"
       style={{ height: "100svh" }}
     >
-      <div className="flex items-center justify-center pt-10">
-        <motion.div
-          id="alert-5"
-          className="flex items-center justify-center p-2 rounded-lg bg-gray-500/50 w-80 mb-3"
-          role="alert"
-          initial={{ y: 100, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          transition={{ duration: 1, ease: "easeOut", delay: 0.6 }}
-        >
-          <span className="sr-only">Info</span>
-          <div className={`${oswald.className} ms-3 text-sm text-white`}>
-            Presiona sobre una imagen para ampliar
-          </div>
-          <LuZoomIn className="text-white ml-2" />
-        </motion.div>
-      </div>
-      <div className="w-72 m-auto">
+      <motion.h1
+        className={`${greatVibes.className} text-5xl drop-shadow text-center`}
+        initial={{ y: -100, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ duration: 1, ease: "easeOut", delay: 0.4 }}
+      >
+        Galería
+      </motion.h1>
+      <motion.div
+        id="alert-5"
+        className="flex items-center justify-center p-2 rounded-lg bg-gray-500/50 w-80 mb-3 mt-10"
+        role="alert"
+        initial={{ y: 100, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ duration: 1, ease: "easeOut", delay: 0.6 }}
+      >
+        <span className="sr-only">Info</span>
+        <div className={`${oswald.className} ms-3 text-sm text-white`}>
+          Presiona sobre una imagen para ampliar
+        </div>
+        <LuZoomIn className="text-white ml-2" />
+      </motion.div>
+
+      <div className="w-72 mx-auto">
         <PhotoAlbum
           layout="masonry"
           photos={images}
@@ -84,7 +91,7 @@ export default function Gallery() {
         close={() => setIndex(-1)}
         controller={{
           closeOnBackdropClick: true,
-          closeOnPullDown: true,               
+          closeOnPullDown: true,
         }}
       />
     </section>

@@ -145,7 +145,7 @@ export default function Counter() {
       >
         <Image
           alt="Wedding"
-          src="/img/bodas/example/gallery-07.jpg"
+          src="/img/bodas/example/gallery-13.jpg"
           width="100%"
           className="rounded-none"
         />

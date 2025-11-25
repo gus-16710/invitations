@@ -106,7 +106,7 @@ export default function Ceremony() {
           <p className="flex items-center justify-center gap-1">
             ~ <IoMdTime /> 18:00 HRS ~
           </p>
-          <p className="text-sm">28/Feb/2025</p>
+          <p className="text-sm">26 de Diciembre de 2026</p>
         </motion.div>
         <motion.p
           className={`${markazi.className} text-center mx-5 mt-5 text-2xl text-zinc-600 max-w-md`}

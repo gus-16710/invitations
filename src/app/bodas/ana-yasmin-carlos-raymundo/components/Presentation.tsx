@@ -28,7 +28,7 @@ export default function Presentation() {
         >
           {/* Contenido de la fecha */}
           <label className={`${playFair.className} pb-4 text-lg`}>
-            Octubre
+            Diciembre
           </label>
           <div className="flex items-center">
             <label
@@ -47,7 +47,7 @@ export default function Presentation() {
               13HR
             </label>
           </div>
-          <label className={`${playFair.className} text-lg`}>2024</label>
+          <label className={`${playFair.className} text-lg`}>2026</label>
         </motion.div>
 
         <motion.p

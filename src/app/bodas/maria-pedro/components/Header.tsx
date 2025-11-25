@@ -109,7 +109,7 @@ export default function Header() {
       >
         <Image
           alt="Wedding"
-          src="/img/bodas/example/gallery-01.jpg"
+          src="/img/bodas/example/gallery-12.jpg"
           width="100%"
           className="rounded-none border-t-1 border-b-1 pb-5 border-black pt-5"
         />

@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     title: "💗 María & Pedro 💗",
     description:
       "Nos casamos y deseamos compartir con ustedes este día tan especial.",
-    images: ["https://invitaciones.unaideamas.com/img/bodas/example/gallery-01.jpg"],
+    images: ["https://invitaciones.unaideamas.com/img/bodas/example/gallery-08.jpg"],
   },
   icons: {
     icon: "https://invitaciones.unaideamas.com/img/favicon.png",

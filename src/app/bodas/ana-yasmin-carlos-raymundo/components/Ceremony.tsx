@@ -96,7 +96,7 @@ export default function Ceremony() {
           <p className="flex items-center justify-center gap-1 ">
             ~ 13:00 hrs ~
           </p>
-          <p className="text-base " >26/Octubre/2024</p>
+          <p className="text-base " >26 de Diciembre del 2026</p>
         </motion.div>
         <motion.p
           className={`${markazi.className} text-center mx-5 mt-5 text-2xl text-zinc-50 max-w-md `}

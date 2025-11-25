@@ -9,7 +9,7 @@ export default function NextJsImage({
 }: RenderPhotoProps) {  
   return (
     <motion.div
-      className="h-40 w-40 group cursor-pointer"
+      className="h-40 w-40 group cursor-pointer flex items-center justify-center"
       style={{ ...wrapperStyle, position: "relative" }}
       initial={{ scale: 0, opacity: 0 }}
       whileInView={{ scale: 1, opacity: 1 }}            
@@ -21,7 +21,7 @@ export default function NextJsImage({
         src={photo}
         placeholder={"blurDataURL" in photo ? "blur" : undefined}
         {...{ alt, title, sizes, className, onClick }}
-        className="object-cover transition-transform transform group-hover:scale-110 shadow-lg"
+        className="h-28 w-28 object-cover transition-transform transform group-hover:scale-110 shadow-lg"
       />
     </motion.div>
   );

@@ -11,22 +11,22 @@ import { GiClick } from "react-icons/gi";
 
 const images = [
   {
-    src: "/img/bodas/example/gallery-02.jpg",
+    src: "/img/bodas/example/gallery-12.jpg",
     width: 800,
     height: 600,
   },
   {
-    src: "/img/bodas/example/gallery-03.jpg",
+    src: "/img/bodas/example/gallery-11.jpg",
     width: 800,
     height: 600,
   },
   {
-    src: "/img/bodas/example/gallery-04.jpg",
+    src: "/img/bodas/example/gallery-10.jpg",
     width: 1600,
     height: 900,
   },
   {
-    src: "/img/bodas/example/gallery-05.jpg",
+    src: "/img/bodas/example/gallery-09.jpg",
     width: 800,
     height: 600,
   },
@@ -96,7 +96,7 @@ export default function AboutUs() {
       >
         <Image
           alt="Wedding"
-          src="/img/bodas/example/gallery-06.jpg"
+          src="/img/bodas/example/gallery-14.jpg"
           width="100%"
           className="rounded-none border-t-1 pb-5 border-black pt-5"
         />

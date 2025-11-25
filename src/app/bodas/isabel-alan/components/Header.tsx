@@ -53,7 +53,7 @@ export default function Header() {
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ delay: 3, duration: 1 }}
       >
-        Domingo 25 de Febrero del 2024
+        Sábado 26 de Diciembre del 2026
       </motion.p>
       <AudioPlayer />
       <motion.div

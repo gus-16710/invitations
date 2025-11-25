@@ -26,17 +26,17 @@ export default function Presentation() {
           whileInView={{ scale: 1, opacity: 1 }}
           transition={{ duration: 1, ease: "easeOut", delay: 0.8 }}
         >
-          <label className={`${playFair.className} pb-1`}>Febrero</label>
+          <label className={`${playFair.className} pb-1`}>Diciembre</label>
           <div className="flex items-center">
             <label className={`${playFair.className} p-4`}>SAB</label>
             <label
               className={`${greatVibes.className} py-2 px-4 border-l-2 border-r-2 border-gray-300 text-5xl`}
             >
-              28
+              26
             </label>
             <label className={`${playFair.className} p-4`}>6PM</label>
           </div>
-          <label className={`${playFair.className}`}>2025</label>
+          <label className={`${playFair.className}`}>2026</label>
         </motion.div>
         <motion.p
           className={`${notoSans.className} text-center p-5 max-w-md`}

@@ -58,8 +58,8 @@ export default function Presentation() {
         <div className="w-full">
           <p className="text-center">
             PADRES DE LA NOVIA <br />
-            Jose Franco Olivera Sosa <br />
-            Claudia Alves Fuentes
+            Luis Robles Lara <br />
+            Ana María Gómez Pómes
           </p>
         </div>
       </div>

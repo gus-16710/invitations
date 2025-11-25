@@ -76,7 +76,7 @@ export default function DressCode() {
         </p>
 
         <p className={`${crimson.className} text-center mt-5`}>
-          (Se reserva el color blanco para las Novias)
+          (Se reserva el color blanco para la Novia)
         </p>
       </motion.div>
     </>
