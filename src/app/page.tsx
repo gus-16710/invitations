@@ -35,7 +35,7 @@ import "swiper/css/pagination";
 const invitations = [
   {
     key: "diana-ernesto",
-    img: "/img/bodas/diana-ernesto/diana-ernesto-2.jpg",
+    img: "/img/bodas/diana-ernesto/diana-ernesto-preview.jpg",
     url: "/bodas/diana-ernesto",
     title: "Diana & Ernesto",
     category: "Boda",
@@ -43,7 +43,7 @@ const invitations = [
   },
   {
     key: "sayuri",
-    img: "/img/quinces/sayuri/sayuri-2.jpg",
+    img: "/img/quinces/sayuri/sayuri-preview.jpg",
     url: "/quinces/sayuri",
     title: "Sayuri",
     category: "XV Años",
@@ -51,7 +51,7 @@ const invitations = [
   },
   {
     key: "annette",
-    img: "/img/bautizos/annette/annette-2.jpg",
+    img: "/img/bautizos/annette/annette-preview.jpg",
     url: "/bautizos/annette",
     title: "Annette",
     category: "Bautizo",
@@ -59,7 +59,7 @@ const invitations = [
   },
   {
     key: "jannia",
-    img: "/img/festejos/jannia/jannia-2.jpg",
+    img: "/img/festejos/jannia/jannia-preview.jpg",
     url: "/festejos/jannia",
     title: "Jannia",
     category: "Cumpleaños",
@@ -67,7 +67,7 @@ const invitations = [
   },
   {
     key: "daniela",
-    img: "/img/quinces/daniela/daniela-2.jpg",
+    img: "/img/quinces/daniela/daniela-preview.jpg",
     url: "/quinces/daniela",
     title: "Daniela",
     category: "XV Años",
@@ -75,7 +75,7 @@ const invitations = [
   },
   {
     key: "mateo-bautizo",
-    img: "/img/bautizos/mateo-mendoza/mateo-2.jpg",
+    img: "/img/bautizos/mateo-mendoza/mateo-preview.jpg",
     url: "/bautizos/mateo-mendoza",
     title: "Mateo",
     category: "Bautizo",
@@ -83,7 +83,7 @@ const invitations = [
   },
   {
     key: "maria-pedro",
-    img: "/img/bodas/example/maria-pedro-2.jpg",
+    img: "/img/bodas/example/maria-pedro-preview.jpg",
     url: "/bodas/maria-pedro",
     title: "María & Pedro",
     category: "Boda",
@@ -91,7 +91,7 @@ const invitations = [
   },
   {
     key: "camila",
-    img: "/img/quinces/camila/camila-2.jpg",
+    img: "/img/quinces/camila/camila-preview.jpg",
     url: "/quinces/camila",
     title: "Camila",
     category: "XV Años",
@@ -99,7 +99,7 @@ const invitations = [
   },
   {
     key: "isabel-alan",
-    img: "/img/bodas/isabel-alan/isabel-alan-2.jpg",
+    img: "/img/bodas/isabel-alan/isabel-alan-preview.jpg",
     url: "/bodas/isabel-alan",
     title: "Isabel & Alan",
     category: "Boda",
@@ -107,7 +107,7 @@ const invitations = [
   },
   {
     key: "cobaev-66",
-    img: "/img/escolar/cobaev-66/cobaev-66-2.jpg",
+    img: "/img/escolar/cobaev-66/cobaev-66-preview.jpg",
     url: "/escolar/cobaev-66",
     title: "COBAEV 66",
     category: "Graduación",
@@ -115,7 +115,7 @@ const invitations = [
   },
   {
     key: "sarang",
-    img: "/img/quinces/sarang/sarang-2.jpg",
+    img: "/img/quinces/sarang/sarang-preview.jpg",
     url: "/quinces/sarang",
     title: "Sarang",
     category: "XV Años",
@@ -123,7 +123,7 @@ const invitations = [
   },
   {
     key: "esperanza-osorio",
-    img: "/img/escolar/jardin-esperanza-osorio/esperanza-osorio-2.jpg",
+    img: "/img/escolar/jardin-esperanza-osorio/esperanza-osorio-preview.jpg",
     url: "/escolar/jardin-esperanza-osorio",
     title: "Esperanza Osorio",
     category: "Graduación",
@@ -268,7 +268,7 @@ const CarouselInvitations = () => {
                     {/* Tarjeta con CSS Grid */}
                     <div className="relative transition-all duration-300 hover:scale-105 w-full grid grid-rows-[1fr_auto_auto] gap-3 min-h-[500px]">
                       {/* Imagen - ocupa el espacio disponible */}
-                      <div className="relative w-full aspect-[9/16] rounded-3xl overflow-hidden group-hover:shadow-lg transition-shadow duration-300 border border-gray-200">
+                      <div className="relative w-full aspect-[8/16] rounded-3xl overflow-hidden group-hover:shadow-lg transition-shadow duration-300 border border-gray-200">
                         <Image
                           src={invitation.img}
                           alt={invitation.title}
