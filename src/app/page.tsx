@@ -35,7 +35,7 @@ import "swiper/css/pagination";
 const invitations = [
   {
     key: "diana-ernesto",
-    img: "/img/bodas/diana-ernesto/diana-ernesto.jpg",
+    img: "/img/bodas/diana-ernesto/diana-ernesto-2.jpg",
     url: "/bodas/diana-ernesto",
     title: "Diana & Ernesto",
     category: "Boda",
@@ -43,7 +43,7 @@ const invitations = [
   },
   {
     key: "sayuri",
-    img: "/img/quinces/sayuri/sayuri.jpg",
+    img: "/img/quinces/sayuri/sayuri-2.jpg",
     url: "/quinces/sayuri",
     title: "Sayuri",
     category: "XV Años",
@@ -51,7 +51,7 @@ const invitations = [
   },
   {
     key: "annette",
-    img: "/img/bautizos/annette/annette.jpg",
+    img: "/img/bautizos/annette/annette-2.jpg",
     url: "/bautizos/annette",
     title: "Annette",
     category: "Bautizo",
@@ -59,7 +59,7 @@ const invitations = [
   },
   {
     key: "jannia",
-    img: "/img/festejos/jannia/jannia.jpg",
+    img: "/img/festejos/jannia/jannia-2.jpg",
     url: "/festejos/jannia",
     title: "Jannia",
     category: "Cumpleaños",
@@ -67,7 +67,7 @@ const invitations = [
   },
   {
     key: "daniela",
-    img: "/img/quinces/daniela/daniela.jpg",
+    img: "/img/quinces/daniela/daniela-2.jpg",
     url: "/quinces/daniela",
     title: "Daniela",
     category: "XV Años",
@@ -75,7 +75,7 @@ const invitations = [
   },
   {
     key: "mateo-bautizo",
-    img: "/img/bautizos/mateo-mendoza/mateo.jpg",
+    img: "/img/bautizos/mateo-mendoza/mateo-2.jpg",
     url: "/bautizos/mateo-mendoza",
     title: "Mateo",
     category: "Bautizo",
@@ -83,7 +83,7 @@ const invitations = [
   },
   {
     key: "maria-pedro",
-    img: "/img/bodas/example/maria-pedro.jpg",
+    img: "/img/bodas/example/maria-pedro-2.jpg",
     url: "/bodas/maria-pedro",
     title: "María & Pedro",
     category: "Boda",
@@ -91,7 +91,7 @@ const invitations = [
   },
   {
     key: "camila",
-    img: "/img/quinces/camila/camila.jpg",
+    img: "/img/quinces/camila/camila-2.jpg",
     url: "/quinces/camila",
     title: "Camila",
     category: "XV Años",
@@ -99,7 +99,7 @@ const invitations = [
   },
   {
     key: "isabel-alan",
-    img: "/img/bodas/isabel-alan/isabel-alan.jpg",
+    img: "/img/bodas/isabel-alan/isabel-alan-2.jpg",
     url: "/bodas/isabel-alan",
     title: "Isabel & Alan",
     category: "Boda",
@@ -107,7 +107,7 @@ const invitations = [
   },
   {
     key: "cobaev-66",
-    img: "/img/escolar/cobaev-66/cobaev-66.jpg",
+    img: "/img/escolar/cobaev-66/cobaev-66-2.jpg",
     url: "/escolar/cobaev-66",
     title: "COBAEV 66",
     category: "Graduación",
@@ -115,7 +115,7 @@ const invitations = [
   },
   {
     key: "sarang",
-    img: "/img/quinces/sarang/sarang.jpg",
+    img: "/img/quinces/sarang/sarang-2.jpg",
     url: "/quinces/sarang",
     title: "Sarang",
     category: "XV Años",
@@ -123,7 +123,7 @@ const invitations = [
   },
   {
     key: "esperanza-osorio",
-    img: "/img/escolar/jardin-esperanza-osorio/esperanza-osorio.jpg",
+    img: "/img/escolar/jardin-esperanza-osorio/esperanza-osorio-2.jpg",
     url: "/escolar/jardin-esperanza-osorio",
     title: "Esperanza Osorio",
     category: "Graduación",
@@ -263,12 +263,13 @@ const CarouselInvitations = () => {
                     {/* Tarjeta con CSS Grid */}
                     <div className="relative transition-all duration-300 hover:scale-105 w-full grid grid-rows-[1fr_auto_auto] gap-3 min-h-[500px]">
                       {/* Imagen - ocupa el espacio disponible */}
-                      <div className="relative w-full aspect-[9/16] rounded-xl overflow-hidden group-hover:shadow-lg transition-shadow duration-300 border border-gray-200">
+                      <div className="relative w-full aspect-[9/16] rounded-3xl overflow-hidden group-hover:shadow-lg transition-shadow duration-300 border border-gray-200">
                         <Image
                           src={invitation.img}
                           alt={invitation.title}
                           fill
-                          className="object-cover"
+                          
+                          className=""
                           sizes="(max-width: 640px) 280px, (max-width: 768px) 200px, (max-width: 1024px) 220px, 240px"
                         />
                       </div>
@@ -512,7 +513,7 @@ export default function HomePage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <div className="flex justify-center mb-6">
+            <div className="hidden md:flex justify-center mb-6">
               <div className="flex items-center gap-2 bg-white/80 backdrop-blur-sm rounded-full px-6 py-3 shadow-lg">
                 <LuSparkles className="w-5 h-5 text-purple-600" />
                 <span className="text-sm font-semibold text-purple-600">
@@ -525,12 +526,12 @@ export default function HomePage() {
             <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600 bg-clip-text text-transparent">
               Invitaciones Digitales
               <br />
-              <span className="text-3xl md:text-6xl">
+              <span className="text-2xl md:text-6xl">
                 Que Inspiran Emociones
               </span>
             </h1>
 
-            <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
               Invitaciones digitales únicas y personalizadas para cada ocasión
               especial.
             </p>
@@ -566,7 +567,7 @@ export default function HomePage() {
             {/* Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-2xl mx-auto">
               {[
-                { number: "50+", label: "Diseños Únicos" },
+                { number: "100%", label: "Personalizado" },
                 { number: "3-5", label: "Días de Entrega" },
                 { number: "24/7", label: "Soporte" },
                 { number: "4.9★", label: "Rating" },
