@@ -258,7 +258,12 @@ const CarouselInvitations = () => {
                 <div className="w-full flex items-center justify-center py-4 sm:py-8 px-2">
                   <div
                     className="relative group cursor-pointer w-full max-w-full mx-auto"
-                    onClick={() => router.push(invitation.url)}
+                    onClick={() => {
+                      window.open(
+                        `https://invitaciones.unaideamas.com/${invitation.url}`,
+                        "_blank"
+                      );
+                    }}
                   >
                     {/* Tarjeta con CSS Grid */}
                     <div className="relative transition-all duration-300 hover:scale-105 w-full grid grid-rows-[1fr_auto_auto] gap-3 min-h-[500px]">
@@ -268,7 +273,6 @@ const CarouselInvitations = () => {
                           src={invitation.img}
                           alt={invitation.title}
                           fill
-                          
                           className=""
                           sizes="(max-width: 640px) 280px, (max-width: 768px) 200px, (max-width: 1024px) 220px, 240px"
                         />
@@ -293,16 +297,7 @@ const CarouselInvitations = () => {
 
                       {/* Botón - posición fija en el grid */}
                       <div className="flex justify-center">
-                        <button
-                          className="text-xs sm:text-sm bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-2 rounded-full shadow-md
-            /* Visible en móvil siempre */
-            opacity-100 sm:opacity-0 
-            /* En desktop solo visible al hover */
-            sm:group-hover:opacity-100 
-            /* Animación solo en desktop */
-            sm:transform sm:translate-y-2 sm:group-hover:translate-y-0 
-            transition-all duration-300"
-                        >
+                        <button className="text-xs sm:text-sm bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-2 rounded-full shadow-md opacity-100 sm:opacity-0 sm:group-hover:opacity-100 sm:transform sm:translate-y-2 sm:group-hover:translate-y-0 transition-all duration-300">
                           Ver Invitación
                         </button>
                       </div>
