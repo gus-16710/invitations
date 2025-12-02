@@ -2,7 +2,6 @@
 
 import React, { useEffect, useCallback, useRef, useState } from "react";
 import { motion } from "framer-motion";
-import { useRouter } from "next/navigation";
 import ReactCanvasConfetti from "react-canvas-confetti";
 import { Button } from "@nextui-org/react";
 import {
@@ -41,12 +40,12 @@ const ActionButtons = () => {
   const [currentMessage, setCurrentMessage] = useState("");
 
   const messages = [
-    "🎉 ¡Invitaciones para XV años! ¡Cotiza gratis!",
+    "🎉 ¡Fiesta para XV años! ¡Cotiza gratis!",
     "💍 ¿Boda? Invitación web exclusiva",
     "👶 Invitaciones digitales para bautizos",
     "🎂 Invitaciones web para cumpleaños",
     "✨ Invitaciones animadas - ¡Sorprende!",
-    "💝 Primera comunión - Invitación personalizada",
+    "💝 Primera comunión - 100% personalizada",
     "🚀 Tu evento merece invitaciones premium",
     "🎨 Diseños exclusivos para XV años",
     "💬 ¿Necesitas una invitación? ¡Escríbenos!",
@@ -58,7 +57,7 @@ const ActionButtons = () => {
     "📅 Cuenta regresiva para tu evento",
     "👗 Código de vestimenta interactivo",
     "🛍️ Mesa de regalos virtual incluida",
-    "📱 Diseños 100% responsivos para móviles",
+    "📱 100% responsivos para móviles",
     "💖 Temas personalizados para XV años",
     "🎭 Invitaciones para eventos corporativos",
     "🎁 Presupuesto personalizado",
@@ -97,7 +96,7 @@ const ActionButtons = () => {
       setTimeout(() => {
         setShowBubble(false);
       }, 5000);
-    }, 10000); // Mostrar cada 15 segundos
+    }, 15000); // Mostrar cada 15 segundos
 
     // Mostrar la burbuja inicialmente después de 2 segundos con mensaje aleatorio
     const initialBubble = setTimeout(() => {
@@ -128,7 +127,8 @@ const ActionButtons = () => {
       >
         {/* Burbuja flotante */}
         <motion.div
-          className="absolute right-14 top-1 transform -translate-y-1/2 z-20"
+          className="absolute  top-0.5 transform -translate-y-1/2 z-20"
+          style={{right: "50px"}}
           initial={{ opacity: 0, x: 10, scale: 0.8 }}
           animate={{
             opacity: showBubble ? 1 : 0,
@@ -656,7 +656,7 @@ export default function HomePage() {
         <div className="absolute inset-0">
           <div className="absolute top-1/4 left-1/4 w-72 h-60 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
           <div className="absolute top-1/3 right-1/4 w-72 h-60 bg-yellow-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
-          <div className="absolute bottom-1/4 left-1/3 w-72 h-60 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000"></div>
+          <div className="absolute bottom-1/4 left-1/3 w-72 h-60 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000"></div>          
         </div>
 
         <div className="relative z-10 text-center px-4 max-w-6xl mx-auto">
@@ -738,6 +738,7 @@ export default function HomePage() {
                 </motion.div>
               ))}
             </div>
+           
           </motion.div>
         </div>
 
