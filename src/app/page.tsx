@@ -128,7 +128,7 @@ const ActionButtons = () => {
         {/* Burbuja flotante */}
         <motion.div
           className="absolute  top-0.5 transform -translate-y-1/2 z-20"
-          style={{right: "50px"}}
+          style={{ right: "50px" }}
           initial={{ opacity: 0, x: 10, scale: 0.8 }}
           animate={{
             opacity: showBubble ? 1 : 0,
@@ -656,7 +656,7 @@ export default function HomePage() {
         <div className="absolute inset-0">
           <div className="absolute top-1/4 left-1/4 w-72 h-60 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
           <div className="absolute top-1/3 right-1/4 w-72 h-60 bg-yellow-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
-          <div className="absolute bottom-1/4 left-1/3 w-72 h-60 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000"></div>          
+          <div className="absolute bottom-1/4 left-1/3 w-72 h-60 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000"></div>
         </div>
 
         <div className="relative z-10 text-center px-4 max-w-6xl mx-auto">
@@ -675,13 +675,29 @@ export default function HomePage() {
               </div>
             </div>
 
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600 bg-clip-text text-transparent">
-              Invitaciones Digitales
-              <br />
-              <span className="text-2xl md:text-6xl">
-                Que Inspiran Emociones
-              </span>
-            </h1>
+            <div className="relative">
+              <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600 bg-clip-text text-transparent">
+                Invitaciones Digitales
+                <br />
+                <span className="text-2xl md:text-6xl">
+                  Que Inspiran Emociones
+                </span>
+                {/* Badge de oferta */}
+              </h1>
+               <motion.span
+                className="absolute -top-5 -right-2 md:-top-5 md:-right-14 bg-red-500 text-white px-2 py-1 rounded-full font-bold rotate-45 shadow-lg"
+                animate={{
+                  rotate: [20, 5, 20],
+                  scale: [1, 1.1, 1],
+                }}
+                transition={{
+                  duration: 4,
+                  repeat: Infinity,
+                }}
+              >
+               🔥 499 MXN
+              </motion.span>
+            </div>
 
             <p className="text-lg md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
               Invitaciones digitales únicas y personalizadas para cada ocasión
@@ -738,7 +754,6 @@ export default function HomePage() {
                 </motion.div>
               ))}
             </div>
-           
           </motion.div>
         </div>
 
