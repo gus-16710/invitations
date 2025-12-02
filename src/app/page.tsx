@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useCallback, useRef } from "react";
+import React, { useEffect, useCallback, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
 import ReactCanvasConfetti from "react-canvas-confetti";
@@ -31,6 +31,156 @@ import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+
+import { IoIosArrowUp } from "react-icons/io";
+import { FaWhatsapp } from "react-icons/fa";
+
+const ActionButtons = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const [showBubble, setShowBubble] = useState(false);
+  const [currentMessage, setCurrentMessage] = useState("");
+
+  const messages = [
+    "🎉 ¡Invitaciones para XV años! ¡Cotiza gratis!",
+    "💍 ¿Boda? Invitación web exclusiva",
+    "👶 Invitaciones digitales para bautizos",
+    "🎂 Invitaciones web para cumpleaños",
+    "✨ Invitaciones animadas - ¡Sorprende!",
+    "💝 Primera comunión - Invitación personalizada",
+    "🚀 Tu evento merece invitaciones premium",
+    "🎨 Diseños exclusivos para XV años",
+    "💬 ¿Necesitas una invitación? ¡Escríbenos!",
+    "📋 Cotización inmediata para tu evento",
+    "💎 Invitaciones de lujo para bodas",
+    "🖼️ Galería de fotos integrada",
+    "📍 Mapa interactivo para tu evento",
+    "🎵 Invitaciones con música incluida",
+    "📅 Cuenta regresiva para tu evento",
+    "👗 Código de vestimenta interactivo",
+    "🛍️ Mesa de regalos virtual incluida",
+    "📱 Diseños 100% responsivos para móviles",
+    "💖 Temas personalizados para XV años",
+    "🎭 Invitaciones para eventos corporativos",
+    "🎁 Presupuesto personalizado",
+    "👰 Invitación de ensueño para novias",
+    "⚡ Invitaciones web de carga rápida",
+    "🌐 Dominio personalizado incluido",
+  ];
+
+  // Función para obtener un mensaje aleatorio
+  const getRandomMessage = () => {
+    const randomIndex = Math.floor(Math.random() * messages.length);
+    return messages[randomIndex];
+  };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (
+        document.body.scrollTop > 50 ||
+        document.documentElement.scrollTop > 50
+      ) {
+        setIsVisible(true);
+      } else {
+        setIsVisible(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    // Controlar la aparición intermitente de la burbuja
+    const bubbleInterval = setInterval(() => {
+      // Cambiar el mensaje cada vez que aparece la burbuja
+      setCurrentMessage(getRandomMessage());
+      setShowBubble(true);
+
+      // Ocultar después de 3 segundos
+      setTimeout(() => {
+        setShowBubble(false);
+      }, 5000);
+    }, 10000); // Mostrar cada 15 segundos
+
+    // Mostrar la burbuja inicialmente después de 2 segundos con mensaje aleatorio
+    const initialBubble = setTimeout(() => {
+      setCurrentMessage(getRandomMessage());
+      setShowBubble(true);
+      setTimeout(() => setShowBubble(false), 3000);
+    }, 10000);
+
+    // Cleanup
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      clearInterval(bubbleInterval);
+      clearTimeout(initialBubble);
+    };
+  }, []);
+
+  return (
+    <>
+      {/* Botón de WhatsApp con burbuja */}
+      <motion.div
+        className="fixed right-0 z-10"
+        initial={{ bottom: "90px" }}
+        animate={{
+          bottom: isVisible ? "75px" : "20px",
+        }}
+        transition={{ duration: 0.3, ease: "easeOut" }}
+        style={{ marginRight: "20px" }}
+      >
+        {/* Burbuja flotante */}
+        <motion.div
+          className="absolute right-14 top-1 transform -translate-y-1/2 z-20"
+          initial={{ opacity: 0, x: 10, scale: 0.8 }}
+          animate={{
+            opacity: showBubble ? 1 : 0,
+            x: showBubble ? 0 : 10,
+            scale: showBubble ? 1 : 0.8,
+          }}
+          transition={{ duration: 0.4, ease: "easeOut" }}
+        >
+          <div className="bg-white text-gray-800 px-3 py-2 rounded-lg shadow-lg border border-gray-200 relative whitespace-nowrap">
+            <span className="text-sm font-medium">{currentMessage}</span>
+
+            {/* Puntito de la burbuja */}
+            <div className="absolute right-0 top-1/2 transform translate-x-1 -translate-y-1/2">
+              <div className="w-2 h-2 bg-white rotate-45 border-r border-b border-gray-200 "></div>
+            </div>
+          </div>
+        </motion.div>
+
+        <Button
+          color="success"
+          className="rounded-full p-0 shadow-lg hover:shadow-xl transition-shadow relative z-10 h-11 w-11"
+          isIconOnly
+          onClick={() =>
+            window.open(
+              "https://wa.me/5212281700216?text=Hola! Quiero cotizar una invitación digital.",
+              "_blank"
+            )
+          }
+        >
+          <FaWhatsapp size={28} color="white" />
+        </Button>
+      </motion.div>
+
+      {/* Botón de scroll to top */}
+      <motion.button
+        type="button"
+        className="bg-gray-800/50 p-3 rounded-full text-zinc-100 fixed bottom-0 right-0 font-medium shadow-md mb-5 mr-5 transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg z-10 h-11 w-11 flex justify-center items-center"
+        onClick={() => {
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        }}
+        initial={{ opacity: 0, scale: 0 }}
+        animate={{
+          opacity: isVisible ? 1 : 0,
+          scale: isVisible ? 1 : 0,
+        }}
+        transition={{ duration: 0.3, ease: "easeOut" }}
+      >
+        <IoIosArrowUp size={24} />
+      </motion.button>
+    </>
+  );
+};
 
 const invitations = [
   {
@@ -129,11 +279,17 @@ const invitations = [
     category: "Graduación",
     description: "Graduación 2025 Jardín de Niños",
   },
+  {
+    key: "alondra",
+    img: "/img/quinces/alondra/alondra-preview.jpg",
+    url: "/quinces/alondra-zuriel",
+    title: "Alondra Zuriel",
+    category: "XV Años",
+    description: "Invitación con tonos claros y detalles florales en rojo",
+  },
 ];
 
 const CarouselInvitations = () => {
-  const router = useRouter();
-
   const prevRef = useRef<HTMLButtonElement>(null);
   const nextRef = useRef<HTMLButtonElement>(null);
 
@@ -338,6 +494,7 @@ const CarouselInvitations = () => {
           }
         `}</style>
       </motion.div>
+      <ActionButtons />
     </>
   );
 };
@@ -634,7 +791,7 @@ export default function HomePage() {
                   key={event.name}
                   initial={{ opacity: 0, scale: 0.8 }}
                   whileInView={{ opacity: 1, scale: 1 }}
-                  transition={{ delay: index * 0.1 }}
+                  transition={{ delay: index * 0.3, ease: "easeOut" }}
                   whileHover={{ scale: 1.05 }}
                   className="group"
                 >

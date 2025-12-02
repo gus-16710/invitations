@@ -15,7 +15,7 @@ export default function Header({ splide }: { splide: number }) {
   const [days, setDays] = useState(0);
 
   const countDownClock = () => {
-    const countDownDate: any = new Date("Dec 21, 2024 17:00:00");
+    const countDownDate: any = new Date("Dec 21, 2025 17:00:00");
 
     const interval = setInterval(() => {
       const now = new Date().getTime();
@@ -170,7 +170,7 @@ export default function Header({ splide }: { splide: number }) {
           className={`${league.className} z-20 text-xl text-yellow-400 font-thin text-center`}
           style={{ color: "#513704" }}
         >
-          ~ 2024 ~
+          ~ 2025 ~
         </p>
       </motion.div>
 
