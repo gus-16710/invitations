@@ -33,15 +33,9 @@ const ModalMap = ({
             <ModalHeader
               className={`${dancing.className} flex flex-col gap-1 items-center justify-center text-4xl text-amber-800 text-center`}
             >
-              Ubicación de la Recepción
+              Recepción
             </ModalHeader>
-            <ModalBody className="pb-6">
-              <div className="flex items-center gap-2 mb-4 text-amber-700 justify-center">
-                <IoMdTime className="text-xl" />
-                <span className={`${quickSand.className} font-medium`}>
-                  14:30 Hrs
-                </span>
-              </div>
+            <ModalBody className="pb-6">              
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1879.5017444828823!2d-96.93554647694201!3d19.58435120917267!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2smx!4v1764892647843!5m2!1ses!2smx"
                 height="450"

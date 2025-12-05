@@ -33,15 +33,9 @@ const ModalMap = ({
             <ModalHeader
               className={`${dancing.className} flex flex-col gap-1 items-center justify-center text-4xl text-amber-800 text-center`}
             >
-              Ubicación de la Ceremonia
+              Ceremonia
             </ModalHeader>
-            <ModalBody className="pb-6">
-              <div className="flex items-center gap-2 mb-4 text-amber-700 justify-center">
-                <IoMdTime className="text-xl" />
-                <span className={`${quickSand.className} font-medium`}>
-                  12:00 Hrs
-                </span>
-              </div>
+            <ModalBody className="pb-6">             
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8940.23303326303!2d-96.94871162511589!3d19.588572212504758!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85db2fb78a66bb13%3A0x6935f2c47beef73d!2sSantuario%20Parroquial%20De%20San%20Jos%C3%A9!5e0!3m2!1ses!2smx!4v1764891806644!5m2!1ses!2smx"
                 height="450"
