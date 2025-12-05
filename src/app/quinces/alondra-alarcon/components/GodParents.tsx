@@ -48,8 +48,7 @@ export default function GodParents() {
 
   return (
     <section
-      className="flex flex-col items-center justify-center relative z-10 overflow-hidden"
-      style={{ height: "100svh" }}
+      className="flex flex-col items-center justify-center relative z-10 overflow-hidden min-h-screen h-[100dvh]"      
     >
      <div className="absolute inset-0 overflow-hidden">
         {/* Partículas doradas - solo en cliente */}

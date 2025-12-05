@@ -18,7 +18,7 @@ export default function DressCode() {
 
   return (
     <section
-      className="flex flex-col items-center justify-center overflow-hidden z-10 relative min-h-[100svh]"
+      className="flex flex-col items-center justify-center overflow-hidden z-10 relative min-h-screen h-[100dvh]"
      
     >
       {/* Fondos animados */}

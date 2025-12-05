@@ -19,7 +19,7 @@ export default function Confirm() {
   }, []);
 
   return (
-    <section className="flex flex-col items-center justify-center overflow-clip z-10 relative min-h-[100svh]">
+    <section className="flex flex-col items-center justify-center overflow-clip z-10 relative min-h-screen h-[100dvh]">
       <div className="absolute inset-0 overflow-hidden">
         {/* Partículas doradas - solo en cliente */}
         {particles.map((pos, i) => (

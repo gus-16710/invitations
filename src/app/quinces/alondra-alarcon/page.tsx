@@ -160,23 +160,6 @@ export default function Alondra() {
     },
   };
 
-  const dateVariants = {
-    hidden: {
-      opacity: 0,
-      y: 30,
-      scale: 0.9,
-    },
-    visible: {
-      opacity: 1,
-      y: 0,
-      scale: 1,
-      transition: {
-        duration: 0.8,
-        delay: 0,
-        ease: "easeOut",
-      },
-    },
-  };
 
   const pulseStarAnimation = {
     animate: {
@@ -228,19 +211,7 @@ export default function Alondra() {
       repeat: Infinity,
       ease: "easeInOut" as const,
     },
-  };
-
-  const particleAnimation = {
-    animate: {
-      y: [0, -10, 0],
-      opacity: [0.3, 0.8, 0.3],
-    },
-    transition: {
-      duration: 4,
-      repeat: Infinity,
-      ease: "easeInOut" as const,
-    },
-  };
+  };  
 
   return (
     <div className="relative min-h-screen bg-[url('/img/quinces/alondra-alarcon/background.avif')] bg-center bg-cover h-screen">
