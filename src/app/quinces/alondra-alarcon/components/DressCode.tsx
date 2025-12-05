@@ -2,7 +2,6 @@ import { dancing, graduate, julius } from "./Fonts";
 import { motion } from "framer-motion";
 import { confirm } from "./Animations";
 import { useEffect, useState } from "react";
-import { useDynamicHeight } from "../hooks/useDynamicHeight";
 
 export default function DressCode() {
 
@@ -17,11 +16,9 @@ export default function DressCode() {
         setParticles(newParticles);
       }, []);
 
-      const height = useDynamicHeight();
-
   return (
     <section
-      className="flex flex-col items-center justify-center overflow-hidden z-10 relative" style={{height}}
+      className="flex flex-col items-center justify-center overflow-hidden z-10 relative min-h-screen h-[100dvh]"
      
     >
       {/* Fondos animados */}

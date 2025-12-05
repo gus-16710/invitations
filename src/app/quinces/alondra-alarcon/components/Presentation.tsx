@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { useAnimate, motion } from "framer-motion";
 import { anton, dancing, quickSand, whisper } from "./Fonts";
 import { presentation } from "./Animations";
-import { useDynamicHeight } from "../hooks/useDynamicHeight";
 
 function formatNumber(number: number) {
   return number < 10 ? `0${number}` : number;
@@ -188,10 +187,8 @@ export default function Presentation() {
     );
   }, [days]);
 
-  const height = useDynamicHeight();
-
   return (
-    <section className="flex flex-col items-center justify-center relative overflow-hidden px-4 z-10 " style={{ height }}>
+    <section className="flex flex-col items-center justify-center relative overflow-hidden px-4 z-10 min-h-screen h-[100dvh]">
       {/* Corazones flotantes - Solo en pantallas medianas y grandes */}
       {[...Array(8)].map((_, i) => (
         <div
