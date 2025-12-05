@@ -106,7 +106,7 @@ export default function Reception() {
 
   return (
     <>
-      <section className="relative flex flex-col items-center justify-center py-12 px-4 overflow-hidden min-h-screen h-[100dvh]">
+      <section className="relative flex flex-col items-center justify-center py-12 px-4 overflow-hidden my-10" >
         <div className="absolute inset-0 overflow-hidden">
           {/* Partículas doradas - solo en cliente */}
           {particles.map((pos, i) => (
@@ -173,7 +173,7 @@ export default function Reception() {
             <InfoCard
               icon={IoMdTime}
               title="Hora de la Recepción"
-              content="Sábado 14:30 Hrs - Después de la ceremonia, nos reuniremos para celebrar juntos"
+              content="Sábado 14:00 Hrs - Después de la ceremonia, nos reuniremos para celebrar juntos"
               delay={0.2}
             />
 

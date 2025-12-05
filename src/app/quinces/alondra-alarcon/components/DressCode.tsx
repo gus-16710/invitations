@@ -4,47 +4,45 @@ import { confirm } from "./Animations";
 import { useEffect, useState } from "react";
 
 export default function DressCode() {
+  const [particles, setParticles] = useState<
+    Array<{ left: string; top: string }>
+  >([]);
 
-    const [particles, setParticles] = useState<Array<{ left: string; top: string }>>([]);
-    
-      useEffect(() => {
-        // Solo se ejecuta en el cliente
-        const newParticles = Array.from({ length: 15 }, () => ({
-          left: `${Math.random() * 100}%`,
-          top: `${Math.random() * 100}%`,
-        }));
-        setParticles(newParticles);
-      }, []);
+  useEffect(() => {
+    // Solo se ejecuta en el cliente
+    const newParticles = Array.from({ length: 15 }, () => ({
+      left: `${Math.random() * 100}%`,
+      top: `${Math.random() * 100}%`,
+    }));
+    setParticles(newParticles);
+  }, []);
 
   return (
-    <section
-      className="flex flex-col items-center justify-center overflow-hidden z-10 relative min-h-screen h-[100dvh]"
-     
-    >
+    <section className="flex flex-col items-center justify-center overflow-hidden z-10 relative" style={{ height: "100svh" }}>
       {/* Fondos animados */}
       <div className="absolute inset-0 overflow-hidden">
-          {/* Partículas doradas - solo en cliente */}
-          {particles.map((pos, i) => (
-            <motion.div
-              key={`particle-${i}`}
-              className="absolute w-2 h-2 bg-yellow-500/50 rounded-full"
-              style={{
-                left: pos.left,
-                top: pos.top,
-              }}
-              animate={{
-                y: [0, -100, 0],
-                x: [0, Math.sin(i) * 50, 0],
-                opacity: [0, 1, 0],
-              }}
-              transition={{
-                duration: 4 + Math.random() * 3,
-                repeat: Infinity,
-                delay: i * 0.3,
-              }}
-            />
-          ))}
-        </div>
+        {/* Partículas doradas - solo en cliente */}
+        {particles.map((pos, i) => (
+          <motion.div
+            key={`particle-${i}`}
+            className="absolute w-2 h-2 bg-yellow-500/50 rounded-full"
+            style={{
+              left: pos.left,
+              top: pos.top,
+            }}
+            animate={{
+              y: [0, -100, 0],
+              x: [0, Math.sin(i) * 50, 0],
+              opacity: [0, 1, 0],
+            }}
+            transition={{
+              duration: 4 + Math.random() * 3,
+              repeat: Infinity,
+              delay: i * 0.3,
+            }}
+          />
+        ))}
+      </div>
 
       {/* Contenido principal */}
       <div className="relative z-20">

@@ -188,7 +188,7 @@ export default function Presentation() {
   }, [days]);
 
   return (
-    <section className="flex flex-col items-center justify-center relative overflow-hidden px-4 z-10 min-h-screen h-[100dvh]">
+    <section className="flex flex-col items-center justify-center relative overflow-hidden px-4 z-10" style={{ height: "100svh" }}>
       {/* Corazones flotantes - Solo en pantallas medianas y grandes */}
       {[...Array(8)].map((_, i) => (
         <div

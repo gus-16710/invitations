@@ -73,7 +73,7 @@ export default function Header() {
   const text = "Alondra";
 
   return (
-    <section className="flex flex-col justify-center items-center relative overflow-hidden z-10 min-h-screen h-[100dvh]">
+    <section className="flex flex-col justify-center items-center relative overflow-hidden z-10" style={{ height: "100svh" }}>
       {/* Patrón de fondo decorativo */}
       <div className="absolute inset-0 opacity-5">
         <div

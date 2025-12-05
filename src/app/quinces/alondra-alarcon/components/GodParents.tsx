@@ -1,9 +1,7 @@
-import { godParents } from "./Animations";
-import { dancing, playFair, quickSand } from "./Fonts";
+import { dancing, quickSand } from "./Fonts";
 import { motion } from "framer-motion";
 import { Carousel, Flowbite, FlowbiteCarouselTheme } from "flowbite-react";
 import { useEffect, useState } from "react";
-import { useDynamicHeight } from "../hooks/useDynamicHeight";
 
 const customTheme: FlowbiteCarouselTheme = {
   root: {
@@ -47,11 +45,11 @@ export default function GodParents() {
     setParticles(newParticles);
   }, []);
 
-  const height = useDynamicHeight();
 
   return (
     <section
-      className="flex flex-col items-center justify-center relative z-10 overflow-hidden min-h-screen h-[100dvh]"      
+      className="flex flex-col items-center justify-center relative z-10 overflow-hidden"
+      style={{ height: "100svh" }}      
     >
      <div className="absolute inset-0 overflow-hidden">
         {/* Partículas doradas - solo en cliente */}
