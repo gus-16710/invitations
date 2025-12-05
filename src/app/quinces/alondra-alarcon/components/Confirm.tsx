@@ -3,6 +3,7 @@ import { FaSquareWhatsapp, FaSquarePhone } from "react-icons/fa6";
 import { motion } from "framer-motion";
 import { confirm } from "./Animations";
 import { useEffect, useState } from "react";
+import { useDynamicHeight } from "../hooks/useDynamicHeight";
 
 export default function Confirm() {
   const [particles, setParticles] = useState<
@@ -18,8 +19,10 @@ export default function Confirm() {
     setParticles(newParticles);
   }, []);
 
+  const height = useDynamicHeight();
+
   return (
-    <section className="flex flex-col items-center justify-center overflow-clip z-10 relative min-h-screen h-[100dvh]">
+    <section className="flex flex-col items-center justify-center overflow-clip z-10 relative" style={{height}}>
       <div className="absolute inset-0 overflow-hidden">
         {/* Partículas doradas - solo en cliente */}
         {particles.map((pos, i) => (

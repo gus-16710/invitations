@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { dancing, playFair } from "./Fonts";
 import { header } from "./Animations";
+import { useDynamicHeight } from "../hooks/useDynamicHeight";
 
 const list = {
   visible: {
@@ -72,8 +73,13 @@ const floatingParticle = (delay: any) => ({
 export default function Header() {
   const text = "Alondra";
 
+  const height = useDynamicHeight();
+
   return (
-    <section className="flex flex-col justify-center items-center relative overflow-hidden z-10 min-h-screen h-[100dvh]">
+    <section
+      className="flex flex-col justify-center items-center relative overflow-hidden z-10 "
+      style={{ height }}
+    >
       {/* Patrón de fondo decorativo */}
       <div className="absolute inset-0 opacity-5">
         <div

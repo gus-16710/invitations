@@ -11,6 +11,7 @@ import {
   useDisclosure,
 } from "@nextui-org/react";
 import { useEffect, useState } from "react";
+import { useDynamicHeight } from "../hooks/useDynamicHeight";
 
 const ModalMap = ({
   isOpen,
@@ -102,9 +103,11 @@ export default function Reception() {
     setParticles(newParticles);
   }, []);
 
+  const height = useDynamicHeight();
+
   return (
     <>
-      <section className="relative flex flex-col items-center justify-center py-12 px-4 overflow-hidden min-h-screen h-[100dvh]">
+      <section className="relative flex flex-col items-center justify-center py-12 px-4 overflow-hidden" style={{height}}>
         <div className="absolute inset-0 overflow-hidden">
           {/* Partículas doradas - solo en cliente */}
           {particles.map((pos, i) => (
