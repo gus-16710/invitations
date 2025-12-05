@@ -119,7 +119,7 @@ export default function Header() {
         whileInView="visible"
       />
 
-      <div className="relative w-full h-96 flex items-center justify-center overflow-visible mt-4">
+      <div className="relative w-full h-80 flex items-center justify-center overflow-visible mt-4">
         {/* Marco circular con rotación */}
         <motion.div
           className="absolute w-full h-full opacity-80"
@@ -161,7 +161,7 @@ export default function Header() {
 
         {/* Nombre con efecto de degradado */}
         <motion.h1
-          className={`${dancing.className} z-10 text-center text-8xl h-32 flex text-yellow-600`}
+          className={`${dancing.className} z-10 text-center text-7xl h-32 flex text-yellow-600 mt-5`}
           variants={list}
           initial="hidden"
           whileInView="visible"

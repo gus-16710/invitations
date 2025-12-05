@@ -15,6 +15,7 @@ import AudioControl from "./components/AudioControl";
 import DressCode from "./components/DressCode";
 import { TbHandClick } from "react-icons/tb";
 import { great, quickSand } from "./components/Fonts";
+import Gifts from "./components/Gifts";
 
 export default function Alondra() {
   const [isRevealed, setIsRevealed] = useState(false);
@@ -160,7 +161,6 @@ export default function Alondra() {
     },
   };
 
-
   const pulseStarAnimation = {
     animate: {
       scale: [1, 1.3, 1],
@@ -211,7 +211,7 @@ export default function Alondra() {
       repeat: Infinity,
       ease: "easeInOut" as const,
     },
-  };  
+  };
 
   return (
     <div className="relative min-h-screen bg-[url('/img/quinces/alondra-alarcon/background.avif')] bg-center bg-cover h-screen">
@@ -305,7 +305,7 @@ export default function Alondra() {
                       visible: {
                         y: 0,
                         opacity: 1,
-                        transition: { duration: 1, },
+                        transition: { duration: 1 },
                       },
                     }}
                     initial="hidden"
@@ -320,7 +320,7 @@ export default function Alondra() {
                       visible: {
                         x: 0,
                         opacity: 1,
-                        transition: { duration: 1,  },
+                        transition: { duration: 1 },
                       },
                     }}
                     initial="hidden"
@@ -399,7 +399,7 @@ export default function Alondra() {
                     visible: {
                       y: 0,
                       opacity: 1,
-                      transition: { duration: 1, },
+                      transition: { duration: 1 },
                     },
                   }}
                   initial="hidden"
@@ -586,6 +586,7 @@ export default function Alondra() {
                 <Ceremony />
                 <Reception />
                 <DressCode />
+                <Gifts />
                 <Confirm />
 
                 <ReactCanvasConfetti
