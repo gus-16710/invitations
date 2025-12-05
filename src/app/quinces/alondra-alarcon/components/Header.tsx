@@ -191,7 +191,7 @@ export default function Header() {
 
   return (
     <section
-      className="flex flex-col justify-center items-center relative overflow-hidden z-10 min-h-screen"      
+      className="flex flex-col justify-center items-center relative overflow-hidden z-10 min-h-[100svh]"      
     >
       {/* Patrón de fondo decorativo */}
       <div className="absolute inset-0 opacity-5">

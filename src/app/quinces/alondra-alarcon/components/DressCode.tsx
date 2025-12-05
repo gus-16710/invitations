@@ -89,8 +89,8 @@ export default function DressCode() {
 
   return (
     <section
-      className="flex flex-col items-center justify-center overflow-hidden z-10 relative"
-      style={{ height: "100svh" }}
+      className="flex flex-col items-center justify-center overflow-hidden z-10 relative min-h-[100svh]"
+     
     >
       {/* Fondos animados */}
       <div className="absolute inset-0 overflow-hidden">

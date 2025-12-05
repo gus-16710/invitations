@@ -105,7 +105,7 @@ export default function Ceremony() {
 
   return (
     <>
-      <section className="relative flex flex-col items-center justify-center min-h-screen py-12 px-4 overflow-hidden">
+      <section className="relative flex flex-col items-center justify-centermin-h-[100svh] py-12 px-4 overflow-hidden">
         {/* Fondo decorativo */}
 
         <div className="absolute inset-0 overflow-hidden">
