@@ -1,7 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { dancing, lobster, playFair } from './Fonts';
-import { header } from './Animations';
+import React from "react";
+import { motion } from "framer-motion";
+import { dancing, playFair } from "./Fonts";
+import { header } from "./Animations";
 
 const list = {
   visible: {
@@ -21,15 +21,15 @@ const list = {
 };
 
 const item = {
-  visible: { 
-    opacity: 1, 
-    y: 0, 
+  visible: {
+    opacity: 1,
+    y: 0,
     scale: 1,
     transition: {
       type: "spring",
       damping: 12,
-      stiffness: 100
-    }
+      stiffness: 100,
+    },
   },
   hidden: { opacity: 0, y: 100, scale: 0 },
 };
@@ -37,10 +37,10 @@ const item = {
 // Nuevas animaciones
 const decorativeLine = {
   hidden: { scaleX: 0 },
-  visible: { 
-    scaleX: 1, 
-    transition: { duration: 1, delay: 1.5, ease: "easeOut" }
-  }
+  visible: {
+    scaleX: 1,
+    transition: { duration: 1, delay: 1.5, ease: "easeOut" },
+  },
 };
 
 const sparkle = {
@@ -50,9 +50,9 @@ const sparkle = {
     transition: {
       duration: 2,
       repeat: Infinity,
-      ease: "easeInOut"
-    }
-  }
+      ease: "easeInOut",
+    },
+  },
 };
 
 const floatingParticle = (delay: any) => ({
@@ -64,24 +64,25 @@ const floatingParticle = (delay: any) => ({
       duration: 4,
       delay: delay,
       repeat: Infinity,
-      ease: "easeInOut"
-    }
-  }
+      ease: "easeInOut",
+    },
+  },
 });
 
 export default function Header() {
   const text = "Alondra";
 
   return (
-    <section
-      className="flex flex-col justify-center items-center relative overflow-hidden z-10 min-h-[100svh]"      
-    >
+    <section className="flex flex-col justify-center items-center relative overflow-hidden z-10 min-h-[100svh]">
       {/* Patrón de fondo decorativo */}
       <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0" style={{
-          backgroundImage: `radial-gradient(circle, #d97706 1px, transparent 1px)`,
-          backgroundSize: '50px 50px'
-        }} />
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: `radial-gradient(circle, #d97706 1px, transparent 1px)`,
+            backgroundSize: "50px 50px",
+          }}
+        />
       </div>
 
       {/* Partículas flotantes decorativas */}
@@ -100,9 +101,12 @@ export default function Header() {
 
       <motion.h2
         className={`${playFair.className} text-2xl flex items-center text-yellow-600 z-20 mt-2 tracking-wider`}
-        variants={header.text02}
-        initial="hidden"
-        whileInView="visible"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{
+          opacity: 1,
+          y: 0,
+        }}
+        transition={{ duration: 1, delay: 0.5 }}
       >
         MIS <span className="text-5xl mx-2">XV</span> AÑOS
       </motion.h2>
@@ -120,10 +124,11 @@ export default function Header() {
         <motion.div
           className="absolute w-full h-full opacity-80"
           style={{
-            backgroundImage: "url('/img/quinces/alondra-alarcon/round-frame-5.png')",
-            backgroundSize: 'contain',
-            backgroundRepeat: 'no-repeat',
-            backgroundPosition: 'center'
+            backgroundImage:
+              "url('/img/quinces/alondra-alarcon/round-frame-5.png')",
+            backgroundSize: "contain",
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "center",
           }}
           variants={header.roundFrame}
           initial="hidden"
@@ -135,8 +140,8 @@ export default function Header() {
             rotate: {
               duration: 60,
               repeat: Infinity,
-              ease: "linear"
-            }
+              ease: "linear",
+            },
           }}
         />
 
@@ -145,30 +150,30 @@ export default function Header() {
           className="absolute w-80 h-80 bg-yellow-100/25 rounded-full blur-3xl opacity-20"
           animate={{
             scale: [1, 1.1, 1],
-            opacity: [0.2, 0.3, 0.2]
+            opacity: [0.2, 0.3, 0.2],
           }}
           transition={{
             duration: 3,
             repeat: Infinity,
-            ease: "easeInOut"
+            ease: "easeInOut",
           }}
         />
 
         {/* Nombre con efecto de degradado */}
         <motion.h1
-          className={`${dancing.className} z-10 text-center text-8xl h-32 flex text-yellow-600`}         
+          className={`${dancing.className} z-10 text-center text-8xl h-32 flex text-yellow-600`}
           variants={list}
           initial="hidden"
           whileInView="visible"
         >
           {text.split("").map((letter, index) => (
-            <motion.span 
-              key={index} 
+            <motion.span
+              key={index}
               variants={item}
-              whileHover={{ 
-                scale: 1.2, 
+              whileHover={{
+                scale: 1.2,
                 rotate: [-5, 5, -5],
-                transition: { duration: 0.3 }
+                transition: { duration: 0.3 },
               }}
             >
               {letter}
@@ -188,7 +193,7 @@ export default function Header() {
           className="absolute right-1/4 top-1/4 text-yellow-500 text-2xl"
           variants={sparkle}
           animate="animate"
-          style={{ animationDelay: '1s' }}
+          style={{ animationDelay: "1s" }}
         >
           ✦
         </motion.div>
@@ -202,35 +207,45 @@ export default function Header() {
         whileInView="visible"
       />
 
-      <div className={`${playFair.className} flex items-center flex-col mt-5 text-yellow-800`}>
+      <div
+        className={`${playFair.className} flex items-center flex-col mt-5 text-yellow-800`}
+      >
         <motion.span
           className="px-2 pb-2 text-base tracking-widest"
-          variants={header.month}
-          initial="hidden"
-          whileInView="visible"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+            transition: { duration: 1, delay: 3 },
+          }}
         >
           ✿ ENERO ✿
         </motion.span>
-        
-        <div className="flex items-center gap-2">        
-          
+
+        <div className="flex items-center gap-2">
           <p className="flex items-center">
             <motion.span
               className="border-y border-y-yellow-700 py-2 px-3 text-center text-yellow-800 text-base"
               style={{ letterSpacing: "2px" }}
-              variants={header.day}
-              initial="hidden"
-              whileInView="visible"
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{
+                opacity: 1,
+                x: 0,
+                transition: { duration: 1, delay: 3 },
+              }}
             >
               SÁBADO
             </motion.span>
             <motion.span
               className="text-yellow-700 text-6xl px-4 pb-5 font-bold"
-              variants={header.dayNumber}
-              initial="hidden"
-              whileInView="visible"
+              initial={{ opacity: 0, scale: 0 }}
+              whileInView={{
+                opacity: 1,
+                scale: 1,
+                transition: { duration: 1, delay: 2.5 },
+              }}
               style={{
-                textShadow: '0 2px 10px rgba(217, 119, 6, 0.3)'
+                textShadow: "0 2px 10px rgba(217, 119, 6, 0.3)",
               }}
             >
               10
@@ -238,25 +253,30 @@ export default function Header() {
             <motion.span
               className="border-y border-y-amber-800 py-2 px-3 text-center text-yellow-700 text-base"
               style={{ letterSpacing: "2px" }}
-              variants={header.time}
-              initial="hidden"
-              whileInView="visible"
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{
+                opacity: 1,
+                x: 0,
+                transition: { duration: 1, delay: 3 },
+              }}
             >
               12:00 HRS
             </motion.span>
           </p>
-       
         </div>
 
         <motion.p
           className={`${playFair.className} text-3xl font-bold tracking-wider`}
           style={{
-            color: '#d97706',
-            textShadow: '0 2px 8px rgba(217, 119, 6, 0.2)'
+            color: "#d97706",
+            textShadow: "0 2px 8px rgba(217, 119, 6, 0.2)",
           }}
-          variants={header.year}
-          initial="hidden"
-          whileInView="visible"
+          initial={{ opacity: 0, y: -50 }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+            transition: { duration: 1, delay: 3 },
+          }}
         >
           • 2026 •
         </motion.p>

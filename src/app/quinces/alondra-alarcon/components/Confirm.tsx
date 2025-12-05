@@ -19,9 +19,7 @@ export default function Confirm() {
   }, []);
 
   return (
-    <section
-      className="flex flex-col items-center justify-center overflow-clip z-10 relative min-h-[100svh]"     
-    >
+    <section className="flex flex-col items-center justify-center overflow-clip z-10 relative min-h-[100svh]">
       <div className="absolute inset-0 overflow-hidden">
         {/* Partículas doradas - solo en cliente */}
         {particles.map((pos, i) => (
@@ -48,18 +46,24 @@ export default function Confirm() {
 
       <motion.h1
         className={`${dancing.className} text-yellow-600 text-6xl text-center`}
-        variants={confirm.text01}
-        initial="hidden"
-        whileInView="visible"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{
+          opacity: 1,
+          y: 0,
+          transition: { duration: 1, delay: 1 },
+        }}
       >
         &nbsp;Confirmar&nbsp; <br /> &nbsp;Asistencia&nbsp;
       </motion.h1>
 
       <motion.p
         className={`${quickSand.className} text-amber-800 text-lg px-5 text-center mt-5 max-w-md`}
-        variants={confirm.text02}
-        initial="hidden"
-        whileInView="visible"
+        initial={{ opacity: 0, y: -50 }}
+        whileInView={{
+          opacity: 1,
+          y: 0,
+          transition: { duration: 1, delay: 1.5 },
+        }}
       >
         Espero que puedan venir a compartir con nosotros este día inolvidable.
         Por favor confirma tu presencia.
@@ -67,9 +71,12 @@ export default function Confirm() {
 
       <motion.p
         className={`${quickSand.className} text-amber-800 text-lg px-5 text-center mt-5 max-w-md`}
-        variants={confirm.text03}
-        initial="hidden"
-        whileInView="visible"
+        initial={{ opacity: 0, y: -50 }}
+        whileInView={{
+          opacity: 1,
+          y: 0,
+          transition: { duration: 1, delay: 2 },
+        }}
       >
         ¡Muchas gracias!
       </motion.p>
@@ -77,9 +84,11 @@ export default function Confirm() {
       <motion.button
         role="button"
         className="golden-button mt-10 w-72"
-        variants={confirm.button01}
-        initial="hidden"
-        whileInView="visible"
+        initial={{ opacity: 0 }}
+        whileInView={{
+          opacity: 1,
+          transition: { duration: 1, delay: 2 },
+        }}
         onClick={() => window.open("https://wa.link/90tp3f", "_blank")}
       >
         <span className="golden-text flex justify-around items-center">
@@ -90,9 +99,11 @@ export default function Confirm() {
       <motion.button
         role="button"
         className="golden-button mt-5 w-72"
-        variants={confirm.button02}
-        initial="hidden"
-        whileInView="visible"
+        initial={{ opacity: 0 }}
+        whileInView={{
+          opacity: 1,
+          transition: { duration: 1, delay: 2 },
+        }}
         onClick={() => window.open("tel:2285723757", "_blank")}
       >
         <span className="golden-text flex justify-around items-center ">

@@ -35,7 +35,7 @@ const ModalMap = ({
             >
               Recepción
             </ModalHeader>
-            <ModalBody className="pb-6">              
+            <ModalBody className="pb-6">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1879.5017444828823!2d-96.93554647694201!3d19.58435120917267!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2smx!4v1764892647843!5m2!1ses!2smx"
                 height="450"
@@ -70,8 +70,7 @@ const InfoCard = ({ icon: Icon, title, content, delay }: any) => (
     className="bg-white/80 backdrop-blur-sm p-4 rounded-xl shadow-lg border border-yellow-200 w-full"
     initial={{ opacity: 0, y: 20 }}
     whileInView={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.6, delay }}
-    viewport={{ once: true }}
+    transition={{ duration: 0.6, delay }}   
   >
     <div className="flex items-center gap-3 mb-2">
       <div className="p-2 bg-amber-100 rounded-lg">
@@ -150,21 +149,18 @@ export default function Reception() {
         {/* Contenido principal */}
         <div className="relative z-10 max-w-4xl mx-auto w-full">
           {/* Encabezado */}
-          <motion.div
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: -30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
+          <motion.div className="text-center mb-12">
             <div className="inline-flex items-center justify-center p-3 bg-gradient-to-r from-amber-100 to-yellow-100 rounded-full mb-4">
               <FaGlassCheers className="text-amber-600 text-3xl" />
             </div>
             <motion.h1
               className={`${dancing.className} text-6xl md:text-7xl text-amber-700 mb-2`}
-              initial={{ scale: 0.9, opacity: 0 }}
-              whileInView={{ scale: 1, opacity: 1 }}
-              transition={{ duration: 0.6, type: "spring" }}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+                transition: { duration: 1, delay: 1 },
+              }}
             >
               Recepción
             </motion.h1>
@@ -190,8 +186,7 @@ export default function Reception() {
               className="bg-gradient-to-r from-amber-500/10 to-yellow-500/10 p-4 rounded-xl border border-amber-200 w-full"
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.6 }}
-              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.6 }}              
             >
               <p className={`${quickSand.className} text-amber-800 text-sm`}>
                 <span className="font-semibold">Dirección:</span> Av. Libertad,
@@ -204,8 +199,7 @@ export default function Reception() {
               className="golden-button relative overflow-hidden px-6 py-3 rounded-xl font-semibold text-white w-1/2"
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.8 }}
-              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.8 }}              
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
             >
@@ -219,8 +213,7 @@ export default function Reception() {
               className={`${quickSand.className} text-amber-600 text-center mt-4 text-sm`}
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
-              transition={{ duration: 0.6, delay: 0.8 }}
-              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.8 }}              
             >
               Haz clic para ver la ubicación exacta y obtener indicaciones
             </motion.p>
