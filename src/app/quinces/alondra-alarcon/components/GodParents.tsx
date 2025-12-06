@@ -34,7 +34,9 @@ const customTheme: FlowbiteCarouselTheme = {
 };
 
 export default function GodParents() {
-  const [particles, setParticles] = useState<Array<{ left: string; top: string }>>([]);
+  const [particles, setParticles] = useState<
+    Array<{ left: string; top: string }>
+  >([]);
 
   useEffect(() => {
     // Solo se ejecuta en el cliente
@@ -45,13 +47,12 @@ export default function GodParents() {
     setParticles(newParticles);
   }, []);
 
-
   return (
     <section
       className="flex flex-col items-center justify-center relative z-10 overflow-hidden"
-      style={{ height: "100svh" }}      
+      style={{ height: "100svh" }}
     >
-     <div className="absolute inset-0 overflow-hidden">
+      <div className="absolute inset-0 overflow-hidden">
         {/* Partículas doradas - solo en cliente */}
         {particles.map((pos, i) => (
           <motion.div
@@ -93,7 +94,7 @@ export default function GodParents() {
               transition={{ duration: 1, ease: "easeOut" }}
             >
               Nelson Romero Márquez <br />&<br /> Karen Jhoselin Mendoza
-              Gonalzález
+              González
             </motion.p>
           </div>
           <div className="flex h-full items-center justify-center pb-10 text-zinc-700 flex-col px-5 text-center gap-10">
