@@ -37,8 +37,8 @@ const ModalMap = ({
             </ModalHeader>
             <ModalBody className="pb-6">
               <iframe
-                //<iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d469.8763122418054!2d-96.93509923313523!3d19.58405092651041!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sus!4v1765499055421!5m2!1ses-419!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d469.8763122418054!2d-96.93509923313523!3d19.58405092651041!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sus!4v1765499055421!5m2!1ses-419!2sus"
+                //<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2658.0098484056034!2d-96.93633114762223!3d19.584775876177133!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85db2f006e03df61%3A0xf1ddd77ce977a845!2sSal%C3%B3n%20de%20Eventos%20Acosta!5e0!3m2!1ses!2smx!4v1765499730880!5m2!1ses!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2658.0098484056034!2d-96.93633114762223!3d19.584775876177133!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85db2f006e03df61%3A0xf1ddd77ce977a845!2sSal%C3%B3n%20de%20Eventos%20Acosta!5e0!3m2!1ses!2smx!4v1765499730880!5m2!1ses!2smx"
                 height="450"
                 style={{ border: "0" }}
                 allowFullScreen
