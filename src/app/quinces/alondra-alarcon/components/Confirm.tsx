@@ -83,7 +83,7 @@ export default function Confirm() {
 
       <motion.button
         role="button"
-        className="golden-button mt-10 w-72"
+        className="golden-button mt-10 w-72 z-10"
         initial={{ opacity: 0 }}
         whileInView={{
           opacity: 1,
@@ -98,7 +98,7 @@ export default function Confirm() {
 
       <motion.button
         role="button"
-        className="golden-button mt-5 w-72"
+        className="golden-button mt-5 w-72 z-10"
         initial={{ opacity: 0 }}
         whileInView={{
           opacity: 1,

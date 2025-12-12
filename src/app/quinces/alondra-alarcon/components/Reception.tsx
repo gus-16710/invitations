@@ -37,7 +37,8 @@ const ModalMap = ({
             </ModalHeader>
             <ModalBody className="pb-6">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1879.5017444828823!2d-96.93554647694201!3d19.58435120917267!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2smx!4v1764892647843!5m2!1ses!2smx"
+                //<iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d469.8763122418054!2d-96.93509923313523!3d19.58405092651041!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sus!4v1765499055421!5m2!1ses-419!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d469.8763122418054!2d-96.93509923313523!3d19.58405092651041!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sus!4v1765499055421!5m2!1ses-419!2sus"
                 height="450"
                 style={{ border: "0" }}
                 allowFullScreen
