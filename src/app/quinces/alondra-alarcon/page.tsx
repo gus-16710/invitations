@@ -214,8 +214,7 @@ export default function Alondra() {
   };
 
   return (
-    <div className="relative min-h-screen bg-[url('/img/quinces/alondra-alarcon/background.avif')] bg-center bg-cover h-screen">
-      {/* Pantalla dividida inicial */}
+    <div className="relative min-h-screen bg-[url('/img/quinces/alondra-alarcon/background.avif')] bg-center bg-cover h-screen">      
       <AnimatePresence>
         {!isRevealed && (
           <div className="fixed inset-0 z-50 flex">
