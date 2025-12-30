@@ -153,7 +153,7 @@ export default function Header() {
         className="absolute inset-0 bg-cover bg-center z-0"
         style={{
           backgroundImage:
-            "linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent), url('/img/festejos/jyr/main2.jpg')",
+            "linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent), url('/img/festejos/jyr/main3.jpg')",
         }}
       />
       {/* Elementos animados de fondo */}
