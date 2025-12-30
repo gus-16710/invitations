@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 
 import { Great_Vibes, Titillium_Web } from "next/font/google";
-import { anton, great, julius, playFair, rye } from "./Fonts";
+import { playFair } from "./Fonts";
 
 const greatVibes = Great_Vibes({ subsets: ["latin"], weight: "400" });
 const notoSans = Titillium_Web({ subsets: ["latin"], weight: "400" });
