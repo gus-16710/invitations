@@ -26,17 +26,21 @@ export default function Presentation() {
           whileInView={{ scale: 1, opacity: 1 }}
           transition={{ duration: 1, ease: "easeOut", delay: 0.8 }}
         >
-          <label className={`${playFair.className} pb-3`}>Diciembre</label>
+          <label className={`${playFair.className} pb-3 text-xl`}>Diciembre</label>
           <div className="flex items-center">
-            <label className={`${playFair.className} p-4 w-20 text-center`}>SAB</label>
+            <label className={`${playFair.className} p-4 w-20 text-center text-xl`}>
+              SÁB
+            </label>
             <label
-              className={`${greatVibes.className} py-2 px-4 border-l-2 border-r-2 border-gray-300 text-5xl`}
+              className={`${greatVibes.className} py-2 px-4 border-l-2 border-r-2 border-gray-300 text-6xl`}
             >
               19
             </label>
-            <label className={`${playFair.className} p-4 w-20 text-center`}>1 pm</label>
+            <label className={`${playFair.className} p-4 w-20 text-center text-xl`}>
+              1 pm
+            </label>
           </div>
-          <label className={`${playFair.className}`}>2026</label>
+          <label className={`${playFair.className} text-xl`}>2026</label>
         </motion.div>
         <motion.p
           className={`${notoSans.className} text-center p-5 max-w-md`}
@@ -44,12 +48,12 @@ export default function Presentation() {
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 1, ease: "easeInOut", delay: 1.2 }}
         >
-          Despues de muchas aventuras compartidas, daremos el "Si, acepto"
-          seguiremos este emocionante viaje juntos y nos encantaría que nos
-          acompañaran a celebrar esta gran fiesta de nuestra boda, llena de
-          brindis, carcajadas y bailes hasta el amanecer.
+          Después de muchas aventuras compartidas y sueños construidos de la
+          mano, hemos decidido dar el “sí, acepto”. Comienza un nuevo amanecer
+          juntos, con el alma llena de amor, ilusión y promesas que florecen en
+          cada paso de nuestro caminar.
         </motion.p>
-        <div className="flex justify-center mt-5">
+        <div className="flex justify-center mt-2">
           <motion.svg
             xmlns="http://www.w3.org/2000/svg"
             xmlnsXlink="http://www.w3.org/1999/xlink"

@@ -21,6 +21,9 @@ import Header from "./components/Header";
 import Presentation from "./components/Presentation";
 import Ceremony from "./components/Ceremony";
 import Reception from "./components/Reception";
+import DressCode from "./components/DressCode";
+import Video from "./components/Video";
+import AudioControl from "./components/AudioControl";
 
 const list = {
   visible: {
@@ -405,7 +408,7 @@ export default function JYR() {
   return (
     <main className={`background-class ${open ? "" : "h-screen"}`}>
       {open && (
-        <div className="max-w-3xl m-auto bg-[url('/img/bodas/diana-ernesto/background-main.jpg')] bg-cover bg-center shadow-large">
+        <div className="max-w-3xl m-auto bg-[url('/img/festejos/jyr/background-main-3.jpg')] bg-cover bg-center shadow-large relative">
           <Splide
             aria-label="J & R"
             options={{
@@ -434,11 +437,14 @@ export default function JYR() {
             <SplideSlide>
               <Reception />
             </SplideSlide>
-            {/*<SplideSlide>
-              <Confirm />
-            </SplideSlide> */}
+            <SplideSlide>
+              <DressCode />
+            </SplideSlide>
+            <SplideSlide>
+              <Video />
+            </SplideSlide>
           </Splide>
-          {/* <AudioControl /> */}
+          <AudioControl />
         </div>
       )}
       <ModalOpening

@@ -16,6 +16,7 @@ import {
 } from "@nextui-org/react";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { IoMdTime } from "react-icons/io";
+import { LuMapPin } from "react-icons/lu";
 
 const greatVibes = Great_Vibes({ subsets: ["latin"], weight: "400" });
 const notoSans = Titillium_Web({ subsets: ["latin"], weight: "400" });
@@ -46,7 +47,7 @@ const ModalMap = ({
               Ceremonia Religiosa
             </ModalHeader>
             <ModalBody>
-              <iframe              
+              <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7517.789250991576!2d-96.9469787738586!3d19.58901463891785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85db2fb78a66bb13%3A0x6935f2c47beef73d!2sSantuario%20Parroquial%20De%20San%20Jos%C3%A9!5e0!3m2!1ses!2smx!4v1767057206291!5m2!1ses!2smx"
                 height="450"
                 style={{ border: "0" }}
@@ -69,12 +70,12 @@ export default function Ceremony() {
 
   return (
     <>
-      <section        
-        className="flex justify-center items-center flex-col pt-20 pb-20"
+      <section
+        className="flex justify-center items-center flex-col pt-20 pb-20 bg-[url('/img/festejos/jyr/church.jpg')] bg-cover bg-center relative"
         style={{ height: "100svh" }}
       >
         <motion.h1
-          className={`${greatVibes.className} text-5xl p-5 text-center`}
+          className={`${greatVibes.className} text-5xl p-5 text-center text-zinc-50 z-50`}
           initial={{ y: -100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 1, delay: 0.3 }}
@@ -86,7 +87,7 @@ export default function Ceremony() {
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 512 512"
           width="100px"
-          fill="rgb(75 85 99)"
+          className={"fill-zinc-50 z-50"}
           initial={{ scale: 0, opacity: 0 }}
           whileInView={{ scale: 1, opacity: 1 }}
           transition={{ duration: 1, ease: "easeOut", delay: 0.6 }}
@@ -98,18 +99,18 @@ export default function Ceremony() {
           </g>
         </motion.svg>
         <motion.div
-          className={`${love.className} mt-5 text-center text-yellow-900 text-2xl`}
+          className={`${love.className} mt-5 text-center text-zinc-50 text-4xl z-50`}
           initial={{ y: 100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 1, ease: "easeInOut", delay: 0.9 }}
         >
           <p className="flex items-center justify-center gap-1">
-            ~ <IoMdTime /> 13:00 HRS ~
+            ~ 13:00 HRS ~
           </p>
           <p className="text-sm">19 de Diciembre de 2026</p>
         </motion.div>
         <motion.p
-          className={`${markazi.className} text-center mx-5 mt-5 text-2xl text-zinc-600 max-w-md`}
+          className={`${markazi.className} text-center mx-5 mt-5 text-2xl text-zinc-50 max-w-md z-50`}
           initial={{ y: 100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 1, ease: "easeInOut", delay: 1.2 }}
@@ -117,7 +118,7 @@ export default function Ceremony() {
           Santuario Parroquial De San José
         </motion.p>
         <motion.p
-          className={`${notoSans.className} text-center mx-5 mt-3 text-sm max-w-md`}
+          className={`${notoSans.className} text-center mx-5 mt-3 text-sm max-w-md text-zinc-50 z-50`}
           initial={{ y: 100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: false }}
@@ -130,22 +131,20 @@ export default function Ceremony() {
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: false }}
           transition={{ duration: 1, ease: "easeInOut", delay: 1.6 }}
-          className="mt-5"
-        >
-          <Button
-            className="mt-3 mb-4 text-tiny"
-            variant="flat"
-            color="warning"
-            radius="lg"
-            size="sm"
+          className="mt-5 z-50"
+        >          
+          <button
+            type="button"
+            className="mt-5 text-zinc-50 bg-white/0 border border-gray-400 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 rounded-full me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700 font-medium text-sm px-5 py-2.5 text-center flex items-center"
             onClick={() => {
               onOpen();
             }}
           >
-            <FaMapMarkerAlt />
-            VER UBICACIÓN
-          </Button>
+            <LuMapPin className="mr-1" />
+            Ver Ubicación
+          </button>
         </motion.div>
+        <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent"></div>
       </section>
       <ModalMap isOpen={isOpen} onOpenChange={onOpenChange} />
     </>
