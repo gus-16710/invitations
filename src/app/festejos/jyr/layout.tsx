@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     description:
       "Jess Y Roberto están por llegar y quiero que formes parte de este día tan especial, lleno de luz, sonrisas y recuerdos inolvidables. 🌸✨",
     images: [
-      `https://invitaciones.unaideamas.com/img/festejos/jyr/main.jpg`,
+      `https://invitaciones.unaideamas.com/img/festejos/jyr/main2.jpg`,
     ],
   },
   icons: {
