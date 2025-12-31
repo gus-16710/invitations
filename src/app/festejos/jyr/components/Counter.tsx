@@ -105,7 +105,7 @@ export default function Counter() {
 
         {/* Contador minimalista - tamaño ajustado */}
         <motion.div
-          className="grid grid-cols-2 md:flex items-center justify-center gap-4 md:gap-6 lg:gap-8 mb-8 md:mb-12"
+          className="grid grid-cols-2 md:flex items-center justify-center gap-4 md:gap-6 lg:gap-8 mb-8 md:mb-12 mx-10"
           initial={{ y: 50, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 1, ease: "easeOut", delay: 0.8 }}
@@ -119,10 +119,10 @@ export default function Counter() {
               animate={{ scale: 1, opacity: 1 }}
               transition={{ duration: 0.5, delay: 1 }}
             />
-            <div className="relative p-4 md:p-6 text-center min-w-[120px] md:min-w-[140px]">
+            <div className="relative p-4 md:p-6 text-center min-w-[120px]">
               <div
                 ref={scopeDays}
-                className={`${allura.className} text-2xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-2 tracking-tight`}
+                className={`${allura.className} text-2xl md:text-4xl font-bold text-gray-900 mb-2 tracking-tight`}
               >
                 {formatNumber(days)}
               </div>
@@ -151,10 +151,10 @@ export default function Counter() {
               animate={{ scale: 1, opacity: 1 }}
               transition={{ duration: 0.5, delay: 1.1 }}
             />
-            <div className="relative p-4 md:p-6 text-center min-w-[120px] md:min-w-[140px]">
+            <div className="relative p-4 md:p-6 text-center min-w-[120px] ">
               <div
                 ref={scopeHours}
-                className={`${allura.className} text-2xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-2 tracking-tight`}
+                className={`${allura.className} text-2xl md:text-4xl  font-bold text-gray-900 mb-2 tracking-tight`}
               >
                 {formatNumber(hours)}
               </div>
@@ -183,15 +183,15 @@ export default function Counter() {
               animate={{ scale: 1, opacity: 1 }}
               transition={{ duration: 0.5, delay: 1.2 }}
             />
-            <div className="relative p-4 md:p-6 text-center min-w-[120px] md:min-w-[140px]">
+            <div className="relative p-4 md:p-6 text-center min-w-[120px]">
               <div
                 ref={scopeMinutes}
-                className={`${allura.className} text-2xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-2 tracking-tight`}
+                className={`${allura.className} text-2xl md:text-4xl font-bold text-gray-900 mb-2 tracking-tight`}
               >
                 {formatNumber(minutes)}
               </div>
               <div className={`${notoSans.className} text-sm md:text-base text-gray-600 uppercase tracking-widest`}>
-                Minutos
+                Min
               </div>
             </div>
           </div>
@@ -215,15 +215,15 @@ export default function Counter() {
               animate={{ scale: 1, opacity: 1 }}
               transition={{ duration: 0.5, delay: 1.3 }}
             />
-            <div className="relative p-4 md:p-6 text-center min-w-[120px] md:min-w-[140px]">
+            <div className="relative p-4 md:p-6 text-center min-w-[120px]">
               <div
                 ref={scopeSeconds}
-                className={`${allura.className} text-2xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-2 tracking-tight`}
+                className={`${allura.className} text-2xl md:text-4xl font-bold text-gray-900 mb-2 tracking-tight`}
               >
                 {formatNumber(seconds)}
               </div>
               <div className={`${notoSans.className} text-sm md:text-base text-gray-600 uppercase tracking-widest`}>
-                Segundos
+                Seg
               </div>
             </div>
           </div>
