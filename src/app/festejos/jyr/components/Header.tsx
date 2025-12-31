@@ -58,8 +58,8 @@ const FloatingParticles = () => {
   );
 };
 
-export default function Header() { 
-
+export default function Header() {
+    
   return (
     <motion.div
       className="pb-10 flex justify-end items-center flex-col relative overflow-hidden"
@@ -84,19 +84,17 @@ export default function Header() {
 
       {/* Contenedor de nombres con animación stagger */}
       <div
-        className={`text-6xl text-slate-200 text-center z-10 flex gap-4 mb-5`}
+        className={`text-6xl text-slate-200 text-center flex gap-4  relative z-10`}
         style={{ fontFamily: "candlescript" }}
       >
         <motion.p
-          className="custom-shadow relative"
           initial={{ y: -100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
-          transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
+          transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}          
         >
-          <span className="relative z-10">Jess</span>
+          Jess
         </motion.p>
         <motion.p
-          className="custom-shadow"
           initial={{ y: -100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 1, ease: "easeOut", delay: 0.6 }}
@@ -104,18 +102,17 @@ export default function Header() {
           y
         </motion.p>
         <motion.p
-          className="custom-shadow relative"
           initial={{ y: -100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 1, ease: "easeOut", delay: 0.9 }}
         >
-          <span className="relative z-10">Rafa</span>
+          Rafa
         </motion.p>
-      </div>     
+      </div>
 
       {/* Texto decorativo adicional */}
       <motion.p
-        className={`text-zinc-50 text-lg mt-5 z-10 italic ${julius.className}`}
+        className={`text-zinc-50 text-lg mt-10 z-10 italic ${julius.className}`}
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 1, ease: "easeInOut", delay: 1.2 }}

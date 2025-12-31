@@ -399,6 +399,7 @@ const ModalOpening = ({
 export default function JYR() {
   const [open, setOpen] = useState(false);
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
+  const [splide, setSplide] = useState(0);
 
   useEffect(() => {
     onOpen();
@@ -422,13 +423,17 @@ export default function JYR() {
               classes: {
                 page: "splide__pagination__page custom-class-page", // each button
               },
+              
+            }}
+            onActive={(splide: any) => {
+              setSplide(splide.index);
             }}
           >
             <SplideSlide>
               <Header />
             </SplideSlide>
             <SplideSlide>
-              <Presentation />
+              <Presentation splide={splide}/>
             </SplideSlide>
             <SplideSlide>
               <Ceremony />

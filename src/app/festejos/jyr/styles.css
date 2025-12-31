@@ -23,16 +23,35 @@
 
 .text-golden {
   background-image: linear-gradient(
-    to right,
+    to bottom,
     #462523 0,
     #cb9b51 22%,
-    #f6e27a 400%,
-    #f6f2c0 500%,
-    #f6e27a 5%,
-    #cb9b51 5000%,
-    #462523 5000%
+    #f6e27a 75%,
+    #f6f2c0 50%,
+    #f6e27a 50%,
+    #cb9b51 100%,
+    #462523 100%
   );
   color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
+}
+
+
+
+
+
+.texto-dorado-compatible {
+    /* Fallback para navegadores que no soportan background-clip */
+    color: #daa520;
+    
+    /* Para navegadores modernos */
+    background: linear-gradient(to bottom, #f6e27a, #d4af37, #b8860b);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    
+    text-shadow: 0 2px 4px rgba(184, 134, 11, 0.2);
 }

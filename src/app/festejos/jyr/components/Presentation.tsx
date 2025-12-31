@@ -1,11 +1,24 @@
 import { motion } from "framer-motion";
 import { Great_Vibes, Titillium_Web, Playfair_Display } from "next/font/google";
 
+import NumberFlow from "@number-flow/react";
+import { useEffect, useState } from "react";
+
 const greatVibes = Great_Vibes({ subsets: ["latin"], weight: "400" });
 const notoSans = Titillium_Web({ subsets: ["latin"], weight: "400" });
 const playFair = Playfair_Display({ subsets: ["latin"], weight: "400" });
 
-export default function Presentation() {
+export default function Presentation({ splide }: { splide: number }) {
+  const [day, setDay] = useState(0);
+
+  useEffect(() => {
+    if (splide === 1) {
+      setDay(19);
+    } else {
+      setDay(0);
+    }
+  }, [splide]);
+
   return (
     <section
       className="flex justify-center items-center flex-col"
@@ -26,20 +39,35 @@ export default function Presentation() {
           whileInView={{ scale: 1, opacity: 1 }}
           transition={{ duration: 1, ease: "easeOut", delay: 0.8 }}
         >
-          <label className={`${playFair.className} pb-3 text-xl`}>Diciembre</label>
+          <label className={`${playFair.className} pb-3 text-xl`}>
+            Diciembre
+          </label>
           <div className="flex items-center">
-            <label className={`${playFair.className} p-4 w-20 text-center text-xl`}>
+            <label
+              className={`${playFair.className} p-4 w-20 text-center text-xl`}
+            >
               SÁB
             </label>
             <label
-              className={`${greatVibes.className} py-2 px-4 border-l-2 border-r-2 border-gray-300 text-6xl`}
+              className={`${greatVibes.className} px-4 border-l-2 border-r-2 border-gray-300 text-6xl`}
             >
-              19
+              <NumberFlow
+                value={day}
+                transformTiming={{
+                  delay: 200,
+                  duration: 4000,
+                }}
+                trend={0}
+                format={{ minimumIntegerDigits: 2 }}
+                className="p-0 m-0"
+              />
             </label>
-            <label className={`${playFair.className} p-4 w-20 text-center text-xl`}>
+            <label
+              className={`${playFair.className} p-4 w-20 text-center text-xl`}
+            >
               2026
             </label>
-          </div>          
+          </div>
         </motion.div>
         <motion.p
           className={`${notoSans.className} text-center p-5 max-w-md`}

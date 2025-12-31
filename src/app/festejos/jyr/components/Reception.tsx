@@ -110,7 +110,7 @@ export default function Reception() {
           </g>
         </motion.svg>
         <motion.div
-          className={`${love.className} mt-5 text-center text-zinc-50 text-4xl z-50`}
+          className={`${love.className} mt-5 text-center text-zinc-50 text-5xl z-50`}
           initial={{ y: 100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: false }}
@@ -118,8 +118,7 @@ export default function Reception() {
         >
           <p className="flex items-center justify-center gap-1">
             ~ 15:00 HRS ~{" "}
-          </p>
-          <p className="text-sm">19 de Diciembre del 2026</p>
+          </p>          
         </motion.div>
         <motion.p
           className={`${markazi.className} text-center mx-5 mt-5 text-2xl text-zinc-50 z-50`}
