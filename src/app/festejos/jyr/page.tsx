@@ -24,6 +24,7 @@ import Reception from "./components/Reception";
 import DressCode from "./components/DressCode";
 import Video from "./components/Video";
 import AudioControl from "./components/AudioControl";
+import Counter from "./components/Counter";
 
 const list = {
   visible: {
@@ -245,8 +246,7 @@ const ModalOpening = ({
                       return (
                         <motion.span
                           key={index}
-                          variants={item}
-                          className="text-golden"
+                          variants={item}                          
                         >
                           {letter}
                         </motion.span>
@@ -264,8 +264,7 @@ const ModalOpening = ({
                       return (
                         <motion.span
                           key={index}
-                          variants={item}
-                          className="text-golden"
+                          variants={item}                          
                         >
                           {letter}
                         </motion.span>
@@ -442,6 +441,9 @@ export default function JYR() {
             </SplideSlide>
             <SplideSlide>
               <Video />
+            </SplideSlide>
+            <SplideSlide>
+              <Counter />
             </SplideSlide>
           </Splide>
           <AudioControl />

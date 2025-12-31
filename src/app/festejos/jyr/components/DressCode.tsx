@@ -74,12 +74,13 @@ export default function DressCode() {
           Mujeres & Hombres
         </motion.h2>
         <motion.p
-          className={`${notoSans.className} text-center mt-2 mx-10`}
+          className={`${notoSans.className} text-center mt-5 mx-10`}
           initial={{ y: 100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 1, ease: "easeInOut", delay: 0.9 }}
         >
-          Elijan un atuendo comodo y que refleje su estilo personal.
+          Queremos que disfruten este día tan especial. Elijan un atuendo comodo
+          y que refleje su estilo personal.
         </motion.p>
 
         <motion.div

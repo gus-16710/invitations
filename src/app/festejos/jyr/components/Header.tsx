@@ -1,10 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { allura, julius } from "./Fonts";
 import { useAnimate, motion } from "framer-motion";
-
-export function formatNumber(number: number) {
-  return number < 10 ? `0${number}` : number;
-}
+import { IoIosArrowDown } from "react-icons/io";
 
 // Definimos las animaciones
 const fadeInUp = {
@@ -61,81 +58,7 @@ const FloatingParticles = () => {
   );
 };
 
-export default function Header() {
-  const [seconds, setSeconds] = useState(0);
-  const [minutes, setMinutes] = useState(0);
-  const [hours, setHours] = useState(0);
-  const [days, setDays] = useState(0);
-
-  const countDownClock = () => {
-    const countDownDate: any = new Date("Dec 19, 2026 13:00:00");
-
-    const interval = setInterval(() => {
-      const now = new Date().getTime();
-      const distance = countDownDate - now;
-
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor(
-        (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-      );
-      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-      if (distance < 0) {
-        clearInterval(interval);
-        setSeconds(0);
-        setMinutes(0);
-        setHours(0);
-        setDays(0);
-      } else {
-        setSeconds(seconds);
-        setMinutes(minutes);
-        setHours(hours);
-        setDays(days);
-      }
-    }, 1000);
-  };
-
-  useEffect(() => {
-    countDownClock();
-  }, []);
-
-  const [scopeSeconds, animateSeconds] = useAnimate();
-  const [scopeMinutes, animateMinutes] = useAnimate();
-  const [scopeHours, animateHours] = useAnimate();
-  const [scopeDays, animateDays] = useAnimate();
-
-  useEffect(() => {
-    animateSeconds(
-      scopeSeconds.current,
-      { y: [20, 0], opacity: [0, 1] },
-      { ease: "easeInOut", type: "keyframes" }
-    );
-  }, [seconds, animateSeconds]);
-
-  useEffect(() => {
-    animateMinutes(
-      scopeMinutes.current,
-      { y: [20, 0], opacity: [0, 1] },
-      { ease: "easeInOut", type: "keyframes" }
-    );
-  }, [minutes, animateSeconds]);
-
-  useEffect(() => {
-    animateHours(
-      scopeHours.current,
-      { y: [20, 0], opacity: [0, 1] },
-      { ease: "easeInOut", type: "keyframes" }
-    );
-  }, [hours, animateHours]);
-
-  useEffect(() => {
-    animateDays(
-      scopeDays.current,
-      { y: [20, 0], opacity: [0, 1] },
-      { ease: "easeInOut", type: "keyframes" }
-    );
-  }, [days, animateDays]);
+export default function Header() { 
 
   return (
     <motion.div
@@ -146,7 +69,7 @@ export default function Header() {
       viewport={{ once: true, amount: 0.3 }}
       variants={fadeInUp}
     >
-        <motion.div
+      <motion.div
         initial={{ scale: 1 }}
         animate={{ scale: [1, 1.05, 1] }}
         transition={{ duration: 15, repeat: Infinity, ease: "easeInOut" }}
@@ -158,10 +81,10 @@ export default function Header() {
       />
       {/* Elementos animados de fondo */}
       <FloatingParticles />
-      
+
       {/* Contenedor de nombres con animación stagger */}
       <div
-        className={`text-5xl text-slate-200 text-center z-10 flex gap-4 mb-5`}
+        className={`text-6xl text-slate-200 text-center z-10 flex gap-4 mb-5`}
         style={{ fontFamily: "candlescript" }}
       >
         <motion.p
@@ -186,70 +109,9 @@ export default function Header() {
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 1, ease: "easeOut", delay: 0.9 }}
         >
-          <span className="relative z-10">Roberto</span>
+          <span className="relative z-10">Rafa</span>
         </motion.p>
-      </div>
-
-      {/* Contador con efectos mejorados */}
-      <motion.div
-        className={`${allura.className} pb-3 text-slate-100 custom-shadow flex items-center justify-center mt-3 z-10 backdrop-blur-[3px] bg-white/10 rounded-2xl p-6 border border-white/20 shadow-2xl relative overflow-hidden`}        
-        initial={{ y: 100, opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1 }}
-        transition={{ duration: 1, ease: "easeOut", delay: 1 }}
-      >
-        {/* Efecto de brillo en el contador */}
-        <motion.div
-          className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent"
-          animate={{
-            x: ["-100%", "100%"],
-          }}
-          transition={{
-            duration: 8,
-            repeat: Infinity,
-            ease: "linear",
-          }}
-        />
-
-        <div className="text-center m-0 relative z-10">
-          <div className="my-0 mx-3 p-2 text-2xl w-14 " ref={scopeDays}>
-            {formatNumber(days)}
-          </div>
-          <div className="my-0 mx-3 text-center text-xl opacity-90">Días</div>
-        </div>
-
-        <div className="text-center m-0 relative z-10">
-          <div className="text-4xl opacity-70 mx-2">:</div>
-        </div>
-
-        <div className="text-center m-0 relative z-10">
-          <div className="my-0 mx-3 p-2 text-2xl w-14 " ref={scopeHours}>
-            {formatNumber(hours)}
-          </div>
-          <div className="my-0 mx-3 text-center text-xl opacity-90">Horas</div>
-        </div>
-
-        <div className="text-center m-0 relative z-10">
-          <div className="text-4xl opacity-70 mx-2">:</div>
-        </div>
-
-        <div className="text-center m-0 relative z-10">
-          <div className="my-0 mx-3 p-2 text-2xl w-14 " ref={scopeMinutes}>
-            {formatNumber(minutes)}
-          </div>
-          <div className="my-0 mx-3 text-center text-xl opacity-90">Min</div>
-        </div>
-
-        <div className="text-center m-0 relative z-10">
-          <div className="text-4xl opacity-70 mx-2">:</div>
-        </div>
-
-        <div className="text-center m-0 relative z-10">
-          <div className="my-0 mx-3 p-2 text-2xl w-14 " ref={scopeSeconds}>
-            {formatNumber(seconds)}
-          </div>
-          <div className="my-0 mx-3 text-center text-xl opacity-90">Seg</div>
-        </div>
-      </motion.div>
+      </div>     
 
       {/* Texto decorativo adicional */}
       <motion.p
@@ -258,8 +120,17 @@ export default function Header() {
         whileInView={{ opacity: 1 }}
         transition={{ duration: 1, ease: "easeInOut", delay: 1.2 }}
       >
-        ¡Acompáñanos, Solo Faltan!
+        ¡Acompáñanos!
       </motion.p>
+
+      <motion.div
+        initial={{ y: 0 }}
+        whileInView={{ y: [0, 10, 0] }}
+        transition={{ duration: 2, repeat: Infinity }}
+        className="my-5"
+      >
+        <IoIosArrowDown className="text-zinc-400" />
+      </motion.div>
     </motion.div>
   );
 }

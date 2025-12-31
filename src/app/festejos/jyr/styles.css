@@ -21,3 +21,18 @@
   font-style: normal;
 }
 
+.text-golden {
+  background-image: linear-gradient(
+    to right,
+    #462523 0,
+    #cb9b51 22%,
+    #f6e27a 400%,
+    #f6f2c0 500%,
+    #f6e27a 5%,
+    #cb9b51 5000%,
+    #462523 5000%
+  );
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}

@@ -1,16 +1,12 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "✨ Jess & Roberto ✨",
-  description:
-    "Jess Y Roberto están por llegar y quiero que formes parte de este día tan especial, lleno de luz, sonrisas y recuerdos inolvidables. 🌸✨",
+  title: "✨ Jess & Rafa ✨",
+  description: "Nada es para llevar, todo es para vivir aquí 🌸✨",
   openGraph: {
-    title: "✨ Jess y Roberto ✨",
-    description:
-      "Jess Y Roberto están por llegar y quiero que formes parte de este día tan especial, lleno de luz, sonrisas y recuerdos inolvidables. 🌸✨",
-    images: [
-      `https://invitaciones.unaideamas.com/img/festejos/jyr/main2.jpg`,
-    ],
+    title: "✨ Jess & Rafa ✨",
+    description: "Nada es para llevar, todo es para vivir aquí 🌸✨",
+    images: [`https://invitaciones.unaideamas.com/img/festejos/jyr/preview.jpg`],
   },
   icons: {
     icon: "https://invitaciones.unaideamas.com/img/favicon.png",

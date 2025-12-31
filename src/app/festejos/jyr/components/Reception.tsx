@@ -13,6 +13,7 @@ import {
   ModalBody,
   ModalFooter,
   useDisclosure,
+  Spinner,
 } from "@nextui-org/react";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { IoMdTime } from "react-icons/io";
@@ -46,7 +47,7 @@ const ModalMap = ({
             >
               Recepción
             </ModalHeader>
-            <ModalBody>
+            <ModalBody className="relative flex justify-center items-center">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8940.114948405313!2d-96.9460043267698!3d19.59069872084407!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85db2fc7cf2e5b9f%3A0x3674f5d4cdef3a2d!2sSal%C3%B3n%20%22Quinta%20La%20Piedra%22!5e0!3m2!1ses!2smx!4v1767057370314!5m2!1ses!2smx"
                 height="450"
@@ -54,7 +55,9 @@ const ModalMap = ({
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
+                className="w-full z-20"
               ></iframe>
+              <Spinner className="absolute z-10" color="warning"/>
             </ModalBody>
             <ModalFooter></ModalFooter>
           </>
@@ -72,8 +75,7 @@ export default function Reception() {
       <section
         className="flex justify-center items-center flex-col pt-20 pb-20 bg-[url('/img/festejos/jyr/reception.jpg')] bg-cover bg-center relative"
         style={{ height: "100svh" }}
-      >
-        {/* <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent"></div> */}
+      >        
         <motion.h1
           className={`${greatVibes.className} text-5xl p-5 text-center  text-zinc-50 z-50`}
           initial={{ y: -100, opacity: 0 }}

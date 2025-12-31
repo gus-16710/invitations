@@ -37,10 +37,9 @@ export default function Presentation() {
               19
             </label>
             <label className={`${playFair.className} p-4 w-20 text-center text-xl`}>
-              1 pm
+              2026
             </label>
-          </div>
-          <label className={`${playFair.className} text-xl`}>2026</label>
+          </div>          
         </motion.div>
         <motion.p
           className={`${notoSans.className} text-center p-5 max-w-md`}

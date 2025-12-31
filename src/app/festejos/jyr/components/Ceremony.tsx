@@ -13,6 +13,7 @@ import {
   ModalBody,
   ModalFooter,
   useDisclosure,
+  Spinner,
 } from "@nextui-org/react";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { IoMdTime } from "react-icons/io";
@@ -46,7 +47,7 @@ const ModalMap = ({
             >
               Ceremonia Religiosa
             </ModalHeader>
-            <ModalBody>
+            <ModalBody className="relative flex justify-center items-center">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7517.789250991576!2d-96.9469787738586!3d19.58901463891785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85db2fb78a66bb13%3A0x6935f2c47beef73d!2sSantuario%20Parroquial%20De%20San%20Jos%C3%A9!5e0!3m2!1ses!2smx!4v1767057206291!5m2!1ses!2smx"
                 height="450"
@@ -54,8 +55,9 @@ const ModalMap = ({
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                className="w-full"
+                className="w-full z-20"
               ></iframe>
+              <Spinner className="absolute z-10" color="warning"/>
             </ModalBody>
             <ModalFooter></ModalFooter>
           </>
@@ -71,7 +73,7 @@ export default function Ceremony() {
   return (
     <>
       <section
-        className="flex justify-center items-center flex-col pt-20 pb-20 bg-[url('/img/festejos/jyr/church.jpg')] bg-cover bg-center relative"
+        className="flex justify-center items-center flex-col pt-20 pb-20 bg-[url('/img/festejos/jyr/church2.jpg')] bg-cover bg-center relative"
         style={{ height: "100svh" }}
       >
         <motion.h1
