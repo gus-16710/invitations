@@ -223,8 +223,7 @@ const ModalOpening = ({
           <>
             <ModalHeader className="flex flex-col gap-1"></ModalHeader>
             <ModalBody className="flex flex-col items-center justify-center">
-              <div className="absolute inset-0 flex flex-col items-center justify-center z-30">
-                {/* Contenedor para las imágenes */}
+              <div className="absolute inset-0 flex flex-col items-center justify-center z-30">                
 
                 <Flowbite>
                   <Carousel
@@ -277,8 +276,7 @@ const ModalOpening = ({
                     </div>
                   </Carousel>
                 </Flowbite>
-
-                {/* Texto de fecha */}
+                
                 <div className="z-30 mb-10 mt-5">
                   <motion.p
                     className={`text-3xl ${julius.className} text-white  font-bold tracking-wider drop-shadow-lg text-center mx-10`}
