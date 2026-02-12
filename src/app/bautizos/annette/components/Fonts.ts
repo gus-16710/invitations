@@ -8,7 +8,7 @@ import {
   Roboto,
   Habibi,
   Text_Me_One,
-  Big_Shoulders_Stencil_Text
+  //Big_Shoulders_Stencil_Text
 } from "next/font/google";
 
 export const roboto = Roboto({ subsets: ["latin"], weight: ["400"] });
@@ -53,7 +53,7 @@ export const textme = Text_Me_One({
   weight: ["400"],
 });
 
-export const big = Big_Shoulders_Stencil_Text({
+export const big = Text_Me_One({
   subsets: ["latin"],
   weight: ["400"],
 });
