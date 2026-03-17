@@ -406,62 +406,62 @@ export default function JYR() {
     onOpen();    
   }, []);
 
-  // return (
-  //   <main className={`background-class ${open ? "" : "h-screen"}`}>
-  //     {open && (
-  //       <div className="max-w-3xl m-auto bg-[url('/img/festejos/jyr/background-main-3.jpg')] bg-cover bg-center shadow-large relative">
-  //         <Splide
-  //           aria-label="J & R"
-  //           options={{
-  //             rewind: true,
-  //             direction: "ttb",
-  //             height: "100svh",
-  //             wheel: true,
-  //             releaseWheel: true,
-  //             type: "loop",
-  //             waitForTransition: true,
-  //             arrows: false,
-  //             classes: {
-  //               page: "splide__pagination__page custom-class-page", // each button
-  //             },
+  return (
+    <main className={`background-class ${open ? "" : "h-screen"}`}>
+      {open && (
+        <div className="max-w-3xl m-auto bg-[url('/img/festejos/jyr/background-main-3.jpg')] bg-cover bg-center shadow-large relative">
+          <Splide
+            aria-label="J & R"
+            options={{
+              rewind: true,
+              direction: "ttb",
+              height: "100svh",
+              wheel: true,
+              releaseWheel: true,
+              type: "loop",
+              waitForTransition: true,
+              arrows: false,
+              classes: {
+                page: "splide__pagination__page custom-class-page", // each button
+              },
               
-  //           }}
-  //           onActive={(splide: any) => {
-  //             setSplide(splide.index);
-  //           }}
-  //         >
-  //           <SplideSlide>
-  //             <Header />
-  //           </SplideSlide>
-  //           <SplideSlide>
-  //             <Presentation splide={splide}/>
-  //           </SplideSlide>
-  //           <SplideSlide>
-  //             <Ceremony />
-  //           </SplideSlide>
-  //           <SplideSlide>
-  //             <Reception />
-  //           </SplideSlide>
-  //           <SplideSlide>
-  //             <DressCode />
-  //           </SplideSlide>
-  //           <SplideSlide>
-  //             <Video />
-  //           </SplideSlide>
-  //           <SplideSlide>
-  //             <Counter />
-  //           </SplideSlide>
-  //         </Splide>
-  //         <AudioControl />
-  //       </div>
-  //     )}
-  //     <ModalOpening
-  //       isOpen={isOpen}
-  //       onOpenChange={onOpenChange}
-  //       setOpen={setOpen}
-  //     />
-  //   </main>
-  // );
+            }}
+            onActive={(splide: any) => {
+              setSplide(splide.index);
+            }}
+          >
+            <SplideSlide>
+              <Header />
+            </SplideSlide>
+            <SplideSlide>
+              <Presentation splide={splide}/>
+            </SplideSlide>
+            <SplideSlide>
+              <Ceremony />
+            </SplideSlide>
+            <SplideSlide>
+              <Reception />
+            </SplideSlide>
+            <SplideSlide>
+              <DressCode />
+            </SplideSlide>
+            <SplideSlide>
+              <Video />
+            </SplideSlide>
+            <SplideSlide>
+              <Counter />
+            </SplideSlide>
+          </Splide>
+          <AudioControl />
+        </div>
+      )}
+      <ModalOpening
+        isOpen={isOpen}
+        onOpenChange={onOpenChange}
+        setOpen={setOpen}
+      />
+    </main>
+  );
 
-  return notFound();
+  //return notFound();
 }
