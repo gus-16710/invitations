@@ -38,7 +38,7 @@ const Player = () => {
     <motion.div
       initial={{ y: -100, opacity: 0 }}
       whileInView={{ y: 0, opacity: 1 }}
-      transition={{ delay: 3, duration: 1 }}
+      transition={{ delay: 5, duration: 1 }}
       className="flex items-center flex-col justify-center z-20"
     >
       <ReactPlayer

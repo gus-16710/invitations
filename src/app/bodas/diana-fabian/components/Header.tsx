@@ -29,6 +29,14 @@ export default function Header() {
 
   return (
     <section className="h-screen relative flex items-center justify-center flex-col bg-[url('/img/bodas/diana-fabian/gallery-01.jpeg')] bg-cover bg-center">
+      <motion.h2
+        className={`${mate.className} text-zinc-100 text-2xl text-center mb-5 custom-shadow flex flex-wrap justify-center `}
+        initial={{ y: 100, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ duration: 1, ease: "easeOut", delay: 3.3 }}
+      >
+        Te invitamos a nuestra boda
+      </motion.h2>
       <motion.h1
         className={`${alex.className} text-zinc-100 text-8xl text-center mx-5 custom-shadow flex flex-wrap justify-center `}
         variants={list}
@@ -51,7 +59,7 @@ export default function Header() {
         className={`${mate.className} text-zinc-100 text-xl custom-shadow`}
         initial={{ y: 100, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
-        transition={{ delay: 3, duration: 1 }}
+        transition={{ delay: 4, duration: 1 }}
       >
         Sábado 25 de Julio del 2026
       </motion.p>
@@ -62,14 +70,14 @@ export default function Header() {
         role="alert"
         initial={{ y: 100, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
-        transition={{ duration: 1, ease: "easeOut", delay: 3.3 }}
+        transition={{ duration: 1, ease: "easeOut", delay: 5 }}
       >
         <span className="sr-only">Info</span>
         <div className={`${oswald.className} ms-3 text-sm text-zinc-100`}>
           Reproduce y desliza hacia abajo
         </div>
       </motion.div>
-      <div className="absolute -bottom-1 w-full">             
+      <div className="absolute -bottom-1 w-full">
         <svg
           data-name="Layer 1"
           xmlns="http://www.w3.org/2000/svg"
@@ -87,12 +95,8 @@ export default function Header() {
             opacity=".5"
           ></path>
           <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"></path>
-        </svg>      
+        </svg>
       </div>
     </section>
   );
 }
-
-
-
-   
