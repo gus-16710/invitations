@@ -10,7 +10,7 @@ import {
 } from "@nextui-org/react";
 import { lora, mate, roboto } from "./Fonts";
 import { useRef } from "react";
-import { useScroll, motion, useTransform } from "framer-motion";
+import { useScroll, motion, useTransform, useSpring } from "framer-motion";
 import { LuMapPin } from "react-icons/lu";
 import { IoMdTime } from "react-icons/io";
 
@@ -70,8 +70,16 @@ export default function Ceremony() {
     offset: ["0 1", "0.8 1"],
   });
 
-  const scale = useTransform(scrollYProgress, [0, 0.2, 0.5, 0.8, 1], [0, 0.2, 0.5, 0.8, 1]);
-  const opacity = useTransform(scrollYProgress, [0, 0.7, 1], [0, 0.7, 1]);
+  const smoothProgress = useSpring(scrollYProgress, {
+    stiffness: 100, // rigidez (menor = más lento)
+    damping: 30, // amortiguación
+    mass: 1, // masa (mayor = más lento)
+  });
+
+  // Aplicar la escala sobre el valor suavizado
+  const scale = useTransform(smoothProgress, [0, 1], [0.85, 1]);
+  const opacity = useTransform(smoothProgress, [0, 0.5, 1], [0, 0.5, 1]    
+  );
 
   return (
     <>
@@ -230,7 +238,9 @@ export default function Ceremony() {
           Ceremonia Religiosa
         </h1>
 
-        <span className={`${lora.className} my-5 bg-zinc-200/50 text-zinc-800 text-3xl font-medium me-2 px-2.5 py-0.5 rounded flex items-center justify-center gap-1`}>
+        <span
+          className={`${lora.className} my-5 bg-zinc-200/50 text-zinc-800 text-3xl font-medium me-2 px-2.5 py-0.5 rounded flex items-center justify-center gap-1`}
+        >
           <IoMdTime /> 12:00 Hrs
         </span>
 
@@ -243,7 +253,7 @@ export default function Ceremony() {
           className={`${roboto.className} text-gray-800 text-sm mt-2 mx-10 text-center max-w-md`}
         >
           Benito Juárez 27, Lomas de Hidalgo, Centro, 91300 Banderilla, Ver.
-        </p>        
+        </p>
         <button
           type="button"
           className="mt-10 text-gray-900 bg-white/0 border border-gray-400 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 rounded-full me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700 font-medium text-sm px-5 py-2.5 text-center flex items-center"
@@ -253,7 +263,7 @@ export default function Ceremony() {
         >
           <LuMapPin className="mr-1" />
           Ver Ubicación
-        </button>        
+        </button>
       </motion.section>
       <ModalMap isOpen={isOpen} onOpenChange={onOpenChange} />
     </>

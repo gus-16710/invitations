@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import { mate, roboto } from "./Fonts";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 
 export default function DressCode() {
   const ref = useRef<HTMLDivElement>(null);
@@ -10,14 +10,21 @@ export default function DressCode() {
     offset: ["0 1", "0.8 1"],
   });
 
-    const scale = useTransform(scrollYProgress, [0, 0.2, 0.5, 0.8, 1], [0, 0.2, 0.5, 0.8, 1]);
-  const opacity = useTransform(scrollYProgress, [0, 0.7, 1], [0, 0.7, 1]);
+  const smoothProgress = useSpring(scrollYProgress, {
+    stiffness: 100, // rigidez (menor = más lento)
+    damping: 30, // amortiguación
+    mass: 1, // masa (mayor = más lento)
+  });
+
+  // Aplicar la escala sobre el valor suavizado
+  const scale = useTransform(smoothProgress, [0, 1], [0.85, 1]);
+  const opacity = useTransform(smoothProgress, [0, 0.5, 1], [0, 0.5, 1]);
 
   return (
     <motion.section
       className="h-screen pb-20 flex items-center justify-center flex-col"
       ref={ref}
-           style={{
+      style={{
         scale: scale,
         opacity: opacity,
         willChange: "transform, opacity",
@@ -60,13 +67,11 @@ export default function DressCode() {
         </svg>
       </div>
 
-      <h2 className={`${mate.className} pt-5 text-2xl`}>
-        Mujeres & Hombres
-      </h2>
+      <h2 className={`${mate.className} pt-5 text-2xl`}>Mujeres & Hombres</h2>
       <p className={`${roboto.className} text-center p-5`}>
-        En nuestro gran día esperamos verte disfrutar y celebrar al máximo. Elige
-        tu mejor atuendo solo evita el blanco y recuerda que tú mejor accesorio
-        es tu sonrisa.
+        En nuestro gran día esperamos verte disfrutar y celebrar al máximo.
+        Elige tu mejor atuendo solo evita el blanco y recuerda que tú mejor
+        accesorio es tu sonrisa.
       </p>
     </motion.section>
   );

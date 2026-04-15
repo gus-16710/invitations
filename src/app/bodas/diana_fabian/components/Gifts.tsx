@@ -7,7 +7,7 @@ import {
 } from "@nextui-org/react";
 import { mate, roboto, titillium } from "./Fonts";
 import { useRef, useState } from "react";
-import { useScroll, motion, useTransform } from "framer-motion";
+import { useScroll, motion, useTransform, useSpring } from "framer-motion";
 
 export default function Gifts() {
   const [copiedField, setCopiedField] = useState<string | null>(null);
@@ -27,12 +27,15 @@ export default function Gifts() {
     }, 2000);
   };
 
-  const scale = useTransform(
-    scrollYProgress,
-    [0, 0.2, 0.5, 0.8, 1],
-    [0, 0.2, 0.5, 0.8, 1],
-  );
-  const opacity = useTransform(scrollYProgress, [0, 0.7, 1], [0, 0.7, 1]);
+  const smoothProgress = useSpring(scrollYProgress, {
+    stiffness: 100, // rigidez (menor = más lento)
+    damping: 30, // amortiguación
+    mass: 1, // masa (mayor = más lento)
+  });
+
+  // Aplicar la escala sobre el valor suavizado
+  const scale = useTransform(smoothProgress, [0, 1], [0.85, 1]);
+  const opacity = useTransform(smoothProgress, [0, 0.5, 1], [0, 0.5, 1]);
 
   return (
     <motion.section

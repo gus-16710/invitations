@@ -1,7 +1,7 @@
 import { FaPhoneAlt, FaWhatsapp } from "react-icons/fa";
 import { mate, roboto } from "./Fonts";
 import { useRef } from "react";
-import { useScroll, motion, useTransform } from "framer-motion";
+import { useScroll, motion, useTransform, useSpring } from "framer-motion";
 
 export default function Confirm() {
   const ref = useRef<HTMLDivElement>(null);
@@ -11,12 +11,16 @@ export default function Confirm() {
     offset: ["0 1", "0.8 1"],
   });
 
-  const scale = useTransform(
-    scrollYProgress,
-    [0, 0.2, 0.5, 0.8, 1],
-    [0, 0.2, 0.5, 0.8, 1],
+  const smoothProgress = useSpring(scrollYProgress, {
+    stiffness: 100, // rigidez (menor = más lento)
+    damping: 30, // amortiguación
+    mass: 1, // masa (mayor = más lento)
+  });
+
+  // Aplicar la escala sobre el valor suavizado
+  const scale = useTransform(smoothProgress, [0, 1], [0.85, 1]);
+  const opacity = useTransform(smoothProgress, [0, 0.5, 1], [0, 0.5, 1]    
   );
-  const opacity = useTransform(scrollYProgress, [0, 0.7, 1], [0, 0.7, 1]);
 
   return (
     <div className="bg-zinc-900 bg-[url('/img/bodas/diana_fabian/1348.jpg')] bg-cover bg-center">

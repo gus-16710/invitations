@@ -83,24 +83,10 @@ export default function Counter() {
     );
   }, [days, animateDays]);
 
-  const ref = useRef<HTMLDivElement>(null);
 
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["0 1", "0.8 1"],
-  });
-
-  const scale = useTransform(scrollYProgress, [0, 0.2, 0.5, 0.8, 1], [0, 0.2, 0.5, 0.8, 1]);
-  const opacity = useTransform(scrollYProgress, [0, 0.7, 1], [0, 0.7, 1]);
 
   return (
-    <motion.div
-      ref={ref}
-      style={{
-        scale: scale,
-        opacity: opacity,
-        willChange: "transform, opacity",
-      }}
+    <motion.div      
       className="w-full overflow-clip"
     >
       <div className="flex items-center mt-10">
@@ -121,8 +107,11 @@ export default function Counter() {
         />
       </div>
 
-      <div
+      <motion.div
         className={`${lora.className} mb-3 mt-5 py-3 text-gray-800 flex items-baseline justify-center`}
+        initial={{ y: 100, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ duration: 1 }}
       >
         <div className="text-center m-0">
           <div className="my-0 mx-3 p-2 text-3xl" ref={scopeDays}>
@@ -151,7 +140,7 @@ export default function Counter() {
           </div>
           <div className="my-0 mx-3 text-center text-1xl">Seg</div>
         </div>
-      </div>
+      </motion.div>
     </motion.div>
   );
 }
