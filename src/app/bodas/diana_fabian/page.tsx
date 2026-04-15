@@ -24,9 +24,9 @@ export default function Wedding() {
         <Header />
         <Ceremony />
         <Reception />
-        <Photography urlImg={"/img/bodas/diana-fabian/gallery-07.jpeg"} />
+        <Photography urlImg={"/img/bodas/diana_fabian/gallery-07.jpeg"} />
         <Gifts />
-        <Photography urlImg={"/img/bodas/diana-fabian/gallery-03.jpeg"} />
+        <Photography urlImg={"/img/bodas/diana_fabian/gallery-03.jpeg"} />
         <DressCode />
         <Gallery />
         <Confirm />

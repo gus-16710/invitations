@@ -9,32 +9,32 @@ import { LuZoomIn } from "react-icons/lu";
 
 const images = [
   {
-    src: "/img/bodas/diana-fabian/gallery-02.jpeg",
+    src: "/img/bodas/diana_fabian/gallery-02.jpeg",
     width: 800,
     height: 600,
   },
   {
-    src: "/img/bodas/diana-fabian/gallery-04.jpeg",
+    src: "/img/bodas/diana_fabian/gallery-04.jpeg",
     width: 1600,
     height: 900,
   },
   {
-    src: "/img/bodas/diana-fabian/gallery-05.jpeg",
+    src: "/img/bodas/diana_fabian/gallery-05.jpeg",
     width: 800,
     height: 600,
   },
   {
-    src: "/img/bodas/diana-fabian/gallery-06.jpeg",
+    src: "/img/bodas/diana_fabian/gallery-06.jpeg",
     width: 800,
     height: 600,
   },
   {
-    src: "/img/bodas/diana-fabian/gallery-08.jpeg",
+    src: "/img/bodas/diana_fabian/gallery-08.jpeg",
     width: 800,
     height: 600,
   },
   {
-    src: "/img/bodas/diana-fabian/gallery-09.jpeg",
+    src: "/img/bodas/diana_fabian/gallery-09.jpeg",
     width: 800,
     height: 600,
   },

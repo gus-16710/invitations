@@ -20,10 +20,7 @@ export default function Confirm() {
       >
         <h1 className={`${mate.className} text-3xl mt-5`}>
           Confirma tu asistencia
-        </h1>
-        <span className="mt-5 bg-gray-100 text-xs font-medium me-2 px-2.5 py-0.5 rounded text-red-600">
-          * NO NIÑOS *
-        </span>
+        </h1>        
         <p className={`${roboto.className} mt-5 mx-10 text-center max-w-md`}>
           Espero que puedan venir a compartir con nosotros este día inolvidable.
           Por favor confirma tu presencia.
