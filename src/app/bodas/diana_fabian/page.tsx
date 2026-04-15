@@ -2,6 +2,7 @@
 
 import Ceremony from "./components/Ceremony";
 import Confirm from "./components/Confirm";
+import Counter from "./components/Counter";
 import DressCode from "./components/DressCode";
 import FloatinButton from "./components/FloatingButton";
 import Gallery from "./components/Gallery";
@@ -23,6 +24,7 @@ export default function Wedding() {
       <div className="max-w-3xl m-auto shadow-large bg-white">
         <Header />
         <Ceremony />
+        <Counter />
         <Reception />
         <Photography urlImg={"/img/bodas/diana_fabian/gallery-07.jpeg"} />
         <Gifts />

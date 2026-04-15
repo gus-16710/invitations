@@ -57,7 +57,7 @@ export default function Header() {
       </motion.h1>
       <motion.p
         className={`${mate.className} text-zinc-100 text-xl custom-shadow`}
-        initial={{ y: 100, opacity: 0 }}
+        initial={{ y: -100, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ delay: 4, duration: 1 }}
       >

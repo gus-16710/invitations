@@ -8,7 +8,7 @@ import {
   Spinner,
   useDisclosure,
 } from "@nextui-org/react";
-import { mate, roboto } from "./Fonts";
+import { lora, mate, roboto } from "./Fonts";
 import { useRef } from "react";
 import { useScroll, motion } from "framer-motion";
 import { LuMapPin } from "react-icons/lu";
@@ -76,8 +76,7 @@ export default function Reception() {
         className="relative flex flex-col items-center justify-center h-screen"
         ref={ref}
         style={{ scale: scrollYProgress, opacity: scrollYProgress }}
-      >
-        <Divider orientation="vertical" className="h-14 absolute -top-0" />
+      >        
         <svg
           xmlns="http://www.w3.org/2000/svg"
           id="Capa_1"
@@ -104,7 +103,7 @@ export default function Reception() {
           Recepción
         </h1>
 
-        <span className="my-5 bg-indigo-100 text-indigo-800 text-2xl font-medium me-2 px-2.5 py-0.5 rounded dark:bg-indigo-900  flex items-center justify-center gap-1">
+        <span className={`${lora.className} my-5 bg-zinc-200/50 text-zinc-800 text-3xl font-medium me-2 px-2.5 py-0.5 rounded flex items-center justify-center gap-1`}>
           <IoMdTime /> 15:00 Hrs
         </span>
 

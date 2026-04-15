@@ -12,7 +12,7 @@ export default function Confirm() {
   });
 
   return (
-    <div className="bg-zinc-900">
+    <div className="bg-zinc-900 bg-[url('/img/bodas/diana_fabian/1348.jpg')] bg-cover bg-center">
       <motion.section
         className="h-screen flex items-center justify-center flex-col text-gray-100"
         ref={ref}

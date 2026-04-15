@@ -83,7 +83,7 @@ export default function Gallery() {
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 1200 120"
           preserveAspectRatio="none"
-          style={{ fill: "rgb(24 24 27)"}}          
+          style={{ fill: "rgb(0 0 0)"}}          
           className="rotate-180"
         >
           <path

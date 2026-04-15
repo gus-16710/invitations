@@ -66,7 +66,7 @@ export default function Gifts() {
                 <label className={`${titillium.className} ml-1 text-sm text-gray-600`}>
                   Beneficiario:
                 </label>
-                <Code className="block mt-1 w-full">Nombre del Titular</Code>
+                <Code className="block mt-1 w-full">Diana Laura H</Code>
               </div>
               
               {/* Banco */}
@@ -74,7 +74,7 @@ export default function Gifts() {
                 <label className={`${titillium.className} ml-1 text-sm text-gray-600`}>
                   Banco:
                 </label>
-                <Code className="block mt-1 w-full">Nombre del Banco</Code>
+                <Code className="block mt-1 w-full">Banco BBVA</Code>
               </div>
               
               {/* Número de Cuenta */}

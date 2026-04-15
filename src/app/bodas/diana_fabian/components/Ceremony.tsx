@@ -8,7 +8,7 @@ import {
   Spinner,
   useDisclosure,
 } from "@nextui-org/react";
-import { mate, roboto } from "./Fonts";
+import { lora, mate, roboto } from "./Fonts";
 import { useRef } from "react";
 import { useScroll, motion } from "framer-motion";
 import { LuMapPin } from "react-icons/lu";
@@ -226,8 +226,8 @@ export default function Ceremony() {
           Ceremonia Religiosa
         </h1>
 
-        <span className="my-5 bg-indigo-100 text-indigo-800 text-2xl font-medium me-2 px-2.5 py-0.5 rounded dark:bg-indigo-900 dark:text-indigo-300 flex items-center justify-center gap-1">
-          <IoMdTime /> 13:00 Hrs
+        <span className={`${lora.className} my-5 bg-zinc-200/50 text-zinc-800 text-3xl font-medium me-2 px-2.5 py-0.5 rounded flex items-center justify-center gap-1`}>
+          <IoMdTime /> 12:00 Hrs
         </span>
 
         <p
@@ -249,8 +249,7 @@ export default function Ceremony() {
         >
           <LuMapPin className="mr-1" />
           Ver Ubicación
-        </button>
-        <Divider orientation="vertical" className="h-14 absolute -bottom-0" />
+        </button>        
       </motion.section>
       <ModalMap isOpen={isOpen} onOpenChange={onOpenChange} />
     </>
