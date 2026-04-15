@@ -7,7 +7,7 @@ import {
 } from "@nextui-org/react";
 import { mate, roboto, titillium } from "./Fonts";
 import { useRef, useState } from "react";
-import { useScroll, motion } from "framer-motion";
+import { useScroll, motion, useTransform } from "framer-motion";
 
 export default function Gifts() {
   const [copiedField, setCopiedField] = useState<string | null>(null);
@@ -27,11 +27,22 @@ export default function Gifts() {
     }, 2000);
   };
 
+  const scale = useTransform(
+    scrollYProgress,
+    [0, 0.2, 0.5, 0.8, 1],
+    [0, 0.2, 0.5, 0.8, 1],
+  );
+  const opacity = useTransform(scrollYProgress, [0, 0.7, 1], [0, 0.7, 1]);
+
   return (
     <motion.section
       className="h-screen flex justify-center items-center flex-col"
       ref={ref}
-      style={{ scale: scrollYProgress, opacity: scrollYProgress }}
+      style={{
+        scale: scale,
+        opacity: opacity,
+        willChange: "transform, opacity",
+      }}
     >
       <h1 className={`${mate.className} text-gray-800 text-3xl mt-5`}>
         Mesa de Regalos
@@ -45,7 +56,7 @@ export default function Gifts() {
       </p>
 
       <div className="mt-2 w-72">
-        <Accordion defaultExpandedKeys={["1"]}>          
+        <Accordion defaultExpandedKeys={["1"]}>
           <AccordionItem
             key="1"
             aria-label="Transferencia Bancaria"
@@ -63,23 +74,29 @@ export default function Gifts() {
             <div className="flex flex-col gap-3">
               {/* Beneficiario */}
               <div>
-                <label className={`${titillium.className} ml-1 text-sm text-gray-600`}>
+                <label
+                  className={`${titillium.className} ml-1 text-sm text-gray-600`}
+                >
                   Beneficiario:
                 </label>
                 <Code className="block mt-1 w-full">Diana Laura H</Code>
               </div>
-              
+
               {/* Banco */}
               <div>
-                <label className={`${titillium.className} ml-1 text-sm text-gray-600`}>
+                <label
+                  className={`${titillium.className} ml-1 text-sm text-gray-600`}
+                >
                   Banco:
                 </label>
                 <Code className="block mt-1 w-full">Banco BBVA</Code>
               </div>
-              
+
               {/* Número de Cuenta */}
               <div>
-                <label className={`${titillium.className} ml-1 text-sm text-gray-600`}>
+                <label
+                  className={`${titillium.className} ml-1 text-sm text-gray-600`}
+                >
                   Número de Tarjeta:
                 </label>
                 <div className="flex gap-2 items-center mt-1">
@@ -94,14 +111,16 @@ export default function Gifts() {
                     {copiedField === "account" ? "✓ Copiado" : "Copiar"}
                   </Button>
                 </div>
-              </div>                            
+              </div>
             </div>
           </AccordionItem>
         </Accordion>
       </div>
 
       {/* Mensaje adicional opcional */}
-      <p className={`${roboto.className} text-gray-500 text-xs mt-6 text-center mx-10`}>
+      <p
+        className={`${roboto.className} text-gray-500 text-xs mt-6 text-center mx-10`}
+      >
         ¡Gracias por tu generosidad! Tu presencia es el mejor regalo.
       </p>
     </motion.section>

@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import { mate, roboto } from "./Fonts";
-import { motion, useScroll } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 export default function DressCode() {
   const ref = useRef<HTMLDivElement>(null);
@@ -10,11 +10,18 @@ export default function DressCode() {
     offset: ["0 1", "0.8 1"],
   });
 
+    const scale = useTransform(scrollYProgress, [0, 0.2, 0.5, 0.8, 1], [0, 0.2, 0.5, 0.8, 1]);
+  const opacity = useTransform(scrollYProgress, [0, 0.7, 1], [0, 0.7, 1]);
+
   return (
     <motion.section
       className="h-screen pb-20 flex items-center justify-center flex-col"
       ref={ref}
-      style={{ scale: scrollYProgress, opacity: scrollYProgress }}
+           style={{
+        scale: scale,
+        opacity: opacity,
+        willChange: "transform, opacity",
+      }}
     >
       <h1 className={`${mate.className} text-gray-800 text-3xl mt-5`}>
         Código de Vestimenta

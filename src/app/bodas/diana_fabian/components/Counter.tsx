@@ -1,4 +1,4 @@
-import { motion, useAnimate, useScroll } from "framer-motion";
+import { motion, useAnimate, useScroll, useTransform } from "framer-motion";
 import { crimson, italianno, lora, mate, playfair } from "./Fonts";
 import { useEffect, useRef, useState } from "react";
 import { Image } from "@nextui-org/react";
@@ -90,14 +90,17 @@ export default function Counter() {
     offset: ["0 1", "0.8 1"],
   });
 
+  const scale = useTransform(scrollYProgress, [0, 0.2, 0.5, 0.8, 1], [0, 0.2, 0.5, 0.8, 1]);
+  const opacity = useTransform(scrollYProgress, [0, 0.7, 1], [0, 0.7, 1]);
+
   return (
     <motion.div
       ref={ref}
       style={{
-        scale: scrollYProgress,
-        opacity: scrollYProgress,
+        scale: scale,
+        opacity: opacity,
+        willChange: "transform, opacity",
       }}
-
       className="w-full overflow-clip"
     >
       <div className="flex items-center mt-10">
@@ -107,7 +110,9 @@ export default function Counter() {
           whileInView={{ x: 0 }}
           transition={{ duration: 2 }}
         />
-        <p className={`${mate.className} flex-2 px-5 text-3xl text-gray-800`}>Faltan</p>
+        <p className={`${mate.className} flex-2 px-5 text-3xl text-gray-800`}>
+          Faltan
+        </p>
         <motion.div
           className="flex-1 border-b-1 border-gray-900/10"
           initial={{ x: 50 }}

@@ -10,7 +10,7 @@ import {
 } from "@nextui-org/react";
 import { lora, mate, roboto } from "./Fonts";
 import { useRef } from "react";
-import { useScroll, motion } from "framer-motion";
+import { useScroll, motion, useTransform } from "framer-motion";
 import { LuMapPin } from "react-icons/lu";
 import { IoMdTime } from "react-icons/io";
 
@@ -70,14 +70,18 @@ export default function Ceremony() {
     offset: ["0 1", "0.8 1"],
   });
 
+  const scale = useTransform(scrollYProgress, [0, 0.2, 0.5, 0.8, 1], [0, 0.2, 0.5, 0.8, 1]);
+  const opacity = useTransform(scrollYProgress, [0, 0.7, 1], [0, 0.7, 1]);
+
   return (
     <>
       <motion.section
         className="h-screen relative flex flex-col items-center justify-center"
         ref={ref}
         style={{
-          scale: scrollYProgress,
-          opacity: scrollYProgress,
+          scale: scale,
+          opacity: opacity,
+          willChange: "transform, opacity",
         }}
       >
         <motion.svg
