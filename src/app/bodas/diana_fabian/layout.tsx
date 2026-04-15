@@ -10,7 +10,7 @@ export const metadata: Metadata = {
       "El amor nos juntó y queremos que ustedes sean parte de esta hermosa historia. ¡Nos casamos!",
     images: [
       {
-        url: "https://invitaciones.unaideamas.com/img/bodas/diana-fabian/preview_image.jpg",
+        url: "https://invitaciones.unaideamas.com/img/bodas/diana_fabian/preview_image.jpg",
         width: 1200,
         height: 630,
         alt: "Diana y Fabián",
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "💗 Diana & Fabián 💗",
     description: "El amor nos juntó y queremos que ustedes sean parte de esta hermosa historia. ¡Nos casamos!",
-    images: ["https://invitaciones.unaideamas.com/img/bodas/diana-fabian/preview_image.jpg"],
+    images: ["https://invitaciones.unaideamas.com/img/bodas/diana_fabian/preview_image.jpg"],
   },
   icons: {
     icon: "https://invitaciones.unaideamas.com/img/favicon.png",
