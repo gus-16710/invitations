@@ -1,0 +1,24 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "🥂 Kimberly Renada & Cristina Yoleth🥂",
+  description:
+    "Te invitamos a celebrar con nosotras este día tan especial, lleno de amor, alegría y momentos inolvidables. ¡Esperamos contar con tu presencia para compartir esta hermosa ocasión! ",    
+  openGraph: {
+    title: "🥂 Kimberly Renada & Cristina Yoleth 🥂",
+    description:
+      "Te invitamos a celebrar con nosotras este día tan especial, lleno de amor, alegría y momentos inolvidables. ¡Esperamos contar con tu presencia para compartir esta hermosa ocasión! ",
+    images: ["https://invitaciones.unaideamas.com/img/festejos/kimberly-cristina/preview.jpeg"],
+  },
+  icons: {
+    icon: "https://invitaciones.unaideamas.com/img/favicon.png",
+  },
+};
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return <>{children}</>;
+}
