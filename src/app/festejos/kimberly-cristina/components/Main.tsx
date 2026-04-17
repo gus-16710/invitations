@@ -136,9 +136,9 @@ export default function Main() {
             <SplideSlide>
               <Confirm />
             </SplideSlide>
-            {/* <SplideSlide>
+            <SplideSlide>
               <Photo />
-            </SplideSlide> */}
+            </SplideSlide>
           </Splide>
           <AudioControl />
         </motion.div>
