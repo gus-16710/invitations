@@ -174,7 +174,7 @@ const ModalOpening = ({
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 1.4 }}
               >
-                10 · MAYO · 2026
+                16 · MAYO · 2026
               </motion.p>
 
               {/* Button */}
