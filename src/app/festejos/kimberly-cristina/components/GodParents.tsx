@@ -1,142 +1,136 @@
 import { motion } from "framer-motion";
-import { Carousel, Flowbite } from "flowbite-react";
-import { GiDiamondRing } from "react-icons/gi";
-import { IoIosHeartEmpty } from "react-icons/io";
-import { RiLinksLine } from "react-icons/ri";
-import { PiCoinsThin } from "react-icons/pi";
-import { IoIosMale } from "react-icons/io";
-import { IoBookOutline } from "react-icons/io5";
-import { PiCrossLight } from "react-icons/pi";
-
-import type { FlowbiteCarouselTheme } from "flowbite-react";
-import { greatVibes, playFair } from "./Fonts";
-import { godParents } from "./Animations";
-import { MdFamilyRestroom } from "react-icons/md";
-import { FaFemale, FaUserFriends } from "react-icons/fa";
-
-const customTheme: FlowbiteCarouselTheme = {
-  root: {
-    base: "relative h-96 w-full",
-    leftControl:
-      "absolute -bottom-5 left-1/3 flex  items-center justify-center px-4 focus:outline-none",
-    rightControl:
-      "absolute -bottom-5 right-1/3 flex items-center justify-center px-4 focus:outline-none",
-  },
-  indicators: {
-    active: {
-      off: "bg-gray-800/50 hover:bg-gray-800",
-      on: "bg-gray-800 dark:bg-gray-800",
-    },
-    base: "h-3 w-3 rounded-full hidden",
-    wrapper: "absolute bottom-5 left-1/2 flex -translate-x-1/2 space-x-3",
-  },
-  item: {
-    base: "absolute top-1/2 left-1/2 block w-full -translate-x-1/2 -translate-y-1/2",
-    wrapper: "w-full flex-shrink-0 transform cursor-default snap-center",
-  },
-  control: {
-    base: "inline-flex h-8 w-8 items-center justify-center rounded bg-gray-800/10 group-hover:bg-gray-800/30 group-focus:outline-none group-focus:ring-4 group-focus:ring-white dark:bg-gray-800/30 dark:group-hover:bg-gray-800/60 dark:group-focus:ring-gray-800/70 sm:h-10 sm:w-10",
-    icon: "h-5 w-5 text-grat-800 dark:text-gray-800 sm:h-6 sm:w-6",
-  },
-  scrollContainer: {
-    base: "flex h-full snap-mandatory overflow-y-hidden overflow-x-scroll scroll-smooth rounded-lg",
-    snap: "snap-x",
-  },
-};
+import { aref } from "./Fonts";
+import {
+  gpTitle01, gpName01, gpDot01,
+  gpTitle02, gpName02, gpDot02,
+  gpTitle03, gpName03,
+} from "./Animations";
+import { Card, CardBody } from "@nextui-org/react";
 
 export default function GodParents() {
   return (
     <section
-      className="flex justify-center items-center flex-col"
+      className="flex justify-center items-center flex-col px-7 py-10"
       style={{ height: "100svh" }}
     >
-      <Flowbite>
-        <Carousel theme={customTheme} slide={false}>
-          <div className="flex h-full items-center justify-center text-gray-800 flex-col px-5 text-center">
-            <motion.div
-              variants={godParents.text02}
-              initial="hidden"
-              whileInView="visible"
-              className="flex items-center flex-col"
-            >
-              <FaFemale className="text-7xl pb-5 text-gray-800/50" />
-              <p className={`${greatVibes.className} text-4xl pb-10`}>Madre</p>
-            </motion.div>
-            <motion.p
-              className={`${playFair.className}`}
-              variants={godParents.text03}
-              initial="hidden"
-              whileInView="visible"
-            >
-              Jessica Landa Garrido
-            </motion.p>
-          </div>
-          <div className="flex h-full items-center justify-center text-gray-800 flex-col px-5 text-center">
-            <motion.div
-              variants={godParents.text02}
-              initial="hidden"
-              whileInView="visible"
-              className="flex items-center flex-col"
-            >
-              <MdFamilyRestroom className="text-7xl pb-5 text-gray-800/50" />
-              <p className={`${greatVibes.className} text-4xl pb-10`}>
-                Abuelos
-              </p>
-            </motion.div>
-            <motion.p
-              className={`${playFair.className}`}
-              variants={godParents.text03}
-              initial="hidden"
-              whileInView="visible"
-            >
-              Yolanda Garrido Cervantes <br />&<br /> Santos Landa Hernández
-            </motion.p>
-          </div>
-          <div className="flex h-full items-center justify-center text-gray-800 flex-col px-5 text-center">
-            <motion.div
-              variants={godParents.text02}
-              initial="hidden"
-              whileInView="visible"
-              className="flex items-center flex-col"
-            >
-              <FaUserFriends className="text-7xl pb-5 text-gray-800/50" />
-              <p className={`${greatVibes.className} text-4xl pb-10`}>
-                Padrinos de la Quinceañera
-              </p>
-            </motion.div>
-            <motion.p
-              className={`${playFair.className}`}
-              variants={godParents.text03}
-              initial="hidden"
-              whileInView="visible"
-            >
-              Laura Fabiola Prieto Guerrero <br />&<br /> César Aldair García
-              Rodríguez
-            </motion.p>
-          </div>
-          <div className="flex h-full items-center justify-center text-gray-800 flex-col px-5 text-center">
-            <motion.div
-              variants={godParents.text02}
-              initial="hidden"
-              whileInView="visible"
-              className="flex items-center flex-col"
-            >
-              <FaUserFriends className="text-7xl pb-5 text-gray-800/50" />
-              <p className={`${greatVibes.className} text-4xl pb-10`}>
-                Padrinos de Bautizo
-              </p>
-            </motion.div>
-            <motion.p
-              className={`${playFair.className}`}
-              variants={godParents.text03}
-              initial="hidden"
-              whileInView="visible"
-            >
-              Cristian Jesús <br />&<br /> Cruz Garrido
-            </motion.p>
-          </div>
-        </Carousel>
-      </Flowbite>
+      <Card
+        className="border-none bg-background/5 h-full w-full"
+        shadow="sm"
+        radius="lg"
+        isBlurred
+      >
+        <CardBody className="flex items-center justify-center flex-col overflow-clip">
+          <motion.h2
+            className={`text-4xl mb-2 text-amber-400`}
+            style={{ fontFamily: "rumble", textShadow: "0px 1px 1px rgb(0,0,0)" }}
+            variants={gpTitle01}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false, amount: 0.4 }}
+          >
+            Mi Madre
+          </motion.h2>
+
+          <motion.p
+            className={`${aref.className} text-xl text-zinc-100 text-center`}
+            style={{ textShadow: "0px 1px 1px rgb(0,0,0)" }}
+            variants={gpName01}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false, amount: 0.4 }}
+          >
+            Jessica Landa Garrido
+          </motion.p>
+
+          <motion.div
+            className="rounded-full w-2 h-2 m-5 bg-red-600/50 shadow-xl"
+            variants={gpDot01}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false, amount: 0.4 }}
+          />
+
+          <motion.h2
+            className={`text-4xl mb-2 text-amber-400`}
+            style={{ fontFamily: "rumble", textShadow: "0px 1px 1px rgb(0,0,0)" }}
+            variants={gpTitle02}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false, amount: 0.4 }}
+          >
+            Mis Abuelos
+          </motion.h2>
+
+          <motion.p
+            className={`${aref.className} text-xl text-zinc-100 text-center`}
+            style={{ textShadow: "0px 1px 1px rgb(0,0,0)" }}
+            variants={gpName02}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false, amount: 0.4 }}
+          >
+            Yolanda Garrido Cervantes
+            <br />
+            Santos Landa Hernández
+          </motion.p>
+
+          <motion.div
+            className="rounded-full w-2 h-2 m-5 bg-red-600/50 shadow-xl"
+            variants={gpDot02}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false, amount: 0.4 }}
+          />
+
+          <motion.h2
+            className={`text-4xl mb-2 text-amber-400`}
+            style={{ fontFamily: "rumble", textShadow: "0px 1px 1px rgb(0,0,0)" }}
+            variants={gpTitle03}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false, amount: 0.4 }}
+          >
+            Mis Padrinos
+          </motion.h2>
+
+          <motion.p
+            className={`${aref.className} text-xl text-zinc-100 text-center`}
+            style={{ textShadow: "0px 1px 1px rgb(0,0,0)" }}
+            variants={gpName03}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false, amount: 0.4 }}
+          >
+            Laura Fabiola Prieto Guerrero
+            <br />
+            César Aldair García Rodríguez
+          </motion.p>
+          <img
+            width={100}
+            height={100}
+            alt="enano2"
+            src="/img/festejos/megan-guadalupe/enano2.png"
+            className="absolute z-0 -bottom-10 left-0"
+          />
+
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            xmlnsXlink="http://www.w3.org/1999/xlink"
+            height="250px"
+            width="250px"
+            version="1.1"
+            id="_x32_"
+            viewBox="0 0 512 512"
+            xmlSpace="preserve"
+            className="absolute -right-10 -bottom-20"
+            fill="rgba(255, 255, 255, .05)"
+          >
+            <g>
+              <path d="M458.071,306.273l-9.519-21.579l-65.885,29.07l-43.103-24.899l74.607-32.879l-74.589-32.87l43.085-24.863   l65.885,29.07l9.536-21.624l-50.088-22.103l76.363-44.053l-13.318-23.044l-76.362,44.08l5.917-54.422l-23.47-2.561l-7.782,71.576   l-43.085,24.89l8.83-81.022l-65.777,48.152V117.43l58.123-42.542l-13.934-19.055l-44.19,32.354V0h-26.6v88.187l-44.17-32.354   l-13.952,19.055l58.122,42.542v49.762l-65.777-48.134l8.795,80.995l-43.049-24.882l-7.799-71.576l-23.47,2.561l5.916,54.422   l-76.344-44.08l-13.318,23.044l76.363,44.053l-50.088,22.103l9.519,21.624l65.867-29.07l43.122,24.863l-74.59,32.888l24.501,10.803   l50.089,22.076l-43.104,24.882l-65.885-29.07l-9.536,21.579l50.106,22.112l-76.399,44.099l13.354,23.054l76.363-44.098   l-5.935,54.412l23.47,2.551l7.781-71.594l43.068-24.863l-8.813,81.013l65.794-48.151v49.771l-58.122,42.525l13.952,19.036   l44.17-32.328V512h26.6v-88.188l44.19,32.328l13.934-19.036l-58.123-42.542v-49.736l65.777,48.143l-8.812-81.022l43.067,24.863   l7.818,71.594l23.434-2.551l-5.9-54.412l76.345,44.098l13.318-23.054l-76.381-44.099L458.071,306.273z M156.385,256.004   l41.366-18.24l31.631,18.24l-31.612,18.268L156.385,256.004z M242.718,315.556l-36.534,26.727l4.904-44.958l31.63-18.267V315.556z    M242.718,232.942l-31.63-18.25l-4.904-44.967l36.534,26.718V232.942z M269.318,196.443l36.535-26.718l-4.922,44.967l-31.613,18.25   V196.443z M269.318,315.556v-36.498l31.613,18.267l4.922,44.958L269.318,315.556z M314.248,274.272l-31.612-18.268l31.631-18.24   l41.384,18.24L314.248,274.272z" />
+            </g>
+          </svg>
+        </CardBody>
+      </Card>
     </section>
   );
 }

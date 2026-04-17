@@ -1,25 +1,25 @@
+import { useEffect, useState } from "react";
 // @ts-ignore
 import { Splide, SplideSlide } from "@splidejs/react-splide";
-import "@splidejs/react-splide/css";
 import Header from "./Header";
 import Presentation from "./Presentation";
-import Ceremony from "./Ceremony";
-import Reception from "./Reception";
-import GodParents from "./GodParents";
-import { motion } from "framer-motion";
 import {
   Modal,
   ModalBody,
   ModalContent,
   useDisclosure,
 } from "@nextui-org/react";
+import { motion } from "framer-motion";
 import { oswald } from "./Fonts";
-import { useEffect, useState } from "react";
-import Sacrament from "./Sacrament";
-import Confirm from "./Confirm";
+
+import "@splidejs/react-splide/css";
+import { animation05 } from "./Animations";
 import AudioControl from "./AudioControl";
-import Photo from "./Photo";
-import HeaderTwo from "./HeaderTwo";
+import GodParents from "./GodParents";
+import Ceremony from "./Ceremony";
+import Reception from "./Reception";
+import Gifts from "./Gifts";
+import Baptism from "./Baptism";
 
 const ModalInstructions = ({
   isOpen,
@@ -34,7 +34,7 @@ const ModalInstructions = ({
       onOpenChange={onOpenChange}
       size="xs"
       placement="center"
-      backdrop="blur"
+      backdrop="transparent"
       className="bg-white/0 shadow-none"
       hideCloseButton={true}
       isDismissable={false}
@@ -81,6 +81,7 @@ const ModalInstructions = ({
 export default function Main() {
   const { isOpen, onOpen, onOpenChange, onClose } = useDisclosure();
   const [open, setOpen] = useState(false);
+  const [splide, setSplide] = useState(0);
 
   useEffect(() => {
     onOpen();
@@ -92,15 +93,20 @@ export default function Main() {
   }, []);
 
   return (
-    <div className="max-w-3xl m-auto bg-[url('/img/festejos/kimberly-cristina/background-main2.jpg')] bg-cover bg-center shadow-large h-full">
+    <div
+      className="max-w-3xl m-auto shadow-large bg-[url('/img/festejos/kimberly-cristina/bg.jpg')] bg-center bg-cover bg-fixed"
+      style={{ backgroundColor: "#f4f3e1" }}
+    >
+      {/* <div className="absolute top-0 left-0 w-full h-full z-5 bg-gradient-to-t from-black/80 to-transparent"></div> */}
       {open && (
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
+          className="relative overflow-clip"
         >
           <Splide
-            aria-label="Citlali & Daniel"
+            aria-label="Sarang"
             options={{
               rewind: true,
               direction: "ttb",
@@ -114,15 +120,19 @@ export default function Main() {
                 page: "splide__pagination__page custom-class-page", // each button
               },
             }}
+            className="z-10"
+            onActive={(splide: any) => {
+              setSplide(splide.index);
+            }}
           >
             <SplideSlide>
-              <Header />
-            </SplideSlide>
-            <SplideSlide>
-              <HeaderTwo />
+              <Header splide={splide} />
             </SplideSlide>
             <SplideSlide>
               <Presentation />
+            </SplideSlide>
+            <SplideSlide>
+              <GodParents />
             </SplideSlide>
             <SplideSlide>
               <Ceremony />
@@ -131,16 +141,19 @@ export default function Main() {
               <Reception />
             </SplideSlide>
             <SplideSlide>
-              <GodParents />
-            </SplideSlide>            
-            <SplideSlide>
-              <Confirm />
+              <Baptism />
             </SplideSlide>
             <SplideSlide>
-              <Photo />
+              <Gifts />
             </SplideSlide>
           </Splide>
           <AudioControl />
+          <motion.div
+            className="bg-[url('/img/festejos/megan-guadalupe/bats-background.png')] bg-cover bg-bottom absolute inset-0 z-0"
+            variants={animation05}
+            initial="hidden"
+            whileInView="visible"
+          />
         </motion.div>
       )}
       <ModalInstructions isOpen={isOpen} onOpenChange={onOpenChange} />
