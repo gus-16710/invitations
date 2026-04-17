@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     title: "🥂 Kimberly Renada & Cristina Yoleth 🥂",
     description:
       "Te invitamos a celebrar con nosotras este día tan especial, lleno de amor, alegría y momentos inolvidables. ¡Esperamos contar con tu presencia para compartir esta hermosa ocasión! ",
-    images: ["https://invitaciones.unaideamas.com/img/festejos/kimberly-cristina/preview.jpg"],
+    images: ["https://invitaciones.unaideamas.com/img/festejos/kimberly-cristina/preview2.jpg"],
   },
   icons: {
     icon: "https://invitaciones.unaideamas.com/img/favicon.png",
