@@ -1,36 +1,23 @@
 import { Progress } from "@nextui-org/react";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { FaPause, FaPlay } from "react-icons/fa";
 import ReactPlayer from "react-player";
 import { saira } from "./Fonts";
 import { motion, useAnimate } from "framer-motion";
+import { useAudio } from "./AudioContext";
+
+const DURATION = 167;
 
 const Player = () => {
-  const [currentTime, setCurrentTime] = useState(0);
-  const [playing, setPlaying] = useState(false);
-
+  const { playing, setPlaying, currentTime, setCurrentTime } = useAudio();
   const [scope, animate] = useAnimate();
-
-  const audioPlayer = useRef(null);
-  const currentProgress = (Math.trunc(currentTime) * 100) / 259;
+  const currentProgress = (Math.trunc(currentTime) * 100) / DURATION;
 
   useEffect(() => {
     if (playing) {
-      animate(
-        scope.current,
-        {
-          rotate: [0, 90, 180, 270, 360],
-        },
-        { repeat: Infinity }
-      );
+      animate(scope.current, { rotate: [0, 90, 180, 270, 360] }, { repeat: Infinity });
     } else {
-      animate(
-        scope.current,
-        {
-          rotate: 0,
-        },
-        { repeat: 0 }
-      );
+      animate(scope.current, { rotate: 0 }, { repeat: 0 });
     }
   }, [playing]);
 
@@ -42,8 +29,7 @@ const Player = () => {
       className="flex items-center flex-col justify-center z-20"
     >
       <ReactPlayer
-        ref={audioPlayer}
-        url={"/media/lo_tienes_todo_piano.mp3"}
+        url="/media/lo_tienes_todo_piano.mp3"
         controls={true}
         height={100}
         width={300}
@@ -70,18 +56,11 @@ const Player = () => {
           </g>
         </g>
       </motion.svg>
-      <p
-        className={`${saira.className} text-zinc-100 text-xl custom-shadow mt-5 text-center`}
-      >
+      <p className={`${saira.className} text-zinc-100 text-xl custom-shadow mt-5 text-center`}>
         NUESTRA CANCIÓN
       </p>
       <div className="flex gap-2 w-56 items-center">
-        <button
-          type="button"
-          onClick={() => {
-            setPlaying(!playing);
-          }}
-        >
+        <button type="button" onClick={() => setPlaying(!playing)}>
           {playing ? (
             <FaPause className="text-2xl text-zinc-100" />
           ) : (
@@ -92,7 +71,7 @@ const Player = () => {
           size="sm"
           radius="sm"
           classNames={{
-            base: "max-w-md ",
+            base: "max-w-md",
             track: "drop-shadow-lg border",
             indicator: "bg-zinc-100",
             label: "tracking-wider font-medium text-default-600",
@@ -113,11 +92,5 @@ export default function AudioPlayer() {
     if (typeof window !== undefined) setHasWindow(true);
   }, []);
 
-  return (
-    <>
-      {hasWindow && (
-        <Player />       
-      )}
-    </>
-  );
+  return <>{hasWindow && <Player />}</>;
 }

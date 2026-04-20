@@ -10,9 +10,12 @@ import Gifts from "./components/Gifts";
 import Header from "./components/Header";
 import Photography from "./components/Photography";
 import Reception from "./components/Reception";
+import { AudioProvider } from "./components/AudioContext";
+import FloatingAudioPlayer from "./components/FloatingAudioPlayer";
 
 export default function Wedding() {
   return (
+    <AudioProvider>
     <main
       style={{
         backgroundColor: "#000000",
@@ -21,7 +24,10 @@ export default function Wedding() {
         backgroundSize: "cover",
       }}
     >
-      <div className="max-w-3xl m-auto shadow-large bg-white">
+      <div
+        className="max-w-3xl m-auto shadow-large"
+        style={{ backgroundColor: "#6B8E23" }}
+      >
         <Header />
         <Ceremony />
         <Counter />
@@ -35,5 +41,7 @@ export default function Wedding() {
         <FloatinButton />
       </div>
     </main>
+    <FloatingAudioPlayer />
+    </AudioProvider>
   );
 }

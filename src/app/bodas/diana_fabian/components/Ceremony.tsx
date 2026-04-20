@@ -95,7 +95,7 @@ export default function Ceremony() {
         <motion.svg
           xmlns="http://www.w3.org/2000/svg"
           xmlnsXlink="http://www.w3.org/1999/xlink"
-          fill="#000000"
+          fill="#ffffff"
           version="1.1"
           id="Layer_1"
           viewBox="0 0 512 512"
@@ -234,7 +234,7 @@ export default function Ceremony() {
             </g>
           </g>
         </motion.svg>
-        <h1 className={`${mate.className} text-gray-800 text-3xl mt-5`}>
+        <h1 className={`${mate.className} text-gray-100 text-3xl mt-5`}>
           Ceremonia Religiosa
         </h1>
 
@@ -245,18 +245,18 @@ export default function Ceremony() {
         </span>
 
         <p
-          className={`${roboto.className} text-gray-800 text-xl mt-5 mx-10 text-center`}
+          className={`${roboto.className} text-gray-100 text-xl mt-5 mx-10 text-center`}
         >
           Santuario Parroquial de San José
         </p>
         <p
-          className={`${roboto.className} text-gray-800 text-sm mt-2 mx-10 text-center max-w-md`}
+          className={`${roboto.className} text-gray-100 text-sm mt-2 mx-10 text-center max-w-md`}
         >
           Benito Juárez 27, Lomas de Hidalgo, Centro, 91300 Banderilla, Ver.
         </p>
         <button
           type="button"
-          className="mt-10 text-gray-900 bg-white/0 border border-gray-400 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 rounded-full me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700 font-medium text-sm px-5 py-2.5 text-center flex items-center"
+          className="mt-10 text-gray-900 bg-white border border-gray-400 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 rounded-full me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700 font-medium text-sm px-5 py-2.5 text-center flex items-center"
           onClick={() => {
             onOpen();
           }}

@@ -2,6 +2,8 @@ import AudioPlayer from "./AudioPlayer";
 import { alex, mate, oswald } from "./Fonts";
 import { motion } from "framer-motion";
 import "./Header.css";
+import { useEffect, useRef } from "react";
+import { useAudio } from "./AudioContext";
 
 const list = {
   visible: {
@@ -26,9 +28,22 @@ const item = {
 
 export default function Header() {
   const text01 = "Diana&Fabián";
+  const { setHeaderVisible } = useAudio();
+  const sectionRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const el = sectionRef.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => setHeaderVisible(entry.isIntersecting),
+      { threshold: 0.1 }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, [setHeaderVisible]);
 
   return (
-    <section className="h-screen relative flex items-center justify-center flex-col bg-[url('/img/bodas/diana_fabian/gallery-01.jpeg')] bg-cover bg-center">
+    <section ref={sectionRef} className="h-screen relative flex items-center justify-center flex-col bg-[url('/img/bodas/diana_fabian/gallery-01.jpeg')] bg-cover bg-center">
       <motion.h2
         className={`${mate.className} text-zinc-100 text-2xl text-center mb-5 custom-shadow flex flex-wrap justify-center `}
         initial={{ y: 100, opacity: 0 }}
@@ -83,7 +98,7 @@ export default function Header() {
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 1200 120"
           preserveAspectRatio="none"
-          style={{ fill: "#ffff" }}
+          style={{ fill: "#6B8E23" }}
           className="rotate-180"
         >
           <path

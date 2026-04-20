@@ -96,7 +96,7 @@ export default function Counter() {
           whileInView={{ x: 0 }}
           transition={{ duration: 2 }}
         />
-        <p className={`${mate.className} flex-2 px-5 text-3xl text-gray-800`}>
+        <p className={`${mate.className} flex-2 px-5 text-3xl text-gray-100`}>
           Faltan
         </p>
         <motion.div
@@ -108,7 +108,7 @@ export default function Counter() {
       </div>
 
       <motion.div
-        className={`${lora.className} mb-3 mt-5 py-3 text-gray-800 flex items-baseline justify-center`}
+        className={`${lora.className} mb-3 mt-5 py-3 text-gray-100 flex items-baseline justify-center`}
         initial={{ y: 100, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 1 }}

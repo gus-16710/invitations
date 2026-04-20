@@ -97,7 +97,7 @@ export default function Reception() {
           id="Capa_1"
           viewBox="0 0 512 512"
           width="75px"
-          fill="#000000"
+          fill="#ffffff"
         >
           <g>
             <path d="m157.075 214.056v.028c0 4.142 3.357 7.486 7.5 7.486s7.5-3.372 7.5-7.514-3.358-7.5-7.5-7.5c-4.143 0-7.5 3.358-7.5 7.5z"></path>
@@ -114,21 +114,21 @@ export default function Reception() {
           </g>
         </svg>
 
-        <h1 className={`${mate.className} text-gray-800 text-3xl mt-5`}>
+        <h1 className={`${mate.className} text-gray-100 text-3xl mt-5`}>
           Recepción
         </h1>
 
-        <span className={`${lora.className} my-5 bg-zinc-200/50 text-zinc-800 text-3xl font-medium me-2 px-2.5 py-0.5 rounded flex items-center justify-center gap-1`}>
+        {/* <span className={`${lora.className} my-5 bg-zinc-200/50 text-zinc-800 text-3xl font-medium me-2 px-2.5 py-0.5 rounded flex items-center justify-center gap-1`}>
           <IoMdTime /> 15:00 Hrs
-        </span>
+        </span> */}
 
         <p
-          className={`${roboto.className} text-gray-800 text-xl mt-5 mx-10 text-center`}
+          className={`${roboto.className} text-gray-100 text-xl mt-5 mx-10 text-center`}
         >
           Salón Campestre "Los Nísperos"
         </p>
         <p
-          className={`${roboto.className} text-gray-800 text-sm mt-2 mx-10 text-center`}
+          className={`${roboto.className} text-gray-100 text-sm mt-2 mx-10 text-center`}
         >
           Benito Juárez 58, Centro, 91300 Banderilla, Ver.
         </p>
