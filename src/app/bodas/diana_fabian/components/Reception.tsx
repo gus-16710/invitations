@@ -114,7 +114,7 @@ export default function Reception() {
           </g>
         </svg>
 
-        <h1 className={`${mate.className} text-gray-100 text-3xl mt-5`}>
+        <h1 className={`${mate.className}  text-3xl mt-5`} style={{color: "#bbafa1"}}>
           Recepción
         </h1>
 

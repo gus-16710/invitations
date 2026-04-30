@@ -38,7 +38,7 @@ export default function DressCode() {
       <p className={`${roboto.className} text-xs tracking-[0.35em] uppercase text-white/50 mb-2`}>
         Formal
       </p>
-      <h1 className={`${mate.className} text-white text-3xl mb-1`}>
+      <h1 className={`${mate.className}  text-3xl mt-5`} style={{color: "#bbafa1"}}>
         Código de Vestimenta
       </h1>
       <div className="w-16 h-px bg-gradient-to-r from-transparent via-white/40 to-transparent mb-8" />
@@ -77,8 +77,9 @@ export default function DressCode() {
         {/* Mensaje */}
         <div className="px-5 py-4">
           <p className={`${roboto.className} text-white/80 text-sm text-center leading-relaxed`}>
-            Elige tu mejor atuendo y acompáñanos a celebrar este día tan especial.
-            Tu presencia es lo más valioso para nosotros.
+            En nuestro gran día esperamos verte disfrutar y celebrar al máximo.
+            Elige tu mejor atuendo, solo evita el blanco, y recuerda que tu
+            mejor accesorio es tu sonrisa.
           </p>
         </div>
 

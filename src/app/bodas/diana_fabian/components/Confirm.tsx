@@ -37,11 +37,12 @@ export default function Confirm() {
           Confirma tu asistencia
         </h1>
         <p className={`${roboto.className} mt-5 mx-10 text-center max-w-md`}>
-          Espero que puedan venir a compartir con nosotros este día inolvidable.
-          Por favor confirma tu presencia.
+          Esperamos que puedan venir a compartir con nosotros este día tan
+          inolvidable, por favor confirma tu presencia y recuerda cuidar de tus
+          pequeños durante el evento.
         </p>
         <p className={`${roboto.className} mt-5 mx-10 text-center`}>
-          ¡Muchas Gracias!
+          ¡Muchas gracias!
         </p>
 
         <div className="mt-5 flex items-center justify-center flex-col">

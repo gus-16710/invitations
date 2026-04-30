@@ -96,7 +96,7 @@ export default function Counter() {
           whileInView={{ x: 0 }}
           transition={{ duration: 2 }}
         />
-        <p className={`${mate.className} flex-2 px-5 text-3xl text-gray-100`}>
+        <p className={`${mate.className} flex-2 px-5 text-3xl`} style={{color: "#bbafa1"}}>
           Faltan
         </p>
         <motion.div

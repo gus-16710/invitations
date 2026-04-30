@@ -98,7 +98,7 @@ export default function Header() {
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 1200 120"
           preserveAspectRatio="none"
-          style={{ fill: "#6B8E23" }}
+          style={{ fill: "#445032" }}
           className="rotate-180"
         >
           <path

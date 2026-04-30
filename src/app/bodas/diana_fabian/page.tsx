@@ -26,7 +26,7 @@ export default function Wedding() {
     >
       <div
         className="max-w-3xl m-auto shadow-large"
-        style={{ backgroundColor: "#6B8E23" }}
+        style={{ backgroundColor: "#445032" }}
       >
         <Header />
         <Ceremony />

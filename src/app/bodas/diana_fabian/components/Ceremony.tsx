@@ -95,7 +95,7 @@ export default function Ceremony() {
         <motion.svg
           xmlns="http://www.w3.org/2000/svg"
           xmlnsXlink="http://www.w3.org/1999/xlink"
-          fill="#ffffff"
+          fill="#445032"
           version="1.1"
           id="Layer_1"
           viewBox="0 0 512 512"
@@ -234,7 +234,7 @@ export default function Ceremony() {
             </g>
           </g>
         </motion.svg>
-        <h1 className={`${mate.className} text-gray-100 text-3xl mt-5`}>
+        <h1 className={`${mate.className}  text-3xl mt-5`} style={{color: "#bbafa1"}}>
           Ceremonia Religiosa
         </h1>
 
