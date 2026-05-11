@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { dancing, notoSans } from "./Fonts";
+import { ballet, dancing, notoSans } from "./Fonts";
 import {
   header,
   headerEntry01,
@@ -10,15 +10,16 @@ import {
 } from "./Animations";
 import { useEffect, useState } from "react";
 import NumberFlow from "@number-flow/react";
+import { great } from "../../camila/components/Fonts";
 
-const GOLD = "#4c1d95";
-const GOLD_GLOW = "rgba(76,29,149,0.55)";
-const GOLD_LINE = "rgba(76,29,149,0.7)";
-const GOLD_BORDER = "rgba(76,29,149,0.35)";
-const WHITE = "#8b5cf6";
-const WHITE_SOFT = "#a78bfa";
-const SHADOW = "0 1px 4px rgba(0,0,0,0.25)";
-const SHADOW_STRONG = "0 1px 6px rgba(0,0,0,0.35)";
+const GOLD = "#4A2C63";
+const GOLD_GLOW = "rgba(205,166,245,0.55)";
+const GOLD_LINE = "rgba(216,177,138,0.65)";
+const GOLD_BORDER = "rgba(255,255,255,0.22)";
+const WHITE = "#7B4FA3";
+const WHITE_SOFT = "#CDA6F5";
+const SHADOW = "0 1px 4px rgba(58,35,74,0.30)";
+const SHADOW_STRONG = "0 1px 6px rgba(58,35,74,0.45)";
 
 const list = {
   visible: {
@@ -42,8 +43,6 @@ export default function Header({ splide }: { splide: number }) {
   const [day, setDay] = useState(0);
   const [hour, setHour] = useState(0);
 
-  const text01 = "Kayleni_Gabriell";
-
   useEffect(() => {
     if (splide === 0) {
       setTimeout(() => {
@@ -62,24 +61,15 @@ export default function Header({ splide }: { splide: number }) {
       style={{ height: "100svh" }}
     >
       {/* Ornamento superior */}
-      <motion.div
-        className="flex items-center gap-3 mb-3"
+      <motion.img
+        src="/img/quinces/kaylani/decorative.png"
+        alt=""
+        //className="mb-3"
+        style={{ width: "250px" }}
         variants={headerEntry01}
         initial="hidden"
         whileInView="visible"
-      >
-        <div
-          className="h-px w-12"
-          style={{ background: `linear-gradient(to right, transparent, ${GOLD_LINE})` }}
-        />
-        <span style={{ color: GOLD, fontSize: "9px", letterSpacing: "0.5em", textShadow: SHADOW }}>
-          ✦
-        </span>
-        <div
-          className="h-px w-12"
-          style={{ background: `linear-gradient(to left, transparent, ${GOLD_LINE})` }}
-        />
-      </motion.div>
+      />
 
       {/* MIS XV AÑOS */}
       <motion.p
@@ -88,7 +78,7 @@ export default function Header({ splide }: { splide: number }) {
           color: GOLD,
           letterSpacing: "0.28em",
           fontSize: "2rem",
-          textShadow: `0 0 30px ${GOLD_GLOW}, ${SHADOW_STRONG}`,
+          //textShadow: `0 0 30px ${GOLD_GLOW}, ${SHADOW_STRONG}`,          
         }}
         variants={headerEntry02}
         initial="hidden"
@@ -115,21 +105,29 @@ export default function Header({ splide }: { splide: number }) {
 
       {/* Nombre letra por letra */}
       <motion.h1
-        className={`${dancing.className} flex mt-5 text-5xl`}
-        style={{          
+        className={`${great.className} flex flex-col items-center mt-5 text-6xl`}
+        style={{
           color: WHITE,
-          textShadow: `0 0 30px ${GOLD_GLOW}, ${SHADOW_STRONG}`,
+          textShadow: `0 0 0px ${GOLD_GLOW}, ${SHADOW_STRONG}`,
           letterSpacing: "0.02em",
+          lineHeight: 1.2,
+          fontFamily: "candlescript",
+          //textShadow: `0px 2px 20px rgb(${GOLD_GLOW})`,
         }}
         variants={list}
         initial="hidden"
         whileInView="visible"
       >
-        {text01.split("").map((letter, index) => (
-          <motion.span key={index} variants={item}>
-            {letter === "_" ? <>&nbsp;</> : letter}
-          </motion.span>
-        ))}
+        <span className="flex">
+          {"Kaylani".split("").map((letter, index) => (
+            <motion.span key={`a${index}`} variants={item}>{letter}</motion.span>
+          ))}
+        </span>
+        <span className="flex">
+          {"Gabriell".split("").map((letter, index) => (
+            <motion.span key={`b${index}`} variants={item}>{letter}</motion.span>
+          ))}
+        </span>
       </motion.h1>
 
       {/* Divisor ornamental */}
@@ -201,8 +199,8 @@ export default function Header({ splide }: { splide: number }) {
         <div
           className="flex flex-col items-center px-5 py-2 gap-0.5"
           style={{
-            borderLeft: `1px solid ${GOLD_BORDER}`,
-            borderRight: `1px solid ${GOLD_BORDER}`,
+            borderLeft: `1px solid ${GOLD_LINE}`,
+            borderRight: `1px solid ${GOLD_LINE}`,
           }}
         >
           <span

@@ -31,3 +31,10 @@
   font-weight: normal;
   font-style: normal;
 }
+
+@font-face {
+  font-family: "candlescript";
+  src: url("/fonts/candlescript.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}

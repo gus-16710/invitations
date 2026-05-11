@@ -30,10 +30,10 @@ const ModalOpening = ({
     >
       <ModalContent className="p-0 overflow-hidden">
         {(onClose) => (
-          <div className="bg-gradient-to-b from-purple-50 via-white to-violet-50">
+          <div className="bg-gradient-to-b from-[#FFF8FC] via-white to-[#F5EAFF]">
             {/* Top bar */}
             <motion.div
-              className="h-1.5 bg-gradient-to-r from-violet-900 via-purple-500 to-violet-300"
+              className="h-1.5 bg-gradient-to-r from-[#4A2C63] via-[#9B6DDB] to-[#CDA6F5]"
               initial={{ scaleX: 0 }}
               animate={{ scaleX: 1 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
@@ -48,7 +48,7 @@ const ModalOpening = ({
                 transition={{ type: "spring", stiffness: 260, damping: 18, delay: 0.2 }}
                 className="mb-1"
               >
-                <div className="w-14 h-14 rounded-full bg-gradient-to-br from-violet-400 to-purple-700 flex items-center justify-center shadow-lg shadow-purple-200">
+                <div className="w-14 h-14 rounded-full bg-gradient-to-br from-[#9B6DDB] to-[#4A2C63] flex items-center justify-center shadow-lg shadow-purple-200">
                   <FaCrown className="text-white text-2xl" />
                 </div>
               </motion.div>
@@ -56,7 +56,7 @@ const ModalOpening = ({
               {/* La Familia */}
               <motion.p
                 className={`${playFair.className} text-xs tracking-[0.25em] uppercase font-semibold`}
-                style={{ color: "#7c3aed" }}
+                style={{ color: "#9B6DDB" }}
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4 }}
@@ -67,7 +67,7 @@ const ModalOpening = ({
               {/* Apellido */}
               <motion.h1
                 className={`${greatVibes.className} text-4xl leading-none`}
-                style={{ color: "#4c1d95" }}
+                style={{ color: "#4A2C63" }}
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.55 }}
@@ -78,7 +78,7 @@ const ModalOpening = ({
               {/* te invita */}
               <motion.p
                 className={`${playFair.className} text-xs tracking-wide mt-1`}
-                style={{ color: "#a78bfa" }}
+                style={{ color: "#CDA6F5" }}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.7 }}
@@ -89,7 +89,7 @@ const ModalOpening = ({
               {/* Divisor */}
               <motion.div
                 className="w-full h-px my-2"
-                style={{ background: "linear-gradient(to right, transparent, rgba(139,92,246,0.4), transparent)" }}
+                style={{ background: "linear-gradient(to right, transparent, rgba(216,177,138,0.4), transparent)" }}
                 initial={{ scaleX: 0 }}
                 animate={{ scaleX: 1 }}
                 transition={{ delay: 0.8, duration: 0.6 }}
@@ -105,7 +105,7 @@ const ModalOpening = ({
                 <span
                   className={`${playFair.className} font-bold text-6xl leading-none`}
                   style={{
-                    background: "linear-gradient(135deg, #4c1d95, #8b5cf6)",
+                    background: "linear-gradient(135deg, #4A2C63, #9B6DDB)",
                     WebkitBackgroundClip: "text",
                     backgroundClip: "text",
                     WebkitTextFillColor: "transparent",
@@ -117,7 +117,7 @@ const ModalOpening = ({
                 </span>
                 <span
                   className={`${playFair.className} text-xl tracking-widest`}
-                  style={{ color: "#7c3aed" }}
+                  style={{ color: "#9B6DDB" }}
                 >
                   AÑOS
                 </span>
@@ -126,7 +126,7 @@ const ModalOpening = ({
               {/* de */}
               <motion.p
                 className={`${playFair.className} text-xs tracking-wider`}
-                style={{ color: "#a78bfa" }}
+                style={{ color: "#CDA6F5" }}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 1.0 }}
@@ -137,7 +137,7 @@ const ModalOpening = ({
               {/* Nombre */}
               <motion.h2
                 className={`${greatVibes.className} text-4xl leading-none -mt-1`}
-                style={{ color: "#8b5cf6" }}
+                style={{ color: "#7B4FA3" }}
                 initial={{ opacity: 0, y: 12 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 1.1 }}
@@ -158,7 +158,7 @@ const ModalOpening = ({
                     animate={{ scale: [1, 1.3, 1] }}
                     transition={{ repeat: Infinity, duration: 2, delay: d }}
                   >
-                    <FaStar className="text-sm" style={{ color: "#a78bfa" }} />
+                    <FaStar className="text-sm" style={{ color: "#CDA6F5" }} />
                   </motion.span>
                 ))}
               </motion.div>
@@ -166,7 +166,7 @@ const ModalOpening = ({
               {/* Divisor */}
               <motion.div
                 className="w-full h-px my-2"
-                style={{ background: "linear-gradient(to right, transparent, rgba(139,92,246,0.4), transparent)" }}
+                style={{ background: "linear-gradient(to right, transparent, rgba(216,177,138,0.4), transparent)" }}
                 initial={{ scaleX: 0 }}
                 animate={{ scaleX: 1 }}
                 transition={{ delay: 1.3, duration: 0.6 }}
@@ -175,7 +175,7 @@ const ModalOpening = ({
               {/* Fecha */}
               <motion.p
                 className={`${playFair.className} text-sm tracking-[0.2em] font-semibold`}
-                style={{ color: "#4c1d95" }}
+                style={{ color: "#4A2C63" }}
                 initial={{ opacity: 0, y: 8 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 1.4 }}
@@ -194,8 +194,8 @@ const ModalOpening = ({
                   fullWidth
                   className={`${playFair.className} text-white rounded-2xl font-semibold shadow-md gap-2`}
                   style={{
-                    background: "linear-gradient(to right, #4c1d95, #7c3aed)",
-                    boxShadow: "0 4px 14px rgba(109,40,217,0.35)",
+                    background: "linear-gradient(135deg, #9B6DDB, #7E4CC7)",
+                    boxShadow: "0 4px 14px rgba(123,79,163,0.40)",
                   }}
                   onPress={() => {
                     setOpen(true);
@@ -220,7 +220,7 @@ const ModalOpening = ({
                     animate={{ y: [0, -3, 0] }}
                     transition={{ repeat: Infinity, duration: 2.5, delay: d }}
                   >
-                    <FaHeart className="text-xs" style={{ color: "#c084fc" }} />
+                    <FaHeart className="text-xs" style={{ color: "#D8B18A" }} />
                   </motion.span>
                 ))}
               </motion.div>
@@ -228,7 +228,7 @@ const ModalOpening = ({
 
             {/* Bottom bar */}
             <motion.div
-              className="h-1.5 bg-gradient-to-r from-violet-300 via-purple-500 to-violet-900"
+              className="h-1.5 bg-gradient-to-r from-[#CDA6F5] via-[#9B6DDB] to-[#4A2C63]"
               initial={{ scaleX: 0 }}
               animate={{ scaleX: 1 }}
               transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}

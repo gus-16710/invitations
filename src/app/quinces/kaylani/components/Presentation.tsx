@@ -49,7 +49,7 @@ const FlowerNumber = ({ value }: { value: number }) => (
       style={{
         fontFamily: "rumble",
         fontSize: "1.45rem",
-        color: "#4c1d95",
+        color: "#4A2C63",
         textShadow: "0 1px 3px rgba(255,255,255,0.8)",
       }}
     >
@@ -128,7 +128,7 @@ export default function Presentation() {
               enableBackground="new 0 0 2588.233 499.412"
               xmlSpace="preserve"
               width="220"
-              className="fill-violet-400"              
+              style={{ fill: "#D8B18A" }}
             >
               <g>
                 <path d="M2159.697,423.532c-28.752,26.217-57.105,30.613-74.174,33.505c-0.275,2.366-0.508,4.732-0.718,7.098   c60.061-3.57,104.258-41.387,113.786-84.779c-4.626-0.043-9.189-0.083-13.775-0.126   C2180.168,395.667,2172.248,411.659,2159.697,423.532z" />
@@ -156,7 +156,7 @@ export default function Presentation() {
             style={{
               fontFamily: "rumble",
               textShadow: "0px 1px 1px rgb(0,0,0)",
-              color: "#4c1d95",
+              color: "#4A2C63",
             }}
             variants={presentationEntry02}
             initial="hidden"
@@ -168,35 +168,35 @@ export default function Presentation() {
 
           <motion.div
             className={`${clicker.className} mt-10 mb-5 flex justify-evenly w-full text-4xl max-w-md`}
-            style={{ color: "#8b5cf6" }}
+            style={{ color: "#7B4FA3" }}
             variants={presentationEntry03}
             initial="hidden"
             whileInView="visible"
           >
             <label className="flex flex-col items-center">
               <FlowerNumber value={days} />
-              <span className="text-2xl -rotate-12">Dias</span>
+              <span className="text-2xl">Dias</span>
             </label>
             <label className="mt-4">:</label>
             <label className="flex flex-col items-center">
               <FlowerNumber value={hours} />
-              <span className="text-2xl rotate-12">Horas</span>
+              <span className="text-2xl">Horas</span>
             </label>
             <label className="mt-4">:</label>
             <label className="flex flex-col items-center">
               <FlowerNumber value={minutes} />
-              <span className="text-2xl -rotate-12">Min</span>
+              <span className="text-2xl">Min</span>
             </label>
             <label className="mt-4">:</label>
             <label className="flex flex-col items-center">
               <FlowerNumber value={seconds} />
-              <span className="text-2xl rotate-12">Seg</span>
+              <span className="text-2xl">Seg</span>
             </label>
           </motion.div>
 
           <motion.p
             className={`${aref.className} text-base px-5 text-center max-w-md`}
-            style={{ color: "#8b5cf6"}}
+            style={{ color: "#7B4FA3"}}
             variants={presentationEntry04}
             initial="hidden"
             whileInView="visible"

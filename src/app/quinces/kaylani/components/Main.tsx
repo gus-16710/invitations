@@ -20,6 +20,8 @@ import Ceremony from "./Ceremony";
 import Reception from "./Reception";
 import Gifts from "./Gifts";
 import Baptism from "./Baptism";
+import DressCode from "./DressCrode";
+import Confirm from "./Confirm";
 
 const ModalInstructions = ({
   isOpen,
@@ -139,6 +141,12 @@ export default function Main() {
             </SplideSlide>
             <SplideSlide>
               <Reception />
+            </SplideSlide>                        
+            <SplideSlide>
+              <DressCode />
+            </SplideSlide> 
+            <SplideSlide>
+              <Confirm />
             </SplideSlide>                        
           </Splide>
           <AudioControl />

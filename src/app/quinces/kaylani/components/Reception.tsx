@@ -109,7 +109,7 @@ export default function Reception() {
               enableBackground="new 0 0 2588.233 499.412"
               xmlSpace="preserve"
               width="220"
-              className="fill-violet-400"
+              style={{ fill: "#D8B18A" }}
             >
               <g>
                 <path d="M2159.697,423.532c-28.752,26.217-57.105,30.613-74.174,33.505c-0.275,2.366-0.508,4.732-0.718,7.098   c60.061-3.57,104.258-41.387,113.786-84.779c-4.626-0.043-9.189-0.083-13.775-0.126   C2180.168,395.667,2172.248,411.659,2159.697,423.532z" />
@@ -136,7 +136,7 @@ export default function Reception() {
           {/* Título */}
           <motion.h1
             className="text-6xl mt-5 text-center"
-            style={{ fontFamily: "rumble", color: "#4c1d95", textShadow: "0 1px 3px rgba(0,0,0,0.15)" }}
+            style={{ fontFamily: "rumble", color: "#4A2C63", textShadow: "0 1px 3px rgba(58,35,74,0.25)" }}
             variants={receptionEntry02}
             initial="hidden"
             whileInView="visible"
@@ -148,7 +148,7 @@ export default function Reception() {
           {/* Hora */}
           <motion.p
             className="text-6xl mt-8"
-            style={{ fontFamily: "rumble", color: "#8b5cf6", textShadow: "0 1px 2px rgba(0,0,0,0.15)" }}
+            style={{ fontFamily: "rumble", color: "#7B4FA3", textShadow: "0 1px 2px rgba(58,35,74,0.25)" }}
             variants={receptionEntry03}
             initial="hidden"
             whileInView="visible"
@@ -160,7 +160,7 @@ export default function Reception() {
           {/* Nombre del lugar */}
           <motion.p
             className={`${aref.className} text-2xl mt-2 text-center`}
-            style={{ color: "#7c3aed", textShadow: "0 1px 2px rgba(0,0,0,0.1)" }}
+            style={{ color: "#9B6DDB", textShadow: "0 1px 2px rgba(58,35,74,0.25)" }}
             variants={receptionEntry04}
             initial="hidden"
             whileInView="visible"
@@ -172,7 +172,7 @@ export default function Reception() {
           {/* Dirección */}
           <motion.p
             className={`${notoSans.className} text-center mx-5 mt-4 text-sm max-w-md p-2`}
-            style={{ color: "#a78bfa" }}
+            style={{ color: "#CDA6F5" }}
             variants={receptionEntry05}
             initial="hidden"
             whileInView="visible"
@@ -191,7 +191,7 @@ export default function Reception() {
             <Button
               variant="shadow"
               className="mt-5 z-10 text-white font-semibold"
-              style={{ background: "linear-gradient(to right, #4c1d95, #7c3aed)", boxShadow: "0 4px 14px rgba(109,40,217,0.4)" }}
+              style={{ background: "linear-gradient(135deg, #9B6DDB, #7E4CC7)", boxShadow: "0 4px 14px rgba(123,79,163,0.45)" }}
               onPress={onOpen}
             >
               <FaLocationDot /> Ver ubicación
@@ -211,7 +211,7 @@ export default function Reception() {
             height="250px"
             width="250px"
             className="absolute -right-10 -bottom-6"
-            fill="rgba(139, 92, 246, 0.15)"
+            fill="rgba(155,109,219,0.16)"
           >
             <g>
               <path d="M865.3657,1267.6563c-298.2666,0-540.0595-241.793-540.0595-540.0596s241.7929-540.0595,540.0595-540.0595   c164.7996,0,312.353,73.8205,411.4125,190.1921C1159.6829,189.3479,950.8513,63.9291,712.7221,63.9291   c-366.5335,0-663.6676,297.1341-663.6676,663.6676s297.1341,663.6676,663.6676,663.6676   c238.1292,0,446.9606-125.4187,564.0561-313.8003C1177.7186,1193.8357,1030.1653,1267.6563,865.3657,1267.6563z" />

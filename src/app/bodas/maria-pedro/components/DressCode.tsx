@@ -28,7 +28,8 @@ export default function DressCode() {
           <div className="flex-1 border-b-1 border-gray-800" />
         </div>
         <p className={`${mate.className} text-center`}>Elengate - Formal</p>
-        <motion.div className="flex justify-center m-5" 
+        <motion.div
+          className="flex justify-center m-5"
           animate={{
             scale: [1, 1.1, 1],
             rotate: [0, 5, 0, -5, 0],

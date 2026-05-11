@@ -15,6 +15,8 @@ import {
   Spicy_Rice,
   Lobster_Two,
   Dancing_Script,
+  Ballet,
+  Cinzel_Decorative
 } from "next/font/google";
 
 export const greatVibes = Great_Vibes({ subsets: ["latin"], weight: "400" });
@@ -42,3 +44,5 @@ export const dancing = Dancing_Script({
   subsets: ["latin"],
   weight: ["400", "500"],
 });
+export const ballet = Ballet({ subsets: ["latin"], weight: "400" });
+export const cinzel = Cinzel_Decorative({ subsets: ["latin"], weight: "400" });
