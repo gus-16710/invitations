@@ -198,7 +198,7 @@ export default function Reception() {
           {/* Dirección */}
           <motion.p
             className={`${notoSans.className} text-center mx-5 mt-4 text-sm max-w-md p-2`}
-            style={{ color: "#CDA6F5" }}
+            style={{ color: "#9B6DDB" }}
             variants={receptionEntry05}
             initial="hidden"
             whileInView="visible"
