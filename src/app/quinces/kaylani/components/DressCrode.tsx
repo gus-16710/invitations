@@ -90,7 +90,7 @@ export default function DressCode() {
           {/* Formal tag */}
           <motion.p
             className={`${notoSans.className} mt-1 tracking-[0.4em] uppercase`}
-            style={{ color: "#CDA6F5", fontSize: "0.7rem" }}
+            style={{ color: "#9B6DDB", fontSize: "0.7rem" }}
             variants={presentationEntry02}
             initial="hidden"
             whileInView="visible"

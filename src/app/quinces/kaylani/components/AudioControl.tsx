@@ -18,11 +18,29 @@ export default function AudioControl() {
     <>
       <motion.button
         type="button"
-        className="bg-purple-100/10 p-3 rounded-full text-zinc-50 fixed bottom-0 right-0 font-medium shadow-md mb-5 mr-5 transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg z-10"
         onClick={() => setIsPlayed(!isPlayed)}
-        initial={{ opacity: 0, scale: 0, y: -100 }}
-        animate={{ opacity: 1, scale: 1, y: 0 }}
-        transition={{ duration: 1, delay: 5, ease: "anticipate" }} 
+        initial={{ opacity: 0, scale: 0 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.8, delay: 5, type: "spring", stiffness: 200, damping: 18 }}
+        whileTap={{ scale: 0.88 }}
+        style={{
+          position: "fixed",
+          bottom: "24px",
+          right: "20px",
+          zIndex: 50,
+          width: "42px",
+          height: "42px",
+          borderRadius: "50%",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          background: "linear-gradient(135deg, #9B6DDB, #7E4CC7)",
+          boxShadow: "0 4px 16px rgba(74,44,99,0.45), 0 0 0 3px rgba(205,166,245,0.2)",
+          border: "1px solid rgba(255,255,255,0.22)",
+          color: "#FFF8FC",
+          fontSize: "15px",
+          cursor: "pointer",
+        }}
       >
         {isPlayed ? <FaVolumeUp /> : <FaVolumeOff />}
       </motion.button>

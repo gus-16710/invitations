@@ -79,7 +79,7 @@ export default function Confirm() {
       {/* Subtítulo decorativo */}
       <motion.p
         className={`${notoSans.className} mt-1 tracking-[0.35em] uppercase`}
-        style={{ color: "#CDA6F5", fontSize: "0.65rem" }}
+        style={{ color: "#9B6DDB", fontSize: "0.65rem" }}
         variants={headerEntry02}
         initial="hidden"
         whileInView="visible"

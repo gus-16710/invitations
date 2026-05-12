@@ -50,7 +50,7 @@ export default function Gallery() {
 
       <motion.p
         className={`${notoSans.className} tracking-[0.3em] uppercase mb-8`}
-        style={{ color: "#CDA6F5", fontSize: "0.65rem" }}
+        style={{ color: "#9B6DDB", fontSize: "0.65rem" }}
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.5, delay: 0.3 }}
@@ -98,7 +98,7 @@ export default function Gallery() {
       {/* Texto hint */}
       <motion.p
         className={`${notoSans.className} mt-8 tracking-widest text-xs`}
-        style={{ color: "#CDA6F5", opacity: 0.7 }}
+        style={{ color: "#9B6DDB", opacity: 0.7 }}
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 0.7 }}
         transition={{ delay: 1 }}
