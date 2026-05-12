@@ -135,7 +135,7 @@ export default function Reception() {
 
           {/* Título */}
           <motion.h1
-            className="text-6xl mt-5 text-center"
+            className="text-4xl mt-3 text-center"
             style={{ fontFamily: "rumble", color: "#4A2C63", textShadow: "0 1px 3px rgba(58,35,74,0.25)" }}
             variants={receptionEntry02}
             initial="hidden"
@@ -145,9 +145,35 @@ export default function Reception() {
             Recepción
           </motion.h1>
 
+          {/* Imagen */}
+          <motion.div
+            className="mt-4"
+            initial={{ opacity: 0, scale: 0.7 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ type: "spring", stiffness: 80, damping: 16, delay: 0.55 }}
+            viewport={{ once: false, amount: 0.4 }}
+          >
+            <div
+              style={{
+                width: "130px",
+                height: "130px",
+                borderRadius: "50%",
+                overflow: "hidden",
+                border: "2px solid rgba(216,177,138,0.6)",
+                boxShadow: "0 4px 24px rgba(74,44,99,0.28), 0 0 0 5px rgba(205,166,245,0.12)",
+              }}
+            >
+              <img
+                src="/img/quinces/kaylani/reception.jpg"
+                alt="Recepción"
+                style={{ width: "100%", height: "100%", objectFit: "cover" }}
+              />
+            </div>
+          </motion.div>
+
           {/* Hora */}
           <motion.p
-            className="text-6xl mt-8"
+            className="text-4xl mt-3"
             style={{ fontFamily: "rumble", color: "#7B4FA3", textShadow: "0 1px 2px rgba(58,35,74,0.25)" }}
             variants={receptionEntry03}
             initial="hidden"

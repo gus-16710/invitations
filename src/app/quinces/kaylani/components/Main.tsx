@@ -21,6 +21,7 @@ import Reception from "./Reception";
 import Gifts from "./Gifts";
 import Baptism from "./Baptism";
 import DressCode from "./DressCrode";
+import Gallery from "./Gallery";
 import Confirm from "./Confirm";
 
 const ModalInstructions = ({
@@ -141,7 +142,10 @@ export default function Main() {
             </SplideSlide>
             <SplideSlide>
               <Reception />
-            </SplideSlide>                        
+            </SplideSlide>
+            <SplideSlide>
+              <Gallery />
+            </SplideSlide>
             <SplideSlide>
               <DressCode />
             </SplideSlide> 
