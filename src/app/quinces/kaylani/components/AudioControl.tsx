@@ -46,7 +46,7 @@ export default function AudioControl() {
       </motion.button>
 
       <audio controls ref={audioPlayer} hidden loop>
-        <source src="/media/golden_brown.mp3" type="audio/mpeg" />
+        <source src="/media/golden_brown_cut.mp3" type="audio/mpeg" />
         Your browser does not support the audio element.
       </audio>
     </>
