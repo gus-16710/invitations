@@ -9,11 +9,11 @@ import {
 } from "./Animations";
 
 const LILAS = [
-  { hex: "#f3e8ff", label: "Lavanda" },
+  // { hex: "#f3e8ff", label: "Lavanda" },
   { hex: "#d8b4fe", label: "Lila claro" },
   { hex: "#a855f7", label: "Violeta" },
   { hex: "#9B6DDB", label: "Lila medio" },
-  { hex: "#4A2C63", label: "Violeta oscuro" },
+  // { hex: "#4A2C63", label: "Violeta oscuro" },
 ];
 
 export default function DressCode() {

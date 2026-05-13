@@ -1,16 +1,27 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { createPortal } from "react-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { notoSans } from "./Fonts";
 
 const photos = [
-  "/img/quinces/kaylani/photo01.jpeg",
-  "/img/quinces/kaylani/photo02.jpeg",
-  "/img/quinces/kaylani/photo03.jpeg",
+  "/img/quinces/kaylani/01.jpg",
+  "/img/quinces/kaylani/02.jpg",
+  "/img/quinces/kaylani/03.jpg",
+  "/img/quinces/kaylani/04.jpg",
+  "/img/quinces/kaylani/05.jpg",
 ];
 
 export default function Gallery() {
+  const [current, setCurrent] = useState(0);
   const [selected, setSelected] = useState<string | null>(null);
+
+  useEffect(() => {
+    if (selected) return;
+    const timer = setInterval(() => {
+      setCurrent(prev => (prev + 1) % photos.length);
+    }, 2000);
+    return () => clearInterval(timer);
+  }, [selected]);
 
   return (
     <section
@@ -59,45 +70,65 @@ export default function Gallery() {
         ✦ Kaylani Gabriell ✦
       </motion.p>
 
-      {/* Tres columnas escalonadas */}
-      <div className="flex gap-4 items-center">
-        {photos.map((src, i) => (
+      {/* Slider */}
+      <motion.button
+        onClick={() => setSelected(photos[current])}
+        className="focus:outline-none"
+        initial={{ opacity: 0, scale: 0.85 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.6, delay: 0.4, type: "spring", stiffness: 90, damping: 18 }}
+        viewport={{ once: false, amount: 0.4 }}
+        whileTap={{ scale: 0.97 }}
+        style={{
+          position: "relative",
+          width: "220px",
+          height: "300px",
+          borderRadius: "22px",
+          overflow: "hidden",
+          border: "1.5px solid rgba(216,177,138,0.55)",
+          boxShadow: "0 8px 32px rgba(74,44,99,0.32), 0 0 0 5px rgba(205,166,245,0.12)",
+          flexShrink: 0,
+        }}
+      >
+        <AnimatePresence mode="wait">
+          <motion.img
+            key={current}
+            src={photos[current]}
+            alt={`Foto ${current + 1}`}
+            style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+            initial={{ scale: 0.78, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            exit={{ scale: 1.04, opacity: 0 }}
+            transition={{ duration: 0.45, ease: "easeOut" }}
+          />
+        </AnimatePresence>
+      </motion.button>
+
+      {/* Dots */}
+      <div className="flex items-center gap-2 mt-5">
+        {photos.map((_, i) => (
           <motion.button
             key={i}
-            onClick={() => setSelected(src)}
-            style={{ marginTop: i === 1 ? "-24px" : "24px" }}
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.65, delay: 0.2 + i * 0.25, type: "spring", stiffness: 80, damping: 16 }}
-            viewport={{ once: false, amount: 0.4 }}
-            whileTap={{ scale: 0.96 }}
-            className="focus:outline-none"
-          >
-            <div
-              style={{
-                width: "95px",
-                height: "135px",
-                borderRadius: "18px",
-                overflow: "hidden",
-                border: "1.5px solid rgba(216,177,138,0.55)",
-                boxShadow: i === 1
-                  ? "0 8px 28px rgba(74,44,99,0.35), 0 0 0 4px rgba(205,166,245,0.14)"
-                  : "0 4px 18px rgba(74,44,99,0.22)",
-              }}
-            >
-              <img
-                src={src}
-                alt={`Foto ${i + 1}`}
-                style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
-              />
-            </div>
-          </motion.button>
+            onClick={() => setCurrent(i)}
+            animate={{
+              width: i === current ? 20 : 6,
+              background: i === current ? "#D8B18A" : "rgba(216,177,138,0.3)",
+            }}
+            transition={{ duration: 0.3 }}
+            style={{
+              height: "6px",
+              borderRadius: "3px",
+              border: "none",
+              cursor: "pointer",
+              padding: 0,
+            }}
+          />
         ))}
       </div>
 
       {/* Texto hint */}
       <motion.p
-        className={`${notoSans.className} mt-8 tracking-widest text-xs`}
+        className={`${notoSans.className} mt-5 tracking-widest text-xs`}
         style={{ color: "#9B6DDB", opacity: 0.7 }}
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 0.7 }}
@@ -123,7 +154,7 @@ export default function Gallery() {
         </g>
       </svg>
 
-      {/* Lightbox — renderizado en document.body via portal para escapar transforms de Splide */}
+      {/* Lightbox via portal */}
       {typeof window !== "undefined" && createPortal(
         <AnimatePresence>
           {selected && (
