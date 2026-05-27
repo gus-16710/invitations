@@ -17,7 +17,7 @@ export default function Presentation({ splide }: { splide: number }) {
           className={`${greatVibes.className} text-5xl drop-shadow text-center text-white`}
           initial={{ y: -100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
-          transition={{ duration: 1, ease: "easeOut", delay: 0.4 }}
+          transition={{ duration: 1, ease: "easeOut" as const, delay: 0.4 }}
           style={{ textShadow: "0px 1px 1px rgb(0,0,0)" }}
         >
           Rosca de Reyes
@@ -26,7 +26,7 @@ export default function Presentation({ splide }: { splide: number }) {
           className="flex items-center justify-center flex-col mt-4 mb-2 text-white"
           initial={{ scale: 0, opacity: 0 }}
           whileInView={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 1, ease: "easeOut", delay: 0.8 }}
+          transition={{ duration: 1, ease: "easeOut" as const, delay: 0.8 }}
           style={{ textShadow: "0px 1px 1px rgb(0,0,0)" }}
         >
           <label className={`${playFair.className} pb-3 text-xl`}>Enero</label>
@@ -53,7 +53,7 @@ export default function Presentation({ splide }: { splide: number }) {
           className={`${notoSans.className} text-center p-5 max-w-md text-white`}
           initial={{ y: 100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
-          transition={{ duration: 1, ease: "easeInOut", delay: 1.2 }}
+          transition={{ duration: 1, ease: "easeInOut" as const, delay: 1.2 }}
           style={{ textShadow: "0px 1px 1px rgb(0,0,0)" }}          
         >
           Tu amiga Adriana te invita a celebrar la Rosca de Reyes. Ven a
@@ -74,7 +74,7 @@ export default function Presentation({ splide }: { splide: number }) {
             initial={{ y: 100, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: false }}
-            transition={{ duration: 1, ease: "easeInOut", delay: 1.2 }}
+            transition={{ duration: 1, ease: "easeInOut" as const, delay: 1.2 }}
           >
             <g>
               <g>

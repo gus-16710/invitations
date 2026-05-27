@@ -21,7 +21,7 @@ export default function AudioControl() {
         onClick={() => setIsPlayed(!isPlayed)}
         initial={{ opacity: 0, scale: 0 }}
         animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.8, delay: 5, type: "spring", stiffness: 200, damping: 18 }}
+        transition={{ duration: 0.8, delay: 5, type: "spring" as const, stiffness: 200, damping: 18 }}
         whileTap={{ scale: 0.88 }}
         style={{
           position: "fixed",

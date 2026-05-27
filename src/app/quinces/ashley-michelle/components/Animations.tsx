@@ -8,7 +8,7 @@ export const header = {
     visible: {
       opacity: 1,
       scale: 1,
-      transition: { duration: 2, type: "spring", stiffness: 70, delay: 0.4 },
+      transition: { duration: 2, type: "spring" as const, stiffness: 70, delay: 0.4 },
     },
   },
   animationText02: {
@@ -16,7 +16,7 @@ export const header = {
     visible: {
       opacity: 1,
       scale: 1,
-      transition: { duration: 1, type: "spring", stiffness: 70, delay: 0.8 },
+      transition: { duration: 1, type: "spring" as const, stiffness: 70, delay: 0.8 },
     },
   },
   animationText03: {
@@ -71,7 +71,7 @@ export const presentation = {
     visible: {
       opacity: 1,
       scale: 1,
-      transition: { duration: 1, type: "spring", stiffness: 70, delay: 0.4 },
+      transition: { duration: 1, type: "spring" as const, stiffness: 70, delay: 0.4 },
     },
   },
   svg: {
@@ -121,7 +121,7 @@ export const locations = {
     visible: {
       opacity: 1,
       scale: 1,
-      transition: { duration: 2, type: "spring", stiffness: 70, delay: 0.8 },
+      transition: { duration: 2, type: "spring" as const, stiffness: 70, delay: 0.8 },
     },
   },
   animationText02: {
@@ -183,7 +183,7 @@ export const godParents = {
     visible: {
       opacity: 1,
       scale: 1,
-      transition: { duration: 1, type: "spring", stiffness: 70, delay: 0.4 },
+      transition: { duration: 1, type: "spring" as const, stiffness: 70, delay: 0.4 },
     },
   },
   svg: {
@@ -228,7 +228,7 @@ export const confirm = {
     visible: {
       opacity: 1,
       scale: 1,
-      transition: { duration: 1, type: "spring", stiffness: 70, delay: 0.4 },
+      transition: { duration: 1, type: "spring" as const, stiffness: 70, delay: 0.4 },
     },
   },
   animationText02: {
@@ -274,7 +274,7 @@ export const gifts = {
     visible: {
       opacity: 1,
       scale: 1,
-      transition: { duration: 1, type: "spring", stiffness: 70, delay: 0.4 },
+      transition: { duration: 1, type: "spring" as const, stiffness: 70, delay: 0.4 },
     },
   },
   animationText02: {

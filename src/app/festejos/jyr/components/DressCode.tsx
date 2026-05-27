@@ -16,7 +16,7 @@ export default function DressCode() {
         className={`${greatVibes.className} text-5xl drop-shadow text-center`}
         initial={{ y: -100, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
-        transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
+        transition={{ duration: 1, ease: "easeOut" as const, delay: 0.3 }}
       >
         Vestimenta
       </motion.h1>
@@ -25,7 +25,7 @@ export default function DressCode() {
           <motion.div
             initial={{ y: 100, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 1, ease: "easeOut", delay: 0.6 }}
+            transition={{ duration: 1, ease: "easeOut" as const, delay: 0.6 }}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -40,7 +40,7 @@ export default function DressCode() {
           <motion.div
             initial={{ y: -100, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 1, ease: "easeOut", delay: 0.6 }}
+            transition={{ duration: 1, ease: "easeOut" as const, delay: 0.6 }}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -69,7 +69,7 @@ export default function DressCode() {
           className={`${greatVibes.className} pt-5 text-3xl`}
           initial={{ y: 100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
-          transition={{ duration: 1, ease: "easeInOut", delay: 0.9 }}
+          transition={{ duration: 1, ease: "easeInOut" as const, delay: 0.9 }}
         >
           Mujeres & Hombres
         </motion.h2>
@@ -77,7 +77,7 @@ export default function DressCode() {
           className={`${notoSans.className} text-center mt-5 mx-10`}
           initial={{ y: 100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
-          transition={{ duration: 1, ease: "easeInOut", delay: 0.9 }}
+          transition={{ duration: 1, ease: "easeInOut" as const, delay: 0.9 }}
         >
           Queremos que disfruten este día tan especial. Elijan un atuendo comodo
           y que refleje su estilo personal.
@@ -88,7 +88,7 @@ export default function DressCode() {
           role="alert"
           initial={{ y: -100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
-          transition={{ duration: 1, ease: "easeOut", delay: 1 }}
+          transition={{ duration: 1, ease: "easeOut" as const, delay: 1 }}
         >
           <svg
             className="w-4 h-4 me-2 shrink-0 mt-0.5 sm:mt-0"

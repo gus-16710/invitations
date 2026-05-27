@@ -167,7 +167,7 @@ export default function Ceremony() {
             transition={{
               duration: 10,
               repeat: Infinity,
-              ease: "easeInOut",
+              ease: "easeInOut" as const,
             }}
           />
         </div>

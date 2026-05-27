@@ -15,7 +15,7 @@ export const header = {
     visible: {
       opacity: 1,
       scale: 1,
-      transition: { duration: 1, type: "spring", stiffness: 70, delay: 0.5 },
+      transition: { duration: 1, type: "spring" as const, stiffness: 70, delay: 0.5 },
     },
   },
   animationText01: {
@@ -88,7 +88,7 @@ export const presentation = {
     visible: {
       opacity: 1,
       scale: 1,
-      transition: { duration: 1, type: "spring", stiffness: 70, delay: 0.4 },
+      transition: { duration: 1, type: "spring" as const, stiffness: 70, delay: 0.4 },
     },
   },
   animationDivider: {
@@ -142,7 +142,7 @@ export const ceremony = {
     visible: {
       opacity: 1,
       scale: 1,
-      transition: { duration: 1, type: "spring", stiffness: 70, delay: 0.4 },
+      transition: { duration: 1, type: "spring" as const, stiffness: 70, delay: 0.4 },
     },
   },
   animationDivider: {
@@ -173,7 +173,7 @@ export const reception = {
     visible: {
       opacity: 1,
       scale: 1,
-      transition: { duration: 1, type: "spring", stiffness: 70, delay: 0.4 },
+      transition: { duration: 1, type: "spring" as const, stiffness: 70, delay: 0.4 },
     },
   },
   animationDivider: {
@@ -204,7 +204,7 @@ export const godParents = {
     visible: {
       opacity: 1,
       scale: 1,
-      transition: { duration: 1, type: "spring", stiffness: 70, delay: 0.4 },
+      transition: { duration: 1, type: "spring" as const, stiffness: 70, delay: 0.4 },
     },
   },
   animationDivider: {
@@ -227,7 +227,7 @@ export const gallery = {
     visible: {
       opacity: 1,
       scale: 1,
-      transition: { duration: 1, type: "spring", stiffness: 70, delay: 0.4 },
+      transition: { duration: 1, type: "spring" as const, stiffness: 70, delay: 0.4 },
     },
   },
   animationDivider: {
@@ -258,7 +258,7 @@ export const confirm = {
     visible: {
       opacity: 1,
       scale: 1,
-      transition: { duration: 1, type: "spring", stiffness: 70, delay: 0.4 },
+      transition: { duration: 1, type: "spring" as const, stiffness: 70, delay: 0.4 },
     },
   },
   animationDivider: {

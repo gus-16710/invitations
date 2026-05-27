@@ -3,6 +3,7 @@ import "yet-another-react-lightbox/styles.css";
 import { motion } from "framer-motion";
 import { cormorant } from "./Fonts";
 import PhotoAlbum from "react-photo-album";
+import "react-photo-album/styles.css";
 import { useState } from "react";
 import NextJsImage from "./NextJsImage";
 import Lightbox from "yet-another-react-lightbox";
@@ -34,7 +35,7 @@ const item = {
     opacity: 1,
     y: 0,
     transition: {
-      type: "spring",
+      type: "spring" as const,
       damping: 15,
       stiffness: 150,
     },
@@ -71,7 +72,7 @@ export default function SlideFour() {
           layout="masonry"
           photos={images}
           onClick={({ index: current }) => setIndex(current)}
-          renderPhoto={NextJsImage}
+          render={{ photo: NextJsImage }}
           columns={1}
         />
         <Lightbox

@@ -23,6 +23,7 @@ import AudioControl from "./components/AudioControl";
 
 import { GrFormViewHide } from "react-icons/gr";
 import ReactCanvasConfetti from "react-canvas-confetti";
+import type { TCanvasConfettiInstance } from "react-canvas-confetti/dist/types";
 import SlideSix from "./components/slideSix";
 
 const OpeningModal = ({
@@ -52,7 +53,7 @@ const OpeningModal = ({
       y: 0, 
       opacity: 1,
       transition: {
-        type: "spring",
+        type: "spring" as const,
         damping: 10,
         stiffness: 80,
         mass: 0.6
@@ -66,7 +67,7 @@ const OpeningModal = ({
       opacity: 1,
       transition: {
         duration: 2,
-        ease: "easeOut"
+        ease: "easeOut" as const
       }
     }
   };
@@ -77,7 +78,7 @@ const OpeningModal = ({
       scale: 1,
       opacity: 1,
       transition: {
-        type: "spring",
+        type: "spring" as const,
         stiffness: 100,
         damping: 8,
         mass: 0.5
@@ -198,9 +199,9 @@ export default function School() {
     onOpen();
   }, []);
 
-   const refAnimationInstance = useRef<confetti.CreateTypes | null>(null);
+   const refAnimationInstance = useRef<TCanvasConfettiInstance | null>(null);
 
-  const getInstance = useCallback((instance: any) => {
+  const getInstance = useCallback(({ confetti: instance }: { confetti: TCanvasConfettiInstance }) => {
     refAnimationInstance.current = instance;
   }, []);
 
@@ -305,7 +306,7 @@ export default function School() {
       />
 
       <ReactCanvasConfetti
-        refConfetti={getInstance}
+        onInit={getInstance}
         style={{
           position: "absolute",
           pointerEvents: "none",

@@ -48,7 +48,7 @@ const OpeningModal = ({
       y: 0,
       opacity: 1,
       transition: {
-        type: "spring",
+        type: "spring" as const,
         damping: 10,
         stiffness: 80,
         mass: 0.6,
@@ -62,7 +62,7 @@ const OpeningModal = ({
       opacity: 1,
       transition: {
         duration: 1,
-        ease: "easeOut",
+        ease: "easeOut" as const,
       },
     },
   };

@@ -1,7 +1,8 @@
 import { dancing, playFair } from "./Fonts";
-import { motion } from "framer-motion";
+import { motion, useInView, useAnimation } from "framer-motion";
 import { header } from "./Animations";
 import ReactCanvasConfetti from "react-canvas-confetti";
+import type { TCanvasConfettiInstance } from "react-canvas-confetti/dist/types";
 import { useCallback, useEffect, useRef } from "react";
 
 const list = {
@@ -29,9 +30,21 @@ const item = {
 export default function Header() {
   const text = "Sayuri";
 
-  const refAnimationInstance = useRef<confetti.CreateTypes | null>(null);
+  const titleRef = useRef(null);
+  const isInView = useInView(titleRef, { once: false, amount: 0.5 });
+  const controls = useAnimation();
 
-  const getInstance = useCallback((instance: any) => {
+  useEffect(() => {
+    if (isInView) {
+      controls.start("visible");
+    } else {
+      controls.start("hidden");
+    }
+  }, [isInView, controls]);
+
+  const refAnimationInstance = useRef<TCanvasConfettiInstance | null>(null);
+
+  const getInstance = useCallback(({ confetti: instance }: { confetti: TCanvasConfettiInstance }) => {
     refAnimationInstance.current = instance;
   }, []);
 
@@ -109,10 +122,11 @@ export default function Header() {
           whileInView="visible"
         />
         <motion.h1
+          ref={titleRef}
           className={`${dancing.className} z-10 text-center text-8xl h-32 flex`}
           variants={list}
           initial="hidden"
-          whileInView="visible"
+          animate={controls}
         >
           {text.split("").map((letter, index) => {
             return (
@@ -173,7 +187,7 @@ export default function Header() {
         </motion.p>
       </div>
       <ReactCanvasConfetti
-        refConfetti={getInstance}
+        onInit={getInstance}
         style={{
           position: "absolute",
           pointerEvents: "none",

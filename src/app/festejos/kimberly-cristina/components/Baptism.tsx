@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { Card, CardBody } from "@nextui-org/react";
 import NextJsImage from "./NextJsImage";
 import PhotoAlbum from "react-photo-album";
+import "react-photo-album/styles.css";
 import Lightbox from "yet-another-react-lightbox";
 import { LuZoomIn } from "react-icons/lu";
 import { useState } from "react";
@@ -14,7 +15,7 @@ const fadeUp = (delay: number) => ({
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.65, delay, ease: "easeOut" },
+    transition: { duration: 0.65, delay, ease: "easeOut" as const },
   },
 });
 
@@ -26,7 +27,7 @@ const scaleIn = (delay: number) => ({
     transition: {
       duration: 0.5,
       delay,
-      type: "spring",
+      type: "spring" as const,
       stiffness: 220,
       damping: 18,
     },

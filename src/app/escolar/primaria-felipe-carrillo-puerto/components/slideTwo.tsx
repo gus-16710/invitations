@@ -96,7 +96,7 @@ export default function SlideTwo() {
           initial={{ scale: 0.7, opacity: 0 }}
           whileInView={{ scale: 1, opacity: 1 }}
           transition={{
-            type: "spring",
+            type: "spring" as const,
             stiffness: 100,
             damping: 10,
             delay: 0.3,
@@ -149,7 +149,7 @@ export default function SlideTwo() {
           initial={{ scale: 0.8, opacity: 0 }}
           whileInView={{ scale: 1, opacity: 1 }}
           transition={{
-            type: "spring",
+            type: "spring" as const,
             stiffness: 150,
             delay: 1.2,
           }}

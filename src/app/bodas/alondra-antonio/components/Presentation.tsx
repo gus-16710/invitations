@@ -16,7 +16,7 @@ export default function Presentation() {
           className={`${greatVibes.className} text-5xl drop-shadow text-center text-zinc-800`}
           initial={{ y: -100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
-          transition={{ duration: 1, ease: "easeOut", delay: 0.4 }}
+          transition={{ duration: 1, ease: "easeOut" as const, delay: 0.4 }}
         >
           Nos Casamos
         </motion.h1>
@@ -33,7 +33,7 @@ export default function Presentation() {
             whileInView={{ y: 0, opacity: 1 }}
             transition={{
               duration: 0.8,
-              ease: "easeOut",
+              ease: "easeOut" as const,
               delay: 0.3,
             }}
           >
@@ -54,7 +54,7 @@ export default function Presentation() {
               whileInView={{ x: 0, opacity: 1 }}
               transition={{
                 duration: 0.6,
-                ease: "backOut",
+                ease: "backOut" as const,
               }}
             >
               SÁB
@@ -68,7 +68,7 @@ export default function Presentation() {
                 scale: 1,
                 opacity: 1,
                 transition: {
-                  type: "spring",
+                  type: "spring" as const,
                   stiffness: 200,
                   damping: 10,
                 },
@@ -85,7 +85,7 @@ export default function Presentation() {
               whileInView={{ x: 0, opacity: 1 }}
               transition={{
                 duration: 0.6,
-                ease: "backOut",
+                ease: "backOut" as const,
               }}
             >
               12hrs
@@ -109,7 +109,7 @@ export default function Presentation() {
           className={`${notoSans.className} text-center p-5 max-w-md text-zinc-800 mx-5`}
           initial={{ y: 100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
-          transition={{ duration: 1, ease: "easeInOut", delay: 1.2 }}
+          transition={{ duration: 1, ease: "easeInOut" as const, delay: 1.2 }}
         >
           Después de tantos caminos recorridos juntos, llegó el momento de decir
           'Sí, acepto'. Queremos celebrar este nuevo comienzo rodeados de amor,

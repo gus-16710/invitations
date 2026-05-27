@@ -89,7 +89,7 @@ export default function Reception() {
           fill="rgb(75 85 99)"
           initial={{ scale: 0, opacity: 0 }}
           whileInView={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 1, ease: "easeOut", delay: 0.6 }}
+          transition={{ duration: 1, ease: "easeOut" as const, delay: 0.6 }}
         >
           <g>
             <path d="m157.075 214.056v.028c0 4.142 3.357 7.486 7.5 7.486s7.5-3.372 7.5-7.514-3.358-7.5-7.5-7.5c-4.143 0-7.5 3.358-7.5 7.5z"></path>
@@ -110,7 +110,7 @@ export default function Reception() {
           initial={{ y: 100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: false }}
-          transition={{ duration: 1, ease: "easeInOut", delay: 0.9 }}
+          transition={{ duration: 1, ease: "easeInOut" as const, delay: 0.9 }}
         >
           <p className="flex items-center justify-center gap-1">
             ~ <IoMdTime /> 20:00 HRS ~{" "}
@@ -122,7 +122,7 @@ export default function Reception() {
           initial={{ y: 100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: false }}
-          transition={{ duration: 1, ease: "easeInOut", delay: 1.2 }}
+          transition={{ duration: 1, ease: "easeInOut" as const, delay: 1.2 }}
         >
           Salones Aurora
         </motion.p>
@@ -131,7 +131,7 @@ export default function Reception() {
           initial={{ y: 100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: false }}
-          transition={{ duration: 1, ease: "easeInOut", delay: 1.5 }}
+          transition={{ duration: 1, ease: "easeInOut" as const, delay: 1.5 }}
         >
           Carlos A. Carrillo 23, Aguacatal, 91133 Xalapa-Enriquez, Ver.
         </motion.p>
@@ -140,7 +140,7 @@ export default function Reception() {
           initial={{ y: 100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: false }}
-          transition={{ duration: 1, ease: "easeInOut", delay: 1.6 }}
+          transition={{ duration: 1, ease: "easeInOut" as const, delay: 1.6 }}
           className="mt-5"
         >
           <Button

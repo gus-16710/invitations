@@ -87,7 +87,7 @@ const ModalOpening = ({
       opacity: 1,
       rotate: 0,
       transition: {
-        type: "spring",
+        type: "spring" as const,
         stiffness: 80,
         damping: 20,
         delay: 0.5,
@@ -101,7 +101,7 @@ const ModalOpening = ({
         duration: 2.5,
         repeat: Infinity,
         repeatDelay: 0.5,
-        ease: "easeInOut",
+        ease: "easeInOut" as const,
       },
     },
   };
@@ -117,7 +117,7 @@ const ModalOpening = ({
       opacity: 1,
       rotate: 0,
       transition: {
-        type: "spring",
+        type: "spring" as const,
         stiffness: 80,
         damping: 20,
         delay: 0.7,
@@ -131,7 +131,7 @@ const ModalOpening = ({
         duration: 2.5,
         repeat: Infinity,
         repeatDelay: 0.5,
-        ease: "easeInOut",
+        ease: "easeInOut" as const,
         delay: 0.1,
       },
     },
@@ -147,7 +147,7 @@ const ModalOpening = ({
       opacity: 1,
       transition: {
         duration: 0.6,
-        ease: "easeOut",
+        ease: "easeOut" as const,
         delay: 13,
       },
     },
@@ -156,7 +156,7 @@ const ModalOpening = ({
       opacity: 0,
       transition: {
         duration: 0.5,
-        ease: "easeInOut",
+        ease: "easeInOut" as const,
       },
     },
   };
@@ -294,7 +294,7 @@ const ModalOpening = ({
                       duration: snowflake.duration,
                       repeat: Infinity,
                       delay: snowflake.delay,
-                      ease: "linear",
+                      ease: "linear" as const,
                     }}
                   >
                     <svg
@@ -334,7 +334,7 @@ const ModalOpening = ({
                   transition={{
                     duration: 10,
                     repeat: Infinity,
-                    ease: "linear",
+                    ease: "linear" as const,
                   }}
                 >
                   ⭐
@@ -367,7 +367,7 @@ const ModalOpening = ({
                       transition={{
                         duration: 4,
                         repeat: Infinity,
-                        ease: "easeInOut",
+                        ease: "easeInOut" as const,
                       }}
                     />
                     <div className="relative px-5 rounded-large h-14 bg-gradient-to-r from-red-500 to-red-600 flex items-center justify-center shadow-2xl group-hover:shadow-3xl transition-all duration-300 shadow-amber-500/30">
@@ -384,7 +384,7 @@ const ModalOpening = ({
                       transition={{
                         duration: 3,
                         repeat: Infinity,
-                        ease: "easeInOut",
+                        ease: "easeInOut" as const,
                       }}
                     />
                   </div>

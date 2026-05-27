@@ -2,6 +2,7 @@ import "yet-another-react-lightbox/styles.css";
 import { dancing, imperial, urbanist } from "./Fonts";
 import { motion } from "framer-motion";
 import PhotoAlbum from "react-photo-album";
+import "react-photo-album/styles.css";
 import { useState } from "react";
 import NextJsImage from "./NextJsImage";
 import Lightbox from "yet-another-react-lightbox";
@@ -36,7 +37,7 @@ export default function SlideOne() {
       y: 0,
       opacity: 1,
       transition: {
-        type: "spring",
+        type: "spring" as const,
         damping: 10, // Más suave
         stiffness: 80, // Menos rígido
         mass: 0.8, // Añadido masa para más fluidez
@@ -51,7 +52,7 @@ export default function SlideOne() {
       y: 0,
       opacity: 1,
       transition: {
-        type: "spring",
+        type: "spring" as const,
         damping: 10,
         stiffness: 80,
         mass: 0.8,
@@ -66,7 +67,7 @@ export default function SlideOne() {
       scale: 1,
       opacity: 1,
       transition: {
-        type: "spring",
+        type: "spring" as const,
         stiffness: 80,
         damping: 10,
         mass: 0.8,
@@ -81,7 +82,7 @@ export default function SlideOne() {
       opacity: 1,
       transition: {
         duration: 1.5, // Más lento
-        ease: [0.16, 0.77, 0.47, 0.97], // Curva de easing más suave
+        ease: [0.16, 0.77, 0.47, 0.97] as [number, number, number, number], // Curva de easing más suave
       },
     },
   };
@@ -110,7 +111,7 @@ export default function SlideOne() {
             layout="masonry"
             photos={images}
             onClick={({ index: current }) => setIndex(current)}
-            renderPhoto={NextJsImage}
+            render={{ photo: NextJsImage }}
             columns={1}
           />
           <Lightbox
@@ -131,7 +132,7 @@ export default function SlideOne() {
               repeat: Infinity, // Repetir indefinidamente
               repeatType: "loop", // Tipo de repetición
               duration: 1.5, // Duración de cada ciclo
-              ease: "easeInOut", // Suavizado de movimiento
+              ease: "easeInOut" as const, // Suavizado de movimiento
             }}
             whileHover={{ scale: 1.3 }} // Efecto al pasar el mouse
           >
@@ -174,7 +175,7 @@ export default function SlideOne() {
               y: 0,
               opacity: 1,
               transition: {
-                type: "spring",
+                type: "spring" as const,
                 stiffness: 70,
                 damping: 8,
                 mass: 0.7,

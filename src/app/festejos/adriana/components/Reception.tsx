@@ -90,7 +90,7 @@ export default function Reception() {
           width="100px"
           initial={{ scale: 0, opacity: 0 }}
           whileInView={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 1, ease: "easeOut", delay: 0.6 }}
+          transition={{ duration: 1, ease: "easeOut" as const, delay: 0.6 }}
           className="fill-zinc-50 z-50"          
         >
           <g>
@@ -154,7 +154,7 @@ export default function Reception() {
           initial={{ y: 100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: false }}
-          transition={{ duration: 1, ease: "easeInOut", delay: 0.9 }}
+          transition={{ duration: 1, ease: "easeInOut" as const, delay: 0.9 }}
           style={{ textShadow: "0px 1px 1px rgb(0,0,0)" }}
         >
           <p className="flex items-center justify-center gap-1">
@@ -166,7 +166,7 @@ export default function Reception() {
           initial={{ y: 100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: false }}
-          transition={{ duration: 1, ease: "easeInOut", delay: 1.2 }}
+          transition={{ duration: 1, ease: "easeInOut" as const, delay: 1.2 }}
           style={{ textShadow: "0px 1px 1px rgb(0,0,0)" }}
         >
           Salón de Belleza "Adriana"
@@ -176,7 +176,7 @@ export default function Reception() {
           initial={{ y: -100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: false }}
-          transition={{ duration: 1, ease: "easeInOut", delay: 1.5 }}
+          transition={{ duration: 1, ease: "easeInOut" as const, delay: 1.5 }}
           style={{ textShadow: "0px 1px 1px rgb(0,0,0)" }}
         >
           Calle Principal S/N, 91353 Tengonapa, Ver.
@@ -186,7 +186,7 @@ export default function Reception() {
           initial={{ y: -100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: false }}
-          transition={{ duration: 1, ease: "easeInOut", delay: 1.6 }}
+          transition={{ duration: 1, ease: "easeInOut" as const, delay: 1.6 }}
           className="mt-5 z-50"
         >
           <button

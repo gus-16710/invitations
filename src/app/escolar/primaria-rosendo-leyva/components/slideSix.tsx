@@ -1,6 +1,7 @@
 import "yet-another-react-lightbox/styles.css";
 import { motion } from "framer-motion";
 import PhotoAlbum from "react-photo-album";
+import "react-photo-album/styles.css";
 import Lightbox from "yet-another-react-lightbox";
 
 import { useState } from "react";
@@ -46,7 +47,7 @@ export default function SlideSix() {
       <motion.div
         className="flex items-center justify-center p-2 rounded-lg bg-red-800/80 w-80 mb-3"
         whileHover={{ scale: 1.02 }}
-        transition={{ type: "spring", stiffness: 200 }}
+        transition={{ type: "spring" as const, stiffness: 200 }}
       >
         <div className="ms-3 text-sm text-white">
           Presiona sobre una imagen para ampliar
@@ -66,7 +67,7 @@ export default function SlideSix() {
             layout="masonry"
             photos={images}
             onClick={({ index: current }) => setIndex(current)}
-            renderPhoto={NextJsImage}
+            render={{ photo: NextJsImage }}
             columns={1}
           />
           <Lightbox

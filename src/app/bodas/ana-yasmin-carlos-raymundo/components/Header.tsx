@@ -4,6 +4,7 @@ import { IoIosArrowDown } from "react-icons/io";
 import { abril, greatVibes } from "./Fonts";
 import { header } from "./Animations";
 import ReactCanvasConfetti from "react-canvas-confetti";
+import type { TCanvasConfettiInstance } from "react-canvas-confetti/dist/types";
 
 function formatNumber(number: number) {
   return number < 10 ? `0${number}` : number;
@@ -57,7 +58,7 @@ export default function Header() {
     animateSeconds(
       scopeSeconds.current,
       { y: [20, 0], opacity: [0, 1] },
-      { ease: "easeInOut", type: "keyframes" }
+      { ease: "easeInOut" as const, type: "keyframes" }
     );
   }, [seconds, animateSeconds]);
 
@@ -65,7 +66,7 @@ export default function Header() {
     animateMinutes(
       scopeMinutes.current,
       { y: [20, 0], opacity: [0, 1] },
-      { ease: "easeInOut", type: "keyframes" }
+      { ease: "easeInOut" as const, type: "keyframes" }
     );
   }, [minutes, animateSeconds]);
 
@@ -73,7 +74,7 @@ export default function Header() {
     animateHours(
       scopeHours.current,
       { y: [20, 0], opacity: [0, 1] },
-      { ease: "easeInOut", type: "keyframes" }
+      { ease: "easeInOut" as const, type: "keyframes" }
     );
   }, [hours, animateHours]);
 
@@ -81,14 +82,14 @@ export default function Header() {
     animateDays(
       scopeDays.current,
       { y: [20, 0], opacity: [0, 1] },
-      { ease: "easeInOut", type: "keyframes" }
+      { ease: "easeInOut" as const, type: "keyframes" }
     );
   }, [days, animateDays]);
 
   /** */
-  const refAnimationInstance = useRef<confetti.CreateTypes | null>(null);
+  const refAnimationInstance = useRef<TCanvasConfettiInstance | null>(null);
 
-  const getInstance = useCallback((instance: any) => {
+  const getInstance = useCallback(({ confetti: instance }: { confetti: TCanvasConfettiInstance }) => {
     refAnimationInstance.current = instance;
   }, []);
 
@@ -217,7 +218,7 @@ export default function Header() {
         </motion.div>
       </div>
       <ReactCanvasConfetti
-        refConfetti={getInstance}
+        onInit={getInstance}
         style={{
           position: "absolute",
           pointerEvents: "none",

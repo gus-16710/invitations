@@ -54,7 +54,7 @@ export default function SlideFour() {
       <motion.div
         initial={{ scale: 0.8, opacity: 0 }}
         whileInView={{ scale: 1, opacity: 1 }}
-        transition={{ duration: 0.8, delay: 0.9, type: "spring" }}
+        transition={{ duration: 0.8, delay: 0.9, type: "spring" as const }}
         className="my-6"
       >
         <p

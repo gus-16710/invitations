@@ -3,8 +3,7 @@ import {
   Great_Vibes,
   Titillium_Web,
   Markazi_Text,
-  Love_Ya_Like_A_Sister,
-} from "next/font/google";
+  Love_Ya_Like_A_Sister } from "next/font/google";
 import {
   Button,
   Modal,
@@ -12,8 +11,7 @@ import {
   ModalHeader,
   ModalBody,
   ModalFooter,
-  useDisclosure,
-} from "@nextui-org/react";
+  useDisclosure } from "@nextui-org/react";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { IoMdTime } from "react-icons/io";
 import { Spinner } from "flowbite-react";
@@ -27,8 +25,7 @@ const love = Love_Ya_Like_A_Sister({ subsets: ["latin"], weight: "400" });
 
 const ModalMap = ({
   isOpen,
-  onOpenChange,
-}: {
+  onOpenChange }: {
   isOpen: boolean;
   onOpenChange: () => void;
 }) => {
@@ -113,7 +110,7 @@ export default function Reception({ splide }: { splide: number }) {
           initial={{ x: -100, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           viewport={{ once: false }}
-          transition={{ duration: 1, ease: "easeInOut", delay: 0.9 }}
+          transition={{ duration: 1, ease: "easeInOut" as const, delay: 0.9 }}
           style={{ textShadow: "1px 1px 4px rgba(0,0,0,0.6)" }}
         >
           <div className="border-t-2 border-yellow-400 w-full border-dashed"></div>
@@ -121,7 +118,7 @@ export default function Reception({ splide }: { splide: number }) {
             className="flex items-center justify-center gap-1 text-7xl py-6"
             initial={{ x: 100, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
-            transition={{ duration: 2, ease: "easeInOut", delay: 1.2 }}
+            transition={{ duration: 2, ease: "easeInOut" as const, delay: 1.2 }}
           >
             <NumberFlow
               trend={-1}
@@ -129,8 +126,7 @@ export default function Reception({ splide }: { splide: number }) {
               digits={{ 1: { max: 5 } }}
               format={{ minimumIntegerDigits: 2 }}
               transformTiming={{
-                duration: 3000,
-              }}
+                duration: 3000 }}
             />
             :00 hrs
           </motion.p>
@@ -141,7 +137,7 @@ export default function Reception({ splide }: { splide: number }) {
             width="250px"
             initial={{ y: 100, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 1, ease: "easeOut", delay: 2.5 }}
+            transition={{ duration: 1, ease: "easeOut" as const, delay: 2.5 }}
             className="absolute top-0 -left-5 fill-stone-100/20"
           >
             <g>
@@ -165,7 +161,7 @@ export default function Reception({ splide }: { splide: number }) {
           initial={{ y: 100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: false }}
-          transition={{ duration: 1, ease: "easeInOut", delay: 1.2 }}
+          transition={{ duration: 1, ease: "easeInOut" as const, delay: 1.2 }}
         >
           Salón Quinta los Helechos
         </motion.p>
@@ -174,7 +170,7 @@ export default function Reception({ splide }: { splide: number }) {
           initial={{ y: 100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: false }}
-          transition={{ duration: 1, ease: "easeInOut", delay: 1.2 }}
+          transition={{ duration: 1, ease: "easeInOut" as const, delay: 1.2 }}
         >
           Sabino 24, 91315 Piletas, Ver.
         </motion.p>
@@ -183,7 +179,7 @@ export default function Reception({ splide }: { splide: number }) {
           initial={{ y: 100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: false }}
-          transition={{ duration: 1, ease: "easeInOut", delay: 1.2 }}
+          transition={{ duration: 1, ease: "easeInOut" as const, delay: 1.2 }}
           className="mt-5"
         >
           <Button

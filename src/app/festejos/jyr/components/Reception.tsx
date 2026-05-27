@@ -92,7 +92,7 @@ export default function Reception() {
           width="100px"
           initial={{ scale: 0, opacity: 0 }}
           whileInView={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 1, ease: "easeOut", delay: 0.6 }}
+          transition={{ duration: 1, ease: "easeOut" as const, delay: 0.6 }}
           className="fill-zinc-50 z-50"
         >
           <g>
@@ -114,7 +114,7 @@ export default function Reception() {
           initial={{ y: 100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: false }}
-          transition={{ duration: 1, ease: "easeInOut", delay: 0.9 }}
+          transition={{ duration: 1, ease: "easeInOut" as const, delay: 0.9 }}
         >
           <p className="flex items-center justify-center gap-1">
             ~ 15:00 HRS ~{" "}
@@ -125,7 +125,7 @@ export default function Reception() {
           initial={{ y: 100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: false }}
-          transition={{ duration: 1, ease: "easeInOut", delay: 1.2 }}
+          transition={{ duration: 1, ease: "easeInOut" as const, delay: 1.2 }}
         >
           Salón "Quinta La Piedra"
         </motion.p>
@@ -134,7 +134,7 @@ export default function Reception() {
           initial={{ y: 100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: false }}
-          transition={{ duration: 1, ease: "easeInOut", delay: 1.5 }}
+          transition={{ duration: 1, ease: "easeInOut" as const, delay: 1.5 }}
         >
           Prol. 5 de Febrero 2, Centro, 91300 Banderilla, Ver.
         </motion.p>
@@ -143,7 +143,7 @@ export default function Reception() {
           initial={{ y: 100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: false }}
-          transition={{ duration: 1, ease: "easeInOut", delay: 1.6 }}
+          transition={{ duration: 1, ease: "easeInOut" as const, delay: 1.6 }}
           className="mt-5 z-50"
         >
           <button

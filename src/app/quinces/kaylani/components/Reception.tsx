@@ -150,7 +150,7 @@ export default function Reception() {
             className="mt-4"
             initial={{ opacity: 0, scale: 0.7 }}
             whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ type: "spring", stiffness: 80, damping: 16, delay: 0.55 }}
+            transition={{ type: "spring" as const, stiffness: 80, damping: 16, delay: 0.55 }}
             viewport={{ once: false, amount: 0.4 }}
           >
             <div

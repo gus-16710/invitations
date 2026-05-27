@@ -5,8 +5,7 @@ import {
   ModalHeader,
   ModalBody,
   ModalFooter,
-  useDisclosure,
-} from "@nextui-org/react";
+  useDisclosure } from "@nextui-org/react";
 import { greatVibes, markazi, notoSans } from "./Fonts";
 import { reception } from "./Animations";
 import { LuMapPin } from "react-icons/lu";
@@ -14,8 +13,7 @@ import { Avatar } from "flowbite-react";
 
 const ModalMap = ({
   isOpen,
-  onOpenChange,
-}: {
+  onOpenChange }: {
   isOpen: boolean;
   onOpenChange: () => void;
 }) => {
@@ -55,8 +53,7 @@ const ModalMap = ({
 
 const ImageModal = ({
   isOpen,
-  onOpenChange,
-}: {
+  onOpenChange }: {
   isOpen: boolean;
   onOpenChange: () => void;
 }) => {
@@ -86,8 +83,7 @@ export default function Reception() {
   const {
     isOpen: isImageOpen,
     onOpen: onImageOpen,
-    onOpenChange: onImageChange,
-  } = useDisclosure();
+    onOpenChange: onImageChange } = useDisclosure();
 
   return (
     <>

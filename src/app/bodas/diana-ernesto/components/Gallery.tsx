@@ -4,6 +4,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { Great_Vibes, Oswald } from "next/font/google";
 import PhotoAlbum from "react-photo-album";
+import "react-photo-album/styles.css";
 import Lightbox from "yet-another-react-lightbox";
 import NextJsImage from "../../vanessa-susana/components/NextJsImage";
 import { LuZoomIn } from "react-icons/lu";
@@ -80,7 +81,7 @@ export default function Gallery() {
           layout="masonry"
           photos={images}
           onClick={({ index: current }) => setIndex(current)}
-          renderPhoto={NextJsImage}
+          render={{ photo: NextJsImage }}
           columns={2}
         />
       </div>

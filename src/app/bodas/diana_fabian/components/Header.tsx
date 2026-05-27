@@ -1,6 +1,6 @@
 import AudioPlayer from "./AudioPlayer";
 import { alex, mate, oswald } from "./Fonts";
-import { motion } from "framer-motion";
+import { motion, useInView, useAnimation } from "framer-motion";
 import "./Header.css";
 import { useEffect, useRef } from "react";
 import { useAudio } from "./AudioContext";
@@ -30,6 +30,9 @@ export default function Header() {
   const text01 = "Diana&Fabián";
   const { setHeaderVisible } = useAudio();
   const sectionRef = useRef<HTMLElement>(null);
+  const titleRef = useRef(null);
+  const isInView = useInView(titleRef, { once: false, amount: 0.5 });
+  const controls = useAnimation();
 
   useEffect(() => {
     const el = sectionRef.current;
@@ -42,21 +45,30 @@ export default function Header() {
     return () => observer.disconnect();
   }, [setHeaderVisible]);
 
+  useEffect(() => {
+    if (isInView) {
+      controls.start("visible");
+    } else {
+      controls.start("hidden");
+    }
+  }, [isInView, controls]);
+
   return (
     <section ref={sectionRef} className="h-screen relative flex items-center justify-center flex-col bg-[url('/img/bodas/diana_fabian/gallery-01.jpeg')] bg-cover bg-center">
       <motion.h2
         className={`${mate.className} text-zinc-100 text-2xl text-center mb-5 custom-shadow flex flex-wrap justify-center `}
         initial={{ y: 100, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
-        transition={{ duration: 1, ease: "easeOut", delay: 3.3 }}
+        transition={{ duration: 1, ease: "easeOut" as const, delay: 3.3 }}
       >
         Te invitamos a nuestra boda
       </motion.h2>
       <motion.h1
+        ref={titleRef}
         className={`${alex.className} text-zinc-100 text-8xl text-center mx-5 custom-shadow flex flex-wrap justify-center `}
         variants={list}
         initial="hidden"
-        whileInView="visible"
+        animate={controls}
       >
         {text01.split("").map((letter, index) => {
           return (
@@ -85,7 +97,7 @@ export default function Header() {
         role="alert"
         initial={{ y: -100, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
-        transition={{ duration: 1, ease: "easeOut", delay: 5 }}
+        transition={{ duration: 1, ease: "easeOut" as const, delay: 5 }}
       >
         <span className="sr-only">Info</span>
         <div className={`${oswald.className} ms-3 text-sm text-zinc-100`}>

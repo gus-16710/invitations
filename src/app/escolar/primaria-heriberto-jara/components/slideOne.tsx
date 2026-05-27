@@ -3,11 +3,12 @@ import { bebas, cormorant, lora, mea, tangerine, urbanist } from "./Fonts";
 import { motion } from "framer-motion";
 import { useCallback, useEffect, useRef } from "react";
 import ReactCanvasConfetti from "react-canvas-confetti";
+import type { TCanvasConfettiInstance } from "react-canvas-confetti/dist/types";
 
 export default function SlideOne() {
-  const refAnimationInstance = useRef<confetti.CreateTypes | null>(null);
+  const refAnimationInstance = useRef<TCanvasConfettiInstance | null>(null);
 
-  const getInstance = useCallback((instance: any) => {
+  const getInstance = useCallback(({ confetti: instance }: { confetti: TCanvasConfettiInstance }) => {
     refAnimationInstance.current = instance;
   }, []);
 
@@ -112,7 +113,7 @@ export default function SlideOne() {
         </p>
       </motion.section>
       <ReactCanvasConfetti
-        refConfetti={getInstance}
+        onInit={getInstance}
         style={{
           position: "absolute",
           pointerEvents: "none",

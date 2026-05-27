@@ -50,7 +50,7 @@ export default function Header() {
           transition={{
             duration: 5,
             repeat: Infinity,
-            ease: "easeInOut",
+            ease: "easeInOut" as const,
             delay: -1 * 0.5,
           }}
         >
@@ -64,7 +64,7 @@ export default function Header() {
           transition={{
             duration: 5,
             repeat: Infinity,
-            ease: "easeInOut",
+            ease: "easeInOut" as const,
             delay: -1 * 0.5,
           }}
         >
@@ -79,7 +79,7 @@ export default function Header() {
           transition={{
             duration: 5,
             repeat: Infinity,
-            ease: "easeInOut",
+            ease: "easeInOut" as const,
             delay: -1 * 0.5,
           }}
         >
@@ -93,7 +93,7 @@ export default function Header() {
           transition={{
             duration: 5,
             repeat: Infinity,
-            ease: "easeInOut",
+            ease: "easeInOut" as const,
             delay: -1 * 0.5,
           }}
         >
@@ -105,7 +105,7 @@ export default function Header() {
         initial={{ scale: 0, opacity: 0 }}
         whileInView={{ scale: 1, opacity: 1 }}
         viewport={{ once: false }}
-        transition={{ duration: 1, ease: "easeOut" }}
+        transition={{ duration: 1, ease: "easeOut" as const }}
       >
         <Image
           alt="Wedding"

@@ -22,7 +22,7 @@ export default function SlideSix() {
       y: 0,
       opacity: 1,
       transition: {
-        type: "spring",
+        type: "spring" as const,
         damping: 12,
         stiffness: 100,
       },
@@ -35,7 +35,7 @@ export default function SlideSix() {
       opacity: 1,
       transition: {
         duration: 0.8,
-        ease: "easeOut",
+        ease: "easeOut" as const,
       },
     },
   };
@@ -329,7 +329,7 @@ export default function SlideSix() {
                   transition: {
                     repeat: Infinity,
                     duration: 2,
-                    ease: "easeInOut",
+                    ease: "easeInOut" as const,
                   },
                 }}
               >

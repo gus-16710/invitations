@@ -41,7 +41,7 @@ export default function Confirm() {
             opacity: r.opacity,
           }}
           animate={{ y: [0, -14, 0] }}
-          transition={{ duration: r.dur, repeat: Infinity, delay: r.delay, ease: "easeInOut" }}
+          transition={{ duration: r.dur, repeat: Infinity, delay: r.delay, ease: "easeInOut" as const }}
         >
           <GiRose style={{ width: r.size, height: r.size, color: "#D8B18A" }} />
         </motion.div>

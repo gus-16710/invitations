@@ -1,5 +1,6 @@
-import { motion } from "framer-motion";
+import { motion, useInView, useAnimation } from "framer-motion";
 import { cormorant } from "./Fonts";
+import { useRef, useEffect } from "react";
 
 const list = {
   visible: {
@@ -25,23 +26,36 @@ const item = {
     opacity: 1,
     y: 0,
     rotate: 0,
-    transition: { type: "spring", damping: 12, stiffness: 200 },
+    transition: { type: "spring" as const, damping: 12, stiffness: 200 },
   },
 };
 
 export default function SlideFive() {
   const text = `"Tu constancia te trajo hasta aquí. Que este logro sea solo el comienzo de todo lo grande que eres capaz de alcanzar. No te detengas hasta que tus sueños sean tu realidad."`;
 
+  const titleRef = useRef(null);
+  const isInView = useInView(titleRef, { once: false, amount: 0.3 });
+  const controls = useAnimation();
+
+  useEffect(() => {
+    if (isInView) {
+      controls.start("visible");
+    } else {
+      controls.start("hidden");
+    }
+  }, [isInView, controls]);
+
   return (
     <section
       className="flex flex-col justify-center items-center"
-      style={{ height: "100svh" }}      
+      style={{ height: "100svh" }}
     >
       <motion.p
+        ref={titleRef}
         className={`${cormorant.className} text-zinc-50 text-4xl mx-10 text-center max-w-3xl`}
         variants={list}
         initial="hidden"
-        whileInView="visible"
+        animate={controls}
       >
         {text.split("").map((letter, index) => {
           return (

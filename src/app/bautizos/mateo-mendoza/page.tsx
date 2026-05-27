@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Flowbite, FlowbiteCarouselTheme, Carousel } from "flowbite-react";
+import { Carousel } from "flowbite-react";
 import Header from "./components/Header";
 import Presentation from "./components/Presentation";
 import Ceremony from "./components/Ceremony";
@@ -34,8 +34,9 @@ import AudioControl from "./components/AudioControl";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
 import ReactCanvasConfetti from "react-canvas-confetti";
+import type { TCanvasConfettiInstance } from "react-canvas-confetti/dist/types";
 
-const customTheme: FlowbiteCarouselTheme = {
+const customTheme = {
   root: {
     base: "relative h-full w-full",
     leftControl:
@@ -178,9 +179,9 @@ export default function Christening() {
   const [open, setOpen] = useState(false);
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
-  const refAnimationInstance = useRef<confetti.CreateTypes | null>(null);
+  const refAnimationInstance = useRef<TCanvasConfettiInstance | null>(null);
 
-  const getInstance = useCallback((instance: any) => {
+  const getInstance = useCallback(({ confetti: instance }: { confetti: TCanvasConfettiInstance }) => {
     refAnimationInstance.current = instance;
   }, []);
 
@@ -316,7 +317,7 @@ export default function Christening() {
               repeat: Infinity,
               repeatType: "loop",
               duration: 30,
-              ease: "linear",
+              ease: "linear" as const,
             },
           }}
         >
@@ -347,7 +348,7 @@ export default function Christening() {
               repeat: Infinity,
               repeatType: "loop",
               duration: 25,
-              ease: "linear",
+              ease: "linear" as const,
             },
           }}
         >
@@ -380,7 +381,7 @@ export default function Christening() {
               repeat: Infinity,
               repeatType: "loop",
               duration: 50,
-              ease: "linear",
+              ease: "linear" as const,
             },
           }}
         >
@@ -397,7 +398,7 @@ export default function Christening() {
         </motion.svg>
       </main>
       <ReactCanvasConfetti
-        refConfetti={getInstance}
+        onInit={getInstance}
         style={{
           position: "absolute",
           pointerEvents: "none",

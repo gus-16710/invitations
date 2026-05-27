@@ -75,7 +75,7 @@ const ModalOpening = ({
                   animate={{ opacity: 1, y: 0 }}
                   transition={{
                     duration: 1.2,
-                    ease: [0.16, 1, 0.3, 1],
+                    ease: [0.16, 1, 0.3, 1] as [number, number, number, number],
                     delay: 0.3,
                   }}
                 >
@@ -89,7 +89,7 @@ const ModalOpening = ({
                   initial={{ scale: 0.8, opacity: 0 }}
                   animate={{ scale: 1, opacity: 1 }}
                   transition={{
-                    type: "spring",
+                    type: "spring" as const,
                     damping: 15,
                     stiffness: 100,
                     delay: 0.8,
@@ -106,7 +106,7 @@ const ModalOpening = ({
                     scale: 1,
                   }}
                   transition={{
-                    type: "spring",
+                    type: "spring" as const,
                     damping: 12,
                     stiffness: 100,
                     delay: 0.8,
@@ -117,7 +117,7 @@ const ModalOpening = ({
                   <motion.span
                     className="inline-block"
                     whileHover={{ scale: 1.05 }}
-                    transition={{ type: "spring", stiffness: 400 }}
+                    transition={{ type: "spring" as const, stiffness: 400 }}
                   >
                     Alondra
                   </motion.span>
@@ -139,7 +139,7 @@ const ModalOpening = ({
                   <motion.span
                     className="inline-block"
                     whileHover={{ scale: 1.05 }}
-                    transition={{ type: "spring", stiffness: 400 }}
+                    transition={{ type: "spring" as const, stiffness: 400 }}
                   >
                     Antonio
                   </motion.span>
@@ -152,7 +152,7 @@ const ModalOpening = ({
                 initial={{ rotate: 15, y: 50, opacity: 0 }}
                 animate={{ rotate: 0, y: 0, opacity: 1 }}
                 transition={{
-                  type: "spring",
+                  type: "spring" as const,
                   damping: 15,
                   stiffness: 60,
                   delay: 1.5,
@@ -185,14 +185,14 @@ const ModalOpening = ({
                   transition: {
                     duration: 1.2,
                     delay: 2.2,
-                    ease: [0.16, 1, 0.3, 1],
+                    ease: [0.16, 1, 0.3, 1] as [number, number, number, number],
                   },
                 }}
                 whileHover={{
                   scale: 1.05,
                   transition: {
                     duration: 0.4,
-                    type: "spring",
+                    type: "spring" as const,
                     stiffness: 500,
                   },
                 }}
@@ -241,7 +241,7 @@ const ModalOpening = ({
                 transition: {
                   duration: 1.5,
                   delay: 0.5,
-                  type: "spring",
+                  type: "spring" as const,
                   damping: 10,
                 },
               }}

@@ -46,7 +46,7 @@ export const presentation = {
     visible: {
       y: 0,
       opacity: 1,
-      transition: { duration: 1, ease: "easeOut", delay: 0.4 },
+      transition: { duration: 1, ease: "easeOut" as const, delay: 0.4 },
     },
   },
   date: {
@@ -54,7 +54,7 @@ export const presentation = {
     visible: {
       scale: 1,
       opacity: 1,
-      transition: { duration: 1, ease: "easeOut", delay: 0.8 },
+      transition: { duration: 1, ease: "easeOut" as const, delay: 0.8 },
     },
   },
   text02: {
@@ -62,7 +62,7 @@ export const presentation = {
     visible: {
       y: 0,
       opacity: 1,
-      transition: { duration: 1, ease: "easeInOut", delay: 1.2 },
+      transition: { duration: 1, ease: "easeInOut" as const, delay: 1.2 },
     },
   },
   svg: {
@@ -70,7 +70,7 @@ export const presentation = {
     visible: {
       y: 0,
       opacity: 1,
-      transition: { duration: 1, ease: "easeInOut", delay: 1.2 },
+      transition: { duration: 1, ease: "easeInOut" as const, delay: 1.2 },
     },
   },
 };
@@ -93,7 +93,7 @@ export const ceremony = {
     visible: {
       scale: 1,
       opacity: 1,
-      transition: { duration: 1, ease: "easeOut", delay: 0.6 },
+      transition: { duration: 1, ease: "easeOut" as const, delay: 0.6 },
     },
   },
   date: {
@@ -101,7 +101,7 @@ export const ceremony = {
     visible: {
       y: 0,
       opacity: 1,
-      transition: { duration: 1, ease: "easeInOut", delay: 0.9 },
+      transition: { duration: 1, ease: "easeInOut" as const, delay: 0.9 },
     },
   },
   text02: {
@@ -109,7 +109,7 @@ export const ceremony = {
     visible: {
       y: 0,
       opacity: 1,
-      transition: { duration: 1, ease: "easeInOut", delay: 1.2 },
+      transition: { duration: 1, ease: "easeInOut" as const, delay: 1.2 },
     },
   },
   text03: {
@@ -117,7 +117,7 @@ export const ceremony = {
     visible: {
       y: 0,
       opacity: 1,
-      transition: { duration: 1, ease: "easeInOut", delay: 1.5 },
+      transition: { duration: 1, ease: "easeInOut" as const, delay: 1.5 },
     },
   },
   button: {
@@ -125,7 +125,7 @@ export const ceremony = {
     visible: {
       y: 0,
       opacity: 1,
-      transition: { duration: 1, ease: "easeInOut", delay: 1.6 },
+      transition: { duration: 1, ease: "easeInOut" as const, delay: 1.6 },
     },
   },
 };
@@ -148,7 +148,7 @@ export const reception = {
     visible: {
       scale: 1,
       opacity: 1,
-      transition: { duration: 1, ease: "easeOut", delay: 0.6 },
+      transition: { duration: 1, ease: "easeOut" as const, delay: 0.6 },
     },
   },
   date: {
@@ -156,7 +156,7 @@ export const reception = {
     visible: {
       y: 0,
       opacity: 1,
-      transition: { duration: 1, ease: "easeInOut", delay: 0.9 },
+      transition: { duration: 1, ease: "easeInOut" as const, delay: 0.9 },
     },
   },
   text02: {
@@ -164,7 +164,7 @@ export const reception = {
     visible: {
       y: 0,
       opacity: 1,
-      transition: { duration: 1, ease: "easeInOut", delay: 1.2 },
+      transition: { duration: 1, ease: "easeInOut" as const, delay: 1.2 },
     },
   },
   text03: {
@@ -172,7 +172,7 @@ export const reception = {
     visible: {
       y: 0,
       opacity: 1,
-      transition: { duration: 1, ease: "easeInOut", delay: 1.5 },
+      transition: { duration: 1, ease: "easeInOut" as const, delay: 1.5 },
     },
   },
   button: {
@@ -180,7 +180,7 @@ export const reception = {
     visible: {
       y: 0,
       opacity: 1,
-      transition: { duration: 1, ease: "easeInOut", delay: 1.6 },
+      transition: { duration: 1, ease: "easeInOut" as const, delay: 1.6 },
     },
   },
 };
@@ -203,7 +203,7 @@ export const godParents = {
     visible: {
       scale: 1,
       opacity: 1,
-      transition: { duration: 1, ease: "easeOut" },
+      transition: { duration: 1, ease: "easeOut" as const },
     },
   },
   text03: {
@@ -211,7 +211,7 @@ export const godParents = {
     visible: {
       scale: 1,
       opacity: 1,
-      transition: { duration: 1, ease: "easeOut" },
+      transition: { duration: 1, ease: "easeOut" as const },
     },
   },
 };
@@ -238,7 +238,7 @@ export const sacrament = {
     visible: {
       scale: 1,
       opacity: 1,
-      transition: { duration: 1, ease: "easeOut", delay: 0.6 },
+      transition: { duration: 1, ease: "easeOut" as const, delay: 0.6 },
     },
   }, 
   text02: {
@@ -246,7 +246,7 @@ export const sacrament = {
     visible: {
       y: 0,
       opacity: 1,
-      transition: { duration: 1, ease: "easeInOut", delay: 0.9 },
+      transition: { duration: 1, ease: "easeInOut" as const, delay: 0.9 },
     },
   },
   text03: {
@@ -254,7 +254,7 @@ export const sacrament = {
     visible: {
       y: 0,
       opacity: 1,
-      transition: { duration: 1, ease: "easeInOut", delay: 1.9 },
+      transition: { duration: 1, ease: "easeInOut" as const, delay: 1.9 },
     },
   },
   text04: {
@@ -262,7 +262,7 @@ export const sacrament = {
     visible: {
       y: 0,
       opacity: 1,
-      transition: { duration: 1, ease: "easeInOut", delay: 2.3 },
+      transition: { duration: 1, ease: "easeInOut" as const, delay: 2.3 },
     },
   },
   animationPhoto: {
@@ -270,7 +270,7 @@ export const sacrament = {
     visible: {
       opacity: 1,
       scale: 1,
-      transition: { duration: 1, type: "spring", stiffness: 70, delay: 2 },
+      transition: { duration: 1, type: "spring" as const, stiffness: 70, delay: 2 },
     },
   },
 };
@@ -289,7 +289,7 @@ export const dressCode = {
     visible: {
       y: 0,
       opacity: 1,
-      transition: { duration: 1, ease: "easeOut", delay: 0.6 },
+      transition: { duration: 1, ease: "easeOut" as const, delay: 0.6 },
     },
   },
   text02: {
@@ -297,7 +297,7 @@ export const dressCode = {
     visible: {
       y: 0,
       opacity: 1,
-      transition: { duration: 1, ease: "easeInOut", delay: 0.9 },
+      transition: { duration: 1, ease: "easeInOut" as const, delay: 0.9 },
     },
   },
   text03: {
@@ -305,7 +305,7 @@ export const dressCode = {
     visible: {
       y: 0,
       opacity: 1,
-      transition: { duration: 1, ease: "easeInOut", delay: 0.9 },
+      transition: { duration: 1, ease: "easeInOut" as const, delay: 0.9 },
     },
   },
   svg02: {
@@ -313,7 +313,7 @@ export const dressCode = {
     visible: {
       y: 0,
       opacity: 1,
-      transition: { duration: 1, ease: "easeOut", delay: 0.6 },
+      transition: { duration: 1, ease: "easeOut" as const, delay: 0.6 },
     },
   },
   text04: {
@@ -321,7 +321,7 @@ export const dressCode = {
     visible: {
       y: 0,
       opacity: 1,
-      transition: { duration: 1, ease: "easeInOut", delay: 0.9 },
+      transition: { duration: 1, ease: "easeInOut" as const, delay: 0.9 },
     },
   },
   text05: {
@@ -329,7 +329,7 @@ export const dressCode = {
     visible: {
       y: 0,
       opacity: 1,
-      transition: { duration: 1, ease: "easeInOut", delay: 0.9 },
+      transition: { duration: 1, ease: "easeInOut" as const, delay: 0.9 },
     },
   },
 };
@@ -360,7 +360,7 @@ export const photo = {
     visible: {
       scale: 1,
       opacity: 1,      
-      transition: { duration: 3, ease: "easeOut", delay: 0.9 },
+      transition: { duration: 3, ease: "easeOut" as const, delay: 0.9 },
     },
   }, 
 };

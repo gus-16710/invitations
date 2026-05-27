@@ -1,6 +1,7 @@
 import "yet-another-react-lightbox/styles.css";
 import { motion } from "framer-motion";
 import PhotoAlbum from "react-photo-album";
+import "react-photo-album/styles.css";
 import Lightbox from "yet-another-react-lightbox";
 import NextJsImage from "./NextJsImage";
 import { useState } from "react";
@@ -39,7 +40,7 @@ export default function SlideFour() {
       whileInView={{
         opacity: 1,
         y: 0,
-        transition: { duration: 0.8, ease: "easeOut" },
+        transition: { duration: 0.8, ease: "easeOut" as const },
       }}      
     >
       {/* Notificación con animación */}
@@ -55,7 +56,7 @@ export default function SlideFour() {
         <motion.div
           className="flex items-center justify-center p-2 rounded-lg bg-red-800/50 w-80 mb-3"
           whileHover={{ scale: 1.02 }}
-          transition={{ type: "spring", stiffness: 200 }}
+          transition={{ type: "spring" as const, stiffness: 200 }}
         >
           <div className="ms-3 text-sm text-white">
             Presiona sobre una imagen para ampliar
@@ -76,7 +77,7 @@ export default function SlideFour() {
           layout="masonry"
           photos={images}
           onClick={({ index: current }) => setIndex(current)}
-          renderPhoto={NextJsImage}
+          render={{ photo: NextJsImage }}
           columns={1}
         />
         <Lightbox

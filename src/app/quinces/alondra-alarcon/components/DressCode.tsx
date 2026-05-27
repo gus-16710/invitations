@@ -66,7 +66,7 @@ export default function DressCode() {
               <motion.span
                 className="absolute -top-2 -right-2 text-4xl"
                 animate={{ rotate: [0, 360] }}
-                transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                transition={{ duration: 20, repeat: Infinity, ease: "linear" as const }}
               >
                 ✨
               </motion.span>
@@ -97,7 +97,7 @@ export default function DressCode() {
           className="flex justify-center items-center gap-8 my-10"
           initial={{ scale: 0 }}
           whileInView={{ scale: 1 }}
-          transition={{ type: "spring", stiffness: 100 }}
+          transition={{ type: "spring" as const, stiffness: 100 }}
         >
           {/* Icono de corbata con animación */}
           <motion.div
@@ -109,7 +109,7 @@ export default function DressCode() {
             transition={{
               duration: 4,
               repeat: Infinity,
-              ease: "easeInOut",
+              ease: "easeInOut" as const,
             }}
           >
             <div className="absolute inset-0 bg-yellow-400/20 rounded-full blur-lg" />
@@ -156,7 +156,7 @@ export default function DressCode() {
             transition={{
               duration: 4,
               repeat: Infinity,
-              ease: "easeInOut",
+              ease: "easeInOut" as const,
               delay: 0.5,
             }}
           >

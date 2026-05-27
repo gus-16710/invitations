@@ -8,8 +8,7 @@ import {
   ModalContent,
   ModalFooter,
   ModalHeader,
-  useDisclosure,
-} from "@nextui-org/react";
+  useDisclosure } from "@nextui-org/react";
 import Image from "next/image";
 import { allura, anton, bige, dancing, graduate, great, julius, lobster, mea, quickSand, rye } from "./components/Fonts";
 
@@ -21,7 +20,7 @@ import Presentation from "./components/Presentation";
 import Reception from "./components/Reception";
 import Video from "./components/Video";
 import AudioControl from "./components/AudioControl";
-import { Carousel, Flowbite, FlowbiteCarouselTheme } from "flowbite-react";
+import { Carousel } from "flowbite-react";
 
 const list = {
   visible: {
@@ -29,16 +28,11 @@ const list = {
     transition: {
       when: "beforeChildren",
       staggerChildren: 0.2,
-      delay: 1,
-    },
-  },
+      delay: 1 } },
   hidden: {
     opacity: 0,
     transition: {
-      when: "afterChildren",
-    },
-  },
-};
+      when: "afterChildren" } } };
 
 const list2 = {
   visible: {
@@ -46,57 +40,43 @@ const list2 = {
     transition: {
       when: "beforeChildren",
       staggerChildren: 0.2,
-      delay: 7,
-    },
-  },
+      delay: 7 } },
   hidden: {
     opacity: 0,
     transition: {
-      when: "afterChildren",
-    },
-  },
-};
+      when: "afterChildren" } } };
 
 const item = {
   visible: { opacity: 1, y: 0, scale: 1 },
-  hidden: { opacity: 0, y: 100, scale: 0 },
-};
+  hidden: { opacity: 0, y: 100, scale: 0 } };
 
-const customTheme: FlowbiteCarouselTheme = {
+const customTheme = {
   root: {
     base: "relative h-64 w-full",
     leftControl:
       "absolute top-0 left-0 flex h-full items-center justify-center px-4 focus:outline-none text-gray-800/0 hidden",
     rightControl:
-      "absolute top-0 right-0 flex h-full items-center justify-center px-4 focus:outline-none text-gray-800/0 hidden",
-  },
+      "absolute top-0 right-0 flex h-full items-center justify-center px-4 focus:outline-none text-gray-800/0 hidden" },
   indicators: {
     active: {
       off: "bg-gray-800/0 hover:bg-gray-800",
-      on: "bg-gray-800/0 dark:bg-gray-800",
-    },
+      on: "bg-gray-800/0 dark:bg-gray-800" },
     base: "h-3 w-3 rounded-full",
-    wrapper: "absolute bottom-5 left-1/2 flex -translate-x-1/2 space-x-3",
-  },
+    wrapper: "absolute bottom-5 left-1/2 flex -translate-x-1/2 space-x-3" },
   item: {
     base: "absolute top-1/2 left-1/2 block w-full -translate-x-1/2 -translate-y-1/2 ",
-    wrapper: "w-full flex-shrink-0 transform cursor-default snap-center",
-  },
+    wrapper: { off: "w-full shrink-0 transform cursor-default snap-center", on: "w-full shrink-0 transform cursor-grab snap-center" } },
   control: {
     base: "inline-flex h-8 w-8 items-center justify-center rounded-full bg-gray-800/10 group-hover:bg-gray-800/30 group-focus:outline-none group-focus:ring-4 group-focus:ring-white dark:bg-gray-800/30 dark:group-hover:bg-gray-800/60 dark:group-focus:ring-gray-800/70 sm:h-10 sm:w-10 ",
-    icon: "h-5 w-5 text-grat-800 dark:text-gray-800 sm:h-6 sm:w-6 ",
-  },
+    icon: "h-5 w-5 text-grat-800 dark:text-gray-800 sm:h-6 sm:w-6 " },
   scrollContainer: {
     base: "flex h-full snap-mandatory overflow-y-hidden overflow-x-scroll scroll-smooth rounded-lg ",
-    snap: "snap-x",
-  },
-};
+    snap: "snap-x" } };
 
 const ModalOpening = ({
   isOpen,
   onOpenChange,
-  setOpen,
-}: {
+  setOpen }: {
   isOpen: boolean;
   onOpenChange: () => void;
   setOpen: Dispatch<SetStateAction<boolean>>;
@@ -106,20 +86,17 @@ const ModalOpening = ({
     hidden: {
       x: -200,
       opacity: 0,
-      rotate: -15,
-    },
+      rotate: -15 },
     visible: {
       x: 0,
       opacity: 1,
       rotate: 0,
       transition: {
-        type: "spring",
+        type: "spring" as const,
         stiffness: 80,
         damping: 20,
         delay: 0.5,
-        duration: 1.5,
-      },
-    },
+        duration: 1.5 } },
     dance: {
       y: [0, -10, 0, -5, 0],
       rotate: [0, -3, 3, -2, 0],
@@ -127,29 +104,23 @@ const ModalOpening = ({
         duration: 2.5,
         repeat: Infinity,
         repeatDelay: 0.5,
-        ease: "easeInOut",
-      },
-    },
-  };
+        ease: "easeInOut" as const } } };
 
   const rafaImageVariants = {
     hidden: {
       x: 200,
       opacity: 0,
-      rotate: 15,
-    },
+      rotate: 15 },
     visible: {
       x: 0,
       opacity: 1,
       rotate: 0,
       transition: {
-        type: "spring",
+        type: "spring" as const,
         stiffness: 80,
         damping: 20,
         delay: 0.7,
-        duration: 1.5,
-      },
-    },
+        duration: 1.5 } },
     dance: {
       y: [0, -8, 0, -6, 0],
       rotate: [0, 3, -3, 2, 0],
@@ -157,11 +128,8 @@ const ModalOpening = ({
         duration: 2.5,
         repeat: Infinity,
         repeatDelay: 0.5,
-        ease: "easeInOut",
-        delay: 0.1,
-      },
-    },
-  };
+        ease: "easeInOut" as const,
+        delay: 0.1 } } };
 
   const text = `Te invitamos a la Rosca de Reyes`;
   const text2 = `10-Enero-2026`;
@@ -173,19 +141,14 @@ const ModalOpening = ({
       opacity: 1,
       transition: {
         duration: 0.6,
-        ease: "easeOut",
-        delay: 10,
-      },
-    },
+        ease: "easeOut" as const,
+        delay: 10 } },
     exit: {
       scale: 0,
       opacity: 0,
       transition: {
         duration: 0.5,
-        ease: "easeInOut",
-      },
-    },
-  };
+        ease: "easeInOut" as const } } };
 
   const [snowflakes, setSnowflakes] = useState<
     Array<{
@@ -203,8 +166,7 @@ const ModalOpening = ({
       left: Math.random() * 100,
       delay: Math.random() * 5,
       duration: 5 + Math.random() * 50,
-      size: 10 + Math.random() * 20,
-    }));
+      size: 10 + Math.random() * 20 }));
     setSnowflakes(generatedSnowflakes);
   }, []);
 
@@ -225,9 +187,8 @@ const ModalOpening = ({
             <ModalBody className="flex flex-col items-center justify-center">
               <div className="absolute inset-0 flex flex-col items-center justify-center z-30">                
 
-                <Flowbite>
                   <Carousel
-                    theme={customTheme}
+                    theme={customTheme as any}
                     slideInterval={5000}
                     slide={true}
                   >
@@ -275,7 +236,6 @@ const ModalOpening = ({
                       </motion.div>
                     </div>
                   </Carousel>
-                </Flowbite>
                 
                 <div className="z-30 mb-10 mt-5">
                   <motion.p
@@ -318,19 +278,16 @@ const ModalOpening = ({
                       left: `${snowflake.left}%`,
                       top: "-5%",
                       width: `${snowflake.size}px`,
-                      height: `${snowflake.size}px`,
-                    }}
+                      height: `${snowflake.size}px` }}
                     animate={{
                       y: ["0vh", "100vh"],
                       x: [0, Math.random() * 50 - 25],
-                      rotate: [0, 360],
-                    }}
+                      rotate: [0, 360] }}
                     transition={{
                       duration: snowflake.duration,
                       repeat: Infinity,
                       delay: snowflake.delay,
-                      ease: "linear",
-                    }}
+                      ease: "linear" as const }}
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -369,8 +326,7 @@ const ModalOpening = ({
                   transition={{
                     duration: 10,
                     repeat: Infinity,
-                    ease: "linear",
-                  }}
+                    ease: "linear" as const }}
                 >
                   ⭐
                 </motion.div>
@@ -397,13 +353,11 @@ const ModalOpening = ({
                       className="absolute -inset-3 bg-red-500  rounded-large  opacity-40"
                       animate={{
                         scale: [1, 1.1, 1],
-                        opacity: [0.2, 0, 0.2],
-                      }}
+                        opacity: [0.2, 0, 0.2] }}
                       transition={{
                         duration: 4,
                         repeat: Infinity,
-                        ease: "easeInOut",
-                      }}
+                        ease: "easeInOut" as const }}
                     />
                     <div className="relative px-5 rounded-large h-14 bg-gradient-to-r from-red-500 to-red-600 flex items-center justify-center shadow-2xl group-hover:shadow-3xl transition-all duration-300 shadow-amber-500/30">
                       <label className={`${quickSand.className} text-white`}>
@@ -414,13 +368,11 @@ const ModalOpening = ({
                       className="absolute inset-0 bg-red-500 rounded-large"
                       animate={{
                         scale: [1, 1.2, 1],
-                        opacity: [0.2, 0, 0.2],
-                      }}
+                        opacity: [0.2, 0, 0.2] }}
                       transition={{
                         duration: 3,
                         repeat: Infinity,
-                        ease: "easeInOut",
-                      }}
+                        ease: "easeInOut" as const }}
                     />
                   </div>
                 </motion.button>
@@ -458,8 +410,7 @@ export default function JYR() {
               arrows: false,
               classes: {
                 page: "splide__pagination__page custom-class-page", // each button
-              },
-            }}
+              } }}
             onActive={(splide: any) => {
               setSplide(splide.index);
             }}

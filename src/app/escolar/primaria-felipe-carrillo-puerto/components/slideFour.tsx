@@ -19,7 +19,7 @@ const item = {
     opacity: 1,
     y: 0,
     transition: {
-      type: "spring",
+      type: "spring" as const,
       damping: 15,
       stiffness: 150,
     },
@@ -47,7 +47,7 @@ export default function SlideFour() {
         initial={{ scale: 0, rotate: -45 }}
         whileInView={{ scale: 1, rotate: -12 }}
         transition={{
-          type: "spring",
+          type: "spring" as const,
           stiffness: 260,
           damping: 20,
           delay: 0.6,

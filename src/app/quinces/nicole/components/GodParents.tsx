@@ -1,39 +1,31 @@
 import { motion } from "framer-motion";
-import { Carousel, Flowbite } from "flowbite-react";
+import { Carousel } from "flowbite-react";
 import { pinyion, playFair } from "./Fonts";
 import { animation01, animation04, animation06 } from "./Animations";
 import { Card, CardBody } from "@nextui-org/react";
-import type { FlowbiteCarouselTheme } from "flowbite-react";
 
-const customTheme: FlowbiteCarouselTheme = {
+const customTheme = {
   root: {
     base: "relative h-96 w-full",
     leftControl:
       "absolute top-0 left-0 flex h-full items-center justify-center px-4 focus:outline-none hidden",
     rightControl:
-      "absolute top-0 right-0 flex h-full items-center justify-center px-4 focus:outline-none hidden",
-  },
+      "absolute top-0 right-0 flex h-full items-center justify-center px-4 focus:outline-none hidden" },
   indicators: {
     active: {
       off: "bg-gray-800/50 hover:bg-gray-800",
-      on: "bg-gray-800 dark:bg-gray-800",
-    },
+      on: "bg-gray-800 dark:bg-gray-800" },
     base: "h-3 w-3 rounded-full",
-    wrapper: "absolute bottom-5 left-1/2 flex -translate-x-1/2 space-x-3",
-  },
+    wrapper: "absolute bottom-5 left-1/2 flex -translate-x-1/2 space-x-3" },
   item: {
     base: "absolute top-1/2 left-1/2 block w-full -translate-x-1/2 -translate-y-1/2",
-    wrapper: "w-full flex-shrink-0 transform cursor-default snap-center",
-  },
+    wrapper: { off: "w-full shrink-0 transform cursor-default snap-center", on: "w-full shrink-0 transform cursor-grab snap-center" } },
   control: {
     base: "inline-flex h-8 w-8 items-center justify-center rounded-full bg-gray-800/10 group-hover:bg-gray-800/30 group-focus:outline-none group-focus:ring-4 group-focus:ring-white dark:bg-gray-800/30 dark:group-hover:bg-gray-800/60 dark:group-focus:ring-gray-800/70 sm:h-10 sm:w-10",
-    icon: "h-5 w-5 text-grat-800 dark:text-gray-800 sm:h-6 sm:w-6",
-  },
+    icon: "h-5 w-5 text-grat-800 dark:text-gray-800 sm:h-6 sm:w-6" },
   scrollContainer: {
     base: "flex h-full snap-mandatory overflow-y-hidden overflow-x-scroll scroll-smooth rounded-lg",
-    snap: "snap-x",
-  },
-};
+    snap: "snap-x" } };
 
 export default function GodParents() {
   return (
@@ -49,8 +41,7 @@ export default function GodParents() {
       >
         <CardBody className="flex items-center justify-center flex-col overflow-clip">
           <div className="w-full">
-            <Flowbite>
-              <Carousel theme={customTheme} slideInterval={5000}>
+              <Carousel theme={customTheme as any} slideInterval={5000}>
                 <div className="flex h-full items-center justify-center pb-10 text-gray-800 flex-col px-5 text-center">
                   <motion.h1
                     className={`${pinyion.className} text-5xl text-yellow-400 mt-5 text-center`}
@@ -215,7 +206,6 @@ export default function GodParents() {
                   </motion.p>
                 </div>
               </Carousel>
-            </Flowbite>
           </div>
         </CardBody>
       </Card>

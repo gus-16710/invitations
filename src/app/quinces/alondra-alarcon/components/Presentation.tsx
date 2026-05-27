@@ -33,7 +33,7 @@ const TimeCard = ({ value, label, scopeRef, icon }: any) => (
   <motion.div
     className="relative"
     whileHover={{ scale: 1.05 }}
-    transition={{ type: "spring", stiffness: 300 }}
+    transition={{ type: "spring" as const, stiffness: 300 }}
   >
     {/* Tarjeta principal - Responsive */}
     <div className="relative bg-gradient-to-br from-yellow-50 to-amber-50 rounded-xl sm:rounded-2xl p-3 sm:p-4 md:p-6 shadow-lg border-2 border-yellow-300 min-w-[80px] sm:min-w-[100px] md:min-w-[120px]">
@@ -83,7 +83,7 @@ const TimeSeparator = () => (
       transition={{
         duration: 1.5,
         repeat: Infinity,
-        ease: "easeInOut",
+        ease: "easeInOut" as const,
       }}
       className="text-xl sm:text-2xl md:text-3xl"
     >
@@ -97,7 +97,7 @@ const TimeSeparator = () => (
       transition={{
         duration: 1.5,
         repeat: Infinity,
-        ease: "easeInOut",
+        ease: "easeInOut" as const,
         delay: 0.75,
       }}
       className="text-xl sm:text-2xl md:text-3xl hidden sm:block"
@@ -159,7 +159,7 @@ export default function Presentation() {
         opacity: [0, 1],
         scale: [0.8, 1.1, 1],
       },
-      { duration: 0.5, ease: "easeOut" }
+      { duration: 0.5, ease: "easeOut" as const }
     );
   }, [seconds]);
 
@@ -167,7 +167,7 @@ export default function Presentation() {
     animateMinutes(
       scopeMinutes.current,
       { y: [20, 0], opacity: [0, 1] },
-      { duration: 0.5, ease: "easeOut" }
+      { duration: 0.5, ease: "easeOut" as const }
     );
   }, [minutes]);
 
@@ -175,7 +175,7 @@ export default function Presentation() {
     animateHours(
       scopeHours.current,
       { y: [20, 0], opacity: [0, 1] },
-      { duration: 0.5, ease: "easeOut" }
+      { duration: 0.5, ease: "easeOut" as const }
     );
   }, [hours]);
 
@@ -183,7 +183,7 @@ export default function Presentation() {
     animateDays(
       scopeDays.current,
       { y: [20, 0], opacity: [0, 1] },
-      { duration: 0.5, ease: "easeOut" }
+      { duration: 0.5, ease: "easeOut" as const }
     );
   }, [days]);
 
@@ -298,7 +298,7 @@ export default function Presentation() {
             transition={{
               duration: 1,
               repeat: Infinity,
-              ease: "easeInOut",
+              ease: "easeInOut" as const,
             }}
           >
             <TimeCard
@@ -367,7 +367,7 @@ export default function Presentation() {
         transition={{
           duration: 4,
           repeat: Infinity,
-          ease: "easeInOut",
+          ease: "easeInOut" as const,
         }}
       >
         🌸
@@ -381,7 +381,7 @@ export default function Presentation() {
         transition={{
           duration: 4,
           repeat: Infinity,
-          ease: "easeInOut",
+          ease: "easeInOut" as const,
           delay: 2,
         }}
       >

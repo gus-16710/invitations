@@ -269,7 +269,7 @@ export default function Congratulations() {
         className={`${greatVibes.className} text-5xl drop-shadow mb-10 text-zinc-800 z-10`}
         initial={{ y: -100, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
-        transition={{ duration: 1, ease: "easeOut", delay: 0.5 }}
+        transition={{ duration: 1, ease: "easeOut" as const, delay: 0.5 }}
       >
         Felicitaciones
       </motion.h1>

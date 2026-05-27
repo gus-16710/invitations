@@ -31,6 +31,7 @@ import { nobile, ovo } from "./components/Fonts";
 import AudioControl from "./components/AudioControl";
 import SlideFive from "./components/slideFive";
 import ReactCanvasConfetti from "react-canvas-confetti";
+import type { TCanvasConfettiInstance } from "react-canvas-confetti/dist/types";
 
 const OpeningModal = ({
   isOpen,
@@ -60,7 +61,7 @@ const OpeningModal = ({
       y: 0,
       opacity: 1,
       transition: {
-        type: "spring",
+        type: "spring" as const,
         damping: 10,
         stiffness: 80,
       },
@@ -73,7 +74,7 @@ const OpeningModal = ({
       opacity: 1,
       transition: {
         duration: 0.8,
-        ease: "easeOut",
+        ease: "easeOut" as const,
       },
     },
   };
@@ -202,9 +203,9 @@ export default function School() {
     onOpen();
   }, []);
 
-  const refAnimationInstance = useRef<confetti.CreateTypes | null>(null);
+  const refAnimationInstance = useRef<TCanvasConfettiInstance | null>(null);
 
-  const getInstance = useCallback((instance: any) => {
+  const getInstance = useCallback(({ confetti: instance }: { confetti: TCanvasConfettiInstance }) => {
     refAnimationInstance.current = instance;
   }, []);
 
@@ -300,7 +301,7 @@ export default function School() {
       />
 
       <ReactCanvasConfetti
-        refConfetti={getInstance}
+        onInit={getInstance}
         style={{
           position: "absolute",
           pointerEvents: "none",

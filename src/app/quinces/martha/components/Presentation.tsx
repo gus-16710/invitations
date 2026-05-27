@@ -11,7 +11,7 @@ export default function Presentation() {
       scale: 1,
       transition: {
         duration: 0.6,
-        ease: "easeOut",
+        ease: "easeOut" as const,
         when: "beforeChildren", // Animación padre antes que los hijos
       },
     },

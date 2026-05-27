@@ -24,7 +24,7 @@ export default function Gifts() {
         transition={{
           duration: 10,
           repeat: Infinity,
-          ease: "easeInOut",
+          ease: "easeInOut" as const,
           delay: -1 * 0.5,
         }}
       >

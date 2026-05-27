@@ -61,7 +61,7 @@ function Presentation() {
     animateSeconds(
       scopeSeconds.current,
       { y: [20, 0], opacity: [0, 1] },
-      { ease: "easeInOut", type: "keyframes" }
+      { ease: "easeInOut" as const, type: "keyframes" }
     );
   }, [seconds, animateSeconds]);
 
@@ -69,7 +69,7 @@ function Presentation() {
     animateMinutes(
       scopeMinutes.current,
       { y: [20, 0], opacity: [0, 1] },
-      { ease: "easeInOut", type: "keyframes" }
+      { ease: "easeInOut" as const, type: "keyframes" }
     );
   }, [minutes, animateSeconds]);
 
@@ -77,7 +77,7 @@ function Presentation() {
     animateHours(
       scopeHours.current,
       { y: [20, 0], opacity: [0, 1] },
-      { ease: "easeInOut", type: "keyframes" }
+      { ease: "easeInOut" as const, type: "keyframes" }
     );
   }, [hours, animateHours]);
 
@@ -85,7 +85,7 @@ function Presentation() {
     animateDays(
       scopeDays.current,
       { y: [20, 0], opacity: [0, 1] },
-      { ease: "easeInOut", type: "keyframes" }
+      { ease: "easeInOut" as const, type: "keyframes" }
     );
   }, [days, animateDays]);
   return (

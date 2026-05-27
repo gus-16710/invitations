@@ -21,7 +21,7 @@ export const animate03 = {
   visible: {
     opacity: 1,
     scale: 1,
-    transition: { duration: 1, type: "spring", stiffness: 70, delay: 0.5 },
+    transition: { duration: 1, type: "spring" as const, stiffness: 70, delay: 0.5 },
   },
 };
 
@@ -30,7 +30,7 @@ export const animate04 = {
   visible: {
     opacity: 1,
     scale: 1,
-    transition: { duration: 1, type: "spring", stiffness: 70, delay: 1.5 },
+    transition: { duration: 1, type: "spring" as const, stiffness: 70, delay: 1.5 },
   },
 };
 
@@ -39,7 +39,7 @@ export const animate05 = {
   visible: {
     opacity: 1,
     scale: 1,
-    transition: { duration: 1, type: "spring", stiffness: 70, delay: 2.5 },
+    transition: { duration: 1, type: "spring" as const, stiffness: 70, delay: 2.5 },
   },
 };
 
@@ -48,7 +48,7 @@ export const animate06 = {
   visible: {
     opacity: 1,
     scale: 1,
-    transition: { duration: 1, type: "spring", stiffness: 70, delay: 3.5 },
+    transition: { duration: 1, type: "spring" as const, stiffness: 70, delay: 3.5 },
   },
 };
 
@@ -57,7 +57,7 @@ export const animate07 = {
   visible: {
     opacity: 1,
     scale: 1,
-    transition: { duration: 1, type: "spring", stiffness: 70, delay: 4.5 },
+    transition: { duration: 1, type: "spring" as const, stiffness: 70, delay: 4.5 },
   },
 };
 
@@ -66,7 +66,7 @@ export const animate08 = {
   visible: {
     opacity: 1,
     scale: 1,
-    transition: { duration: 1, type: "spring", stiffness: 70, delay: 5.5 },
+    transition: { duration: 1, type: "spring" as const, stiffness: 70, delay: 5.5 },
   },
 };
 /** */
@@ -103,7 +103,7 @@ export const animation01 = {
   visible: {
     opacity: 1,
     scale: 1,
-    transition: { duration: 1, type: "spring", stiffness: 70, delay: 0.4 },
+    transition: { duration: 1, type: "spring" as const, stiffness: 70, delay: 0.4 },
   },
 };
 
@@ -195,7 +195,7 @@ export const animationSvg01 = {
     // x: 100,
     rotate: [310, 315, 310],
     transition: { duration: 3, repeat: Infinity },
-    //transition: { duration: 1, type: "spring", stiffness: 70, delay: 0.4 },
+    //transition: { duration: 1, type: "spring" as const, stiffness: 70, delay: 0.4 },
   },
 };
 
@@ -214,7 +214,7 @@ export const animationSvg02 = {
     // x: 100,
     //rotate: [310],
     transition: { duration: 3, repeat: Infinity },
-    //transition: { duration: 1, type: "spring", stiffness: 70, delay: 0.4 },
+    //transition: { duration: 1, type: "spring" as const, stiffness: 70, delay: 0.4 },
   },
 };
 
@@ -231,7 +231,7 @@ export const animationSvg03 = {
     // x: 100,
     //rotate: [310],
     transition: { duration: 3, repeat: Infinity },
-    //transition: { duration: 1, type: "spring", stiffness: 70, delay: 0.4 },
+    //transition: { duration: 1, type: "spring" as const, stiffness: 70, delay: 0.4 },
   },
 };
 
@@ -249,7 +249,7 @@ export const animationSvg04 = {
     // x: 100,
     //rotate: [310],
     transition: { duration: 30, repeat: Infinity },
-    //transition: { duration: 1, type: "spring", stiffness: 70, delay: 0.4 },
+    //transition: { duration: 1, type: "spring" as const, stiffness: 70, delay: 0.4 },
   },
 };
 
@@ -258,7 +258,7 @@ export const animationButton01 = {
   visible: {
     opacity: 1,
     scale: 1,
-    transition: { duration: 2, type: "spring", stiffness: 70, delay: 0.4 },
+    transition: { duration: 2, type: "spring" as const, stiffness: 70, delay: 0.4 },
   },
 };
 

@@ -10,13 +10,14 @@ import Header from "./components/Header";
 import Presentation from "./components/Presentation";
 import Reception from "./components/Reception";
 import ReactCanvasConfetti from "react-canvas-confetti";
+import type { TCanvasConfettiInstance } from "react-canvas-confetti/dist/types";
 import Confetti from "./components/Confetti";
 import AudioControl from "./components/AudioControl";
 
 export default function Christening() {
-  const refAnimationInstance = useRef<confetti.CreateTypes | null>(null);
+  const refAnimationInstance = useRef<TCanvasConfettiInstance | null>(null);
 
-  const getInstance = useCallback((instance: any) => {
+  const getInstance = useCallback(({ confetti: instance }: { confetti: TCanvasConfettiInstance }) => {
     refAnimationInstance.current = instance;
   }, []);
 
@@ -85,7 +86,7 @@ export default function Christening() {
         <Confetti fire={fire} />
 
         <ReactCanvasConfetti
-          refConfetti={getInstance}
+          onInit={getInstance}
           style={{
             position: "fixed",
             pointerEvents: "none",

@@ -15,7 +15,7 @@ const Player = () => {
 
   useEffect(() => {
     if (playing) {
-      animate(scope.current, { rotate: [0, 90, 180, 270, 360] }, { repeat: Infinity });
+      animate(scope.current, { rotate: [0, 90, 180, 270, 360] }, { repeat: Infinity, duration: 1.5, ease: "linear" });
     } else {
       animate(scope.current, { rotate: 0 }, { repeat: 0 });
     }

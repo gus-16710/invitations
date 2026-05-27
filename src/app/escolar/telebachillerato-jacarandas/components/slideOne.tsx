@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
 import PhotoAlbum from "react-photo-album";
+import "react-photo-album/styles.css";
 import NextJsImage from "./NextJsImage";
 import Lightbox from "yet-another-react-lightbox";
 
@@ -92,7 +93,7 @@ const FlipAvatar: React.FC = () => {
               layout="masonry"
               photos={[images[flipped ? 1 : 0]]}
               onClick={() => setIndex(flipped ? 1 : 0)}
-              renderPhoto={NextJsImage}
+              render={{ photo: NextJsImage }}
               columns={1}
             />
           </div>

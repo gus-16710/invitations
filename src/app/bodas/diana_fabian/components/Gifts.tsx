@@ -57,7 +57,7 @@ export default function Gifts() {
                   transition: {
                     opacity: { duration: 0.6, delay: 0.3 },
                     scale: { duration: 0.6, delay: 0.3 },
-                    y: { duration: 2.5, delay: 0.9, repeat: Infinity, ease: "easeInOut" },
+                    y: { duration: 2.5, delay: 0.9, repeat: Infinity, ease: "easeInOut" as const },
                   },
                 },
               }}

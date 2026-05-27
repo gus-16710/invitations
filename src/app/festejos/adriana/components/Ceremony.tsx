@@ -92,7 +92,7 @@ export default function Ceremony() {
           className={"fill-zinc-50 z-50"}
           initial={{ scale: 0, opacity: 0 }}
           whileInView={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 1, ease: "easeOut", delay: 0.6 }}
+          transition={{ duration: 1, ease: "easeOut" as const, delay: 0.6 }}
         >
           <g id="outline">
             <path d="M136,240a24,24,0,1,0,24,24A24.028,24.028,0,0,0,136,240Zm0,32a8,8,0,1,1,8-8A8.009,8.009,0,0,1,136,272Z"></path>
@@ -104,7 +104,7 @@ export default function Ceremony() {
           className={`${love.className} mt-5 text-center text-zinc-50 text-5xl z-50`}
           initial={{ y: 100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
-          transition={{ duration: 1, ease: "easeInOut", delay: 0.9 }}
+          transition={{ duration: 1, ease: "easeInOut" as const, delay: 0.9 }}
         >
           <p className="flex items-center justify-center gap-1">
             ~ 13:00 HRS ~
@@ -114,7 +114,7 @@ export default function Ceremony() {
           className={`${markazi.className} text-center mx-5 mt-5 text-2xl text-zinc-50 max-w-md z-50`}
           initial={{ y: 100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
-          transition={{ duration: 1, ease: "easeInOut", delay: 1.2 }}
+          transition={{ duration: 1, ease: "easeInOut" as const, delay: 1.2 }}
         >
           Santuario Parroquial De San José
         </motion.p>
@@ -123,7 +123,7 @@ export default function Ceremony() {
           initial={{ y: 100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: false }}
-          transition={{ duration: 1, ease: "easeInOut", delay: 1.5 }}
+          transition={{ duration: 1, ease: "easeInOut" as const, delay: 1.5 }}
         >
           Benito Juárez 27, Lomas de Hidalgo, Centro, 91300 Banderilla, Ver.
         </motion.p>
@@ -131,7 +131,7 @@ export default function Ceremony() {
           initial={{ y: 100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: false }}
-          transition={{ duration: 1, ease: "easeInOut", delay: 1.6 }}
+          transition={{ duration: 1, ease: "easeInOut" as const, delay: 1.6 }}
           className="mt-5 z-50"
         >          
           <button

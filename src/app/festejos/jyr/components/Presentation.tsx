@@ -29,7 +29,7 @@ export default function Presentation({ splide }: { splide: number }) {
           className={`${greatVibes.className} text-5xl drop-shadow text-center`}
           initial={{ y: -100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
-          transition={{ duration: 1, ease: "easeOut", delay: 0.4 }}
+          transition={{ duration: 1, ease: "easeOut" as const, delay: 0.4 }}
         >
           Nos Casamos
         </motion.h1>
@@ -37,7 +37,7 @@ export default function Presentation({ splide }: { splide: number }) {
           className="flex items-center justify-center flex-col mt-4 mb-2 text-gray-600"
           initial={{ scale: 0, opacity: 0 }}
           whileInView={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 1, ease: "easeOut", delay: 0.8 }}
+          transition={{ duration: 1, ease: "easeOut" as const, delay: 0.8 }}
         >
           <label className={`${playFair.className} pb-3 text-xl`}>
             Diciembre
@@ -73,7 +73,7 @@ export default function Presentation({ splide }: { splide: number }) {
           className={`${notoSans.className} text-center p-5 max-w-md`}
           initial={{ y: 100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
-          transition={{ duration: 1, ease: "easeInOut", delay: 1.2 }}
+          transition={{ duration: 1, ease: "easeInOut" as const, delay: 1.2 }}
         >
           Después de muchas aventuras compartidas y sueños construidos de la
           mano, hemos decidido dar el “sí, acepto”. Comienza un nuevo amanecer
@@ -94,7 +94,7 @@ export default function Presentation({ splide }: { splide: number }) {
             initial={{ y: 100, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: false }}
-            transition={{ duration: 1, ease: "easeInOut", delay: 1.2 }}
+            transition={{ duration: 1, ease: "easeInOut" as const, delay: 1.2 }}
           >
             <g>
               {" "}

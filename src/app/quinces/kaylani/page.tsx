@@ -36,7 +36,7 @@ const ModalOpening = ({
               className="h-1.5 bg-gradient-to-r from-[#4A2C63] via-[#9B6DDB] to-[#CDA6F5]"
               initial={{ scaleX: 0 }}
               animate={{ scaleX: 1 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
+              transition={{ duration: 0.8, ease: "easeOut" as const }}
               style={{ transformOrigin: "left" }}
             />
 
@@ -45,7 +45,7 @@ const ModalOpening = ({
               <motion.div
                 initial={{ scale: 0, rotate: -20 }}
                 animate={{ scale: 1, rotate: 0 }}
-                transition={{ type: "spring", stiffness: 260, damping: 18, delay: 0.2 }}
+                transition={{ type: "spring" as const, stiffness: 260, damping: 18, delay: 0.2 }}
                 className="mb-1"
               >
                 <div className="w-14 h-14 rounded-full bg-gradient-to-br from-[#9B6DDB] to-[#4A2C63] flex items-center justify-center shadow-lg shadow-purple-200">
@@ -100,7 +100,7 @@ const ModalOpening = ({
                 className="flex items-baseline gap-2"
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 0.9, type: "spring", stiffness: 200 }}
+                transition={{ delay: 0.9, type: "spring" as const, stiffness: 200 }}
               >
                 <span
                   className={`${playFair.className} font-bold text-6xl leading-none`}
@@ -231,7 +231,7 @@ const ModalOpening = ({
               className="h-1.5 bg-gradient-to-r from-[#CDA6F5] via-[#9B6DDB] to-[#4A2C63]"
               initial={{ scaleX: 0 }}
               animate={{ scaleX: 1 }}
-              transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+              transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" as const }}
               style={{ transformOrigin: "right" }}
             />
           </div>

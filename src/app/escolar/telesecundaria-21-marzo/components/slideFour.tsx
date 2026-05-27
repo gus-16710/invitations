@@ -1,6 +1,7 @@
 import "yet-another-react-lightbox/styles.css";
 import { motion } from "framer-motion";
 import PhotoAlbum from "react-photo-album";
+import "react-photo-album/styles.css";
 import Lightbox from "yet-another-react-lightbox";
 
 import { useState } from "react";
@@ -53,7 +54,7 @@ export default function SlideFour() {
             layout="masonry"
             photos={images}
             onClick={({ index: current }) => setIndex(current)}
-            renderPhoto={NextJsImage}
+            render={{ photo: NextJsImage }}
             columns={1}
           />
           <Lightbox

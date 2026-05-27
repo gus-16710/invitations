@@ -58,7 +58,7 @@ export default function Counter() {
     animateSeconds(
       scopeSeconds.current,
       { y: [10, 0], opacity: [0, 1] },
-      { ease: "easeInOut", duration: 0.5 }
+      { ease: "easeInOut" as const, duration: 0.5 }
     );
   }, [seconds, animateSeconds]);
 
@@ -66,7 +66,7 @@ export default function Counter() {
     animateMinutes(
       scopeMinutes.current,
       { y: [10, 0], opacity: [0, 1] },
-      { ease: "easeInOut", duration: 0.5 }
+      { ease: "easeInOut" as const, duration: 0.5 }
     );
   }, [minutes, animateMinutes]);
 
@@ -74,7 +74,7 @@ export default function Counter() {
     animateHours(
       scopeHours.current,
       { y: [10, 0], opacity: [0, 1] },
-      { ease: "easeInOut", duration: 0.5 }
+      { ease: "easeInOut" as const, duration: 0.5 }
     );
   }, [hours, animateHours]);
 
@@ -82,7 +82,7 @@ export default function Counter() {
     animateDays(
       scopeDays.current,
       { y: [10, 0], opacity: [0, 1] },
-      { ease: "easeInOut", duration: 0.5 }
+      { ease: "easeInOut" as const, duration: 0.5 }
     );
   }, [days, animateDays]);
 
@@ -98,7 +98,7 @@ export default function Counter() {
           className={`${greatVibes.className} text-4xl md:text-5xl lg:text-6xl text-gray-800 text-center mb-8 md:mb-12 tracking-wide`}
           initial={{ y: -50, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
-          transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
+          transition={{ duration: 1, ease: "easeOut" as const, delay: 0.3 }}
         >
           La cuenta regresiva<br />ha comenzado
         </motion.h1>
@@ -108,7 +108,7 @@ export default function Counter() {
           className="grid grid-cols-2 md:flex items-center justify-center gap-4 md:gap-6 lg:gap-8 mb-8 md:mb-12 mx-10"
           initial={{ y: 50, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
-          transition={{ duration: 1, ease: "easeOut", delay: 0.8 }}
+          transition={{ duration: 1, ease: "easeOut" as const, delay: 0.8 }}
         >
           {/* Días */}
           <div className="relative group">

@@ -1,7 +1,7 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { dancing, great, lato, quickSand, teko } from "./Fonts";
 import { header } from "./Animations";
-import { motion, useAnimate } from "framer-motion";
+import { motion, useAnimate, useInView, useAnimation } from "framer-motion";
 import "./Header.css";
 
 const list = {
@@ -23,7 +23,7 @@ const item = {
     opacity: 1,
     y: 0,
     rotate: 0,
-    transition: { type: "spring", damping: 12, stiffness: 200 },
+    transition: { type: "spring" as const, damping: 12, stiffness: 200 },
   },
 };
 
@@ -38,6 +38,18 @@ export default function Header() {
   const [days, setDays] = useState(0);
 
   const text01 = "Martha_Itzel";
+
+  const titleRef = useRef(null);
+  const isInView = useInView(titleRef, { once: false, amount: 0.5 });
+  const controls = useAnimation();
+
+  useEffect(() => {
+    if (isInView) {
+      controls.start("visible");
+    } else {
+      controls.start("hidden");
+    }
+  }, [isInView, controls]);
 
   const countDownClock = () => {
     const countDownDate: any = new Date("Jun 28, 2025 16:00:00");
@@ -129,10 +141,11 @@ export default function Header() {
         </motion.label>
       </p>
       <motion.h1
+        ref={titleRef}
         className={`text-zinc-100 text-6xl ${dancing.className} flex mt-5`}
         variants={list}
         initial="hidden"
-        whileInView="visible"
+        animate={controls}
         style={{
           textShadow:
             "-1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5)",

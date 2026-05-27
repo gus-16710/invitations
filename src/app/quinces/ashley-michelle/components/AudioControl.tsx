@@ -22,7 +22,7 @@ export default function AudioControl() {
         onClick={() => setIsPlayed(!isPlayed)}
         initial={{ opacity: 0, scale: 0, y: 100 }}
         animate={{ opacity: 1, scale: 1, y: 0 }}
-        transition={{ duration: 1, delay: 2, ease: "anticipate" }}        
+        transition={{ duration: 1, delay: 2, ease: "anticipate" as const }}        
       >
         {isPlayed ? <FaVolumeUp /> : <FaVolumeOff />}
       </motion.button>

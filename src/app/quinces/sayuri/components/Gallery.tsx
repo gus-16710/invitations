@@ -1,5 +1,6 @@
 import { useState } from "react";
 import PhotoAlbum from "react-photo-album";
+import "react-photo-album/styles.css";
 import NextJsImage from "./NextJsImage";
 import Lightbox from "yet-another-react-lightbox";
 import { motion } from "framer-motion";
@@ -82,7 +83,7 @@ export default function Gallery() {
           layout="masonry"
           photos={images}
           onClick={({ index: current }) => setIndex(current)}
-          renderPhoto={NextJsImage}
+          render={{ photo: NextJsImage }}
           columns={2}
         />
         <Lightbox

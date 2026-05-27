@@ -10,6 +10,7 @@ import Presentation from "./components/Presentation";
 import Reception from "./components/Reception";
 import "./styles.css";
 import ReactCanvasConfetti from "react-canvas-confetti";
+import type { TCanvasConfettiInstance } from "react-canvas-confetti/dist/types";
 import FloatinButton from "./components/FloatingButton";
 import AudioControl from "./components/AudioControl";
 import DressCode from "./components/DressCode";
@@ -20,9 +21,9 @@ import Gifts from "./components/Gifts";
 export default function Alondra() {
   const [isRevealed, setIsRevealed] = useState(false);
   const [isButtonLoaded, setIsButtonLoaded] = useState(false);
-  const refAnimationInstance = useRef<confetti.CreateTypes | null>(null);
+  const refAnimationInstance = useRef<TCanvasConfettiInstance | null>(null);
 
-  const getInstance = useCallback((instance: any) => {
+  const getInstance = useCallback(({ confetti: instance }: { confetti: TCanvasConfettiInstance }) => {
     refAnimationInstance.current = instance;
   }, []);
 
@@ -101,7 +102,7 @@ export default function Alondra() {
       x: "-100%",
       transition: {
         duration: 1,
-        ease: "easeInOut",
+        ease: "easeInOut" as const,
       },
     },
   };
@@ -112,7 +113,7 @@ export default function Alondra() {
       x: "100%",
       transition: {
         duration: 1,
-        ease: "easeInOut",
+        ease: "easeInOut" as const,
       },
     },
   };
@@ -124,7 +125,7 @@ export default function Alondra() {
       opacity: 1,
       transition: {
         duration: 0.6,
-        ease: "easeOut",
+        ease: "easeOut" as const,
         delay: 0.3,
       },
     },
@@ -133,7 +134,7 @@ export default function Alondra() {
       opacity: 0,
       transition: {
         duration: 0.5,
-        ease: "easeInOut",
+        ease: "easeInOut" as const,
       },
     },
   };
@@ -145,7 +146,7 @@ export default function Alondra() {
       y: -20,
       transition: {
         duration: 0.5,
-        ease: "easeInOut",
+        ease: "easeInOut" as const,
       },
     },
   };
@@ -355,7 +356,7 @@ export default function Alondra() {
                         transition={{
                           duration: 2,
                           repeat: Infinity,
-                          ease: "easeInOut",
+                          ease: "easeInOut" as const,
                         }}
                       />
 
@@ -374,7 +375,7 @@ export default function Alondra() {
                         transition={{
                           duration: 1.5,
                           repeat: Infinity,
-                          ease: "easeInOut",
+                          ease: "easeInOut" as const,
                         }}
                       />
                     </div>
@@ -589,7 +590,7 @@ export default function Alondra() {
                 <Confirm />
 
                 <ReactCanvasConfetti
-                  refConfetti={getInstance}
+                  onInit={getInstance}
                   style={{
                     position: "fixed",
                     pointerEvents: "none",

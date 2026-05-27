@@ -3,7 +3,7 @@ export const animation01 = {
   visible: {
     opacity: 1,
     scale: 1,
-    transition: { duration: 1, type: "spring", stiffness: 70, delay: 0.4 },
+    transition: { duration: 1, type: "spring" as const, stiffness: 70, delay: 0.4 },
   },
 };
 

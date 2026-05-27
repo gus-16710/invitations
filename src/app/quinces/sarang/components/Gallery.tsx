@@ -2,6 +2,7 @@ import "yet-another-react-lightbox/styles.css";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import PhotoAlbum from "react-photo-album";
+import "react-photo-album/styles.css";
 import Lightbox from "yet-another-react-lightbox";
 import { animation06 } from "./Animations";
 import { Card, CardBody } from "@nextui-org/react";
@@ -96,7 +97,7 @@ export default function Gallery() {
               layout="masonry"
               photos={images}
               onClick={({ index: current }) => setIndex(current)}
-              renderPhoto={NextJsImage}
+              render={{ photo: NextJsImage }}
               columns={2}
             />
             <Lightbox

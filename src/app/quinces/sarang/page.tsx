@@ -10,8 +10,7 @@ import {
   ModalContent,
   ModalFooter,
   ModalHeader,
-  useDisclosure,
-} from "@nextui-org/react";
+  useDisclosure } from "@nextui-org/react";
 import { useEffect, useState, Dispatch, SetStateAction } from "react";
 import { notoSerif, pinyion } from "./components/Fonts";
 import { animationButton01, animationModal } from "./components/Animations";
@@ -23,8 +22,7 @@ import Main from "./components/Main";
 const ModalOpening = ({
   isOpen,
   onOpenChange,
-  setOpen,
-}: {
+  setOpen }: {
   isOpen: boolean;
   onOpenChange: () => void;
   setOpen: Dispatch<SetStateAction<boolean>>;
@@ -84,8 +82,7 @@ const ModalOpening = ({
                       className={`${pinyion.className} text-center text-4xl z-20 my-5`}
                       style={{
                         textShadow: "0px 1px 1px rgba(255,255,255, 1)",
-                        fontFamily: "adelia",
-                      }}
+                        fontFamily: "adelia" }}
                     >
                       Sarang
                     </p>

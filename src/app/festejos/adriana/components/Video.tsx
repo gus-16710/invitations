@@ -48,7 +48,7 @@ const item = {
     opacity: 1,
     y: 0,
     transition: {
-      type: "spring",
+      type: "spring" as const,
       damping: 15,
       stiffness: 150,
     },
@@ -80,7 +80,7 @@ export default function Video() {
       <motion.div
         initial={{ y: -100, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
-        transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
+        transition={{ duration: 1, ease: "easeOut" as const, delay: 0.3 }}
         className="z-10"
       >
         <svg

@@ -1,7 +1,7 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { dancing, great, lato, quickSand, teko } from "./Fonts";
 import { header } from "./Animations";
-import { motion, useAnimate } from "framer-motion";
+import { motion, useAnimate, useInView, useAnimation } from "framer-motion";
 import "./Header.css";
 
 const list = {
@@ -36,6 +36,18 @@ export default function Header() {
   const [days, setDays] = useState(0);
 
   const text01 = "Camila";
+
+  const titleRef = useRef(null);
+  const isInView = useInView(titleRef, { once: false, amount: 0.5 });
+  const controls = useAnimation();
+
+  useEffect(() => {
+    if (isInView) {
+      controls.start("visible");
+    } else {
+      controls.start("hidden");
+    }
+  }, [isInView, controls]);
 
   const countDownClock = () => {
     const countDownDate: any = new Date("Aug 8, 2026 12:00:00");
@@ -112,10 +124,11 @@ export default function Header() {
         </motion.label>
       </p>
       <motion.h1
+        ref={titleRef}
         className={`text-pink-800 text-8xl ${dancing.className} flex`}
         variants={list}
         initial="hidden"
-        whileInView="visible"
+        animate={controls}
       >
         {text01.split("").map((letter, index) => {
           return (

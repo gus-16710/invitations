@@ -89,7 +89,7 @@ export default function Ceremony() {
           fill="rgb(75 85 99)"
           initial={{ scale: 0, opacity: 0 }}
           whileInView={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 1, ease: "easeOut", delay: 0.6 }}
+          transition={{ duration: 1, ease: "easeOut" as const, delay: 0.6 }}
         >
           <g id="outline">
             <path d="M136,240a24,24,0,1,0,24,24A24.028,24.028,0,0,0,136,240Zm0,32a8,8,0,1,1,8-8A8.009,8.009,0,0,1,136,272Z"></path>
@@ -101,7 +101,7 @@ export default function Ceremony() {
           className={`${love.className} mt-5 text-center text-yellow-900 text-2xl`}
           initial={{ y: 100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
-          transition={{ duration: 1, ease: "easeInOut", delay: 0.9 }}
+          transition={{ duration: 1, ease: "easeInOut" as const, delay: 0.9 }}
         >
           <p className="flex items-center justify-center gap-1">
             ~ <IoMdTime /> 18:00 HRS ~
@@ -112,7 +112,7 @@ export default function Ceremony() {
           className={`${markazi.className} text-center mx-5 mt-5 text-2xl text-zinc-600 max-w-md`}
           initial={{ y: 100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
-          transition={{ duration: 1, ease: "easeInOut", delay: 1.2 }}
+          transition={{ duration: 1, ease: "easeInOut" as const, delay: 1.2 }}
         >
           Catedral Metropolitana de la Inmaculada Concepción
         </motion.p>
@@ -121,7 +121,7 @@ export default function Ceremony() {
           initial={{ y: 100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: false }}
-          transition={{ duration: 1, ease: "easeInOut", delay: 1.5 }}
+          transition={{ duration: 1, ease: "easeInOut" as const, delay: 1.5 }}
         >
           Juan de La Luz Enríquez s/n, Zona Centro, Centro, 91000
           Xalapa-Enríquez, Ver.
@@ -130,7 +130,7 @@ export default function Ceremony() {
           initial={{ y: 100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: false }}
-          transition={{ duration: 1, ease: "easeInOut", delay: 1.6 }}
+          transition={{ duration: 1, ease: "easeInOut" as const, delay: 1.6 }}
           className="mt-5"
         >
           <Button

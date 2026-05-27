@@ -61,7 +61,7 @@ export default function Presentation() {
     animateSeconds(
       scopeSeconds.current,
       { scale: [0, 1], opacity: [0, 1] },
-      { ease: "easeInOut", type: "keyframes" }
+      { ease: "easeInOut" as const, type: "keyframes" }
     );
   }, [seconds, animateSeconds]);
 
@@ -69,7 +69,7 @@ export default function Presentation() {
     animateMinutes(
       scopeMinutes.current,
       { scale: [0, 1], opacity: [0, 1] },
-      { ease: "easeInOut", type: "keyframes" }
+      { ease: "easeInOut" as const, type: "keyframes" }
     );
   }, [minutes, animateSeconds]);
 
@@ -77,7 +77,7 @@ export default function Presentation() {
     animateHours(
       scopeHours.current,
       { scale: [0, 1], opacity: [0, 1] },
-      { ease: "easeInOut", type: "keyframes" }
+      { ease: "easeInOut" as const, type: "keyframes" }
     );
   }, [hours, animateHours]);
 
@@ -85,7 +85,7 @@ export default function Presentation() {
     animateDays(
       scopeDays.current,
       { scale: [0, 1], opacity: [0, 1] },
-      { ease: "easeInOut", type: "keyframes" }
+      { ease: "easeInOut" as const, type: "keyframes" }
     );
   }, [days, animateDays]);
 

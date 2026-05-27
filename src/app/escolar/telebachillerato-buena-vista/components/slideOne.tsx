@@ -21,7 +21,7 @@ export default function SlideOne() {
       y: 0, 
       opacity: 1,
       transition: {
-        type: "spring",
+        type: "spring" as const,
         damping: 10,
         stiffness: 80,
         mass: 0.6
@@ -35,7 +35,7 @@ export default function SlideOne() {
       opacity: 1,
       transition: {
         duration: 0.8,
-        ease: "easeOut"
+        ease: "easeOut" as const
       }
     }
   };
@@ -46,7 +46,7 @@ export default function SlideOne() {
       scale: 1,
       opacity: 1,
       transition: {
-        type: "spring",
+        type: "spring" as const,
         stiffness: 100,
         damping: 8,
         mass: 0.5

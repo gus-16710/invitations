@@ -55,7 +55,7 @@ export default function Counter() {
     animateSeconds(
       scopeSeconds.current,
       { y: [20, 0], opacity: [0, 1] },
-      { ease: "easeInOut", type: "keyframes" }
+      { ease: "easeInOut" as const, type: "keyframes" }
     );
   }, [seconds, animateSeconds]);
 
@@ -63,7 +63,7 @@ export default function Counter() {
     animateMinutes(
       scopeMinutes.current,
       { y: [20, 0], opacity: [0, 1] },
-      { ease: "easeInOut", type: "keyframes" }
+      { ease: "easeInOut" as const, type: "keyframes" }
     );
   }, [minutes, animateSeconds]);
 
@@ -71,7 +71,7 @@ export default function Counter() {
     animateHours(
       scopeHours.current,
       { y: [20, 0], opacity: [0, 1] },
-      { ease: "easeInOut", type: "keyframes" }
+      { ease: "easeInOut" as const, type: "keyframes" }
     );
   }, [hours, animateHours]);
 
@@ -79,7 +79,7 @@ export default function Counter() {
     animateDays(
       scopeDays.current,
       { y: [20, 0], opacity: [0, 1] },
-      { ease: "easeInOut", type: "keyframes" }
+      { ease: "easeInOut" as const, type: "keyframes" }
     );
   }, [days, animateDays]);
 
@@ -140,7 +140,7 @@ export default function Counter() {
         initial={{ scale: 0, opacity: 0 }}
         whileInView={{ scale: 1, opacity: 1 }}
         viewport={{ once: false }}
-        transition={{ duration: 1, ease: "easeOut" }}
+        transition={{ duration: 1, ease: "easeOut" as const }}
         className="mt-8"
       >
         <Image

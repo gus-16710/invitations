@@ -126,7 +126,7 @@ export default function DressCode() {
         className={`${greatVibes.className} text-5xl drop-shadow text-center text-zinc-800`}
         initial={{ y: -100, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
-        transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
+        transition={{ duration: 1, ease: "easeOut" as const, delay: 0.3 }}
       >
         Vestimenta
       </motion.h1>
@@ -137,7 +137,7 @@ export default function DressCode() {
           className={`${greatVibes.className} mt-5 mb-5 text-3xl text-zinc-800`}
           initial={{ y: 100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
-          transition={{ duration: 1, ease: "easeInOut", delay: 0.9 }}
+          transition={{ duration: 1, ease: "easeInOut" as const, delay: 0.9 }}
         >
           Mujeres & Hombres
         </motion.h2>
@@ -145,7 +145,7 @@ export default function DressCode() {
           className={`${notoSans.className} text-zinc-800 text-center mx-10`}
           initial={{ y: 100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
-          transition={{ duration: 1, ease: "easeInOut", delay: 0.9 }}
+          transition={{ duration: 1, ease: "easeInOut" as const, delay: 0.9 }}
         >
           Queremos verte comodo/a elegante y con mucho color.
         </motion.p>

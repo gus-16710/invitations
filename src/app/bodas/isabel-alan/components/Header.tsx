@@ -1,7 +1,8 @@
 import AudioPlayer from "./AudioPlayer";
 import { alex, mate, oswald } from "./Fonts";
 import "./Header.css";
-import { motion } from "framer-motion";
+import { motion, useInView, useAnimation } from "framer-motion";
+import { useRef, useEffect } from "react";
 
 const list = {
   visible: {
@@ -27,13 +28,26 @@ const item = {
 export default function Header() {
   const text01 = "Isabel&Alan";
 
+  const titleRef = useRef(null);
+  const isInView = useInView(titleRef, { once: false, amount: 0.5 });
+  const controls = useAnimation();
+
+  useEffect(() => {
+    if (isInView) {
+      controls.start("visible");
+    } else {
+      controls.start("hidden");
+    }
+  }, [isInView, controls]);
+
   return (
     <section className="h-screen relative flex items-center justify-center flex-col bg-[url('/img/bodas/isabel-alan/gallery-01.jpg')] bg-cover bg-center">
       <motion.h1
+        ref={titleRef}
         className={`${alex.className} text-zinc-100 text-8xl text-center mx-5 custom-shadow flex flex-wrap justify-center`}
         variants={list}
         initial="hidden"
-        whileInView="visible"
+        animate={controls}
       >
         {text01.split("").map((letter, index) => {
           return (
@@ -62,7 +76,7 @@ export default function Header() {
         role="alert"
         initial={{ y: 100, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
-        transition={{ duration: 1, ease: "easeOut", delay: 3.3 }}
+        transition={{ duration: 1, ease: "easeOut" as const, delay: 3.3 }}
       >
         <span className="sr-only">Info</span>
         <div className={`${oswald.className} ms-3 text-sm text-zinc-100`}>

@@ -1,5 +1,5 @@
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useRef, useEffect } from "react";
+import { motion, useInView, useAnimation } from "framer-motion";
 import { dancing, playFair } from "./Fonts";
 import { header } from "./Animations";
 
@@ -26,7 +26,7 @@ const item = {
     y: 0,
     scale: 1,
     transition: {
-      type: "spring",
+      type: "spring" as const,
       damping: 12,
       stiffness: 100,
     },
@@ -39,7 +39,7 @@ const decorativeLine = {
   hidden: { scaleX: 0 },
   visible: {
     scaleX: 1,
-    transition: { duration: 1, delay: 1.5, ease: "easeOut" },
+    transition: { duration: 1, delay: 1.5, ease: "easeOut" as const },
   },
 };
 
@@ -50,7 +50,7 @@ const sparkle = {
     transition: {
       duration: 2,
       repeat: Infinity,
-      ease: "easeInOut",
+      ease: "easeInOut" as const,
     },
   },
 };
@@ -64,13 +64,25 @@ const floatingParticle = (delay: any) => ({
       duration: 4,
       delay: delay,
       repeat: Infinity,
-      ease: "easeInOut",
+      ease: "easeInOut" as const,
     },
   },
 });
 
 export default function Header() {
   const text = "Alondra";
+
+  const titleRef = useRef(null);
+  const isInView = useInView(titleRef, { once: false, amount: 0.5 });
+  const controls = useAnimation();
+
+  useEffect(() => {
+    if (isInView) {
+      controls.start("visible");
+    } else {
+      controls.start("hidden");
+    }
+  }, [isInView, controls]);
 
   return (
     <section className="flex flex-col justify-center items-center relative overflow-hidden z-10" style={{ height: "100svh" }}>
@@ -140,7 +152,7 @@ export default function Header() {
             rotate: {
               duration: 60,
               repeat: Infinity,
-              ease: "linear",
+              ease: "linear" as const,
             },
           }}
         />
@@ -155,16 +167,17 @@ export default function Header() {
           transition={{
             duration: 3,
             repeat: Infinity,
-            ease: "easeInOut",
+            ease: "easeInOut" as const,
           }}
         />
 
         {/* Nombre con efecto de degradado */}
         <motion.h1
+          ref={titleRef}
           className={`${dancing.className} z-10 text-center text-7xl h-32 flex text-yellow-600 mt-5`}
           variants={list}
           initial="hidden"
-          whileInView="visible"
+          animate={controls}
         >
           {text.split("").map((letter, index) => (
             <motion.span

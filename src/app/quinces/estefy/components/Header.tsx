@@ -56,7 +56,7 @@ export default function Header({ splide }: { splide: number }) {
     animateSeconds(
       scopeSeconds.current,
       { y: [20, 0], opacity: [0, 1] },
-      { ease: "easeInOut", type: "keyframes" }
+      { ease: "easeInOut" as const, type: "keyframes" }
     );
   }, [seconds, animateSeconds]);
 
@@ -64,7 +64,7 @@ export default function Header({ splide }: { splide: number }) {
     animateMinutes(
       scopeMinutes.current,
       { y: [20, 0], opacity: [0, 1] },
-      { ease: "easeInOut", type: "keyframes" }
+      { ease: "easeInOut" as const, type: "keyframes" }
     );
   }, [minutes, animateSeconds]);
 
@@ -72,7 +72,7 @@ export default function Header({ splide }: { splide: number }) {
     animateHours(
       scopeHours.current,
       { y: [20, 0], opacity: [0, 1] },
-      { ease: "easeInOut", type: "keyframes" }
+      { ease: "easeInOut" as const, type: "keyframes" }
     );
   }, [hours, animateHours]);
 
@@ -80,7 +80,7 @@ export default function Header({ splide }: { splide: number }) {
     animateDays(
       scopeDays.current,
       { y: [20, 0], opacity: [0, 1] },
-      { ease: "easeInOut", type: "keyframes" }
+      { ease: "easeInOut" as const, type: "keyframes" }
     );
   }, [days, animateDays]);
 

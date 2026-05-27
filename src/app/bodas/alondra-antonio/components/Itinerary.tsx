@@ -62,7 +62,7 @@ export default function Itinerary() {
         className={`${greatVibes.className} text-5xl drop-shadow mb-10 text-zinc-100`}
         initial={{ y: -100, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
-        transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
+        transition={{ duration: 1, ease: "easeOut" as const, delay: 0.3 }}
       >
         Itinerario
       </motion.h1>

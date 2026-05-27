@@ -129,7 +129,7 @@ export default function SlideTwo() {
         <motion.div
           initial={{ scale: 0.8, opacity: 0 }}
           whileInView={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 0.8, delay: 1.0, type: "spring" }}
+          transition={{ duration: 0.8, delay: 1.0, type: "spring" as const }}
         >
           <button
             type="button"

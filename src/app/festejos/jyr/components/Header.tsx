@@ -11,7 +11,7 @@ const fadeInUp = {
     y: 0,
     transition: {
       duration: 0.8,
-      ease: "easeOut",
+      ease: "easeOut" as const,
     },
   },
 };
@@ -50,7 +50,7 @@ const FloatingParticles = () => {
             duration: particle.duration,
             delay: particle.delay,
             repeat: Infinity,
-            ease: "linear",
+            ease: "linear" as const,
           }}
         />
       ))}
@@ -72,7 +72,7 @@ export default function Header() {
       <motion.div
         initial={{ scale: 1 }}
         animate={{ scale: [1, 1.05, 1] }}
-        transition={{ duration: 15, repeat: Infinity, ease: "easeInOut" }}
+        transition={{ duration: 15, repeat: Infinity, ease: "easeInOut" as const }}
         className="absolute inset-0 bg-cover bg-center z-0"
         style={{
           backgroundImage:
@@ -90,21 +90,21 @@ export default function Header() {
         <motion.p
           initial={{ y: -100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
-          transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}          
+          transition={{ duration: 1, ease: "easeOut" as const, delay: 0.3 }}          
         >
           Jess
         </motion.p>
         <motion.p
           initial={{ y: -100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
-          transition={{ duration: 1, ease: "easeOut", delay: 0.6 }}
+          transition={{ duration: 1, ease: "easeOut" as const, delay: 0.6 }}
         >
           y
         </motion.p>
         <motion.p
           initial={{ y: -100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
-          transition={{ duration: 1, ease: "easeOut", delay: 0.9 }}
+          transition={{ duration: 1, ease: "easeOut" as const, delay: 0.9 }}
         >
           Rafa
         </motion.p>
@@ -115,7 +115,7 @@ export default function Header() {
         className={`text-zinc-50 text-lg mt-10 z-10 italic ${julius.className}`}
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        transition={{ duration: 1, ease: "easeInOut", delay: 1.2 }}
+        transition={{ duration: 1, ease: "easeInOut" as const, delay: 1.2 }}
       >
         ¡Acompáñanos!
       </motion.p>

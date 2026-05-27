@@ -2,6 +2,7 @@ import { motion, useAnimate } from "framer-motion";
 import { Bebas_Neue, Great_Vibes } from "next/font/google";
 import { useState, useEffect, useCallback, useRef } from "react";
 import ReactCanvasConfetti from "react-canvas-confetti";
+import type { TCanvasConfettiInstance } from "react-canvas-confetti/dist/types";
 import { IoIosArrowDown } from "react-icons/io";
 
 const greatVibes = Great_Vibes({ subsets: ["latin"], weight: "400" });
@@ -59,7 +60,7 @@ export default function Header() {
     animateSeconds(
       scopeSeconds.current,
       { y: [20, 0], opacity: [0, 1] },
-      { ease: "easeInOut", type: "keyframes" }
+      { ease: "easeInOut" as const, type: "keyframes" }
     );
   }, [seconds, animateSeconds]);
 
@@ -67,7 +68,7 @@ export default function Header() {
     animateMinutes(
       scopeMinutes.current,
       { y: [20, 0], opacity: [0, 1] },
-      { ease: "easeInOut", type: "keyframes" }
+      { ease: "easeInOut" as const, type: "keyframes" }
     );
   }, [minutes, animateSeconds]);
 
@@ -75,7 +76,7 @@ export default function Header() {
     animateHours(
       scopeHours.current,
       { y: [20, 0], opacity: [0, 1] },
-      { ease: "easeInOut", type: "keyframes" }
+      { ease: "easeInOut" as const, type: "keyframes" }
     );
   }, [hours, animateHours]);
 
@@ -83,13 +84,13 @@ export default function Header() {
     animateDays(
       scopeDays.current,
       { y: [20, 0], opacity: [0, 1] },
-      { ease: "easeInOut", type: "keyframes" }
+      { ease: "easeInOut" as const, type: "keyframes" }
     );
   }, [days, animateDays]);
 
-  const refAnimationInstance = useRef<confetti.CreateTypes | null>(null);
+  const refAnimationInstance = useRef<TCanvasConfettiInstance | null>(null);
 
-  const getInstance = useCallback((instance: any) => {
+  const getInstance = useCallback(({ confetti: instance }: { confetti: TCanvasConfettiInstance }) => {
     refAnimationInstance.current = instance;
   }, []);
 
@@ -157,7 +158,7 @@ export default function Header() {
       <motion.div
         initial={{ scale: 1 }}
         animate={{ scale: [1, 1.05, 1] }}
-        transition={{ duration: 15, repeat: Infinity, ease: "easeInOut" }}
+        transition={{ duration: 15, repeat: Infinity, ease: "easeInOut" as const }}
         className="absolute inset-0 bg-cover bg-center z-0"
         style={{
           backgroundImage:
@@ -279,7 +280,7 @@ export default function Header() {
       </div>
       {/* /</section> */}
       <ReactCanvasConfetti
-        refConfetti={getInstance}
+        onInit={getInstance}
         style={{
           position: "absolute",
           pointerEvents: "none",

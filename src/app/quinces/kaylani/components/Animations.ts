@@ -31,7 +31,7 @@ export const animate03 = {
   visible: {
     opacity: 1,
     scale: 1,
-    transition: { duration: 1, type: "spring", stiffness: 70, delay: 0.5 },
+    transition: { duration: 1, type: "spring" as const, stiffness: 70, delay: 0.5 },
   },
 };
 
@@ -40,7 +40,7 @@ export const animate04 = {
   visible: {
     opacity: 1,
     scale: 1,
-    transition: { duration: 1, type: "spring", stiffness: 70, delay: 1.5 },
+    transition: { duration: 1, type: "spring" as const, stiffness: 70, delay: 1.5 },
   },
 };
 
@@ -49,7 +49,7 @@ export const animate05 = {
   visible: {
     opacity: 1,
     scale: 1,
-    transition: { duration: 1, type: "spring", stiffness: 70, delay: 2.5 },
+    transition: { duration: 1, type: "spring" as const, stiffness: 70, delay: 2.5 },
   },
 };
 
@@ -58,7 +58,7 @@ export const animate06 = {
   visible: {
     opacity: 1,
     scale: 1,
-    transition: { duration: 1, type: "spring", stiffness: 70, delay: 3.5 },
+    transition: { duration: 1, type: "spring" as const, stiffness: 70, delay: 3.5 },
   },
 };
 
@@ -67,7 +67,7 @@ export const animate07 = {
   visible: {
     opacity: 1,
     scale: 1,
-    transition: { duration: 1, type: "spring", stiffness: 70, delay: 4.5 },
+    transition: { duration: 1, type: "spring" as const, stiffness: 70, delay: 4.5 },
   },
 };
 
@@ -76,7 +76,7 @@ export const animate08 = {
   visible: {
     opacity: 1,
     scale: 1,
-    transition: { duration: 1, type: "spring", stiffness: 70, delay: 5.5 },
+    transition: { duration: 1, type: "spring" as const, stiffness: 70, delay: 5.5 },
   },
 };
 /** */
@@ -113,7 +113,7 @@ export const animation01 = {
   visible: {
     opacity: 1,
     scale: 1,
-    transition: { duration: 1, type: "spring", stiffness: 70, delay: 0.4 },
+    transition: { duration: 1, type: "spring" as const, stiffness: 70, delay: 0.4 },
   },
 };
 
@@ -205,7 +205,7 @@ export const animationSvg01 = {
     // x: 100,
     rotate: [310, 315, 310],
     transition: { duration: 3, repeat: Infinity },
-    //transition: { duration: 1, type: "spring", stiffness: 70, delay: 0.4 },
+    //transition: { duration: 1, type: "spring" as const, stiffness: 70, delay: 0.4 },
   },
 };
 
@@ -224,7 +224,7 @@ export const animationSvg02 = {
     // x: 100,
     //rotate: [310],
     transition: { duration: 3, repeat: Infinity },
-    //transition: { duration: 1, type: "spring", stiffness: 70, delay: 0.4 },
+    //transition: { duration: 1, type: "spring" as const, stiffness: 70, delay: 0.4 },
   },
 };
 
@@ -241,7 +241,7 @@ export const animationSvg03 = {
     // x: 100,
     //rotate: [310],
     transition: { duration: 3, repeat: Infinity },
-    //transition: { duration: 1, type: "spring", stiffness: 70, delay: 0.4 },
+    //transition: { duration: 1, type: "spring" as const, stiffness: 70, delay: 0.4 },
   },
 };
 
@@ -259,7 +259,7 @@ export const animationSvg04 = {
     // x: 100,
     //rotate: [310],
     transition: { duration: 30, repeat: Infinity },
-    //transition: { duration: 1, type: "spring", stiffness: 70, delay: 0.4 },
+    //transition: { duration: 1, type: "spring" as const, stiffness: 70, delay: 0.4 },
   },
 };
 
@@ -268,7 +268,7 @@ export const animationButton01 = {
   visible: {
     opacity: 1,
     scale: 1,
-    transition: { duration: 2, type: "spring", stiffness: 70, delay: 0.4 },
+    transition: { duration: 2, type: "spring" as const, stiffness: 70, delay: 0.4 },
   },
 };
 
@@ -279,7 +279,7 @@ export const gpTitle01 = {
     opacity: 1,
     x: 0,
     skewX: 0,
-    transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1], delay: 0.2 },
+    transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] as [number, number, number, number], delay: 0.2 },
   },
 };
 export const gpName01 = {
@@ -287,7 +287,7 @@ export const gpName01 = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.6, ease: "easeOut", delay: 0.45 },
+    transition: { duration: 0.6, ease: "easeOut" as const, delay: 0.45 },
   },
 };
 export const gpDot01 = {
@@ -297,7 +297,7 @@ export const gpDot01 = {
     scale: 1,
     transition: {
       duration: 0.5,
-      type: "spring",
+      type: "spring" as const,
       stiffness: 300,
       damping: 15,
       delay: 0.7,
@@ -310,7 +310,7 @@ export const gpTitle02 = {
     opacity: 1,
     x: 0,
     skewX: 0,
-    transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1], delay: 0.9 },
+    transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] as [number, number, number, number], delay: 0.9 },
   },
 };
 export const gpName02 = {
@@ -318,7 +318,7 @@ export const gpName02 = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.6, ease: "easeOut", delay: 1.15 },
+    transition: { duration: 0.6, ease: "easeOut" as const, delay: 1.15 },
   },
 };
 export const gpDot02 = {
@@ -328,7 +328,7 @@ export const gpDot02 = {
     scale: 1,
     transition: {
       duration: 0.5,
-      type: "spring",
+      type: "spring" as const,
       stiffness: 300,
       damping: 15,
       delay: 1.4,
@@ -341,7 +341,7 @@ export const gpTitle03 = {
     opacity: 1,
     x: 0,
     skewX: 0,
-    transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1], delay: 1.6 },
+    transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] as [number, number, number, number], delay: 1.6 },
   },
 };
 export const gpName03 = {
@@ -349,7 +349,7 @@ export const gpName03 = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.6, ease: "easeOut", delay: 1.85 },
+    transition: { duration: 0.6, ease: "easeOut" as const, delay: 1.85 },
   },
 };
 
@@ -362,7 +362,7 @@ export const presentationEntry01 = {
     scale: 1,
     transition: {
       duration: 1.2,
-      type: "spring",
+      type: "spring" as const,
       stiffness: 60,
       damping: 14,
       delay: 0.2,
@@ -378,7 +378,7 @@ export const presentationEntry02 = {
     scale: 1,
     transition: {
       duration: 0.8,
-      ease: [0.22, 1, 0.36, 1],
+      ease: [0.22, 1, 0.36, 1] as [number, number, number, number],
       delay: 1.0,
     },
   },
@@ -392,7 +392,7 @@ export const presentationEntry03 = {
     scale: 1,
     transition: {
       duration: 0.9,
-      type: "spring",
+      type: "spring" as const,
       stiffness: 85,
       damping: 18,
       delay: 1.7,
@@ -407,7 +407,7 @@ export const presentationEntry04 = {
     y: 0,
     transition: {
       duration: 0.85,
-      ease: "easeOut",
+      ease: "easeOut" as const,
       delay: 2.5,
     },
   },
@@ -422,7 +422,7 @@ export const headerEntry01 = {
     y: 0,
     transition: {
       duration: 1.0,
-      type: "spring",
+      type: "spring" as const,
       stiffness: 90,
       damping: 22,
       delay: 0.3,
@@ -438,7 +438,7 @@ export const headerEntry02 = {
     skewX: 0,
     transition: {
       duration: 0.85,
-      ease: [0.22, 1, 0.36, 1],
+      ease: [0.22, 1, 0.36, 1] as [number, number, number, number],
       delay: 1.1,
     },
   },
@@ -452,7 +452,7 @@ export const headerEntry03 = {
     scale: 1,
     transition: {
       duration: 0.75,
-      ease: "easeOut",
+      ease: "easeOut" as const,
       delay: 1.75,
     },
   },
@@ -466,7 +466,7 @@ export const headerEntry04 = {
     scale: 1,
     transition: {
       duration: 0.9,
-      type: "spring",
+      type: "spring" as const,
       stiffness: 80,
       damping: 20,
       delay: 2.3,
@@ -481,7 +481,7 @@ export const headerEntry05 = {
     y: 0,
     transition: {
       duration: 0.65,
-      ease: "easeOut",
+      ease: "easeOut" as const,
       delay: 2.9,
     },
   },
@@ -494,7 +494,7 @@ export const giftsTitle = {
     opacity: 1,
     y: 0,
     scale: 1,
-    transition: { duration: 0.75, ease: [0.22, 1, 0.36, 1], delay: 0.2 },
+    transition: { duration: 0.75, ease: [0.22, 1, 0.36, 1] as [number, number, number, number], delay: 0.2 },
   },
 };
 export const giftsBandA = {
@@ -505,7 +505,7 @@ export const giftsBandA = {
     rotate: 0,
     transition: {
       duration: 0.8,
-      type: "spring",
+      type: "spring" as const,
       stiffness: 80,
       damping: 16,
       delay: 0.5,
@@ -520,7 +520,7 @@ export const giftsBandB = {
     rotate: 0,
     transition: {
       duration: 0.8,
-      type: "spring",
+      type: "spring" as const,
       stiffness: 80,
       damping: 16,
       delay: 0.8,
@@ -537,7 +537,7 @@ export const receptionEntry01 = {
     scale: 1,
     transition: {
       duration: 1.0,
-      type: "spring",
+      type: "spring" as const,
       stiffness: 65,
       damping: 14,
       delay: 0.2,
@@ -550,7 +550,7 @@ export const receptionEntry02 = {
     opacity: 1,
     x: 0,
     skewX: 0,
-    transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: 0.55 },
+    transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] as [number, number, number, number], delay: 0.55 },
   },
 };
 export const receptionEntry03 = {
@@ -559,7 +559,7 @@ export const receptionEntry03 = {
     opacity: 1,
     x: 0,
     skewX: 0,
-    transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: 0.9 },
+    transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] as [number, number, number, number], delay: 0.9 },
   },
 };
 export const receptionEntry04 = {
@@ -568,7 +568,7 @@ export const receptionEntry04 = {
     opacity: 1,
     y: 0,
     scale: 1,
-    transition: { duration: 0.7, ease: "easeOut", delay: 1.2 },
+    transition: { duration: 0.7, ease: "easeOut" as const, delay: 1.2 },
   },
 };
 export const receptionEntry05 = {
@@ -576,7 +576,7 @@ export const receptionEntry05 = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.6, ease: "easeOut", delay: 1.45 },
+    transition: { duration: 0.6, ease: "easeOut" as const, delay: 1.45 },
   },
 };
 export const receptionEntry06 = {
@@ -586,7 +586,7 @@ export const receptionEntry06 = {
     scale: 1,
     transition: {
       duration: 0.65,
-      type: "spring",
+      type: "spring" as const,
       stiffness: 200,
       damping: 18,
       delay: 1.75,
@@ -603,7 +603,7 @@ export const ceremonyEntry01 = {
     scale: 1,
     transition: {
       duration: 1.0,
-      type: "spring",
+      type: "spring" as const,
       stiffness: 65,
       damping: 14,
       delay: 0.2,
@@ -616,7 +616,7 @@ export const ceremonyEntry02 = {
     opacity: 1,
     y: 0,
     scale: 1,
-    transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: 0.55 },
+    transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] as [number, number, number, number], delay: 0.55 },
   },
 };
 export const ceremonyEntry03 = {
@@ -625,7 +625,7 @@ export const ceremonyEntry03 = {
     opacity: 1,
     x: 0,
     skewX: 0,
-    transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: 0.9 },
+    transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] as [number, number, number, number], delay: 0.9 },
   },
 };
 export const ceremonyEntry04 = {
@@ -633,7 +633,7 @@ export const ceremonyEntry04 = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.65, ease: "easeOut", delay: 1.2 },
+    transition: { duration: 0.65, ease: "easeOut" as const, delay: 1.2 },
   },
 };
 export const ceremonyEntry05 = {
@@ -641,7 +641,7 @@ export const ceremonyEntry05 = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.6, ease: "easeOut", delay: 1.45 },
+    transition: { duration: 0.6, ease: "easeOut" as const, delay: 1.45 },
   },
 };
 export const ceremonyEntry06 = {
@@ -651,7 +651,7 @@ export const ceremonyEntry06 = {
     scale: 1,
     transition: {
       duration: 0.65,
-      type: "spring",
+      type: "spring" as const,
       stiffness: 200,
       damping: 18,
       delay: 1.75,

@@ -76,7 +76,7 @@ export default function Gallery() {
         className="focus:outline-none"
         initial={{ opacity: 0, scale: 0.85 }}
         whileInView={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.6, delay: 0.4, type: "spring", stiffness: 90, damping: 18 }}
+        transition={{ duration: 0.6, delay: 0.4, type: "spring" as const, stiffness: 90, damping: 18 }}
         viewport={{ once: false, amount: 0.4 }}
         whileTap={{ scale: 0.97 }}
         style={{
@@ -99,7 +99,7 @@ export default function Gallery() {
             initial={{ scale: 0.78, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 1.04, opacity: 0 }}
-            transition={{ duration: 0.45, ease: "easeOut" }}
+            transition={{ duration: 0.45, ease: "easeOut" as const }}
           />
         </AnimatePresence>
       </motion.button>
@@ -188,7 +188,7 @@ export default function Gallery() {
                 initial={{ scale: 0.75, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 exit={{ scale: 0.75, opacity: 0 }}
-                transition={{ type: "spring", stiffness: 200, damping: 22 }}
+                transition={{ type: "spring" as const, stiffness: 200, damping: 22 }}
               />
               <motion.p
                 className={`${notoSans.className} text-xs tracking-widest mt-6`}

@@ -106,7 +106,7 @@ export default function Reception() {
             transition={{
               duration: 10,
               repeat: Infinity,
-              ease: "easeInOut",
+              ease: "easeInOut" as const,
             }}
           />
         </div>

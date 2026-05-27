@@ -125,7 +125,7 @@ export const presentation = {
     visible: {
       opacity: 1,
       scale: 1,
-      transition: { duration: 1, type: "spring", stiffness: 70, delay: 0.5 },
+      transition: { duration: 1, type: "spring" as const, stiffness: 70, delay: 0.5 },
     },
   },
 };

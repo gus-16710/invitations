@@ -1,12 +1,13 @@
 import "yet-another-react-lightbox/styles.css";
 
 import PhotoAlbum from "react-photo-album";
+import "react-photo-album/styles.css";
 import NextJsImage from "./NextJsImage";
 import { crimson, italianno, playfair } from "./Fonts";
 import { Image } from "@nextui-org/react";
-import { motion } from "framer-motion";
+import { motion, useInView, useAnimation } from "framer-motion";
 import Lightbox from "yet-another-react-lightbox";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { GiClick } from "react-icons/gi";
 
 const images = [
@@ -57,14 +58,26 @@ export default function AboutUs() {
   const text = "¡LLEGA LA BODA MÁS ESPERADA!";
 
   const [index, setIndex] = useState(-1);
+  const titleRef = useRef(null);
+  const isInView = useInView(titleRef, { once: false, amount: 0.5 });
+  const controls = useAnimation();
+
+  useEffect(() => {
+    if (isInView) {
+      controls.start("visible");
+    } else {
+      controls.start("hidden");
+    }
+  }, [isInView, controls]);
 
   return (
     <>
       <motion.p
+        ref={titleRef}
         className={`${playfair.className} text-center mt-5 text-xl sm:text-3xl md:text-4xl `}
         variants={list}
         initial="hidden"
-        whileInView="visible"
+        animate={controls}
       >
         {text.split("").map((letter, index) => {
           return (
@@ -92,7 +105,7 @@ export default function AboutUs() {
         initial={{ scale: 0, opacity: 0 }}
         whileInView={{ scale: 1, opacity: 1 }}
         viewport={{ once: false }}
-        transition={{ duration: 1, ease: "easeOut" }}
+        transition={{ duration: 1, ease: "easeOut" as const }}
       >
         <Image
           alt="Wedding"
@@ -145,7 +158,7 @@ export default function AboutUs() {
             layout="columns"
             photos={images}
             onClick={({ index: current }) => setIndex(current)}
-            renderPhoto={NextJsImage}
+            render={{ photo: NextJsImage }}
             columns={2}
           />
         </div>

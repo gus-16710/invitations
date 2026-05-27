@@ -29,7 +29,7 @@ export default function AudioControl() {
         transition={{
           duration: 5,
           repeat: Infinity,
-          ease: "easeInOut",
+          ease: "easeInOut" as const,
           delay: -1 * 0.5,
         }}
       >

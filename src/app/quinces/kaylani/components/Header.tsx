@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion, useInView, useAnimation } from "framer-motion";
 import { ballet, dancing, notoSans } from "./Fonts";
 import {
   header,
@@ -8,7 +8,7 @@ import {
   headerEntry04,
   headerEntry05,
 } from "./Animations";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import NumberFlow from "@number-flow/react";
 import { great } from "../../camila/components/Fonts";
 
@@ -35,13 +35,25 @@ const item = {
     opacity: 1,
     y: 0,
     scale: 1,
-    transition: { type: "spring", damping: 14, stiffness: 180 },
+    transition: { type: "spring" as const, damping: 14, stiffness: 180 },
   },
 };
 
 export default function Header({ splide }: { splide: number }) {
   const [day, setDay] = useState(0);
   const [hour, setHour] = useState(0);
+
+  const titleRef = useRef(null);
+  const isInView = useInView(titleRef, { once: false, amount: 0.5 });
+  const controls = useAnimation();
+
+  useEffect(() => {
+    if (isInView) {
+      controls.start("visible");
+    } else {
+      controls.start("hidden");
+    }
+  }, [isInView, controls]);
 
   useEffect(() => {
     if (splide === 0) {
@@ -105,6 +117,7 @@ export default function Header({ splide }: { splide: number }) {
 
       {/* Nombre letra por letra */}
       <motion.h1
+        ref={titleRef}
         className={`${great.className} flex flex-col items-center mt-5 text-6xl`}
         style={{
           color: WHITE,
@@ -116,7 +129,7 @@ export default function Header({ splide }: { splide: number }) {
         }}
         variants={list}
         initial="hidden"
-        whileInView="visible"
+        animate={controls}
       >
         <span className="flex">
           {"Kaylani".split("").map((letter, index) => (

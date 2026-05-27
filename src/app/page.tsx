@@ -3,6 +3,7 @@
 import React, { useEffect, useCallback, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import ReactCanvasConfetti from "react-canvas-confetti";
+import type { TCanvasConfettiInstance } from "react-canvas-confetti/dist/types";
 import { Button } from "@nextui-org/react";
 import {
   LuHeart,
@@ -122,7 +123,7 @@ const ActionButtons = () => {
         animate={{
           bottom: isVisible ? "75px" : "20px",
         }}
-        transition={{ duration: 0.3, ease: "easeOut" }}
+        transition={{ duration: 0.3, ease: "easeOut" as const }}
         style={{ marginRight: "20px" }}
       >
         {/* Burbuja flotante */}
@@ -135,7 +136,7 @@ const ActionButtons = () => {
             x: showBubble ? 0 : 10,
             scale: showBubble ? 1 : 0.8,
           }}
-          transition={{ duration: 0.4, ease: "easeOut" }}
+          transition={{ duration: 0.4, ease: "easeOut" as const }}
         >
           <div className="bg-white text-gray-800 px-3 py-2 rounded-lg shadow-lg border border-gray-200 relative whitespace-nowrap">
             <span className="text-sm font-medium">{currentMessage}</span>
@@ -174,7 +175,7 @@ const ActionButtons = () => {
           opacity: isVisible ? 1 : 0,
           scale: isVisible ? 1 : 0,
         }}
-        transition={{ duration: 0.3, ease: "easeOut" }}
+        transition={{ duration: 0.3, ease: "easeOut" as const }}
       >
         <IoIosArrowUp size={24} />
       </motion.button>
@@ -501,9 +502,9 @@ const CarouselInvitations = () => {
 
 export default function HomePage() {
   // Confetti Effect
-  const refAnimationInstance = useRef<confetti.CreateTypes | null>(null);
+  const refAnimationInstance = useRef<TCanvasConfettiInstance | null>(null);
 
-  const getInstance = useCallback((instance: any) => {
+  const getInstance = useCallback(({ confetti: instance }: { confetti: TCanvasConfettiInstance }) => {
     refAnimationInstance.current = instance;
   }, []);
 
@@ -807,7 +808,7 @@ export default function HomePage() {
                   key={event.name}
                   initial={{ opacity: 0, scale: 0.8 }}
                   whileInView={{ opacity: 1, scale: 1 }}
-                  transition={{ delay: index * 0.3, ease: "easeOut" }}
+                  transition={{ delay: index * 0.3, ease: "easeOut" as const }}
                   whileHover={{ scale: 1.05 }}
                   className="group"
                 >
@@ -917,7 +918,7 @@ export default function HomePage() {
 
       {/* Confetti Canvas */}
       <ReactCanvasConfetti
-        refConfetti={getInstance}
+        onInit={getInstance}
         style={{
           position: "fixed",
           pointerEvents: "none",

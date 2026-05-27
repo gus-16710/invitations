@@ -3,6 +3,7 @@ import "yet-another-react-lightbox/styles.css";
 import { cormorant, lora, mea, urbanist } from "./Fonts";
 import { motion } from "framer-motion";
 import PhotoAlbum from "react-photo-album";
+import "react-photo-album/styles.css";
 import { useState } from "react";
 import NextJsImage from "./NextJsImage";
 import Lightbox from "yet-another-react-lightbox";
@@ -45,7 +46,7 @@ export default function SlideOne() {
           layout="masonry"
           photos={images}
           onClick={({ index: current }) => setIndex(current)}
-          renderPhoto={NextJsImage}
+          render={{ photo: NextJsImage }}
           columns={1}
         />
         <Lightbox
@@ -66,7 +67,7 @@ export default function SlideOne() {
             repeat: Infinity, // Repetir indefinidamente
             repeatType: "loop", // Tipo de repetición
             duration: 1.5, // Duración de cada ciclo
-            ease: "easeInOut", // Suavizado de movimiento
+            ease: "easeInOut" as const, // Suavizado de movimiento
           }}
           whileHover={{ scale: 1.3 }} // Efecto al pasar el mouse
         >

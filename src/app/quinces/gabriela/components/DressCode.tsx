@@ -92,7 +92,7 @@ export default function DressCode() {
             <motion.div
               initial={{ y: 100, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
-              transition={{ duration: 1, ease: "easeOut", delay: 0.6 }}
+              transition={{ duration: 1, ease: "easeOut" as const, delay: 0.6 }}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -109,7 +109,7 @@ export default function DressCode() {
               style={{ color: "#513704" }}
               initial={{ y: 100, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
-              transition={{ duration: 1, ease: "easeInOut", delay: 0.9 }}
+              transition={{ duration: 1, ease: "easeInOut" as const, delay: 0.9 }}
             >
               Para Mujeres
             </motion.h2>
@@ -117,7 +117,7 @@ export default function DressCode() {
               className={`${notoSans.className}`}
               initial={{ y: 100, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
-              transition={{ duration: 1, ease: "easeInOut", delay: 0.9 }}
+              transition={{ duration: 1, ease: "easeInOut" as const, delay: 0.9 }}
               style={{ color: "#513704" }}
             >
               Semi-Formal
@@ -128,7 +128,7 @@ export default function DressCode() {
             <motion.div
               initial={{ y: -100, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
-              transition={{ duration: 1, ease: "easeOut", delay: 0.6 }}
+              transition={{ duration: 1, ease: "easeOut" as const, delay: 0.6 }}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -156,7 +156,7 @@ export default function DressCode() {
               className={`${greatVibes.className} pt-5 text-3xl`}
               initial={{ y: -100, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
-              transition={{ duration: 1, ease: "easeInOut", delay: 0.9 }}
+              transition={{ duration: 1, ease: "easeInOut" as const, delay: 0.9 }}
               style={{ color: "#513704" }}
             >
               Para Caballeros
@@ -165,7 +165,7 @@ export default function DressCode() {
               className={`${notoSans.className}`}
               initial={{ y: -100, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
-              transition={{ duration: 1, ease: "easeInOut", delay: 0.9 }}
+              transition={{ duration: 1, ease: "easeInOut" as const, delay: 0.9 }}
               style={{ color: "#513704" }}
             >
               Semi-Formal
