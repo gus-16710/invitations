@@ -1,10 +1,22 @@
 "use client";
 
-import { motion, AnimatePresence } from "framer-motion";
-import { useState, useEffect } from "react";
+import {
+  motion,
+  AnimatePresence,
+  useAnimation,
+  useInView,
+} from "framer-motion";
+import { useState, useEffect, useRef } from "react";
 import { cormorant } from "./Fonts";
+
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
+
+import Fullscreen from "yet-another-react-lightbox/plugins/fullscreen";
+import Zoom from "yet-another-react-lightbox/plugins/zoom";
+import Thumbnails from "yet-another-react-lightbox/plugins/thumbnails";
+import "yet-another-react-lightbox/plugins/thumbnails.css";
+
 import { FaHandPointer } from "react-icons/fa";
 
 const images = [
@@ -35,6 +47,19 @@ const item = {
 export default function SlideFour() {
   const [current, setCurrent] = useState(0);
   const [lightboxOpen, setLightboxOpen] = useState(false);
+
+  // Control manual de animación del texto para que se repita al volver al viewport
+  const textRef = useRef(null);
+  const isInView = useInView(textRef, { amount: 0.3 });
+  const controls = useAnimation();
+
+  useEffect(() => {
+    if (isInView) {
+      controls.start("visible");
+    } else {
+      controls.start("hidden");
+    }
+  }, [isInView, controls]);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -73,7 +98,8 @@ export default function SlideFour() {
             style={{
               width: "160px",
               height: "160px",
-              boxShadow: "0 0 0 3px rgba(255,255,255,0.8), 0 8px 30px rgba(0,0,0,0.4)",
+              boxShadow:
+                "0 0 0 3px rgba(255,255,255,0.8), 0 8px 30px rgba(0,0,0,0.4)",
             }}
           >
             <AnimatePresence>
@@ -122,11 +148,11 @@ export default function SlideFour() {
 
       {/* Texto motivacional */}
       <motion.p
+        ref={textRef}
         className={`${cormorant.className} text-zinc-50 text-xl mx-10 text-center z-10 max-w-xl custom-shadow`}
         variants={list}
         initial="hidden"
-        whileInView="visible"
-        viewport={{ once: false, amount: 0.3 }}
+        animate={controls}
       >
         {text.split(" ").map((word, index) => (
           <motion.span
@@ -144,6 +170,12 @@ export default function SlideFour() {
         slides={images.map((src) => ({ src }))}
         index={current}
         close={() => setLightboxOpen(false)}
+        controller={{
+          closeOnBackdropClick: true,
+          closeOnPullDown: true,
+          closeOnPullUp: true,
+        }}
+        plugins={[Thumbnails, Zoom, Fullscreen]}
       />
     </section>
   );

@@ -4,6 +4,11 @@ import { useState } from "react";
 import Lightbox from "yet-another-react-lightbox";
 import { FaHandPointer } from "react-icons/fa";
 
+import Fullscreen from "yet-another-react-lightbox/plugins/fullscreen";
+import Zoom from "yet-another-react-lightbox/plugins/zoom";
+import Thumbnails from "yet-another-react-lightbox/plugins/thumbnails";
+import "yet-another-react-lightbox/plugins/thumbnails.css"; 
+
 const images = [
   {
     src: "/img/escolar-2026/primaria-netzahualcoyotl/generacion.jpeg",
@@ -124,6 +129,12 @@ export default function SlideOne() {
         open={open}
         slides={images}
         close={() => setOpen(false)}
+        controller={{
+          closeOnBackdropClick: true,
+          closeOnPullDown: true,
+          closeOnPullUp: true,
+        }}
+        plugins={[Thumbnails, Zoom, Fullscreen]}
       />
     </section>
   );

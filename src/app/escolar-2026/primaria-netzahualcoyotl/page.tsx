@@ -52,24 +52,23 @@ const OpeningModal = ({
         body: "p-0",
       }}
     >
-      <ModalContent>
+      <ModalContent >
         {(onClose) => (
-          <ModalBody>
+          <ModalBody >
             {/* Círculo principal */}
             <div
               className="relative flex flex-col items-center justify-center overflow-hidden bg-slate-900"
               style={{
                 width: 300,
                 height: 300,
-                borderRadius: "50%",
-                //boxShadow: "0 0 0 1px rgba(255,255,255,0.07), 0 25px 60px rgba(0,0,0,0.6)",
+                borderRadius: "50%",                
               }}
             >
             <div className="flex flex-col items-center justify-center w-full h-full px-12 gap-2.5">
 
               {/* Etiqueta superior */}
               <motion.p
-                className={`${nobile.className} text-[0.48rem] tracking-[0.35em] text-slate-500 uppercase text-center`}
+                className={`${nobile.className} text-[0.60rem] tracking-[0.35em] text-slate-400 uppercase text-center`}
                 variants={fadeUp}
                 initial="hidden"
                 animate="visible"
@@ -91,7 +90,7 @@ const OpeningModal = ({
 
               {/* Clave */}
               <motion.p
-                className={`${nobile.className} text-[0.48rem] tracking-[0.22em] text-slate-600`}
+                className={`${nobile.className} text-[0.60rem] tracking-[0.22em] text-slate-400`}
                 variants={fadeUp}
                 initial="hidden"
                 animate="visible"
@@ -115,7 +114,7 @@ const OpeningModal = ({
 
               {/* Tipo de evento */}
               <motion.p
-                className={`${nobile.className} text-[0.48rem] tracking-[0.28em] text-slate-500 uppercase text-center`}
+                className={`${nobile.className} text-[0.48rem] tracking-[0.28em] text-slate-400 uppercase text-center`}
                 variants={fadeUp}
                 initial="hidden"
                 animate="visible"
@@ -128,7 +127,7 @@ const OpeningModal = ({
               <motion.button
                 type="button"
                 onClick={() => { setOpen(true); onClose(); }}
-                className={`${nobile.className} mt-1 border border-slate-700 hover:border-slate-400 text-slate-400 hover:text-white text-[0.48rem] tracking-[0.28em] uppercase px-5 py-2 rounded-full transition-all duration-200 active:scale-95`}
+                className={`${nobile.className} mt-1 border border-slate-500 hover:border-slate-400 text-slate-400 hover:text-white text-[0.60rem] tracking-[0.28em] uppercase px-5 py-2 rounded-full transition-all duration-200 active:scale-95`}
                 variants={fadeUp}
                 initial="hidden"
                 animate="visible"
@@ -155,7 +154,7 @@ export default function School() {
   }, []);
 
   return (
-    <main className="bg-[url('/img/escolar-2026/primaria-netzahualcoyotl/background01.jpg')] bg-center bg-cover h-screen">
+    <main className="bg-[url('/img/escolar-2026/primaria-netzahualcoyotl/background.jpg')] bg-center bg-cover h-screen">
       {open && (
         <div className="relative">
           <Splide
