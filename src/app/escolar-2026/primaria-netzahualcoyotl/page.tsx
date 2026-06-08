@@ -85,7 +85,7 @@ const OpeningModal = ({
                 animate="visible"
                 custom={1}
               >
-                Netzahualcoyotl
+                Netzahualcóyotl
               </motion.h1>
 
               {/* Clave */}

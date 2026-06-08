@@ -77,7 +77,7 @@ export default function SlideOne() {
           style={{ color: "#006847" }}
           {...enter(2)}
         >
-          Netzahualcoyotl
+          Netzahualcóyotl
         </motion.h1>
 
         {/* Clave */}

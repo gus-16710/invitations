@@ -38,18 +38,18 @@ const alumnos6b = [
 ];
 
 const alumnos6c = [
-  { nombre: "ALVARADO MENESES ZAIRA DENISE",             padrino: "LUIS GUSTAVO SÁNCHEZ MARTÍNEZ" },
-  { nombre: "AMECA RODRÍGUEZ FRAN DAVID",                padrino: "MARÍA ISABEL AMECA DELGADO" },
-  { nombre: "BADILLO SÁNCHEZ JADE DENISE",               padrino: "RENÉ MERAZ RIVERA" },
-  { nombre: "CAMPOS PÉREZ IAN",                          padrino: "DENISE PÉREZ MERINO" },
-  { nombre: "CONTRERAS PACHECO SARAI",                   padrino: "LUIS GUSTAVO SÁNCHEZ MARTÍNEZ" },
-  { nombre: "CORTÉS ALFAYO ANAÍ",                        padrino: "MAITE ALFAYO BÁEZ" },
-  { nombre: "DURÁN VALDÉS JADE GUADALUPE",               padrino: "EUSEBIA VALDÉS CERVANTES" },
-  { nombre: "HERNÁNDEZ LÓPEZ CHRISTOPHER NOÉ",           padrino: "YOSELIN LÓPEZ PERALTA" },
-  { nombre: "MAY UTRERA SEBASTIÁN",                      padrino: "BRIAN GAEL SANTAMARÍA HERNÁNDEZ" },
-  { nombre: "PÉREZ HERNÁNDEZ GÉNESIS",                   padrino: "AMÉRICA BETSABETH PÉREZ SÁNCHEZ" },
-  { nombre: "RODRÍGUEZ RUIZ JOSÉ LUIS",                  padrino: "FRUCTUOSO EMANUEL PÉREZ VILLA y JUAN ALBERTO HERNÁNDEZ JUNCO" },
-  { nombre: "SAMOANO MENDOZA BENJAMÍN",                  padrino: "ALBINO MENDOZA HERNÁNDEZ" },
+  { nombre: "ZAIRA DENISE ALVARADO MENESES",             padrino: "LUIS GUSTAVO SÁNCHEZ MARTÍNEZ" },
+  { nombre: "FRAN DAVID AMECA RODRÍGUEZ",                padrino: "MARÍA ISABEL AMECA DELGADO" },
+  { nombre: "JADE DENISE BADILLO SÁNCHEZ",               padrino: "RENÉ MERAZ RIVERA" },
+  { nombre: "IAN CAMPOS PÉREZ",                          padrino: "DENISE PÉREZ MERINO" },
+  { nombre: "SARAI CONTRERAS PACHECO",                   padrino: "LUIS GUSTAVO SÁNCHEZ MARTÍNEZ" },
+  { nombre: "ANAÍ CORTÉS ALFAYO",                        padrino: "MAITE ALFAYO BÁEZ" },
+  { nombre: "JADE GUADALUPE DURÁN VALDÉS",               padrino: "EUSEBIA VALDÉS CERVANTES" },
+  { nombre: "CHRISTOPHER NOÉ HERNÁNDEZ LÓPEZ",           padrino: "YOSELIN LÓPEZ PERALTA" },
+  { nombre: "SEBASTIÁN MAY UTRERA",                      padrino: "BRIAN GAEL SANTAMARÍA HERNÁNDEZ" },
+  { nombre: "GÉNESIS PÉREZ HERNÁNDEZ",                   padrino: "AMÉRICA BETSABETH PÉREZ SÁNCHEZ" },
+  { nombre: "JOSÉ LUIS RODRÍGUEZ RUIZ",                  padrino: "FRUCTUOSO EMANUEL PÉREZ VILLA y JUAN ALBERTO HERNÁNDEZ JUNCO" },
+  { nombre: "BENJAMÍN SAMOANO MENDOZA",                  padrino: "ALBINO MENDOZA HERNÁNDEZ" },
 ];
 
 const GrupoCard = ({

@@ -161,7 +161,7 @@ export default function SlideTwo() {
           style={{ color: GREEN_MID }}
           {...enter(6)}
         >
-          16 de Septiembre, Centro, 91639 Rinconada, Ver.
+          16 de Septiembre, Centro, 91634 Rinconada, Ver.
         </motion.p>
 
         {/* Botón mapa */}
