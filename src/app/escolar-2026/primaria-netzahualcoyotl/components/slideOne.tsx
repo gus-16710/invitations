@@ -11,7 +11,7 @@ import "yet-another-react-lightbox/plugins/thumbnails.css";
 
 const images = [
   {
-    src: "/img/escolar-2026/primaria-netzahualcoyotl/generacion.jpeg",
+    src: "/img/escolar-2026/primaria-netzahualcoyotl/generacion_.jpeg",
     width: 800,
     height: 600,
   },

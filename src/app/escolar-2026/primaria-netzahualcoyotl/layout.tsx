@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     description:
       "Primaria Netzahualcóyotl “Fin de cursos” de la GENERACIÓN 2020-2026",
     images: [
-      `https://invitaciones.unaideamas.com/img/escolar-2026/primaria-netzahualcoyotl/generacion.jpeg`,
+      `https://invitaciones.unaideamas.com/img/escolar-2026/primaria-netzahualcoyotl/generacion_.jpeg`,
     ],
   },
   icons: {
