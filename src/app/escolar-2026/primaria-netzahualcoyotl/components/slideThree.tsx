@@ -53,7 +53,7 @@ export default function SlideThree() {
         Programa
       </h1>
 
-      <ScrollShadow hideScrollBar className="h-[400px] w-80 px-5 mt-5">
+      <ScrollShadow hideScrollBar className="h-[400px] w-80 px-5 mt-5" data-lenis-prevent>
         <motion.ol
           className="relative border-s ml-5"
           style={{ borderColor: `${GREEN}40` }}
