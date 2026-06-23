@@ -62,8 +62,10 @@ export default function SlideOne() {
 
   useEffect(() => {
     fire();
-    const timer = setInterval(() => fire(), 5000);
-    () => clearInterval(timer);
+    const timer = setInterval(() => {
+      if (!document.hidden) fire();
+    }, 5000);
+    return () => clearInterval(timer);
   }, []);
 
   return (
@@ -85,13 +87,28 @@ export default function SlideOne() {
           30EES0110P — Turno Vespertino
         </h2>
 
-        <Image
-          width={185}
-          alt="NextUI hero Image"
-          src="/img/escolar-2026/experimental/experimental.png"
-          className="mb-5"
-          style={{ filter: "drop-shadow(4px 4px 6px rgba(0, 0, 0, 0.5))" }}
-        />
+        <div className="relative mb-5 overflow-hidden rounded-full" style={{ width: 185 }}>
+          <Image
+            width={185}
+            alt="Logo Experimental"
+            src="/img/escolar-2026/experimental/experimental.png"
+            style={{ filter: "drop-shadow(4px 4px 6px rgba(0, 0, 0, 0.5))" }}
+          />
+          <div
+            className="absolute inset-0 z-10 pointer-events-none"
+            style={{
+              background: "linear-gradient(120deg, transparent 30%, rgba(255,255,255,0.4) 50%, transparent 70%)",
+              animation: "shine 6s ease-in-out infinite",
+            }}
+          />
+          <style>{`
+            @keyframes shine {
+              0%, 100% { transform: translateX(-150%); }
+              15% { transform: translateX(150%); }
+              16%, 99% { transform: translateX(-150%); }
+            }
+          `}</style>
+        </div>
 
         <h2 className={`${mea.className} text-zinc-50 text-7xl`}>Ceremonia</h2>
         <h2 className={`${urbanist.className} text-zinc-50 mb-4`}>
