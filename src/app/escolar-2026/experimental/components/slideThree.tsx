@@ -36,7 +36,7 @@ export default function SlideThree() {
         className={`${cormorant.className} text-zinc-50 text-2xl text-center mx-10`}
         {...enter(2)}
       >
-        Mtra. Maria de Jesus Sanchez Flores
+        Profa. María de Jesús Sánchez Flores
       </motion.h1>
 
       <motion.div
