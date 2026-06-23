@@ -1,7 +1,13 @@
-import { mea } from "./Fonts";
-import { ScrollShadow } from "@nextui-org/react";
+import { cormorant, urbanist } from "./Fonts";
 import { motion } from "framer-motion";
-import { IoIosArrowDown } from "react-icons/io";
+import { FaUserTie } from "react-icons/fa";
+
+const enter = (i: number) => ({
+  initial: { opacity: 0, y: 18 },
+  whileInView: { opacity: 1, y: 0 },
+  transition: { delay: i * 0.15, duration: 0.55, ease: "easeOut" as const },
+  viewport: { once: false, amount: 0.3 },
+});
 
 export default function SlideThree() {
   return (
@@ -12,59 +18,34 @@ export default function SlideThree() {
       whileInView={{ scale: 1, opacity: 1 }}
       transition={{ duration: 1.5, delay: 0.5 }}
     >
-      <h1 className={`${mea.className} text-zinc-50 text-6xl mb-5`}>
-        Directivos
-      </h1>
-      <ScrollShadow hideScrollBar className="h-[400px] z-50" data-lenis-prevent>
-        <p className="text-zinc-50 text-center mb-5 mx-5">
-          <span className="font-bold">Mtra. María de Jesús Sánchez Flores</span> <br />
-          Directora
-        </p>
-
-        <p className="text-zinc-50 text-center mb-5 mx-5">
-          <span className="font-bold">Ing. José Moctezuma Topke Cancino</span>
-        </p>
-
-        <p className="text-zinc-50 text-center mb-5 mx-5">
-          <span className="font-bold">Mtro. Benjamín Callejas Hernández</span>
-        </p>
-
-        <p className="text-zinc-50 text-center mb-5 mx-5">
-          <span className="font-bold">Prof. Víctor Hugo Verástegui Guillen</span>
-        </p>
-
-        <p className="text-zinc-50 text-center mb-5 mx-5">
-          <span className="font-bold">Prof. Paul Morales Sandoval</span>
-        </p>
-
-        <p className="text-zinc-50 text-center mb-5 mx-5">
-          <span className="font-bold">Prof. Jesús Lozada Hernández</span>
-        </p>
-
-        <p className="text-zinc-50 text-center mb-5 mx-5">
-          <span className="font-bold">Prof. Estephani Josepha Barradas Rojas</span>
-        </p>
-
-        <p className="text-zinc-50 text-center mb-5 mx-5">
-          <span className="font-bold">Prof. Yanett del Carmen Salas Salas</span>
-        </p>
-
-        <p className="text-zinc-50 text-center mb-5 mx-5">
-          <span className="font-bold">Prof. Lidia Adriana Ramos Maldonado</span>
-        </p>
-
-        <p className="text-zinc-50 text-center mb-5 mx-5">
-          <span className="font-bold">Prof. Francisco Gutiérrez Huerta</span>
-        </p>
-
-      </ScrollShadow>
-      <motion.div
-        initial={{ y: 0 }}
-        whileInView={{ y: [0, 10, 0] }}
-        transition={{ duration: 2, repeat: Infinity }}
-        className="mt-5"
+      <motion.h2
+        className={`${urbanist.className} text-zinc-50/60 text-sm tracking-[0.35em] uppercase`}
+        {...enter(0)}
       >
-        <IoIosArrowDown className="text-zinc-100" />
+        Directora
+      </motion.h2>
+
+      <motion.div
+        className="my-6 flex items-center justify-center w-20 h-20 rounded-full border border-zinc-50/30"
+        {...enter(1)}
+      >
+        <FaUserTie className="text-zinc-50 text-3xl" />
+      </motion.div>
+
+      <motion.h1
+        className={`${cormorant.className} text-zinc-50 text-2xl text-center mx-10`}
+        {...enter(2)}
+      >
+        Mtra. Maria de Jesus Sanchez Flores
+      </motion.h1>
+
+      <motion.div
+        className="flex items-center gap-3 w-40 mt-6"
+        {...enter(3)}
+      >
+        <div className="flex-1 h-px bg-zinc-50/30" />
+        <span className="text-[7px] text-zinc-50/50">&#10022;</span>
+        <div className="flex-1 h-px bg-zinc-50/30" />
       </motion.div>
     </motion.section>
   );

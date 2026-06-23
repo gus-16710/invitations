@@ -4,6 +4,7 @@ import { Splide, SplideSlide } from "@splidejs/react-splide";
 import SlideOne from "./components/slideOne";
 import SlideTwo from "./components/slideTwo";
 import SlideThree from "./components/slideThree";
+// @ts-ignore
 import "@splidejs/react-splide/css";
 import SlideFour from "./components/slideFour";
 import SlideSix from "./components/slideSix";
@@ -19,6 +20,7 @@ import {
 } from "@nextui-org/react";
 import { cormorant, mea, urbanist } from "./components/Fonts";
 import { GrFormViewHide } from "react-icons/gr";
+import { IoTicketOutline } from "react-icons/io5";
 import AudioControl from "./components/AudioControl";
 
 const OpeningModal = ({
@@ -43,7 +45,14 @@ const OpeningModal = ({
       <ModalContent className="overflow-clip bg-slate-50/0 max-w-3xl">
         {(onClose) => (
           <>
-            <ModalHeader className="flex flex-col gap-1"></ModalHeader>
+            <ModalHeader className="flex justify-center">
+              <div
+                className={`${urbanist.className} w-fit mx-auto flex items-center gap-2 text-amber-100 text-xs tracking-[0.15em] bg-amber-500/20 backdrop-blur-sm rounded-full px-5 py-2 border border-amber-400/40`}
+              >
+                <IoTicketOutline className="text-base" />
+                <span>3 pases: 1 estudiante + 2 invitados</span>
+              </div>
+            </ModalHeader>
             <ModalBody className="flex justify-center items-center">
               <h2 className={`${urbanist.className} text-zinc-100 text-xl`}>
                 Escuela Secundaria
@@ -62,15 +71,15 @@ const OpeningModal = ({
               </h2>
 
               <h2
-                className={`${urbanist.className} text-zinc-50 text-center text-xl mt-5`}
+                className={`${urbanist.className} text-zinc-50 text-center text-xl mt-5 mb-10`}
               >
                 Generación 2023-2026
-              </h2>
+              </h2>              
             </ModalBody>
-            <ModalFooter className="flex justify-center">
+            <ModalFooter className="flex flex-col items-center">
               <button
                 type="button"
-                className="flex items-center justify-center gap-2 text-gray-100 hover:text-white border border-gray-100 hover:bg-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2 text-center me-2 my-4"
+                className="flex items-center justify-center gap-2 text-gray-100 hover:text-white border border-gray-100 hover:bg-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2 text-center me-2 mb-4"
                 onClick={() => {
                   setOpen(true);
                   onClose();

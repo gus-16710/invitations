@@ -1,5 +1,6 @@
 import { Image } from "@nextui-org/react";
 import { bebas, cormorant, lora, mea, urbanist } from "./Fonts";
+import { IoTicketOutline } from "react-icons/io5";
 import { motion } from "framer-motion";
 import { useCallback, useEffect, useRef } from "react";
 import ReactCanvasConfetti from "react-canvas-confetti";
@@ -116,7 +117,7 @@ export default function SlideOne() {
         </p>
         <p className={`${urbanist.className} z-20 text-zinc-100 mt-2`}>
           16:00 Hrs
-        </p>
+        </p>        
       </motion.section>
       <ReactCanvasConfetti
         onInit={getInstance}
