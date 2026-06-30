@@ -102,7 +102,7 @@ const alumnos6b = [
     nombre: "DANIEL UTRERA PÉREZ",
     padrino: "SRITA. WENDY DANIELA UTRERA PÉREZ",
   },
-  { nombre: "PERLA VARELA RODRÍGUEZ", padrino: "SR. OSCAR VARELA GUZMÁN" },
+  { nombre: "PERLA VARELA RODRÍGUEZ", padrino: "SR. OSCAR VARELA DURÁN" },
 ];
 
 const alumnos6c = [
