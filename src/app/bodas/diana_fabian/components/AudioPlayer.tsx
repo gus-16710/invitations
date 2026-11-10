@@ -29,12 +29,12 @@ const Player = () => {
       className="flex items-center flex-col justify-center z-20"
     >
       <ReactPlayer
-        url="/media/lo_tienes_todo_piano.mp3"
+        src="/media/lo_tienes_todo_piano.mp3"
         controls={true}
         height={100}
         width={300}
         playing={playing}
-        onProgress={(state) => setCurrentTime(state.playedSeconds)}
+        onTimeUpdate={(e) => setCurrentTime(e.currentTarget.currentTime)}
         style={{ display: "none" }}
         loop={true}
       />

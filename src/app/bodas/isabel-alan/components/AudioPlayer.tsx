@@ -1,5 +1,5 @@
 import { Progress } from "@nextui-org/react";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { FaPause, FaPlay } from "react-icons/fa";
 import ReactPlayer from "react-player";
 import { saira } from "./Fonts";
@@ -11,7 +11,6 @@ const Player = () => {
 
   const [scope, animate] = useAnimate();
 
-  const audioPlayer = useRef(null);
   const currentProgress = (Math.trunc(currentTime) * 100) / 259;
 
   useEffect(() => {
@@ -42,13 +41,12 @@ const Player = () => {
       className="flex items-center flex-col justify-center z-20"
     >
       <ReactPlayer
-        ref={audioPlayer}
-        url={"/media/amarte_mil_anios.mp3"}
+        src={"/media/amarte_mil_anios.mp3"}
         controls={true}
         height={100}
         width={300}
         playing={playing}
-        onProgress={(state) => setCurrentTime(state.playedSeconds)}
+        onTimeUpdate={(e) => setCurrentTime(e.currentTarget.currentTime)}
         style={{ display: "none" }}
         loop={true}
       />
