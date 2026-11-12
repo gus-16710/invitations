@@ -3,7 +3,7 @@ import { motion, Variants } from "framer-motion";
 import { cormorant, pinyon } from "./Fonts";
 import SproutFlourish from "./SproutFlourish";
 
-const PHONE = "2281196168";
+const PHONE = "2281253657";
 const WHATSAPP_LINK =
   `https://wa.me/52${PHONE}?text=` +
   encodeURIComponent(
